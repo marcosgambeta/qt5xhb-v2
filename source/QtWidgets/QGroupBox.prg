@@ -68,7 +68,7 @@ QGroupBox( QWidget * parent = nullptr )
 */
 void QGroupBox_new1()
 {
-  auto obj = new QGroupBox( OPQWIDGET(1,nullptr) );
+  auto obj = new QGroupBox( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -77,17 +77,17 @@ QGroupBox( const QString & title, QWidget * parent = nullptr )
 */
 void QGroupBox_new2()
 {
-  auto obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QGroupBox( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QGroupBox_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGroupBox_new2();
   }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 
 HB_FUNC_STATIC( QGROUPBOX_DELETE )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -121,12 +121,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -145,12 +145,12 @@ bool isCheckable() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCheckable() );
@@ -169,12 +169,12 @@ bool isChecked() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isChecked() );
@@ -193,12 +193,12 @@ bool isFlat() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFlat() );
@@ -217,15 +217,15 @@ void setAlignment( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( PINT(1) );
+      obj->setAlignment( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,15 +243,15 @@ void setCheckable( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setCheckable( PBOOL(1) );
+      obj->setCheckable( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,15 +269,15 @@ void setFlat( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setFlat( PBOOL(1) );
+      obj->setFlat( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,15 +295,15 @@ void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,12 +321,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -345,12 +345,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint() );
@@ -370,15 +370,15 @@ void setChecked( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
-  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGroupBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setChecked( PBOOL(1) );
+      obj->setChecked( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -56,7 +56,7 @@ QRadioButton( QWidget * parent = nullptr )
 */
 void QRadioButton_new1()
 {
-  auto obj = new QRadioButton( OPQWIDGET(1,nullptr) );
+  auto obj = new QRadioButton( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -65,17 +65,17 @@ QRadioButton( const QString & text, QWidget * parent = nullptr )
 */
 void QRadioButton_new2()
 {
-  auto obj = new QRadioButton( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QRadioButton( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QRadioButton_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QRadioButton_new2();
   }
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 
 HB_FUNC_STATIC( QRADIOBUTTON_DELETE )
 {
-  auto obj = (QRadioButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -109,12 +109,12 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
-  auto obj = (QRadioButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
@@ -134,12 +134,12 @@ QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 {
-  auto obj = (QRadioButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint() );

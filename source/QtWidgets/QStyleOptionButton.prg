@@ -69,17 +69,17 @@ QStyleOptionButton( const QStyleOptionButton & other )
 */
 void QStyleOptionButton_new2()
 {
-  auto obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
+  auto obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionButton_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONBUTTON( 1 ) )
   {
     QStyleOptionButton_new2();
   }
@@ -94,11 +94,11 @@ ButtonFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->features );
     }
@@ -111,13 +111,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->features= (QStyleOptionButton::ButtonFeatures) hb_parni(1);
+      obj->features = static_cast<QStyleOptionButton::ButtonFeatures>( hb_parni( 1 ) );
     }
     else
     {
@@ -133,11 +133,11 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQSTRING( obj->text );
     }
@@ -150,13 +150,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETTEXT )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
-      obj->text= PQSTRING(1);
+      obj->text = PQSTRING( 1 );
     }
     else
     {
@@ -172,11 +172,11 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QIcon( obj->icon );
       Qt5xHb::createReturnClass( ptr, "QICON", true );
@@ -190,13 +190,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICON )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if( ISNUMPAR( 1 ) && ISQICON( 1 ) )
     {
-      obj->icon= *PQICON(1);
+      obj->icon = *PQICON( 1 );
     }
     else
     {
@@ -212,11 +212,11 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QSize( obj->iconSize );
       Qt5xHb::createReturnClass( ptr, "QSIZE", true );
@@ -230,13 +230,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICONSIZE )
 {
-  auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionButton * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
-      obj->iconSize= *PQSIZE(1);
+      obj->iconSize = *PQSIZE( 1 );
     }
     else
     {

@@ -124,7 +124,7 @@ QGraphicsView( QWidget * parent = nullptr )
 */
 void QGraphicsView_new1()
 {
-  auto obj = new QGraphicsView( OPQWIDGET(1,nullptr) );
+  auto obj = new QGraphicsView( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -133,17 +133,17 @@ QGraphicsView( QGraphicsScene * scene, QWidget * parent = nullptr )
 */
 void QGraphicsView_new2()
 {
-  auto obj = new QGraphicsView( PQGRAPHICSSCENE(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QGraphicsView( PQGRAPHICSSCENE( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QGraphicsView_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQGRAPHICSSCENE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQGRAPHICSSCENE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsView_new2();
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_DELETE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -177,12 +177,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -201,12 +201,12 @@ QBrush backgroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->backgroundBrush() );
@@ -226,12 +226,12 @@ QGraphicsView::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->cacheMode() );
@@ -250,11 +250,11 @@ void centerOn( const QPointF & pos )
 */
 void QGraphicsView_centerOn1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->centerOn( *PQPOINTF(1) );
+    obj->centerOn( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -265,11 +265,11 @@ void centerOn( qreal x, qreal y )
 */
 void QGraphicsView_centerOn2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->centerOn( PQREAL(1), PQREAL(2) );
+    obj->centerOn( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -280,11 +280,11 @@ void centerOn( const QGraphicsItem * item )
 */
 void QGraphicsView_centerOn3()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->centerOn( PQGRAPHICSITEM(1) );
+    obj->centerOn( PQGRAPHICSITEM( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -292,15 +292,15 @@ void QGraphicsView_centerOn3()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QGraphicsView_centerOn1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QGraphicsView_centerOn2();
   }
-  else if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+  else if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
   {
     QGraphicsView_centerOn3();
   }
@@ -315,12 +315,12 @@ QGraphicsView::DragMode dragMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->dragMode() );
@@ -339,11 +339,11 @@ void ensureVisible( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsView_ensureVisible1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->ensureVisible( *PQRECTF(1), OPINT(2,50), OPINT(3,50) );
+    obj->ensureVisible( *PQRECTF( 1 ), OPINT( 2, 50 ), OPINT( 3, 50 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -354,11 +354,11 @@ void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ym
 */
 void QGraphicsView_ensureVisible2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->ensureVisible( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
+    obj->ensureVisible( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), OPINT( 5, 50 ), OPINT( 6, 50 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -369,11 +369,11 @@ void ensureVisible( const QGraphicsItem * item, int xmargin = 50, int ymargin = 
 */
 void QGraphicsView_ensureVisible3()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->ensureVisible( PQGRAPHICSITEM(1), OPINT(2,50), OPINT(3,50) );
+    obj->ensureVisible( PQGRAPHICSITEM( 1 ), OPINT( 2, 50 ), OPINT( 3, 50 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -381,15 +381,15 @@ void QGraphicsView_ensureVisible3()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
-  if( ISBETWEEN(1,3) && ISQRECTF(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN( 1, 3 ) && ISQRECTF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QGraphicsView_ensureVisible1();
   }
-  else if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN( 4, 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
     QGraphicsView_ensureVisible2();
   }
-  else if( ISBETWEEN(1,3) && HB_ISOBJECT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && HB_ISOBJECT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QGraphicsView_ensureVisible3();
   }
@@ -404,11 +404,11 @@ void fitInView( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::I
 */
 void QGraphicsView_fitInView1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->fitInView( *PQRECTF(1), HB_ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
+    obj->fitInView( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::AspectRatioMode >( Qt::IgnoreAspectRatio ) : static_cast< Qt::AspectRatioMode >( hb_parni( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -419,11 +419,11 @@ void fitInView( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRa
 */
 void QGraphicsView_fitInView2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->fitInView( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(5) );
+    obj->fitInView( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), HB_ISNIL( 5 ) ? static_cast< Qt::AspectRatioMode >( Qt::IgnoreAspectRatio ) : static_cast< Qt::AspectRatioMode >( hb_parni( 5 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -434,11 +434,11 @@ void fitInView( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode 
 */
 void QGraphicsView_fitInView3()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->fitInView( PQGRAPHICSITEM(1), HB_ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
+    obj->fitInView( PQGRAPHICSITEM( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::AspectRatioMode >( Qt::IgnoreAspectRatio ) : static_cast< Qt::AspectRatioMode >( hb_parni( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -446,15 +446,15 @@ void QGraphicsView_fitInView3()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
-  if( ISBETWEEN(1,2) && ISQRECTF(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQRECTF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsView_fitInView1();
   }
-  else if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QGraphicsView_fitInView2();
   }
-  else if( ISBETWEEN(1,2) && HB_ISOBJECT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISOBJECT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsView_fitInView3();
   }
@@ -469,12 +469,12 @@ QBrush foregroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->foregroundBrush() );
@@ -494,12 +494,12 @@ bool isInteractive() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isInteractive() );
@@ -518,12 +518,12 @@ bool isTransformed() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isTransformed() );
@@ -542,11 +542,11 @@ QGraphicsItem * itemAt( const QPoint & pos ) const
 */
 void QGraphicsView_itemAt1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    QGraphicsItem * ptr = obj->itemAt( *PQPOINT(1) );
+    QGraphicsItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
     Qt5xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
   }
 }
@@ -556,22 +556,22 @@ QGraphicsItem * itemAt( int x, int y ) const
 */
 void QGraphicsView_itemAt2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    QGraphicsItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+    QGraphicsItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
     Qt5xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QGraphicsView_itemAt1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QGraphicsView_itemAt2();
   }
@@ -586,11 +586,11 @@ QPoint mapFromScene( const QPointF & point ) const
 */
 void QGraphicsView_mapFromScene1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPoint( obj->mapFromScene( *PQPOINTF(1) ) );
+    auto ptr = new QPoint( obj->mapFromScene( *PQPOINTF( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOINT", true );
   }
 }
@@ -600,11 +600,11 @@ QPolygon mapFromScene( const QRectF & rect ) const
 */
 void QGraphicsView_mapFromScene2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygon( obj->mapFromScene( *PQRECTF(1) ) );
+    auto ptr = new QPolygon( obj->mapFromScene( *PQRECTF( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
   }
 }
@@ -614,11 +614,11 @@ QPolygon mapFromScene( const QPolygonF & polygon ) const
 */
 void QGraphicsView_mapFromScene3()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygon( obj->mapFromScene( *PQPOLYGONF(1) ) );
+    auto ptr = new QPolygon( obj->mapFromScene( *PQPOLYGONF( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
   }
 }
@@ -628,11 +628,11 @@ QPainterPath mapFromScene( const QPainterPath & path ) const
 */
 void QGraphicsView_mapFromScene4()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPainterPath( obj->mapFromScene( *PQPAINTERPATH(1) ) );
+    auto ptr = new QPainterPath( obj->mapFromScene( *PQPAINTERPATH( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
   }
 }
@@ -642,11 +642,11 @@ QPoint mapFromScene( qreal x, qreal y ) const
 */
 void QGraphicsView_mapFromScene5()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPoint( obj->mapFromScene( PQREAL(1), PQREAL(2) ) );
+    auto ptr = new QPoint( obj->mapFromScene( PQREAL( 1 ), PQREAL( 2 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOINT", true );
   }
 }
@@ -656,38 +656,38 @@ QPolygon mapFromScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsView_mapFromScene6()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygon( obj->mapFromScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+    auto ptr = new QPolygon( obj->mapFromScene( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QGraphicsView_mapFromScene1();
   }
-  else if( ISNUMPAR(1) && ISQRECTF(1) )
+  else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
     QGraphicsView_mapFromScene2();
   }
-  else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
   {
     QGraphicsView_mapFromScene3();
   }
-  else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
+  else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
   {
     QGraphicsView_mapFromScene4();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QGraphicsView_mapFromScene5();
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QGraphicsView_mapFromScene6();
   }
@@ -702,11 +702,11 @@ QPointF mapToScene( const QPoint & point ) const
 */
 void QGraphicsView_mapToScene1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPointF( obj->mapToScene( *PQPOINT(1) ) );
+    auto ptr = new QPointF( obj->mapToScene( *PQPOINT( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
@@ -716,11 +716,11 @@ QPolygonF mapToScene( const QRect & rect ) const
 */
 void QGraphicsView_mapToScene2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygonF( obj->mapToScene( *PQRECT(1) ) );
+    auto ptr = new QPolygonF( obj->mapToScene( *PQRECT( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
@@ -730,11 +730,11 @@ QPolygonF mapToScene( const QPolygon & polygon ) const
 */
 void QGraphicsView_mapToScene3()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygonF( obj->mapToScene( *PQPOLYGON(1) ) );
+    auto ptr = new QPolygonF( obj->mapToScene( *PQPOLYGON( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
@@ -744,11 +744,11 @@ QPainterPath mapToScene( const QPainterPath & path ) const
 */
 void QGraphicsView_mapToScene4()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPainterPath( obj->mapToScene( *PQPAINTERPATH(1) ) );
+    auto ptr = new QPainterPath( obj->mapToScene( *PQPAINTERPATH( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
   }
 }
@@ -758,11 +758,11 @@ QPointF mapToScene( int x, int y ) const
 */
 void QGraphicsView_mapToScene5()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPointF( obj->mapToScene( PINT(1), PINT(2) ) );
+    auto ptr = new QPointF( obj->mapToScene( PINT( 1 ), PINT( 2 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
@@ -772,38 +772,38 @@ QPolygonF mapToScene( int x, int y, int w, int h ) const
 */
 void QGraphicsView_mapToScene6()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygonF( obj->mapToScene( PINT(1), PINT(2), PINT(3), PINT(4) ) );
+    auto ptr = new QPolygonF( obj->mapToScene( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QGraphicsView_mapToScene1();
   }
-  else if( ISNUMPAR(1) && ISQRECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
     QGraphicsView_mapToScene2();
   }
-  else if( ISNUMPAR(1) && ISQPOLYGON(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
   {
     QGraphicsView_mapToScene3();
   }
-  else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
+  else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
   {
     QGraphicsView_mapToScene4();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QGraphicsView_mapToScene5();
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QGraphicsView_mapToScene6();
   }
@@ -818,12 +818,12 @@ QMatrix matrix() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QMatrix( obj->matrix() );
@@ -843,12 +843,12 @@ QGraphicsView::OptimizationFlags optimizationFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->optimizationFlags() );
@@ -867,15 +867,15 @@ void render( QPainter * painter, const QRectF & target = QRectF(), const QRect &
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQRECTF(2)||HB_ISNIL(2)) && (ISQRECT(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 1, 4 ) && ISQPAINTER( 1 ) && ( ISQRECTF( 2 ) || HB_ISNIL( 2 ) ) && ( ISQRECT( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      obj->render( PQPAINTER(1), HB_ISNIL(2)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? (Qt::AspectRatioMode) Qt::KeepAspectRatio : (Qt::AspectRatioMode) hb_parni(4) );
+      obj->render( PQPAINTER( 1 ), HB_ISNIL( 2 ) ? QRectF() : *static_cast< QRectF * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRect() : *static_cast< QRect * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? static_cast< Qt::AspectRatioMode >( Qt::KeepAspectRatio ) : static_cast< Qt::AspectRatioMode >( hb_parni( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -893,12 +893,12 @@ QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->renderHints() );
@@ -917,12 +917,12 @@ void resetCachedContent()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resetCachedContent();
@@ -943,12 +943,12 @@ void resetMatrix()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resetMatrix();
@@ -969,12 +969,12 @@ void resetTransform()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resetTransform();
@@ -995,12 +995,12 @@ QGraphicsView::ViewportAnchor resizeAnchor() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->resizeAnchor() );
@@ -1019,15 +1019,15 @@ void rotate( qreal angle )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->rotate( PQREAL(1) );
+      obj->rotate( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1045,12 +1045,12 @@ Qt::ItemSelectionMode rubberBandSelectionMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->rubberBandSelectionMode() );
@@ -1069,15 +1069,15 @@ void scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->scale( PQREAL(1), PQREAL(2) );
+      obj->scale( PQREAL( 1 ), PQREAL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1095,12 +1095,12 @@ QGraphicsScene * scene() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QGraphicsScene * ptr = obj->scene();
@@ -1120,12 +1120,12 @@ QRectF sceneRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRectF( obj->sceneRect() );
@@ -1145,15 +1145,15 @@ void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1171,15 +1171,15 @@ void setBackgroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBackgroundBrush( *PQBRUSH(1) );
+      obj->setBackgroundBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1197,15 +1197,15 @@ void setCacheMode( QGraphicsView::CacheMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCacheMode( (QGraphicsView::CacheMode) hb_parni(1) );
+      obj->setCacheMode( static_cast<QGraphicsView::CacheMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1223,15 +1223,15 @@ void setDragMode( QGraphicsView::DragMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDragMode( (QGraphicsView::DragMode) hb_parni(1) );
+      obj->setDragMode( static_cast<QGraphicsView::DragMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1249,15 +1249,15 @@ void setForegroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setForegroundBrush( *PQBRUSH(1) );
+      obj->setForegroundBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1275,15 +1275,15 @@ void setInteractive( bool allowed )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setInteractive( PBOOL(1) );
+      obj->setInteractive( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1301,15 +1301,15 @@ void setMatrix( const QMatrix & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMATRIX(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQMATRIX( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setMatrix( *PQMATRIX(1), OPBOOL(2,false) );
+      obj->setMatrix( *PQMATRIX( 1 ), OPBOOL( 2, false ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1327,15 +1327,15 @@ void setOptimizationFlag( QGraphicsView::OptimizationFlag flag, bool enabled = t
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setOptimizationFlag( (QGraphicsView::OptimizationFlag) hb_parni(1), OPBOOL(2,true) );
+      obj->setOptimizationFlag( static_cast<QGraphicsView::OptimizationFlag>( hb_parni( 1 ) ), OPBOOL( 2, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1353,15 +1353,15 @@ void setOptimizationFlags( QGraphicsView::OptimizationFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setOptimizationFlags( (QGraphicsView::OptimizationFlags) hb_parni(1) );
+      obj->setOptimizationFlags( static_cast<QGraphicsView::OptimizationFlags>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1379,15 +1379,15 @@ void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setRenderHint( (QPainter::RenderHint) hb_parni(1), OPBOOL(2,true) );
+      obj->setRenderHint( static_cast<QPainter::RenderHint>( hb_parni( 1 ) ), OPBOOL( 2, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1405,15 +1405,15 @@ void setRenderHints( QPainter::RenderHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRenderHints( (QPainter::RenderHints) hb_parni(1) );
+      obj->setRenderHints( static_cast<QPainter::RenderHints>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1431,15 +1431,15 @@ void setResizeAnchor( QGraphicsView::ViewportAnchor anchor )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setResizeAnchor( (QGraphicsView::ViewportAnchor) hb_parni(1) );
+      obj->setResizeAnchor( static_cast<QGraphicsView::ViewportAnchor>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1457,15 +1457,15 @@ void setRubberBandSelectionMode( Qt::ItemSelectionMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRubberBandSelectionMode( (Qt::ItemSelectionMode) hb_parni(1) );
+      obj->setRubberBandSelectionMode( static_cast<Qt::ItemSelectionMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1483,15 +1483,15 @@ void setScene( QGraphicsScene * scene )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSSCENE(1) )
+    if( ISNUMPAR( 1 ) && ISQGRAPHICSSCENE( 1 ) )
     {
 #endif
-      obj->setScene( PQGRAPHICSSCENE(1) );
+      obj->setScene( PQGRAPHICSSCENE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1509,11 +1509,11 @@ void setSceneRect( const QRectF & rect )
 */
 void QGraphicsView_setSceneRect1()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setSceneRect( *PQRECTF(1) );
+    obj->setSceneRect( *PQRECTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1524,11 +1524,11 @@ void setSceneRect( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsView_setSceneRect2()
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setSceneRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setSceneRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1536,11 +1536,11 @@ void QGraphicsView_setSceneRect2()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 {
-  if( ISNUMPAR(1) && ISQRECTF(1) )
+  if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
     QGraphicsView_setSceneRect1();
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QGraphicsView_setSceneRect2();
   }
@@ -1555,15 +1555,15 @@ void setTransform( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQTRANSFORM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setTransform( *PQTRANSFORM(1), OPBOOL(2,false) );
+      obj->setTransform( *PQTRANSFORM( 1 ), OPBOOL( 2, false ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1581,15 +1581,15 @@ void setTransformationAnchor( QGraphicsView::ViewportAnchor anchor )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTransformationAnchor( (QGraphicsView::ViewportAnchor) hb_parni(1) );
+      obj->setTransformationAnchor( static_cast<QGraphicsView::ViewportAnchor>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1607,15 +1607,15 @@ void setViewportUpdateMode( QGraphicsView::ViewportUpdateMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setViewportUpdateMode( (QGraphicsView::ViewportUpdateMode) hb_parni(1) );
+      obj->setViewportUpdateMode( static_cast<QGraphicsView::ViewportUpdateMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1633,15 +1633,15 @@ void shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->shear( PQREAL(1), PQREAL(2) );
+      obj->shear( PQREAL( 1 ), PQREAL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1659,12 +1659,12 @@ QTransform transform() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTransform( obj->transform() );
@@ -1684,12 +1684,12 @@ QGraphicsView::ViewportAnchor transformationAnchor() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->transformationAnchor() );
@@ -1708,15 +1708,15 @@ void translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->translate( PQREAL(1), PQREAL(2) );
+      obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1734,12 +1734,12 @@ QTransform viewportTransform() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTransform( obj->viewportTransform() );
@@ -1759,12 +1759,12 @@ QGraphicsView::ViewportUpdateMode viewportUpdateMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->viewportUpdateMode() );
@@ -1783,15 +1783,15 @@ virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->inputMethodQuery( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni( 1 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1808,12 +1808,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
@@ -1833,15 +1833,15 @@ void invalidateScene( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayer
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQRECTF(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 0, 2 ) && ( ISQRECTF( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->invalidateScene( HB_ISNIL(1)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (QGraphicsScene::SceneLayers) QGraphicsScene::AllLayers : (QGraphicsScene::SceneLayers) hb_parni(2) );
+      obj->invalidateScene( HB_ISNIL( 1 ) ? QRectF() : *static_cast< QRectF * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QGraphicsScene::SceneLayers >( QGraphicsScene::AllLayers ) : static_cast< QGraphicsScene::SceneLayers >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1859,20 +1859,20 @@ void updateScene( const QList<QRectF> & rects )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<QRectF> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen(aList1);
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *static_cast< QRectF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->updateScene( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1892,15 +1892,15 @@ void updateSceneRect( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENERECT )
 {
-  auto obj = (QGraphicsView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      obj->updateSceneRect( *PQRECTF(1) );
+      obj->updateSceneRect( *PQRECTF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

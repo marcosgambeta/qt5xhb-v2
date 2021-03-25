@@ -88,9 +88,9 @@ QDataWidgetMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QDataWidgetMapper( OPQOBJECT(1,nullptr) );
+    auto obj = new QDataWidgetMapper( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -123,11 +123,11 @@ void addMapping( QWidget * widget, int section )
 */
 void QDataWidgetMapper_addMapping1()
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->addMapping( PQWIDGET(1), PINT(2) );
+    obj->addMapping( PQWIDGET( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -138,11 +138,11 @@ void addMapping( QWidget * widget, int section, const QByteArray & propertyName 
 */
 void QDataWidgetMapper_addMapping2()
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->addMapping( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
+    obj->addMapping( PQWIDGET( 1 ), PINT( 2 ), *PQBYTEARRAY( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -150,11 +150,11 @@ void QDataWidgetMapper_addMapping2()
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
-  if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
     QDataWidgetMapper_addMapping1();
   }
-  else if( ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3) )
+  else if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) && ISQBYTEARRAY( 3 ) )
   {
     QDataWidgetMapper_addMapping2();
   }
@@ -169,12 +169,12 @@ void clearMapping()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearMapping();
@@ -195,12 +195,12 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentIndex() );
@@ -219,12 +219,12 @@ QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate();
@@ -244,15 +244,15 @@ QByteArray mappedPropertyName( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      auto ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET(1) ) );
+      auto ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -269,15 +269,15 @@ int mappedSection( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      RINT( obj->mappedSection( PQWIDGET(1) ) );
+      RINT( obj->mappedSection( PQWIDGET( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,15 +293,15 @@ QWidget * mappedWidgetAt( int section ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->mappedWidgetAt( PINT(1) );
+      QWidget * ptr = obj->mappedWidgetAt( PINT( 1 ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -318,12 +318,12 @@ QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
@@ -343,12 +343,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -367,15 +367,15 @@ void removeMapping( QWidget * widget )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->removeMapping( PQWIDGET(1) );
+      obj->removeMapping( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,12 +393,12 @@ QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QModelIndex( obj->rootIndex() );
@@ -418,15 +418,15 @@ void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMDELEGATE( 1 ) )
     {
 #endif
-      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
+      obj->setItemDelegate( PQABSTRACTITEMDELEGATE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,15 +444,15 @@ void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,15 +470,15 @@ void setOrientation( Qt::Orientation aOrientation )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,15 +496,15 @@ void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX(1) );
+      obj->setRootIndex( *PQMODELINDEX( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,15 +522,15 @@ void setSubmitPolicy( QDataWidgetMapper::SubmitPolicy policy )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSubmitPolicy( (QDataWidgetMapper::SubmitPolicy) hb_parni(1) );
+      obj->setSubmitPolicy( static_cast<QDataWidgetMapper::SubmitPolicy>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,12 +548,12 @@ QDataWidgetMapper::SubmitPolicy submitPolicy() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->submitPolicy() );
@@ -572,12 +572,12 @@ void revert()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->revert();
@@ -598,15 +598,15 @@ virtual void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,15 +624,15 @@ void setCurrentModelIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->setCurrentModelIndex( *PQMODELINDEX(1) );
+      obj->setCurrentModelIndex( *PQMODELINDEX( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,12 +650,12 @@ bool submit()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->submit() );
@@ -674,12 +674,12 @@ void toFirst()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->toFirst();
@@ -700,12 +700,12 @@ void toLast()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->toLast();
@@ -726,12 +726,12 @@ void toNext()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->toNext();
@@ -752,12 +752,12 @@ void toPrevious()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
 {
-  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDataWidgetMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->toPrevious();

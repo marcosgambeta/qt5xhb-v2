@@ -55,7 +55,7 @@ QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QSty
 */
 void QStyleOptionComplex_new1()
 {
-  auto obj = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
+  auto obj = new QStyleOptionComplex( OPINT( 1, QStyleOptionComplex::Version ), OPINT( 2, QStyleOptionComplex::SO_Complex ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -64,17 +64,17 @@ QStyleOptionComplex( const QStyleOptionComplex & other )
 */
 void QStyleOptionComplex_new2()
 {
-  auto obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
+  auto obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {
-  if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QStyleOptionComplex_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONCOMPLEX( 1 ) )
   {
     QStyleOptionComplex_new2();
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionComplex * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -106,11 +106,11 @@ QStyle::SubControls subControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionComplex * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->subControls );
     }
@@ -123,13 +123,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionComplex * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->subControls= (QStyle::SubControls) hb_parni(1);
+      obj->subControls = static_cast<QStyle::SubControls>( hb_parni( 1 ) );
     }
     else
     {
@@ -145,11 +145,11 @@ QStyle::SubControls activeSubControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionComplex * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->activeSubControls );
     }
@@ -162,13 +162,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionComplex * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->activeSubControls= (QStyle::SubControls) hb_parni(1);
+      obj->activeSubControls = static_cast<QStyle::SubControls>( hb_parni( 1 ) );
     }
     else
     {

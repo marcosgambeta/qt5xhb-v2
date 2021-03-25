@@ -65,7 +65,7 @@ QKeySequenceEdit( QWidget * parent = nullptr )
 void QKeySequenceEdit_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QKeySequenceEdit( OPQWIDGET(1,nullptr) );
+  auto obj = new QKeySequenceEdit( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -76,19 +76,19 @@ QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = nullptr )
 void QKeySequenceEdit_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QKeySequenceEdit_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQKEYSEQUENCE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QKeySequenceEdit_new2();
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeySequenceEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -126,12 +126,12 @@ QKeySequence keySequence() const
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeySequenceEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QKeySequence( obj->keySequence() );
@@ -153,15 +153,15 @@ void setKeySequence( const QKeySequence & keySequence )
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeySequenceEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if( ISNUMPAR( 1 ) && ISQKEYSEQUENCE( 1 ) )
     {
 #endif
-      obj->setKeySequence( *PQKEYSEQUENCE(1) );
+      obj->setKeySequence( *PQKEYSEQUENCE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,12 +181,12 @@ void clear()
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeySequenceEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();

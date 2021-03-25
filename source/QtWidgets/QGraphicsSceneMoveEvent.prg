@@ -54,7 +54,7 @@ QGraphicsSceneMoveEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QGraphicsSceneMoveEvent();
     Qt5xHb::returnNewObject( obj, false );
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
 {
-  auto obj = (QGraphicsSceneMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneMoveEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -87,12 +87,12 @@ QPointF newPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 {
-  auto obj = (QGraphicsSceneMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneMoveEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->newPos() );
@@ -112,12 +112,12 @@ QPointF oldPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
 {
-  auto obj = (QGraphicsSceneMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneMoveEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->oldPos() );

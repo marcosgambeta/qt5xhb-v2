@@ -95,8 +95,6 @@ CLASS QApplication INHERIT QGuiApplication
    METHOD windowIcon
 
    METHOD onFocusChanged
-   METHOD onFontDatabaseChanged
-   METHOD onLastWindowClosed
 
    DESTRUCTOR destroyObject
 
@@ -138,15 +136,6 @@ RETURN
 
 /*
 QApplication ( int & argc, char ** argv )
-QApplication ( int & argc, char ** argv, bool GUIenabled )
-QApplication ( int & argc, char ** argv, Type type )
-QApplication ( Display * display, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
-QApplication ( Display * display, int & argc, char ** argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
-QApplication ( QApplication::QS60MainApplicationFactory factory, int & argc, char ** argv )
-*/
-
-/*
-QApplication ( int & argc, char ** argv )
 */
 HB_FUNC_STATIC( QAPPLICATION_NEW )
 {
@@ -160,7 +149,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -178,16 +167,16 @@ HB_FUNC_STATIC( QAPPLICATION_DELETE )
 }
 
 /*
-bool isSessionRestored () const
+bool isSessionRestored() const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSessionRestored() );
@@ -202,16 +191,16 @@ HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 }
 
 /*
-QString sessionId () const
+QString sessionId() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->sessionId() );
@@ -226,16 +215,16 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 }
 
 /*
-QString sessionKey () const
+QString sessionKey() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->sessionKey() );
@@ -250,16 +239,16 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 }
 
 /*
-QString styleSheet () const
+QString styleSheet() const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->styleSheet() );
@@ -274,19 +263,19 @@ HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 }
 
 /*
-virtual bool notify ( QObject * receiver, QEvent * e )
+virtual bool notify( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQEVENT( 2 ) )
     {
 #endif
-      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->notify( PQOBJECT( 1 ), PQEVENT( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,16 +287,16 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 }
 
 /*
-void aboutQt ()
+void aboutQt()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->aboutQt();
@@ -324,16 +313,16 @@ HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 }
 
 /*
-void closeAllWindows ()
+void closeAllWindows()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeAllWindows();
@@ -350,19 +339,19 @@ HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 }
 
 /*
-void setStyleSheet ( const QString & sheet )
+void setStyleSheet( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
-  auto obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setStyleSheet( PQSTRING(1) );
+      obj->setStyleSheet( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,12 +365,12 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 }
 
 /*
-static QWidget * activeModalWidget ()
+static QWidget * activeModalWidget()
 */
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWidget * ptr = QApplication::activeModalWidget();
@@ -396,12 +385,12 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 }
 
 /*
-static QWidget * activePopupWidget ()
+static QWidget * activePopupWidget()
 */
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWidget * ptr = QApplication::activePopupWidget();
@@ -416,12 +405,12 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 }
 
 /*
-static QWidget * activeWindow ()
+static QWidget * activeWindow()
 */
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWidget * ptr = QApplication::activeWindow();
@@ -436,15 +425,15 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 }
 
 /*
-static void alert ( QWidget * widget, int msec = 0 )
+static void alert( QWidget * widget, int msec = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+  if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
-    QApplication::alert( PQWIDGET(1), OPINT(2,0) );
+    QApplication::alert( PQWIDGET( 1 ), OPINT( 2, 0 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -457,17 +446,17 @@ HB_FUNC_STATIC( QAPPLICATION_ALERT )
 }
 
 /*
-static QWidgetList allWidgets ()
+static QWidgetList allWidgets()
 */
 HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWidgetList list = QApplication::allWidgets();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
@@ -478,7 +467,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
         PHB_ITEM pObject = hb_itemNew( nullptr );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, (QWidget *) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QWidget * >( list[ i ] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -500,12 +489,12 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 }
 
 /*
-static void beep ()
+static void beep()
 */
 HB_FUNC_STATIC( QAPPLICATION_BEEP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QApplication::beep();
@@ -521,15 +510,15 @@ HB_FUNC_STATIC( QAPPLICATION_BEEP )
 }
 
 /*
-static void changeOverrideCursor ( const QCursor & cursor )
+static void changeOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQCURSOR(1) )
+  if( ISNUMPAR( 1 ) && ISQCURSOR( 1 ) )
   {
 #endif
-    QApplication::changeOverrideCursor( *PQCURSOR(1) );
+    QApplication::changeOverrideCursor( *PQCURSOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -542,12 +531,12 @@ HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 }
 
 /*
-static QClipboard * clipboard ()
+static QClipboard * clipboard()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QClipboard * ptr = QApplication::clipboard();
@@ -562,12 +551,12 @@ HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
 }
 
 /*
-static int colorSpec ()
+static int colorSpec()
 */
 HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::colorSpec() );
@@ -581,12 +570,12 @@ HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 }
 
 /*
-static int cursorFlashTime ()
+static int cursorFlashTime()
 */
 HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::cursorFlashTime() );
@@ -600,12 +589,12 @@ HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 }
 
 /*
-static QDesktopWidget * desktop ()
+static QDesktopWidget * desktop()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QDesktopWidget * ptr = QApplication::desktop();
@@ -620,12 +609,12 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
 }
 
 /*
-static bool desktopSettingsAware ()
+static bool desktopSettingsAware()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QApplication::desktopSettingsAware() );
@@ -639,12 +628,12 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 }
 
 /*
-static int doubleClickInterval ()
+static int doubleClickInterval()
 */
 HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::doubleClickInterval() );
@@ -658,12 +647,12 @@ HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 }
 
 /*
-static int exec ()
+static int exec()
 */
 HB_FUNC_STATIC( QAPPLICATION_EXEC )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::exec() );
@@ -677,12 +666,12 @@ HB_FUNC_STATIC( QAPPLICATION_EXEC )
 }
 
 /*
-static QWidget * focusWidget ()
+static QWidget * focusWidget()
 */
 HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWidget * ptr = QApplication::focusWidget();
@@ -697,7 +686,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 }
 
 /*
-static QFont font ()
+static QFont font()
 */
 void QApplication_font1()
 {
@@ -706,40 +695,34 @@ void QApplication_font1()
 }
 
 /*
-static QFont font ( const QWidget * widget )
+static QFont font( const QWidget * widget )
 */
 void QApplication_font2()
 {
-  auto ptr = new QFont( QApplication::font( PQWIDGET(1) ) );
+  auto ptr = new QFont( QApplication::font( PQWIDGET( 1 ) ) );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
 }
 
 /*
-static QFont font ( const char * className )
+static QFont font( const char * className )
 */
 void QApplication_font3()
 {
-  auto ptr = new QFont( QApplication::font( PCONSTCHAR(1) ) );
+  auto ptr = new QFont( QApplication::font( PCONSTCHAR( 1 ) ) );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
 }
 
-/*
-[1]QFont font ()
-[2]QFont font ( const QWidget * widget )
-[3]QFont font ( const char * className )
-*/
-
 HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QApplication_font1();
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QApplication_font2();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QApplication_font3();
   }
@@ -750,12 +733,12 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
 }
 
 /*
-static QFontMetrics fontMetrics ()
+static QFontMetrics fontMetrics()
 */
 HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QFontMetrics( QApplication::fontMetrics() );
@@ -770,12 +753,12 @@ HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
 }
 
 /*
-static QSize globalStrut ()
+static QSize globalStrut()
 */
 HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QSize( QApplication::globalStrut() );
@@ -790,15 +773,15 @@ HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
 }
 
 /*
-static bool isEffectEnabled ( Qt::UIEffect effect )
+static bool isEffectEnabled( Qt::UIEffect effect )
 */
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    RBOOL( QApplication::isEffectEnabled( (Qt::UIEffect) hb_parni(1) ) );
+    RBOOL( QApplication::isEffectEnabled( static_cast<Qt::UIEffect>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -809,12 +792,12 @@ HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 }
 
 /*
-static bool isLeftToRight ()
+static bool isLeftToRight()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QApplication::isLeftToRight() );
@@ -828,12 +811,12 @@ HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 }
 
 /*
-static bool isRightToLeft ()
+static bool isRightToLeft()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QApplication::isRightToLeft() );
@@ -847,12 +830,12 @@ HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 }
 
 /*
-static int keyboardInputInterval ()
+static int keyboardInputInterval()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::keyboardInputInterval() );
@@ -866,12 +849,12 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 }
 
 /*
-static Qt::KeyboardModifiers keyboardModifiers ()
+static Qt::KeyboardModifiers keyboardModifiers()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QApplication::keyboardModifiers() );
@@ -885,12 +868,12 @@ HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 }
 
 /*
-static Qt::LayoutDirection layoutDirection ()
+static Qt::LayoutDirection layoutDirection()
 */
 HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QApplication::layoutDirection() );
@@ -904,12 +887,12 @@ HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 }
 
 /*
-static Qt::MouseButtons mouseButtons ()
+static Qt::MouseButtons mouseButtons()
 */
 HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QApplication::mouseButtons() );
@@ -923,12 +906,12 @@ HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 }
 
 /*
-static QCursor * overrideCursor ()
+static QCursor * overrideCursor()
 */
 HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QCursor * ptr = QApplication::overrideCursor();
@@ -943,7 +926,7 @@ HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 }
 
 /*
-static QPalette palette ()
+static QPalette palette()
 */
 void QApplication_palette1()
 {
@@ -952,40 +935,34 @@ void QApplication_palette1()
 }
 
 /*
-static QPalette palette ( const QWidget * widget )
+static QPalette palette( const QWidget * widget )
 */
 void QApplication_palette2()
 {
-  auto ptr = new QPalette( QApplication::palette( PQWIDGET(1) ) );
+  auto ptr = new QPalette( QApplication::palette( PQWIDGET( 1 ) ) );
   Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 }
 
 /*
-static QPalette palette ( const char * className )
+static QPalette palette( const char * className )
 */
 void QApplication_palette3()
 {
-  auto ptr = new QPalette( QApplication::palette( PCONSTCHAR(1) ) );
+  auto ptr = new QPalette( QApplication::palette( PCONSTCHAR( 1 ) ) );
   Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 }
 
-/*
-[1]QPalette palette ()
-[2]QPalette palette ( const QWidget * widget )
-[3]QPalette palette ( const char * className )
-*/
-
 HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QApplication_palette1();
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QApplication_palette2();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QApplication_palette3();
   }
@@ -996,12 +973,12 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 }
 
 /*
-static Qt::KeyboardModifiers queryKeyboardModifiers ()
+static Qt::KeyboardModifiers queryKeyboardModifiers()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QApplication::queryKeyboardModifiers() );
@@ -1015,12 +992,12 @@ HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 }
 
 /*
-static bool quitOnLastWindowClosed ()
+static bool quitOnLastWindowClosed()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QApplication::quitOnLastWindowClosed() );
@@ -1034,12 +1011,12 @@ HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 }
 
 /*
-static void restoreOverrideCursor ()
+static void restoreOverrideCursor()
 */
 HB_FUNC_STATIC( QAPPLICATION_RESTOREOVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QApplication::restoreOverrideCursor();
@@ -1055,15 +1032,15 @@ HB_FUNC_STATIC( QAPPLICATION_RESTOREOVERRIDECURSOR )
 }
 
 /*
-static void setActiveWindow ( QWidget * active )
+static void setActiveWindow( QWidget * active )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
 #endif
-    QApplication::setActiveWindow( PQWIDGET(1) );
+    QApplication::setActiveWindow( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1076,15 +1053,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 }
 
 /*
-static void setColorSpec ( int spec )
+static void setColorSpec( int spec )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setColorSpec( PINT(1) );
+    QApplication::setColorSpec( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1097,15 +1074,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 }
 
 /*
-static void setCursorFlashTime ( int )
+static void setCursorFlashTime( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setCursorFlashTime( PINT(1) );
+    QApplication::setCursorFlashTime( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1118,15 +1095,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 }
 
 /*
-static void setDesktopSettingsAware ( bool on )
+static void setDesktopSettingsAware( bool on )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
 #endif
-    QApplication::setDesktopSettingsAware( PBOOL(1) );
+    QApplication::setDesktopSettingsAware( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1139,15 +1116,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 }
 
 /*
-static void setDoubleClickInterval ( int )
+static void setDoubleClickInterval( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setDoubleClickInterval( PINT(1) );
+    QApplication::setDoubleClickInterval( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1160,15 +1137,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 }
 
 /*
-static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
+static void setEffectEnabled( Qt::UIEffect effect, bool enable = true )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && ISOPTLOG(2) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
-    QApplication::setEffectEnabled( (Qt::UIEffect) hb_parni(1), OPBOOL(2,true) );
+    QApplication::setEffectEnabled( static_cast<Qt::UIEffect>( hb_parni( 1 ) ), OPBOOL( 2, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1181,15 +1158,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 }
 
 /*
-static void setFont ( const QFont & font, const char * className = nullptr )
+static void setFont( const QFont & font, const char * className = nullptr )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN( 1, 2 ) && ISQFONT( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
-    QApplication::setFont( *PQFONT(1), OPCONSTCHAR(2,nullptr) );
+    QApplication::setFont( *PQFONT( 1 ), OPCONSTCHAR( 2, nullptr ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1202,15 +1179,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 }
 
 /*
-static void setGlobalStrut ( const QSize & )
+static void setGlobalStrut( const QSize & )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQSIZE(1) )
+  if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
 #endif
-    QApplication::setGlobalStrut( *PQSIZE(1) );
+    QApplication::setGlobalStrut( *PQSIZE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1223,15 +1200,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 }
 
 /*
-static void setKeyboardInputInterval ( int )
+static void setKeyboardInputInterval( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setKeyboardInputInterval( PINT(1) );
+    QApplication::setKeyboardInputInterval( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1244,15 +1221,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 }
 
 /*
-static void setLayoutDirection ( Qt::LayoutDirection direction )
+static void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setLayoutDirection( (Qt::LayoutDirection) hb_parni(1) );
+    QApplication::setLayoutDirection( static_cast<Qt::LayoutDirection>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1265,15 +1242,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 }
 
 /*
-static void setOverrideCursor ( const QCursor & cursor )
+static void setOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQCURSOR(1) )
+  if( ISNUMPAR( 1 ) && ISQCURSOR( 1 ) )
   {
 #endif
-    QApplication::setOverrideCursor( *PQCURSOR(1) );
+    QApplication::setOverrideCursor( *PQCURSOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1286,15 +1263,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 }
 
 /*
-static void setPalette ( const QPalette & palette, const char * className = nullptr )
+static void setPalette( const QPalette & palette, const char * className = nullptr )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQPALETTE(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN( 1, 2 ) && ISQPALETTE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
-    QApplication::setPalette( *PQPALETTE(1), OPCONSTCHAR(2,nullptr) );
+    QApplication::setPalette( *PQPALETTE( 1 ), OPCONSTCHAR( 2, nullptr ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1307,15 +1284,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 }
 
 /*
-static void setQuitOnLastWindowClosed ( bool quit )
+static void setQuitOnLastWindowClosed( bool quit )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
 #endif
-    QApplication::setQuitOnLastWindowClosed( PBOOL(1) );
+    QApplication::setQuitOnLastWindowClosed( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1328,15 +1305,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 }
 
 /*
-static void setStartDragDistance ( int l )
+static void setStartDragDistance( int l )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setStartDragDistance( PINT(1) );
+    QApplication::setStartDragDistance( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1349,15 +1326,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 }
 
 /*
-static void setStartDragTime ( int ms )
+static void setStartDragTime( int ms )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setStartDragTime( PINT(1) );
+    QApplication::setStartDragTime( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1370,36 +1347,31 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 }
 
 /*
-static void setStyle ( QStyle * style )
+static void setStyle( QStyle * style )
 */
 void QApplication_setStyle1()
 {
-  QApplication::setStyle( PQSTYLE(1) );
+  QApplication::setStyle( PQSTYLE( 1 ) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-static QStyle * setStyle ( const QString & style )
+static QStyle * setStyle( const QString & style )
 */
 void QApplication_setStyle2()
 {
-  QStyle * ptr = QApplication::setStyle( PQSTRING(1) );
+  QStyle * ptr = QApplication::setStyle( PQSTRING( 1 ) );
   Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 }
 
-/*
-[1]void setStyle ( QStyle * style )
-[2]QStyle * setStyle ( const QString & style )
-*/
-
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
-  if( ISNUMPAR(1) && HB_ISOBJECT(1) )
+  if( ISNUMPAR( 1 ) && HB_ISOBJECT( 1 ) )
   {
     QApplication_setStyle1();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QApplication_setStyle2();
   }
@@ -1410,15 +1382,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 }
 
 /*
-static void setWheelScrollLines ( int )
+static void setWheelScrollLines( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QApplication::setWheelScrollLines( PINT(1) );
+    QApplication::setWheelScrollLines( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1431,15 +1403,15 @@ HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 }
 
 /*
-static void setWindowIcon ( const QIcon & icon )
+static void setWindowIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
+  if( ISNUMPAR( 1 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) )
   {
 #endif
-    QApplication::setWindowIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+    QApplication::setWindowIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1452,12 +1424,12 @@ HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 }
 
 /*
-static int startDragDistance ()
+static int startDragDistance()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::startDragDistance() );
@@ -1471,12 +1443,12 @@ HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 }
 
 /*
-static int startDragTime ()
+static int startDragTime()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::startDragTime() );
@@ -1490,12 +1462,12 @@ HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 }
 
 /*
-static QStyle * style ()
+static QStyle * style()
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QStyle * ptr = QApplication::style();
@@ -1510,35 +1482,30 @@ HB_FUNC_STATIC( QAPPLICATION_STYLE )
 }
 
 /*
-static QWidget * topLevelAt ( const QPoint & point )
+static QWidget * topLevelAt( const QPoint & point )
 */
 void QApplication_topLevelAt1()
 {
-  QWidget * ptr = QApplication::topLevelAt( *PQPOINT(1) );
+  QWidget * ptr = QApplication::topLevelAt( *PQPOINT( 1 ) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
 /*
-static QWidget * topLevelAt ( int x, int y )
+static QWidget * topLevelAt( int x, int y )
 */
 void QApplication_topLevelAt2()
 {
-  QWidget * ptr = QApplication::topLevelAt( PINT(1), PINT(2) );
+  QWidget * ptr = QApplication::topLevelAt( PINT( 1 ), PINT( 2 ) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
-/*
-[1]QWidget * topLevelAt ( const QPoint & point )
-[2]QWidget * topLevelAt ( int x, int y )
-*/
-
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QApplication_topLevelAt1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QApplication_topLevelAt2();
   }
@@ -1549,17 +1516,17 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 }
 
 /*
-static QWidgetList topLevelWidgets ()
+static QWidgetList topLevelWidgets()
 */
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWidgetList list = QApplication::topLevelWidgets();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
@@ -1570,7 +1537,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
         PHB_ITEM pObject = hb_itemNew( nullptr );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, (QWidget *) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QWidget * >( list[ i ] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -1592,12 +1559,12 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 }
 
 /*
-static int wheelScrollLines ()
+static int wheelScrollLines()
 */
 HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QApplication::wheelScrollLines() );
@@ -1611,35 +1578,30 @@ HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 }
 
 /*
-static QWidget * widgetAt ( const QPoint & point )
+static QWidget * widgetAt( const QPoint & point )
 */
 void QApplication_widgetAt1()
 {
-  QWidget * ptr = QApplication::widgetAt( *PQPOINT(1) );
+  QWidget * ptr = QApplication::widgetAt( *PQPOINT( 1 ) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
 /*
-static QWidget * widgetAt ( int x, int y )
+static QWidget * widgetAt( int x, int y )
 */
 void QApplication_widgetAt2()
 {
-  QWidget * ptr = QApplication::widgetAt( PINT(1), PINT(2) );
+  QWidget * ptr = QApplication::widgetAt( PINT( 1 ), PINT( 2 ) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
-/*
-[1]QWidget * widgetAt ( const QPoint & point )
-[2]QWidget * widgetAt ( int x, int y )
-*/
-
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QApplication_widgetAt1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QApplication_widgetAt2();
   }
@@ -1650,12 +1612,12 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 }
 
 /*
-static QIcon windowIcon ()
+static QIcon windowIcon()
 */
 HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QIcon( QApplication::windowIcon() );
@@ -1668,18 +1630,6 @@ HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
   }
 #endif
 }
-
-/*
-void aboutToReleaseGpuResources()
-*/
-
-/*
-void aboutToUseGpuResources()
-*/
-
-/*
-void commitDataRequest( QSessionManager & manager )
-*/
 
 /*
 void focusChanged( QWidget * old, QWidget * now )
@@ -1744,129 +1694,5 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
     hb_retl( false );
   }
 }
-
-/*
-void fontDatabaseChanged()
-*/
-HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
-{
-  auto sender = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( sender != nullptr )
-  {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("fontDatabaseChanged()");
-    int indexOfCodeBlock = -1;
-
-    if( hb_pcount() == 1 )
-    {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
-      {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QApplication::fontDatabaseChanged, 
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
-
-          if( cb != nullptr )
-          {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QAPPLICATION" );
-            hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
-          }
-
-        });
-
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
-
-        hb_retl( true );
-      }
-      else
-      {
-        hb_retl( false );
-      }
-    }
-    else if( hb_pcount() == 0 )
-    {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
-
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
-
-      hb_retl( true );
-    }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else
-  {
-    hb_retl( false );
-  }
-}
-
-/*
-void lastWindowClosed()
-*/
-HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
-{
-  auto sender = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( sender != nullptr )
-  {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("lastWindowClosed()");
-    int indexOfCodeBlock = -1;
-
-    if( hb_pcount() == 1 )
-    {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
-      {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QApplication::lastWindowClosed, 
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
-
-          if( cb != nullptr )
-          {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QAPPLICATION" );
-            hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
-          }
-
-        });
-
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
-
-        hb_retl( true );
-      }
-      else
-      {
-        hb_retl( false );
-      }
-    }
-    else if( hb_pcount() == 0 )
-    {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
-
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
-
-      hb_retl( true );
-    }
-    else
-    {
-      hb_retl( false );
-    }
-  }
-  else
-  {
-    hb_retl( false );
-  }
-}
-
-/*
-void saveStateRequest( QSessionManager & manager )
-*/
 
 #pragma ENDDUMP

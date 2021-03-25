@@ -79,9 +79,9 @@ QMdiSubWindow( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QMdiSubWindow( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QMdiSubWindow( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 
 HB_FUNC_STATIC( QMDISUBWINDOW_DELETE )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -114,12 +114,12 @@ bool isShaded() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isShaded() );
@@ -138,12 +138,12 @@ int keyboardPageStep() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->keyboardPageStep() );
@@ -162,12 +162,12 @@ int keyboardSingleStep() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->keyboardSingleStep() );
@@ -186,12 +186,12 @@ QMdiArea * mdiArea() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMdiArea * ptr = obj->mdiArea();
@@ -211,15 +211,15 @@ void setKeyboardPageStep( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setKeyboardPageStep( PINT(1) );
+      obj->setKeyboardPageStep( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,15 +237,15 @@ void setKeyboardSingleStep( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setKeyboardSingleStep( PINT(1) );
+      obj->setKeyboardSingleStep( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,15 +263,15 @@ void setOption( QMdiSubWindow::SubWindowOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setOption( (QMdiSubWindow::SubWindowOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( static_cast<QMdiSubWindow::SubWindowOption>( hb_parni( 1 ) ), OPBOOL( 2, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,15 +289,15 @@ void setSystemMenu( QMenu * systemMenu )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENU(1) )
+    if( ISNUMPAR( 1 ) && ISQMENU( 1 ) )
     {
 #endif
-      obj->setSystemMenu( PQMENU(1) );
+      obj->setSystemMenu( PQMENU( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,15 +315,15 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,12 +341,12 @@ QMenu * systemMenu() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMenu * ptr = obj->systemMenu();
@@ -366,15 +366,15 @@ bool testOption( QMdiSubWindow::SubWindowOption option ) const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->testOption( (QMdiSubWindow::SubWindowOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( static_cast<QMdiSubWindow::SubWindowOption>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,12 +390,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -415,12 +415,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint() );
@@ -440,12 +440,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
@@ -465,12 +465,12 @@ void showShaded()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->showShaded();
@@ -491,12 +491,12 @@ void showSystemMenu()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
 {
-  auto obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiSubWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->showSystemMenu();

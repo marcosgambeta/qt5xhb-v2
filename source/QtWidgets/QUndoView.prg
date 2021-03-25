@@ -67,7 +67,7 @@ QUndoView( QWidget * parent = nullptr )
 */
 void QUndoView_new1()
 {
-  auto obj = new QUndoView( OPQWIDGET(1,nullptr) );
+  auto obj = new QUndoView( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -76,7 +76,7 @@ QUndoView( QUndoStack * stack, QWidget * parent = nullptr )
 */
 void QUndoView_new2()
 {
-  auto obj = new QUndoView( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QUndoView( PQUNDOSTACK( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -85,21 +85,21 @@ QUndoView( QUndoGroup * group, QWidget * parent = nullptr )
 */
 void QUndoView_new3()
 {
-  auto obj = new QUndoView( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QUndoView( PQUNDOGROUP( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QUndoView_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQUNDOSTACK(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQUNDOSTACK( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QUndoView_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQUNDOGROUP(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQUNDOGROUP( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QUndoView_new3();
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 
 HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -133,12 +133,12 @@ QIcon cleanIcon() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QIcon( obj->cleanIcon() );
@@ -158,12 +158,12 @@ QString emptyLabel() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->emptyLabel() );
@@ -182,12 +182,12 @@ QUndoGroup * group() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUndoGroup * ptr = obj->group();
@@ -207,15 +207,15 @@ void setCleanIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setCleanIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setCleanIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,15 +233,15 @@ void setEmptyLabel( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setEmptyLabel( PQSTRING(1) );
+      obj->setEmptyLabel( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,12 +259,12 @@ QUndoStack * stack() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUndoStack * ptr = obj->stack();
@@ -284,15 +284,15 @@ void setGroup( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOGROUP(1) )
+    if( ISNUMPAR( 1 ) && ISQUNDOGROUP( 1 ) )
     {
 #endif
-      obj->setGroup( PQUNDOGROUP(1) );
+      obj->setGroup( PQUNDOGROUP( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,15 +310,15 @@ void setStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
-  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QUndoView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
+    if( ISNUMPAR( 1 ) && ISQUNDOSTACK( 1 ) )
     {
 #endif
-      obj->setStack( PQUNDOSTACK(1) );
+      obj->setStack( PQUNDOSTACK( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

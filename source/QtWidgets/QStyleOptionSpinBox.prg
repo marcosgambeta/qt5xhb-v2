@@ -65,17 +65,17 @@ QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
 */
 void QStyleOptionSpinBox_new2()
 {
-  auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
+  auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionSpinBox_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONSPINBOX(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSPINBOX( 1 ) )
   {
     QStyleOptionSpinBox_new2();
   }
@@ -90,11 +90,11 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 {
-  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSpinBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->buttonSymbols );
     }
@@ -107,13 +107,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 {
-  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSpinBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->buttonSymbols= (QAbstractSpinBox::ButtonSymbols) hb_parni(1);
+      obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni( 1 ) );
     }
     else
     {
@@ -129,11 +129,11 @@ QAbstractSpinBox::StepEnabled stepEnabled
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 {
-  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSpinBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->stepEnabled );
     }
@@ -146,13 +146,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 {
-  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSpinBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->stepEnabled= (QAbstractSpinBox::StepEnabled) hb_parni(1);
+      obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>( hb_parni( 1 ) );
     }
     else
     {
@@ -168,11 +168,11 @@ bool frame
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 {
-  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSpinBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RBOOL( obj->frame );
     }
@@ -185,13 +185,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 {
-  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSpinBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
-      obj->frame= PBOOL(1);
+      obj->frame = PBOOL( 1 );
     }
     else
     {

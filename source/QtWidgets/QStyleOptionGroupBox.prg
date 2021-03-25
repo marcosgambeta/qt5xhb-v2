@@ -72,17 +72,17 @@ QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
 */
 void QStyleOptionGroupBox_new2()
 {
-  auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
+  auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionGroupBox_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONGROUPBOX( 1 ) )
   {
     QStyleOptionGroupBox_new2();
   }
@@ -97,11 +97,11 @@ QStyleOptionFrame::FrameFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->features );
     }
@@ -114,13 +114,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->features= (QStyleOptionFrame::FrameFeatures) hb_parni(1);
+      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>( hb_parni( 1 ) );
     }
     else
     {
@@ -136,11 +136,11 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQSTRING( obj->text );
     }
@@ -153,13 +153,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
-      obj->text= PQSTRING(1);
+      obj->text = PQSTRING( 1 );
     }
     else
     {
@@ -175,11 +175,11 @@ Qt::Alignment textAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->textAlignment );
     }
@@ -192,13 +192,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->textAlignment= (Qt::Alignment) hb_parni(1);
+      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni( 1 ) );
     }
     else
     {
@@ -214,11 +214,11 @@ QColor textColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QColor( obj->textColor );
       Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
@@ -232,13 +232,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
     {
-      obj->textColor= *PQCOLOR(1);
+      obj->textColor = *PQCOLOR( 1 );
     }
     else
     {
@@ -254,11 +254,11 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->lineWidth );
     }
@@ -271,13 +271,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->lineWidth= PINT(1);
+      obj->lineWidth = PINT( 1 );
     }
     else
     {
@@ -293,11 +293,11 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->midLineWidth );
     }
@@ -310,13 +310,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 {
-  auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGroupBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->midLineWidth= PINT(1);
+      obj->midLineWidth = PINT( 1 );
     }
     else
     {

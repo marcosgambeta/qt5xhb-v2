@@ -56,9 +56,9 @@ QFocusFrame( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QFocusFrame( OPQWIDGET(1,nullptr) );
+    auto obj = new QFocusFrame( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 
 HB_FUNC_STATIC( QFOCUSFRAME_DELETE )
 {
-  auto obj = (QFocusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QFocusFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,15 +91,15 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
 {
-  auto obj = (QFocusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QFocusFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,12 +117,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
 {
-  auto obj = (QFocusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QFocusFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();

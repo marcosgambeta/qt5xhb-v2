@@ -62,17 +62,17 @@ QHBoxLayout( QWidget * parent )
 */
 void QHBoxLayout_new2()
 {
-  auto obj = new QHBoxLayout( PQWIDGET(1) );
+  auto obj = new QHBoxLayout( PQWIDGET( 1 ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QHBoxLayout_new1();
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QHBoxLayout_new2();
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QHBOXLAYOUT_DELETE )
 {
-  auto obj = (QHBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHBoxLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

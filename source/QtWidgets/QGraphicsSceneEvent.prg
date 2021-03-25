@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 {
-  auto obj = (QGraphicsSceneEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -69,12 +69,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
 {
-  auto obj = (QGraphicsSceneEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();

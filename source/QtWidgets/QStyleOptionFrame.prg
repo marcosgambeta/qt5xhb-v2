@@ -67,17 +67,17 @@ QStyleOptionFrame( const QStyleOptionFrame & other )
 */
 void QStyleOptionFrame_new2()
 {
-  auto obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
+  auto obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionFrame_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONFRAME( 1 ) )
   {
     QStyleOptionFrame_new2();
   }
@@ -92,11 +92,11 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->lineWidth );
     }
@@ -109,13 +109,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->lineWidth= PINT(1);
+      obj->lineWidth = PINT( 1 );
     }
     else
     {
@@ -131,11 +131,11 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->midLineWidth );
     }
@@ -148,13 +148,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->midLineWidth= PINT(1);
+      obj->midLineWidth = PINT( 1 );
     }
     else
     {
@@ -170,11 +170,11 @@ FrameFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->features );
     }
@@ -187,13 +187,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->features= (QStyleOptionFrame::FrameFeatures) hb_parni(1);
+      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>( hb_parni( 1 ) );
     }
     else
     {
@@ -209,11 +209,11 @@ QFrame::Shape frameShape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->frameShape );
     }
@@ -226,13 +226,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFRAMESHAPE )
 {
-  auto obj = (QStyleOptionFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->frameShape= (QFrame::Shape) hb_parni(1);
+      obj->frameShape = static_cast<QFrame::Shape>( hb_parni( 1 ) );
     }
     else
     {

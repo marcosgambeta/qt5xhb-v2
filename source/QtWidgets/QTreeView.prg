@@ -118,9 +118,9 @@ QTreeView( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTREEVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QTreeView( OPQWIDGET(1,nullptr) );
+    auto obj = new QTreeView( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
 
 HB_FUNC_STATIC( QTREEVIEW_DELETE )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -153,12 +153,12 @@ bool allColumnsShowFocus() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->allColumnsShowFocus() );
@@ -177,12 +177,12 @@ int autoExpandDelay() const
 */
 HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->autoExpandDelay() );
@@ -201,15 +201,15 @@ int columnAt( int x ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->columnAt( PINT(1) ) );
+      RINT( obj->columnAt( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,15 +225,15 @@ int columnViewportPosition( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->columnViewportPosition( PINT(1) ) );
+      RINT( obj->columnViewportPosition( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,15 +249,15 @@ int columnWidth( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->columnWidth( PINT(1) ) );
+      RINT( obj->columnWidth( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,12 +273,12 @@ bool expandsOnDoubleClick() const
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->expandsOnDoubleClick() );
@@ -297,12 +297,12 @@ QHeaderView * header() const
 */
 HB_FUNC_STATIC( QTREEVIEW_HEADER )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHeaderView * ptr = obj->header();
@@ -322,12 +322,12 @@ int indentation() const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->indentation() );
@@ -346,15 +346,15 @@ QModelIndex indexAbove( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->indexAbove( *PQMODELINDEX(1) ) );
+      auto ptr = new QModelIndex( obj->indexAbove( *PQMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -371,15 +371,15 @@ QModelIndex indexBelow( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->indexBelow( *PQMODELINDEX(1) ) );
+      auto ptr = new QModelIndex( obj->indexBelow( *PQMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -396,12 +396,12 @@ bool isAnimated() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAnimated() );
@@ -420,15 +420,15 @@ bool isColumnHidden( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isColumnHidden( PINT(1) ) );
+      RBOOL( obj->isColumnHidden( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,15 +444,15 @@ bool isExpanded( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->isExpanded( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isExpanded( *PQMODELINDEX( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,15 +468,15 @@ bool isFirstColumnSpanned( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      RBOOL( obj->isFirstColumnSpanned( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isFirstColumnSpanned( PINT( 1 ), *PQMODELINDEX( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,12 +492,12 @@ bool isHeaderHidden() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isHeaderHidden() );
@@ -516,15 +516,15 @@ bool isRowHidden( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      RBOOL( obj->isRowHidden( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isRowHidden( PINT( 1 ), *PQMODELINDEX( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,12 +540,12 @@ bool isSortingEnabled() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSortingEnabled() );
@@ -564,12 +564,12 @@ bool itemsExpandable() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->itemsExpandable() );
@@ -588,12 +588,12 @@ bool rootIsDecorated() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->rootIsDecorated() );
@@ -612,15 +612,15 @@ void setAllColumnsShowFocus( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAllColumnsShowFocus( PBOOL(1) );
+      obj->setAllColumnsShowFocus( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -638,15 +638,15 @@ void setAnimated( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAnimated( PBOOL(1) );
+      obj->setAnimated( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -664,15 +664,15 @@ void setAutoExpandDelay( int delay )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAutoExpandDelay( PINT(1) );
+      obj->setAutoExpandDelay( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -690,15 +690,15 @@ void setColumnHidden( int column, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
-      obj->setColumnHidden( PINT(1), PBOOL(2) );
+      obj->setColumnHidden( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -716,15 +716,15 @@ void setColumnWidth( int column, int width )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setColumnWidth( PINT(1), PINT(2) );
+      obj->setColumnWidth( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -742,15 +742,15 @@ void setExpanded( const QModelIndex & index, bool expanded )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
-      obj->setExpanded( *PQMODELINDEX(1), PBOOL(2) );
+      obj->setExpanded( *PQMODELINDEX( 1 ), PBOOL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -768,15 +768,15 @@ void setExpandsOnDoubleClick( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setExpandsOnDoubleClick( PBOOL(1) );
+      obj->setExpandsOnDoubleClick( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -794,15 +794,15 @@ void setFirstColumnSpanned( int row, const QModelIndex & parent, bool span )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && ISQMODELINDEX(2) && HB_ISLOG(3) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQMODELINDEX( 2 ) && HB_ISLOG( 3 ) )
     {
 #endif
-      obj->setFirstColumnSpanned( PINT(1), *PQMODELINDEX(2), PBOOL(3) );
+      obj->setFirstColumnSpanned( PINT( 1 ), *PQMODELINDEX( 2 ), PBOOL( 3 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,15 +820,15 @@ void setHeader( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADER )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHEADERVIEW(1) )
+    if( ISNUMPAR( 1 ) && ISQHEADERVIEW( 1 ) )
     {
 #endif
-      obj->setHeader( PQHEADERVIEW(1) );
+      obj->setHeader( PQHEADERVIEW( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -846,15 +846,15 @@ void setHeaderHidden( bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setHeaderHidden( PBOOL(1) );
+      obj->setHeaderHidden( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -872,15 +872,15 @@ void setIndentation( int i )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setIndentation( PINT(1) );
+      obj->setIndentation( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -898,15 +898,15 @@ void setItemsExpandable( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setItemsExpandable( PBOOL(1) );
+      obj->setItemsExpandable( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,15 +924,15 @@ void setRootIsDecorated( bool show )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setRootIsDecorated( PBOOL(1) );
+      obj->setRootIsDecorated( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -950,15 +950,15 @@ void setRowHidden( int row, const QModelIndex & parent, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && ISQMODELINDEX(2) && HB_ISLOG(3) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQMODELINDEX( 2 ) && HB_ISLOG( 3 ) )
     {
 #endif
-      obj->setRowHidden( PINT(1), *PQMODELINDEX(2), PBOOL(3) );
+      obj->setRowHidden( PINT( 1 ), *PQMODELINDEX( 2 ), PBOOL( 3 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -976,15 +976,15 @@ void setSortingEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setSortingEnabled( PBOOL(1) );
+      obj->setSortingEnabled( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1002,15 +1002,15 @@ void setUniformRowHeights( bool uniform )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setUniformRowHeights( PBOOL(1) );
+      obj->setUniformRowHeights( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1028,15 +1028,15 @@ void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setWordWrap( PBOOL(1) );
+      obj->setWordWrap( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1054,15 +1054,15 @@ void sortByColumn( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->sortByColumn( PINT(1), (Qt::SortOrder) hb_parni(2) );
+      obj->sortByColumn( PINT( 1 ), static_cast<Qt::SortOrder>( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1080,12 +1080,12 @@ bool uniformRowHeights() const
 */
 HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->uniformRowHeights() );
@@ -1104,12 +1104,12 @@ bool wordWrap() const
 */
 HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->wordWrap() );
@@ -1128,15 +1128,15 @@ virtual void dataChanged( const QModelIndex & topLeft, const QModelIndex & botto
 */
 HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      obj->dataChanged( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+      obj->dataChanged( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1154,15 +1154,15 @@ virtual QModelIndex indexAt( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      auto ptr = new QModelIndex( obj->indexAt( *PQPOINT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1179,15 +1179,15 @@ virtual void keyboardSearch( const QString & search )
 */
 HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->keyboardSearch( PQSTRING(1) );
+      obj->keyboardSearch( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1205,12 +1205,12 @@ virtual void reset()
 */
 HB_FUNC_STATIC( QTREEVIEW_RESET )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reset();
@@ -1231,15 +1231,15 @@ virtual void scrollTo( const QModelIndex & index, QTreeView::ScrollHint hint = Q
 */
 HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2)? (QTreeView::ScrollHint) QTreeView::EnsureVisible : (QTreeView::ScrollHint) hb_parni(2) );
+      obj->scrollTo( *PQMODELINDEX( 1 ), HB_ISNIL( 2 ) ? static_cast< QTreeView::ScrollHint >( QTreeView::EnsureVisible ) : static_cast< QTreeView::ScrollHint >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1257,12 +1257,12 @@ virtual void selectAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_SELECTALL )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->selectAll();
@@ -1283,15 +1283,15 @@ virtual void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETMODEL )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1309,15 +1309,15 @@ virtual void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX(1) );
+      obj->setRootIndex( *PQMODELINDEX( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1335,15 +1335,15 @@ virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSELECTIONMODEL )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1) )
+    if( ISNUMPAR( 1 ) && ISQITEMSELECTIONMODEL( 1 ) )
     {
 #endif
-      obj->setSelectionModel( PQITEMSELECTIONMODEL(1) );
+      obj->setSelectionModel( PQITEMSELECTIONMODEL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1361,15 +1361,15 @@ virtual QRect visualRect( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
+      auto ptr = new QRect( obj->visualRect( *PQMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1386,15 +1386,15 @@ void collapse( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->collapse( *PQMODELINDEX(1) );
+      obj->collapse( *PQMODELINDEX( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1412,12 +1412,12 @@ void collapseAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSEALL )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->collapseAll();
@@ -1438,15 +1438,15 @@ void expand( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPAND )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->expand( *PQMODELINDEX(1) );
+      obj->expand( *PQMODELINDEX( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1464,12 +1464,12 @@ void expandAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDALL )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->expandAll();
@@ -1490,15 +1490,15 @@ void expandToDepth( int depth )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->expandToDepth( PINT(1) );
+      obj->expandToDepth( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1516,15 +1516,15 @@ void hideColumn( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->hideColumn( PINT(1) );
+      obj->hideColumn( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1542,15 +1542,15 @@ void resizeColumnToContents( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->resizeColumnToContents( PINT(1) );
+      obj->resizeColumnToContents( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1568,15 +1568,15 @@ void showColumn( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
 {
-  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTreeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->showColumn( PINT(1) );
+      obj->showColumn( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

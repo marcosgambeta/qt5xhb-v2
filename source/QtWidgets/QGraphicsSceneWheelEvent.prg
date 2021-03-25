@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -76,12 +76,12 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->buttons() );
@@ -100,12 +100,12 @@ int delta() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->delta() );
@@ -124,12 +124,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -148,12 +148,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -172,12 +172,12 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->pos() );
@@ -197,12 +197,12 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->scenePos() );
@@ -222,12 +222,12 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
 {
-  auto obj = (QGraphicsSceneWheelEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsSceneWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPoint( obj->screenPos() );

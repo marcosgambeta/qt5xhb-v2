@@ -68,17 +68,17 @@ QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
 */
 void QStyleOptionGraphicsItem_new2()
 {
-  auto obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
+  auto obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionGraphicsItem_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 1 ) )
   {
     QStyleOptionGraphicsItem_new2();
   }
@@ -94,10 +94,10 @@ static qreal levelOfDetailFromTransform( const QTransform & worldTransform )
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQTRANSFORM(1) )
+  if( ISNUMPAR( 1 ) && ISQTRANSFORM( 1 ) )
   {
 #endif
-    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM(1) ) );
+    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -112,11 +112,11 @@ QRectF exposedRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 {
-  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGraphicsItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QRectF( obj->exposedRect );
       Qt5xHb::createReturnClass( ptr, "QRECTF", true );
@@ -130,13 +130,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 {
-  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGraphicsItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
-      obj->exposedRect= *PQRECTF(1);
+      obj->exposedRect = *PQRECTF( 1 );
     }
     else
     {
@@ -152,11 +152,11 @@ QMatrix matrix
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 {
-  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGraphicsItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QMatrix( obj->matrix );
       Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
@@ -170,13 +170,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 {
-  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGraphicsItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQMATRIX(1) )
+    if( ISNUMPAR( 1 ) && ISQMATRIX( 1 ) )
     {
-      obj->matrix= *PQMATRIX(1);
+      obj->matrix = *PQMATRIX( 1 );
     }
     else
     {
@@ -192,11 +192,11 @@ qreal levelOfDetail
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 {
-  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGraphicsItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQREAL( obj->levelOfDetail );
     }
@@ -209,13 +209,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 {
-  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionGraphicsItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->levelOfDetail= PQREAL(1);
+      obj->levelOfDetail = PQREAL( 1 );
     }
     else
     {

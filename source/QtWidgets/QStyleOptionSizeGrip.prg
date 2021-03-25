@@ -61,17 +61,17 @@ QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
 */
 void QStyleOptionSizeGrip_new2()
 {
-  auto obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+  auto obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionSizeGrip_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSIZEGRIP( 1 ) )
   {
     QStyleOptionSizeGrip_new2();
   }
@@ -86,11 +86,11 @@ Qt::Corner corner
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 {
-  auto obj = (QStyleOptionSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSizeGrip * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->corner );
     }
@@ -103,13 +103,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
 {
-  auto obj = (QStyleOptionSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionSizeGrip * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->corner= (Qt::Corner) hb_parni(1);
+      obj->corner = static_cast<Qt::Corner>( hb_parni( 1 ) );
     }
     else
     {

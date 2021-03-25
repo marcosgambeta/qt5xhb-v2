@@ -68,17 +68,17 @@ QStyleOptionToolBox( const QStyleOptionToolBox & other )
 */
 void QStyleOptionToolBox_new2()
 {
-  auto obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
+  auto obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionToolBox_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTOOLBOX( 1 ) )
   {
     QStyleOptionToolBox_new2();
   }
@@ -93,11 +93,11 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQSTRING( obj->text );
     }
@@ -110,13 +110,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
-      obj->text= PQSTRING(1);
+      obj->text = PQSTRING( 1 );
     }
     else
     {
@@ -132,11 +132,11 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QIcon( obj->icon );
       Qt5xHb::createReturnClass( ptr, "QICON", true );
@@ -150,13 +150,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if( ISNUMPAR( 1 ) && ISQICON( 1 ) )
     {
-      obj->icon= *PQICON(1);
+      obj->icon = *PQICON( 1 );
     }
     else
     {
@@ -172,11 +172,11 @@ TabPosition position
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->position );
     }
@@ -189,13 +189,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->position= (QStyleOptionToolBox::TabPosition) hb_parni(1);
+      obj->position = static_cast<QStyleOptionToolBox::TabPosition>( hb_parni( 1 ) );
     }
     else
     {
@@ -211,11 +211,11 @@ SelectedPosition selectedPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->selectedPosition );
     }
@@ -228,13 +228,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION )
 {
-  auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionToolBox * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->selectedPosition= (QStyleOptionToolBox::SelectedPosition) hb_parni(1);
+      obj->selectedPosition = static_cast<QStyleOptionToolBox::SelectedPosition>( hb_parni( 1 ) );
     }
     else
     {

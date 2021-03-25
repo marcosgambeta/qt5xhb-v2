@@ -57,7 +57,7 @@ QKeyEventTransition( QState * sourceState = nullptr )
 */
 void QKeyEventTransition_new1()
 {
-  auto obj = new QKeyEventTransition( OPQSTATE(1,nullptr) );
+  auto obj = new QKeyEventTransition( OPQSTATE( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -66,17 +66,17 @@ QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sour
 */
 void QKeyEventTransition_new2()
 {
-  auto obj = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
+  auto obj = new QKeyEventTransition( PQOBJECT( 1 ), static_cast<QEvent::Type>( hb_parni( 2 ) ), PINT( 3 ), OPQSTATE( 4, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QKeyEventTransition_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN( 3, 4 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( ISQSTATE( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QKeyEventTransition_new2();
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -110,12 +110,12 @@ int key() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->key() );
@@ -134,12 +134,12 @@ Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->modifierMask() );
@@ -158,15 +158,15 @@ void setKey( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setKey( PINT(1) );
+      obj->setKey( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,15 +184,15 @@ void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setModifierMask( (Qt::KeyboardModifiers) hb_parni(1) );
+      obj->setModifierMask( static_cast<Qt::KeyboardModifiers>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

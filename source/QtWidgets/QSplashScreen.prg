@@ -62,7 +62,7 @@ QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1()
 {
-  auto obj = new QSplashScreen( HB_ISNIL(1)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  auto obj = new QSplashScreen( HB_ISNIL( 1 ) ? QPixmap() : *static_cast< QPixmap * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -71,17 +71,17 @@ QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowF
 */
 void QSplashScreen_new2()
 {
-  auto obj = new QSplashScreen( PQWIDGET(1), HB_ISNIL(2)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  auto obj = new QSplashScreen( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? QPixmap() : *static_cast< QPixmap * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQPIXMAP( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSplashScreen_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( ISQPIXMAP( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSplashScreen_new2();
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 
 HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -115,15 +115,15 @@ void finish( QWidget * mainWin )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->finish( PQWIDGET(1) );
+      obj->finish( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,12 +141,12 @@ const QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap() );
@@ -166,15 +166,15 @@ void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIXMAP(1) )
+    if( ISNUMPAR( 1 ) && ISQPIXMAP( 1 ) )
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1) );
+      obj->setPixmap( *PQPIXMAP( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,12 +192,12 @@ void repaint()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->repaint();
@@ -218,12 +218,12 @@ void clearMessage()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearMessage();
@@ -244,15 +244,15 @@ void showMessage( const QString & message, int alignment = Qt::AlignLeft, const 
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
-  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplashScreen * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (ISQCOLOR(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( ISQCOLOR( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->showMessage( PQSTRING(1), OPINT(2,Qt::AlignLeft), HB_ISNIL(3)? Qt::black : *(QColor *) Qt5xHb::itemGetPtr(3) );
+      obj->showMessage( PQSTRING( 1 ), OPINT( 2, Qt::AlignLeft ), HB_ISNIL( 3 ) ? Qt::black : *static_cast< QColor * >( Qt5xHb::itemGetPtr( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

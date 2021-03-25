@@ -62,7 +62,7 @@ QCheckBox( QWidget * parent = nullptr )
 */
 void QCheckBox_new1()
 {
-  auto obj = new QCheckBox( OPQWIDGET(1,nullptr) );
+  auto obj = new QCheckBox( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -71,17 +71,17 @@ QCheckBox( const QString & text, QWidget * parent = nullptr )
 */
 void QCheckBox_new2()
 {
-  auto obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QCheckBox( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QCheckBox_new1 ();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QCheckBox_new2 ();
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 
 HB_FUNC_STATIC( QCHECKBOX_DELETE )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -115,12 +115,12 @@ Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->checkState() );
@@ -139,12 +139,12 @@ bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isTristate() );
@@ -163,15 +163,15 @@ void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCheckState( (Qt::CheckState) hb_parni(1) );
+      obj->setCheckState( static_cast<Qt::CheckState>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,15 +189,15 @@ void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->setTristate( OPBOOL(1,true) );
+      obj->setTristate( OPBOOL( 1, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,12 +215,12 @@ QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint() );
@@ -240,12 +240,12 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
-  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCheckBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );

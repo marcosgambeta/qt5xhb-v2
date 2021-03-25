@@ -68,17 +68,17 @@ QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
 */
 void QStyleOptionTabBarBase_new2()
 {
-  auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
+  auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionTabBarBase_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTABBARBASE( 1 ) )
   {
     QStyleOptionTabBarBase_new2();
   }
@@ -93,11 +93,11 @@ QTabBar::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->shape );
     }
@@ -110,13 +110,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->shape= (QTabBar::Shape) hb_parni(1);
+      obj->shape = static_cast<QTabBar::Shape>( hb_parni( 1 ) );
     }
     else
     {
@@ -132,11 +132,11 @@ QRect tabBarRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QRect( obj->tabBarRect );
       Qt5xHb::createReturnClass( ptr, "QRECT", true );
@@ -150,13 +150,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETTABBARRECT )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
-      obj->tabBarRect= *PQRECT(1);
+      obj->tabBarRect = *PQRECT( 1 );
     }
     else
     {
@@ -172,11 +172,11 @@ QRect selectedTabRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QRect( obj->selectedTabRect );
       Qt5xHb::createReturnClass( ptr, "QRECT", true );
@@ -190,13 +190,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
-      obj->selectedTabRect= *PQRECT(1);
+      obj->selectedTabRect = *PQRECT( 1 );
     }
     else
     {
@@ -212,11 +212,11 @@ bool documentMode
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_DOCUMENTMODE )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RBOOL( obj->documentMode );
     }
@@ -229,13 +229,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_DOCUMENTMODE )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETDOCUMENTMODE )
 {
-  auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTabBarBase * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
-      obj->documentMode= PBOOL(1);
+      obj->documentMode = PBOOL( 1 );
     }
     else
     {

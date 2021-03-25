@@ -53,7 +53,7 @@ QTimeEdit( QWidget * parent = nullptr )
 */
 void QTimeEdit_new1()
 {
-  auto obj = new QTimeEdit( OPQWIDGET(1,nullptr) );
+  auto obj = new QTimeEdit( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -62,17 +62,17 @@ QTimeEdit( const QTime & time, QWidget * parent = nullptr )
 */
 void QTimeEdit_new2()
 {
-  auto obj = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QTimeEdit( *PQTIME( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QTimeEdit_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQTIME( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QTimeEdit_new2();
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW )
 
 HB_FUNC_STATIC( QTIMEEDIT_DELETE )
 {
-  auto obj = (QTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTimeEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

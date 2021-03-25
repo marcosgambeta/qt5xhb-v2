@@ -79,9 +79,9 @@ QButtonGroup( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QButtonGroup( OPQOBJECT(1,nullptr) );
+    auto obj = new QButtonGroup( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 
 HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -114,11 +114,11 @@ void addButton( QAbstractButton * button )
 */
 void QButtonGroup_addButton1()
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->addButton( PQABSTRACTBUTTON(1) );
+    obj->addButton( PQABSTRACTBUTTON( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -129,11 +129,11 @@ void addButton( QAbstractButton * button, int id )
 */
 void QButtonGroup_addButton2()
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->addButton( PQABSTRACTBUTTON(1), PINT(2) );
+    obj->addButton( PQABSTRACTBUTTON( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -141,11 +141,11 @@ void QButtonGroup_addButton2()
 
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {
-  if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
+  if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
   {
     QButtonGroup_addButton1 ();
   }
-  else if( ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
   {
     QButtonGroup_addButton2 ();
   }
@@ -160,15 +160,15 @@ QAbstractButton * button( int id ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QAbstractButton * ptr = obj->button( PINT(1) );
+      QAbstractButton * ptr = obj->button( PINT( 1 ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -185,17 +185,17 @@ QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QAbstractButton *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QAbstractButton * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -233,12 +233,12 @@ QAbstractButton * checkedButton() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractButton * ptr = obj->checkedButton();
@@ -258,12 +258,12 @@ int checkedId() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->checkedId() );
@@ -282,12 +282,12 @@ bool exclusive() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->exclusive() );
@@ -306,15 +306,15 @@ int id( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
     {
 #endif
-      RINT( obj->id( PQABSTRACTBUTTON(1) ) );
+      RINT( obj->id( PQABSTRACTBUTTON( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,15 +330,15 @@ void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
     {
 #endif
-      obj->removeButton( PQABSTRACTBUTTON(1) );
+      obj->removeButton( PQABSTRACTBUTTON( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,15 +356,15 @@ void setExclusive( bool )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setExclusive( PBOOL(1) );
+      obj->setExclusive( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,15 +382,15 @@ void setId( QAbstractButton * button, int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {
-  auto obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setId( PQABSTRACTBUTTON(1), PINT(2) );
+      obj->setId( PQABSTRACTBUTTON( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

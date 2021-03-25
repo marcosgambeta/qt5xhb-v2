@@ -68,17 +68,17 @@ QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
 */
 void QStyleOptionTitleBar_new2()
 {
-  auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
+  auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionTitleBar_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTITLEBAR( 1 ) )
   {
     QStyleOptionTitleBar_new2();
   }
@@ -93,11 +93,11 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TEXT )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQSTRING( obj->text );
     }
@@ -110,13 +110,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TEXT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTEXT )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
-      obj->text= PQSTRING(1);
+      obj->text = PQSTRING( 1 );
     }
     else
     {
@@ -132,11 +132,11 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_ICON )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QIcon( obj->icon );
       Qt5xHb::createReturnClass( ptr, "QICON", true );
@@ -150,13 +150,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_ICON )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETICON )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if( ISNUMPAR( 1 ) && ISQICON( 1 ) )
     {
-      obj->icon= *PQICON(1);
+      obj->icon = *PQICON( 1 );
     }
     else
     {
@@ -172,11 +172,11 @@ int titleBarState
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARSTATE )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->titleBarState );
     }
@@ -189,13 +189,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARSTATE )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->titleBarState= PINT(1);
+      obj->titleBarState = PINT( 1 );
     }
     else
     {
@@ -211,11 +211,11 @@ Qt::WindowFlags titleBarFlags
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->titleBarFlags );
     }
@@ -228,13 +228,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS )
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS )
 {
-  auto obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionTitleBar * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->titleBarFlags= (Qt::WindowFlags) hb_parni(1);
+      obj->titleBarFlags = static_cast<Qt::WindowFlags>( hb_parni( 1 ) );
     }
     else
     {

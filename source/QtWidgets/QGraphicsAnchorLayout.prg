@@ -67,9 +67,9 @@ QGraphicsAnchorLayout( QGraphicsLayoutItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSLAYOUTITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QGraphicsAnchorLayout( HB_ISNIL(1)? nullptr : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(1) );
+    auto obj = new QGraphicsAnchorLayout( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsLayoutItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_DELETE )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -100,15 +100,15 @@ QGraphicsAnchor * addAnchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint fi
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && HB_ISNUM( 2 ) && ISQGRAPHICSLAYOUTITEM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      QGraphicsAnchor * ptr = obj->addAnchor( PQGRAPHICSLAYOUTITEM(1), (Qt::AnchorPoint) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::AnchorPoint) hb_parni(4) );
+      QGraphicsAnchor * ptr = obj->addAnchor( PQGRAPHICSLAYOUTITEM( 1 ), static_cast<Qt::AnchorPoint>( hb_parni( 2 ) ), PQGRAPHICSLAYOUTITEM( 3 ), static_cast<Qt::AnchorPoint>( hb_parni( 4 ) ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -125,15 +125,15 @@ void addAnchors( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondIt
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && ISQGRAPHICSLAYOUTITEM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->addAnchors( PQGRAPHICSLAYOUTITEM(1), PQGRAPHICSLAYOUTITEM(2), HB_ISNIL(3)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(3) );
+      obj->addAnchors( PQGRAPHICSLAYOUTITEM( 1 ), PQGRAPHICSLAYOUTITEM( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast< Qt::Orientations >( hb_parni( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,15 +151,15 @@ void addCornerAnchors( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, 
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && HB_ISNUM( 2 ) && ISQGRAPHICSLAYOUTITEM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      obj->addCornerAnchors( PQGRAPHICSLAYOUTITEM(1), (Qt::Corner) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::Corner) hb_parni(4) );
+      obj->addCornerAnchors( PQGRAPHICSLAYOUTITEM( 1 ), static_cast<Qt::Corner>( hb_parni( 2 ) ), PQGRAPHICSLAYOUTITEM( 3 ), static_cast<Qt::Corner>( hb_parni( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,15 +177,15 @@ QGraphicsAnchor * anchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint first
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && HB_ISNUM( 2 ) && ISQGRAPHICSLAYOUTITEM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      QGraphicsAnchor * ptr = obj->anchor( PQGRAPHICSLAYOUTITEM(1), (Qt::AnchorPoint) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::AnchorPoint) hb_parni(4) );
+      QGraphicsAnchor * ptr = obj->anchor( PQGRAPHICSLAYOUTITEM( 1 ), static_cast<Qt::AnchorPoint>( hb_parni( 2 ) ), PQGRAPHICSLAYOUTITEM( 3 ), static_cast<Qt::AnchorPoint>( hb_parni( 4 ) ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,12 +202,12 @@ qreal horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->horizontalSpacing() );
@@ -226,15 +226,15 @@ void setHorizontalSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setHorizontalSpacing( PQREAL(1) );
+      obj->setHorizontalSpacing( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,15 +252,15 @@ void setSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSpacing( PQREAL(1) );
+      obj->setSpacing( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,15 +278,15 @@ void setVerticalSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setVerticalSpacing( PQREAL(1) );
+      obj->setVerticalSpacing( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,12 +304,12 @@ qreal verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->verticalSpacing() );
@@ -328,12 +328,12 @@ virtual int count() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -352,12 +352,12 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->invalidate();
@@ -378,15 +378,15 @@ virtual QGraphicsLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
+      QGraphicsLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
       Qt5xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -403,15 +403,15 @@ virtual void removeAt( int index )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->removeAt( PINT(1) );
+      obj->removeAt( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,15 +429,15 @@ virtual void setGeometry( const QRectF & geom )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
 {
-  auto obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QGraphicsAnchorLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry( *PQRECTF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

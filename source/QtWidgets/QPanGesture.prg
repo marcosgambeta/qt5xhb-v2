@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QPANGESTURE_DELETE )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -79,12 +79,12 @@ qreal acceleration() const
 */
 HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->acceleration() );
@@ -103,12 +103,12 @@ QPointF delta() const
 */
 HB_FUNC_STATIC( QPANGESTURE_DELTA )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->delta() );
@@ -128,12 +128,12 @@ QPointF lastOffset() const
 */
 HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->lastOffset() );
@@ -153,12 +153,12 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QPANGESTURE_OFFSET )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->offset() );
@@ -178,15 +178,15 @@ void setAcceleration( qreal value )
 */
 HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAcceleration( PQREAL(1) );
+      obj->setAcceleration( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,15 +204,15 @@ void setLastOffset( const QPointF & value )
 */
 HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setLastOffset( *PQPOINTF(1) );
+      obj->setLastOffset( *PQPOINTF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,15 +230,15 @@ void setOffset( const QPointF & value )
 */
 HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
 {
-  auto obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPanGesture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setOffset( *PQPOINTF(1) );
+      obj->setOffset( *PQPOINTF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

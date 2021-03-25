@@ -53,7 +53,7 @@ QCommonStyle()
 */
 HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QCommonStyle();
     Qt5xHb::returnNewObject( obj, false );
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 
 HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 {
-  auto obj = (QCommonStyle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCommonStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

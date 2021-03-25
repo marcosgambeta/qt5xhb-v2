@@ -92,9 +92,9 @@ QMdiArea( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QMDIAREA_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QMdiArea( OPQWIDGET(1,nullptr) );
+    auto obj = new QMdiArea( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMDIAREA_NEW )
 
 HB_FUNC_STATIC( QMDIAREA_DELETE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -127,12 +127,12 @@ QMdiArea::WindowOrder activationOrder() const
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->activationOrder() );
@@ -151,12 +151,12 @@ QMdiSubWindow * activeSubWindow() const
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMdiSubWindow * ptr = obj->activeSubWindow();
@@ -176,15 +176,15 @@ QMdiSubWindow * addSubWindow( QWidget * widget, Qt::WindowFlags windowFlags = 0 
 */
 HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+      QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -201,12 +201,12 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->background() );
@@ -226,12 +226,12 @@ QMdiSubWindow * currentSubWindow() const
 */
 HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMdiSubWindow * ptr = obj->currentSubWindow();
@@ -251,12 +251,12 @@ bool documentMode() const
 */
 HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->documentMode() );
@@ -275,15 +275,15 @@ void removeSubWindow( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->removeSubWindow( PQWIDGET(1) );
+      obj->removeSubWindow( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,15 +301,15 @@ void setActivationOrder( QMdiArea::WindowOrder order )
 */
 HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setActivationOrder( (QMdiArea::WindowOrder) hb_parni(1) );
+      obj->setActivationOrder( static_cast<QMdiArea::WindowOrder>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,15 +327,15 @@ void setBackground( const QBrush & background )
 */
 HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBackground( *PQBRUSH(1) );
+      obj->setBackground( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,15 +353,15 @@ void setDocumentMode( bool enabled )
 */
 HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setDocumentMode( PBOOL(1) );
+      obj->setDocumentMode( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,15 +379,15 @@ void setOption( QMdiArea::AreaOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDIAREA_SETOPTION )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setOption( (QMdiArea::AreaOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( static_cast<QMdiArea::AreaOption>( hb_parni( 1 ) ), OPBOOL( 2, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,15 +405,15 @@ void setTabPosition( QTabWidget::TabPosition position )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTabPosition( (QTabWidget::TabPosition) hb_parni(1) );
+      obj->setTabPosition( static_cast<QTabWidget::TabPosition>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,15 +431,15 @@ void setTabShape( QTabWidget::TabShape shape )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTabShape( (QTabWidget::TabShape) hb_parni(1) );
+      obj->setTabShape( static_cast<QTabWidget::TabShape>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,15 +457,15 @@ void setViewMode( QMdiArea::ViewMode mode )
 */
 HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setViewMode( (QMdiArea::ViewMode) hb_parni(1) );
+      obj->setViewMode( static_cast<QMdiArea::ViewMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,17 +483,17 @@ QList<QMdiSubWindow *> subWindowList( QMdiArea::WindowOrder order = QMdiArea::Cr
 */
 HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL(1)? (QMdiArea::WindowOrder) QMdiArea::CreationOrder : (QMdiArea::WindowOrder) hb_parni(1) );
+      QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL( 1 ) ? static_cast< QMdiArea::WindowOrder >( QMdiArea::CreationOrder ) : static_cast< QMdiArea::WindowOrder >( hb_parni( 1 ) ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QMdiSubWindow *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QMdiSubWindow * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -531,12 +531,12 @@ QTabWidget::TabPosition tabPosition() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->tabPosition() );
@@ -555,12 +555,12 @@ QTabWidget::TabShape tabShape() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->tabShape() );
@@ -579,15 +579,15 @@ bool testOption( QMdiArea::AreaOption option ) const
 */
 HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->testOption( (QMdiArea::AreaOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( static_cast<QMdiArea::AreaOption>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,12 +603,12 @@ QMdiArea::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->viewMode() );
@@ -627,12 +627,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint() );
@@ -652,12 +652,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
@@ -677,12 +677,12 @@ void activateNextSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->activateNextSubWindow();
@@ -703,12 +703,12 @@ void activatePreviousSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->activatePreviousSubWindow();
@@ -729,12 +729,12 @@ void cascadeSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cascadeSubWindows();
@@ -755,12 +755,12 @@ void closeActiveSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeActiveSubWindow();
@@ -781,12 +781,12 @@ void closeAllSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeAllSubWindows();
@@ -807,15 +807,15 @@ void setActiveSubWindow( QMdiSubWindow * window )
 */
 HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMDISUBWINDOW(1) )
+    if( ISNUMPAR( 1 ) && ISQMDISUBWINDOW( 1 ) )
     {
 #endif
-      obj->setActiveSubWindow( PQMDISUBWINDOW(1) );
+      obj->setActiveSubWindow( PQMDISUBWINDOW( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -833,12 +833,12 @@ void tileSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->tileSubWindows();
@@ -859,12 +859,12 @@ bool tabsClosable() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABSCLOSABLE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->tabsClosable() );
@@ -883,15 +883,15 @@ void setTabsClosable( bool closable )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABSCLOSABLE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setTabsClosable( PBOOL(1) );
+      obj->setTabsClosable( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -909,12 +909,12 @@ bool tabsMovable() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABSMOVABLE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->tabsMovable() );
@@ -933,15 +933,15 @@ void setTabsMovable( bool movable )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABSMOVABLE )
 {
-  auto obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMdiArea * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setTabsMovable( PBOOL(1) );
+      obj->setTabsMovable( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -75,9 +75,9 @@ QToolBox( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QToolBox( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QToolBox( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTOOLBOX_NEW )
 
 HB_FUNC_STATIC( QTOOLBOX_DELETE )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -110,11 +110,11 @@ int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
 void QToolBox_addItem1()
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RINT( obj->addItem( PQWIDGET(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    RINT( obj->addItem( PQWIDGET( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ) ) );
   }
 }
 
@@ -123,21 +123,21 @@ int addItem( QWidget * w, const QString & text )
 */
 void QToolBox_addItem2()
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RINT( obj->addItem( PQWIDGET(1), PQSTRING(2) ) );
+    RINT( obj->addItem( PQWIDGET( 1 ), PQSTRING( 2 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
-  if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) )
+  if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ( ISQICON( 2 )|| HB_ISCHAR( 2 ) ) && HB_ISCHAR( 3 ) )
   {
     QToolBox_addItem1();
   }
-  else if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) )
   {
     QToolBox_addItem2();
   }
@@ -152,12 +152,12 @@ int count() const
 */
 HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -176,12 +176,12 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentIndex() );
@@ -200,12 +200,12 @@ QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
@@ -225,15 +225,15 @@ int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,11 +249,11 @@ int insertItem( int index, QWidget * widget, const QIcon & icon, const QString &
 */
 void QToolBox_insertItem1()
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RINT( obj->insertItem( PINT(1), PQWIDGET(2), HB_ISOBJECT(3)? *(QIcon *) Qt5xHb::itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
+    RINT( obj->insertItem( PINT( 1 ), PQWIDGET( 2 ), HB_ISOBJECT( 3 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 3 ) ) : QIcon( hb_parc( 3 ) ), PQSTRING( 4 ) ) );
   }
 }
 
@@ -262,21 +262,21 @@ int insertItem( int index, QWidget * widget, const QString & text )
 */
 void QToolBox_insertItem2()
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RINT( obj->insertItem( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
+    RINT( obj->insertItem( PINT( 1 ), PQWIDGET( 2 ), PQSTRING( 3 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||HB_ISCHAR(3)) && HB_ISCHAR(4) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && ( ISQICON( 3 )|| HB_ISCHAR( 3 ) ) && HB_ISCHAR( 4 ) )
   {
     QToolBox_insertItem1();
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && HB_ISCHAR( 3 ) )
   {
     QToolBox_insertItem2();
   }
@@ -291,15 +291,15 @@ bool isItemEnabled( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isItemEnabled( PINT(1) ) );
+      RBOOL( obj->isItemEnabled( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,15 +315,15 @@ QIcon itemIcon( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QIcon( obj->itemIcon( PINT(1) ) );
+      auto ptr = new QIcon( obj->itemIcon( PINT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -340,15 +340,15 @@ QString itemText( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->itemText( PINT(1) ) );
+      RQSTRING( obj->itemText( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,15 +364,15 @@ QString itemToolTip( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->itemToolTip( PINT(1) ) );
+      RQSTRING( obj->itemToolTip( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,15 +388,15 @@ void removeItem( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->removeItem( PINT(1) );
+      obj->removeItem( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,15 +414,15 @@ void setItemEnabled( int index, bool enabled )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
-      obj->setItemEnabled( PINT(1), PBOOL(2) );
+      obj->setItemEnabled( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,15 +440,15 @@ void setItemIcon( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ( ISQICON( 2 ) || HB_ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setItemIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
+      obj->setItemIcon( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,15 +466,15 @@ void setItemText( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setItemText( PINT(1), PQSTRING(2) );
+      obj->setItemText( PINT( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,15 +492,15 @@ void setItemToolTip( int index, const QString & toolTip )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setItemToolTip( PINT(1), PQSTRING(2) );
+      obj->setItemToolTip( PINT( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,15 +518,15 @@ QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->widget( PINT(1) );
+      QWidget * ptr = obj->widget( PINT( 1 ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -543,15 +543,15 @@ void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,15 +569,15 @@ void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {
-  auto obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setCurrentWidget( PQWIDGET(1) );
+      obj->setCurrentWidget( PQWIDGET( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

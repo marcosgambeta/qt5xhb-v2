@@ -72,9 +72,9 @@ QAccessibleWidget( QWidget * o, QAccessible::Role r = QAccessible::Client, const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-  if( ISBETWEEN(1,3) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    auto obj = new QAccessibleWidget( PQWIDGET(1), HB_ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
+    auto obj = new QAccessibleWidget( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? static_cast< QAccessible::Role >( QAccessible::Client ) : static_cast< QAccessible::Role >( hb_parni( 2 ) ), OPQSTRING( 3, QString() ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -88,12 +88,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -112,12 +112,12 @@ QWindow * window() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWindow * ptr = obj->window();
@@ -137,12 +137,12 @@ int childCount() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->childCount() );
@@ -161,15 +161,15 @@ int indexOfChild( const QAccessibleInterface * child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
+    if( ISNUMPAR( 1 ) && ISQACCESSIBLEINTERFACE( 1 ) )
     {
 #endif
-      RINT( obj->indexOfChild( PQACCESSIBLEINTERFACE(1) ) );
+      RINT( obj->indexOfChild( PQACCESSIBLEINTERFACE( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,12 +185,12 @@ QAccessibleInterface * focusChild() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAccessibleInterface * ptr = obj->focusChild();
@@ -210,12 +210,12 @@ QRect rect() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRect( obj->rect() );
@@ -235,12 +235,12 @@ QAccessibleInterface * parent() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAccessibleInterface * ptr = obj->parent();
@@ -260,15 +260,15 @@ QAccessibleInterface * child( int index ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->child( PINT(1) );
+      QAccessibleInterface * ptr = obj->child( PINT( 1 ) );
       Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -285,15 +285,15 @@ QString text( QAccessible::Text t ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->text( (QAccessible::Text) hb_parni(1) ) );
+      RQSTRING( obj->text( static_cast<QAccessible::Text>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,12 +309,12 @@ QAccessible::Role role() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->role() );
@@ -333,12 +333,12 @@ QColor foregroundColor() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->foregroundColor() );
@@ -358,12 +358,12 @@ QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->backgroundColor() );
@@ -383,15 +383,15 @@ void * interface_cast( QAccessible::InterfaceType t )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      hb_retptr( (void *) obj->interface_cast( (QAccessible::InterfaceType) hb_parni(1) ) );
+      hb_retptr( static_cast< void * >( obj->interface_cast( static_cast<QAccessible::InterfaceType>( hb_parni( 1 ) ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,12 +407,12 @@ QStringList actionNames() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->actionNames() );
@@ -431,15 +431,15 @@ void doAction( const QString & actionName )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->doAction( PQSTRING(1) );
+      obj->doAction( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,15 +457,15 @@ QStringList keyBindingsForAction( const QString & actionName ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_KEYBINDINGSFORACTION )
 {
-  auto obj = (QAccessibleWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleWidget * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RQSTRINGLIST( obj->keyBindingsForAction( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->keyBindingsForAction( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

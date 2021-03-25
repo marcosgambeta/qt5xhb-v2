@@ -60,9 +60,9 @@ QSplitterHandle( Qt::Orientation orientation, QSplitter * parent )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSPLITTER( 2 ) )
   {
-    auto obj = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
+    auto obj = new QSplitterHandle( static_cast<Qt::Orientation>( hb_parni( 1 ) ), PQSPLITTER( 2 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 
 HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 {
-  auto obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplitterHandle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -95,12 +95,12 @@ bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {
-  auto obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplitterHandle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->opaqueResize() );
@@ -119,12 +119,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 {
-  auto obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplitterHandle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -143,15 +143,15 @@ void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {
-  auto obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplitterHandle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,12 +169,12 @@ QSplitter * splitter() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 {
-  auto obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplitterHandle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSplitter * ptr = obj->splitter();
@@ -194,12 +194,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
 {
-  auto obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSplitterHandle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );

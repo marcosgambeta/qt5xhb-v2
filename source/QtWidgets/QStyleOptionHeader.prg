@@ -78,17 +78,17 @@ QStyleOptionHeader( const QStyleOptionHeader & other )
 */
 void QStyleOptionHeader_new2()
 {
-  auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
+  auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionHeader_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONHEADER( 1 ) )
   {
     QStyleOptionHeader_new2();
   }
@@ -103,11 +103,11 @@ int section
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SECTION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->section );
     }
@@ -120,13 +120,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SECTION )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSECTION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->section= PINT(1);
+      obj->section = PINT( 1 );
     }
     else
     {
@@ -142,11 +142,11 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXT )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQSTRING( obj->text );
     }
@@ -159,13 +159,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXT )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
-      obj->text= PQSTRING(1);
+      obj->text = PQSTRING( 1 );
     }
     else
     {
@@ -181,11 +181,11 @@ Qt::Alignment textAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXTALIGNMENT )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->textAlignment );
     }
@@ -198,13 +198,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXTALIGNMENT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXTALIGNMENT )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->textAlignment= (Qt::Alignment) hb_parni(1);
+      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni( 1 ) );
     }
     else
     {
@@ -220,11 +220,11 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICON )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       auto ptr = new QIcon( obj->icon );
       Qt5xHb::createReturnClass( ptr, "QICON", true );
@@ -238,13 +238,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICON )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICON )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if( ISNUMPAR( 1 ) && ISQICON( 1 ) )
     {
-      obj->icon= *PQICON(1);
+      obj->icon = *PQICON( 1 );
     }
     else
     {
@@ -260,11 +260,11 @@ Qt::Alignment iconAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICONALIGNMENT )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->iconAlignment );
     }
@@ -277,13 +277,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICONALIGNMENT )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICONALIGNMENT )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->iconAlignment= (Qt::Alignment) hb_parni(1);
+      obj->iconAlignment = static_cast<Qt::Alignment>( hb_parni( 1 ) );
     }
     else
     {
@@ -299,11 +299,11 @@ SectionPosition position
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_POSITION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->position );
     }
@@ -316,13 +316,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_POSITION )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETPOSITION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->position= (QStyleOptionHeader::SectionPosition) hb_parni(1);
+      obj->position = static_cast<QStyleOptionHeader::SectionPosition>( hb_parni( 1 ) );
     }
     else
     {
@@ -338,11 +338,11 @@ SelectedPosition selectedPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SELECTEDPOSITION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->selectedPosition );
     }
@@ -355,13 +355,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SELECTEDPOSITION )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSELECTEDPOSITION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->selectedPosition= (QStyleOptionHeader::SelectedPosition) hb_parni(1);
+      obj->selectedPosition = static_cast<QStyleOptionHeader::SelectedPosition>( hb_parni( 1 ) );
     }
     else
     {
@@ -377,11 +377,11 @@ SortIndicator sortIndicator
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SORTINDICATOR )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->sortIndicator );
     }
@@ -394,13 +394,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SORTINDICATOR )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSORTINDICATOR )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->sortIndicator= (QStyleOptionHeader::SortIndicator) hb_parni(1);
+      obj->sortIndicator = static_cast<QStyleOptionHeader::SortIndicator>( hb_parni( 1 ) );
     }
     else
     {
@@ -416,11 +416,11 @@ Qt::Orientation orientation
 */
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ORIENTATION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->orientation );
     }
@@ -433,13 +433,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ORIENTATION )
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETORIENTATION )
 {
-  auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleOptionHeader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
-      obj->orientation= (Qt::Orientation) hb_parni(1);
+      obj->orientation = static_cast<Qt::Orientation>( hb_parni( 1 ) );
     }
     else
     {

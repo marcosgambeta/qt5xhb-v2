@@ -73,9 +73,9 @@ QWizardPage( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QWizardPage( OPQWIDGET(1,nullptr) );
+    auto obj = new QWizardPage( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 
 HB_FUNC_STATIC( QWIZARDPAGE_DELETE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -108,15 +108,15 @@ QString buttonText( QWizard::WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->buttonText( (QWizard::WizardButton) hb_parni(1) ) );
+      RQSTRING( obj->buttonText( static_cast<QWizard::WizardButton>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,15 +132,15 @@ void setButtonText( QWizard::WizardButton which, const QString & text )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setButtonText( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
+      obj->setButtonText( static_cast<QWizard::WizardButton>( hb_parni( 1 ) ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,12 +158,12 @@ virtual void cleanupPage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cleanupPage();
@@ -184,12 +184,12 @@ virtual void initializePage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->initializePage();
@@ -210,12 +210,12 @@ bool isCommitPage() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCommitPage() );
@@ -234,15 +234,15 @@ void setCommitPage( bool commitPage )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setCommitPage( PBOOL(1) );
+      obj->setCommitPage( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,12 +260,12 @@ virtual bool isComplete() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isComplete() );
@@ -284,12 +284,12 @@ bool isFinalPage() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinalPage() );
@@ -308,15 +308,15 @@ void setFinalPage( bool finalPage )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setFinalPage( PBOOL(1) );
+      obj->setFinalPage( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,12 +334,12 @@ virtual int nextId() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->nextId() );
@@ -358,15 +358,15 @@ QPixmap pixmap( QWizard::WizardPixmap which ) const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QPixmap( obj->pixmap( (QWizard::WizardPixmap) hb_parni(1) ) );
+      auto ptr = new QPixmap( obj->pixmap( static_cast<QWizard::WizardPixmap>( hb_parni( 1 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -383,15 +383,15 @@ void setPixmap( QWizard::WizardPixmap which, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQPIXMAP( 2 ) )
     {
 #endif
-      obj->setPixmap( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
+      obj->setPixmap( static_cast<QWizard::WizardPixmap>( hb_parni( 1 ) ), *PQPIXMAP( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,12 +409,12 @@ QString subTitle() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->subTitle() );
@@ -433,15 +433,15 @@ void setSubTitle( const QString & subTitle )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setSubTitle( PQSTRING(1) );
+      obj->setSubTitle( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,12 +459,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -483,15 +483,15 @@ void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,12 +509,12 @@ virtual bool validatePage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
 {
-  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWizardPage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->validatePage() );

@@ -72,9 +72,9 @@ QSpinBox( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QSpinBox( OPQWIDGET(1,nullptr) );
+    auto obj = new QSpinBox( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSPINBOX_NEW )
 
 HB_FUNC_STATIC( QSPINBOX_DELETE )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -107,12 +107,12 @@ QString cleanText() const
 */
 HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->cleanText() );
@@ -131,12 +131,12 @@ int maximum() const
 */
 HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->maximum() );
@@ -155,15 +155,15 @@ void setMaximum( int max )
 */
 HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,12 +181,12 @@ int minimum() const
 */
 HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->minimum() );
@@ -205,15 +205,15 @@ void setMinimum( int min )
 */
 HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,12 +231,12 @@ QString prefix() const
 */
 HB_FUNC_STATIC( QSPINBOX_PREFIX )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->prefix() );
@@ -255,15 +255,15 @@ void setPrefix( const QString & prefix )
 */
 HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setPrefix( PQSTRING(1) );
+      obj->setPrefix( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,15 +281,15 @@ void setRange( int min, int max )
 */
 HB_FUNC_STATIC( QSPINBOX_SETRANGE )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,12 +307,12 @@ int singleStep() const
 */
 HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->singleStep() );
@@ -331,15 +331,15 @@ void setSingleStep( int val )
 */
 HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSingleStep( PINT(1) );
+      obj->setSingleStep( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,12 +357,12 @@ QString suffix() const
 */
 HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->suffix() );
@@ -381,15 +381,15 @@ void setSuffix( const QString & suffix )
 */
 HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setSuffix( PQSTRING(1) );
+      obj->setSuffix( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,12 +407,12 @@ int value() const
 */
 HB_FUNC_STATIC( QSPINBOX_VALUE )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->value() );
@@ -431,15 +431,15 @@ void setValue( int val )
 */
 HB_FUNC_STATIC( QSPINBOX_SETVALUE )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,12 +457,12 @@ int displayIntegerBase() const
 */
 HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->displayIntegerBase() );
@@ -481,15 +481,15 @@ void setDisplayIntegerBase( int base )
 */
 HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
 {
-  auto obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSpinBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDisplayIntegerBase( PINT(1) );
+      obj->setDisplayIntegerBase( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

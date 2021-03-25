@@ -83,9 +83,9 @@ QTextBrowser( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QTextBrowser( OPQWIDGET(1,nullptr) );
+    auto obj = new QTextBrowser( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 
 HB_FUNC_STATIC( QTEXTBROWSER_DELETE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -118,12 +118,12 @@ int backwardHistoryCount() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->backwardHistoryCount() );
@@ -142,12 +142,12 @@ void clearHistory()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearHistory();
@@ -168,12 +168,12 @@ int forwardHistoryCount() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->forwardHistoryCount() );
@@ -192,15 +192,15 @@ QString historyTitle( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->historyTitle( PINT(1) ) );
+      RQSTRING( obj->historyTitle( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,15 +216,15 @@ QUrl historyUrl( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QUrl( obj->historyUrl( PINT(1) ) );
+      auto ptr = new QUrl( obj->historyUrl( PINT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -241,12 +241,12 @@ bool isBackwardAvailable() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isBackwardAvailable() );
@@ -265,12 +265,12 @@ bool isForwardAvailable() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isForwardAvailable() );
@@ -289,12 +289,12 @@ bool openExternalLinks() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->openExternalLinks() );
@@ -313,12 +313,12 @@ bool openLinks() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->openLinks() );
@@ -337,12 +337,12 @@ QStringList searchPaths() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->searchPaths() );
@@ -361,15 +361,15 @@ void setOpenExternalLinks( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setOpenExternalLinks( PBOOL(1) );
+      obj->setOpenExternalLinks( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,15 +387,15 @@ void setOpenLinks( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setOpenLinks( PBOOL(1) );
+      obj->setOpenLinks( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,15 +413,15 @@ void setSearchPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setSearchPaths( PQSTRINGLIST(1) );
+      obj->setSearchPaths( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,12 +439,12 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->source() );
@@ -464,15 +464,15 @@ virtual QVariant loadResource( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQURL( 2 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
+      auto ptr = new QVariant( obj->loadResource( PINT( 1 ), *PQURL( 2 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -489,12 +489,12 @@ virtual void backward()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->backward();
@@ -515,12 +515,12 @@ virtual void forward()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->forward();
@@ -541,12 +541,12 @@ virtual void home()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->home();
@@ -567,12 +567,12 @@ virtual void reload()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reload();
@@ -593,15 +593,15 @@ virtual void setSource( const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 {
-  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextBrowser * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setSource( *PQURL(1) );
+      obj->setSource( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

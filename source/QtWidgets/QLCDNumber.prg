@@ -73,7 +73,7 @@ QLCDNumber( QWidget * parent = nullptr )
 */
 void QLCDNumber_new1()
 {
-  auto obj = new QLCDNumber( OPQWIDGET(1,nullptr) );
+  auto obj = new QLCDNumber( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -82,17 +82,17 @@ QLCDNumber( uint numDigits, QWidget * parent = nullptr )
 */
 void QLCDNumber_new2()
 {
-  auto obj = new QLCDNumber( PUINT(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QLCDNumber( PUINT( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QLCDNumber_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QLCDNumber_new2();
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -126,11 +126,11 @@ bool checkOverflow( double num ) const
 */
 void QLCDNumber_checkOverflow1()
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->checkOverflow( PDOUBLE(1) ) );
+    RBOOL( obj->checkOverflow( PDOUBLE( 1 ) ) );
   }
 }
 
@@ -139,17 +139,17 @@ bool checkOverflow( int num ) const
 */
 void QLCDNumber_checkOverflow2()
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->checkOverflow( PINT(1) ) );
+    RBOOL( obj->checkOverflow( PINT( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
     if( pNum )
@@ -183,12 +183,12 @@ int digitCount() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->digitCount() );
@@ -207,12 +207,12 @@ int intValue() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->intValue() );
@@ -231,12 +231,12 @@ QLCDNumber::Mode mode() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->mode() );
@@ -255,12 +255,12 @@ QLCDNumber::SegmentStyle segmentStyle() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->segmentStyle() );
@@ -279,15 +279,15 @@ void setDigitCount( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDigitCount( PINT(1) );
+      obj->setDigitCount( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,15 +305,15 @@ void setMode( QLCDNumber::Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMode( (QLCDNumber::Mode) hb_parni(1) );
+      obj->setMode( static_cast<QLCDNumber::Mode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,15 +331,15 @@ void setSegmentStyle( QLCDNumber::SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSegmentStyle( (QLCDNumber::SegmentStyle) hb_parni(1) );
+      obj->setSegmentStyle( static_cast<QLCDNumber::SegmentStyle>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,12 +357,12 @@ bool smallDecimalPoint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->smallDecimalPoint() );
@@ -381,12 +381,12 @@ double value() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RDOUBLE( obj->value() );
@@ -405,12 +405,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
@@ -430,11 +430,11 @@ void display( const QString & s )
 */
 void QLCDNumber_display1()
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->display( PQSTRING(1) );
+    obj->display( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -445,11 +445,11 @@ void display( double num )
 */
 void QLCDNumber_display2()
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->display( PDOUBLE(1) );
+    obj->display( PDOUBLE( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -460,11 +460,11 @@ void display( int num )
 */
 void QLCDNumber_display3()
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->display( PINT(1) );
+    obj->display( PINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -472,13 +472,13 @@ void QLCDNumber_display3()
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
-  if( ISNUMPAR(1) )
+  if( ISNUMPAR( 1 ) )
   {
-    if( HB_ISCHAR(1) )
+    if( HB_ISCHAR( 1 ) )
     {
       QLCDNumber_display1();
     }
-    else if( HB_ISNUM(1) )
+    else if( HB_ISNUM( 1 ) )
     {
       PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
       if( pNum )
@@ -517,12 +517,12 @@ void setBinMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setBinMode();
@@ -543,12 +543,12 @@ void setDecMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setDecMode();
@@ -569,12 +569,12 @@ void setHexMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setHexMode();
@@ -595,12 +595,12 @@ void setOctMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setOctMode();
@@ -621,15 +621,15 @@ void setSmallDecimalPoint( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
-  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setSmallDecimalPoint( PBOOL(1) );
+      obj->setSmallDecimalPoint( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

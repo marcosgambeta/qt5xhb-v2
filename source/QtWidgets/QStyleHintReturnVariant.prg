@@ -51,7 +51,7 @@ QStyleHintReturnVariant()
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QStyleHintReturnVariant();
     Qt5xHb::returnNewObject( obj, true );
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_DELETE )
 {
-  auto obj = (QStyleHintReturnVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QStyleHintReturnVariant * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
