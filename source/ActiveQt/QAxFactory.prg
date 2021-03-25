@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -95,12 +95,12 @@ virtual QUuid appID() const
 */
 HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUuid( obj->appID() );
@@ -120,15 +120,15 @@ virtual QUuid classID( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QUuid( obj->classID( PQSTRING(1) ) );
+      auto ptr = new QUuid( obj->classID( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,15 +145,15 @@ virtual QObject * createObject( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QObject * ptr = obj->createObject( PQSTRING(1) );
+      QObject * ptr = obj->createObject( PQSTRING( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,15 +170,15 @@ virtual QUuid eventsID( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QUuid( obj->eventsID( PQSTRING(1) ) );
+      auto ptr = new QUuid( obj->eventsID( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -195,15 +195,15 @@ virtual QString exposeToSuperClass( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->exposeToSuperClass( PQSTRING(1) ) );
+      RQSTRING( obj->exposeToSuperClass( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,12 +219,12 @@ virtual QStringList featureList() const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->featureList() );
@@ -243,15 +243,15 @@ virtual bool hasStockEvents( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->hasStockEvents( PQSTRING(1) ) );
+      RBOOL( obj->hasStockEvents( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,15 +267,15 @@ virtual QUuid interfaceID( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QUuid( obj->interfaceID( PQSTRING(1) ) );
+      auto ptr = new QUuid( obj->interfaceID( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -292,12 +292,12 @@ virtual bool isService() const
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isService() );
@@ -316,15 +316,15 @@ virtual const QMetaObject * metaObject( const QString & key ) const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      const QMetaObject * ptr = obj->metaObject( PQSTRING(1) );
+      const QMetaObject * ptr = obj->metaObject( PQSTRING( 1 ) );
       Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -341,15 +341,15 @@ virtual void registerClass( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQSETTINGS( 2 ) )
     {
 #endif
-      obj->registerClass( PQSTRING(1), PQSETTINGS(2) );
+      obj->registerClass( PQSTRING( 1 ), PQSETTINGS( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,15 +367,15 @@ virtual bool stayTopLevel( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->stayTopLevel( PQSTRING(1) ) );
+      RBOOL( obj->stayTopLevel( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,12 +391,12 @@ virtual QUuid typeLibID() const
 */
 HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUuid( obj->typeLibID() );
@@ -416,15 +416,15 @@ virtual void unregisterClass( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQSETTINGS( 2 ) )
     {
 #endif
-      obj->unregisterClass( PQSTRING(1), PQSETTINGS(2) );
+      obj->unregisterClass( PQSTRING( 1 ), PQSETTINGS( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,15 +442,15 @@ virtual bool validateLicenseKey( const QString & key, const QString & licenseKey
 */
 HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 {
-  auto obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAxFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->validateLicenseKey( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->validateLicenseKey( PQSTRING( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ static bool isServer()
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAxFactory::isServer() );
@@ -486,10 +486,10 @@ static bool registerActiveObject( QObject * object )
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
 #endif
-    RBOOL( QAxFactory::registerActiveObject( PQOBJECT(1) ) );
+    RBOOL( QAxFactory::registerActiveObject( PQOBJECT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -505,7 +505,7 @@ static QString serverDirPath()
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRING( QAxFactory::serverDirPath() );
@@ -524,7 +524,7 @@ static QString serverFilePath()
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRING( QAxFactory::serverFilePath() );
@@ -543,10 +543,10 @@ static bool startServer( QAxFactory::ServerType type = QAxFactory::MultipleInsta
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
 #endif
-    RBOOL( QAxFactory::startServer( HB_ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+    RBOOL( QAxFactory::startServer( HB_ISNIL( 1 ) ? static_cast< QAxFactory::ServerType >( QAxFactory::MultipleInstances ) : static_cast< QAxFactory::ServerType >( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -562,7 +562,7 @@ static bool stopServer()
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAxFactory::stopServer() );

@@ -55,9 +55,9 @@ QAxSelect( QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags()
 */
 HB_FUNC_STATIC( QAXSELECT_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QAxSelect( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QAxSelect( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( Qt::WindowFlags() ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QAXSELECT_NEW )
 */
 HB_FUNC_STATIC( QAXSELECT_DELETE )
 {
-  auto obj = (QAxSelect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAxSelect * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -93,12 +93,12 @@ QString clsid() const
 */
 HB_FUNC_STATIC( QAXSELECT_CLSID )
 {
-  auto obj = (QAxSelect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAxSelect * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->clsid() );
@@ -118,12 +118,12 @@ QAxSelect::SandboxingLevel sandboxingLevel() const
 HB_FUNC_STATIC( QAXSELECT_SANDBOXINGLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = (QAxSelect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAxSelect * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->sandboxingLevel() );
