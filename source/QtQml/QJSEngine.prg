@@ -69,17 +69,17 @@ QJSEngine( QObject * parent )
 */
 void QJSEngine_new2()
 {
-  auto obj = new QJSEngine( PQOBJECT(1) );
+  auto obj = new QJSEngine( PQOBJECT( 1 ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QJSENGINE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QJSEngine_new1();
   }
-  else if( ISNUMPAR(1) && ISQOBJECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
     QJSEngine_new2();
   }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
 
 HB_FUNC_STATIC( QJSENGINE_DELETE )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -113,12 +113,12 @@ void collectGarbage()
 */
 HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->collectGarbage();
@@ -139,15 +139,15 @@ QJSValue evaluate( const QString & program, const QString & fileName = QString()
 */
 HB_FUNC_STATIC( QJSENGINE_EVALUATE )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      auto ptr = new QJSValue( obj->evaluate( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
+      auto ptr = new QJSValue( obj->evaluate( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -164,12 +164,12 @@ QJSValue globalObject() const
 */
 HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QJSValue( obj->globalObject() );
@@ -189,15 +189,15 @@ QJSValue newArray( uint length = 0 )
 */
 HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      auto ptr = new QJSValue( obj->newArray( OPUINT(1,0) ) );
+      auto ptr = new QJSValue( obj->newArray( OPUINT( 1, 0 ) ) );
       Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -214,12 +214,12 @@ QJSValue newObject()
 */
 HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QJSValue( obj->newObject() );
@@ -239,15 +239,15 @@ QJSValue newQObject( QObject * object )
 */
 HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
 {
-  auto obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QJSEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      auto ptr = new QJSValue( obj->newQObject( PQOBJECT(1) ) );
+      auto ptr = new QJSValue( obj->newQObject( PQOBJECT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
