@@ -64,9 +64,9 @@ QInAppStore( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QINAPPSTORE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QInAppStore( OPQOBJECT(1,nullptr) );
+    auto obj = new QInAppStore( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 */
 HB_FUNC_STATIC( QINAPPSTORE_DELETE )
 {
-  auto obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppStore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -102,12 +102,12 @@ Q_INVOKABLE void restorePurchases()
 */
 HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
 {
-  auto obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppStore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->restorePurchases();
@@ -128,15 +128,15 @@ Q_INVOKABLE void registerProduct( QInAppProduct::ProductType productType, const 
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 {
-  auto obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppStore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->registerProduct( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
+      obj->registerProduct( static_cast<QInAppProduct::ProductType>( hb_parni( 1 ) ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,15 +154,15 @@ Q_INVOKABLE QInAppProduct * registeredProduct( const QString & identifier ) cons
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 {
-  auto obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppStore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
+      QInAppProduct * ptr = obj->registeredProduct( PQSTRING( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -179,15 +179,15 @@ Q_INVOKABLE void setPlatformProperty( const QString & propertyName, const QStrin
 */
 HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
 {
-  auto obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppStore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setPlatformProperty( PQSTRING(1), PQSTRING(2) );
+      obj->setPlatformProperty( PQSTRING( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

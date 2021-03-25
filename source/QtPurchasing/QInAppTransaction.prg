@@ -64,7 +64,7 @@ RETURN
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,12 +86,12 @@ QInAppTransaction::TransactionStatus status() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->status() );
@@ -110,12 +110,12 @@ QInAppProduct * product() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QInAppProduct * ptr = obj->product();
@@ -135,12 +135,12 @@ virtual QString orderId() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->orderId() );
@@ -159,12 +159,12 @@ virtual QInAppTransaction::FailureReason failureReason() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->failureReason() );
@@ -183,12 +183,12 @@ virtual QString errorString() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -207,12 +207,12 @@ virtual QDateTime timestamp() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDateTime( obj->timestamp() );
@@ -232,12 +232,12 @@ Q_INVOKABLE virtual void finalize() = 0
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->finalize();
@@ -258,15 +258,15 @@ Q_INVOKABLE virtual QString platformProperty( const QString & propertyName ) con
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
 {
-  auto obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppTransaction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->platformProperty( PQSTRING(1) ) );
+      RQSTRING( obj->platformProperty( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

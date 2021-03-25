@@ -58,7 +58,7 @@ RETURN
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,12 +80,12 @@ QString identifier() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->identifier() );
@@ -104,12 +104,12 @@ QInAppProduct::ProductType productType() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->productType() );
@@ -128,12 +128,12 @@ QString price() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->price() );
@@ -152,12 +152,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -176,12 +176,12 @@ QString description() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->description() );
@@ -200,12 +200,12 @@ Q_INVOKABLE virtual void purchase() = 0
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
 {
-  auto obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->purchase();
