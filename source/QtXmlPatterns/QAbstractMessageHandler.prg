@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 {
-  auto obj = (QAbstractMessageHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractMessageHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -72,15 +72,15 @@ void message( QtMsgType type, const QString & description, const QUrl & identifi
 */
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
 {
-  auto obj = (QAbstractMessageHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractMessageHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQURL(3)||HB_ISNIL(3)) && (ISQSOURCELOCATION(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ( ISQURL( 3 ) || HB_ISNIL( 3 ) ) && ( ISQSOURCELOCATION( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      obj->message( (QtMsgType) hb_parni(1), PQSTRING(2), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? QSourceLocation() : *(QSourceLocation *) Qt5xHb::itemGetPtr(4) );
+      obj->message( static_cast<QtMsgType>( hb_parni( 1 ) ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QSourceLocation() : *static_cast< QSourceLocation * >( Qt5xHb::itemGetPtr( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

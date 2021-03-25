@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -79,12 +79,12 @@ QXmlNamePool & namePool() const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QXmlNamePool * ptr = &obj->namePool();
@@ -104,15 +104,15 @@ virtual QUrl baseUri( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -129,15 +129,15 @@ virtual QXmlNodeModelIndex elementById( const QXmlName & id ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
     {
 #endif
-      auto ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME(1) ) );
+      auto ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -154,17 +154,17 @@ virtual QVector<QXmlName> namespaceBindings( const QXmlNodeModelIndex & node ) c
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
     {
 #endif
-      QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1) );
+      QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNAME" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QXmlName *) new QXmlName( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QXmlName * >( new QXmlName( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -206,17 +206,17 @@ virtual QVector<QXmlNodeModelIndex> nodesByIdref( const QXmlName & idref ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
     {
 #endif
-      QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME(1) );
+      QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QXmlNodeModelIndex *) new QXmlNodeModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QXmlNodeModelIndex * >( new QXmlNodeModelIndex( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -258,15 +258,15 @@ virtual QString stringValue( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
 {
-  auto obj = (QSimpleXmlNodeModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSimpleXmlNodeModel * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
     {
 #endif
-      RQSTRING( obj->stringValue( *PQXMLNODEMODELINDEX(1) ) );
+      RQSTRING( obj->stringValue( *PQXMLNODEMODELINDEX( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -88,15 +88,15 @@ virtual void atomicValue( const QVariant & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
     {
 #endif
-      obj->atomicValue( *PQVARIANT(1) );
+      obj->atomicValue( *PQVARIANT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,15 +114,15 @@ virtual void attribute( const QXmlName & name, const QStringRef & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2) )
+    if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISQSTRINGREF( 2 ) )
     {
 #endif
-      obj->attribute( *PQXMLNAME(1), *PQSTRINGREF(2) );
+      obj->attribute( *PQXMLNAME( 1 ), *PQSTRINGREF( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,15 +140,15 @@ virtual void characters( const QStringRef & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSTRINGREF(1) )
+    if( ISNUMPAR( 1 ) && ISQSTRINGREF( 1 ) )
     {
 #endif
-      obj->characters( *PQSTRINGREF(1) );
+      obj->characters( *PQSTRINGREF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,15 +166,15 @@ virtual void comment( const QString & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->comment( PQSTRING(1) );
+      obj->comment( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,12 +192,12 @@ virtual void endDocument() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endDocument();
@@ -218,12 +218,12 @@ virtual void endElement() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endElement();
@@ -244,12 +244,12 @@ virtual void endOfSequence() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endOfSequence();
@@ -270,15 +270,15 @@ virtual void namespaceBinding( const QXmlName & name ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
     {
 #endif
-      obj->namespaceBinding( *PQXMLNAME(1) );
+      obj->namespaceBinding( *PQXMLNAME( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,15 +296,15 @@ virtual void processingInstruction( const QXmlName & target, const QString & val
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->processingInstruction( *PQXMLNAME(1), PQSTRING(2) );
+      obj->processingInstruction( *PQXMLNAME( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,12 +322,12 @@ virtual void startDocument() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->startDocument();
@@ -348,15 +348,15 @@ virtual void startElement( const QXmlName & name ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
     {
 #endif
-      obj->startElement( *PQXMLNAME(1) );
+      obj->startElement( *PQXMLNAME( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,12 +374,12 @@ virtual void startOfSequence() = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
 {
-  auto obj = (QAbstractXmlReceiver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractXmlReceiver * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->startOfSequence();
@@ -399,18 +399,18 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -437,16 +437,16 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
