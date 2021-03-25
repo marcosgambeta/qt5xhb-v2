@@ -56,9 +56,9 @@ QTranslator( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QTranslator( OPQOBJECT(1,nullptr) );
+    auto obj = new QTranslator( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
 
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
-  auto obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,12 +91,12 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
-  auto obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -115,11 +115,11 @@ bool load( const QString & filename, const QString & directory = QString(), cons
 */
 void QTranslator_load1()
 {
-  auto obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->load( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
+    RBOOL( obj->load( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) ) );
   }
 }
 
@@ -128,11 +128,11 @@ bool load( const QLocale & locale, const QString & filename, const QString & pre
 */
 void QTranslator_load2()
 {
-  auto obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->load( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
+    RBOOL( obj->load( *PQLOCALE( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) ) );
   }
 }
 
@@ -141,25 +141,25 @@ bool load( const uchar * data, int len, const QString & directory = QString() )
 */
 void QTranslator_load3()
 {
-  auto obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->load( PCONSTUCHAR(1), PINT(2), OPQSTRING(3,QString()) ) );
+    RBOOL( obj->load( PCONSTUCHAR( 1 ), PINT( 2 ), OPQSTRING( 3, QString() ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
-  if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (HB_ISCHAR(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QTranslator_load1();
   }
-  else if( ISBETWEEN(2,5) && ISQLOCALE(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (HB_ISCHAR(4)||HB_ISNIL(4)) && (HB_ISCHAR(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN( 2, 5 ) && ISQLOCALE( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QTranslator_load2();
   }
-  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QTranslator_load3();
   }
@@ -174,15 +174,15 @@ virtual QString translate( const char * context, const char * sourceText, const 
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
-  auto obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 2, 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      RQSTRING( obj->translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,nullptr), OPINT(4,-1) ) );
+      RQSTRING( obj->translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, nullptr ), OPINT( 4, -1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

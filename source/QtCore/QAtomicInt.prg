@@ -82,7 +82,7 @@ QAtomicInt( int value = 0 )
 */
 void QAtomicInt_new1()
 {
-  auto obj = new QAtomicInt( OPINT(1,0) );
+  auto obj = new QAtomicInt( OPINT( 1, 0 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -91,17 +91,17 @@ QAtomicInt( const QAtomicInt & other )
 */
 void QAtomicInt_new2()
 {
-  auto obj = new QAtomicInt( *PQATOMICINT(1) );
+  auto obj = new QAtomicInt( *PQATOMICINT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {
-  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QAtomicInt_new1();
   }
-  else if( ISNUMPAR(1) && ISQATOMICINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQATOMICINT( 1 ) )
   {
     QAtomicInt_new2();
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 
 HB_FUNC_STATIC( QATOMICINT_DELETE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -133,12 +133,12 @@ bool deref()
 */
 HB_FUNC_STATIC( QATOMICINT_DEREF )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->deref() );
@@ -157,15 +157,15 @@ int fetchAndAddAcquire( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndAddAcquire( PINT(1) ) );
+      RINT( obj->fetchAndAddAcquire( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,15 +181,15 @@ int fetchAndAddOrdered( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndAddOrdered( PINT(1) ) );
+      RINT( obj->fetchAndAddOrdered( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,15 +205,15 @@ int fetchAndAddRelaxed( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndAddRelaxed( PINT(1) ) );
+      RINT( obj->fetchAndAddRelaxed( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,15 +229,15 @@ int fetchAndAddRelease( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndAddRelease( PINT(1) ) );
+      RINT( obj->fetchAndAddRelease( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,15 +253,15 @@ int fetchAndStoreAcquire( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndStoreAcquire( PINT(1) ) );
+      RINT( obj->fetchAndStoreAcquire( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,15 +277,15 @@ int fetchAndStoreOrdered( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndStoreOrdered( PINT(1) ) );
+      RINT( obj->fetchAndStoreOrdered( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,15 +301,15 @@ int fetchAndStoreRelaxed( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndStoreRelaxed( PINT(1) ) );
+      RINT( obj->fetchAndStoreRelaxed( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,15 +325,15 @@ int fetchAndStoreRelease( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->fetchAndStoreRelease( PINT(1) ) );
+      RINT( obj->fetchAndStoreRelease( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,12 +349,12 @@ bool ref()
 */
 HB_FUNC_STATIC( QATOMICINT_REF )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->ref() );
@@ -373,15 +373,15 @@ bool testAndSetAcquire( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->testAndSetAcquire( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetAcquire( PINT( 1 ), PINT( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,15 +397,15 @@ bool testAndSetOrdered( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->testAndSetOrdered( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetOrdered( PINT( 1 ), PINT( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,15 +421,15 @@ bool testAndSetRelaxed( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->testAndSetRelaxed( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetRelaxed( PINT( 1 ), PINT( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,15 +445,15 @@ bool testAndSetRelease( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
 {
-  auto obj = (QAtomicInt *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAtomicInt * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->testAndSetRelease( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetRelease( PINT( 1 ), PINT( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ static bool isFetchAndAddNative()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isFetchAndAddNative() );
@@ -489,7 +489,7 @@ static bool isFetchAndAddWaitFree()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isFetchAndAddWaitFree() );
@@ -508,7 +508,7 @@ static bool isFetchAndStoreNative()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isFetchAndStoreNative() );
@@ -527,7 +527,7 @@ static bool isFetchAndStoreWaitFree()
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isFetchAndStoreWaitFree() );
@@ -546,7 +546,7 @@ static bool isReferenceCountingNative()
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isReferenceCountingNative() );
@@ -565,7 +565,7 @@ static bool isReferenceCountingWaitFree()
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isReferenceCountingWaitFree() );
@@ -584,7 +584,7 @@ static bool isTestAndSetNative()
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isTestAndSetNative() );
@@ -603,7 +603,7 @@ static bool isTestAndSetWaitFree()
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QAtomicInt::isTestAndSetWaitFree() );
@@ -620,18 +620,18 @@ HB_FUNC_STATIC( QATOMICINT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -658,16 +658,16 @@ HB_FUNC_STATIC( QATOMICINT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QATOMICINT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QATOMICINT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

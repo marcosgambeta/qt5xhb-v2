@@ -69,7 +69,7 @@ QTemporaryFile( const QString & templateName )
 */
 void QTemporaryFile_new2()
 {
-  auto obj = new QTemporaryFile( PQSTRING(1) );
+  auto obj = new QTemporaryFile( PQSTRING( 1 ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -78,7 +78,7 @@ QTemporaryFile( QObject * parent )
 */
 void QTemporaryFile_new3()
 {
-  auto obj = new QTemporaryFile( PQOBJECT(1) );
+  auto obj = new QTemporaryFile( PQOBJECT( 1 ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -87,25 +87,25 @@ QTemporaryFile( const QString & templateName, QObject * parent )
 */
 void QTemporaryFile_new4()
 {
-  auto obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
+  auto obj = new QTemporaryFile( PQSTRING( 1 ), PQOBJECT( 2 ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTemporaryFile_new1();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QTemporaryFile_new2();
   }
-  else if( ISNUMPAR(1) && ISQOBJECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
     QTemporaryFile_new3();
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) )
   {
     QTemporaryFile_new4();
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -139,12 +139,12 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoRemove() );
@@ -163,12 +163,12 @@ QString fileTemplate() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileTemplate() );
@@ -187,12 +187,12 @@ bool open()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->open() );
@@ -211,15 +211,15 @@ void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoRemove( PBOOL(1) );
+      obj->setAutoRemove( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,15 +237,15 @@ void setFileTemplate( const QString & name )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileTemplate( PQSTRING(1) );
+      obj->setFileTemplate( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,12 +263,12 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
-  auto obj = (QTemporaryFile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -287,7 +287,7 @@ static QTemporaryFile * createNativeFile( QFile & file )
 */
 void QTemporaryFile_createNativeFile1()
 {
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE(1) );
+  QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE( 1 ) );
   Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
 }
 
@@ -296,17 +296,17 @@ static QTemporaryFile * createNativeFile( const QString & fileName )
 */
 void QTemporaryFile_createNativeFile2()
 {
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING(1) );
+  QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING( 1 ) );
   Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
 }
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {
-  if( ISNUMPAR(1) && ISQFILE(1) )
+  if( ISNUMPAR( 1 ) && ISQFILE( 1 ) )
   {
     QTemporaryFile_createNativeFile1();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QTemporaryFile_createNativeFile2();
   }

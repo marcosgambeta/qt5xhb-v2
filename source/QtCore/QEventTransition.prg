@@ -58,7 +58,7 @@ QEventTransition( QState * sourceState = nullptr )
 */
 void QEventTransition_new1()
 {
-  auto obj = new QEventTransition( OPQSTATE(1,nullptr) );
+  auto obj = new QEventTransition( OPQSTATE( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -67,17 +67,17 @@ QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = nu
 */
 void QEventTransition_new2()
 {
-  auto obj = new QEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,nullptr) );
+  auto obj = new QEventTransition( PQOBJECT( 1 ), static_cast<QEvent::Type>( hb_parni( 2 ) ), OPQSTATE( 3, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QEventTransition_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) && ( ISQSTATE( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QEventTransition_new2();
   }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
-  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -111,12 +111,12 @@ QObject * eventSource() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
-  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->eventSource();
@@ -136,12 +136,12 @@ QEvent::Type eventType() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
-  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->eventType() );
@@ -160,15 +160,15 @@ void setEventSource( QObject * object )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
-  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setEventSource( PQOBJECT(1) );
+      obj->setEventSource( PQOBJECT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,15 +186,15 @@ void setEventType( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
-  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setEventType( (QEvent::Type) hb_parni(1) );
+      obj->setEventType( static_cast<QEvent::Type>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

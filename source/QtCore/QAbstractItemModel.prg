@@ -106,7 +106,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -128,15 +128,15 @@ virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->buddy( *PQMODELINDEX(1) ) );
+      auto ptr = new QModelIndex( obj->buddy( *PQMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -153,15 +153,15 @@ virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->canFetchMore( *PQMODELINDEX(1) ) );
+      RBOOL( obj->canFetchMore( *PQMODELINDEX( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,15 +177,15 @@ virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->columnCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT( obj->columnCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,15 +201,15 @@ virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) c
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -226,15 +226,15 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5) )
+    if( ISNUMPAR( 5 ) && ISQMIMEDATA( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQMODELINDEX( 5 ) )
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA( 1 ), static_cast<Qt::DropAction>( hb_parni( 2 ) ), PINT( 3 ), PINT( 4 ), *PQMODELINDEX( 5 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,15 +250,15 @@ virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->fetchMore( *PQMODELINDEX(1) );
+      obj->fetchMore( *PQMODELINDEX( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,15 +276,15 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM( obj->flags( *PQMODELINDEX( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,15 +300,15 @@ virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->hasChildren( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,15 +324,15 @@ bool hasIndex( int row, int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->hasIndex( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->hasIndex( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,15 +348,15 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->headerData( PINT( 1 ), static_cast<Qt::Orientation>( hb_parni( 2 ) ), OPINT( 3, Qt::DisplayRole ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -373,15 +373,15 @@ virtual QModelIndex index( int row, int column, const QModelIndex & parent = QMo
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      auto ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -398,15 +398,15 @@ bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQMODELINDEX(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQMODELINDEX( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RBOOL( obj->insertColumn( PINT(1), HB_ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(2) ) );
+      RBOOL( obj->insertColumn( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,15 +422,15 @@ virtual bool insertColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->insertColumns( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->insertColumns( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,15 +446,15 @@ bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQMODELINDEX(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQMODELINDEX( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RBOOL( obj->insertRow( PINT(1), HB_ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(2) ) );
+      RBOOL( obj->insertRow( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,15 +470,15 @@ virtual bool insertRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->insertRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->insertRows( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,17 +494,17 @@ virtual QModelIndexList match( const QModelIndex & start, int role, const QVaria
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4)||HB_ISNIL(4)) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+    if( ISBETWEEN( 3, 5 ) && ISQMODELINDEX( 1 ) && HB_ISNUM( 2 ) && ISQVARIANT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
     {
 #endif
-      QModelIndexList list = obj->match( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), HB_ISNIL(5)? (Qt::MatchFlags) Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) : (Qt::MatchFlags) hb_parni(5) );
+      QModelIndexList list = obj->match( *PQMODELINDEX( 1 ), PINT( 2 ), *PQVARIANT( 3 ), OPINT( 4, 1 ), HB_ISNIL( 5 ) ? static_cast< Qt::MatchFlags >( Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) : static_cast< Qt::MatchFlags >( hb_parni( 5 ) ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QModelIndex * >( new QModelIndex( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -546,12 +546,12 @@ virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->mimeTypes() );
@@ -570,15 +570,15 @@ virtual QModelIndex parent( const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      auto ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -595,15 +595,15 @@ bool removeColumn( int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQMODELINDEX(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQMODELINDEX( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RBOOL( obj->removeColumn( PINT(1), HB_ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(2) ) );
+      RBOOL( obj->removeColumn( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,15 +619,15 @@ virtual bool removeColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,15 +643,15 @@ bool removeRow( int row, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQMODELINDEX(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQMODELINDEX( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RBOOL( obj->removeRow( PINT(1), HB_ISNIL(2)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(2) ) );
+      RBOOL( obj->removeRow( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,15 +667,15 @@ virtual bool removeRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeRows( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,15 +691,15 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -715,15 +715,15 @@ virtual bool setData( const QModelIndex & index, const QVariant & value, int rol
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -739,15 +739,15 @@ virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVar
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQVARIANT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      RBOOL( obj->setHeaderData( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+      RBOOL( obj->setHeaderData( PINT( 1 ), static_cast<Qt::Orientation>( hb_parni( 2 ) ), *PQVARIANT( 3 ), OPINT( 4, Qt::EditRole ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -763,15 +763,15 @@ QModelIndex sibling( int row, int column, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
+      auto ptr = new QModelIndex( obj->sibling( PINT( 1 ), PINT( 2 ), *PQMODELINDEX( 3 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -788,15 +788,15 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->sort( PINT(1), HB_ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sort( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::SortOrder >( Qt::AscendingOrder ) : static_cast< Qt::SortOrder >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -814,15 +814,15 @@ virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      auto ptr = new QSize( obj->span( *PQMODELINDEX(1) ) );
+      auto ptr = new QSize( obj->span( *PQMODELINDEX( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -839,12 +839,12 @@ Qt::DropActions supportedDragActions() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->supportedDragActions() );
@@ -863,12 +863,12 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->supportedDropActions() );
@@ -887,12 +887,12 @@ virtual void revert()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->revert();
@@ -913,12 +913,12 @@ virtual bool submit()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
 {
-  auto obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->submit() );

@@ -64,7 +64,7 @@ QPluginLoader( QObject * parent = nullptr )
 */
 void QPluginLoader_new1()
 {
-  auto obj = new QPluginLoader( OPQOBJECT(1,nullptr) );
+  auto obj = new QPluginLoader( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -73,17 +73,17 @@ QPluginLoader( const QString & fileName, QObject * parent = nullptr )
 */
 void QPluginLoader_new2()
 {
-  auto obj = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QPluginLoader( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QPluginLoader_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPluginLoader_new2();
   }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 
 HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -117,12 +117,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -141,12 +141,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -165,12 +165,12 @@ QObject * instance()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->instance();
@@ -190,12 +190,12 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isLoaded() );
@@ -214,12 +214,12 @@ bool load()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->load() );
@@ -238,12 +238,12 @@ QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->loadHints() );
@@ -262,15 +262,15 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,15 +288,15 @@ void setLoadHints( QLibrary::LoadHints loadHints )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLoadHints( (QLibrary::LoadHints) hb_parni(1) );
+      obj->setLoadHints( static_cast<QLibrary::LoadHints>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,12 +314,12 @@ bool unload()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->unload() );
@@ -338,17 +338,17 @@ QObjectList staticInstances()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
 {
-  auto obj = (QPluginLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPluginLoader * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObjectList list = obj->staticInstances();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QObject *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QObject * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

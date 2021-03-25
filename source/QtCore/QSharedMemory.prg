@@ -67,7 +67,7 @@ QSharedMemory( QObject * parent = nullptr )
 */
 void QSharedMemory_new1()
 {
-  auto obj = new QSharedMemory( OPQOBJECT(1,nullptr) );
+  auto obj = new QSharedMemory( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -76,17 +76,17 @@ QSharedMemory( const QString & key, QObject * parent = nullptr )
 */
 void QSharedMemory_new2()
 {
-  auto obj = new QSharedMemory( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QSharedMemory( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSharedMemory_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSharedMemory_new2();
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 
 HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -120,15 +120,15 @@ void setKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setKey( PQSTRING(1) );
+      obj->setKey( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,12 +146,12 @@ QString key() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->key() );
@@ -170,15 +170,15 @@ void setNativeKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setNativeKey( PQSTRING(1) );
+      obj->setNativeKey( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,12 +196,12 @@ QString nativeKey() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->nativeKey() );
@@ -220,15 +220,15 @@ bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RBOOL( obj->create( PINT(1), HB_ISNIL(2)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
+      RBOOL( obj->create( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QSharedMemory::AccessMode >( QSharedMemory::ReadWrite ) : static_cast< QSharedMemory::AccessMode >( hb_parni( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,12 +244,12 @@ int size() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->size() );
@@ -268,15 +268,15 @@ bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->attach( HB_ISNIL(1)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
+      RBOOL( obj->attach( HB_ISNIL( 1 ) ? static_cast< QSharedMemory::AccessMode >( QSharedMemory::ReadWrite ) : static_cast< QSharedMemory::AccessMode >( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,12 +292,12 @@ bool isAttached() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAttached() );
@@ -316,12 +316,12 @@ bool detach()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->detach() );
@@ -340,15 +340,15 @@ void * data()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( (void *) obj->data() );
+      hb_retptr( static_cast< void * >( obj->data() ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,12 +364,12 @@ bool lock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->lock() );
@@ -388,12 +388,12 @@ bool unlock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->unlock() );
@@ -412,12 +412,12 @@ QSharedMemory::SharedMemoryError error() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -436,12 +436,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 {
-  auto obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSharedMemory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );

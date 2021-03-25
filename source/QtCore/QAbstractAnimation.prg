@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_DELETE )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -96,12 +96,12 @@ int currentLoop() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentLoop() );
@@ -120,12 +120,12 @@ int currentLoopTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentLoopTime() );
@@ -144,12 +144,12 @@ int currentTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentTime() );
@@ -168,15 +168,15 @@ void setCurrentTime( int msecs )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentTime( PINT(1) );
+      obj->setCurrentTime( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,12 +194,12 @@ QAbstractAnimation::Direction direction() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->direction() );
@@ -218,15 +218,15 @@ void setDirection( QAbstractAnimation::Direction direction )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDirection( (QAbstractAnimation::Direction) hb_parni(1) );
+      obj->setDirection( static_cast<QAbstractAnimation::Direction>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,12 +244,12 @@ virtual int duration() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->duration() );
@@ -268,12 +268,12 @@ QAnimationGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAnimationGroup * ptr = obj->group();
@@ -293,12 +293,12 @@ int loopCount() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->loopCount() );
@@ -317,15 +317,15 @@ void setLoopCount( int loopCount )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLoopCount( PINT(1) );
+      obj->setLoopCount( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,12 +343,12 @@ QAbstractAnimation::State state() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -367,12 +367,12 @@ int totalDuration() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->totalDuration() );
@@ -391,12 +391,12 @@ void pause()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->pause();
@@ -417,12 +417,12 @@ void resume()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resume();
@@ -443,15 +443,15 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setPaused( PBOOL(1) );
+      obj->setPaused( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,15 +469,15 @@ void start( QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::Keep
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->start( HB_ISNIL(1)? (QAbstractAnimation::DeletionPolicy) QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );
+      obj->start( HB_ISNIL( 1 ) ? static_cast< QAbstractAnimation::DeletionPolicy >( QAbstractAnimation::KeepWhenStopped ) : static_cast< QAbstractAnimation::DeletionPolicy >( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,12 +495,12 @@ void stop()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 {
-  auto obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();

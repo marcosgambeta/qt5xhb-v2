@@ -114,9 +114,9 @@ QProcess( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QProcess( OPQOBJECT(1,nullptr) );
+    auto obj = new QProcess( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPROCESS_NEW )
 
 HB_FUNC_STATIC( QPROCESS_DELETE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -149,15 +149,15 @@ void closeReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->closeReadChannel( (QProcess::ProcessChannel) hb_parni(1) );
+      obj->closeReadChannel( static_cast<QProcess::ProcessChannel>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,12 +175,12 @@ void closeWriteChannel()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeWriteChannel();
@@ -201,12 +201,12 @@ QStringList environment() const
 */
 HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->environment() );
@@ -225,12 +225,12 @@ QProcess::ProcessError error() const
 */
 HB_FUNC_STATIC( QPROCESS_ERROR )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -249,12 +249,12 @@ int exitCode() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITCODE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->exitCode() );
@@ -273,12 +273,12 @@ QProcess::ExitStatus exitStatus() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->exitStatus() );
@@ -298,12 +298,12 @@ QString nativeArguments () const
 HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 {
 #if defined(Q_OS_WIN)
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->nativeArguments() );
@@ -323,12 +323,12 @@ QProcess::ProcessChannelMode processChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->processChannelMode() );
@@ -347,12 +347,12 @@ QProcessEnvironment processEnvironment() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QProcessEnvironment( obj->processEnvironment() );
@@ -372,12 +372,12 @@ QByteArray readAllStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QByteArray( obj->readAllStandardError() );
@@ -397,12 +397,12 @@ QByteArray readAllStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QByteArray( obj->readAllStandardOutput() );
@@ -422,12 +422,12 @@ QProcess::ProcessChannel readChannel() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->readChannel() );
@@ -446,15 +446,15 @@ void setEnvironment( const QStringList & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setEnvironment( PQSTRINGLIST(1) );
+      obj->setEnvironment( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,15 +473,15 @@ void setNativeArguments ( const QString & arguments )
 HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 {
 #if defined(Q_OS_WIN)
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setNativeArguments( PQSTRING(1) );
+      obj->setNativeArguments( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,15 +500,15 @@ void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setProcessChannelMode( (QProcess::ProcessChannelMode) hb_parni(1) );
+      obj->setProcessChannelMode( static_cast<QProcess::ProcessChannelMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,15 +526,15 @@ void setProcessEnvironment( const QProcessEnvironment & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+    if( ISNUMPAR( 1 ) && ISQPROCESSENVIRONMENT( 1 ) )
     {
 #endif
-      obj->setProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+      obj->setProcessEnvironment( *PQPROCESSENVIRONMENT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -552,15 +552,15 @@ void setReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setReadChannel( (QProcess::ProcessChannel) hb_parni(1) );
+      obj->setReadChannel( static_cast<QProcess::ProcessChannel>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,15 +578,15 @@ void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = 
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setStandardErrorFile( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+      obj->setStandardErrorFile( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::Truncate ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -604,15 +604,15 @@ void setStandardInputFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setStandardInputFile( PQSTRING(1) );
+      obj->setStandardInputFile( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,15 +630,15 @@ void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode =
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setStandardOutputFile( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+      obj->setStandardOutputFile( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::Truncate ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,15 +656,15 @@ void setStandardOutputProcess( QProcess * destination )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPROCESS(1) )
+    if( ISNUMPAR( 1 ) && ISQPROCESS( 1 ) )
     {
 #endif
-      obj->setStandardOutputProcess( PQPROCESS(1) );
+      obj->setStandardOutputProcess( PQPROCESS( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,15 +682,15 @@ void setWorkingDirectory( const QString & dir )
 */
 HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setWorkingDirectory( PQSTRING(1) );
+      obj->setWorkingDirectory( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,11 +708,11 @@ void start( const QString & program, const QStringList & arguments, QIODevice::O
 */
 void QProcess_start1()
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->start( PQSTRING(1), PQSTRINGLIST(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->start( PQSTRING( 1 ), PQSTRINGLIST( 2 ), HB_ISNIL( 3 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -723,11 +723,11 @@ void start( const QString & command, QIODevice::OpenMode mode = QIODevice::ReadW
 */
 void QProcess_start2()
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->start( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    obj->start( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -739,11 +739,11 @@ void start( QIODevice::OpenMode mode = QIODevice::ReadWrite )
 void QProcess_start3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->start( HB_ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) );
+    obj->start( HB_ISNIL( 1 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 1 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -752,15 +752,15 @@ void QProcess_start3()
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
-  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QProcess_start1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QProcess_start2();
   }
-  else if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+  else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QProcess_start3();
   }
@@ -775,12 +775,12 @@ QProcess::ProcessState state() const
 */
 HB_FUNC_STATIC( QPROCESS_STATE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -799,15 +799,15 @@ bool waitForFinished( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->waitForFinished( OPINT(1,30000) ) );
+      RBOOL( obj->waitForFinished( OPINT( 1, 30000 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -823,15 +823,15 @@ bool waitForStarted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->waitForStarted( OPINT(1,30000) ) );
+      RBOOL( obj->waitForStarted( OPINT( 1, 30000 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -847,12 +847,12 @@ QString workingDirectory() const
 */
 HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->workingDirectory() );
@@ -871,12 +871,12 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QPROCESS_ATEND )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atEnd() );
@@ -895,12 +895,12 @@ qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesAvailable() );
@@ -919,12 +919,12 @@ qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesToWrite() );
@@ -943,12 +943,12 @@ bool canReadLine() const
 */
 HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canReadLine() );
@@ -967,12 +967,12 @@ void close()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -993,12 +993,12 @@ bool isSequential() const
 */
 HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSequential() );
@@ -1017,15 +1017,15 @@ virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
+      RBOOL( obj->waitForBytesWritten( OPINT( 1, 30000 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1041,15 +1041,15 @@ virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
+      RBOOL( obj->waitForReadyRead( OPINT( 1, 30000 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1065,12 +1065,12 @@ void kill()
 */
 HB_FUNC_STATIC( QPROCESS_KILL )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->kill();
@@ -1091,12 +1091,12 @@ void terminate()
 */
 HB_FUNC_STATIC( QPROCESS_TERMINATE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->terminate();
@@ -1117,7 +1117,7 @@ static int execute( const QString & program, const QStringList & arguments )
 */
 void QProcess_execute1()
 {
-  RINT( QProcess::execute( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RINT( QProcess::execute( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
 }
 
 /*
@@ -1125,16 +1125,16 @@ static int execute( const QString & command )
 */
 void QProcess_execute2()
 {
-  RINT( QProcess::execute( PQSTRING(1) ) );
+  RINT( QProcess::execute( PQSTRING( 1 ) ) );
 }
 
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
+  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
   {
     QProcess_execute1();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QProcess_execute2();
   }
@@ -1150,7 +1150,7 @@ static bool startDetached( const QString & program, const QStringList & argument
 void QProcess_startDetached1()
 {
   qint64 par4;
-  RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), &par4 ) );
+  RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ), PQSTRING( 3 ), &par4 ) );
   hb_stornll( par4, 4 );
 }
 
@@ -1159,7 +1159,7 @@ static bool startDetached( const QString & program, const QStringList & argument
 */
 void QProcess_startDetached2()
 {
-  RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
 }
 
 /*
@@ -1167,7 +1167,7 @@ static bool startDetached( const QString & program )
 */
 void QProcess_startDetached3()
 {
-  RBOOL( QProcess::startDetached( PQSTRING(1) ) );
+  RBOOL( QProcess::startDetached( PQSTRING( 1 ) ) );
 }
 
 /*
@@ -1176,26 +1176,26 @@ bool startDetached( qint64 *pid = nullptr )
 void QProcess_startDetached4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->startDetached( OPQINT64(1,nullptr) ) );
+    RBOOL( obj->startDetached( OPQINT64( 1, nullptr ) ) );
   }
 #endif
 }
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
-  if( ISBETWEEN(3,4) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN( 3, 4 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QProcess_startDetached1();
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
   {
     QProcess_startDetached2();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QProcess_startDetached3();
   }
@@ -1211,7 +1211,7 @@ static QStringList systemEnvironment()
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRINGLIST( QProcess::systemEnvironment() );
@@ -1229,15 +1229,15 @@ bool open( QIODevice::OpenMode mode = QIODevice::ReadWrite ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QPROCESS_OPEN )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->open( HB_ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open( HB_ISNIL( 1 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1253,12 +1253,12 @@ QString program() const
 */
 HB_FUNC_STATIC( QPROCESS_PROGRAM )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->program() );
@@ -1278,15 +1278,15 @@ void setProgram( const QString & program )
 HB_FUNC_STATIC( QPROCESS_SETPROGRAM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setProgram( PQSTRING(1) );
+      obj->setProgram( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1305,12 +1305,12 @@ QStringList arguments() const
 */
 HB_FUNC_STATIC( QPROCESS_ARGUMENTS )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->arguments() );
@@ -1330,15 +1330,15 @@ void setArguments( const QStringList & arguments )
 HB_FUNC_STATIC( QPROCESS_SETARGUMENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setArguments( PQSTRINGLIST(1) );
+      obj->setArguments( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1357,12 +1357,12 @@ QProcess::ProcessChannelMode readChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNELMODE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->readChannelMode() );
@@ -1381,15 +1381,15 @@ void setReadChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNELMODE )
 {
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setReadChannelMode( (QProcess::ProcessChannelMode) hb_parni(1) );
+      obj->setReadChannelMode( static_cast<QProcess::ProcessChannelMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1408,12 +1408,12 @@ QProcess::InputChannelMode inputChannelMode() const
 HB_FUNC_STATIC( QPROCESS_INPUTCHANNELMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->inputChannelMode() );
@@ -1434,15 +1434,15 @@ void setInputChannelMode( QProcess::InputChannelMode mode )
 HB_FUNC_STATIC( QPROCESS_SETINPUTCHANNELMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setInputChannelMode( (QProcess::InputChannelMode) hb_parni(1) );
+      obj->setInputChannelMode( static_cast<QProcess::InputChannelMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1462,12 +1462,12 @@ qint64 processId() const
 HB_FUNC_STATIC( QPROCESS_PROCESSID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->processId() );
@@ -1489,7 +1489,7 @@ HB_FUNC_STATIC( QPROCESS_NULLDEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRING( QProcess::nullDevice() );

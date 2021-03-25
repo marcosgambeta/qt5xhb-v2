@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -85,12 +85,12 @@ QVariant currentValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVariant( obj->currentValue() );
@@ -110,12 +110,12 @@ QEasingCurve easingCurve() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QEasingCurve( obj->easingCurve() );
@@ -135,12 +135,12 @@ QVariant endValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVariant( obj->endValue() );
@@ -160,15 +160,15 @@ QVariant keyValueAt( qreal step ) const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->keyValueAt( PQREAL(1) ) );
+      auto ptr = new QVariant( obj->keyValueAt( PQREAL( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -185,15 +185,15 @@ void setDuration( int msecs )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDuration( PINT(1) );
+      obj->setDuration( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,15 +211,15 @@ void setEasingCurve( const QEasingCurve & easing )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
+    if( ISNUMPAR( 1 ) && ISQEASINGCURVE( 1 ) )
     {
 #endif
-      obj->setEasingCurve( *PQEASINGCURVE(1) );
+      obj->setEasingCurve( *PQEASINGCURVE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,15 +237,15 @@ void setEndValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
     {
 #endif
-      obj->setEndValue( *PQVARIANT(1) );
+      obj->setEndValue( *PQVARIANT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,15 +263,15 @@ void setKeyValueAt( qreal step, const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->setKeyValueAt( PQREAL(1), *PQVARIANT(2) );
+      obj->setKeyValueAt( PQREAL( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,15 +289,15 @@ void setStartValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
     {
 #endif
-      obj->setStartValue( *PQVARIANT(1) );
+      obj->setStartValue( *PQVARIANT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,12 +315,12 @@ QVariant startValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
-  auto obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVariantAnimation * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVariant( obj->startValue() );

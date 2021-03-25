@@ -57,7 +57,7 @@ QSignalTransition( QState * sourceState = nullptr )
 */
 void QSignalTransition_new1()
 {
-  auto obj = new QSignalTransition( OPQSTATE(1,nullptr) );
+  auto obj = new QSignalTransition( OPQSTATE( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -66,17 +66,17 @@ QSignalTransition( const QObject * sender, const char * signal, QState * sourceS
 */
 void QSignalTransition_new2()
 {
-  auto obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,nullptr) );
+  auto obj = new QSignalTransition( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQSTATE( 3, nullptr ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSignalTransition_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQSTATE( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSignalTransition_new2();
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 {
-  auto obj = (QSignalTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -108,12 +108,12 @@ QObject * senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
-  auto obj = (QSignalTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->senderObject();
@@ -133,15 +133,15 @@ void setSenderObject( const QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
-  auto obj = (QSignalTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setSenderObject( PQOBJECT(1) );
+      obj->setSenderObject( PQOBJECT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,12 +159,12 @@ QByteArray signal() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
-  auto obj = (QSignalTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QByteArray( obj->signal() );
@@ -184,15 +184,15 @@ void setSignal( const QByteArray & signal )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
-  auto obj = (QSignalTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setSignal( *PQBYTEARRAY(1) );
+      obj->setSignal( *PQBYTEARRAY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -63,7 +63,7 @@ QBBSystemLocaleData()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QBBSystemLocaleData();
     Qt5xHb::returnNewObject( obj, true );
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DELETE )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -96,12 +96,12 @@ uint measurementSystem()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RUINT( obj->measurementSystem() );
@@ -120,15 +120,15 @@ QVariant timeFormat( QLocale::FormatType )
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->timeFormat( (QLocale::FormatType) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->timeFormat( static_cast<QLocale::FormatType>( hb_parni( 1 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,15 +145,15 @@ QVariant dateTimeFormat( QLocale::FormatType )
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->dateTimeFormat( (QLocale::FormatType) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->dateTimeFormat( static_cast<QLocale::FormatType>( hb_parni( 1 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,12 +170,12 @@ QLocale languageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLocale( obj->languageLocale() );
@@ -195,12 +195,12 @@ QLocale regionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLocale( obj->regionLocale() );
@@ -220,12 +220,12 @@ void installSocketNotifiers()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->installSocketNotifiers();
@@ -246,12 +246,12 @@ void readLanguageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->readLanguageLocale();
@@ -272,12 +272,12 @@ void readRegionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READREGIONLOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->readRegionLocale();
@@ -298,12 +298,12 @@ void readMeasurementSystem()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->readMeasurementSystem();
@@ -324,12 +324,12 @@ void readHourFormat()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READHOURFORMAT )
 {
-  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->readHourFormat();

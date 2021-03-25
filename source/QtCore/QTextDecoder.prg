@@ -62,7 +62,7 @@ QTextDecoder( const QTextCodec * codec )
 */
 void QTextDecoder_new1()
 {
-  auto obj = new QTextDecoder( PQTEXTCODEC(1) );
+  auto obj = new QTextDecoder( PQTEXTCODEC( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -71,17 +71,17 @@ QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
 */
 void QTextDecoder_new2()
 {
-  auto obj = new QTextDecoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
+  auto obj = new QTextDecoder( PQTEXTCODEC( 1 ), static_cast<QTextCodec::ConversionFlags>( hb_parni( 2 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QTEXTDECODER_NEW )
 {
-  if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
     QTextDecoder_new1();
   }
-  else if( ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQTEXTCODEC( 1 ) && HB_ISNUM( 2 ) )
   {
     QTextDecoder_new2();
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
 
 HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 {
-  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextDecoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -113,11 +113,11 @@ QString toUnicode( const char * chars, int len )
 */
 void QTextDecoder_toUnicode1()
 {
-  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextDecoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RQSTRING( obj->toUnicode( PCONSTCHAR(1), PINT(2) ) );
+    RQSTRING( obj->toUnicode( PCONSTCHAR( 1 ), PINT( 2 ) ) );
   }
 }
 
@@ -129,21 +129,21 @@ QString toUnicode( const QByteArray & ba )
 */
 void QTextDecoder_toUnicode3()
 {
-  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextDecoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RQSTRING( obj->toUnicode( *PQBYTEARRAY(1) ) );
+    RQSTRING( obj->toUnicode( *PQBYTEARRAY( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
     QTextDecoder_toUnicode1();
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     QTextDecoder_toUnicode3();
   }
@@ -158,12 +158,12 @@ bool hasFailure() const
 */
 HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
 {
-  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextDecoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasFailure() );
@@ -181,18 +181,18 @@ HB_FUNC_STATIC( QTEXTDECODER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -219,16 +219,16 @@ HB_FUNC_STATIC( QTEXTDECODER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTDECODER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QTEXTDECODER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

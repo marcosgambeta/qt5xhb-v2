@@ -72,7 +72,7 @@ QDebug( QIODevice * device )
 */
 void QDebug_new1()
 {
-  auto obj = new QDebug( PQIODEVICE(1) );
+  auto obj = new QDebug( PQIODEVICE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -81,7 +81,7 @@ QDebug( QtMsgType t )
 */
 void QDebug_new3()
 {
-  auto obj = new QDebug( (QtMsgType) hb_parni(1) );
+  auto obj = new QDebug( static_cast<QtMsgType>( hb_parni( 1 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -90,21 +90,21 @@ QDebug( const QDebug & o )
 */
 void QDebug_new4()
 {
-  auto obj = new QDebug( *PQDEBUG(1) );
+  auto obj = new QDebug( *PQDEBUG( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDEBUG_NEW )
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
     QDebug_new1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QDebug_new3();
   }
-  else if( ISNUMPAR(1) && ISQDEBUG(1) )
+  else if( ISNUMPAR( 1 ) && ISQDEBUG( 1 ) )
   {
     QDebug_new4();
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -136,15 +136,15 @@ void swap( QDebug & other )
 */
 HB_FUNC_STATIC( QDEBUG_SWAP )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDEBUG(1) )
+    if( ISNUMPAR( 1 ) && ISQDEBUG( 1 ) )
     {
 #endif
-      obj->swap( *PQDEBUG(1) );
+      obj->swap( *PQDEBUG( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,12 +162,12 @@ QDebug & space()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDebug * ptr = &obj->space();
@@ -187,12 +187,12 @@ QDebug & nospace()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDebug * ptr = &obj->nospace();
@@ -212,12 +212,12 @@ QDebug & maybeSpace()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDebug * ptr = &obj->maybeSpace();
@@ -237,12 +237,12 @@ bool autoInsertSpaces() const
 */
 HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoInsertSpaces() );
@@ -261,15 +261,15 @@ void setAutoInsertSpaces( bool b )
 */
 HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
 {
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoInsertSpaces( PBOOL(1) );
+      obj->setAutoInsertSpaces( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,15 +288,15 @@ QDebug & maybeQuote( char c = '"' )
 HB_FUNC_STATIC( QDEBUG_MAYBEQUOTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      QDebug * ptr = &obj->maybeQuote( OPCHAR(1,'"') );
+      QDebug * ptr = &obj->maybeQuote( OPCHAR( 1, '"' ) );
       Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -315,12 +315,12 @@ QDebug & noquote()
 HB_FUNC_STATIC( QDEBUG_NOQUOTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDebug * ptr = &obj->noquote();
@@ -342,12 +342,12 @@ QDebug & quote()
 HB_FUNC_STATIC( QDEBUG_QUOTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDebug * ptr = &obj->quote();
@@ -369,12 +369,12 @@ QDebug & resetFormat()
 HB_FUNC_STATIC( QDEBUG_RESETFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDebug * ptr = &obj->resetFormat();
@@ -396,15 +396,15 @@ void setVerbosity( int verbosityLevel )
 HB_FUNC_STATIC( QDEBUG_SETVERBOSITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setVerbosity( PINT(1) );
+      obj->setVerbosity( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ int verbosity() const
 void QDebug_verbosity1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -439,11 +439,11 @@ QDebug & verbosity( int verbosityLevel )
 void QDebug_verbosity2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    QDebug * ptr = &obj->verbosity( PINT(1) );
+    QDebug * ptr = &obj->verbosity( PINT( 1 ) );
     Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
   }
 #endif
@@ -451,11 +451,11 @@ void QDebug_verbosity2()
 
 HB_FUNC_STATIC( QDEBUG_VERBOSITY )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDebug_verbosity1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QDebug_verbosity2();
   }
@@ -469,18 +469,18 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -507,16 +507,16 @@ HB_FUNC_STATIC( QDEBUG_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDEBUG_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QDEBUG_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

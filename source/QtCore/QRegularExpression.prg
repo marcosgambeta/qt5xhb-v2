@@ -85,7 +85,7 @@ QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions 
 */
 void QRegularExpression_new2()
 {
-  auto obj = new QRegularExpression( PQSTRING(1), HB_ISNIL(2)? (QRegularExpression::PatternOptions) QRegularExpression::NoPatternOption : (QRegularExpression::PatternOptions) hb_parni(2) );
+  auto obj = new QRegularExpression( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QRegularExpression::PatternOptions >( QRegularExpression::NoPatternOption ) : static_cast< QRegularExpression::PatternOptions >( hb_parni( 2 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -94,21 +94,21 @@ QRegularExpression( const QRegularExpression & re )
 */
 void QRegularExpression_new3()
 {
-  auto obj = new QRegularExpression( *PQREGULAREXPRESSION(1) );
+  auto obj = new QRegularExpression( *PQREGULAREXPRESSION( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QRegularExpression_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QRegularExpression_new2();
   }
-  else if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
+  else if( ISNUMPAR( 1 ) && ISQREGULAREXPRESSION( 1 ) )
   {
     QRegularExpression_new3();
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_DELETE )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -140,12 +140,12 @@ int captureCount() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_CAPTURECOUNT )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->captureCount() );
@@ -164,12 +164,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_ERRORSTRING )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -188,15 +188,15 @@ QRegularExpressionMatchIterator globalMatch( const QString & subject, int offset
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_GLOBALMATCH )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      auto ptr = new QRegularExpressionMatchIterator( obj->globalMatch( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QRegularExpression::MatchType) QRegularExpression::NormalMatch : (QRegularExpression::MatchType) hb_parni(3), HB_ISNIL(4)? (QRegularExpression::MatchOptions) QRegularExpression::NoMatchOption : (QRegularExpression::MatchOptions) hb_parni(4) ) );
+      auto ptr = new QRegularExpressionMatchIterator( obj->globalMatch( PQSTRING( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QRegularExpression::MatchType >( QRegularExpression::NormalMatch ) : static_cast< QRegularExpression::MatchType >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QRegularExpression::MatchOptions >( QRegularExpression::NoMatchOption ) : static_cast< QRegularExpression::MatchOptions >( hb_parni( 4 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QREGULAREXPRESSIONMATCHITERATOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,12 +213,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_ISVALID )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -237,15 +237,15 @@ QRegularExpressionMatch match( const QString & subject, int offset = 0, QRegular
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_MATCH )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      auto ptr = new QRegularExpressionMatch( obj->match( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QRegularExpression::MatchType) QRegularExpression::NormalMatch : (QRegularExpression::MatchType) hb_parni(3), HB_ISNIL(4)? (QRegularExpression::MatchOptions) QRegularExpression::NoMatchOption : (QRegularExpression::MatchOptions) hb_parni(4) ) );
+      auto ptr = new QRegularExpressionMatch( obj->match( PQSTRING( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QRegularExpression::MatchType >( QRegularExpression::NormalMatch ) : static_cast< QRegularExpression::MatchType >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QRegularExpression::MatchOptions >( QRegularExpression::NoMatchOption ) : static_cast< QRegularExpression::MatchOptions >( hb_parni( 4 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QREGULAREXPRESSIONMATCH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -262,12 +262,12 @@ QString pattern() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERN )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->pattern() );
@@ -286,12 +286,12 @@ int patternErrorOffset() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERNERROROFFSET )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->patternErrorOffset() );
@@ -310,12 +310,12 @@ QRegularExpression::PatternOptions patternOptions() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_PATTERNOPTIONS )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->patternOptions() );
@@ -334,15 +334,15 @@ void setPattern( const QString & pattern )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_SETPATTERN )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setPattern( PQSTRING(1) );
+      obj->setPattern( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,15 +360,15 @@ void setPatternOptions( QRegularExpression::PatternOptions options )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_SETPATTERNOPTIONS )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPatternOptions( (QRegularExpression::PatternOptions) hb_parni(1) );
+      obj->setPatternOptions( static_cast<QRegularExpression::PatternOptions>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,15 +386,15 @@ void swap( QRegularExpression & other )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_SWAP )
 {
-  auto obj = (QRegularExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QRegularExpression * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGULAREXPRESSION( 1 ) )
     {
 #endif
-      obj->swap( *PQREGULAREXPRESSION(1) );
+      obj->swap( *PQREGULAREXPRESSION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,10 +413,10 @@ static QString escape( const QString & str )
 HB_FUNC_STATIC( QREGULAREXPRESSION_ESCAPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    RQSTRING( QRegularExpression::escape( PQSTRING(1) ) );
+    RQSTRING( QRegularExpression::escape( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -433,10 +433,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ANCHOREDPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    RQSTRING( QRegularExpression::anchoredPattern( PQSTRING(1) ) );
+    RQSTRING( QRegularExpression::anchoredPattern( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -454,10 +454,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_WILDCARDTOREGULAREXPRESSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    RQSTRING( QRegularExpression::wildcardToRegularExpression( PQSTRING(1) ) );
+    RQSTRING( QRegularExpression::wildcardToRegularExpression( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -472,18 +472,18 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -510,16 +510,16 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

@@ -66,9 +66,9 @@ QSystemSemaphore( const QString & key, int initialValue = 0, QSystemSemaphore::A
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    auto obj = new QSystemSemaphore( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+    auto obj = new QSystemSemaphore( PQSTRING( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QSystemSemaphore::AccessMode >( QSystemSemaphore::Open ) : static_cast< QSystemSemaphore::AccessMode >( hb_parni( 3 ) ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -99,15 +99,15 @@ void setKey( const QString & key, int initialValue = 0, QSystemSemaphore::Access
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->setKey( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+      obj->setKey( PQSTRING( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QSystemSemaphore::AccessMode >( QSystemSemaphore::Open ) : static_cast< QSystemSemaphore::AccessMode >( hb_parni( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,12 +125,12 @@ QString key() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->key() );
@@ -149,12 +149,12 @@ bool acquire()
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->acquire() );
@@ -173,15 +173,15 @@ bool release( int n = 1 )
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->release( OPINT(1,1) ) );
+      RBOOL( obj->release( OPINT( 1, 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,12 +197,12 @@ QSystemSemaphore::SystemSemaphoreError error() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -221,12 +221,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
-  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSystemSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -244,18 +244,18 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -282,16 +282,16 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

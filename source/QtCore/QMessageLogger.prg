@@ -69,7 +69,7 @@ QMessageLogger( const char * file, int line, const char * function )
 */
 void QMessageLogger_new2()
 {
-  auto obj = new QMessageLogger( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3) );
+  auto obj = new QMessageLogger( PCONSTCHAR( 1 ), PINT( 2 ), PCONSTCHAR( 3 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -78,21 +78,21 @@ QMessageLogger( const char * file, int line, const char * function, const char *
 */
 void QMessageLogger_new3()
 {
-  auto obj = new QMessageLogger( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PCONSTCHAR(4) );
+  auto obj = new QMessageLogger( PCONSTCHAR( 1 ), PINT( 2 ), PCONSTCHAR( 3 ), PCONSTCHAR( 4 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QMessageLogger_new1();
   }
-  else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
+  else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
     QMessageLogger_new2();
   }
-  else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
+  else if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) )
   {
     QMessageLogger_new3();
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 
 HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
 {
-  auto obj = (QMessageLogger *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QMessageLogger * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -123,18 +123,18 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -161,16 +161,16 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMESSAGELOGGER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QMESSAGELOGGER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

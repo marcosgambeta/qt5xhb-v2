@@ -67,7 +67,7 @@ QBuffer( QObject * parent = nullptr )
 */
 void QBuffer_new1()
 {
-  auto obj = new QBuffer( OPQOBJECT(1,nullptr) );
+  auto obj = new QBuffer( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -76,17 +76,17 @@ QBuffer( QByteArray * byteArray, QObject * parent = nullptr )
 */
 void QBuffer_new2()
 {
-  auto obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QBuffer( PQBYTEARRAY( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QBuffer_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QBuffer_new2();
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 
 HB_FUNC_STATIC( QBUFFER_DELETE )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -120,12 +120,12 @@ QByteArray & buffer()
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = &obj->buffer();
@@ -145,12 +145,12 @@ const QByteArray & buffer() const
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QByteArray * ptr = &obj->buffer();
@@ -175,12 +175,12 @@ const QByteArray & data() const
 */
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QByteArray * ptr = &obj->data();
@@ -200,15 +200,15 @@ void setBuffer( QByteArray * byteArray )
 */
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setBuffer( PQBYTEARRAY(1) );
+      obj->setBuffer( PQBYTEARRAY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,11 +226,11 @@ void setData( const QByteArray & data )
 */
 void QBuffer_setData1()
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setData( *PQBYTEARRAY(1) );
+    obj->setData( *PQBYTEARRAY( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -241,11 +241,11 @@ void setData( const char * data, int size )
 */
 void QBuffer_setData2()
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setData( PCONSTCHAR(1), PINT(2) );
+    obj->setData( PCONSTCHAR( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -253,11 +253,11 @@ void QBuffer_setData2()
 
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     QBuffer_setData1();
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
     QBuffer_setData2();
   }
@@ -272,12 +272,12 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atEnd() );
@@ -296,12 +296,12 @@ virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canReadLine() );
@@ -320,12 +320,12 @@ virtual void close()
 */
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -346,15 +346,15 @@ virtual bool open( QBuffer::OpenMode flags )
 */
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->open( (QBuffer::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open( static_cast<QBuffer::OpenMode>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,12 +370,12 @@ virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QBUFFER_POS )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->pos() );
@@ -394,15 +394,15 @@ virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,12 +418,12 @@ virtual qint64 size() const
 */
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {
-  auto obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->size() );

@@ -56,9 +56,9 @@ QChildEvent( QEvent::Type type, QObject * child )
 */
 HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQOBJECT( 2 ) )
   {
-    auto obj = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
+    auto obj = new QChildEvent( static_cast<QEvent::Type>( hb_parni( 1 ) ), PQOBJECT( 2 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 
 HB_FUNC_STATIC( QCHILDEVENT_DELETE )
 {
-  auto obj = (QChildEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QChildEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -89,12 +89,12 @@ bool added() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 {
-  auto obj = (QChildEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QChildEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->added() );
@@ -113,12 +113,12 @@ QObject * child() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 {
-  auto obj = (QChildEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QChildEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->child();
@@ -138,12 +138,12 @@ bool polished() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 {
-  auto obj = (QChildEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QChildEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->polished() );
@@ -162,12 +162,12 @@ bool removed() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 {
-  auto obj = (QChildEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QChildEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->removed() );

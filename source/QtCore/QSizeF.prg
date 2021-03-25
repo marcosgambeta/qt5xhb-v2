@@ -84,7 +84,7 @@ QSizeF( const QSize & sz )
 */
 void QSizeF_new2()
 {
-  auto obj = new QSizeF( *PQSIZE(1) );
+  auto obj = new QSizeF( *PQSIZE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -93,21 +93,21 @@ QSizeF( qreal w, qreal h )
 */
 void QSizeF_new3()
 {
-  auto obj = new QSizeF( PQREAL(1), PQREAL(2) );
+  auto obj = new QSizeF( PQREAL( 1 ), PQREAL( 2 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSIZEF_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSizeF_new1();
   }
-  else if( ISNUMPAR(1) && ISQSIZE(1) )
+  else if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
     QSizeF_new2();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QSizeF_new3();
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 HB_FUNC_STATIC( QSIZEF_DELETE )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -139,12 +139,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -163,12 +163,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -187,12 +187,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -211,12 +211,12 @@ qreal width() const
 */
 HB_FUNC_STATIC( QSIZEF_WIDTH )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->width() );
@@ -235,12 +235,12 @@ qreal height() const
 */
 HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->height() );
@@ -259,15 +259,15 @@ void setWidth( qreal w )
 */
 HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setWidth( PQREAL(1) );
+      obj->setWidth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,15 +285,15 @@ void setHeight( qreal h )
 */
 HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setHeight( PQREAL(1) );
+      obj->setHeight( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,12 +311,12 @@ void transpose()
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->transpose();
@@ -337,12 +337,12 @@ QSizeF transposed() const
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSizeF( obj->transposed() );
@@ -362,11 +362,11 @@ void scale( qreal w, qreal h, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale1()
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->scale( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale( PQREAL( 1 ), PQREAL( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -377,11 +377,11 @@ void scale( const QSizeF & s, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale2()
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->scale( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale( *PQSIZEF( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -389,11 +389,11 @@ void QSizeF_scale2()
 
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QSizeF_scale1();
   }
-  else if( ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQSIZEF( 1 ) && HB_ISNUM( 2 ) )
   {
     QSizeF_scale2();
   }
@@ -408,11 +408,11 @@ QSizeF scaled( qreal w, qreal h, Qt::AspectRatioMode mode ) const
 */
 void QSizeF_scaled1()
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QSizeF( obj->scaled( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
+    auto ptr = new QSizeF( obj->scaled( PQREAL( 1 ), PQREAL( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) ) );
     Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
   }
 }
@@ -422,22 +422,22 @@ QSizeF scaled( const QSizeF & s, Qt::AspectRatioMode mode ) const
 */
 void QSizeF_scaled2()
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QSizeF( obj->scaled( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
+    auto ptr = new QSizeF( obj->scaled( *PQSIZEF( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) ) );
     Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
   }
 }
 
 HB_FUNC_STATIC( QSIZEF_SCALED )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QSizeF_scaled1();
   }
-  else if( ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQSIZEF( 1 ) && HB_ISNUM( 2 ) )
   {
     QSizeF_scaled2();
   }
@@ -452,15 +452,15 @@ QSizeF expandedTo( const QSizeF & ) const
 */
 HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZEF(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZEF( 1 ) )
     {
 #endif
-      auto ptr = new QSizeF( obj->expandedTo( *PQSIZEF(1) ) );
+      auto ptr = new QSizeF( obj->expandedTo( *PQSIZEF( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -477,15 +477,15 @@ QSizeF boundedTo( const QSizeF & ) const
 */
 HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZEF(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZEF( 1 ) )
     {
 #endif
-      auto ptr = new QSizeF( obj->boundedTo( *PQSIZEF(1) ) );
+      auto ptr = new QSizeF( obj->boundedTo( *PQSIZEF( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -502,12 +502,12 @@ QSize toSize() const
 */
 HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
-  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->toSize() );
@@ -526,18 +526,18 @@ HB_FUNC_STATIC( QSIZEF_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -564,16 +564,16 @@ HB_FUNC_STATIC( QSIZEF_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSIZEF_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QSIZEF_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
