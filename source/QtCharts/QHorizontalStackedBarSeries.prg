@@ -61,9 +61,9 @@ QHorizontalStackedBarSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QHorizontalStackedBarSeries( OPQOBJECT(1,nullptr) );
+    auto obj = new QHorizontalStackedBarSeries( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_NEW )
 HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QHorizontalStackedBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHorizontalStackedBarSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QHorizontalStackedBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHorizontalStackedBarSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );

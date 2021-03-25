@@ -110,7 +110,7 @@ using namespace QtCharts;
 HB_FUNC_STATIC( QXYSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -134,12 +134,12 @@ bool pointsVisible() const
 HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->pointsVisible() );
@@ -160,15 +160,15 @@ void setPointsVisible( bool visible = true )
 HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->setPointsVisible( OPBOOL(1,true) );
+      obj->setPointsVisible( OPBOOL( 1, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,12 +188,12 @@ virtual QColor color() const
 HB_FUNC_STATIC( QXYSERIES_COLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->color() );
@@ -215,15 +215,15 @@ virtual void setColor( const QColor & color )
 HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,12 +243,12 @@ QString pointLabelsFormat() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->pointLabelsFormat() );
@@ -269,15 +269,15 @@ void setPointLabelsFormat( const QString & format )
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setPointLabelsFormat( PQSTRING(1) );
+      obj->setPointLabelsFormat( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,12 +297,12 @@ bool pointLabelsVisible() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->pointLabelsVisible() );
@@ -323,15 +323,15 @@ void setPointLabelsVisible( bool visible = true )
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->setPointLabelsVisible( OPBOOL(1,true) );
+      obj->setPointLabelsVisible( OPBOOL( 1, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,12 +351,12 @@ QFont pointLabelsFont() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QFont( obj->pointLabelsFont() );
@@ -378,15 +378,15 @@ void setPointLabelsFont( const QFont & font )
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
     {
 #endif
-      obj->setPointLabelsFont( *PQFONT(1) );
+      obj->setPointLabelsFont( *PQFONT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,12 +406,12 @@ QColor pointLabelsColor() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->pointLabelsColor() );
@@ -433,15 +433,15 @@ void setPointLabelsColor( const QColor & color )
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setPointLabelsColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setPointLabelsColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,12 +461,12 @@ bool pointLabelsClipping() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->pointLabelsClipping() );
@@ -487,15 +487,15 @@ void setPointLabelsClipping( bool enabled = true )
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->setPointLabelsClipping( OPBOOL(1,true) );
+      obj->setPointLabelsClipping( OPBOOL( 1, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,11 +515,11 @@ void append( qreal x, qreal y )
 void QXYSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->append( PQREAL(1), PQREAL(2) );
+    obj->append( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -532,11 +532,11 @@ void append( const QPointF & point )
 void QXYSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->append( *PQPOINTF(1) );
+    obj->append( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -549,16 +549,16 @@ void append( const QList<QPointF> & points )
 void QXYSeries_append3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
     QList<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen(aList1);
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << *static_cast< QPointF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     obj->append( par1 );
   }
@@ -569,15 +569,15 @@ void QXYSeries_append3()
 
 HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QXYSeries_append1();
   }
-  else if( ISNUMPAR(1) && ISQPOINTF(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QXYSeries_append2();
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
     QXYSeries_append3();
   }
@@ -593,11 +593,11 @@ void replace( qreal oldX, qreal oldY, qreal newX, qreal newY )
 void QXYSeries_replace1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->replace( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->replace( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -610,11 +610,11 @@ void replace( const QPointF & oldPoint, const QPointF & newPoint )
 void QXYSeries_replace2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->replace( *PQPOINTF(1), *PQPOINTF(2) );
+    obj->replace( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -627,11 +627,11 @@ void replace( int index, qreal newX, qreal newY )
 void QXYSeries_replace3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->replace( PINT(1), PQREAL(2), PQREAL(3) );
+    obj->replace( PINT( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -644,11 +644,11 @@ void replace( int index, const QPointF & newPoint )
 void QXYSeries_replace4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->replace( PINT(1), *PQPOINTF(2) );
+    obj->replace( PINT( 1 ), *PQPOINTF( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -661,16 +661,16 @@ void replace( QList<QPointF> points )
 void QXYSeries_replace5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
     QList<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen(aList1);
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << *static_cast< QPointF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     obj->replace( par1 );
   }
@@ -685,16 +685,16 @@ void replace( QVector<QPointF> points )
 void QXYSeries_replace6()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
     QVector<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen(aList1);
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << *static_cast< QPointF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     obj->replace( par1 );
   }
@@ -705,27 +705,27 @@ void QXYSeries_replace6()
 
 HB_FUNC_STATIC( QXYSERIES_REPLACE )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QXYSeries_replace1();
   }
-  else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
+  else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) )
   {
     QXYSeries_replace2();
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QXYSeries_replace3();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQPOINTF( 2 ) )
   {
     QXYSeries_replace4();
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
     QXYSeries_replace5();
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
     QXYSeries_replace6();
   }
@@ -741,11 +741,11 @@ void remove( qreal x, qreal y )
 void QXYSeries_remove1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->remove( PQREAL(1), PQREAL(2) );
+    obj->remove( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -758,11 +758,11 @@ void remove( const QPointF & point )
 void QXYSeries_remove2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->remove( *PQPOINTF(1) );
+    obj->remove( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -775,11 +775,11 @@ void remove( int index )
 void QXYSeries_remove3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->remove( PINT(1) );
+    obj->remove( PINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -788,15 +788,15 @@ void QXYSeries_remove3()
 
 HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QXYSeries_remove1();
   }
-  else if( ISNUMPAR(1) && ISQPOINTF(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QXYSeries_remove2();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QXYSeries_remove3();
   }
@@ -812,15 +812,15 @@ void removePoints( int index, int count )
 HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->removePoints( PINT(1), PINT(2) );
+      obj->removePoints( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -840,15 +840,15 @@ void insert( int index, const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQPOINTF( 2 ) )
     {
 #endif
-      obj->insert( PINT(1), *PQPOINTF(2) );
+      obj->insert( PINT( 1 ), *PQPOINTF( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -868,12 +868,12 @@ void clear()
 HB_FUNC_STATIC( QXYSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -896,12 +896,12 @@ int count() const
 HB_FUNC_STATIC( QXYSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -922,17 +922,17 @@ QList<QPointF> points() const
 HB_FUNC_STATIC( QXYSERIES_POINTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QPointF> list = obj->points();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QPointF * >( new QPointF( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -976,17 +976,17 @@ QVector<QPointF> pointsVector() const
 HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QVector<QPointF> list = obj->pointsVector();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QPointF * >( new QPointF( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -1030,15 +1030,15 @@ const QPointF & at( int index ) const
 HB_FUNC_STATIC( QXYSERIES_AT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      const QPointF * ptr = &obj->at( PINT(1) );
+      const QPointF * ptr = &obj->at( PINT( 1 ) );
       Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1057,15 +1057,15 @@ virtual void setPen( const QPen & pen )
 HB_FUNC_STATIC( QXYSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen( *PQPEN( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1085,12 +1085,12 @@ QPen pen() const
 HB_FUNC_STATIC( QXYSERIES_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPen( obj->pen() );
@@ -1112,15 +1112,15 @@ virtual void setBrush( const QBrush & brush )
 HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1140,12 +1140,12 @@ QBrush brush() const
 HB_FUNC_STATIC( QXYSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QXYSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->brush() );

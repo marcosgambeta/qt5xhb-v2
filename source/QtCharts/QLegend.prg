@@ -102,7 +102,7 @@ using namespace QtCharts;
 HB_FUNC_STATIC( QLEGEND_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -126,12 +126,12 @@ Qt::Alignment alignment() const
 HB_FUNC_STATIC( QLEGEND_ALIGNMENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -152,12 +152,12 @@ bool isBackgroundVisible() const
 HB_FUNC_STATIC( QLEGEND_ISBACKGROUNDVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isBackgroundVisible() );
@@ -178,15 +178,15 @@ void setBackgroundVisible( bool visible = true )
 HB_FUNC_STATIC( QLEGEND_SETBACKGROUNDVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->setBackgroundVisible( OPBOOL(1,true) );
+      obj->setBackgroundVisible( OPBOOL( 1, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,12 +206,12 @@ QColor color()
 HB_FUNC_STATIC( QLEGEND_COLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->color() );
@@ -233,15 +233,15 @@ void setColor( QColor color )
 HB_FUNC_STATIC( QLEGEND_SETCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
     {
 #endif
-      obj->setColor( *PQCOLOR(1) );
+      obj->setColor( *PQCOLOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,12 +261,12 @@ QColor borderColor()
 HB_FUNC_STATIC( QLEGEND_BORDERCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->borderColor() );
@@ -288,15 +288,15 @@ void setBorderColor( QColor color )
 HB_FUNC_STATIC( QLEGEND_SETBORDERCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
     {
 #endif
-      obj->setBorderColor( *PQCOLOR(1) );
+      obj->setBorderColor( *PQCOLOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,12 +316,12 @@ QFont font() const
 HB_FUNC_STATIC( QLEGEND_FONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QFont( obj->font() );
@@ -343,15 +343,15 @@ void setFont( const QFont & font )
 HB_FUNC_STATIC( QLEGEND_SETFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont( *PQFONT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,12 +371,12 @@ QColor labelColor() const
 HB_FUNC_STATIC( QLEGEND_LABELCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->labelColor() );
@@ -398,15 +398,15 @@ void setLabelColor( QColor color )
 HB_FUNC_STATIC( QLEGEND_SETLABELCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
     {
 #endif
-      obj->setLabelColor( *PQCOLOR(1) );
+      obj->setLabelColor( *PQCOLOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,12 +426,12 @@ bool reverseMarkers()
 HB_FUNC_STATIC( QLEGEND_REVERSEMARKERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->reverseMarkers() );
@@ -452,15 +452,15 @@ void setReverseMarkers( bool reverseMarkers = true )
 HB_FUNC_STATIC( QLEGEND_SETREVERSEMARKERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->setReverseMarkers( OPBOOL(1,true) );
+      obj->setReverseMarkers( OPBOOL( 1, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,12 +480,12 @@ bool showToolTips() const
 HB_FUNC_STATIC( QLEGEND_SHOWTOOLTIPS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->showToolTips() );
@@ -506,15 +506,15 @@ void setShowToolTips( bool show )
 HB_FUNC_STATIC( QLEGEND_SETSHOWTOOLTIPS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setShowToolTips( PBOOL(1) );
+      obj->setShowToolTips( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,12 +534,12 @@ QLegend::MarkerShape markerShape() const
 HB_FUNC_STATIC( QLEGEND_MARKERSHAPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->markerShape() );
@@ -560,15 +560,15 @@ void setMarkerShape( QLegend::MarkerShape shape )
 HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMarkerShape( (QLegend::MarkerShape) hb_parni(1) );
+      obj->setMarkerShape( static_cast<QLegend::MarkerShape>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,15 +588,15 @@ void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget
 HB_FUNC_STATIC( QLEGEND_PAINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, nullptr ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -616,15 +616,15 @@ void setBrush( const QBrush & brush )
 HB_FUNC_STATIC( QLEGEND_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,12 +644,12 @@ QBrush brush() const
 HB_FUNC_STATIC( QLEGEND_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->brush() );
@@ -671,15 +671,15 @@ void setPen( const QPen & pen )
 HB_FUNC_STATIC( QLEGEND_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen( *PQPEN( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,12 +699,12 @@ QPen pen() const
 HB_FUNC_STATIC( QLEGEND_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPen( obj->pen() );
@@ -726,15 +726,15 @@ void setLabelBrush( const QBrush & brush )
 HB_FUNC_STATIC( QLEGEND_SETLABELBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setLabelBrush( *PQBRUSH(1) );
+      obj->setLabelBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -754,12 +754,12 @@ QBrush labelBrush() const
 HB_FUNC_STATIC( QLEGEND_LABELBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->labelBrush() );
@@ -781,15 +781,15 @@ void setAlignment( Qt::Alignment alignment )
 HB_FUNC_STATIC( QLEGEND_SETALIGNMENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -809,12 +809,12 @@ void detachFromChart()
 HB_FUNC_STATIC( QLEGEND_DETACHFROMCHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->detachFromChart();
@@ -837,12 +837,12 @@ void attachToChart()
 HB_FUNC_STATIC( QLEGEND_ATTACHTOCHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->attachToChart();
@@ -865,12 +865,12 @@ bool isAttachedToChart()
 HB_FUNC_STATIC( QLEGEND_ISATTACHEDTOCHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAttachedToChart() );
@@ -891,17 +891,17 @@ QList<QLegendMarker *> markers( QAbstractSeries * series = nullptr ) const
 HB_FUNC_STATIC( QLEGEND_MARKERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLegend * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQABSTRACTSERIES( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES(1,nullptr) );
+      QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES( 1, nullptr ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLEGENDMARKER" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QLegendMarker *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QLegendMarker * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

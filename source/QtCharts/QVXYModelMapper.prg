@@ -83,9 +83,9 @@ QVXYModelMapper( QObject * parent = nullptr )
 HB_FUNC_STATIC( QVXYMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QVXYModelMapper( OPQOBJECT(1,nullptr) );
+    auto obj = new QVXYModelMapper( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -101,12 +101,12 @@ QXYSeries * series() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QXYSeries * ptr = obj->series();
@@ -128,15 +128,15 @@ void setSeries( QXYSeries * series )
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXYSERIES(1) )
+    if( ISNUMPAR( 1 ) && ISQXYSERIES( 1 ) )
     {
 #endif
-      obj->setSeries( PQXYSERIES(1) );
+      obj->setSeries( PQXYSERIES( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,12 +156,12 @@ QAbstractItemModel * model() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
@@ -183,15 +183,15 @@ void setModel( QAbstractItemModel * model )
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,12 +211,12 @@ int xColumn() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_XCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->xColumn() );
@@ -237,15 +237,15 @@ void setXColumn( int xColumn )
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETXCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setXColumn( PINT(1) );
+      obj->setXColumn( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,12 +265,12 @@ int yColumn() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_YCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->yColumn() );
@@ -291,15 +291,15 @@ void setYColumn( int yColumn )
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETYCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setYColumn( PINT(1) );
+      obj->setYColumn( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,12 +319,12 @@ int firstRow() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_FIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->firstRow() );
@@ -345,15 +345,15 @@ void setFirstRow( int firstRow )
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETFIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setFirstRow( PINT(1) );
+      obj->setFirstRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,12 +373,12 @@ int rowCount() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->rowCount() );
@@ -399,15 +399,15 @@ void setRowCount( int rowCount )
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVXYModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRowCount( PINT(1) );
+      obj->setRowCount( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

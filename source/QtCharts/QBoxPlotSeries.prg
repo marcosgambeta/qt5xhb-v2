@@ -92,9 +92,9 @@ QBoxPlotSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QBoxPlotSeries( OPQOBJECT(1,nullptr) );
+    auto obj = new QBoxPlotSeries( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -134,12 +134,12 @@ int count() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -160,12 +160,12 @@ bool boxOutlineVisible()
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->boxOutlineVisible() );
@@ -186,15 +186,15 @@ void setBoxOutlineVisible( bool visible )
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setBoxOutlineVisible( PBOOL(1) );
+      obj->setBoxOutlineVisible( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,12 +214,12 @@ qreal boxWidth()
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->boxWidth() );
@@ -240,15 +240,15 @@ void setBoxWidth( qreal width )
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBoxWidth( PQREAL(1) );
+      obj->setBoxWidth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,12 +268,12 @@ QBrush brush() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->brush() );
@@ -295,15 +295,15 @@ void setBrush( const QBrush & brush )
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,12 +323,12 @@ QPen pen() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPen( obj->pen() );
@@ -350,15 +350,15 @@ void setPen( const QPen & pen )
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen( *PQPEN( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,11 +378,11 @@ bool append( QBoxSet * box )
 void QBoxPlotSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->append( PQBOXSET(1) ) );
+    RBOOL( obj->append( PQBOXSET( 1 ) ) );
   }
 #endif
 }
@@ -393,16 +393,16 @@ bool append( QList<QBoxSet *> boxes )
 void QBoxPlotSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
     QList<QBoxSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen(aList1);
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << (QBoxSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << static_cast< QBoxSet * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     RBOOL( obj->append( par1 ) );
   }
@@ -411,11 +411,11 @@ void QBoxPlotSeries_append2()
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 {
-  if( ISNUMPAR(1) && ISQBOXSET(1) )
+  if( ISNUMPAR( 1 ) && ISQBOXSET( 1 ) )
   {
     QBoxPlotSeries_append1();
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
     QBoxPlotSeries_append2();
   }
@@ -431,15 +431,15 @@ bool remove( QBoxSet * box )
 HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBOXSET(1) )
+    if( ISNUMPAR( 1 ) && ISQBOXSET( 1 ) )
     {
 #endif
-      RBOOL( obj->remove( PQBOXSET(1) ) );
+      RBOOL( obj->remove( PQBOXSET( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,15 +457,15 @@ bool take( QBoxSet * box )
 HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBOXSET(1) )
+    if( ISNUMPAR( 1 ) && ISQBOXSET( 1 ) )
     {
 #endif
-      RBOOL( obj->take( PQBOXSET(1) ) );
+      RBOOL( obj->take( PQBOXSET( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,15 +483,15 @@ bool insert( int index, QBoxSet * box )
 HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBOXSET(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQBOXSET( 2 ) )
     {
 #endif
-      RBOOL( obj->insert( PINT(1), PQBOXSET(2) ) );
+      RBOOL( obj->insert( PINT( 1 ), PQBOXSET( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,17 +509,17 @@ QList<QBoxSet *> boxSets() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QBoxSet *> list = obj->boxSets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QBoxSet *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QBoxSet * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -559,12 +559,12 @@ void clear()
 HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -587,12 +587,12 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBoxPlotSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );

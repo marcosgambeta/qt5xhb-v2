@@ -65,9 +65,9 @@ QPieLegendMarker( QPieSeries * series, QPieSlice * slice, QLegend * legend, QObj
 HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(3,4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN( 3, 4 ) && ISQPIESERIES( 1 ) && ISQPIESLICE( 2 ) && ISQLEGEND( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    auto obj = new QPieLegendMarker( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,nullptr) );
+    auto obj = new QPieLegendMarker( PQPIESERIES( 1 ), PQPIESLICE( 2 ), PQLEGEND( 3 ), OPQOBJECT( 4, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -83,7 +83,7 @@ virtual ~QPieLegendMarker()
 HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -107,12 +107,12 @@ virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -133,12 +133,12 @@ virtual QPieSeries * series()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPieSeries * ptr = obj->series();
@@ -160,12 +160,12 @@ QPieSlice * slice()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPieSlice * ptr = obj->slice();

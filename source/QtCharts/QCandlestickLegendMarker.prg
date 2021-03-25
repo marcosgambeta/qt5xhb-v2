@@ -55,7 +55,7 @@ RETURN
 #endif
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0) )
 using namespace QtCharts;
 #endif
 
@@ -65,9 +65,9 @@ QCandlestickLegendMarker( QCandlestickSeries * series, QLegend * legend, QObject
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(2,3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && ISQCANDLESTICKSERIES( 1 ) && ISQLEGEND( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    auto obj = new QCandlestickLegendMarker( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
+    auto obj = new QCandlestickLegendMarker( PQCANDLESTICKSERIES( 1 ), PQLEGEND( 2 ), OPQOBJECT( 3, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -83,7 +83,7 @@ virtual ~QCandlestickLegendMarker()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -107,12 +107,12 @@ virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -133,12 +133,12 @@ virtual QCandlestickSeries * series()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QCandlestickSeries * ptr = obj->series();

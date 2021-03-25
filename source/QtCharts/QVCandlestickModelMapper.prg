@@ -74,7 +74,7 @@ RETURN
 #endif
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0) )
 using namespace QtCharts;
 #endif
 
@@ -84,9 +84,9 @@ QVCandlestickModelMapper( QObject * parent = nullptr )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QVCandlestickModelMapper( OPQOBJECT(1,nullptr) );
+    auto obj = new QVCandlestickModelMapper( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -102,12 +102,12 @@ int timestampRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_TIMESTAMPROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->timestampRow() );
@@ -128,15 +128,15 @@ void setTimestampRow( int timestampRow )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETTIMESTAMPROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTimestampRow( PINT(1) );
+      obj->setTimestampRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,12 +156,12 @@ int openRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_OPENROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->openRow() );
@@ -182,15 +182,15 @@ void setOpenRow( int openRow )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETOPENROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setOpenRow( PINT(1) );
+      obj->setOpenRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,12 +210,12 @@ int highRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_HIGHROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->highRow() );
@@ -236,15 +236,15 @@ void setHighRow( int highRow )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETHIGHROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setHighRow( PINT(1) );
+      obj->setHighRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,12 +264,12 @@ int lowRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LOWROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lowRow() );
@@ -290,15 +290,15 @@ void setLowRow( int lowRow )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLOWROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLowRow( PINT(1) );
+      obj->setLowRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,12 +318,12 @@ int closeRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_CLOSEROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->closeRow() );
@@ -344,15 +344,15 @@ void setCloseRow( int closeRow )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETCLOSEROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCloseRow( PINT(1) );
+      obj->setCloseRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,12 +372,12 @@ int firstSetColumn() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_FIRSTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->firstSetColumn() );
@@ -398,15 +398,15 @@ void setFirstSetColumn( int firstSetColumn )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETFIRSTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setFirstSetColumn( PINT(1) );
+      obj->setFirstSetColumn( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,12 +426,12 @@ int lastSetColumn() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LASTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lastSetColumn() );
@@ -452,15 +452,15 @@ void setLastSetColumn( int lastSetColumn )
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLASTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLastSetColumn( PINT(1) );
+      obj->setLastSetColumn( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,12 +480,12 @@ Qt::Orientation orientation() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVCandlestickModelMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );

@@ -79,9 +79,9 @@ QDateTimeAxis( QObject * parent = nullptr )
 HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QDateTimeAxis( OPQOBJECT(1,nullptr) );
+    auto obj = new QDateTimeAxis( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
 HB_FUNC_STATIC( QDATETIMEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -121,12 +121,12 @@ QDateTime min() const
 HB_FUNC_STATIC( QDATETIMEAXIS_MIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDateTime( obj->min() );
@@ -148,15 +148,15 @@ void setMin( QDateTime min )
 HB_FUNC_STATIC( QDATETIMEAXIS_SETMIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      obj->setMin( *PQDATETIME(1) );
+      obj->setMin( *PQDATETIME( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,12 +176,12 @@ QDateTime max() const
 HB_FUNC_STATIC( QDATETIMEAXIS_MAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDateTime( obj->max() );
@@ -203,15 +203,15 @@ void setMax( QDateTime max )
 HB_FUNC_STATIC( QDATETIMEAXIS_SETMAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      obj->setMax( *PQDATETIME(1) );
+      obj->setMax( *PQDATETIME( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,12 +231,12 @@ QString format() const
 HB_FUNC_STATIC( QDATETIMEAXIS_FORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->format() );
@@ -257,15 +257,15 @@ void setFormat( QString format )
 HB_FUNC_STATIC( QDATETIMEAXIS_SETFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setFormat( PQSTRING(1) );
+      obj->setFormat( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,12 +285,12 @@ int tickCount() const
 HB_FUNC_STATIC( QDATETIMEAXIS_TICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->tickCount() );
@@ -311,15 +311,15 @@ void setTickCount( int count )
 HB_FUNC_STATIC( QDATETIMEAXIS_SETTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTickCount( PINT(1) );
+      obj->setTickCount( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,12 +339,12 @@ QAbstractAxis::AxisType type() const
 HB_FUNC_STATIC( QDATETIMEAXIS_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -365,15 +365,15 @@ void setRange( QDateTime min, QDateTime max )
 HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDateTimeAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQDATETIME(1) && ISQDATETIME(2) )
+    if( ISNUMPAR( 2 ) && ISQDATETIME( 1 ) && ISQDATETIME( 2 ) )
     {
 #endif
-      obj->setRange( *PQDATETIME(1), *PQDATETIME(2) );
+      obj->setRange( *PQDATETIME( 1 ), *PQDATETIME( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

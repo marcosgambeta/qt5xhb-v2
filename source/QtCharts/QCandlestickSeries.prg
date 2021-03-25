@@ -103,11 +103,11 @@ RETURN
 #endif
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0) )
 using namespace QtCharts;
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0) )
 #include <QtCharts/QCandlestickSet>
 #endif
 
@@ -117,9 +117,9 @@ QCandlestickSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QCandlestickSeries( OPQOBJECT(1,nullptr) );
+    auto obj = new QCandlestickSeries( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -159,12 +159,12 @@ int count() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -185,12 +185,12 @@ qreal maximumColumnWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->maximumColumnWidth() );
@@ -211,15 +211,15 @@ void setMaximumColumnWidth( qreal maximumColumnWidth )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMaximumColumnWidth( PQREAL(1) );
+      obj->setMaximumColumnWidth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,12 +239,12 @@ qreal minimumColumnWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->minimumColumnWidth() );
@@ -265,15 +265,15 @@ void setMinimumColumnWidth( qreal minimumColumnWidth )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMinimumColumnWidth( PQREAL(1) );
+      obj->setMinimumColumnWidth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,12 +293,12 @@ qreal bodyWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->bodyWidth() );
@@ -319,15 +319,15 @@ void setBodyWidth( qreal bodyWidth )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBodyWidth( PQREAL(1) );
+      obj->setBodyWidth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,12 +347,12 @@ bool bodyOutlineVisible() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->bodyOutlineVisible() );
@@ -373,15 +373,15 @@ void setBodyOutlineVisible( bool bodyOutlineVisible )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setBodyOutlineVisible( PBOOL(1) );
+      obj->setBodyOutlineVisible( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,12 +401,12 @@ qreal capsWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->capsWidth() );
@@ -427,15 +427,15 @@ void setCapsWidth( qreal capsWidth )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCapsWidth( PQREAL(1) );
+      obj->setCapsWidth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,12 +455,12 @@ bool capsVisible() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->capsVisible() );
@@ -481,15 +481,15 @@ void setCapsVisible( bool capsVisible )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setCapsVisible( PBOOL(1) );
+      obj->setCapsVisible( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,12 +509,12 @@ QColor increasingColor() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->increasingColor() );
@@ -536,15 +536,15 @@ void setIncreasingColor( const QColor & increasingColor )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setIncreasingColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setIncreasingColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,12 +564,12 @@ QColor decreasingColor() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->decreasingColor() );
@@ -591,15 +591,15 @@ void setDecreasingColor( const QColor & decreasingColor )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setDecreasingColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setDecreasingColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,12 +619,12 @@ QBrush brush() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->brush() );
@@ -646,15 +646,15 @@ void setBrush( const QBrush & brush )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,12 +674,12 @@ QPen pen() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPen( obj->pen() );
@@ -701,15 +701,15 @@ void setPen( const QPen & pen )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen( *PQPEN( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -729,11 +729,11 @@ bool append( QCandlestickSet * set )
 void QCandlestickSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->append( PQCANDLESTICKSET(1) ) );
+    RBOOL( obj->append( PQCANDLESTICKSET( 1 ) ) );
   }
 #endif
 }
@@ -744,16 +744,16 @@ bool append( const QList<QCandlestickSet *> & sets )
 void QCandlestickSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
     QList<QCandlestickSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen(aList1);
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << static_cast< QCandlestickSet * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     RBOOL( obj->append( par1 ) );
   }
@@ -762,11 +762,11 @@ void QCandlestickSeries_append2()
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 {
-  if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+  if( ISNUMPAR( 1 ) && ISQCANDLESTICKSET( 1 ) )
   {
     QCandlestickSeries_append1();
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
     QCandlestickSeries_append2();
   }
@@ -782,11 +782,11 @@ bool remove( QCandlestickSet * set )
 void QCandlestickSeries_remove1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->remove( PQCANDLESTICKSET(1) ) );
+    RBOOL( obj->remove( PQCANDLESTICKSET( 1 ) ) );
   }
 #endif
 }
@@ -797,16 +797,16 @@ bool remove( const QList<QCandlestickSet *> & sets )
 void QCandlestickSeries_remove2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
     QList<QCandlestickSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen(aList1);
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << static_cast< QCandlestickSet * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     RBOOL( obj->remove( par1 ) );
   }
@@ -815,11 +815,11 @@ void QCandlestickSeries_remove2()
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 {
-  if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+  if( ISNUMPAR( 1 ) && ISQCANDLESTICKSET( 1 ) )
   {
     QCandlestickSeries_remove1();
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
     QCandlestickSeries_remove2();
   }
@@ -835,15 +835,15 @@ bool insert( int index, QCandlestickSet * set )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQCANDLESTICKSET(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQCANDLESTICKSET( 2 ) )
     {
 #endif
-      RBOOL( obj->insert( PINT(1), PQCANDLESTICKSET(2) ) );
+      RBOOL( obj->insert( PINT( 1 ), PQCANDLESTICKSET( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -861,15 +861,15 @@ bool take( QCandlestickSet * set )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TAKE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+    if( ISNUMPAR( 1 ) && ISQCANDLESTICKSET( 1 ) )
     {
 #endif
-      RBOOL( obj->take( PQCANDLESTICKSET(1) ) );
+      RBOOL( obj->take( PQCANDLESTICKSET( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -887,12 +887,12 @@ void clear()
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -915,17 +915,17 @@ QList<QCandlestickSet *> sets() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QCandlestickSet *> list = obj->sets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QCandlestickSet *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QCandlestickSet * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -965,12 +965,12 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCandlestickSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
