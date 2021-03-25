@@ -69,12 +69,12 @@ QWebEngineUrlRequestInfo::ResourceType resourceType() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_RESOURCETYPE )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->resourceType() );
@@ -93,12 +93,12 @@ QWebEngineUrlRequestInfo::NavigationType navigationType() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->navigationType() );
@@ -117,12 +117,12 @@ QUrl requestUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REQUESTURL )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->requestUrl() );
@@ -142,12 +142,12 @@ QUrl firstPartyUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_FIRSTPARTYURL )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->firstPartyUrl() );
@@ -167,12 +167,12 @@ QByteArray requestMethod() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REQUESTMETHOD )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QByteArray( obj->requestMethod() );
@@ -192,12 +192,12 @@ bool changed() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_CHANGED )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->changed() );
@@ -216,15 +216,15 @@ void block( bool shouldBlock )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_BLOCK )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->block( PBOOL(1) );
+      obj->block( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,15 +242,15 @@ void redirect( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REDIRECT )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->redirect( *PQURL(1) );
+      obj->redirect( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,15 +268,15 @@ void setHttpHeader( const QByteArray & name, const QByteArray & value )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_SETHTTPHEADER )
 {
-  auto obj = (QWebEngineUrlRequestInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWebEngineUrlRequestInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQBYTEARRAY( 2 ) )
     {
 #endif
-      obj->setHttpHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+      obj->setHttpHeader( *PQBYTEARRAY( 1 ), *PQBYTEARRAY( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

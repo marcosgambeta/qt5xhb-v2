@@ -59,7 +59,7 @@ RETURN
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_DELETE )
 {
-  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlRequestJob * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -81,12 +81,12 @@ QUrl requestUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTURL )
 {
-  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlRequestJob * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->requestUrl() );
@@ -106,12 +106,12 @@ QByteArray requestMethod() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTMETHOD )
 {
-  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlRequestJob * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QByteArray( obj->requestMethod() );
@@ -131,15 +131,15 @@ void reply( const QByteArray & contentType, QIODevice * device )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REPLY )
 {
-  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlRequestJob * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQIODEVICE(2) )
+    if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQIODEVICE( 2 ) )
     {
 #endif
-      obj->reply( *PQBYTEARRAY(1), PQIODEVICE(2) );
+      obj->reply( *PQBYTEARRAY( 1 ), PQIODEVICE( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,15 +157,15 @@ void fail( QWebEngineUrlRequestJob::Error error )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_FAIL )
 {
-  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlRequestJob * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->fail( (QWebEngineUrlRequestJob::Error) hb_parni(1) );
+      obj->fail( static_cast<QWebEngineUrlRequestJob::Error>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,15 +183,15 @@ void redirect( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REDIRECT )
 {
-  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlRequestJob * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->redirect( *PQURL(1) );
+      obj->redirect( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

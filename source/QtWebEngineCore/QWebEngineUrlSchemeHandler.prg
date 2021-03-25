@@ -54,9 +54,9 @@ QWebEngineUrlSchemeHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QWebEngineUrlSchemeHandler( OPQOBJECT(1,nullptr) );
+    auto obj = new QWebEngineUrlSchemeHandler( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_DELETE )
 {
-  auto obj = (QWebEngineUrlSchemeHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlSchemeHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -92,15 +92,15 @@ virtual void requestStarted( QWebEngineUrlRequestJob * ) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED )
 {
-  auto obj = (QWebEngineUrlSchemeHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineUrlSchemeHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEURLREQUESTJOB(1) )
+    if( ISNUMPAR( 1 ) && ISQWEBENGINEURLREQUESTJOB( 1 ) )
     {
 #endif
-      obj->requestStarted( PQWEBENGINEURLREQUESTJOB(1) );
+      obj->requestStarted( PQWEBENGINEURLREQUESTJOB( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
