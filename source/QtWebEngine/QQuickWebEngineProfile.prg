@@ -97,10 +97,10 @@ RETURN
 #endif
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0) )
 #include <QtWebEngine/QWebEngineCookieStore>
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0) )
 #include <QtWebEngine/QWebEngineUrlSchemeHandler>
 #endif
 
@@ -110,9 +110,9 @@ QQuickWebEngineProfile( QObject * parent = nullptr )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QQuickWebEngineProfile( OPQOBJECT(1,nullptr) );
+    auto obj = new QQuickWebEngineProfile( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_NEW )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -152,12 +152,12 @@ QString storageName() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_STORAGENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->storageName() );
@@ -178,15 +178,15 @@ void setStorageName( const QString & name )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSTORAGENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setStorageName( PQSTRING(1) );
+      obj->setStorageName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,12 +206,12 @@ bool isOffTheRecord() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISOFFTHERECORD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isOffTheRecord() );
@@ -232,15 +232,15 @@ void setOffTheRecord( bool offTheRecord )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETOFFTHERECORD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setOffTheRecord( PBOOL(1) );
+      obj->setOffTheRecord( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,12 +260,12 @@ QString persistentStoragePath() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTSTORAGEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->persistentStoragePath() );
@@ -286,15 +286,15 @@ void setPersistentStoragePath( const QString & path )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTSTORAGEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setPersistentStoragePath( PQSTRING(1) );
+      obj->setPersistentStoragePath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,12 +314,12 @@ QString cachePath() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_CACHEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->cachePath() );
@@ -340,15 +340,15 @@ void setCachePath( const QString & path )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETCACHEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setCachePath( PQSTRING(1) );
+      obj->setCachePath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,12 +368,12 @@ QString httpUserAgent() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPUSERAGENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->httpUserAgent() );
@@ -394,15 +394,15 @@ void setHttpUserAgent( const QString & userAgent )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setHttpUserAgent( PQSTRING(1) );
+      obj->setHttpUserAgent( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,12 +422,12 @@ QQuickWebEngineProfile::HttpCacheType httpCacheType() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHETYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->httpCacheType() );
@@ -448,15 +448,15 @@ void setHttpCacheType( QQuickWebEngineProfile::HttpCacheType )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setHttpCacheType( (QQuickWebEngineProfile::HttpCacheType) hb_parni(1) );
+      obj->setHttpCacheType( static_cast<QQuickWebEngineProfile::HttpCacheType>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,12 +476,12 @@ QString httpAcceptLanguage() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPACCEPTLANGUAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->httpAcceptLanguage() );
@@ -502,15 +502,15 @@ void setHttpAcceptLanguage( const QString & httpAcceptLanguage )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setHttpAcceptLanguage( PQSTRING(1) );
+      obj->setHttpAcceptLanguage( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,12 +530,12 @@ QQuickWebEngineProfile::PersistentCookiesPolicy persistentCookiesPolicy() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->persistentCookiesPolicy() );
@@ -556,15 +556,15 @@ void setPersistentCookiesPolicy( QQuickWebEngineProfile::PersistentCookiesPolicy
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPersistentCookiesPolicy( (QQuickWebEngineProfile::PersistentCookiesPolicy) hb_parni(1) );
+      obj->setPersistentCookiesPolicy( static_cast<QQuickWebEngineProfile::PersistentCookiesPolicy>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,12 +584,12 @@ int httpCacheMaximumSize() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHEMAXIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->httpCacheMaximumSize() );
@@ -610,15 +610,15 @@ void setHttpCacheMaximumSize( int maxSize )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHEMAXIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setHttpCacheMaximumSize( PINT(1) );
+      obj->setHttpCacheMaximumSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -638,12 +638,12 @@ QStringList spellCheckLanguages() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SPELLCHECKLANGUAGES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->spellCheckLanguages() );
@@ -664,15 +664,15 @@ void setSpellCheckLanguages( const QStringList & languages )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKLANGUAGES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setSpellCheckLanguages( PQSTRINGLIST(1) );
+      obj->setSpellCheckLanguages( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -692,12 +692,12 @@ bool isSpellCheckEnabled() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISSPELLCHECKENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSpellCheckEnabled() );
@@ -718,15 +718,15 @@ void setSpellCheckEnabled( bool enabled )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setSpellCheckEnabled( PBOOL(1) );
+      obj->setSpellCheckEnabled( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -746,12 +746,12 @@ QWebEngineCookieStore * cookieStore() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWebEngineCookieStore * ptr = obj->cookieStore();
@@ -773,15 +773,15 @@ void setRequestInterceptor( QWebEngineUrlRequestInterceptor * interceptor )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEURLREQUESTINTERCEPTOR(1) )
+    if( ISNUMPAR( 1 ) && ISQWEBENGINEURLREQUESTINTERCEPTOR( 1 ) )
     {
 #endif
-      obj->setRequestInterceptor( PQWEBENGINEURLREQUESTINTERCEPTOR(1) );
+      obj->setRequestInterceptor( PQWEBENGINEURLREQUESTINTERCEPTOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,15 +801,15 @@ const QWebEngineUrlSchemeHandler * urlSchemeHandler( const QByteArray & ) const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      const QWebEngineUrlSchemeHandler * ptr = obj->urlSchemeHandler( *PQBYTEARRAY(1) );
+      const QWebEngineUrlSchemeHandler * ptr = obj->urlSchemeHandler( *PQBYTEARRAY( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QWEBENGINEURLSCHEMEHANDLER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -828,15 +828,15 @@ void installUrlSchemeHandler( const QByteArray & scheme, QWebEngineUrlSchemeHand
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQWEBENGINEURLSCHEMEHANDLER(2) )
+    if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQWEBENGINEURLSCHEMEHANDLER( 2 ) )
     {
 #endif
-      obj->installUrlSchemeHandler( *PQBYTEARRAY(1), PQWEBENGINEURLSCHEMEHANDLER(2) );
+      obj->installUrlSchemeHandler( *PQBYTEARRAY( 1 ), PQWEBENGINEURLSCHEMEHANDLER( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -856,15 +856,15 @@ void removeUrlScheme( const QByteArray & scheme )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->removeUrlScheme( *PQBYTEARRAY(1) );
+      obj->removeUrlScheme( *PQBYTEARRAY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -884,15 +884,15 @@ void removeUrlSchemeHandler( QWebEngineUrlSchemeHandler * )
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEMEHANDLER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEURLSCHEMEHANDLER(1) )
+    if( ISNUMPAR( 1 ) && ISQWEBENGINEURLSCHEMEHANDLER( 1 ) )
     {
 #endif
-      obj->removeUrlSchemeHandler( PQWEBENGINEURLSCHEMEHANDLER(1) );
+      obj->removeUrlSchemeHandler( PQWEBENGINEURLSCHEMEHANDLER( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -912,12 +912,12 @@ void removeAllUrlSchemeHandlers()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEALLURLSCHEMEHANDLERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->removeAllUrlSchemeHandlers();
@@ -940,12 +940,12 @@ Q_REVISION(2) Q_INVOKABLE void clearHttpCache()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_CLEARHTTPCACHE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QQuickWebEngineProfile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearHttpCache();
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QQuickWebEngineProfile * ptr = QQuickWebEngineProfile::defaultProfile();

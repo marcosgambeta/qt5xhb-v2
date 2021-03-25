@@ -59,18 +59,23 @@ void initialize()
 */
 HB_FUNC_STATIC( QTWEBENGINE_INITIALIZE )
 {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  auto obj = static_cast< QtWebEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+  if( obj != nullptr )
   {
-#endif
-    QtWebEngine::initialize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+    if( ISNUMPAR( 0 ) )
+    {
 #endif
+      obj->initialize();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
