@@ -94,9 +94,9 @@ QWebEngineView( QWidget * parent = nullptr )
 HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QWebEngineView( OPQWIDGET(1,nullptr) );
+    auto obj = new QWebEngineView( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -133,12 +133,12 @@ QWebEnginePage * page() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWebEnginePage * ptr = obj->page();
@@ -160,15 +160,15 @@ void setPage( QWebEnginePage * page )
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEPAGE(1) )
+    if( ISNUMPAR( 1 ) && ISQWEBENGINEPAGE( 1 ) )
     {
 #endif
-      obj->setPage( PQWEBENGINEPAGE(1) );
+      obj->setPage( PQWEBENGINEPAGE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,15 +188,15 @@ void load( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->load( *PQURL(1) );
+      obj->load( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,15 +216,15 @@ void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQURL(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setHtml( PQSTRING(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setHtml( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,15 +244,15 @@ void setContent( const QByteArray & data, const QString & mimeType = QString(), 
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && ISQBYTEARRAY( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( ISQURL( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
+      obj->setContent( *PQBYTEARRAY( 1 ), OPQSTRING( 2, QString() ), HB_ISNIL( 3 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,12 +272,12 @@ QWebEngineHistory * history() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWebEngineHistory * ptr = obj->history();
@@ -299,12 +299,12 @@ QString title() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -325,12 +325,12 @@ QUrl url() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->url() );
@@ -352,15 +352,15 @@ void setUrl( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,12 +380,12 @@ QUrl iconUrl() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->iconUrl() );
@@ -407,12 +407,12 @@ bool hasSelection() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasSelection() );
@@ -433,12 +433,12 @@ QString selectedText() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->selectedText() );
@@ -460,15 +460,15 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_ACTION
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QAction * ptr = obj->pageAction( (QWebEnginePage::WebAction) hb_parni(1) );
+      QAction * ptr = obj->pageAction( static_cast<QWebEnginePage::WebAction>( hb_parni( 1 ) ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -481,21 +481,22 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
 #endif
 #endif
 }
+
 /*
 void triggerPageAction( QWebEnginePage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->triggerPageAction( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
+      obj->triggerPageAction( static_cast<QWebEnginePage::WebAction>( hb_parni( 1 ) ), OPBOOL( 2, false ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,12 +516,12 @@ qreal zoomFactor() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->zoomFactor() );
@@ -541,15 +542,15 @@ void setZoomFactor( qreal factor )
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setZoomFactor( PQREAL(1) );
+      obj->setZoomFactor( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,12 +570,12 @@ virtual QSize sizeHint() const
 HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
@@ -596,12 +597,12 @@ void stop()
 HB_FUNC_STATIC( QWEBENGINEVIEW_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -624,12 +625,12 @@ void back()
 HB_FUNC_STATIC( QWEBENGINEVIEW_BACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->back();
@@ -652,12 +653,12 @@ void forward()
 HB_FUNC_STATIC( QWEBENGINEVIEW_FORWARD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->forward();
@@ -680,12 +681,12 @@ void reload()
 HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebEngineView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reload();
