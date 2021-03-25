@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 {
-  auto obj = (QWebPluginFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebPluginFactory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -74,15 +74,15 @@ virtual QObject * create( const QString & mimeType, const QUrl & url, const QStr
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
-  auto obj = (QWebPluginFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebPluginFactory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4) )
+    if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && ISQURL( 2 ) && HB_ISARRAY( 3 ) && HB_ISARRAY( 4 ) )
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
+      QObject * ptr = obj->create( PQSTRING( 1 ), *PQURL( 2 ), PQSTRINGLIST( 3 ), PQSTRINGLIST( 4 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -99,12 +99,12 @@ virtual void refreshPlugins()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
-  auto obj = (QWebPluginFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebPluginFactory * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->refreshPlugins();

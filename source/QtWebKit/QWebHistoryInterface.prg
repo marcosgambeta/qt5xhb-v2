@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 {
-  auto obj = (QWebHistoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebHistoryInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -75,15 +75,15 @@ virtual void addHistoryEntry( const QString & url ) = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 {
-  auto obj = (QWebHistoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebHistoryInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->addHistoryEntry( PQSTRING(1) );
+      obj->addHistoryEntry( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,15 +101,15 @@ virtual bool historyContains( const QString & url ) const = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 {
-  auto obj = (QWebHistoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebHistoryInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->historyContains( PQSTRING(1) ) );
+      RBOOL( obj->historyContains( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ static QWebHistoryInterface * defaultInterface()
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface();
@@ -146,10 +146,10 @@ static void setDefaultInterface( QWebHistoryInterface * defaultInterface )
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQWEBHISTORYINTERFACE(1) )
+  if( ISNUMPAR( 1 ) && ISQWEBHISTORYINTERFACE( 1 ) )
   {
 #endif
-    QWebHistoryInterface::setDefaultInterface( PQWEBHISTORYINTERFACE(1) );
+    QWebHistoryInterface::setDefaultInterface( PQWEBHISTORYINTERFACE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
