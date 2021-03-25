@@ -67,7 +67,7 @@ RETURN
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,12 +91,12 @@ QString managerName() const
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->managerName() );
@@ -117,12 +117,12 @@ int managerVersion() const
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->managerVersion() );
@@ -143,11 +143,11 @@ virtual QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & 
 void QGeoCodingManagerEngine_geocode1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
+    QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS( 1 ), *PQGEOSHAPE( 2 ) );
     Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
   }
 #endif
@@ -159,11 +159,11 @@ virtual QGeoCodeReply * geocode( const QString & address, int limit, int offset,
 void QGeoCodingManagerEngine_geocode2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    QGeoCodeReply * ptr = obj->geocode( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
+    QGeoCodeReply * ptr = obj->geocode( PQSTRING( 1 ), PINT( 2 ), PINT( 3 ), *PQGEOSHAPE( 4 ) );
     Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
   }
 #endif
@@ -176,11 +176,11 @@ void QGeoCodingManagerEngine_geocode2()
 
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 {
-  if( ISNUMPAR(2) && ISQGEOADDRESS(1) && ISQGEOSHAPE(2) )
+  if( ISNUMPAR( 2 ) && ISQGEOADDRESS( 1 ) && ISQGEOSHAPE( 2 ) )
   {
     QGeoCodingManagerEngine_geocode1();
   }
-  else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4) )
+  else if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ISQGEOSHAPE( 4 ) )
   {
     QGeoCodingManagerEngine_geocode2();
   }
@@ -196,15 +196,15 @@ virtual QGeoCodeReply * reverseGeocode( const QGeoCoordinate & coordinate, const
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOSHAPE(2) )
+    if( ISNUMPAR( 2 ) && ISQGEOCOORDINATE( 1 ) && ISQGEOSHAPE( 2 ) )
     {
 #endif
-      QGeoCodeReply * ptr = obj->reverseGeocode( *PQGEOCOORDINATE(1), *PQGEOSHAPE(2) );
+      QGeoCodeReply * ptr = obj->reverseGeocode( *PQGEOCOORDINATE( 1 ), *PQGEOSHAPE( 2 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -223,15 +223,15 @@ void setLocale( const QLocale & locale )
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_SETLOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if( ISNUMPAR( 1 ) && ISQLOCALE( 1 ) )
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,12 +251,12 @@ QLocale locale() const
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_LOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodingManagerEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLocale( obj->locale() );

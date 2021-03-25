@@ -73,9 +73,9 @@ QGeoCodeReply( QGeoCodeReply::Error error, const QString & errorString, QObject 
 HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    auto obj = new QGeoCodeReply( (QGeoCodeReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+    auto obj = new QGeoCodeReply( static_cast<QGeoCodeReply::Error>( hb_parni( 1 ) ), PQSTRING( 2 ), OPQOBJECT( 3, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 HB_FUNC_STATIC( QGEOCODEREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -112,12 +112,12 @@ bool isFinished() const
 HB_FUNC_STATIC( QGEOCODEREPLY_ISFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -138,12 +138,12 @@ QGeoCodeReply::Error error() const
 HB_FUNC_STATIC( QGEOCODEREPLY_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -164,12 +164,12 @@ QString errorString() const
 HB_FUNC_STATIC( QGEOCODEREPLY_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -190,12 +190,12 @@ QGeoShape viewport() const
 HB_FUNC_STATIC( QGEOCODEREPLY_VIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QGeoShape( obj->viewport() );
@@ -217,17 +217,17 @@ QList<QGeoLocation> locations() const
 HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QGeoLocation> list = obj->locations();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOLOCATION" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QGeoLocation *) new QGeoLocation( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QGeoLocation * >( new QGeoLocation( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -271,12 +271,12 @@ int limit() const
 HB_FUNC_STATIC( QGEOCODEREPLY_LIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->limit() );
@@ -297,12 +297,12 @@ int offset() const
 HB_FUNC_STATIC( QGEOCODEREPLY_OFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->offset() );
@@ -323,12 +323,12 @@ virtual void abort()
 HB_FUNC_STATIC( QGEOCODEREPLY_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGeoCodeReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->abort();

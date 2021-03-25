@@ -66,9 +66,9 @@ QPlaceReply( QObject * parent = nullptr )
 HB_FUNC_STATIC( QPLACEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QPlaceReply( OPQOBJECT(1,nullptr) );
+    auto obj = new QPlaceReply( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPLACEREPLY_NEW )
 HB_FUNC_STATIC( QPLACEREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -105,12 +105,12 @@ bool isFinished() const
 HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -131,12 +131,12 @@ virtual QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACEREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -157,12 +157,12 @@ QString errorString() const
 HB_FUNC_STATIC( QPLACEREPLY_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -183,12 +183,12 @@ QPlaceReply::Error error() const
 HB_FUNC_STATIC( QPLACEREPLY_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -209,12 +209,12 @@ virtual void abort()
 HB_FUNC_STATIC( QPLACEREPLY_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->abort();

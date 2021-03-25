@@ -124,18 +124,18 @@ QPlace( const QPlace & other )
 void QPlace_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlace( *PQPLACE(1) );
+  auto obj = new QPlace( *PQPLACE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
 HB_FUNC_STATIC( QPLACE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QPlace_new1();
   }
-  else if( ISNUMPAR(1) && ISQPLACE(1) )
+  else if( ISNUMPAR( 1 ) && ISQPLACE( 1 ) )
   {
     QPlace_new2();
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QPLACE_NEW )
 HB_FUNC_STATIC( QPLACE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -170,17 +170,17 @@ QList<QPlaceCategory> categories() const
 HB_FUNC_STATIC( QPLACE_CATEGORIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QPlaceCategory> list = obj->categories();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QPlaceCategory *) new QPlaceCategory( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QPlaceCategory * >( new QPlaceCategory( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -224,20 +224,20 @@ void setCategories( const QList<QPlaceCategory> & categories )
 HB_FUNC_STATIC( QPLACE_SETCATEGORIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<QPlaceCategory> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen(aList1);
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QPlaceCategory *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *static_cast< QPlaceCategory * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->setCategories( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,15 +259,15 @@ void setCategory( const QPlaceCategory & category )
 HB_FUNC_STATIC( QPLACE_SETCATEGORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACECATEGORY(1) )
+    if( ISNUMPAR( 1 ) && ISQPLACECATEGORY( 1 ) )
     {
 #endif
-      obj->setCategory( *PQPLACECATEGORY(1) );
+      obj->setCategory( *PQPLACECATEGORY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,12 +287,12 @@ QGeoLocation location() const
 HB_FUNC_STATIC( QPLACE_LOCATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QGeoLocation( obj->location() );
@@ -314,15 +314,15 @@ void setLocation( const QGeoLocation & location )
 HB_FUNC_STATIC( QPLACE_SETLOCATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGEOLOCATION(1) )
+    if( ISNUMPAR( 1 ) && ISQGEOLOCATION( 1 ) )
     {
 #endif
-      obj->setLocation( *PQGEOLOCATION(1) );
+      obj->setLocation( *PQGEOLOCATION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,12 +342,12 @@ QPlaceRatings ratings() const
 HB_FUNC_STATIC( QPLACE_RATINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPlaceRatings( obj->ratings() );
@@ -369,15 +369,15 @@ void setRatings( const QPlaceRatings & ratings )
 HB_FUNC_STATIC( QPLACE_SETRATINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACERATINGS(1) )
+    if( ISNUMPAR( 1 ) && ISQPLACERATINGS( 1 ) )
     {
 #endif
-      obj->setRatings( *PQPLACERATINGS(1) );
+      obj->setRatings( *PQPLACERATINGS( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,12 +397,12 @@ QPlaceSupplier supplier() const
 HB_FUNC_STATIC( QPLACE_SUPPLIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPlaceSupplier( obj->supplier() );
@@ -424,15 +424,15 @@ void setSupplier( const QPlaceSupplier & supplier )
 HB_FUNC_STATIC( QPLACE_SETSUPPLIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACESUPPLIER(1) )
+    if( ISNUMPAR( 1 ) && ISQPLACESUPPLIER( 1 ) )
     {
 #endif
-      obj->setSupplier( *PQPLACESUPPLIER(1) );
+      obj->setSupplier( *PQPLACESUPPLIER( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,12 +452,12 @@ QString attribution() const
 HB_FUNC_STATIC( QPLACE_ATTRIBUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->attribution() );
@@ -478,15 +478,15 @@ void setAttribution( const QString & attribution )
 HB_FUNC_STATIC( QPLACE_SETATTRIBUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setAttribution( PQSTRING(1) );
+      obj->setAttribution( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,12 +506,12 @@ QPlaceIcon icon() const
 HB_FUNC_STATIC( QPLACE_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPlaceIcon( obj->icon() );
@@ -533,15 +533,15 @@ void setIcon( const QPlaceIcon & icon )
 HB_FUNC_STATIC( QPLACE_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACEICON(1) )
+    if( ISNUMPAR( 1 ) && ISQPLACEICON( 1 ) )
     {
 #endif
-      obj->setIcon( *PQPLACEICON(1) );
+      obj->setIcon( *PQPLACEICON( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,15 +561,15 @@ int totalContentCount( QPlaceContent::Type type ) const
 HB_FUNC_STATIC( QPLACE_TOTALCONTENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->totalContentCount( (QPlaceContent::Type) hb_parni(1) ) );
+      RINT( obj->totalContentCount( static_cast<QPlaceContent::Type>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,15 +587,15 @@ void setTotalContentCount( QPlaceContent::Type type, int total )
 HB_FUNC_STATIC( QPLACE_SETTOTALCONTENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setTotalContentCount( (QPlaceContent::Type) hb_parni(1), PINT(2) );
+      obj->setTotalContentCount( static_cast<QPlaceContent::Type>( hb_parni( 1 ) ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,12 +615,12 @@ QString name() const
 HB_FUNC_STATIC( QPLACE_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -641,15 +641,15 @@ void setName( const QString & name )
 HB_FUNC_STATIC( QPLACE_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,12 +669,12 @@ QString placeId() const
 HB_FUNC_STATIC( QPLACE_PLACEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->placeId() );
@@ -695,15 +695,15 @@ void setPlaceId( const QString & identifier )
 HB_FUNC_STATIC( QPLACE_SETPLACEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setPlaceId( PQSTRING(1) );
+      obj->setPlaceId( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -723,12 +723,12 @@ QString primaryPhone() const
 HB_FUNC_STATIC( QPLACE_PRIMARYPHONE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->primaryPhone() );
@@ -749,12 +749,12 @@ QString primaryFax() const
 HB_FUNC_STATIC( QPLACE_PRIMARYFAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->primaryFax() );
@@ -775,12 +775,12 @@ QString primaryEmail() const
 HB_FUNC_STATIC( QPLACE_PRIMARYEMAIL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->primaryEmail() );
@@ -801,12 +801,12 @@ QUrl primaryWebsite() const
 HB_FUNC_STATIC( QPLACE_PRIMARYWEBSITE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->primaryWebsite() );
@@ -828,12 +828,12 @@ bool detailsFetched() const
 HB_FUNC_STATIC( QPLACE_DETAILSFETCHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->detailsFetched() );
@@ -854,15 +854,15 @@ void setDetailsFetched( bool fetched )
 HB_FUNC_STATIC( QPLACE_SETDETAILSFETCHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setDetailsFetched( PBOOL(1) );
+      obj->setDetailsFetched( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -882,12 +882,12 @@ QStringList extendedAttributeTypes() const
 HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTETYPES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->extendedAttributeTypes() );
@@ -908,15 +908,15 @@ QPlaceAttribute extendedAttribute( const QString & attributeType ) const
 HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QPlaceAttribute( obj->extendedAttribute( PQSTRING(1) ) );
+      auto ptr = new QPlaceAttribute( obj->extendedAttribute( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QPLACEATTRIBUTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -935,15 +935,15 @@ void setExtendedAttribute( const QString & attributeType, const QPlaceAttribute 
 HB_FUNC_STATIC( QPLACE_SETEXTENDEDATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQPLACEATTRIBUTE(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQPLACEATTRIBUTE( 2 ) )
     {
 #endif
-      obj->setExtendedAttribute( PQSTRING(1), *PQPLACEATTRIBUTE(2) );
+      obj->setExtendedAttribute( PQSTRING( 1 ), *PQPLACEATTRIBUTE( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -963,15 +963,15 @@ void removeExtendedAttribute( const QString & attributeType )
 HB_FUNC_STATIC( QPLACE_REMOVEEXTENDEDATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->removeExtendedAttribute( PQSTRING(1) );
+      obj->removeExtendedAttribute( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -991,12 +991,12 @@ QStringList contactTypes() const
 HB_FUNC_STATIC( QPLACE_CONTACTTYPES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->contactTypes() );
@@ -1017,17 +1017,17 @@ QList<QPlaceContactDetail> contactDetails( const QString & contactType ) const
 HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QList<QPlaceContactDetail> list = obj->contactDetails( PQSTRING(1) );
+      QList<QPlaceContactDetail> list = obj->contactDetails( PQSTRING( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECONTACTDETAIL" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QPlaceContactDetail *) new QPlaceContactDetail( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QPlaceContactDetail * >( new QPlaceContactDetail( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -1071,22 +1071,22 @@ void setContactDetails( const QString & contactType, QList<QPlaceContactDetail> 
 HB_FUNC_STATIC( QPLACE_SETCONTACTDETAILS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
     {
 #endif
       QList<QPlaceContactDetail> par2;
-      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-      int nLen2 = hb_arrayLen(aList2);
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *(QPlaceContactDetail *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+        par2 << *static_cast< QPlaceContactDetail * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
       }
-      obj->setContactDetails( PQSTRING(1), par2 );
+      obj->setContactDetails( PQSTRING( 1 ), par2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1106,15 +1106,15 @@ void appendContactDetail( const QString & contactType, const QPlaceContactDetail
 HB_FUNC_STATIC( QPLACE_APPENDCONTACTDETAIL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQPLACECONTACTDETAIL(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQPLACECONTACTDETAIL( 2 ) )
     {
 #endif
-      obj->appendContactDetail( PQSTRING(1), *PQPLACECONTACTDETAIL(2) );
+      obj->appendContactDetail( PQSTRING( 1 ), *PQPLACECONTACTDETAIL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1134,15 +1134,15 @@ void removeContactDetails( const QString & contactType )
 HB_FUNC_STATIC( QPLACE_REMOVECONTACTDETAILS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->removeContactDetails( PQSTRING(1) );
+      obj->removeContactDetails( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1162,12 +1162,12 @@ QLocation::Visibility visibility() const
 HB_FUNC_STATIC( QPLACE_VISIBILITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->visibility() );
@@ -1188,15 +1188,15 @@ void setVisibility( QLocation::Visibility visibility )
 HB_FUNC_STATIC( QPLACE_SETVISIBILITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setVisibility( (QLocation::Visibility) hb_parni(1) );
+      obj->setVisibility( static_cast<QLocation::Visibility>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1216,12 +1216,12 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACE_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -1240,18 +1240,18 @@ HB_FUNC_STATIC( QPLACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -1278,16 +1278,16 @@ HB_FUNC_STATIC( QPLACE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPLACE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QPLACE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

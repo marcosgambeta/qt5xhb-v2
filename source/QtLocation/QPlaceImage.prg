@@ -74,18 +74,18 @@ QPlaceImage( const QPlaceContent & other )
 void QPlaceImage_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceImage( *PQPLACECONTENT(1) );
+  auto obj = new QPlaceImage( *PQPLACECONTENT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QPlaceImage_new1();
   }
-  else if( ISNUMPAR(1) && ISQPLACECONTENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPLACECONTENT( 1 ) )
   {
     QPlaceImage_new2();
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 HB_FUNC_STATIC( QPLACEIMAGE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -120,12 +120,12 @@ QUrl url() const
 HB_FUNC_STATIC( QPLACEIMAGE_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->url() );
@@ -147,15 +147,15 @@ void setUrl( const QUrl & url )
 HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,12 +175,12 @@ QString imageId() const
 HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->imageId() );
@@ -201,15 +201,15 @@ void setImageId( const QString & identifier )
 HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setImageId( PQSTRING(1) );
+      obj->setImageId( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,12 +229,12 @@ QString mimeType() const
 HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->mimeType() );
@@ -255,15 +255,15 @@ void setMimeType( const QString & data )
 HB_FUNC_STATIC( QPLACEIMAGE_SETMIMETYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceImage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPlaceImage * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setMimeType( PQSTRING(1) );
+      obj->setMimeType( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

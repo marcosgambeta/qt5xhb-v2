@@ -61,9 +61,9 @@ QPlaceIdReply( QPlaceIdReply::OperationType operationType, QObject * parent = nu
 HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QPlaceIdReply( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QPlaceIdReply( static_cast<QPlaceIdReply::OperationType>( hb_parni( 1 ) ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 HB_FUNC_STATIC( QPLACEIDREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceIdReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -100,12 +100,12 @@ QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceIdReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -126,12 +126,12 @@ QPlaceIdReply::OperationType operationType() const
 HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceIdReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->operationType() );
@@ -152,12 +152,12 @@ QString id() const
 HB_FUNC_STATIC( QPLACEIDREPLY_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPlaceIdReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->id() );
