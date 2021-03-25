@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACEBASE_DELETE )
 {
-  auto obj = (QDBusAbstractInterfaceBase *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusAbstractInterfaceBase * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

@@ -61,7 +61,7 @@ QDBusServer( const QString & address, QObject * parent = nullptr )
 */
 void QDBusServer_new1()
 {
-  auto obj = new QDBusServer( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QDBusServer( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -70,17 +70,17 @@ QDBusServer( QObject * parent = nullptr )
 */
 void QDBusServer_new2()
 {
-  auto obj = new QDBusServer( OPQOBJECT(1,nullptr) );
+  auto obj = new QDBusServer( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDBusServer_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDBusServer_new2();
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW )
 
 HB_FUNC_STATIC( QDBUSSERVER_DELETE )
 {
-  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -114,12 +114,12 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
 {
-  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isConnected() );
@@ -138,12 +138,12 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
 {
-  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDBusError( obj->lastError() );
@@ -163,12 +163,12 @@ QString address() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
 {
-  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->address() );

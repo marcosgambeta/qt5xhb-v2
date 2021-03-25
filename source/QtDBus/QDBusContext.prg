@@ -70,7 +70,7 @@ QDBusContext()
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QDBusContext();
     Qt5xHb::returnNewObject( obj, true );
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 
 HB_FUNC_STATIC( QDBUSCONTEXT_DELETE )
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ bool calledFromDBus() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->calledFromDBus() );
@@ -127,12 +127,12 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDBusConnection( obj->connection() );
@@ -152,12 +152,12 @@ const QDBusMessage & message() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QDBusMessage * ptr = &obj->message();
@@ -177,12 +177,12 @@ bool isDelayedReply() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isDelayedReply() );
@@ -201,15 +201,15 @@ void setDelayedReply( bool enable ) const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setDelayedReply( PBOOL(1) );
+      obj->setDelayedReply( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,11 +227,11 @@ void sendErrorReply( const QString & name, const QString & msg = QString() ) con
 */
 void QDBusContext_sendErrorReply1()
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->sendErrorReply( PQSTRING(1), OPQSTRING(2,QString()) );
+    obj->sendErrorReply( PQSTRING( 1 ), OPQSTRING( 2, QString() ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -242,11 +242,11 @@ void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString()
 */
 void QDBusContext_sendErrorReply2()
 {
-  auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->sendErrorReply( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
+    obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), OPQSTRING( 2, QString() ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -254,11 +254,11 @@ void QDBusContext_sendErrorReply2()
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDBusContext_sendErrorReply1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDBusContext_sendErrorReply2();
   }
@@ -272,18 +272,18 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -310,16 +310,16 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

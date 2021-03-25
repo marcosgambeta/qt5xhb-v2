@@ -97,7 +97,7 @@ QDBusConnection( const QString & name )
 */
 void QDBusConnection_new1()
 {
-  auto obj = new QDBusConnection( PQSTRING(1) );
+  auto obj = new QDBusConnection( PQSTRING( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -106,17 +106,17 @@ QDBusConnection( const QDBusConnection & other )
 */
 void QDBusConnection_new2()
 {
-  auto obj = new QDBusConnection( *PQDBUSCONNECTION(1) );
+  auto obj = new QDBusConnection( *PQDBUSCONNECTION( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QDBusConnection_new1();
   }
-  else if( ISNUMPAR(1) && ISQDBUSCONNECTION(1) )
+  else if( ISNUMPAR( 1 ) && ISQDBUSCONNECTION( 1 ) )
   {
     QDBusConnection_new2();
   }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DELETE )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -148,12 +148,12 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isConnected() );
@@ -172,12 +172,12 @@ QString baseService() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->baseService() );
@@ -196,12 +196,12 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDBusError( obj->lastError() );
@@ -221,12 +221,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -245,12 +245,12 @@ QDBusConnection::ConnectionCapabilities connectionCapabilities() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->connectionCapabilities() );
@@ -269,15 +269,15 @@ bool send( const QDBusMessage & message ) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
+    if( ISNUMPAR( 1 ) && ISQDBUSMESSAGE( 1 ) )
     {
 #endif
-      RBOOL( obj->send( *PQDBUSMESSAGE(1) ) );
+      RBOOL( obj->send( *PQDBUSMESSAGE( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,11 +293,11 @@ bool callWithCallback( const QDBusMessage & message, QObject * receiver, const c
 */
 void QDBusConnection_callWithCallback1()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->callWithCallback( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5,-1) ) );
+    RBOOL( obj->callWithCallback( *PQDBUSMESSAGE( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ), PCONSTCHAR( 4 ), OPINT( 5, -1 ) ) );
   }
 }
 
@@ -306,21 +306,21 @@ bool callWithCallback( const QDBusMessage & message, QObject * receiver, const c
 */
 void QDBusConnection_callWithCallback2()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->callWithCallback( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4,-1) ) );
+    RBOOL( obj->callWithCallback( *PQDBUSMESSAGE( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ), OPINT( 4, -1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK )
 {
-  if( ISBETWEEN(4,5) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN( 4, 5 ) && ISQDBUSMESSAGE( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QDBusConnection_callWithCallback1();
   }
-  else if( ISBETWEEN(3,4) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN( 3, 4 ) && ISQDBUSMESSAGE( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QDBusConnection_callWithCallback2();
   }
@@ -335,15 +335,15 @@ QDBusMessage call( const QDBusMessage & message, QDBus::CallMode mode = QDBus::B
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQDBUSMESSAGE(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && ISQDBUSMESSAGE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      auto ptr = new QDBusMessage( obj->call( *PQDBUSMESSAGE(1), HB_ISNIL(2)? (QDBus::CallMode) QDBus::Block : (QDBus::CallMode) hb_parni(2), OPINT(3,-1) ) );
+      auto ptr = new QDBusMessage( obj->call( *PQDBUSMESSAGE( 1 ), HB_ISNIL( 2 ) ? static_cast< QDBus::CallMode >( QDBus::Block ) : static_cast< QDBus::CallMode >( hb_parni( 2 ) ), OPINT( 3, -1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -360,15 +360,15 @@ QDBusPendingCall asyncCall( const QDBusMessage & message, int timeout = -1 ) con
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQDBUSMESSAGE(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQDBUSMESSAGE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QDBusPendingCall( obj->asyncCall( *PQDBUSMESSAGE(1), OPINT(2,-1) ) );
+      auto ptr = new QDBusPendingCall( obj->asyncCall( *PQDBUSMESSAGE( 1 ), OPINT( 2, -1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QDBUSPENDINGCALL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -385,11 +385,11 @@ bool connect( const QString & service, const QString & path, const QString & int
 */
 void QDBusConnection_connect1()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->connect( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
+    RBOOL( obj->connect( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQOBJECT( 5 ), PCONSTCHAR( 6 ) ) );
   }
 }
 
@@ -398,11 +398,11 @@ bool connect( const QString & service, const QString & path, const QString & int
 */
 void QDBusConnection_connect2()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->connect( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
+    RBOOL( obj->connect( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), PQOBJECT( 6 ), PCONSTCHAR( 7 ) ) );
   }
 }
 
@@ -411,25 +411,25 @@ bool connect( const QString & service, const QString & path, const QString & int
 */
 void QDBusConnection_connect3()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->connect( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
+    RBOOL( obj->connect( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRINGLIST( 5 ), PQSTRING( 6 ), PQOBJECT( 7 ), PCONSTCHAR( 8 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT )
 {
-  if( ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISQOBJECT(5) && HB_ISCHAR(6) )
+  if( ISNUMPAR( 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && ISQOBJECT( 5 ) && HB_ISCHAR( 6 ) )
   {
     QDBusConnection_connect1();
   }
-  else if( ISNUMPAR(7) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) && ISQOBJECT(6) && HB_ISCHAR(7) )
+  else if( ISNUMPAR( 7 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) && ISQOBJECT( 6 ) && HB_ISCHAR( 7 ) )
   {
     QDBusConnection_connect2();
   }
-  else if( ISNUMPAR(8) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISARRAY(5) && HB_ISCHAR(6) && ISQOBJECT(7) && HB_ISCHAR(8) )
+  else if( ISNUMPAR( 8 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISARRAY( 5 ) && HB_ISCHAR( 6 ) && ISQOBJECT( 7 ) && HB_ISCHAR( 8 ) )
   {
     QDBusConnection_connect3();
   }
@@ -444,11 +444,11 @@ bool disconnect( const QString & service, const QString & path, const QString & 
 */
 void QDBusConnection_disconnect1()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->disconnect( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
+    RBOOL( obj->disconnect( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQOBJECT( 5 ), PCONSTCHAR( 6 ) ) );
   }
 }
 
@@ -457,11 +457,11 @@ bool disconnect( const QString & service, const QString & path, const QString & 
 */
 void QDBusConnection_disconnect2()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->disconnect( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
+    RBOOL( obj->disconnect( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), PQOBJECT( 6 ), PCONSTCHAR( 7 ) ) );
   }
 }
 
@@ -470,25 +470,25 @@ bool disconnect( const QString & service, const QString & path, const QString & 
 */
 void QDBusConnection_disconnect3()
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->disconnect( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
+    RBOOL( obj->disconnect( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRINGLIST( 5 ), PQSTRING( 6 ), PQOBJECT( 7 ), PCONSTCHAR( 8 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT )
 {
-  if( ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISQOBJECT(5) && HB_ISCHAR(6) )
+  if( ISNUMPAR( 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && ISQOBJECT( 5 ) && HB_ISCHAR( 6 ) )
   {
     QDBusConnection_disconnect1();
   }
-  else if( ISNUMPAR(7) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) && ISQOBJECT(6) && HB_ISCHAR(7) )
+  else if( ISNUMPAR( 7 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) && ISQOBJECT( 6 ) && HB_ISCHAR( 7 ) )
   {
     QDBusConnection_disconnect2();
   }
-  else if( ISNUMPAR(8) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISARRAY(5) && HB_ISCHAR(6) && ISQOBJECT(7) && HB_ISCHAR(8) )
+  else if( ISNUMPAR( 8 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISARRAY( 5 ) && HB_ISCHAR( 6 ) && ISQOBJECT( 7 ) && HB_ISCHAR( 8 ) )
   {
     QDBusConnection_disconnect3();
   }
@@ -503,15 +503,15 @@ bool registerObject( const QString & path, QObject * object, QDBusConnection::Re
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->registerObject( PQSTRING(1), PQOBJECT(2), HB_ISNIL(3)? (QDBusConnection::RegisterOptions) QDBusConnection::ExportAdaptors : (QDBusConnection::RegisterOptions) hb_parni(3) ) );
+      RBOOL( obj->registerObject( PQSTRING( 1 ), PQOBJECT( 2 ), HB_ISNIL( 3 ) ? static_cast< QDBusConnection::RegisterOptions >( QDBusConnection::ExportAdaptors ) : static_cast< QDBusConnection::RegisterOptions >( hb_parni( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -527,15 +527,15 @@ void unregisterObject( const QString & path, QDBusConnection::UnregisterMode mod
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->unregisterObject( PQSTRING(1), HB_ISNIL(2)? (QDBusConnection::UnregisterMode) QDBusConnection::UnregisterNode : (QDBusConnection::UnregisterMode) hb_parni(2) );
+      obj->unregisterObject( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QDBusConnection::UnregisterMode >( QDBusConnection::UnregisterNode ) : static_cast< QDBusConnection::UnregisterMode >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,15 +553,15 @@ QObject * objectRegisteredAt( const QString & path ) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QObject * ptr = obj->objectRegisteredAt( PQSTRING(1) );
+      QObject * ptr = obj->objectRegisteredAt( PQSTRING( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -578,15 +578,15 @@ bool registerService( const QString & serviceName )
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->registerService( PQSTRING(1) ) );
+      RBOOL( obj->registerService( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -602,15 +602,15 @@ bool unregisterService( const QString & serviceName )
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->unregisterService( PQSTRING(1) ) );
+      RBOOL( obj->unregisterService( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -626,12 +626,12 @@ QDBusConnectionInterface * interface() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDBusConnectionInterface * ptr = obj->interface();
@@ -651,15 +651,15 @@ void * internalPointer() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
 {
-  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDBusConnection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( (void *) obj->internalPointer() );
+      hb_retptr( static_cast< void * >( obj->internalPointer() ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -675,7 +675,7 @@ static QDBusConnection connectToBus( QDBusConnection::BusType type, const QStrin
 */
 void QDBusConnection_connectToBus1()
 {
-  auto ptr = new QDBusConnection( QDBusConnection::connectToBus( (QDBusConnection::BusType) hb_parni(1), PQSTRING(2) ) );
+  auto ptr = new QDBusConnection( QDBusConnection::connectToBus( static_cast<QDBusConnection::BusType>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 }
 
@@ -684,17 +684,17 @@ static QDBusConnection connectToBus( const QString & address, const QString & na
 */
 void QDBusConnection_connectToBus2()
 {
-  auto ptr = new QDBusConnection( QDBusConnection::connectToBus( PQSTRING(1), PQSTRING(2) ) );
+  auto ptr = new QDBusConnection( QDBusConnection::connectToBus( PQSTRING( 1 ), PQSTRING( 2 ) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
     QDBusConnection_connectToBus1();
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
     QDBusConnection_connectToBus2();
   }
@@ -710,10 +710,10 @@ static QDBusConnection connectToPeer( const QString & address, const QString & n
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOPEER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
 #endif
-    auto ptr = new QDBusConnection( QDBusConnection::connectToPeer( PQSTRING(1), PQSTRING(2) ) );
+    auto ptr = new QDBusConnection( QDBusConnection::connectToPeer( PQSTRING( 1 ), PQSTRING( 2 ) ) );
     Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -730,10 +730,10 @@ static void disconnectFromBus( const QString & name )
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECTFROMBUS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    QDBusConnection::disconnectFromBus( PQSTRING(1) );
+    QDBusConnection::disconnectFromBus( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -751,10 +751,10 @@ static void disconnectFromPeer( const QString & name )
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECTFROMPEER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    QDBusConnection::disconnectFromPeer( PQSTRING(1) );
+    QDBusConnection::disconnectFromPeer( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -772,7 +772,7 @@ static QByteArray localMachineId()
 HB_FUNC_STATIC( QDBUSCONNECTION_LOCALMACHINEID )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QByteArray( QDBusConnection::localMachineId() );
@@ -792,7 +792,7 @@ static QDBusConnection sessionBus()
 HB_FUNC_STATIC( QDBUSCONNECTION_SESSIONBUS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::sessionBus() );
@@ -812,7 +812,7 @@ static QDBusConnection systemBus()
 HB_FUNC_STATIC( QDBUSCONNECTION_SYSTEMBUS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::systemBus() );
@@ -832,7 +832,7 @@ static QDBusConnection sender()
 HB_FUNC_STATIC( QDBUSCONNECTION_SENDER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::sender() );
@@ -850,18 +850,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -888,16 +888,16 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDBUSCONNECTION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

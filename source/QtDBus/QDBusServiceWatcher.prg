@@ -68,7 +68,7 @@ QDBusServiceWatcher( QObject * parent = nullptr )
 */
 void QDBusServiceWatcher_new1()
 {
-  auto obj = new QDBusServiceWatcher( OPQOBJECT(1,nullptr) );
+  auto obj = new QDBusServiceWatcher( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -77,17 +77,17 @@ QDBusServiceWatcher( const QString & service, const QDBusConnection & connection
 */
 void QDBusServiceWatcher_new2()
 {
-  auto obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), HB_ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,nullptr) );
+  auto obj = new QDBusServiceWatcher( PQSTRING( 1 ), *PQDBUSCONNECTION( 2 ), HB_ISNIL( 3 ) ? static_cast< QDBusServiceWatcher::WatchMode >( QDBusServiceWatcher::WatchForOwnerChange ) : static_cast< QDBusServiceWatcher::WatchMode >( hb_parni( 3 ) ), OPQOBJECT( 4, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDBusServiceWatcher_new1();
   }
-  else if( ISBETWEEN(2,4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && (HB_ISNUM(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN( 2, 4 ) && HB_ISCHAR( 1 ) && ISQDBUSCONNECTION( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QDBusServiceWatcher_new2();
   }
@@ -99,7 +99,7 @@ HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_DELETE )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -121,12 +121,12 @@ QStringList watchedServices() const
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHEDSERVICES )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->watchedServices() );
@@ -145,15 +145,15 @@ void setWatchedServices( const QStringList & services )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHEDSERVICES )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setWatchedServices( PQSTRINGLIST(1) );
+      obj->setWatchedServices( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,15 +171,15 @@ void addWatchedService( const QString & newService )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->addWatchedService( PQSTRING(1) );
+      obj->addWatchedService( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,15 +197,15 @@ bool removeWatchedService( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->removeWatchedService( PQSTRING(1) ) );
+      RBOOL( obj->removeWatchedService( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,12 +221,12 @@ QDBusServiceWatcher::WatchMode watchMode() const
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHMODE )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->watchMode() );
@@ -245,15 +245,15 @@ void setWatchMode( QDBusServiceWatcher::WatchMode mode )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHMODE )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setWatchMode( (QDBusServiceWatcher::WatchMode) hb_parni(1) );
+      obj->setWatchMode( static_cast<QDBusServiceWatcher::WatchMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,12 +271,12 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDBusConnection( obj->connection() );
@@ -296,15 +296,15 @@ void setConnection( const QDBusConnection & connection )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
 {
-  auto obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusServiceWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDBUSCONNECTION(1) )
+    if( ISNUMPAR( 1 ) && ISQDBUSCONNECTION( 1 ) )
     {
 #endif
-      obj->setConnection( *PQDBUSCONNECTION(1) );
+      obj->setConnection( *PQDBUSCONNECTION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

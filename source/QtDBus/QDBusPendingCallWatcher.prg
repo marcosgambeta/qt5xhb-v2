@@ -57,9 +57,9 @@ QDBusPendingCallWatcher( const QDBusPendingCall & call, QObject * parent = nullp
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDBUSPENDINGCALL(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQDBUSPENDINGCALL( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QDBusPendingCallWatcher( *PQDBUSPENDINGCALL(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QDBusPendingCallWatcher( *PQDBUSPENDINGCALL( 1 ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_DELETE )
 {
-  auto obj = (QDBusPendingCallWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusPendingCallWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -92,12 +92,12 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ISFINISHED )
 {
-  auto obj = (QDBusPendingCallWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusPendingCallWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -116,12 +116,12 @@ void waitForFinished()
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_WAITFORFINISHED )
 {
-  auto obj = (QDBusPendingCallWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDBusPendingCallWatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->waitForFinished();
