@@ -64,17 +64,17 @@ QDomProcessingInstruction( const QDomProcessingInstruction & x )
 */
 void QDomProcessingInstruction_new2()
 {
-  auto obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
+  auto obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomProcessingInstruction_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMPROCESSINGINSTRUCTION( 1 ) )
   {
     QDomProcessingInstruction_new2();
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
 {
-  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomProcessingInstruction * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -106,12 +106,12 @@ QString data() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomProcessingInstruction * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->data() );
@@ -130,12 +130,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomProcessingInstruction * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -154,15 +154,15 @@ void setData( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomProcessingInstruction * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setData( PQSTRING(1) );
+      obj->setData( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,12 +180,12 @@ QString target() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomProcessingInstruction * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->target() );

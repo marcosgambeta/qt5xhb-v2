@@ -61,17 +61,17 @@ QDomCDATASection( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2()
 {
-  auto obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+  auto obj = new QDomCDATASection( *PQDOMCDATASECTION( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomCDATASection_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMCDATASECTION( 1 ) )
   {
     QDomCDATASection_new2();
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 
 HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
 {
-  auto obj = (QDomCDATASection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomCDATASection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
-  auto obj = (QDomCDATASection *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomCDATASection * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );

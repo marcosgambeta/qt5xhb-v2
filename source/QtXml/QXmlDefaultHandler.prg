@@ -78,7 +78,7 @@ QXmlDefaultHandler()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QXmlDefaultHandler();
     Qt5xHb::returnNewObject( obj, true );
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_DELETE )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -111,15 +111,15 @@ virtual bool attributeDecl( const QString & eName, const QString & aName, const 
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) )
+    if( ISNUMPAR( 5 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) )
     {
 #endif
-      RBOOL( obj->attributeDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
+      RBOOL( obj->attributeDecl( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,15 +135,15 @@ virtual bool characters( const QString & ch )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_CHARACTERS )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->characters( PQSTRING(1) ) );
+      RBOOL( obj->characters( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,15 +159,15 @@ virtual bool comment( const QString & ch )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->comment( PQSTRING(1) ) );
+      RBOOL( obj->comment( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,12 +183,12 @@ virtual bool endCDATA()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->endCDATA() );
@@ -207,12 +207,12 @@ virtual bool endDTD()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->endDTD() );
@@ -231,12 +231,12 @@ virtual bool endDocument()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->endDocument() );
@@ -255,15 +255,15 @@ virtual bool endElement( const QString & namespaceURI, const QString & localName
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDELEMENT )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
     {
 #endif
-      RBOOL( obj->endElement( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->endElement( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,15 +279,15 @@ virtual bool endEntity( const QString & name )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDENTITY )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->endEntity( PQSTRING(1) ) );
+      RBOOL( obj->endEntity( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,15 +303,15 @@ virtual bool endPrefixMapping( const QString & prefix )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->endPrefixMapping( PQSTRING(1) ) );
+      RBOOL( obj->endPrefixMapping( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,15 +327,15 @@ virtual bool error( const QXmlParseException & exception )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLPARSEEXCEPTION( 1 ) )
     {
 #endif
-      RBOOL( obj->error( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->error( *PQXMLPARSEEXCEPTION( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,12 +351,12 @@ virtual QString errorString() const
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -375,15 +375,15 @@ virtual bool externalEntityDecl( const QString & name, const QString & publicId,
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
     {
 #endif
-      RBOOL( obj->externalEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->externalEntityDecl( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,15 +399,15 @@ virtual bool fatalError( const QXmlParseException & exception )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLPARSEEXCEPTION( 1 ) )
     {
 #endif
-      RBOOL( obj->fatalError( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->fatalError( *PQXMLPARSEEXCEPTION( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,15 +423,15 @@ virtual bool ignorableWhitespace( const QString & ch )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->ignorableWhitespace( PQSTRING(1) ) );
+      RBOOL( obj->ignorableWhitespace( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,15 +447,15 @@ virtual bool internalEntityDecl( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->internalEntityDecl( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->internalEntityDecl( PQSTRING( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,15 +471,15 @@ virtual bool notationDecl( const QString & name, const QString & publicId, const
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NOTATIONDECL )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
     {
 #endif
-      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->notationDecl( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,15 +495,15 @@ virtual bool processingInstruction( const QString & target, const QString & data
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->processingInstruction( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->processingInstruction( PQSTRING( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,15 +519,15 @@ virtual void setDocumentLocator( QXmlLocator * locator )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLLOCATOR(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLLOCATOR( 1 ) )
     {
 #endif
-      obj->setDocumentLocator( PQXMLLOCATOR(1) );
+      obj->setDocumentLocator( PQXMLLOCATOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,15 +545,15 @@ virtual bool skippedEntity( const QString & name )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->skippedEntity( PQSTRING(1) ) );
+      RBOOL( obj->skippedEntity( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,12 +569,12 @@ virtual bool startCDATA()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTCDATA )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->startCDATA() );
@@ -593,15 +593,15 @@ virtual bool startDTD( const QString & name, const QString & publicId, const QSt
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
     {
 #endif
-      RBOOL( obj->startDTD( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->startDTD( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,12 +617,12 @@ virtual bool startDocument()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->startDocument() );
@@ -641,15 +641,15 @@ virtual bool startElement( const QString & namespaceURI, const QString & localNa
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISQXMLATTRIBUTES(4) )
+    if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ISQXMLATTRIBUTES( 4 ) )
     {
 #endif
-      RBOOL( obj->startElement( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
+      RBOOL( obj->startElement( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), *PQXMLATTRIBUTES( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,15 +665,15 @@ virtual bool startEntity( const QString & name )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTENTITY )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->startEntity( PQSTRING(1) ) );
+      RBOOL( obj->startEntity( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,15 +689,15 @@ virtual bool startPrefixMapping( const QString & prefix, const QString & uri )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->startPrefixMapping( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->startPrefixMapping( PQSTRING( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,15 +713,15 @@ virtual bool unparsedEntityDecl( const QString & name, const QString & publicId,
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
+    if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) )
     {
 #endif
-      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+      RBOOL( obj->unparsedEntityDecl( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,15 +737,15 @@ virtual bool warning( const QXmlParseException & exception )
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
 {
-  auto obj = (QXmlDefaultHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlDefaultHandler * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLPARSEEXCEPTION( 1 ) )
     {
 #endif
-      RBOOL( obj->warning( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->warning( *PQXMLPARSEEXCEPTION( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

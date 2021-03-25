@@ -53,7 +53,7 @@ QXmlSimpleReader()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QXmlSimpleReader();
     Qt5xHb::returnNewObject( obj, true );
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 
 HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 {
-  auto obj = (QXmlSimpleReader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlSimpleReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,15 +86,15 @@ virtual bool parse( const QXmlInputSource * input, bool incremental )
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
-  auto obj = (QXmlSimpleReader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlSimpleReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISQXMLINPUTSOURCE( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
-      RBOOL( obj->parse( PQXMLINPUTSOURCE(1), PBOOL(2) ) );
+      RBOOL( obj->parse( PQXMLINPUTSOURCE( 1 ), PBOOL( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,12 +110,12 @@ virtual bool parseContinue()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
-  auto obj = (QXmlSimpleReader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QXmlSimpleReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->parseContinue() );

@@ -61,17 +61,17 @@ QDomComment( const QDomComment & x )
 */
 void QDomComment_new2()
 {
-  auto obj = new QDomComment( *PQDOMCOMMENT(1) );
+  auto obj = new QDomComment( *PQDOMCOMMENT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomComment_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMCOMMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMCOMMENT( 1 ) )
   {
     QDomComment_new2();
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 
 HB_FUNC_STATIC( QDOMCOMMENT_DELETE )
 {
-  auto obj = (QDomComment *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomComment * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QDomNode::NodeType nodeType() cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  auto obj = (QDomComment *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomComment * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );

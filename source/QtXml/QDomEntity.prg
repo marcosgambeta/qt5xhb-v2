@@ -64,17 +64,17 @@ QDomEntity( const QDomEntity & x )
 */
 void QDomEntity_new2()
 {
-  auto obj = new QDomEntity( *PQDOMENTITY(1) );
+  auto obj = new QDomEntity( *PQDOMENTITY( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomEntity_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMENTITY(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMENTITY( 1 ) )
   {
     QDomEntity_new2();
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
 
 HB_FUNC_STATIC( QDOMENTITY_DELETE )
 {
-  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntity * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -106,12 +106,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
-  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntity * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -130,12 +130,12 @@ QString notationName() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
-  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntity * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->notationName() );
@@ -154,12 +154,12 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
-  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntity * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->publicId() );
@@ -178,12 +178,12 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
-  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntity * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->systemId() );

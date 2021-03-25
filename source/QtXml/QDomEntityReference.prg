@@ -61,17 +61,17 @@ QDomEntityReference( const QDomEntityReference & x )
 */
 void QDomEntityReference_new2()
 {
-  auto obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
+  auto obj = new QDomEntityReference( *PQDOMENTITYREFERENCE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomEntityReference_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMENTITYREFERENCE( 1 ) )
   {
     QDomEntityReference_new2();
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_DELETE )
 {
-  auto obj = (QDomEntityReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntityReference * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
-  auto obj = (QDomEntityReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomEntityReference * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );

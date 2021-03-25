@@ -61,17 +61,17 @@ QDomDocumentFragment( const QDomDocumentFragment & x )
 */
 void QDomDocumentFragment_new2()
 {
-  auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
+  auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomDocumentFragment_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTFRAGMENT( 1 ) )
   {
     QDomDocumentFragment_new2();
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_DELETE )
 {
-  auto obj = (QDomDocumentFragment *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomDocumentFragment * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {
-  auto obj = (QDomDocumentFragment *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDomDocumentFragment * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
