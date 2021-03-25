@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerWidgetBoxInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -75,12 +75,12 @@ virtual QString fileName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerWidgetBoxInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -99,12 +99,12 @@ virtual bool load() = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerWidgetBoxInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->load() );
@@ -123,12 +123,12 @@ virtual bool save() = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerWidgetBoxInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->save() );
@@ -147,15 +147,15 @@ virtual void setFileName( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerWidgetBoxInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

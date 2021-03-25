@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,12 +91,12 @@ virtual int count() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -115,15 +115,15 @@ virtual QString declaredInClass( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->declaredInClass( PINT(1) ) );
+      RQSTRING( obj->declaredInClass( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,15 +139,15 @@ virtual int indexOf( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->indexOf( PQSTRING(1) ) );
+      RINT( obj->indexOf( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,15 +163,15 @@ virtual bool inheritedFromWidget( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->inheritedFromWidget( PINT(1) ) );
+      RBOOL( obj->inheritedFromWidget( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,15 +187,15 @@ virtual bool isSignal( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isSignal( PINT(1) ) );
+      RBOOL( obj->isSignal( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,15 +211,15 @@ virtual bool isSlot( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isSlot( PINT(1) ) );
+      RBOOL( obj->isSlot( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,15 +235,15 @@ virtual bool isVisible( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isVisible( PINT(1) ) );
+      RBOOL( obj->isVisible( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,15 +259,15 @@ virtual QString memberGroup( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->memberGroup( PINT(1) ) );
+      RQSTRING( obj->memberGroup( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,15 +283,15 @@ virtual QString memberName( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->memberName( PINT(1) ) );
+      RQSTRING( obj->memberName( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,17 +307,17 @@ virtual QList<QByteArray> parameterNames( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QList<QByteArray> list = obj->parameterNames( PINT(1) );
+      QList<QByteArray> list = obj->parameterNames( PINT( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -359,17 +359,17 @@ virtual QList<QByteArray> parameterTypes( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QList<QByteArray> list = obj->parameterTypes( PINT(1) );
+      QList<QByteArray> list = obj->parameterTypes( PINT( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -411,15 +411,15 @@ virtual void setMemberGroup( int index, const QString & group ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setMemberGroup( PINT(1), PQSTRING(2) );
+      obj->setMemberGroup( PINT( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,15 +437,15 @@ virtual void setVisible( int index, bool visible ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
-      obj->setVisible( PINT(1), PBOOL(2) );
+      obj->setVisible( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,15 +463,15 @@ virtual QString signature( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerMemberSheetExtension * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->signature( PINT(1) ) );
+      RQSTRING( obj->signature( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,18 +486,18 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -524,16 +524,16 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

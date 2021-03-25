@@ -57,7 +57,7 @@ QFormBuilder()
 */
 HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QFormBuilder();
     Qt5xHb::returnNewObject( obj, true );
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
 
 HB_FUNC_STATIC( QFORMBUILDER_DELETE )
 {
-  auto obj = (QFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFormBuilder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -90,15 +90,15 @@ void addPluginPath( const QString & pluginPath )
 */
 HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 {
-  auto obj = (QFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFormBuilder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->addPluginPath( PQSTRING(1) );
+      obj->addPluginPath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,12 +116,12 @@ void clearPluginPaths()
 */
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
-  auto obj = (QFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFormBuilder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearPluginPaths();
@@ -142,17 +142,17 @@ QList<QDesignerCustomWidgetInterface *> customWidgets() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
-  auto obj = (QFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFormBuilder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QDesignerCustomWidgetInterface *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QDesignerCustomWidgetInterface * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -190,12 +190,12 @@ QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {
-  auto obj = (QFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFormBuilder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->pluginPaths() );
@@ -214,15 +214,15 @@ void setPluginPath( const QStringList & pluginPaths )
 */
 HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
 {
-  auto obj = (QFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFormBuilder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setPluginPath( PQSTRINGLIST(1) );
+      obj->setPluginPath( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

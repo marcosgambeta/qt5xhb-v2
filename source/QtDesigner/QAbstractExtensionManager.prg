@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
 {
-  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractExtensionManager * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,15 +80,15 @@ virtual QObject * extension( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 {
-  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractExtensionManager * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      QObject * ptr = obj->extension( PQOBJECT( 1 ), PQSTRING( 2 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,15 +105,15 @@ virtual void registerExtensions( QAbstractExtensionFactory * factory, const QStr
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractExtensionManager * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,15 +131,15 @@ virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QS
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAbstractExtensionManager * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,18 +156,18 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -194,16 +194,16 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

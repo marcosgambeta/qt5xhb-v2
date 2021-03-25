@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DELETE )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -90,12 +90,12 @@ virtual QString codeTemplate() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->codeTemplate() );
@@ -114,15 +114,15 @@ virtual QWidget * createWidget( QWidget * parent ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->createWidget( PQWIDGET(1) );
+      QWidget * ptr = obj->createWidget( PQWIDGET( 1 ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -139,12 +139,12 @@ virtual QString domXml() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->domXml() );
@@ -163,12 +163,12 @@ virtual QString group() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->group() );
@@ -187,12 +187,12 @@ virtual QIcon icon() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QIcon( obj->icon() );
@@ -212,12 +212,12 @@ virtual QString includeFile() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->includeFile() );
@@ -236,15 +236,15 @@ virtual void initialize( QDesignerFormEditorInterface * formEditor )
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMEDITORINTERFACE(1) )
+    if( ISNUMPAR( 1 ) && ISQDESIGNERFORMEDITORINTERFACE( 1 ) )
     {
 #endif
-      obj->initialize( PQDESIGNERFORMEDITORINTERFACE(1) );
+      obj->initialize( PQDESIGNERFORMEDITORINTERFACE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,12 +262,12 @@ virtual bool isContainer() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isContainer() );
@@ -286,12 +286,12 @@ virtual bool isInitialized() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isInitialized() );
@@ -310,12 +310,12 @@ virtual QString name() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -334,12 +334,12 @@ virtual QString toolTip() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->toolTip() );
@@ -358,12 +358,12 @@ virtual QString whatsThis() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 {
-  auto obj = (QDesignerCustomWidgetInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDesignerCustomWidgetInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->whatsThis() );
@@ -381,18 +381,18 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -419,16 +419,16 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

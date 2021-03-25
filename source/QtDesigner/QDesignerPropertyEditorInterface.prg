@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -85,12 +85,12 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
@@ -110,12 +110,12 @@ virtual QString currentPropertyName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->currentPropertyName() );
@@ -134,12 +134,12 @@ virtual bool isReadOnly() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReadOnly() );
@@ -158,12 +158,12 @@ virtual QObject * object() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->object();
@@ -183,15 +183,15 @@ virtual void setObject( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setObject( PQOBJECT(1) );
+      obj->setObject( PQOBJECT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,15 +209,15 @@ virtual void setPropertyValue( const QString & name, const QVariant & value, boo
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQVARIANT(2) && (HB_ISLOG(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) && ( HB_ISLOG( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->setPropertyValue( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
+      obj->setPropertyValue( PQSTRING( 1 ), *PQVARIANT( 2 ), OPBOOL( 3, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,15 +235,15 @@ virtual void setReadOnly( bool readOnly ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {
-  auto obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
