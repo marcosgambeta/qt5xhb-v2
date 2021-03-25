@@ -76,9 +76,9 @@ QScriptEngineAgent( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {
-  if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
+  if( ISNUMPAR( 1 ) && ISQSCRIPTENGINE( 1 ) )
   {
-    auto obj = new QScriptEngineAgent( PQSCRIPTENGINE(1) );
+    auto obj = new QScriptEngineAgent( PQSCRIPTENGINE( 1 ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -109,12 +109,12 @@ virtual void contextPop()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->contextPop();
@@ -135,12 +135,12 @@ virtual void contextPush()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->contextPush();
@@ -161,12 +161,12 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScriptEngine * ptr = obj->engine();
@@ -186,15 +186,15 @@ virtual void exceptionCatch( qint64 scriptId, const QScriptValue & exception )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSCRIPTVALUE( 2 ) )
     {
 #endif
-      obj->exceptionCatch( PQINT64(1), *PQSCRIPTVALUE(2) );
+      obj->exceptionCatch( PQINT64( 1 ), *PQSCRIPTVALUE( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,15 +212,15 @@ virtual void exceptionThrow( qint64 scriptId, const QScriptValue & exception, bo
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && ISQSCRIPTVALUE(2) && HB_ISLOG(3) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQSCRIPTVALUE( 2 ) && HB_ISLOG( 3 ) )
     {
 #endif
-      obj->exceptionThrow( PQINT64(1), *PQSCRIPTVALUE(2), PBOOL(3) );
+      obj->exceptionThrow( PQINT64( 1 ), *PQSCRIPTVALUE( 2 ), PBOOL( 3 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,15 +238,15 @@ virtual QVariant extension( QScriptEngineAgent::Extension extension, const QVari
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQVARIANT(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->extension( (QScriptEngineAgent::Extension) hb_parni(1), HB_ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      auto ptr = new QVariant( obj->extension( static_cast<QScriptEngineAgent::Extension>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -263,15 +263,15 @@ virtual void functionEntry( qint64 scriptId )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->functionEntry( PQINT64(1) );
+      obj->functionEntry( PQINT64( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,15 +289,15 @@ virtual void functionExit( qint64 scriptId, const QScriptValue & returnValue )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSCRIPTVALUE( 2 ) )
     {
 #endif
-      obj->functionExit( PQINT64(1), *PQSCRIPTVALUE(2) );
+      obj->functionExit( PQINT64( 1 ), *PQSCRIPTVALUE( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,15 +315,15 @@ virtual void positionChange( qint64 scriptId, int lineNumber, int columnNumber )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
-      obj->positionChange( PQINT64(1), PINT(2), PINT(3) );
+      obj->positionChange( PQINT64( 1 ), PINT( 2 ), PINT( 3 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,15 +341,15 @@ virtual void scriptLoad( qint64 id, const QString & program, const QString & fil
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      obj->scriptLoad( PQINT64(1), PQSTRING(2), PQSTRING(3), PINT(4) );
+      obj->scriptLoad( PQINT64( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PINT( 4 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,15 +367,15 @@ virtual void scriptUnload( qint64 id )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->scriptUnload( PQINT64(1) );
+      obj->scriptUnload( PQINT64( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,15 +393,15 @@ virtual bool supportsExtension( QScriptEngineAgent::Extension extension ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
 {
-  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScriptEngineAgent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->supportsExtension( (QScriptEngineAgent::Extension) hb_parni(1) ) );
+      RBOOL( obj->supportsExtension( static_cast<QScriptEngineAgent::Extension>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,18 +416,18 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -454,16 +454,16 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
