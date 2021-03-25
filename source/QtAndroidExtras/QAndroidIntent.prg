@@ -83,7 +83,7 @@ QAndroidIntent( const QAndroidJniObject & intent )
 void QAndroidIntent_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1) );
+  auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -94,7 +94,7 @@ QAndroidIntent( const QString & action )
 void QAndroidIntent_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QAndroidIntent( PQSTRING(1) );
+  auto obj = new QAndroidIntent( PQSTRING( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -105,26 +105,26 @@ QAndroidIntent( const QAndroidJniObject & packageContext, const char * className
 void QAndroidIntent_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1), PCONSTCHAR(2) );
+  auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT( 1 ), PCONSTCHAR( 2 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
 HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QAndroidIntent_new1();
   }
-  else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQANDROIDJNIOBJECT( 1 ) )
   {
     QAndroidIntent_new2();
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QAndroidIntent_new3();
   }
-  else if( ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && HB_ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && ISQANDROIDJNIOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
     QAndroidIntent_new4();
   }
@@ -140,7 +140,7 @@ virtual ~QAndroidIntent()
 HB_FUNC_STATIC( QANDROIDINTENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidIntent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -162,15 +162,15 @@ void putExtra( const QString & key, const QByteArray & data )
 HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidIntent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQBYTEARRAY( 2 ) )
     {
 #endif
-      obj->putExtra( PQSTRING(1), *PQBYTEARRAY(2) );
+      obj->putExtra( PQSTRING( 1 ), *PQBYTEARRAY( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,15 +190,15 @@ QByteArray extraBytes( const QString & key )
 HB_FUNC_STATIC( QANDROIDINTENT_EXTRABYTES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidIntent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QByteArray( obj->extraBytes( PQSTRING(1) ) );
+      auto ptr = new QByteArray( obj->extraBytes( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -217,15 +217,15 @@ void putExtra( const QString & key, const QVariant & value )
 HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidIntent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->putExtra( PQSTRING(1), *PQVARIANT(2) );
+      obj->putExtra( PQSTRING( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,15 +245,15 @@ QVariant extraVariant( const QString & key )
 HB_FUNC_STATIC( QANDROIDINTENT_EXTRAVARIANT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidIntent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->extraVariant( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->extraVariant( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -272,12 +272,12 @@ QAndroidJniObject handle() const
 HB_FUNC_STATIC( QANDROIDINTENT_HANDLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidIntent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QAndroidJniObject( obj->handle() );

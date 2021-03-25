@@ -80,18 +80,18 @@ QAndroidBinder( const QAndroidJniObject & binder )
 void QAndroidBinder_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QAndroidBinder( *PQANDROIDJNIOBJECT(1) );
+  auto obj = new QAndroidBinder( *PQANDROIDJNIOBJECT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
 HB_FUNC_STATIC( QANDROIDBINDER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QAndroidBinder_new1();
   }
-  else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQANDROIDJNIOBJECT( 1 ) )
   {
     QAndroidBinder_new2();
   }
@@ -107,7 +107,7 @@ virtual ~QAndroidBinder()
 HB_FUNC_STATIC( QANDROIDBINDER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidBinder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidBinder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -129,15 +129,15 @@ virtual bool onTransact( int code, const QAndroidParcel & data, const QAndroidPa
 HB_FUNC_STATIC( QANDROIDBINDER_ONTRANSACT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidBinder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidBinder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCEL(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && ISQANDROIDPARCEL( 2 ) && ISQANDROIDPARCEL( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      RBOOL( obj->onTransact( PINT(1), *PQANDROIDPARCEL(2), *PQANDROIDPARCEL(3), (QAndroidBinder::CallType) hb_parni(4) ) );
+      RBOOL( obj->onTransact( PINT( 1 ), *PQANDROIDPARCEL( 2 ), *PQANDROIDPARCEL( 3 ), static_cast<QAndroidBinder::CallType>( hb_parni( 4 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,15 +155,15 @@ bool transact( int code, const QAndroidParcel & data, QAndroidParcel * reply = n
 HB_FUNC_STATIC( QANDROIDBINDER_TRANSACT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidBinder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidBinder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && (ISQANDROIDPARCEL(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && ISQANDROIDPARCEL( 2 ) && ( ISQANDROIDPARCEL( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      RBOOL( obj->transact( PINT(1), *PQANDROIDPARCEL(2), HB_ISNIL(3)? nullptr : (QAndroidParcel *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? (QAndroidBinder::CallType) CallType::Normal : (QAndroidBinder::CallType) hb_parni(4) ) );
+      RBOOL( obj->transact( PINT( 1 ), *PQANDROIDPARCEL( 2 ), HB_ISNIL( 3 ) ? nullptr : static_cast< QAndroidParcel * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QAndroidBinder::CallType >( CallType::Normal ) : static_cast< QAndroidBinder::CallType >( hb_parni( 4 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,12 +181,12 @@ QAndroidJniObject handle() const
 HB_FUNC_STATIC( QANDROIDBINDER_HANDLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAndroidBinder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAndroidBinder * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QAndroidJniObject( obj->handle() );
