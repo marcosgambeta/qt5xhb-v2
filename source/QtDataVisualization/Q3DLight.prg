@@ -64,9 +64,9 @@ Q3DLight( QObject * parent = nullptr )
 HB_FUNC_STATIC( Q3DLIGHT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new Q3DLight( OPQOBJECT(1,nullptr) );
+    auto obj = new Q3DLight( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -82,7 +82,7 @@ virtual ~Q3DLight()
 HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DLight * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -106,15 +106,15 @@ void setAutoPosition( bool enabled )
 HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DLight * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoPosition( PBOOL(1) );
+      obj->setAutoPosition( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,12 +134,12 @@ bool isAutoPosition()
 HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DLight * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAutoPosition() );

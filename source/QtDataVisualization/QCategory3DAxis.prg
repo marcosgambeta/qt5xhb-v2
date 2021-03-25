@@ -64,9 +64,9 @@ QCategory3DAxis( QObject * parent = nullptr )
 HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QCategory3DAxis( OPQOBJECT(1,nullptr) );
+    auto obj = new QCategory3DAxis( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -82,7 +82,7 @@ virtual ~QCategory3DAxis()
 HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCategory3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -106,12 +106,12 @@ QStringList labels() const
 HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCategory3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->labels() );
@@ -132,15 +132,15 @@ void setLabels( const QStringList & labels )
 HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCategory3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setLabels( PQSTRINGLIST(1) );
+      obj->setLabels( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -103,7 +103,7 @@ QItemModelScatterDataProxy( QObject * parent = nullptr )
 void QItemModelScatterDataProxy_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelScatterDataProxy( OPQOBJECT(1,nullptr) );
+  auto obj = new QItemModelScatterDataProxy( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -114,7 +114,7 @@ QItemModelScatterDataProxy( QAbstractItemModel * itemModel, QObject * parent = n
 void QItemModelScatterDataProxy_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -125,7 +125,7 @@ QItemModelScatterDataProxy( QAbstractItemModel * itemModel, const QString & xPos
 void QItemModelScatterDataProxy_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
+  auto obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), OPQOBJECT( 5, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -136,26 +136,26 @@ QItemModelScatterDataProxy( QAbstractItemModel * itemModel, const QString & xPos
 void QItemModelScatterDataProxy_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
+  auto obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), OPQOBJECT( 6, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QItemModelScatterDataProxy_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQABSTRACTITEMMODEL( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QItemModelScatterDataProxy_new2();
   }
-  else if( ISBETWEEN(4,5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && (ISQOBJECT(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN( 4, 5 ) && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && ( ISQOBJECT( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QItemModelScatterDataProxy_new3();
   }
-  else if( ISBETWEEN(5,6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) && (ISQOBJECT(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN( 5, 6 ) && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) && ( ISQOBJECT( 6 ) || HB_ISNIL( 6 ) ) )
   {
     QItemModelScatterDataProxy_new4();
   }
@@ -171,7 +171,7 @@ virtual ~QItemModelScatterDataProxy()
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -195,12 +195,12 @@ QAbstractItemModel * itemModel() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractItemModel * ptr = obj->itemModel();
@@ -222,15 +222,15 @@ void setItemModel( QAbstractItemModel * itemModel )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETITEMMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
     {
 #endif
-      obj->setItemModel( PQABSTRACTITEMMODEL(1) );
+      obj->setItemModel( PQABSTRACTITEMMODEL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,12 +250,12 @@ QString xPosRole() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->xPosRole() );
@@ -276,15 +276,15 @@ void setXPosRole( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setXPosRole( PQSTRING(1) );
+      obj->setXPosRole( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,12 +304,12 @@ QString yPosRole() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->yPosRole() );
@@ -330,15 +330,15 @@ void setYPosRole( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setYPosRole( PQSTRING(1) );
+      obj->setYPosRole( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,12 +358,12 @@ QString zPosRole() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->zPosRole() );
@@ -384,15 +384,15 @@ void setZPosRole( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setZPosRole( PQSTRING(1) );
+      obj->setZPosRole( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,12 +412,12 @@ QString rotationRole() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->rotationRole() );
@@ -438,15 +438,15 @@ void setRotationRole( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setRotationRole( PQSTRING(1) );
+      obj->setRotationRole( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,12 +466,12 @@ QRegExp xPosRolePattern() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRegExp( obj->xPosRolePattern() );
@@ -493,15 +493,15 @@ void setXPosRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
     {
 #endif
-      obj->setXPosRolePattern( *PQREGEXP(1) );
+      obj->setXPosRolePattern( *PQREGEXP( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,12 +521,12 @@ QRegExp yPosRolePattern() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRegExp( obj->yPosRolePattern() );
@@ -548,15 +548,15 @@ void setYPosRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
     {
 #endif
-      obj->setYPosRolePattern( *PQREGEXP(1) );
+      obj->setYPosRolePattern( *PQREGEXP( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -576,12 +576,12 @@ QRegExp zPosRolePattern() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRegExp( obj->zPosRolePattern() );
@@ -603,15 +603,15 @@ void setZPosRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
     {
 #endif
-      obj->setZPosRolePattern( *PQREGEXP(1) );
+      obj->setZPosRolePattern( *PQREGEXP( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,12 +631,12 @@ QRegExp rotationRolePattern() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRegExp( obj->rotationRolePattern() );
@@ -658,15 +658,15 @@ void setRotationRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
     {
 #endif
-      obj->setRotationRolePattern( *PQREGEXP(1) );
+      obj->setRotationRolePattern( *PQREGEXP( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -686,12 +686,12 @@ QString xPosRoleReplace() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->xPosRoleReplace() );
@@ -712,15 +712,15 @@ void setXPosRoleReplace( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setXPosRoleReplace( PQSTRING(1) );
+      obj->setXPosRoleReplace( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,12 +740,12 @@ QString yPosRoleReplace() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->yPosRoleReplace() );
@@ -766,15 +766,15 @@ void setYPosRoleReplace( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setYPosRoleReplace( PQSTRING(1) );
+      obj->setYPosRoleReplace( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -794,12 +794,12 @@ QString zPosRoleReplace() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->zPosRoleReplace() );
@@ -820,15 +820,15 @@ void setZPosRoleReplace( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setZPosRoleReplace( PQSTRING(1) );
+      obj->setZPosRoleReplace( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -848,12 +848,12 @@ QString rotationRoleReplace() const
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->rotationRoleReplace() );
@@ -874,15 +874,15 @@ void setRotationRoleReplace( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setRotationRoleReplace( PQSTRING(1) );
+      obj->setRotationRoleReplace( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -902,15 +902,15 @@ void remap( const QString & xPosRole, const QString & yPosRole, const QString & 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_REMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QItemModelScatterDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
+    if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) )
     {
 #endif
-      obj->remap( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) );
+      obj->remap( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

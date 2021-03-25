@@ -70,9 +70,9 @@ Q3DObject( QObject * parent = nullptr )
 HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new Q3DObject( OPQOBJECT(1,nullptr) );
+    auto obj = new Q3DObject( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -88,7 +88,7 @@ virtual ~Q3DObject()
 HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -112,12 +112,12 @@ Q3DScene * parentScene()
 HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       Q3DScene * ptr = obj->parentScene();
@@ -139,12 +139,12 @@ QVector3D position() const
 HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVector3D( obj->position() );
@@ -166,15 +166,15 @@ void setPosition( const QVector3D & position )
 HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+    if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1) );
+      obj->setPosition( *PQVECTOR3D( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,15 +194,15 @@ virtual void copyValuesFrom( const Q3DObject & source )
 HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< Q3DObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQ3DOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQ3DOBJECT( 1 ) )
     {
 #endif
-      obj->copyValuesFrom( *PQ3DOBJECT(1) );
+      obj->copyValuesFrom( *PQ3DOBJECT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

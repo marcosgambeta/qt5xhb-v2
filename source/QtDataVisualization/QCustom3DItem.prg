@@ -92,7 +92,7 @@ QCustom3DItem( QObject * parent = nullptr )
 void QCustom3DItem_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DItem( OPQOBJECT(1,nullptr) );
+  auto obj = new QCustom3DItem( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -103,18 +103,18 @@ QCustom3DItem( const QString & meshFile, const QVector3D & position, const QVect
 void QCustom3DItem_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DItem( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
+  auto obj = new QCustom3DItem( PQSTRING( 1 ), *PQVECTOR3D( 2 ), *PQVECTOR3D( 3 ), *PQQUATERNION( 4 ), *PQIMAGE( 5 ), OPQOBJECT( 6, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QCustom3DItem_new1();
   }
-  else if( ISBETWEEN(5,6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) && (ISQOBJECT(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN( 5, 6 ) && HB_ISCHAR( 1 ) && ISQVECTOR3D( 2 ) && ISQVECTOR3D( 3 ) && ISQQUATERNION( 4 ) && ISQIMAGE( 5 ) && ( ISQOBJECT( 6 ) || HB_ISNIL( 6 ) ) )
   {
     QCustom3DItem_new2();
   }
@@ -130,7 +130,7 @@ virtual ~QCustom3DItem()
 HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -154,12 +154,12 @@ QString meshFile() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_MESHFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->meshFile() );
@@ -180,15 +180,15 @@ void setMeshFile( const QString & meshFile )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETMESHFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setMeshFile( PQSTRING(1) );
+      obj->setMeshFile( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,12 +208,12 @@ QString textureFile() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_TEXTUREFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->textureFile() );
@@ -234,15 +234,15 @@ void setTextureFile( const QString & textureFile )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTextureFile( PQSTRING(1) );
+      obj->setTextureFile( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,12 +262,12 @@ QVector3D position() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_POSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVector3D( obj->position() );
@@ -289,15 +289,15 @@ void setPosition( const QVector3D & position )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+    if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1) );
+      obj->setPosition( *PQVECTOR3D( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,12 +317,12 @@ bool isPositionAbsolute() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISPOSITIONABSOLUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isPositionAbsolute() );
@@ -343,15 +343,15 @@ void setPositionAbsolute( bool positionAbsolute )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITIONABSOLUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setPositionAbsolute( PBOOL(1) );
+      obj->setPositionAbsolute( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,12 +371,12 @@ QVector3D scaling() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_SCALING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVector3D( obj->scaling() );
@@ -398,15 +398,15 @@ void setScaling( const QVector3D & scaling )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+    if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
     {
 #endif
-      obj->setScaling( *PQVECTOR3D(1) );
+      obj->setScaling( *PQVECTOR3D( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,12 +426,12 @@ QQuaternion rotation()
 HB_FUNC_STATIC( QCUSTOM3DITEM_ROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QQuaternion( obj->rotation() );
@@ -453,15 +453,15 @@ void setRotation( const QQuaternion & rotation )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQUATERNION(1) )
+    if( ISNUMPAR( 1 ) && ISQQUATERNION( 1 ) )
     {
 #endif
-      obj->setRotation( *PQQUATERNION(1) );
+      obj->setRotation( *PQQUATERNION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,12 +481,12 @@ bool isVisible() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isVisible() );
@@ -507,15 +507,15 @@ void setVisible( bool visible )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,12 +535,12 @@ bool isShadowCasting() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISSHADOWCASTING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isShadowCasting() );
@@ -561,15 +561,15 @@ void setShadowCasting( bool enabled )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETSHADOWCASTING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setShadowCasting( PBOOL(1) );
+      obj->setShadowCasting( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,12 +589,12 @@ bool isScalingAbsolute() const
 HB_FUNC_STATIC( QCUSTOM3DITEM_ISSCALINGABSOLUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isScalingAbsolute() );
@@ -615,15 +615,15 @@ void setScalingAbsolute( bool scalingAbsolute )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALINGABSOLUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setScalingAbsolute( PBOOL(1) );
+      obj->setScalingAbsolute( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,15 +643,15 @@ Q_INVOKABLE void setRotationAxisAndAngle( const QVector3D & axis, float angle )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQVECTOR3D( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setRotationAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) );
+      obj->setRotationAxisAndAngle( *PQVECTOR3D( 1 ), PFLOAT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,15 +671,15 @@ void setTextureImage( const QImage & textureImage )
 HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCustom3DItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGE(1) )
+    if( ISNUMPAR( 1 ) && ISQIMAGE( 1 ) )
     {
 #endif
-      obj->setTextureImage( *PQIMAGE(1) );
+      obj->setTextureImage( *PQIMAGE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

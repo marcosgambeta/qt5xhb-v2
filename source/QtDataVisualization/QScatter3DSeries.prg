@@ -72,7 +72,7 @@ QScatter3DSeries( QObject * parent = nullptr )
 void QScatter3DSeries_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QScatter3DSeries( OPQOBJECT(1,nullptr) );
+  auto obj = new QScatter3DSeries( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -83,18 +83,18 @@ QScatter3DSeries( QScatterDataProxy * dataProxy, QObject * parent = nullptr )
 void QScatter3DSeries_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QScatter3DSeries( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QScatter3DSeries( PQSCATTERDATAPROXY( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QScatter3DSeries_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQSCATTERDATAPROXY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQSCATTERDATAPROXY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QScatter3DSeries_new2();
   }
@@ -110,7 +110,7 @@ virtual ~QScatter3DSeries()
 HB_FUNC_STATIC( QSCATTER3DSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -134,12 +134,12 @@ QScatterDataProxy * dataProxy() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScatterDataProxy * ptr = obj->dataProxy();
@@ -161,15 +161,15 @@ void setDataProxy( QScatterDataProxy * proxy )
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETDATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCATTERDATAPROXY(1) )
+    if( ISNUMPAR( 1 ) && ISQSCATTERDATAPROXY( 1 ) )
     {
 #endif
-      obj->setDataProxy( PQSCATTERDATAPROXY(1) );
+      obj->setDataProxy( PQSCATTERDATAPROXY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,12 +189,12 @@ int selectedItem() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_SELECTEDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->selectedItem() );
@@ -215,15 +215,15 @@ void setSelectedItem( int index )
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSelectedItem( PINT(1) );
+      obj->setSelectedItem( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,12 +243,12 @@ float itemSize() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_ITEMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RFLOAT( obj->itemSize() );
@@ -269,15 +269,15 @@ void setItemSize( float size )
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QScatter3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setItemSize( PFLOAT(1) );
+      obj->setItemSize( PFLOAT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QScatter3DSeries::invalidSelectionIndex() );

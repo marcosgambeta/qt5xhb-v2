@@ -80,9 +80,9 @@ QSurfaceDataProxy( QObject * parent = nullptr )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QSurfaceDataProxy( OPQOBJECT(1,nullptr) );
+    auto obj = new QSurfaceDataProxy( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -98,7 +98,7 @@ virtual ~QSurfaceDataProxy()
 HB_FUNC_STATIC( QSURFACEDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -122,12 +122,12 @@ int rowCount() const
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->rowCount() );
@@ -148,12 +148,12 @@ int columnCount() const
 HB_FUNC_STATIC( QSURFACEDATAPROXY_COLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->columnCount() );
@@ -174,12 +174,12 @@ QSurface3DSeries * series() const
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSurface3DSeries * ptr = obj->series();
@@ -205,11 +205,11 @@ const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
 void QSurfaceDataProxy_itemAt1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    const QSurfaceDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+    const QSurfaceDataItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
     Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
   }
 #endif
@@ -221,11 +221,11 @@ const QSurfaceDataItem * itemAt( const QPoint & position ) const
 void QSurfaceDataProxy_itemAt2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+    const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
     Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
   }
 #endif
@@ -233,11 +233,11 @@ void QSurfaceDataProxy_itemAt2()
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QSurfaceDataProxy_itemAt1();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QSurfaceDataProxy_itemAt2();
   }
@@ -263,11 +263,11 @@ void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
 void QSurfaceDataProxy_setItem1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setItem( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
+    obj->setItem( PINT( 1 ), PINT( 2 ), *PQSURFACEDATAITEM( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -280,11 +280,11 @@ void setItem( const QPoint & position, const QSurfaceDataItem & item )
 void QSurfaceDataProxy_setItem2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setItem( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
+    obj->setItem( *PQPOINT( 1 ), *PQSURFACEDATAITEM( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -293,11 +293,11 @@ void QSurfaceDataProxy_setItem2()
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQSURFACEDATAITEM( 3 ) )
   {
     QSurfaceDataProxy_setItem1();
   }
-  else if( ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2) )
+  else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQSURFACEDATAITEM( 2 ) )
   {
     QSurfaceDataProxy_setItem2();
   }
@@ -325,15 +325,15 @@ void removeRows( int rowIndex, int removeCount )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->removeRows( PINT(1), PINT(2) );
+      obj->removeRows( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

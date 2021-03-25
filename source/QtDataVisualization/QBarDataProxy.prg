@@ -91,9 +91,9 @@ QBarDataProxy( QObject * parent = nullptr )
 HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QBarDataProxy( OPQOBJECT(1,nullptr) );
+    auto obj = new QBarDataProxy( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ virtual ~QBarDataProxy()
 HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -133,12 +133,12 @@ int rowCount() const
 HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->rowCount() );
@@ -159,12 +159,12 @@ QStringList rowLabels() const
 HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->rowLabels() );
@@ -185,15 +185,15 @@ void setRowLabels( const QStringList & labels )
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setRowLabels( PQSTRINGLIST(1) );
+      obj->setRowLabels( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,12 +213,12 @@ QStringList columnLabels() const
 HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->columnLabels() );
@@ -239,15 +239,15 @@ void setColumnLabels( const QStringList & labels )
 HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setColumnLabels( PQSTRINGLIST(1) );
+      obj->setColumnLabels( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,12 +267,12 @@ QBar3DSeries * series() const
 HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QBar3DSeries * ptr = obj->series();
@@ -302,11 +302,11 @@ const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
 void QBarDataProxy_itemAt1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    const QBarDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+    const QBarDataItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
     Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
   }
 #endif
@@ -318,11 +318,11 @@ const QBarDataItem * itemAt( const QPoint & position ) const
 void QBarDataProxy_itemAt2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    const QBarDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+    const QBarDataItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
     Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
   }
 #endif
@@ -330,11 +330,11 @@ void QBarDataProxy_itemAt2()
 
 HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QBarDataProxy_itemAt1();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QBarDataProxy_itemAt2();
   }
@@ -406,11 +406,11 @@ void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
 void QBarDataProxy_setItem1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setItem( PINT(1), PINT(2), *PQBARDATAITEM(3) );
+    obj->setItem( PINT( 1 ), PINT( 2 ), *PQBARDATAITEM( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -423,11 +423,11 @@ void setItem( const QPoint & position, const QBarDataItem & item )
 void QBarDataProxy_setItem2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setItem( *PQPOINT(1), *PQBARDATAITEM(2) );
+    obj->setItem( *PQPOINT( 1 ), *PQBARDATAITEM( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -436,11 +436,11 @@ void QBarDataProxy_setItem2()
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQBARDATAITEM( 3 ) )
   {
     QBarDataProxy_setItem1();
   }
-  else if( ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2) )
+  else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQBARDATAITEM( 2 ) )
   {
     QBarDataProxy_setItem2();
   }
@@ -524,15 +524,15 @@ void removeRows( int rowIndex, int removeCount, bool removeLabels = true )
 HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISLOG(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISLOG( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->removeRows( PINT(1), PINT(2), OPBOOL(3,true) );
+      obj->removeRows( PINT( 1 ), PINT( 2 ), OPBOOL( 3, true ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

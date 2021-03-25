@@ -77,9 +77,9 @@ QValue3DAxis( QObject * parent = nullptr )
 HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QValue3DAxis( OPQOBJECT(1,nullptr) );
+    auto obj = new QValue3DAxis( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -95,7 +95,7 @@ virtual ~QValue3DAxis()
 HB_FUNC_STATIC( QVALUE3DAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -119,12 +119,12 @@ int segmentCount() const
 HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->segmentCount() );
@@ -145,15 +145,15 @@ void setSegmentCount( int count )
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSegmentCount( PINT(1) );
+      obj->setSegmentCount( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,12 +173,12 @@ int subSegmentCount() const
 HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->subSegmentCount() );
@@ -199,15 +199,15 @@ void setSubSegmentCount( int count )
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSubSegmentCount( PINT(1) );
+      obj->setSubSegmentCount( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,12 +227,12 @@ QString labelFormat() const
 HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->labelFormat() );
@@ -253,15 +253,15 @@ void setLabelFormat( const QString & format )
 HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setLabelFormat( PQSTRING(1) );
+      obj->setLabelFormat( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,12 +281,12 @@ QValue3DAxisFormatter * formatter() const
 HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QValue3DAxisFormatter * ptr = obj->formatter();
@@ -308,15 +308,15 @@ void setFormatter( QValue3DAxisFormatter * formatter )
 HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALUE3DAXISFORMATTER(1) )
+    if( ISNUMPAR( 1 ) && ISQVALUE3DAXISFORMATTER( 1 ) )
     {
 #endif
-      obj->setFormatter( PQVALUE3DAXISFORMATTER(1) );
+      obj->setFormatter( PQVALUE3DAXISFORMATTER( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,12 +336,12 @@ bool reversed() const
 HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->reversed() );
@@ -362,15 +362,15 @@ void setReversed( bool enable )
 HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValue3DAxis * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setReversed( PBOOL(1) );
+      obj->setReversed( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

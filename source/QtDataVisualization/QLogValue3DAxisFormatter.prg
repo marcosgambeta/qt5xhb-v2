@@ -70,9 +70,9 @@ QLogValue3DAxisFormatter( QObject * parent = nullptr )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QLogValue3DAxisFormatter( OPQOBJECT(1,nullptr) );
+    auto obj = new QLogValue3DAxisFormatter( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -88,7 +88,7 @@ virtual ~QLogValue3DAxisFormatter()
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -112,12 +112,12 @@ qreal base() const
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->base() );
@@ -138,15 +138,15 @@ void setBase( qreal base )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBase( PQREAL(1) );
+      obj->setBase( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,12 +166,12 @@ bool autoSubGrid() const
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoSubGrid() );
@@ -192,15 +192,15 @@ void setAutoSubGrid( bool enabled )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoSubGrid( PBOOL(1) );
+      obj->setAutoSubGrid( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,12 +220,12 @@ bool showEdgeLabels() const
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->showEdgeLabels() );
@@ -246,15 +246,15 @@ void setShowEdgeLabels( bool enabled )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLogValue3DAxisFormatter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setShowEdgeLabels( PBOOL(1) );
+      obj->setShowEdgeLabels( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

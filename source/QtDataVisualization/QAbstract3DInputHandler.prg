@@ -71,7 +71,7 @@ virtual ~QAbstract3DInputHandler()
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -95,12 +95,12 @@ QAbstract3DInputHandler::InputView inputView() const
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->inputView() );
@@ -121,15 +121,15 @@ void setInputView( QAbstract3DInputHandler::InputView inputView )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setInputView( (QAbstract3DInputHandler::InputView) hb_parni(1) );
+      obj->setInputView( static_cast<QAbstract3DInputHandler::InputView>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,12 +149,12 @@ QPoint inputPosition() const
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPoint( obj->inputPosition() );
@@ -176,15 +176,15 @@ void setInputPosition( const QPoint & position )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      obj->setInputPosition( *PQPOINT(1) );
+      obj->setInputPosition( *PQPOINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,12 +204,12 @@ Q3DScene * scene() const
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       Q3DScene * ptr = obj->scene();
@@ -231,15 +231,15 @@ void setScene( Q3DScene * scene )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DInputHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQ3DSCENE(1) )
+    if( ISNUMPAR( 1 ) && ISQ3DSCENE( 1 ) )
     {
 #endif
-      obj->setScene( PQ3DSCENE(1) );
+      obj->setScene( PQ3DSCENE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

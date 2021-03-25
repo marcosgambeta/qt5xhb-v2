@@ -112,7 +112,7 @@ virtual ~QAbstract3DSeries()
 HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -136,12 +136,12 @@ QAbstract3DSeries::SeriesType type() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -162,12 +162,12 @@ QString itemLabelFormat() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->itemLabelFormat() );
@@ -188,15 +188,15 @@ void setItemLabelFormat( const QString & format )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setItemLabelFormat( PQSTRING(1) );
+      obj->setItemLabelFormat( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,12 +216,12 @@ bool isVisible() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isVisible() );
@@ -242,15 +242,15 @@ void setVisible( bool visible )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,12 +270,12 @@ QAbstract3DSeries::Mesh mesh() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->mesh() );
@@ -296,15 +296,15 @@ void setMesh( QAbstract3DSeries::Mesh mesh )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMesh( (QAbstract3DSeries::Mesh) hb_parni(1) );
+      obj->setMesh( static_cast<QAbstract3DSeries::Mesh>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,12 +324,12 @@ bool isMeshSmooth() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ISMESHSMOOTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isMeshSmooth() );
@@ -350,15 +350,15 @@ void setMeshSmooth( bool enable )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHSMOOTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setMeshSmooth( PBOOL(1) );
+      obj->setMeshSmooth( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,12 +378,12 @@ QQuaternion meshRotation() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QQuaternion( obj->meshRotation() );
@@ -405,15 +405,15 @@ void setMeshRotation( const QQuaternion & rotation )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQUATERNION(1) )
+    if( ISNUMPAR( 1 ) && ISQQUATERNION( 1 ) )
     {
 #endif
-      obj->setMeshRotation( *PQQUATERNION(1) );
+      obj->setMeshRotation( *PQQUATERNION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,12 +433,12 @@ QString userDefinedMesh() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_USERDEFINEDMESH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->userDefinedMesh() );
@@ -459,15 +459,15 @@ void setUserDefinedMesh( const QString & fileName )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETUSERDEFINEDMESH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setUserDefinedMesh( PQSTRING(1) );
+      obj->setUserDefinedMesh( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,12 +487,12 @@ Q3DTheme::ColorStyle colorStyle() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_COLORSTYLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->colorStyle() );
@@ -513,15 +513,15 @@ void setColorStyle( Q3DTheme::ColorStyle style )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setColorStyle( (Q3DTheme::ColorStyle) hb_parni(1) );
+      obj->setColorStyle( static_cast<Q3DTheme::ColorStyle>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,12 +541,12 @@ QColor baseColor() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->baseColor() );
@@ -568,15 +568,15 @@ void setBaseColor( const QColor & color )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setBaseColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBaseColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,12 +596,12 @@ QLinearGradient baseGradient() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLinearGradient( obj->baseGradient() );
@@ -623,15 +623,15 @@ void setBaseGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
+    if( ISNUMPAR( 1 ) && ISQLINEARGRADIENT( 1 ) )
     {
 #endif
-      obj->setBaseGradient( *PQLINEARGRADIENT(1) );
+      obj->setBaseGradient( *PQLINEARGRADIENT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -651,12 +651,12 @@ QColor singleHighlightColor() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->singleHighlightColor() );
@@ -678,15 +678,15 @@ void setSingleHighlightColor( const QColor & color )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setSingleHighlightColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setSingleHighlightColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,12 +706,12 @@ QLinearGradient singleHighlightGradient() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLinearGradient( obj->singleHighlightGradient() );
@@ -733,15 +733,15 @@ void setSingleHighlightGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
+    if( ISNUMPAR( 1 ) && ISQLINEARGRADIENT( 1 ) )
     {
 #endif
-      obj->setSingleHighlightGradient( *PQLINEARGRADIENT(1) );
+      obj->setSingleHighlightGradient( *PQLINEARGRADIENT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -761,12 +761,12 @@ QColor multiHighlightColor() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QColor( obj->multiHighlightColor() );
@@ -788,15 +788,15 @@ void setMultiHighlightColor( const QColor & color )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setMultiHighlightColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setMultiHighlightColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -816,12 +816,12 @@ QLinearGradient multiHighlightGradient() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLinearGradient( obj->multiHighlightGradient() );
@@ -843,15 +843,15 @@ void setMultiHighlightGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
+    if( ISNUMPAR( 1 ) && ISQLINEARGRADIENT( 1 ) )
     {
 #endif
-      obj->setMultiHighlightGradient( *PQLINEARGRADIENT(1) );
+      obj->setMultiHighlightGradient( *PQLINEARGRADIENT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -871,12 +871,12 @@ QString name() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -897,15 +897,15 @@ void setName( const QString & name )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -925,12 +925,12 @@ QString itemLabel() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->itemLabel() );
@@ -951,12 +951,12 @@ bool isItemLabelVisible() const
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ISITEMLABELVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isItemLabelVisible() );
@@ -977,15 +977,15 @@ void setItemLabelVisible( bool visible )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setItemLabelVisible( PBOOL(1) );
+      obj->setItemLabelVisible( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1005,15 +1005,15 @@ Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D & axis, float angle )
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstract3DSeries * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQVECTOR3D( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setMeshAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) );
+      obj->setMeshAxisAndAngle( *PQVECTOR3D( 1 ), PFLOAT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
