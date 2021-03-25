@@ -67,7 +67,7 @@ QGraphicsSvgItem( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new1()
 {
-  auto obj = new QGraphicsSvgItem( HB_ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  auto obj = new QGraphicsSvgItem( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -76,17 +76,17 @@ QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new2()
 {
-  auto obj = new QGraphicsSvgItem( PQSTRING(1), HB_ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  auto obj = new QGraphicsSvgItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QGraphicsSvgItem_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsSvgItem_new2();
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_DELETE )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -120,12 +120,12 @@ QString elementId() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->elementId() );
@@ -144,12 +144,12 @@ QSize maximumCacheSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->maximumCacheSize() );
@@ -169,12 +169,12 @@ QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSvgRenderer * ptr = obj->renderer();
@@ -194,15 +194,15 @@ void setElementId( const QString & id )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setElementId( PQSTRING(1) );
+      obj->setElementId( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,15 +220,15 @@ void setMaximumCacheSize( const QSize & size )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->setMaximumCacheSize( *PQSIZE(1) );
+      obj->setMaximumCacheSize( *PQSIZE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,15 +246,15 @@ void setSharedRenderer( QSvgRenderer * renderer )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSVGRENDERER(1) )
+    if( ISNUMPAR( 1 ) && ISQSVGRENDERER( 1 ) )
     {
 #endif
-      obj->setSharedRenderer( PQSVGRENDERER(1) );
+      obj->setSharedRenderer( PQSVGRENDERER( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,12 +272,12 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect() );
@@ -297,15 +297,15 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, nullptr ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,12 +323,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
 {
-  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsSvgItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->type() );

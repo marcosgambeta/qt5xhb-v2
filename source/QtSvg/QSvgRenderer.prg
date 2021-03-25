@@ -72,7 +72,7 @@ QSvgRenderer( QObject * parent = nullptr )
 */
 void QSvgRenderer_new1()
 {
-  auto obj = new QSvgRenderer( OPQOBJECT(1,nullptr) );
+  auto obj = new QSvgRenderer( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -81,7 +81,7 @@ QSvgRenderer( const QString & filename, QObject * parent = nullptr )
 */
 void QSvgRenderer_new2()
 {
-  auto obj = new QSvgRenderer( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QSvgRenderer( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -90,7 +90,7 @@ QSvgRenderer( const QByteArray & contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new3()
 {
-  auto obj = new QSvgRenderer( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QSvgRenderer( *PQBYTEARRAY( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -99,25 +99,25 @@ QSvgRenderer( QXmlStreamReader * contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new4()
 {
-  auto obj = new QSvgRenderer( PQXMLSTREAMREADER(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QSvgRenderer( PQXMLSTREAMREADER( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSvgRenderer_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSvgRenderer_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSvgRenderer_new3();
   }
-  else if( ISBETWEEN(1,2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQXMLSTREAMREADER( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSvgRenderer_new4();
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
 
 HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -151,12 +151,12 @@ bool animated() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->animated() );
@@ -175,15 +175,15 @@ QRectF boundsOnElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundsOnElement( PQSTRING(1) ) );
+      auto ptr = new QRectF( obj->boundsOnElement( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -200,12 +200,12 @@ QSize defaultSize() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->defaultSize() );
@@ -225,15 +225,15 @@ bool elementExists( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->elementExists( PQSTRING(1) ) );
+      RBOOL( obj->elementExists( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,12 +249,12 @@ int framesPerSecond() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->framesPerSecond() );
@@ -273,12 +273,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -297,15 +297,15 @@ QMatrix matrixForElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QMatrix( obj->matrixForElement( PQSTRING(1) ) );
+      auto ptr = new QMatrix( obj->matrixForElement( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -322,15 +322,15 @@ void setFramesPerSecond( int num )
 */
 HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setFramesPerSecond( PINT(1) );
+      obj->setFramesPerSecond( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,11 +348,11 @@ void setViewBox( const QRect & viewbox )
 */
 void QSvgRenderer_setViewBox1()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setViewBox( *PQRECT(1) );
+    obj->setViewBox( *PQRECT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -363,11 +363,11 @@ void setViewBox( const QRectF & viewbox )
 */
 void QSvgRenderer_setViewBox2()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setViewBox( *PQRECTF(1) );
+    obj->setViewBox( *PQRECTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -375,11 +375,11 @@ void QSvgRenderer_setViewBox2()
 
 HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 {
-  if( ISNUMPAR(1) && ISQRECT(1) )
+  if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
     QSvgRenderer_setViewBox1();
   }
-  else if( ISNUMPAR(1) && ISQRECTF(1) )
+  else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
     QSvgRenderer_setViewBox2();
   }
@@ -394,12 +394,12 @@ QRect viewBox() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRect( obj->viewBox() );
@@ -419,12 +419,12 @@ QRectF viewBoxF() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRectF( obj->viewBoxF() );
@@ -444,11 +444,11 @@ bool load( const QString & filename )
 */
 void QSvgRenderer_load1()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->load( PQSTRING(1) ) );
+    RBOOL( obj->load( PQSTRING( 1 ) ) );
   }
 }
 
@@ -457,11 +457,11 @@ bool load( const QByteArray & contents )
 */
 void QSvgRenderer_load2()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->load( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->load( *PQBYTEARRAY( 1 ) ) );
   }
 }
 
@@ -470,25 +470,25 @@ bool load( QXmlStreamReader * contents )
 */
 void QSvgRenderer_load3()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->load( PQXMLSTREAMREADER(1) ) );
+    RBOOL( obj->load( PQXMLSTREAMREADER( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QSvgRenderer_load1();
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     QSvgRenderer_load2();
   }
-  else if( ISNUMPAR(1) && ISQXMLSTREAMREADER(1) )
+  else if( ISNUMPAR( 1 ) && ISQXMLSTREAMREADER( 1 ) )
   {
     QSvgRenderer_load3();
   }
@@ -503,11 +503,11 @@ void render( QPainter * painter )
 */
 void QSvgRenderer_render1()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->render( PQPAINTER(1) );
+    obj->render( PQPAINTER( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -518,11 +518,11 @@ void render( QPainter * painter, const QRectF & bounds )
 */
 void QSvgRenderer_render2()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->render( PQPAINTER(1), *PQRECTF(2) );
+    obj->render( PQPAINTER( 1 ), *PQRECTF( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -533,11 +533,11 @@ void render( QPainter * painter, const QString & elementId, const QRectF & bound
 */
 void QSvgRenderer_render3()
 {
-  auto obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSvgRenderer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->render( PQPAINTER(1), PQSTRING(2), HB_ISNIL(3)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(3) );
+    obj->render( PQPAINTER( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QRectF() : *static_cast< QRectF * >( Qt5xHb::itemGetPtr( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -545,15 +545,15 @@ void QSvgRenderer_render3()
 
 HB_FUNC_STATIC( QSVGRENDERER_RENDER )
 {
-  if( ISNUMPAR(1) && ISQPAINTER(1) )
+  if( ISNUMPAR( 1 ) && ISQPAINTER( 1 ) )
   {
     QSvgRenderer_render1();
   }
-  else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2) )
+  else if( ISNUMPAR( 2 ) && ISQPAINTER( 1 ) && ISQRECTF( 2 ) )
   {
     QSvgRenderer_render2();
   }
-  else if( ISBETWEEN(2,3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && HB_ISCHAR( 2 ) && ( ISQRECTF( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSvgRenderer_render3();
   }
