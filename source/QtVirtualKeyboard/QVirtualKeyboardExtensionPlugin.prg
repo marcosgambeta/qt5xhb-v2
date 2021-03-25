@@ -53,7 +53,7 @@ virtual ~QVirtualKeyboardExtensionPlugin()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
 {
-  auto obj = (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVirtualKeyboardExtensionPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -75,15 +75,15 @@ virtual void registerTypes( const char * uri ) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  auto obj = (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVirtualKeyboardExtensionPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->registerTypes( PCONSTCHAR(1) );
+      obj->registerTypes( PCONSTCHAR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
