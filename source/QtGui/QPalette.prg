@@ -103,7 +103,7 @@ QPalette( const QColor & button )
 */
 void QPalette_new2()
 {
-  auto obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  auto obj = new QPalette( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -112,7 +112,7 @@ QPalette( Qt::GlobalColor button )
 */
 void QPalette_new3()
 {
-  auto obj = new QPalette( (Qt::GlobalColor) hb_parni(1) );
+  auto obj = new QPalette( static_cast<Qt::GlobalColor>( hb_parni( 1 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -121,7 +121,7 @@ QPalette( const QColor & button, const QColor & window )
 */
 void QPalette_new4()
 {
-  auto obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+  auto obj = new QPalette( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -130,7 +130,7 @@ QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light
 */
 void QPalette_new5()
 {
-  auto obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
+  auto obj = new QPalette( *PQBRUSH( 1 ), *PQBRUSH( 2 ), *PQBRUSH( 3 ), *PQBRUSH( 4 ), *PQBRUSH( 5 ), *PQBRUSH( 6 ), *PQBRUSH( 7 ), *PQBRUSH( 8 ), *PQBRUSH( 9 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -139,33 +139,33 @@ QPalette( const QPalette & p )
 */
 void QPalette_new6()
 {
-  auto obj = new QPalette( *PQPALETTE(1) );
+  auto obj = new QPalette( *PQPALETTE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QPALETTE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QPalette_new1();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+  else if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 )|| HB_ISCHAR( 1 ) ) )
   {
     QPalette_new2();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QPalette_new3();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
+  else if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 )|| HB_ISCHAR( 1 ) ) && ( ISQCOLOR( 2 )|| HB_ISCHAR( 2 ) ) )
   {
     QPalette_new4();
   }
-  else if( ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) )
+  else if( ISNUMPAR( 9 ) && ISQBRUSH( 1 ) && ISQBRUSH( 2 ) && ISQBRUSH( 3 ) && ISQBRUSH( 4 ) && ISQBRUSH( 5 ) && ISQBRUSH( 6 ) && ISQBRUSH( 7 ) && ISQBRUSH( 8 ) && ISQBRUSH( 9 ) )
   {
     QPalette_new5();
   }
-  else if( ISNUMPAR(1) && ISQPALETTE(1) )
+  else if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
   {
     QPalette_new6();
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
 
 HB_FUNC_STATIC( QPALETTE_DELETE )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -197,12 +197,12 @@ const QBrush & alternateBase() const
 */
 HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->alternateBase();
@@ -222,12 +222,12 @@ const QBrush & base() const
 */
 HB_FUNC_STATIC( QPALETTE_BASE )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->base();
@@ -247,12 +247,12 @@ const QBrush & brightText() const
 */
 HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->brightText();
@@ -272,11 +272,11 @@ const QBrush & brush( QPalette::ColorGroup group, QPalette::ColorRole role ) con
 */
 void QPalette_brush1()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    const QBrush * ptr = &obj->brush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
+    const QBrush * ptr = &obj->brush( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), static_cast<QPalette::ColorRole>( hb_parni( 2 ) ) );
     Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
   }
 }
@@ -286,22 +286,22 @@ const QBrush & brush( QPalette::ColorRole role ) const
 */
 void QPalette_brush2()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    const QBrush * ptr = &obj->brush( (QPalette::ColorRole) hb_parni(1) );
+    const QBrush * ptr = &obj->brush( static_cast<QPalette::ColorRole>( hb_parni( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
   }
 }
 
 HB_FUNC_STATIC( QPALETTE_BRUSH )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QPalette_brush1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QPalette_brush2();
   }
@@ -316,12 +316,12 @@ const QBrush & button() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTON )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->button();
@@ -341,12 +341,12 @@ const QBrush & buttonText() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->buttonText();
@@ -366,12 +366,12 @@ qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->cacheKey() );
@@ -390,11 +390,11 @@ const QColor & color( QPalette::ColorGroup group, QPalette::ColorRole role ) con
 */
 void QPalette_color1()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    const QColor * ptr = &obj->color( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
+    const QColor * ptr = &obj->color( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), static_cast<QPalette::ColorRole>( hb_parni( 2 ) ) );
     Qt5xHb::createReturnClass( ptr, "QCOLOR", false );
   }
 }
@@ -404,22 +404,22 @@ const QColor & color( QPalette::ColorRole role ) const
 */
 void QPalette_color2()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    const QColor * ptr = &obj->color( (QPalette::ColorRole) hb_parni(1) );
+    const QColor * ptr = &obj->color( static_cast<QPalette::ColorRole>( hb_parni( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QCOLOR", false );
   }
 }
 
 HB_FUNC_STATIC( QPALETTE_COLOR )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QPalette_color1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QPalette_color2();
   }
@@ -434,12 +434,12 @@ QPalette::ColorGroup currentColorGroup() const
 */
 HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->currentColorGroup() );
@@ -458,12 +458,12 @@ const QBrush & dark() const
 */
 HB_FUNC_STATIC( QPALETTE_DARK )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->dark();
@@ -483,12 +483,12 @@ const QBrush & highlight() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->highlight();
@@ -508,12 +508,12 @@ const QBrush & highlightedText() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->highlightedText();
@@ -533,15 +533,15 @@ bool isBrushSet( QPalette::ColorGroup cg, QPalette::ColorRole cr ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->isBrushSet( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) ) );
+      RBOOL( obj->isBrushSet( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), static_cast<QPalette::ColorRole>( hb_parni( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,15 +557,15 @@ bool isCopyOf( const QPalette & p ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPALETTE(1) )
+    if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
     {
 #endif
-      RBOOL( obj->isCopyOf( *PQPALETTE(1) ) );
+      RBOOL( obj->isCopyOf( *PQPALETTE( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -581,15 +581,15 @@ bool isEqual( QPalette::ColorGroup cg1, QPalette::ColorGroup cg2 ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->isEqual( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorGroup) hb_parni(2) ) );
+      RBOOL( obj->isEqual( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), static_cast<QPalette::ColorGroup>( hb_parni( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,12 +605,12 @@ const QBrush & light() const
 */
 HB_FUNC_STATIC( QPALETTE_LIGHT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->light();
@@ -630,12 +630,12 @@ const QBrush & link() const
 */
 HB_FUNC_STATIC( QPALETTE_LINK )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->link();
@@ -655,12 +655,12 @@ const QBrush & linkVisited() const
 */
 HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->linkVisited();
@@ -680,12 +680,12 @@ const QBrush & mid() const
 */
 HB_FUNC_STATIC( QPALETTE_MID )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->mid();
@@ -705,12 +705,12 @@ const QBrush & midlight() const
 */
 HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->midlight();
@@ -730,15 +730,15 @@ QPalette resolve( const QPalette & other ) const
 */
 HB_FUNC_STATIC( QPALETTE_RESOLVE )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPALETTE(1) )
+    if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
     {
 #endif
-      auto ptr = new QPalette( obj->resolve( *PQPALETTE(1) ) );
+      auto ptr = new QPalette( obj->resolve( *PQPALETTE( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -755,11 +755,11 @@ void setBrush( QPalette::ColorRole role, const QBrush & brush )
 */
 void QPalette_setBrush1()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setBrush( (QPalette::ColorRole) hb_parni(1), *PQBRUSH(2) );
+    obj->setBrush( static_cast<QPalette::ColorRole>( hb_parni( 1 ) ), *PQBRUSH( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -770,11 +770,11 @@ void setBrush( QPalette::ColorGroup group, QPalette::ColorRole role, const QBrus
 */
 void QPalette_setBrush2()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setBrush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), *PQBRUSH(3) );
+    obj->setBrush( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), static_cast<QPalette::ColorRole>( hb_parni( 2 ) ), *PQBRUSH( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -782,11 +782,11 @@ void QPalette_setBrush2()
 
 HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBRUSH(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQBRUSH( 2 ) )
   {
     QPalette_setBrush1();
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBRUSH(3) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQBRUSH( 3 ) )
   {
     QPalette_setBrush2();
   }
@@ -801,11 +801,11 @@ void setColor( QPalette::ColorGroup group, QPalette::ColorRole role, const QColo
 */
 void QPalette_setColor1()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setColor( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), HB_ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
+    obj->setColor( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), static_cast<QPalette::ColorRole>( hb_parni( 2 ) ), HB_ISOBJECT( 3 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 3 ) ) : QColor( hb_parc( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -816,11 +816,11 @@ void setColor( QPalette::ColorRole role, const QColor & color )
 */
 void QPalette_setColor2()
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setColor( (QPalette::ColorRole) hb_parni(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+    obj->setColor( static_cast<QPalette::ColorRole>( hb_parni( 1 ) ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -828,11 +828,11 @@ void QPalette_setColor2()
 
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQCOLOR(3)||HB_ISCHAR(3)) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQCOLOR( 3 )|| HB_ISCHAR( 3 ) ) )
   {
     QPalette_setColor1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ( ISQCOLOR( 2 )|| HB_ISCHAR( 2 ) ) )
   {
     QPalette_setColor2();
   }
@@ -847,15 +847,15 @@ void setColorGroup( QPalette::ColorGroup cg, const QBrush & windowText, const QB
 */
 HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(10) && HB_ISNUM(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) && ISQBRUSH(10) )
+    if( ISNUMPAR( 10 ) && HB_ISNUM( 1 ) && ISQBRUSH( 2 ) && ISQBRUSH( 3 ) && ISQBRUSH( 4 ) && ISQBRUSH( 5 ) && ISQBRUSH( 6 ) && ISQBRUSH( 7 ) && ISQBRUSH( 8 ) && ISQBRUSH( 9 ) && ISQBRUSH( 10 ) )
     {
 #endif
-      obj->setColorGroup( (QPalette::ColorGroup) hb_parni(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9), *PQBRUSH(10) );
+      obj->setColorGroup( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ), *PQBRUSH( 2 ), *PQBRUSH( 3 ), *PQBRUSH( 4 ), *PQBRUSH( 5 ), *PQBRUSH( 6 ), *PQBRUSH( 7 ), *PQBRUSH( 8 ), *PQBRUSH( 9 ), *PQBRUSH( 10 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,15 +873,15 @@ void setCurrentColorGroup( QPalette::ColorGroup cg )
 */
 HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentColorGroup( (QPalette::ColorGroup) hb_parni(1) );
+      obj->setCurrentColorGroup( static_cast<QPalette::ColorGroup>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -899,12 +899,12 @@ const QBrush & shadow() const
 */
 HB_FUNC_STATIC( QPALETTE_SHADOW )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->shadow();
@@ -924,12 +924,12 @@ const QBrush & text() const
 */
 HB_FUNC_STATIC( QPALETTE_TEXT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->text();
@@ -949,12 +949,12 @@ const QBrush & toolTipBase() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->toolTipBase();
@@ -974,12 +974,12 @@ const QBrush & toolTipText() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->toolTipText();
@@ -999,12 +999,12 @@ const QBrush & window() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOW )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->window();
@@ -1024,12 +1024,12 @@ const QBrush & windowText() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
 {
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->windowText();
@@ -1050,12 +1050,12 @@ const QBrush & placeholderText() const
 HB_FUNC_STATIC( QPALETTE_PLACEHOLDERTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPalette * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBrush * ptr = &obj->placeholderText();
@@ -1075,18 +1075,18 @@ HB_FUNC_STATIC( QPALETTE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -1113,16 +1113,16 @@ HB_FUNC_STATIC( QPALETTE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPALETTE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QPALETTE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

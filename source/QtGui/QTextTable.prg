@@ -74,9 +74,9 @@ QTextTable( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QTEXTTABLE_NEW )
 {
-  if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
-    auto obj = new QTextTable( PQTEXTDOCUMENT(1) );
+    auto obj = new QTextTable( PQTEXTDOCUMENT( 1 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTEXTTABLE_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -109,15 +109,15 @@ void resize( int rows, int cols )
 */
 HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->resize( PINT(1), PINT(2) );
+      obj->resize( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,15 +135,15 @@ void insertRows( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->insertRows( PINT(1), PINT(2) );
+      obj->insertRows( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,15 +161,15 @@ void insertColumns( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->insertColumns( PINT(1), PINT(2) );
+      obj->insertColumns( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,15 +187,15 @@ void appendRows( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->appendRows( PINT(1) );
+      obj->appendRows( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,15 +213,15 @@ void appendColumns( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->appendColumns( PINT(1) );
+      obj->appendColumns( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,15 +239,15 @@ void removeRows( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->removeRows( PINT(1), PINT(2) );
+      obj->removeRows( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,15 +265,15 @@ void removeColumns( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->removeColumns( PINT(1), PINT(2) );
+      obj->removeColumns( PINT( 1 ), PINT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,11 +291,11 @@ void mergeCells( int row, int col, int numRows, int numCols )
 */
 void QTextTable_mergeCells1()
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->mergeCells( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->mergeCells( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -306,11 +306,11 @@ void mergeCells( const QTextCursor & cursor )
 */
 void QTextTable_mergeCells2()
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->mergeCells( *PQTEXTCURSOR(1) );
+    obj->mergeCells( *PQTEXTCURSOR( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -318,11 +318,11 @@ void QTextTable_mergeCells2()
 
 HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QTextTable_mergeCells1();
   }
-  else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
     QTextTable_mergeCells2();
   }
@@ -337,15 +337,15 @@ void splitCell( int row, int col, int numRows, int numCols )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      obj->splitCell( PINT(1), PINT(2), PINT(3), PINT(4) );
+      obj->splitCell( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,12 +363,12 @@ int rows() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->rows() );
@@ -387,12 +387,12 @@ int columns() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->columns() );
@@ -411,11 +411,11 @@ QTextTableCell cellAt( int row, int col ) const
 */
 void QTextTable_cellAt1()
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QTextTableCell( obj->cellAt( PINT(1), PINT(2) ) );
+    auto ptr = new QTextTableCell( obj->cellAt( PINT( 1 ), PINT( 2 ) ) );
     Qt5xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
   }
 }
@@ -425,11 +425,11 @@ QTextTableCell cellAt( int position ) const
 */
 void QTextTable_cellAt2()
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QTextTableCell( obj->cellAt( PINT(1) ) );
+    auto ptr = new QTextTableCell( obj->cellAt( PINT( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
   }
 }
@@ -439,26 +439,26 @@ QTextTableCell cellAt( const QTextCursor & c ) const
 */
 void QTextTable_cellAt3()
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QTextTableCell( obj->cellAt( *PQTEXTCURSOR(1) ) );
+    auto ptr = new QTextTableCell( obj->cellAt( *PQTEXTCURSOR( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
   }
 }
 
 HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QTextTable_cellAt1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QTextTable_cellAt2();
   }
-  else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
     QTextTable_cellAt3();
   }
@@ -473,15 +473,15 @@ QTextCursor rowStart( const QTextCursor & c ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
     {
 #endif
-      auto ptr = new QTextCursor( obj->rowStart( *PQTEXTCURSOR(1) ) );
+      auto ptr = new QTextCursor( obj->rowStart( *PQTEXTCURSOR( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -498,15 +498,15 @@ QTextCursor rowEnd( const QTextCursor & c ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
     {
 #endif
-      auto ptr = new QTextCursor( obj->rowEnd( *PQTEXTCURSOR(1) ) );
+      auto ptr = new QTextCursor( obj->rowEnd( *PQTEXTCURSOR( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -523,15 +523,15 @@ void setFormat( const QTextTableFormat & format )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTTABLEFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTTABLEFORMAT( 1 ) )
     {
 #endif
-      obj->setFormat( *PQTEXTTABLEFORMAT(1) );
+      obj->setFormat( *PQTEXTTABLEFORMAT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,12 +549,12 @@ QTextTableFormat format() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
 {
-  auto obj = (QTextTable *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextTable * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTextTableFormat( obj->format() );

@@ -98,7 +98,7 @@ QSurfaceFormat( QSurfaceFormat::FormatOptions options )
 */
 void QSurfaceFormat_new2()
 {
-  auto obj = new QSurfaceFormat( (QSurfaceFormat::FormatOptions) hb_parni(1) );
+  auto obj = new QSurfaceFormat( static_cast<QSurfaceFormat::FormatOptions>( hb_parni( 1 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -107,21 +107,21 @@ QSurfaceFormat( const QSurfaceFormat & other )
 */
 void QSurfaceFormat_new3()
 {
-  auto obj = new QSurfaceFormat( *PQSURFACEFORMAT(1) );
+  auto obj = new QSurfaceFormat( *PQSURFACEFORMAT( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSurfaceFormat_new1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QSurfaceFormat_new2();
   }
-  else if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
+  else if( ISNUMPAR( 1 ) && ISQSURFACEFORMAT( 1 ) )
   {
     QSurfaceFormat_new3();
   }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 
 HB_FUNC_STATIC( QSURFACEFORMAT_DELETE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -153,15 +153,15 @@ void setDepthBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETDEPTHBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDepthBufferSize( PINT(1) );
+      obj->setDepthBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,12 +179,12 @@ int depthBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->depthBufferSize() );
@@ -203,15 +203,15 @@ void setStencilBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSTENCILBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setStencilBufferSize( PINT(1) );
+      obj->setStencilBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,12 +229,12 @@ int stencilBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->stencilBufferSize() );
@@ -253,15 +253,15 @@ void setRedBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETREDBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRedBufferSize( PINT(1) );
+      obj->setRedBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,12 +279,12 @@ int redBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->redBufferSize() );
@@ -303,15 +303,15 @@ void setGreenBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETGREENBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setGreenBufferSize( PINT(1) );
+      obj->setGreenBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,12 +329,12 @@ int greenBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->greenBufferSize() );
@@ -353,15 +353,15 @@ void setBlueBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETBLUEBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBlueBufferSize( PINT(1) );
+      obj->setBlueBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,12 +379,12 @@ int blueBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->blueBufferSize() );
@@ -403,15 +403,15 @@ void setAlphaBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETALPHABUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAlphaBufferSize( PINT(1) );
+      obj->setAlphaBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,12 +429,12 @@ int alphaBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->alphaBufferSize() );
@@ -453,15 +453,15 @@ void setSamples( int numSamples )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSAMPLES )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSamples( PINT(1) );
+      obj->setSamples( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,12 +479,12 @@ int samples() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->samples() );
@@ -503,15 +503,15 @@ void setSwapBehavior( QSurfaceFormat::SwapBehavior behavior )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSwapBehavior( (QSurfaceFormat::SwapBehavior) hb_parni(1) );
+      obj->setSwapBehavior( static_cast<QSurfaceFormat::SwapBehavior>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,12 +529,12 @@ QSurfaceFormat::SwapBehavior swapBehavior() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->swapBehavior() );
@@ -553,12 +553,12 @@ bool hasAlpha() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasAlpha() );
@@ -577,15 +577,15 @@ void setProfile( QSurfaceFormat::OpenGLContextProfile profile )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setProfile( (QSurfaceFormat::OpenGLContextProfile) hb_parni(1) );
+      obj->setProfile( static_cast<QSurfaceFormat::OpenGLContextProfile>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,12 +603,12 @@ QSurfaceFormat::OpenGLContextProfile profile() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->profile() );
@@ -627,15 +627,15 @@ void setRenderableType( QSurfaceFormat::RenderableType type )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRenderableType( (QSurfaceFormat::RenderableType) hb_parni(1) );
+      obj->setRenderableType( static_cast<QSurfaceFormat::RenderableType>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,12 +653,12 @@ QSurfaceFormat::RenderableType renderableType() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->renderableType() );
@@ -677,15 +677,15 @@ void setMajorVersion( int majorVersion )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETMAJORVERSION )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMajorVersion( PINT(1) );
+      obj->setMajorVersion( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -703,12 +703,12 @@ int majorVersion() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->majorVersion() );
@@ -727,15 +727,15 @@ void setMinorVersion( int minorVersion )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETMINORVERSION )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMinorVersion( PINT(1) );
+      obj->setMinorVersion( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -753,12 +753,12 @@ int minorVersion() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_MINORVERSION )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->minorVersion() );
@@ -777,12 +777,12 @@ bool stereo() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->stereo() );
@@ -801,15 +801,15 @@ void setStereo( bool enable )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setStereo( PBOOL(1) );
+      obj->setStereo( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,15 +827,15 @@ void setOption( QSurfaceFormat::FormatOptions opt )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setOption( (QSurfaceFormat::FormatOptions) hb_parni(1) );
+      obj->setOption( static_cast<QSurfaceFormat::FormatOptions>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -853,15 +853,15 @@ bool testOption( QSurfaceFormat::FormatOptions opt ) const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
 {
-  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->testOption( (QSurfaceFormat::FormatOptions) hb_parni(1) ) );
+      RBOOL( obj->testOption( static_cast<QSurfaceFormat::FormatOptions>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -876,18 +876,18 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -914,16 +914,16 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSURFACEFORMAT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

@@ -86,17 +86,17 @@ QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
 */
 void QOpenGLPixelTransferOptions_new2()
 {
-  auto obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
+  auto obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QOpenGLPixelTransferOptions_new1();
   }
-  else if( ISNUMPAR(1) && ISQOPENGLPIXELTRANSFEROPTIONS(1) )
+  else if( ISNUMPAR( 1 ) && ISQOPENGLPIXELTRANSFEROPTIONS( 1 ) )
   {
     QOpenGLPixelTransferOptions_new2();
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_DELETE )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -128,15 +128,15 @@ void swap( QOpenGLPixelTransferOptions & other )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SWAP )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOPENGLPIXELTRANSFEROPTIONS(1) )
+    if( ISNUMPAR( 1 ) && ISQOPENGLPIXELTRANSFEROPTIONS( 1 ) )
     {
 #endif
-      obj->swap( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
+      obj->swap( *PQOPENGLPIXELTRANSFEROPTIONS( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,15 +154,15 @@ void setAlignment( int alignment )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETALIGNMENT )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( PINT(1) );
+      obj->setAlignment( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,12 +180,12 @@ int alignment() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ALIGNMENT )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->alignment() );
@@ -204,15 +204,15 @@ void setSkipImages( int skipImages )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPIMAGES )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSkipImages( PINT(1) );
+      obj->setSkipImages( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,12 +230,12 @@ int skipImages() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPIMAGES )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->skipImages() );
@@ -254,15 +254,15 @@ void setSkipRows( int skipRows )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPROWS )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSkipRows( PINT(1) );
+      obj->setSkipRows( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,12 +280,12 @@ int skipRows() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPROWS )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->skipRows() );
@@ -304,15 +304,15 @@ void setSkipPixels( int skipPixels )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPPIXELS )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSkipPixels( PINT(1) );
+      obj->setSkipPixels( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,12 +330,12 @@ int skipPixels() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPPIXELS )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->skipPixels() );
@@ -354,15 +354,15 @@ void setImageHeight( int imageHeight )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETIMAGEHEIGHT )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setImageHeight( PINT(1) );
+      obj->setImageHeight( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,12 +380,12 @@ int imageHeight() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_IMAGEHEIGHT )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->imageHeight() );
@@ -404,15 +404,15 @@ void setRowLength( int rowLength )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETROWLENGTH )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRowLength( PINT(1) );
+      obj->setRowLength( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,12 +430,12 @@ int rowLength() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ROWLENGTH )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->rowLength() );
@@ -454,15 +454,15 @@ void setLeastSignificantByteFirst( bool lsbFirst )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETLEASTSIGNIFICANTBYTEFIRST )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setLeastSignificantByteFirst( PBOOL(1) );
+      obj->setLeastSignificantByteFirst( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,12 +480,12 @@ bool isLeastSignificantBitFirst() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISLEASTSIGNIFICANTBITFIRST )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isLeastSignificantBitFirst() );
@@ -504,15 +504,15 @@ void setSwapBytesEnabled( bool swapBytes )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSWAPBYTESENABLED )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setSwapBytesEnabled( PBOOL(1) );
+      obj->setSwapBytesEnabled( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,12 +530,12 @@ bool isSwapBytesEnabled() const
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISSWAPBYTESENABLED )
 {
-  auto obj = (QOpenGLPixelTransferOptions *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOpenGLPixelTransferOptions * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSwapBytesEnabled() );
@@ -553,18 +553,18 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -591,16 +591,16 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

@@ -60,9 +60,9 @@ QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QS
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
-  if( ISBETWEEN(3,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISCHAR(4)||HB_ISNIL(4)) && (HB_ISLOG(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) )
+  if( ISBETWEEN( 3, 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISLOG( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    auto obj = new QKeyEvent( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
+    auto obj = new QKeyEvent( static_cast<QEvent::Type>( hb_parni( 1 ) ), PINT( 2 ), static_cast<Qt::KeyboardModifiers>( hb_parni( 3 ) ), OPQSTRING( 4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -93,12 +93,12 @@ int count() const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -117,12 +117,12 @@ bool isAutoRepeat() const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAutoRepeat() );
@@ -141,12 +141,12 @@ int key() const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->key() );
@@ -165,15 +165,15 @@ bool matches( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->matches( (QKeySequence::StandardKey) hb_parni(1) ) );
+      RBOOL( obj->matches( static_cast<QKeySequence::StandardKey>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,12 +189,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -213,12 +213,12 @@ quint32 nativeModifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->nativeModifiers() );
@@ -237,12 +237,12 @@ quint32 nativeScanCode() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->nativeScanCode() );
@@ -261,12 +261,12 @@ quint32 nativeVirtualKey() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->nativeVirtualKey() );
@@ -285,12 +285,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
-  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );

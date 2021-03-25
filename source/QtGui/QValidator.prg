@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QVALIDATOR_DELETE )
 {
-  auto obj = (QValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -76,17 +76,17 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 {
-  auto obj = (QValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1), 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,12 +104,12 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
-  auto obj = (QValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QLocale( obj->locale() );
@@ -129,15 +129,15 @@ void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
-  auto obj = (QValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if( ISNUMPAR( 1 ) && ISQLOCALE( 1 ) )
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,18 +155,18 @@ virtual QValidator::State validate( QString & input, int & pos ) const = 0
 */
 HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 {
-  auto obj = (QValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       int par2;
       RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1), 1 );
       hb_storni( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

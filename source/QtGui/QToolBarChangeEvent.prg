@@ -52,9 +52,9 @@ QToolBarChangeEvent( bool t )
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    auto obj = new QToolBarChangeEvent( PBOOL(1) );
+    auto obj = new QToolBarChangeEvent( PBOOL( 1 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_DELETE )
 {
-  auto obj = (QToolBarChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QToolBarChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -85,12 +85,12 @@ bool toggle() const
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
 {
-  auto obj = (QToolBarChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QToolBarChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->toggle() );

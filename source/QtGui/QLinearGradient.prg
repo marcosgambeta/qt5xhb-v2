@@ -65,7 +65,7 @@ QLinearGradient( const QPointF & start, const QPointF & finalStop )
 */
 void QLinearGradient_new2()
 {
-  auto obj = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2) );
+  auto obj = new QLinearGradient( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -74,21 +74,21 @@ QLinearGradient( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QLinearGradient_new3()
 {
-  auto obj = new QLinearGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  auto obj = new QLinearGradient( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QLinearGradient_new1();
   }
-  else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
+  else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) )
   {
     QLinearGradient_new2();
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QLinearGradient_new3();
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 
 HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -120,12 +120,12 @@ QPointF finalStop() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->finalStop() );
@@ -145,11 +145,11 @@ void setFinalStop( const QPointF & stop )
 */
 void QLinearGradient_setFinalStop1()
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setFinalStop( *PQPOINTF(1) );
+    obj->setFinalStop( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -160,11 +160,11 @@ void setFinalStop( qreal x, qreal y )
 */
 void QLinearGradient_setFinalStop2()
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setFinalStop( PQREAL(1), PQREAL(2) );
+    obj->setFinalStop( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -172,11 +172,11 @@ void QLinearGradient_setFinalStop2()
 
 HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QLinearGradient_setFinalStop1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QLinearGradient_setFinalStop2();
   }
@@ -191,11 +191,11 @@ void setStart( const QPointF & start )
 */
 void QLinearGradient_setStart1()
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setStart( *PQPOINTF(1) );
+    obj->setStart( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -206,11 +206,11 @@ void setStart( qreal x, qreal y )
 */
 void QLinearGradient_setStart2()
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setStart( PQREAL(1), PQREAL(2) );
+    obj->setStart( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -218,11 +218,11 @@ void QLinearGradient_setStart2()
 
 HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QLinearGradient_setStart1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QLinearGradient_setStart2();
   }
@@ -237,12 +237,12 @@ QPointF start() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_START )
 {
-  auto obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QLinearGradient * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->start() );

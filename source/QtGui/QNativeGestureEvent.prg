@@ -60,9 +60,9 @@ QNativeGestureEvent( Qt::NativeGestureType type, const QPointF & localPos, const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 {
-  if( ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) )
+  if( ISNUMPAR( 7 ) && HB_ISNUM( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) && ISQPOINTF( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6) && HB_ISNUM( 7 ) )
   {
-    auto obj = new QNativeGestureEvent( (Qt::NativeGestureType) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQREAL(5), PULONG(6), PQUINT64(7) );
+    auto obj = new QNativeGestureEvent( static_cast<Qt::NativeGestureType>( hb_parni( 1 ) ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ), PQREAL( 5 ), PULONG( 6 ), PQUINT64( 7 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -93,12 +93,12 @@ Qt::NativeGestureType gestureType() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->gestureType() );
@@ -117,12 +117,12 @@ qreal value() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->value() );
@@ -141,12 +141,12 @@ const QPoint pos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_POS )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPoint( obj->pos() );
@@ -166,12 +166,12 @@ const QPoint globalPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GLOBALPOS )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPoint( obj->globalPos() );
@@ -191,12 +191,12 @@ const QPointF & localPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPointF * ptr = &obj->localPos();
@@ -216,12 +216,12 @@ const QPointF & windowPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPointF * ptr = &obj->windowPos();
@@ -241,12 +241,12 @@ const QPointF & screenPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
 {
-  auto obj = (QNativeGestureEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPointF * ptr = &obj->screenPos();

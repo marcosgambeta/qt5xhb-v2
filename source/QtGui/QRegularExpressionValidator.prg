@@ -63,7 +63,7 @@ QRegularExpressionValidator( QObject * parent = nullptr )
 void QRegularExpressionValidator_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QRegularExpressionValidator( OPQOBJECT(1,nullptr) );
+  auto obj = new QRegularExpressionValidator( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -74,18 +74,18 @@ QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = n
 void QRegularExpressionValidator_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QRegularExpressionValidator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQREGULAREXPRESSION( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QRegularExpressionValidator_new2();
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRegularExpressionValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -122,12 +122,12 @@ QRegularExpression regularExpression() const
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRegularExpressionValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRegularExpression( obj->regularExpression() );
@@ -149,15 +149,15 @@ void setRegularExpression( const QRegularExpression & re )
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRegularExpressionValidator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGULAREXPRESSION( 1 ) )
     {
 #endif
-      obj->setRegularExpression( *PQREGULAREXPRESSION(1) );
+      obj->setRegularExpression( *PQREGULAREXPRESSION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

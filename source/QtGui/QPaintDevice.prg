@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,12 +91,12 @@ int colorCount() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->colorCount() );
@@ -115,12 +115,12 @@ int depth() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->depth() );
@@ -139,12 +139,12 @@ int height() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->height() );
@@ -163,12 +163,12 @@ int heightMM() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->heightMM() );
@@ -187,12 +187,12 @@ int logicalDpiX() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->logicalDpiX() );
@@ -211,12 +211,12 @@ int logicalDpiY() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->logicalDpiY() );
@@ -235,12 +235,12 @@ virtual QPaintEngine * paintEngine() const = 0
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine();
@@ -260,12 +260,12 @@ bool paintingActive() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->paintingActive() );
@@ -284,12 +284,12 @@ int physicalDpiX() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->physicalDpiX() );
@@ -308,12 +308,12 @@ int physicalDpiY() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->physicalDpiY() );
@@ -332,12 +332,12 @@ int width() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->width() );
@@ -356,12 +356,12 @@ int widthMM() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->widthMM() );
@@ -380,12 +380,12 @@ virtual int devType() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEVTYPE )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->devType() );
@@ -404,12 +404,12 @@ int devicePixelRatio() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEVICEPIXELRATIO )
 {
-  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->devicePixelRatio() );
@@ -427,18 +427,18 @@ HB_FUNC_STATIC( QPAINTDEVICE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -465,16 +465,16 @@ HB_FUNC_STATIC( QPAINTDEVICE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPAINTDEVICE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QPAINTDEVICE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

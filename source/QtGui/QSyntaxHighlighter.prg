@@ -66,7 +66,7 @@ virtual ~QSyntaxHighlighter()
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
-  auto obj = (QSyntaxHighlighter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSyntaxHighlighter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -88,15 +88,15 @@ void setDocument( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 {
-  auto obj = (QSyntaxHighlighter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSyntaxHighlighter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument( PQTEXTDOCUMENT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,12 +114,12 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 {
-  auto obj = (QSyntaxHighlighter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSyntaxHighlighter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextDocument * ptr = obj->document();
@@ -139,12 +139,12 @@ void rehighlight()
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 {
-  auto obj = (QSyntaxHighlighter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSyntaxHighlighter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->rehighlight();
@@ -165,15 +165,15 @@ void rehighlightBlock( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
 {
-  auto obj = (QSyntaxHighlighter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSyntaxHighlighter * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
     {
 #endif
-      obj->rehighlightBlock( *PQTEXTBLOCK(1) );
+      obj->rehighlightBlock( *PQTEXTBLOCK( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

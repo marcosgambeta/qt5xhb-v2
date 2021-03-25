@@ -57,12 +57,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {
-  auto obj = (QAccessibleObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -81,12 +81,12 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
-  auto obj = (QAccessibleObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->object();
@@ -106,12 +106,12 @@ QRect rect() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
-  auto obj = (QAccessibleObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRect( obj->rect() );
@@ -131,15 +131,15 @@ void setText( QAccessible::Text t, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
-  auto obj = (QAccessibleObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setText( (QAccessible::Text) hb_parni(1), PQSTRING(2) );
+      obj->setText( static_cast<QAccessible::Text>( hb_parni( 1 ) ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,15 +157,15 @@ QAccessibleInterface * childAt( int x, int y ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
 {
-  auto obj = (QAccessibleObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->childAt( PINT(1), PINT(2) );
+      QAccessibleInterface * ptr = obj->childAt( PINT( 1 ), PINT( 2 ) );
       Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -87,7 +87,7 @@ QColorSpace( QColorSpace::NamedColorSpace namedColorSpace )
 void QColorSpace_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( (QColorSpace::NamedColorSpace) hb_parni(1) );
+  auto obj = new QColorSpace( static_cast<QColorSpace::NamedColorSpace>( hb_parni( 1 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -98,7 +98,7 @@ QColorSpace( QColorSpace::Primaries primaries, QColorSpace::TransferFunction fun
 void QColorSpace_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( (QColorSpace::Primaries) hb_parni(1), (QColorSpace::TransferFunction) hb_parni(2), OPFLOAT(3,0.0f) );
+  auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ), static_cast<QColorSpace::TransferFunction>( hb_parni( 2 ) ), OPFLOAT( 3, 0.0f ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -109,7 +109,7 @@ QColorSpace( QColorSpace::Primaries primaries, float gamma )
 void QColorSpace_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( (QColorSpace::Primaries) hb_parni(1), PFLOAT(2) );
+  auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ), PFLOAT( 2 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -120,7 +120,7 @@ QColorSpace( const QPointF & whitePoint, const QPointF & redPoint, const QPointF
 void QColorSpace_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (QColorSpace::TransferFunction) hb_parni(5), OPFLOAT(6,0.0f) );
+  auto obj = new QColorSpace( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ), static_cast<QColorSpace::TransferFunction>( hb_parni( 5 ) ), OPFLOAT( 6, 0.0f ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -131,34 +131,34 @@ QColorSpace( const QColorSpace & colorSpace )
 void QColorSpace_new6()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( *PQCOLORSPACE(1) );
+  auto obj = new QColorSpace( *PQCOLORSPACE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
 HB_FUNC_STATIC( QCOLORSPACE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QColorSpace_new1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QColorSpace_new2();
   }
-  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3) )
+  else if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) )
   {
     QColorSpace_new3();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QColorSpace_new4();
   }
-  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && (HB_ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN( 5, 6 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) && ISQPOINTF( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
     QColorSpace_new5();
   }
-  else if( ISNUMPAR(1) && ISQCOLORSPACE(1) )
+  else if( ISNUMPAR( 1 ) && ISQCOLORSPACE( 1 ) )
   {
     QColorSpace_new6();
   }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
 HB_FUNC_STATIC( QCOLORSPACE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -196,15 +196,15 @@ void swap( QColorSpace & colorSpace ) noexcept
 HB_FUNC_STATIC( QCOLORSPACE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLORSPACE(1) )
+    if( ISNUMPAR( 1 ) && ISQCOLORSPACE( 1 ) )
     {
 #endif
-      obj->swap( *PQCOLORSPACE(1) );
+      obj->swap( *PQCOLORSPACE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,12 +224,12 @@ QColorSpace::Primaries primaries() const noexcept
 HB_FUNC_STATIC( QCOLORSPACE_PRIMARIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->primaries() );
@@ -250,12 +250,12 @@ QColorSpace::TransferFunction transferFunction() const noexcept
 HB_FUNC_STATIC( QCOLORSPACE_TRANSFERFUNCTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->transferFunction() );
@@ -276,12 +276,12 @@ float gamma() const noexcept
 HB_FUNC_STATIC( QCOLORSPACE_GAMMA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RFLOAT( obj->gamma() );
@@ -302,15 +302,15 @@ void setTransferFunction( QColorSpace::TransferFunction transferFunction, float 
 HB_FUNC_STATIC( QCOLORSPACE_SETTRANSFERFUNCTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setTransferFunction( (QColorSpace::TransferFunction) hb_parni(1), OPFLOAT(2,0.0f) );
+      obj->setTransferFunction( static_cast<QColorSpace::TransferFunction>( hb_parni( 1 ) ), OPFLOAT( 2, 0.0f ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,15 +330,15 @@ QColorSpace withTransferFunction( QColorSpace::TransferFunction transferFunction
 HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QColorSpace( obj->withTransferFunction( (QColorSpace::TransferFunction) hb_parni(1), OPFLOAT(2,0.0f) ) );
+      auto ptr = new QColorSpace( obj->withTransferFunction( static_cast<QColorSpace::TransferFunction>( hb_parni( 1 ) ), OPFLOAT( 2, 0.0f ) ) );
       Qt5xHb::createReturnClass( ptr, "QCOLORSPACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -357,11 +357,11 @@ void setPrimaries( QColorSpace::Primaries primariesId )
 void QColorSpace_setPrimaries1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setPrimaries( (QColorSpace::Primaries) hb_parni(1) );
+    obj->setPrimaries( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -374,11 +374,11 @@ void setPrimaries( const QPointF & whitePoint, const QPointF & redPoint, const Q
 void QColorSpace_setPrimaries2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setPrimaries( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4) );
+    obj->setPrimaries( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -387,11 +387,11 @@ void QColorSpace_setPrimaries2()
 
 HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QColorSpace_setPrimaries1();
   }
-  else if( ISNUMPAR(4) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) )
+  else if( ISNUMPAR( 4 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) && ISQPOINTF( 4 ) )
   {
     QColorSpace_setPrimaries2();
   }
@@ -407,12 +407,12 @@ bool isValid() const noexcept
 HB_FUNC_STATIC( QCOLORSPACE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -434,10 +434,10 @@ HB_FUNC_STATIC( QCOLORSPACE_FROMICCPROFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
 #endif
-    auto ptr = new QColorSpace( QColorSpace::fromIccProfile( *PQBYTEARRAY(1) ) );
+    auto ptr = new QColorSpace( QColorSpace::fromIccProfile( *PQBYTEARRAY( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QCOLORSPACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -455,12 +455,12 @@ QByteArray iccProfile() const
 HB_FUNC_STATIC( QCOLORSPACE_ICCPROFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QColorSpace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QByteArray( obj->iccProfile() );
@@ -480,18 +480,18 @@ HB_FUNC_STATIC( QCOLORSPACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -518,16 +518,16 @@ HB_FUNC_STATIC( QCOLORSPACE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QCOLORSPACE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QCOLORSPACE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

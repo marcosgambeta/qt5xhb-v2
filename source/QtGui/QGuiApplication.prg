@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )
 {
-  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGuiApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -206,15 +206,15 @@ virtual bool notify( QObject * object, QEvent * event )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
-  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGuiApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQEVENT( 2 ) )
     {
 #endif
-      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->notify( PQOBJECT( 1 ), PQEVENT( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,12 +231,12 @@ static QWindowList allWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWindowList list = QGuiApplication::allWindows();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
         PHB_ITEM pObject = hb_itemNew( nullptr );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, (QWindow *) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QWindow * >( list[ i ] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -274,7 +274,7 @@ static QString applicationDisplayName()
 HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONDISPLAYNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRING( QGuiApplication::applicationDisplayName() );
@@ -293,10 +293,10 @@ static void changeOverrideCursor( const QCursor & cursor )
 HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQCURSOR(1) )
+  if( ISNUMPAR( 1 ) && ISQCURSOR( 1 ) )
   {
 #endif
-    QGuiApplication::changeOverrideCursor( *PQCURSOR(1) );
+    QGuiApplication::changeOverrideCursor( *PQCURSOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -314,7 +314,7 @@ static QClipboard * clipboard()
 HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QClipboard * ptr = QGuiApplication::clipboard();
@@ -334,7 +334,7 @@ static bool desktopSettingsAware()
 HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPSETTINGSAWARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QGuiApplication::desktopSettingsAware() );
@@ -353,7 +353,7 @@ static int exec()
 HB_FUNC_STATIC( QGUIAPPLICATION_EXEC )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QGuiApplication::exec() );
@@ -372,7 +372,7 @@ static QObject * focusObject()
 HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QObject * ptr = QGuiApplication::focusObject();
@@ -392,7 +392,7 @@ static QWindow * focusWindow()
 HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSWINDOW )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWindow * ptr = QGuiApplication::focusWindow();
@@ -412,7 +412,7 @@ static QFont font()
 HB_FUNC_STATIC( QGUIAPPLICATION_FONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QFont( QGuiApplication::font() );
@@ -432,7 +432,7 @@ static QInputMethod * inputMethod()
 HB_FUNC_STATIC( QGUIAPPLICATION_INPUTMETHOD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QInputMethod * ptr = QGuiApplication::inputMethod();
@@ -452,7 +452,7 @@ static bool isLeftToRight()
 HB_FUNC_STATIC( QGUIAPPLICATION_ISLEFTTORIGHT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QGuiApplication::isLeftToRight() );
@@ -471,7 +471,7 @@ static bool isRightToLeft()
 HB_FUNC_STATIC( QGUIAPPLICATION_ISRIGHTTOLEFT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QGuiApplication::isRightToLeft() );
@@ -490,7 +490,7 @@ static Qt::KeyboardModifiers keyboardModifiers()
 HB_FUNC_STATIC( QGUIAPPLICATION_KEYBOARDMODIFIERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QGuiApplication::keyboardModifiers() );
@@ -509,7 +509,7 @@ static Qt::LayoutDirection layoutDirection()
 HB_FUNC_STATIC( QGUIAPPLICATION_LAYOUTDIRECTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QGuiApplication::layoutDirection() );
@@ -528,7 +528,7 @@ static QWindow * modalWindow()
 HB_FUNC_STATIC( QGUIAPPLICATION_MODALWINDOW )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWindow * ptr = QGuiApplication::modalWindow();
@@ -548,7 +548,7 @@ static Qt::MouseButtons mouseButtons()
 HB_FUNC_STATIC( QGUIAPPLICATION_MOUSEBUTTONS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QGuiApplication::mouseButtons() );
@@ -567,7 +567,7 @@ static QCursor * overrideCursor()
 HB_FUNC_STATIC( QGUIAPPLICATION_OVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QCursor * ptr = QGuiApplication::overrideCursor();
@@ -587,7 +587,7 @@ static QPalette palette()
 HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     auto ptr = new QPalette( QGuiApplication::palette() );
@@ -607,7 +607,7 @@ static QString platformName()
 HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRING( QGuiApplication::platformName() );
@@ -626,7 +626,7 @@ static QScreen * primaryScreen()
 HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QScreen * ptr = QGuiApplication::primaryScreen();
@@ -646,7 +646,7 @@ static Qt::KeyboardModifiers queryKeyboardModifiers()
 HB_FUNC_STATIC( QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QGuiApplication::queryKeyboardModifiers() );
@@ -665,7 +665,7 @@ static bool quitOnLastWindowClosed()
 HB_FUNC_STATIC( QGUIAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QGuiApplication::quitOnLastWindowClosed() );
@@ -684,7 +684,7 @@ static void restoreOverrideCursor()
 HB_FUNC_STATIC( QGUIAPPLICATION_RESTOREOVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QGuiApplication::restoreOverrideCursor();
@@ -705,12 +705,12 @@ static QList<QScreen *> screens()
 HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QList<QScreen *> list = QGuiApplication::screens();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSCREEN" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
         PHB_ITEM pObject = hb_itemNew( nullptr );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, (QScreen *) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QScreen * >( list[ i ] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -748,10 +748,10 @@ static void setApplicationDisplayName( const QString & name )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    QGuiApplication::setApplicationDisplayName( PQSTRING(1) );
+    QGuiApplication::setApplicationDisplayName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -769,10 +769,10 @@ static void setDesktopSettingsAware( bool on )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
 #endif
-    QGuiApplication::setDesktopSettingsAware( PBOOL(1) );
+    QGuiApplication::setDesktopSettingsAware( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -790,10 +790,10 @@ static void setFont( const QFont & font )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQFONT(1) )
+  if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
   {
 #endif
-    QGuiApplication::setFont( *PQFONT(1) );
+    QGuiApplication::setFont( *PQFONT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -811,10 +811,10 @@ static void setLayoutDirection( Qt::LayoutDirection direction )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QGuiApplication::setLayoutDirection( (Qt::LayoutDirection) hb_parni(1) );
+    QGuiApplication::setLayoutDirection( static_cast<Qt::LayoutDirection>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -832,10 +832,10 @@ static void setOverrideCursor( const QCursor & cursor )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQCURSOR(1) )
+  if( ISNUMPAR( 1 ) && ISQCURSOR( 1 ) )
   {
 #endif
-    QGuiApplication::setOverrideCursor( *PQCURSOR(1) );
+    QGuiApplication::setOverrideCursor( *PQCURSOR( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -853,10 +853,10 @@ static void setPalette( const QPalette & pal )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQPALETTE(1) )
+  if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
   {
 #endif
-    QGuiApplication::setPalette( *PQPALETTE(1) );
+    QGuiApplication::setPalette( *PQPALETTE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -874,10 +874,10 @@ static void setQuitOnLastWindowClosed( bool quit )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
 #endif
-    QGuiApplication::setQuitOnLastWindowClosed( PBOOL(1) );
+    QGuiApplication::setQuitOnLastWindowClosed( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -895,7 +895,7 @@ static QStyleHints * styleHints()
 HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QStyleHints * ptr = QGuiApplication::styleHints();
@@ -915,10 +915,10 @@ static QWindow * topLevelAt( const QPoint & pos )
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
 #endif
-    QWindow * ptr = QGuiApplication::topLevelAt( *PQPOINT(1) );
+    QWindow * ptr = QGuiApplication::topLevelAt( *PQPOINT( 1 ) );
     Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -935,12 +935,12 @@ static QWindowList topLevelWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWindowList list = QGuiApplication::topLevelWindows();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
         PHB_ITEM pObject = hb_itemNew( nullptr );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, (QWindow *) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QWindow * >( list[ i ] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONSTATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QGuiApplication::applicationState() );
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_HIGHDPISCALEFACTORROUNDINGPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RENUM( QGuiApplication::highDpiScaleFactorRoundingPolicy() );
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ISFALLBACKSESSIONMANAGEMENTENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QGuiApplication::isFallbackSessionManagementEnabled() );
@@ -1040,12 +1040,12 @@ bool isSavingSession() const
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ISSAVINGSESSION )
 {
-  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGuiApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSavingSession() );
@@ -1066,10 +1066,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
 #endif
-    QScreen * ptr = QGuiApplication::screenAt( *PQPOINT(1) );
+    QScreen * ptr = QGuiApplication::screenAt( *PQPOINT( 1 ) );
     Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1088,10 +1088,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETFALLBACKSESSIONMANAGEMENTENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
 #endif
-    QGuiApplication::setFallbackSessionManagementEnabled( PBOOL(1) );
+    QGuiApplication::setFallbackSessionManagementEnabled( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1111,10 +1111,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
-    QGuiApplication::setHighDpiScaleFactorRoundingPolicy( (Qt::HighDpiScaleFactorRoundingPolicy) hb_parni(1) );
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy( static_cast<Qt::HighDpiScaleFactorRoundingPolicy>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SYNC )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QGuiApplication::sync();
@@ -1156,12 +1156,12 @@ QString desktopFileName()
 HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPFILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGuiApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->desktopFileName() );
@@ -1182,15 +1182,15 @@ void setDesktopFileName( const QString & name )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPFILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGuiApplication * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setDesktopFileName( PQSTRING(1) );
+      obj->setDesktopFileName( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

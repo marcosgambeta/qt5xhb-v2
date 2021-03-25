@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 {
-  auto obj = (QInputEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QInputEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -68,12 +68,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 {
-  auto obj = (QInputEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QInputEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->modifiers() );

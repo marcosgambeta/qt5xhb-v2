@@ -80,7 +80,7 @@ QTextFrameFormat()
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QTextFrameFormat();
     Qt5xHb::returnNewObject( obj, true );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_DELETE )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -113,12 +113,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -137,15 +137,15 @@ void setPosition( QTextFrameFormat::Position f )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPosition( (QTextFrameFormat::Position) hb_parni(1) );
+      obj->setPosition( static_cast<QTextFrameFormat::Position>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,12 +163,12 @@ QTextFrameFormat::Position position() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->position() );
@@ -187,15 +187,15 @@ void setBorder( qreal border )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBorder( PQREAL(1) );
+      obj->setBorder( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,12 +213,12 @@ qreal border() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->border() );
@@ -237,15 +237,15 @@ void setBorderBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBorderBrush( *PQBRUSH(1) );
+      obj->setBorderBrush( *PQBRUSH( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,12 +263,12 @@ QBrush borderBrush() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QBrush( obj->borderBrush() );
@@ -288,15 +288,15 @@ void setBorderStyle( QTextFrameFormat::BorderStyle style )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBorderStyle( (QTextFrameFormat::BorderStyle) hb_parni(1) );
+      obj->setBorderStyle( static_cast<QTextFrameFormat::BorderStyle>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,12 +314,12 @@ QTextFrameFormat::BorderStyle borderStyle() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->borderStyle() );
@@ -338,15 +338,15 @@ void setMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMargin( PQREAL(1) );
+      obj->setMargin( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,12 +364,12 @@ qreal margin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->margin() );
@@ -388,15 +388,15 @@ void setTopMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTopMargin( PQREAL(1) );
+      obj->setTopMargin( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,12 +414,12 @@ qreal topMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->topMargin() );
@@ -438,15 +438,15 @@ void setBottomMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBottomMargin( PQREAL(1) );
+      obj->setBottomMargin( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,12 +464,12 @@ qreal bottomMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->bottomMargin() );
@@ -488,15 +488,15 @@ void setLeftMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLeftMargin( PQREAL(1) );
+      obj->setLeftMargin( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,12 +514,12 @@ qreal leftMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->leftMargin() );
@@ -538,15 +538,15 @@ void setRightMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRightMargin( PQREAL(1) );
+      obj->setRightMargin( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,12 +564,12 @@ qreal rightMargin() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->rightMargin() );
@@ -588,15 +588,15 @@ void setPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPadding( PQREAL(1) );
+      obj->setPadding( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -614,12 +614,12 @@ qreal padding() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->padding() );
@@ -638,11 +638,11 @@ void setWidth( qreal width )
 */
 void QTextFrameFormat_setWidth1()
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setWidth( PQREAL(1) );
+    obj->setWidth( PQREAL( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -653,11 +653,11 @@ void setWidth( const QTextLength & length )
 */
 void QTextFrameFormat_setWidth2()
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setWidth( *PQTEXTLENGTH(1) );
+    obj->setWidth( *PQTEXTLENGTH( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -665,11 +665,11 @@ void QTextFrameFormat_setWidth2()
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QTextFrameFormat_setWidth1();
   }
-  else if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTLENGTH( 1 ) )
   {
     QTextFrameFormat_setWidth2();
   }
@@ -684,12 +684,12 @@ QTextLength width() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTextLength( obj->width() );
@@ -709,11 +709,11 @@ void setHeight( qreal height )
 */
 void QTextFrameFormat_setHeight1()
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setHeight( PQREAL(1) );
+    obj->setHeight( PQREAL( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -724,11 +724,11 @@ void setHeight( const QTextLength & height )
 */
 void QTextFrameFormat_setHeight2()
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->setHeight( *PQTEXTLENGTH(1) );
+    obj->setHeight( *PQTEXTLENGTH( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -736,11 +736,11 @@ void QTextFrameFormat_setHeight2()
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QTextFrameFormat_setHeight1();
   }
-  else if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTLENGTH( 1 ) )
   {
     QTextFrameFormat_setHeight2();
   }
@@ -755,12 +755,12 @@ QTextLength height() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTextLength( obj->height() );
@@ -780,15 +780,15 @@ void setPageBreakPolicy( QTextFrameFormat::PageBreakFlags flags )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPageBreakPolicy( (QTextFrameFormat::PageBreakFlags) hb_parni(1) );
+      obj->setPageBreakPolicy( static_cast<QTextFrameFormat::PageBreakFlags>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -806,12 +806,12 @@ QTextFrameFormat::PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
 {
-  auto obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextFrameFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->pageBreakPolicy() );

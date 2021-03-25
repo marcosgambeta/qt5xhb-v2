@@ -59,9 +59,9 @@ QOpenGLVertexArrayObject( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QOpenGLVertexArrayObject( OPQOBJECT(1,nullptr) );
+    auto obj = new QOpenGLVertexArrayObject( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DELETE )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -94,12 +94,12 @@ bool create()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->create() );
@@ -118,12 +118,12 @@ void destroy()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->destroy();
@@ -144,12 +144,12 @@ bool isCreated() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCreated() );
@@ -168,12 +168,12 @@ GLuint objectId() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RGLUINT( obj->objectId() );
@@ -192,12 +192,12 @@ void bind()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->bind();
@@ -218,12 +218,12 @@ void release()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
 {
-  auto obj = (QOpenGLVertexArrayObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->release();

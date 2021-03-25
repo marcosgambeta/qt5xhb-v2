@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
 {
-  auto obj = (QOpenGLContextGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLContextGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -74,17 +74,17 @@ QList<QOpenGLContext *> shares() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 {
-  auto obj = (QOpenGLContextGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOpenGLContextGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QOpenGLContext *> list = obj->shares();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLCONTEXT" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QOpenGLContext *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QOpenGLContext * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -123,7 +123,7 @@ static QOpenGLContextGroup * currentContextGroup()
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup();

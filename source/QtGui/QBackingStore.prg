@@ -75,9 +75,9 @@ QBackingStore( QWindow * window )
 */
 HB_FUNC_STATIC( QBACKINGSTORE_NEW )
 {
-  if( ISNUMPAR(1) && ISQWINDOW(1) )
+  if( ISNUMPAR( 1 ) && ISQWINDOW( 1 ) )
   {
-    auto obj = new QBackingStore( PQWINDOW(1) );
+    auto obj = new QBackingStore( PQWINDOW( 1 ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEW )
 
 HB_FUNC_STATIC( QBACKINGSTORE_DELETE )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -108,15 +108,15 @@ void beginPaint( const QRegion & region )
 */
 HB_FUNC_STATIC( QBACKINGSTORE_BEGINPAINT )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
     {
 #endif
-      obj->beginPaint( *PQREGION(1) );
+      obj->beginPaint( *PQREGION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,12 +134,12 @@ void endPaint()
 */
 HB_FUNC_STATIC( QBACKINGSTORE_ENDPAINT )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endPaint();
@@ -160,15 +160,15 @@ void flush( const QRegion & region, QWindow * win = nullptr, const QPoint & offs
 */
 HB_FUNC_STATIC( QBACKINGSTORE_FLUSH )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQREGION(1) && (ISQWINDOW(2)||HB_ISNIL(2)) && (ISQPOINT(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && ISQREGION( 1 ) && ( ISQWINDOW( 2 ) || HB_ISNIL( 2 ) ) && ( ISQPOINT( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->flush( *PQREGION(1), OPQWINDOW(2,nullptr), HB_ISNIL(3)? QPoint() : *(QPoint *) Qt5xHb::itemGetPtr(3) );
+      obj->flush( *PQREGION( 1 ), OPQWINDOW( 2, nullptr ), HB_ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt5xHb::itemGetPtr( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,12 +186,12 @@ bool hasStaticContents() const
 */
 HB_FUNC_STATIC( QBACKINGSTORE_HASSTATICCONTENTS )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasStaticContents() );
@@ -210,12 +210,12 @@ QPaintDevice * paintDevice()
 */
 HB_FUNC_STATIC( QBACKINGSTORE_PAINTDEVICE )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPaintDevice * ptr = obj->paintDevice();
@@ -235,15 +235,15 @@ void resize( const QSize & size )
 */
 HB_FUNC_STATIC( QBACKINGSTORE_RESIZE )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->resize( *PQSIZE(1) );
+      obj->resize( *PQSIZE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,15 +261,15 @@ bool scroll( const QRegion & area, int dx, int dy )
 */
 HB_FUNC_STATIC( QBACKINGSTORE_SCROLL )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQREGION(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQREGION( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
-      RBOOL( obj->scroll( *PQREGION(1), PINT(2), PINT(3) ) );
+      RBOOL( obj->scroll( *PQREGION( 1 ), PINT( 2 ), PINT( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,15 +285,15 @@ void setStaticContents( const QRegion & region )
 */
 HB_FUNC_STATIC( QBACKINGSTORE_SETSTATICCONTENTS )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
     {
 #endif
-      obj->setStaticContents( *PQREGION(1) );
+      obj->setStaticContents( *PQREGION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,12 +311,12 @@ QSize size() const
 */
 HB_FUNC_STATIC( QBACKINGSTORE_SIZE )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->size() );
@@ -336,12 +336,12 @@ QRegion staticContents() const
 */
 HB_FUNC_STATIC( QBACKINGSTORE_STATICCONTENTS )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRegion( obj->staticContents() );
@@ -361,12 +361,12 @@ QWindow * window() const
 */
 HB_FUNC_STATIC( QBACKINGSTORE_WINDOW )
 {
-  auto obj = (QBackingStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QBackingStore * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWindow * ptr = obj->window();
@@ -385,18 +385,18 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -423,16 +423,16 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QBACKINGSTORE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QBACKINGSTORE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

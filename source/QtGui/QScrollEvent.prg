@@ -55,9 +55,9 @@ QScrollEvent( const QPointF & contentPos, const QPointF & overshoot, QScrollEven
 */
 HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) )
+  if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) )
   {
-    auto obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
+    auto obj = new QScrollEvent( *PQPOINTF( 1 ), *PQPOINTF( 2 ), static_cast<QScrollEvent::ScrollState>( hb_parni( 3 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 
 HB_FUNC_STATIC( QSCROLLEVENT_DELETE )
 {
-  auto obj = (QScrollEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -88,12 +88,12 @@ QPointF contentPos() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
 {
-  auto obj = (QScrollEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->contentPos() );
@@ -113,12 +113,12 @@ QPointF overshootDistance() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
 {
-  auto obj = (QScrollEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->overshootDistance() );
@@ -138,12 +138,12 @@ QScrollEvent::ScrollState scrollState() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
 {
-  auto obj = (QScrollEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->scrollState() );

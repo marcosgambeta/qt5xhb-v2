@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINE_DELETE )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -90,15 +90,15 @@ virtual QSize actualSize( const QSize & size, QIcon::Mode mode, QIcon::State sta
 */
 HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQSIZE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
-      auto ptr = new QSize( obj->actualSize( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
+      auto ptr = new QSize( obj->actualSize( *PQSIZE( 1 ), static_cast<QIcon::Mode>( hb_parni( 2 ) ), static_cast<QIcon::State>( hb_parni( 3 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,15 +115,15 @@ virtual void addFile( const QString & fileName, const QSize & size, QIcon::Mode 
 */
 HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && ISQSIZE( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      obj->addFile( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
+      obj->addFile( PQSTRING( 1 ), *PQSIZE( 2 ), static_cast<QIcon::Mode>( hb_parni( 3 ) ), static_cast<QIcon::State>( hb_parni( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,15 +141,15 @@ virtual void addPixmap( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State s
 */
 HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQPIXMAP( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
-      obj->addPixmap( *PQPIXMAP(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) );
+      obj->addPixmap( *PQPIXMAP( 1 ), static_cast<QIcon::Mode>( hb_parni( 2 ) ), static_cast<QIcon::State>( hb_parni( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,17 +167,17 @@ virtual QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::St
 */
 HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      QList<QSize> list = obj->availableSizes( HB_ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), HB_ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
+      QList<QSize> list = obj->availableSizes( HB_ISNIL( 1 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 2 ) ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QSize * >( new QSize( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -219,12 +219,12 @@ virtual QIconEngine * clone() const = 0
 */
 HB_FUNC_STATIC( QICONENGINE_CLONE )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIconEngine * ptr = obj->clone();
@@ -244,12 +244,12 @@ virtual QString iconName() const
 */
 HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->iconName() );
@@ -268,12 +268,12 @@ virtual QString key() const
 */
 HB_FUNC_STATIC( QICONENGINE_KEY )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->key() );
@@ -292,15 +292,15 @@ virtual void paint( QPainter * painter, const QRect & rect, QIcon::Mode mode, QI
 */
 HB_FUNC_STATIC( QICONENGINE_PAINT )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISQPAINTER( 1 ) && ISQRECT( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
+      obj->paint( PQPAINTER( 1 ), *PQRECT( 2 ), static_cast<QIcon::Mode>( hb_parni( 3 ) ), static_cast<QIcon::State>( hb_parni( 4 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,15 +318,15 @@ virtual QPixmap pixmap( const QSize & size, QIcon::Mode mode, QIcon::State state
 */
 HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQSIZE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
-      auto ptr = new QPixmap( obj->pixmap( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
+      auto ptr = new QPixmap( obj->pixmap( *PQSIZE( 1 ), static_cast<QIcon::Mode>( hb_parni( 2 ) ), static_cast<QIcon::State>( hb_parni( 3 ) ) ) );
       Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -343,15 +343,15 @@ virtual bool read( QDataStream & in )
 */
 HB_FUNC_STATIC( QICONENGINE_READ )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if( ISNUMPAR( 1 ) && ISQDATASTREAM( 1 ) )
     {
 #endif
-      RBOOL( obj->read( *PQDATASTREAM(1) ) );
+      RBOOL( obj->read( *PQDATASTREAM( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,15 +367,15 @@ virtual void virtual_hook( int id, void * data )
 */
 HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISPOINTER( 2 ) )
     {
 #endif
-      obj->virtual_hook( PINT(1), (void *) hb_parptr(2) );
+      obj->virtual_hook( PINT( 1 ), static_cast< void * >( hb_parptr( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,15 +393,15 @@ virtual bool write( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QICONENGINE_WRITE )
 {
-  auto obj = (QIconEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QIconEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if( ISNUMPAR( 1 ) && ISQDATASTREAM( 1 ) )
     {
 #endif
-      RBOOL( obj->write( *PQDATASTREAM(1) ) );
+      RBOOL( obj->write( *PQDATASTREAM( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,18 +416,18 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -454,16 +454,16 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QICONENGINE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QICONENGINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

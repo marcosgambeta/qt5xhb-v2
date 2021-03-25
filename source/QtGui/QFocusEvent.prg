@@ -54,9 +54,9 @@ QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QFocusEvent( (QEvent::Type) hb_parni(1), HB_ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );
+    auto obj = new QFocusEvent( static_cast<QEvent::Type>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast< Qt::FocusReason >( hb_parni( 2 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 
 HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
-  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFocusEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -87,12 +87,12 @@ bool gotFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
-  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFocusEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->gotFocus() );
@@ -111,12 +111,12 @@ bool lostFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
-  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFocusEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->lostFocus() );
@@ -135,12 +135,12 @@ Qt::FocusReason reason() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
-  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFocusEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->reason() );

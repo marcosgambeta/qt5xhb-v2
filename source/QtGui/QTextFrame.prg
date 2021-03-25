@@ -65,9 +65,9 @@ QTextFrame( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
-  if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
-    auto obj = new QTextFrame( PQTEXTDOCUMENT(1) );
+    auto obj = new QTextFrame( PQTEXTDOCUMENT( 1 ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -100,15 +100,15 @@ void setFrameFormat( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTFRAMEFORMAT( 1 ) )
     {
 #endif
-      obj->setFrameFormat( *PQTEXTFRAMEFORMAT(1) );
+      obj->setFrameFormat( *PQTEXTFRAMEFORMAT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,12 +126,12 @@ QTextFrameFormat frameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTextFrameFormat( obj->frameFormat() );
@@ -151,12 +151,12 @@ QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTextCursor( obj->firstCursorPosition() );
@@ -176,12 +176,12 @@ QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QTextCursor( obj->lastCursorPosition() );
@@ -201,12 +201,12 @@ int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->firstPosition() );
@@ -225,12 +225,12 @@ int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lastPosition() );
@@ -249,17 +249,17 @@ QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QTextFrame *> list = obj->childFrames();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFRAME" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QTextFrame *) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QTextFrame * >( list[ i ] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -297,12 +297,12 @@ QTextFrame * parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {
-  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTextFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextFrame * ptr = obj->parentFrame();

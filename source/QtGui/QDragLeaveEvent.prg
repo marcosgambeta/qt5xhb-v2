@@ -51,7 +51,7 @@ QDragLeaveEvent()
 */
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QDragLeaveEvent();
     Qt5xHb::returnNewObject( obj, false );
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_DELETE )
 {
-  auto obj = (QDragLeaveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDragLeaveEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {

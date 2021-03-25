@@ -53,9 +53,9 @@ QAccessibleTextCursorEvent( QObject * obj, int cursorPos )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
-    auto obj = new QAccessibleTextCursorEvent( PQOBJECT(1), PINT(2) );
+    auto obj = new QAccessibleTextCursorEvent( PQOBJECT( 1 ), PINT( 2 ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_DELETE )
 {
-  auto obj = (QAccessibleTextCursorEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleTextCursorEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,15 +86,15 @@ void setCursorPosition( int position )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
 {
-  auto obj = (QAccessibleTextCursorEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleTextCursorEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCursorPosition( PINT(1) );
+      obj->setCursorPosition( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,12 +112,12 @@ int cursorPosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
 {
-  auto obj = (QAccessibleTextCursorEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QAccessibleTextCursorEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->cursorPosition() );

@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFileOpenEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -73,12 +73,12 @@ QString file() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFileOpenEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->file() );
@@ -97,15 +97,15 @@ bool openFile( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFileOpenEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQFILE( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->openFile( *PQFILE(1), (QIODevice::OpenMode) hb_parni(2) ) );
+      RBOOL( obj->openFile( *PQFILE( 1 ), static_cast<QIODevice::OpenMode>( hb_parni( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,12 +121,12 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QFileOpenEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->url() );

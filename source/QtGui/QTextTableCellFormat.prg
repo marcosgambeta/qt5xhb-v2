@@ -61,7 +61,7 @@ QTextTableCellFormat()
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QTextTableCellFormat();
     Qt5xHb::returnNewObject( obj, true );
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_DELETE )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -94,12 +94,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -118,15 +118,15 @@ void setTopPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTopPadding( PQREAL(1) );
+      obj->setTopPadding( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,12 +144,12 @@ qreal topPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->topPadding() );
@@ -168,15 +168,15 @@ void setBottomPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBottomPadding( PQREAL(1) );
+      obj->setBottomPadding( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,12 +194,12 @@ qreal bottomPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->bottomPadding() );
@@ -218,15 +218,15 @@ void setLeftPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLeftPadding( PQREAL(1) );
+      obj->setLeftPadding( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,12 +244,12 @@ qreal leftPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->leftPadding() );
@@ -268,15 +268,15 @@ void setRightPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setRightPadding( PQREAL(1) );
+      obj->setRightPadding( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,12 +294,12 @@ qreal rightPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->rightPadding() );
@@ -318,15 +318,15 @@ void setPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
 {
-  auto obj = (QTextTableCellFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QTextTableCellFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPadding( PQREAL(1) );
+      obj->setPadding( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

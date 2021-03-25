@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_DELETE )
 {
-  auto obj = (QAccessibleBridgePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAccessibleBridgePlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -73,15 +73,15 @@ virtual QAccessibleBridge * create( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
 {
-  auto obj = (QAccessibleBridgePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAccessibleBridgePlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QAccessibleBridge * ptr = obj->create( PQSTRING(1) );
+      QAccessibleBridge * ptr = obj->create( PQSTRING( 1 ) );
       Qt5xHb::createReturnClass( ptr, "QACCESSIBLEBRIDGE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

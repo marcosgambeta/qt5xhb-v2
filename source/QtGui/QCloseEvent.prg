@@ -51,7 +51,7 @@ QCloseEvent()
 */
 HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     auto obj = new QCloseEvent();
     Qt5xHb::returnNewObject( obj, false );
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 
 HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
 {
-  auto obj = (QCloseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QCloseEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {

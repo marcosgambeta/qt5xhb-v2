@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_DELETE )
 {
-  auto obj = (QPictureFormatPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -74,15 +74,15 @@ virtual bool loadPicture( const QString & format, const QString & filename, QPic
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
 {
-  auto obj = (QPictureFormatPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ISQPICTURE( 3 ) )
     {
 #endif
-      RBOOL( obj->loadPicture( PQSTRING(1), PQSTRING(2), PQPICTURE(3) ) );
+      RBOOL( obj->loadPicture( PQSTRING( 1 ), PQSTRING( 2 ), PQPICTURE( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -98,15 +98,15 @@ virtual bool savePicture( const QString & format, const QString & filename, cons
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
 {
-  auto obj = (QPictureFormatPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ISQPICTURE( 3 ) )
     {
 #endif
-      RBOOL( obj->savePicture( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
+      RBOOL( obj->savePicture( PQSTRING( 1 ), PQSTRING( 2 ), *PQPICTURE( 3 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,15 +122,15 @@ virtual bool installIOHandler( const QString & format ) = 0
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
 {
-  auto obj = (QPictureFormatPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->installIOHandler( PQSTRING(1) ) );
+      RBOOL( obj->installIOHandler( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
