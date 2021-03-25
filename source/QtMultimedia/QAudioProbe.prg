@@ -58,9 +58,9 @@ QAudioProbe( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QAudioProbe( OPQOBJECT(1,nullptr) );
+    auto obj = new QAudioProbe( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_DELETE )
 {
-  auto obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -96,12 +96,12 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 {
-  auto obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isActive() );
@@ -120,11 +120,11 @@ bool setSource( QMediaObject * source )
 */
 void QAudioProbe_setSource1()
 {
-  auto obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource( PQMEDIAOBJECT( 1 ) ) );
   }
 }
 
@@ -133,11 +133,11 @@ bool setSource( QMediaRecorder * source )
 */
 void QAudioProbe_setSource2()
 {
-  auto obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource( PQMEDIARECORDER( 1 ) ) );
   }
 }
 
@@ -148,11 +148,11 @@ void QAudioProbe_setSource2()
 
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 {
-  if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
+  if( ISNUMPAR( 1 ) && ISQMEDIAOBJECT( 1 ) )
   {
     QAudioProbe_setSource1();
   }
-  else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
+  else if( ISNUMPAR( 1 ) && ISQMEDIARECORDER( 1 ) )
   {
     QAudioProbe_setSource2();
   }

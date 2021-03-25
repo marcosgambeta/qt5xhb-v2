@@ -61,7 +61,7 @@ virtual ~QMediaStreamsControl()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_DELETE )
 {
-  auto obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaStreamsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -83,15 +83,15 @@ virtual bool isActive( int streamNumber ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
 {
-  auto obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaStreamsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isActive( PINT(1) ) );
+      RBOOL( obj->isActive( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,15 +107,15 @@ virtual QVariant metaData( int streamNumber, const QString & key ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
 {
-  auto obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaStreamsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->metaData( PINT(1), PQSTRING(2) ) );
+      auto ptr = new QVariant( obj->metaData( PINT( 1 ), PQSTRING( 2 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -132,15 +132,15 @@ virtual void setActive( int streamNumber, bool state ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
 {
-  auto obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaStreamsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
-      obj->setActive( PINT(1), PBOOL(2) );
+      obj->setActive( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,12 +158,12 @@ virtual int streamCount() = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
 {
-  auto obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaStreamsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->streamCount() );
@@ -182,15 +182,15 @@ virtual QMediaStreamsControl::StreamType streamType( int streamNumber ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
 {
-  auto obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaStreamsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RENUM( obj->streamType( PINT(1) ) );
+      RENUM( obj->streamType( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

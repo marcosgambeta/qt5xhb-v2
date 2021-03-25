@@ -60,7 +60,7 @@ RETURN
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_DELETE )
 {
-  auto obj = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMetaDataReaderControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -82,12 +82,12 @@ virtual bool isMetaDataAvailable() const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ISMETADATAAVAILABLE )
 {
-  auto obj = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMetaDataReaderControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isMetaDataAvailable() );
@@ -106,15 +106,15 @@ virtual QVariant metaData( const QString & key ) const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_METADATA )
 {
-  auto obj = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMetaDataReaderControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->metaData( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -131,12 +131,12 @@ virtual QStringList availableMetaData() const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
 {
-  auto obj = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMetaDataReaderControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->availableMetaData() );

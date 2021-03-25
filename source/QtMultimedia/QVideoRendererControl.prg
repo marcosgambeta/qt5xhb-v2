@@ -57,7 +57,7 @@ RETURN
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )
 {
-  auto obj = (QVideoRendererControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoRendererControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -79,15 +79,15 @@ virtual void setSurface( QAbstractVideoSurface * surface ) = 0
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
 {
-  auto obj = (QVideoRendererControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoRendererControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTVIDEOSURFACE( 1 ) )
     {
 #endif
-      obj->setSurface( PQABSTRACTVIDEOSURFACE(1) );
+      obj->setSurface( PQABSTRACTVIDEOSURFACE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,12 +105,12 @@ virtual QAbstractVideoSurface * surface() const = 0
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
 {
-  auto obj = (QVideoRendererControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoRendererControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractVideoSurface * ptr = obj->surface();

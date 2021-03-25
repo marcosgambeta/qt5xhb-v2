@@ -55,7 +55,7 @@ RETURN
 */
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_DELETE )
 {
-  auto obj = (QMediaAvailabilityControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaAvailabilityControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -77,12 +77,12 @@ virtual QMultimedia::AvailabilityStatus availability() const = 0
 */
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
 {
-  auto obj = (QMediaAvailabilityControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaAvailabilityControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->availability() );

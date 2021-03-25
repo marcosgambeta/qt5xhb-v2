@@ -62,7 +62,7 @@ virtual ~QAudioRoleControl()
 HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRoleControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,12 +86,12 @@ virtual QAudio::Role audioRole() const = 0
 HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRoleControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->audioRole() );
@@ -112,15 +112,15 @@ virtual void setAudioRole( QAudio::Role role ) = 0
 HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRoleControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAudioRole( (QAudio::Role) hb_parni(1) );
+      obj->setAudioRole( static_cast<QAudio::Role>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,23 +140,23 @@ virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRoleControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QAudio::Role> list = obj->supportedAudioRoles();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       for( auto i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease(pItem);
+        hb_itemRelease( pItem );
       }
-      hb_itemReturnRelease(pArray);
+      hb_itemReturnRelease( pArray );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

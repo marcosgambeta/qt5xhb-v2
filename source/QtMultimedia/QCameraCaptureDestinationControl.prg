@@ -57,7 +57,7 @@ RETURN
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )
 {
-  auto obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraCaptureDestinationControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -79,12 +79,12 @@ virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
 {
-  auto obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraCaptureDestinationControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->captureDestination() );
@@ -103,15 +103,15 @@ virtual bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinat
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
 {
-  auto obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraCaptureDestinationControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isCaptureDestinationSupported( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
+      RBOOL( obj->isCaptureDestinationSupported( static_cast<QCameraImageCapture::CaptureDestinations>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,15 +127,15 @@ virtual void setCaptureDestination( QCameraImageCapture::CaptureDestinations des
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
 {
-  auto obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraCaptureDestinationControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCaptureDestination( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
+      obj->setCaptureDestination( static_cast<QCameraImageCapture::CaptureDestinations>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

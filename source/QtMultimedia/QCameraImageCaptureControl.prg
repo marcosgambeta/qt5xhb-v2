@@ -65,7 +65,7 @@ RETURN
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
 {
-  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCaptureControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -87,12 +87,12 @@ virtual void cancelCapture() = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
 {
-  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCaptureControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancelCapture();
@@ -113,15 +113,15 @@ virtual int capture( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
 {
-  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCaptureControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->capture( PQSTRING(1) ) );
+      RINT( obj->capture( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,12 +137,12 @@ virtual QCameraImageCapture::DriveMode driveMode() const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
 {
-  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCaptureControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->driveMode() );
@@ -161,12 +161,12 @@ virtual bool isReadyForCapture() const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
 {
-  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCaptureControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReadyForCapture() );
@@ -185,15 +185,15 @@ virtual void setDriveMode( QCameraImageCapture::DriveMode mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
 {
-  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCaptureControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setDriveMode( (QCameraImageCapture::DriveMode) hb_parni(1) );
+      obj->setDriveMode( static_cast<QCameraImageCapture::DriveMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

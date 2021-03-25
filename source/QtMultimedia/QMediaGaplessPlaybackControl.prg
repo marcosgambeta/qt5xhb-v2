@@ -62,7 +62,7 @@ virtual ~QMediaGaplessPlaybackControl()
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )
 {
-  auto obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaGaplessPlaybackControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -84,12 +84,12 @@ virtual qreal crossfadeTime() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
 {
-  auto obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaGaplessPlaybackControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->crossfadeTime() );
@@ -108,12 +108,12 @@ virtual bool isCrossfadeSupported() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
 {
-  auto obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaGaplessPlaybackControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCrossfadeSupported() );
@@ -132,12 +132,12 @@ virtual QMediaContent nextMedia() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
 {
-  auto obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaGaplessPlaybackControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QMediaContent( obj->nextMedia() );
@@ -157,15 +157,15 @@ virtual void setCrossfadeTime( qreal crossfadeTime ) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
 {
-  auto obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaGaplessPlaybackControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCrossfadeTime( PQREAL(1) );
+      obj->setCrossfadeTime( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,15 +183,15 @@ virtual void setNextMedia( const QMediaContent & media ) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
 {
-  auto obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaGaplessPlaybackControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
+    if( ISNUMPAR( 1 ) && ISQMEDIACONTENT( 1 ) )
     {
 #endif
-      obj->setNextMedia( *PQMEDIACONTENT(1) );
+      obj->setNextMedia( *PQMEDIACONTENT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

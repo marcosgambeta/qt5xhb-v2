@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_DELETE )
 {
-  auto obj = (QMediaServiceProviderPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaServiceProviderPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -76,15 +76,15 @@ virtual QMediaService * create( const QString & key ) override = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
 {
-  auto obj = (QMediaServiceProviderPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaServiceProviderPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QMediaService * ptr = obj->create( PQSTRING(1) );
+      QMediaService * ptr = obj->create( PQSTRING( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QMEDIASERVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -101,15 +101,15 @@ virtual void release( QMediaService * service ) override = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_RELEASE )
 {
-  auto obj = (QMediaServiceProviderPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaServiceProviderPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMEDIASERVICE(1) )
+    if( ISNUMPAR( 1 ) && ISQMEDIASERVICE( 1 ) )
     {
 #endif
-      obj->release( PQMEDIASERVICE(1) );
+      obj->release( PQMEDIASERVICE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

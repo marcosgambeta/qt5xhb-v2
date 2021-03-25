@@ -62,7 +62,7 @@ virtual ~QVideoDeviceSelectorControl()
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -84,12 +84,12 @@ virtual int defaultDevice() const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->defaultDevice() );
@@ -108,12 +108,12 @@ virtual int deviceCount() const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->deviceCount() );
@@ -132,15 +132,15 @@ virtual QString deviceDescription( int index ) const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->deviceDescription( PINT(1) ) );
+      RQSTRING( obj->deviceDescription( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,15 +156,15 @@ virtual QString deviceName( int index ) const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->deviceName( PINT(1) ) );
+      RQSTRING( obj->deviceName( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,12 +180,12 @@ virtual int selectedDevice() const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->selectedDevice() );
@@ -204,15 +204,15 @@ virtual void setSelectedDevice( int index ) = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
 {
-  auto obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoDeviceSelectorControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSelectedDevice( PINT(1) );
+      obj->setSelectedDevice( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

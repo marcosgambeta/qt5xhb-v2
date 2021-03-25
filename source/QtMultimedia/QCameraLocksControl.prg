@@ -58,7 +58,7 @@ RETURN
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_DELETE )
 {
-  auto obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraLocksControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,15 +80,15 @@ virtual QCamera::LockStatus lockStatus( QCamera::LockType lock ) const = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
 {
-  auto obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraLocksControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RENUM( obj->lockStatus( (QCamera::LockType) hb_parni(1) ) );
+      RENUM( obj->lockStatus( static_cast<QCamera::LockType>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,15 +104,15 @@ virtual void searchAndLock( QCamera::LockTypes locks ) = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
 {
-  auto obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraLocksControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->searchAndLock( (QCamera::LockTypes) hb_parni(1) );
+      obj->searchAndLock( static_cast<QCamera::LockTypes>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,12 +130,12 @@ virtual QCamera::LockTypes supportedLocks() const = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
 {
-  auto obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraLocksControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->supportedLocks() );
@@ -154,15 +154,15 @@ virtual void unlock( QCamera::LockTypes locks ) = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
 {
-  auto obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraLocksControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->unlock( (QCamera::LockTypes) hb_parni(1) );
+      obj->unlock( static_cast<QCamera::LockTypes>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

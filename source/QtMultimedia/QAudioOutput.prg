@@ -78,7 +78,7 @@ QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = n
 */
 void QAudioOutput_new1()
 {
-  auto obj = new QAudioOutput( HB_ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QAudioOutput( HB_ISNIL( 1 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt5xHb::itemGetPtr( 1 ) ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -87,17 +87,17 @@ QAudioOutput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & for
 */
 void QAudioOutput_new2()
 {
-  auto obj = new QAudioOutput( *PQAUDIODEVICEINFO(1), HB_ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QAudioOutput( *PQAUDIODEVICEINFO( 1 ), HB_ISNIL( 2 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt5xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQAUDIOFORMAT( 1 ) || HB_ISNIL( 1 ) ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QAudioOutput_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQAUDIODEVICEINFO( 1 ) && ( ISQAUDIOFORMAT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QAudioOutput_new2();
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -134,12 +134,12 @@ int bufferSize() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->bufferSize() );
@@ -158,12 +158,12 @@ int bytesFree() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->bytesFree() );
@@ -182,12 +182,12 @@ QString category() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_CATEGORY )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->category() );
@@ -206,12 +206,12 @@ qint64 elapsedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->elapsedUSecs() );
@@ -230,12 +230,12 @@ QAudio::Error error() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -254,12 +254,12 @@ QAudioFormat format() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QAudioFormat( obj->format() );
@@ -279,12 +279,12 @@ int notifyInterval() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->notifyInterval() );
@@ -303,12 +303,12 @@ int periodSize() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->periodSize() );
@@ -327,12 +327,12 @@ qint64 processedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->processedUSecs() );
@@ -351,12 +351,12 @@ void reset()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reset();
@@ -377,12 +377,12 @@ void resume()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resume();
@@ -403,15 +403,15 @@ void setBufferSize( int bytes )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBufferSize( PINT(1) );
+      obj->setBufferSize( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,15 +429,15 @@ void setCategory( const QString & category )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setCategory( PQSTRING(1) );
+      obj->setCategory( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,15 +455,15 @@ void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setNotifyInterval( PINT(1) );
+      obj->setNotifyInterval( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,15 +481,15 @@ void setVolume( qreal volume )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setVolume( PQREAL(1) );
+      obj->setVolume( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,11 +507,11 @@ void start( QIODevice * device )
 */
 void QAudioOutput_start1()
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->start( PQIODEVICE(1) );
+    obj->start( PQIODEVICE( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -522,7 +522,7 @@ QIODevice * start()
 */
 void QAudioOutput_start2()
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -533,11 +533,11 @@ void QAudioOutput_start2()
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
     QAudioOutput_start1();
   }
-  else if( ISNUMPAR(0) )
+  else if( ISNUMPAR( 0 ) )
   {
     QAudioOutput_start2();
   }
@@ -552,12 +552,12 @@ QAudio::State state() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -576,12 +576,12 @@ void stop()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -602,12 +602,12 @@ void suspend()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->suspend();
@@ -628,12 +628,12 @@ qreal volume() const
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
 {
-  auto obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->volume() );

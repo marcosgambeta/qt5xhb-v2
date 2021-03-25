@@ -69,7 +69,7 @@ RETURN
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_DELETE )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,12 +91,12 @@ virtual QString stationId() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->stationId() );
@@ -115,12 +115,12 @@ virtual QRadioData::ProgramType programType() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->programType() );
@@ -139,12 +139,12 @@ virtual QString programTypeName() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->programTypeName() );
@@ -163,12 +163,12 @@ virtual QString stationName() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->stationName() );
@@ -187,12 +187,12 @@ virtual QString radioText() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->radioText() );
@@ -211,15 +211,15 @@ virtual void setAlternativeFrequenciesEnabled( bool enabled ) = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAlternativeFrequenciesEnabled( PBOOL(1) );
+      obj->setAlternativeFrequenciesEnabled( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,12 +237,12 @@ virtual bool isAlternativeFrequenciesEnabled() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAlternativeFrequenciesEnabled() );
@@ -261,12 +261,12 @@ virtual QRadioData::Error error() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -285,12 +285,12 @@ virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
 {
-  auto obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioDataControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );

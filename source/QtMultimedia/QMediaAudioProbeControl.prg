@@ -57,7 +57,7 @@ virtual ~QMediaAudioProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
 {
-  auto obj = (QMediaAudioProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaAudioProbeControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

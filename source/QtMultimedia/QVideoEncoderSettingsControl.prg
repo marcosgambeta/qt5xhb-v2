@@ -60,7 +60,7 @@ virtual ~QVideoEncoderSettingsControl()
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_DELETE )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -82,15 +82,15 @@ virtual void setVideoSettings( const QVideoEncoderSettings & settings ) = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1) )
+    if( ISNUMPAR( 1 ) && ISQVIDEOENCODERSETTINGS( 1 ) )
     {
 #endif
-      obj->setVideoSettings( *PQVIDEOENCODERSETTINGS(1) );
+      obj->setVideoSettings( *PQVIDEOENCODERSETTINGS( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,17 +108,17 @@ virtual QList<qreal> supportedFrameRates( const QVideoEncoderSettings & settings
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQVIDEOENCODERSETTINGS( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
-      QList<qreal> list = obj->supportedFrameRates( *PQVIDEOENCODERSETTINGS(1), &par2 );
-      Qt5xHb::convert_qlist_qreal_to_array ( list );
+      QList<qreal> list = obj->supportedFrameRates( *PQVIDEOENCODERSETTINGS( 1 ), &par2 );
+      Qt5xHb::convert_qlist_qreal_to_array( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -135,18 +135,18 @@ virtual QList<QSize> supportedResolutions( const QVideoEncoderSettings & setting
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQVIDEOENCODERSETTINGS( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions( *PQVIDEOENCODERSETTINGS(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( *PQVIDEOENCODERSETTINGS( 1 ), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QSize * >( new QSize( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -189,12 +189,12 @@ virtual QStringList supportedVideoCodecs() const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->supportedVideoCodecs() );
@@ -213,15 +213,15 @@ virtual QString videoCodecDescription( const QString & codecName ) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->videoCodecDescription( PQSTRING(1) ) );
+      RQSTRING( obj->videoCodecDescription( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,12 +237,12 @@ virtual QVideoEncoderSettings videoSettings() const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS )
 {
-  auto obj = (QVideoEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QVideoEncoderSettingsControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QVideoEncoderSettings( obj->videoSettings() );

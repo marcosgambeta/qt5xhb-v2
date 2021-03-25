@@ -85,9 +85,9 @@ QCameraImageCapture( QMediaObject * mediaObject, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQMEDIAOBJECT( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QCameraImageCapture( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QCameraImageCapture( PQMEDIAOBJECT( 1 ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_DELETE )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -123,12 +123,12 @@ bool isReadyForCapture() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReadyForCapture() );
@@ -147,12 +147,12 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_AVAILABILITY )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->availability() );
@@ -171,12 +171,12 @@ QVideoFrame::PixelFormat bufferFormat() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->bufferFormat() );
@@ -195,12 +195,12 @@ QCameraImageCapture::CaptureDestinations captureDestination() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->captureDestination() );
@@ -219,12 +219,12 @@ QImageEncoderSettings encodingSettings() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QImageEncoderSettings( obj->encodingSettings() );
@@ -244,12 +244,12 @@ QCameraImageCapture::Error error() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -268,12 +268,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -292,15 +292,15 @@ QString imageCodecDescription( const QString & codecName ) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->imageCodecDescription( PQSTRING(1) ) );
+      RQSTRING( obj->imageCodecDescription( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,12 +316,12 @@ bool isAvailable() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISAVAILABLE )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAvailable() );
@@ -340,15 +340,15 @@ bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinations des
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isCaptureDestinationSupported( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
+      RBOOL( obj->isCaptureDestinationSupported( static_cast<QCameraImageCapture::CaptureDestinations>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,12 +364,12 @@ QMediaObject * mediaObject() const override
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
@@ -389,15 +389,15 @@ void setBufferFormat( const QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBufferFormat( (const QVideoFrame::PixelFormat) hb_parni(1) );
+      obj->setBufferFormat( static_cast<const QVideoFrame::PixelFormat>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,15 +415,15 @@ void setCaptureDestination( QCameraImageCapture::CaptureDestinations destination
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCaptureDestination( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
+      obj->setCaptureDestination( static_cast<QCameraImageCapture::CaptureDestinations>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,15 +441,15 @@ void setEncodingSettings( const QImageEncoderSettings & settings )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
+    if( ISNUMPAR( 1 ) && ISQIMAGEENCODERSETTINGS( 1 ) )
     {
 #endif
-      obj->setEncodingSettings( *PQIMAGEENCODERSETTINGS(1) );
+      obj->setEncodingSettings( *PQIMAGEENCODERSETTINGS( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,23 +467,23 @@ QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       for( auto i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease(pItem);
+        hb_itemRelease( pItem );
       }
-      hb_itemReturnRelease(pArray);
+      hb_itemReturnRelease( pArray );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,12 +499,12 @@ QStringList supportedImageCodecs() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->supportedImageCodecs() );
@@ -523,18 +523,18 @@ QList<QSize> supportedResolutions( const QImageEncoderSettings & settings = QIma
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQIMAGEENCODERSETTINGS(1)||HB_ISNIL(1)) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 0, 2 ) && ( ISQIMAGEENCODERSETTINGS( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( HB_ISNIL( 1 ) ? QImageEncoderSettings() : *static_cast< QImageEncoderSettings * >( Qt5xHb::itemGetPtr( 1 ) ), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QSize * >( new QSize( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -577,12 +577,12 @@ void cancelCapture()
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CANCELCAPTURE )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancelCapture();
@@ -603,15 +603,15 @@ int capture( const QString & location = QString() )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
 {
-  auto obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraImageCapture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->capture( OPQSTRING(1,QString()) ) );
+      RINT( obj->capture( OPQSTRING( 1, QString() ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

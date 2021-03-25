@@ -52,7 +52,7 @@ RETURN
 */
 HB_FUNC_STATIC( QMEDIACONTROL_DELETE )
 {
-  auto obj = (QMediaControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

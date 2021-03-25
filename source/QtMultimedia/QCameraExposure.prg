@@ -92,12 +92,12 @@ qreal aperture() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_APERTURE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->aperture() );
@@ -116,12 +116,12 @@ qreal shutterSpeed() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SHUTTERSPEED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->shutterSpeed() );
@@ -140,12 +140,12 @@ int isoSensitivity() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISOSENSITIVITY )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->isoSensitivity() );
@@ -164,12 +164,12 @@ qreal exposureCompensation() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSURECOMPENSATION )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->exposureCompensation() );
@@ -188,15 +188,15 @@ void setExposureCompensation( qreal ev )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setExposureCompensation( PQREAL(1) );
+      obj->setExposureCompensation( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,12 +214,12 @@ bool isFlashReady() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHREADY )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFlashReady() );
@@ -238,12 +238,12 @@ QCameraExposure::FlashModes flashMode() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->flashMode() );
@@ -262,15 +262,15 @@ void setFlashMode( QCameraExposure::FlashModes mode )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setFlashMode( (QCameraExposure::FlashModes) hb_parni(1) );
+      obj->setFlashMode( static_cast<QCameraExposure::FlashModes>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,12 +288,12 @@ QCameraExposure::ExposureMode exposureMode() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->exposureMode() );
@@ -312,15 +312,15 @@ void setExposureMode( QCameraExposure::ExposureMode mode )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setExposureMode( (QCameraExposure::ExposureMode) hb_parni(1) );
+      obj->setExposureMode( static_cast<QCameraExposure::ExposureMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,12 +338,12 @@ QCameraExposure::MeteringMode meteringMode() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->meteringMode() );
@@ -362,15 +362,15 @@ void setMeteringMode( QCameraExposure::MeteringMode mode )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMeteringMode( (QCameraExposure::MeteringMode) hb_parni(1) );
+      obj->setMeteringMode( static_cast<QCameraExposure::MeteringMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,12 +388,12 @@ bool isAvailable() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISAVAILABLE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAvailable() );
@@ -412,15 +412,15 @@ bool isExposureModeSupported( QCameraExposure::ExposureMode mode ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isExposureModeSupported( (QCameraExposure::ExposureMode) hb_parni(1) ) );
+      RBOOL( obj->isExposureModeSupported( static_cast<QCameraExposure::ExposureMode>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,15 +436,15 @@ bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isFlashModeSupported( (QCameraExposure::FlashModes) hb_parni(1) ) );
+      RBOOL( obj->isFlashModeSupported( static_cast<QCameraExposure::FlashModes>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,15 +460,15 @@ bool isMeteringModeSupported( QCameraExposure::MeteringMode mode ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isMeteringModeSupported( (QCameraExposure::MeteringMode) hb_parni(1) ) );
+      RBOOL( obj->isMeteringModeSupported( static_cast<QCameraExposure::MeteringMode>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,12 +484,12 @@ qreal requestedAperture() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDAPERTURE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->requestedAperture() );
@@ -508,12 +508,12 @@ int requestedIsoSensitivity() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->requestedIsoSensitivity() );
@@ -532,12 +532,12 @@ qreal requestedShutterSpeed() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->requestedShutterSpeed() );
@@ -556,15 +556,15 @@ void setSpotMeteringPoint( const QPointF & point )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setSpotMeteringPoint( *PQPOINTF(1) );
+      obj->setSpotMeteringPoint( *PQPOINTF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,12 +582,12 @@ QPointF spotMeteringPoint() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->spotMeteringPoint() );
@@ -607,17 +607,17 @@ QList<qreal> supportedApertures( bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       bool par1;
       QList<qreal> list = obj->supportedApertures( &par1 );
-      Qt5xHb::convert_qlist_qreal_to_array ( list );
+      Qt5xHb::convert_qlist_qreal_to_array( list );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -634,17 +634,17 @@ QList<int> supportedIsoSensitivities( bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       bool par1;
       QList<int> list = obj->supportedIsoSensitivities( &par1 );
-      Qt5xHb::convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array( list );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -661,17 +661,17 @@ QList<qreal> supportedShutterSpeeds( bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       bool par1;
       QList<qreal> list = obj->supportedShutterSpeeds( &par1 );
-      Qt5xHb::convert_qlist_qreal_to_array ( list );
+      Qt5xHb::convert_qlist_qreal_to_array( list );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -688,12 +688,12 @@ void setAutoAperture()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOAPERTURE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setAutoAperture();
@@ -714,12 +714,12 @@ void setAutoIsoSensitivity()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setAutoIsoSensitivity();
@@ -740,12 +740,12 @@ void setAutoShutterSpeed()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->setAutoShutterSpeed();
@@ -766,15 +766,15 @@ void setManualAperture( qreal aperture )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setManualAperture( PQREAL(1) );
+      obj->setManualAperture( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -792,15 +792,15 @@ void setManualIsoSensitivity( int iso )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setManualIsoSensitivity( PINT(1) );
+      obj->setManualIsoSensitivity( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,15 +818,15 @@ void setManualShutterSpeed( qreal seconds )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
 {
-  auto obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraExposure * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setManualShutterSpeed( PQREAL(1) );
+      obj->setManualShutterSpeed( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

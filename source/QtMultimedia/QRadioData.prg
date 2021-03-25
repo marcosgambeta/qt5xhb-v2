@@ -73,9 +73,9 @@ QRadioData( QMediaObject * mediaObject, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QRADIODATA_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQMEDIAOBJECT( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QRadioData( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QRadioData( PQMEDIAOBJECT( 1 ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QRADIODATA_NEW )
 */
 HB_FUNC_STATIC( QRADIODATA_DELETE )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -111,12 +111,12 @@ QString stationId() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONID )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->stationId() );
@@ -135,12 +135,12 @@ QRadioData::ProgramType programType() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->programType() );
@@ -159,12 +159,12 @@ QString programTypeName() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPENAME )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->programTypeName() );
@@ -183,12 +183,12 @@ QString stationName() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONNAME )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->stationName() );
@@ -207,12 +207,12 @@ QString radioText() const
 */
 HB_FUNC_STATIC( QRADIODATA_RADIOTEXT )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->radioText() );
@@ -231,12 +231,12 @@ bool isAlternativeFrequenciesEnabled() const
 */
 HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAlternativeFrequenciesEnabled() );
@@ -255,15 +255,15 @@ void setAlternativeFrequenciesEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setAlternativeFrequenciesEnabled( PBOOL(1) );
+      obj->setAlternativeFrequenciesEnabled( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,12 +281,12 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->availability() );
@@ -305,12 +305,12 @@ QMediaObject * mediaObject() const override
 */
 HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
@@ -330,12 +330,12 @@ QRadioData::Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -354,12 +354,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 {
-  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioData * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );

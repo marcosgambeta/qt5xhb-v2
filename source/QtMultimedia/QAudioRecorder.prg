@@ -61,9 +61,9 @@ QAudioRecorder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QAudioRecorder( OPQOBJECT(1,nullptr) );
+    auto obj = new QAudioRecorder( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_DELETE )
 {
-  auto obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRecorder * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -99,12 +99,12 @@ QString audioInput() const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
 {
-  auto obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRecorder * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->audioInput() );
@@ -123,15 +123,15 @@ void setAudioInput( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
 {
-  auto obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRecorder * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setAudioInput( PQSTRING(1) );
+      obj->setAudioInput( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,15 +149,15 @@ QString audioInputDescription( const QString & name ) const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
 {
-  auto obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRecorder * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->audioInputDescription( PQSTRING(1) ) );
+      RQSTRING( obj->audioInputDescription( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,12 +173,12 @@ QStringList audioInputs() const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
 {
-  auto obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRecorder * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->audioInputs() );
@@ -197,12 +197,12 @@ QString defaultAudioInput() const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
 {
-  auto obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAudioRecorder * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->defaultAudioInput() );

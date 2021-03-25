@@ -74,7 +74,7 @@ RETURN
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -96,12 +96,12 @@ int notifyInterval() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->notifyInterval() );
@@ -120,15 +120,15 @@ void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setNotifyInterval( PINT(1) );
+      obj->setNotifyInterval( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,12 +146,12 @@ virtual QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABILITY )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->availability() );
@@ -170,12 +170,12 @@ QStringList availableMetaData() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->availableMetaData() );
@@ -194,15 +194,15 @@ virtual bool bind( QObject * object )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      RBOOL( obj->bind( PQOBJECT(1) ) );
+      RBOOL( obj->bind( PQOBJECT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,12 +218,12 @@ virtual bool isAvailable() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAvailable() );
@@ -242,12 +242,12 @@ bool isMetaDataAvailable() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isMetaDataAvailable() );
@@ -266,15 +266,15 @@ QVariant metaData( const QString & key ) const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->metaData( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -291,12 +291,12 @@ virtual QMediaService * service() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMediaService * ptr = obj->service();
@@ -316,15 +316,15 @@ virtual void unbind( QObject * object )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 {
-  auto obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->unbind( PQOBJECT(1) );
+      obj->unbind( PQOBJECT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

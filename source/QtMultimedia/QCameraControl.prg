@@ -64,7 +64,7 @@ RETURN
 */
 HB_FUNC_STATIC( QCAMERACONTROL_DELETE )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,15 +86,15 @@ virtual bool canChangeProperty( QCameraControl::PropertyChangeType changeType, Q
 */
 HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->canChangeProperty( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
+      RBOOL( obj->canChangeProperty( static_cast<QCameraControl::PropertyChangeType>( hb_parni( 1 ) ), static_cast<QCamera::Status>( hb_parni( 2 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,12 +110,12 @@ virtual QCamera::CaptureModes captureMode() const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->captureMode() );
@@ -134,15 +134,15 @@ virtual bool isCaptureModeSupported( QCamera::CaptureModes mode ) const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isCaptureModeSupported( (QCamera::CaptureModes) hb_parni(1) ) );
+      RBOOL( obj->isCaptureModeSupported( static_cast<QCamera::CaptureModes>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,15 +158,15 @@ virtual void setCaptureMode( QCamera::CaptureModes mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCaptureMode( (QCamera::CaptureModes) hb_parni(1) );
+      obj->setCaptureMode( static_cast<QCamera::CaptureModes>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,15 +184,15 @@ virtual void setState( QCamera::State state ) = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setState( (QCamera::State) hb_parni(1) );
+      obj->setState( static_cast<QCamera::State>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,12 +210,12 @@ virtual QCamera::State state() const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_STATE )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -234,12 +234,12 @@ virtual QCamera::Status status() const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
 {
-  auto obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCameraControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->status() );

@@ -57,7 +57,7 @@ virtual ~QMediaVideoProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
 {
-  auto obj = (QMediaVideoProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMediaVideoProbeControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {

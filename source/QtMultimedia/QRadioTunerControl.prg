@@ -89,7 +89,7 @@ RETURN
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_DELETE )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -111,12 +111,12 @@ virtual QRadioTuner::State state() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_STATE )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -135,12 +135,12 @@ virtual QRadioTuner::Band band() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_BAND )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->band() );
@@ -159,15 +159,15 @@ virtual void setBand( QRadioTuner::Band b ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setBand( (QRadioTuner::Band) hb_parni(1) );
+      obj->setBand( static_cast<QRadioTuner::Band>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,15 +185,15 @@ virtual bool isBandSupported( QRadioTuner::Band b ) const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isBandSupported( (QRadioTuner::Band) hb_parni(1) ) );
+      RBOOL( obj->isBandSupported( static_cast<QRadioTuner::Band>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,12 +209,12 @@ virtual int frequency() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->frequency() );
@@ -233,15 +233,15 @@ virtual int frequencyStep( QRadioTuner::Band b ) const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->frequencyStep( (QRadioTuner::Band) hb_parni(1) ) );
+      RINT( obj->frequencyStep( static_cast<QRadioTuner::Band>( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,15 +257,15 @@ virtual void setFrequency( int frequency ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETFREQUENCY )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setFrequency( PINT(1) );
+      obj->setFrequency( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,12 +283,12 @@ virtual bool isStereo() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSTEREO )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isStereo() );
@@ -307,12 +307,12 @@ virtual QRadioTuner::StereoMode stereoMode() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_STEREOMODE )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->stereoMode() );
@@ -331,15 +331,15 @@ virtual void setStereoMode( QRadioTuner::StereoMode mode ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETSTEREOMODE )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setStereoMode( (QRadioTuner::StereoMode) hb_parni(1) );
+      obj->setStereoMode( static_cast<QRadioTuner::StereoMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,12 +357,12 @@ virtual int signalStrength() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SIGNALSTRENGTH )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->signalStrength() );
@@ -381,12 +381,12 @@ virtual int volume() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->volume() );
@@ -405,15 +405,15 @@ virtual void setVolume( int volume ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETVOLUME )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setVolume( PINT(1) );
+      obj->setVolume( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,12 +431,12 @@ virtual bool isMuted() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isMuted() );
@@ -455,15 +455,15 @@ virtual void setMuted( bool muted ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETMUTED )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setMuted( PBOOL(1) );
+      obj->setMuted( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,12 +481,12 @@ virtual bool isSearching() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSEARCHING )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSearching() );
@@ -505,12 +505,12 @@ virtual bool isAntennaConnected() const
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISANTENNACONNECTED )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAntennaConnected() );
@@ -529,12 +529,12 @@ virtual void searchForward() = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHFORWARD )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->searchForward();
@@ -555,12 +555,12 @@ virtual void searchBackward() = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHBACKWARD )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->searchBackward();
@@ -581,15 +581,15 @@ virtual void searchAllStations( QRadioTuner::SearchMode searchMode = QRadioTuner
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->searchAllStations( HB_ISNIL(1)? (QRadioTuner::SearchMode) QRadioTuner::SearchFast : (QRadioTuner::SearchMode) hb_parni(1) );
+      obj->searchAllStations( HB_ISNIL( 1 ) ? static_cast< QRadioTuner::SearchMode >( QRadioTuner::SearchFast ) : static_cast< QRadioTuner::SearchMode >( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,12 +607,12 @@ virtual void cancelSearch() = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_CANCELSEARCH )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancelSearch();
@@ -633,12 +633,12 @@ virtual void start() = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_START )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->start();
@@ -659,12 +659,12 @@ virtual void stop() = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_STOP )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -685,12 +685,12 @@ virtual QRadioTuner::Error error() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERROR )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -709,12 +709,12 @@ virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
 {
-  auto obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRadioTunerControl * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
