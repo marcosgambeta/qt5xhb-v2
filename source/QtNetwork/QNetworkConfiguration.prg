@@ -83,17 +83,17 @@ QNetworkConfiguration( const QNetworkConfiguration & other )
 */
 void QNetworkConfiguration_new2()
 {
-  auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
+  auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QNetworkConfiguration_new1();
   }
-  else if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
+  else if( ISNUMPAR( 1 ) && ISQNETWORKCONFIGURATION( 1 ) )
   {
     QNetworkConfiguration_new2();
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -128,12 +128,12 @@ QNetworkConfiguration::BearerType bearerType() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->bearerType() );
@@ -153,12 +153,12 @@ QNetworkConfiguration::BearerType bearerTypeFamily() const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->bearerTypeFamily() );
@@ -178,12 +178,12 @@ QString bearerTypeName() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->bearerTypeName() );
@@ -202,17 +202,17 @@ QList<QNetworkConfiguration> children() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QNetworkConfiguration> list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QNetworkConfiguration * >( new QNetworkConfiguration( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -254,12 +254,12 @@ QString identifier() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->identifier() );
@@ -278,12 +278,12 @@ bool isRoamingAvailable() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isRoamingAvailable() );
@@ -302,12 +302,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -326,12 +326,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -350,12 +350,12 @@ QNetworkConfiguration::Purpose purpose() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->purpose() );
@@ -374,12 +374,12 @@ QNetworkConfiguration::StateFlags state() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -398,12 +398,12 @@ QNetworkConfiguration::Type type() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -422,15 +422,15 @@ void swap( QNetworkConfiguration & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
 {
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
+    if( ISNUMPAR( 1 ) && ISQNETWORKCONFIGURATION( 1 ) )
     {
 #endif
-      obj->swap( *PQNETWORKCONFIGURATION(1) );
+      obj->swap( *PQNETWORKCONFIGURATION( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,12 +449,12 @@ int connectTimeout() const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CONNECTTIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->connectTimeout() );
@@ -475,15 +475,15 @@ bool setConnectTimeout( int timeout )
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETCONNECTTIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QNetworkConfiguration *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QNetworkConfiguration * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->setConnectTimeout( PINT(1) ) );
+      RBOOL( obj->setConnectTimeout( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,18 +499,18 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -537,16 +537,16 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

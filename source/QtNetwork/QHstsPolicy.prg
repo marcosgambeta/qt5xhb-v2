@@ -87,7 +87,7 @@ QHstsPolicy( const QDateTime & expiry, QHstsPolicy::PolicyFlags flags, const QSt
 void QHstsPolicy_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = new QHstsPolicy( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), HB_ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
+  auto obj = new QHstsPolicy( *PQDATETIME( 1 ), static_cast<QHstsPolicy::PolicyFlags>( hb_parni( 2 ) ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? static_cast< QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast< QUrl::ParsingMode >( hb_parni( 4 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -98,22 +98,22 @@ QHstsPolicy( const QHstsPolicy & rhs )
 void QHstsPolicy_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = new QHstsPolicy( *PQHSTSPOLICY(1) );
+  auto obj = new QHstsPolicy( *PQHSTSPOLICY( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
 HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QHstsPolicy_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN( 3, 4 ) && ISQDATETIME( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QHstsPolicy_new2();
   }
-  else if( ISNUMPAR(1) && ISQHSTSPOLICY(1) )
+  else if( ISNUMPAR( 1 ) && ISQHSTSPOLICY( 1 ) )
   {
     QHstsPolicy_new3();
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 HB_FUNC_STATIC( QHSTSPOLICY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -151,15 +151,15 @@ void swap( QHstsPolicy & other ) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QHSTSPOLICY_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHSTSPOLICY(1) )
+    if( ISNUMPAR( 1 ) && ISQHSTSPOLICY( 1 ) )
     {
 #endif
-      obj->swap( *PQHSTSPOLICY(1) );
+      obj->swap( *PQHSTSPOLICY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,15 +179,15 @@ void setHost( const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
 HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setHost( PQSTRING(1), HB_ISNIL(2)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(2) );
+      obj->setHost( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast< QUrl::ParsingMode >( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,15 +207,15 @@ QString host( QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded ) co
 HB_FUNC_STATIC( QHSTSPOLICY_HOST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->host( HB_ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::FullyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
+      RQSTRING( obj->host( HB_ISNIL( 1 ) ? static_cast< QUrl::ComponentFormattingOptions >( QUrl::FullyDecoded ) : static_cast< QUrl::ComponentFormattingOptions >( hb_parni( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,15 +233,15 @@ void setExpiry( const QDateTime & expiry )
 HB_FUNC_STATIC( QHSTSPOLICY_SETEXPIRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      obj->setExpiry( *PQDATETIME(1) );
+      obj->setExpiry( *PQDATETIME( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,12 +261,12 @@ QDateTime expiry() const
 HB_FUNC_STATIC( QHSTSPOLICY_EXPIRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QDateTime( obj->expiry() );
@@ -288,15 +288,15 @@ void setIncludesSubDomains( bool include )
 HB_FUNC_STATIC( QHSTSPOLICY_SETINCLUDESSUBDOMAINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setIncludesSubDomains( PBOOL(1) );
+      obj->setIncludesSubDomains( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,12 +316,12 @@ bool includesSubDomains() const
 HB_FUNC_STATIC( QHSTSPOLICY_INCLUDESSUBDOMAINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->includesSubDomains() );
@@ -342,12 +342,12 @@ bool isExpired() const
 HB_FUNC_STATIC( QHSTSPOLICY_ISEXPIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QHstsPolicy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHstsPolicy * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isExpired() );
@@ -366,18 +366,18 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -404,16 +404,16 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QHSTSPOLICY_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QHSTSPOLICY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

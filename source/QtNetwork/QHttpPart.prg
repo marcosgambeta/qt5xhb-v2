@@ -74,17 +74,17 @@ QHttpPart( const QHttpPart & other )
 */
 void QHttpPart_new2()
 {
-  auto obj = new QHttpPart( *PQHTTPPART(1) );
+  auto obj = new QHttpPart( *PQHTTPPART( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QHttpPart_new1();
   }
-  else if( ISNUMPAR(1) && ISQHTTPPART(1) )
+  else if( ISNUMPAR( 1 ) && ISQHTTPPART( 1 ) )
   {
     QHttpPart_new2();
   }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 */
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
-  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHttpPart * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -119,15 +119,15 @@ void setBody( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHttpPart * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setBody( *PQBYTEARRAY(1) );
+      obj->setBody( *PQBYTEARRAY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,15 +145,15 @@ void setBodyDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHttpPart * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
     {
 #endif
-      obj->setBodyDevice( PQIODEVICE(1) );
+      obj->setBodyDevice( PQIODEVICE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,15 +171,15 @@ void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHttpPart * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->setHeader( (QNetworkRequest::KnownHeaders) hb_parni(1), *PQVARIANT(2) );
+      obj->setHeader( static_cast<QNetworkRequest::KnownHeaders>( hb_parni( 1 ) ), *PQVARIANT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,15 +197,15 @@ void setRawHeader( const QByteArray & headerName, const QByteArray & headerValue
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHttpPart * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQBYTEARRAY( 2 ) )
     {
 #endif
-      obj->setRawHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+      obj->setRawHeader( *PQBYTEARRAY( 1 ), *PQBYTEARRAY( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,15 +223,15 @@ void swap( QHttpPart & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHTTPPART_SWAP )
 {
-  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHttpPart * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHTTPPART(1) )
+    if( ISNUMPAR( 1 ) && ISQHTTPPART( 1 ) )
     {
 #endif
-      obj->swap( *PQHTTPPART(1) );
+      obj->swap( *PQHTTPPART( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,18 +248,18 @@ HB_FUNC_STATIC( QHTTPPART_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -286,16 +286,16 @@ HB_FUNC_STATIC( QHTTPPART_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QHTTPPART_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QHTTPPART_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

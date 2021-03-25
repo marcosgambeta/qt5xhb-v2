@@ -74,9 +74,9 @@ QLocalServer( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QLocalServer( OPQOBJECT(1,nullptr) );
+    auto obj = new QLocalServer( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
 */
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -112,12 +112,12 @@ QLocalServer::SocketOptions socketOptions() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SOCKETOPTIONS )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->socketOptions() );
@@ -136,15 +136,15 @@ void setSocketOptions( QLocalServer::SocketOptions options )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETSOCKETOPTIONS )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSocketOptions( (QLocalServer::SocketOptions) hb_parni(1) );
+      obj->setSocketOptions( static_cast<QLocalServer::SocketOptions>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,12 +162,12 @@ void close()
 */
 HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -188,12 +188,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -212,12 +212,12 @@ virtual bool hasPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasPendingConnections() );
@@ -236,12 +236,12 @@ bool isListening() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isListening() );
@@ -260,11 +260,11 @@ bool listen( const QString & name )
 */
 void QLocalServer_listen1()
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->listen( PQSTRING(1) ) );
+    RBOOL( obj->listen( PQSTRING( 1 ) ) );
   }
 }
 
@@ -273,11 +273,11 @@ bool listen( qintptr socketDescriptor )
 */
 void QLocalServer_listen2()
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->listen( PQINTPTR(1) ) );
+    RBOOL( obj->listen( PQINTPTR( 1 ) ) );
   }
 }
 
@@ -288,11 +288,11 @@ void QLocalServer_listen2()
 
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QLocalServer_listen1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QLocalServer_listen2();
   }
@@ -307,12 +307,12 @@ int maxPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->maxPendingConnections() );
@@ -331,12 +331,12 @@ virtual QLocalSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QLocalSocket * ptr = obj->nextPendingConnection();
@@ -356,12 +356,12 @@ QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->serverName() );
@@ -380,12 +380,12 @@ QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fullServerName() );
@@ -405,10 +405,10 @@ static bool removeServer( const QString & name )
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
-    RBOOL( QLocalServer::removeServer( PQSTRING(1) ) );
+    RBOOL( QLocalServer::removeServer( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -423,12 +423,12 @@ QAbstractSocket::SocketError serverError() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->serverError() );
@@ -447,15 +447,15 @@ void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMaxPendingConnections( PINT(1) );
+      obj->setMaxPendingConnections( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,16 +473,16 @@ bool waitForNewConnection( int msec = 0, bool * timedOut = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
-      RBOOL( obj->waitForNewConnection( OPINT(1,0), &par2 ) );
+      RBOOL( obj->waitForNewConnection( OPINT( 1, 0 ), &par2 ) );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -500,12 +500,12 @@ qintptr socketDescriptor() const
 HB_FUNC_STATIC( QLOCALSERVER_SOCKETDESCRIPTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINTPTR( obj->socketDescriptor() );

@@ -76,17 +76,17 @@ QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
 */
 void QDnsHostAddressRecord_new2()
 {
-  auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
+  auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDnsHostAddressRecord_new1();
   }
-  else if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
+  else if( ISNUMPAR( 1 ) && ISQDNSHOSTADDRESSRECORD( 1 ) )
   {
     QDnsHostAddressRecord_new2();
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_DELETE )
 {
-  auto obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDnsHostAddressRecord * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -121,12 +121,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 {
-  auto obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDnsHostAddressRecord * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -145,15 +145,15 @@ void swap( QDnsHostAddressRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {
-  auto obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDnsHostAddressRecord * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
+    if( ISNUMPAR( 1 ) && ISQDNSHOSTADDRESSRECORD( 1 ) )
     {
 #endif
-      obj->swap( *PQDNSHOSTADDRESSRECORD(1) );
+      obj->swap( *PQDNSHOSTADDRESSRECORD( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,12 +171,12 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
 {
-  auto obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDnsHostAddressRecord * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->timeToLive() );
@@ -195,12 +195,12 @@ QHostAddress value() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
 {
-  auto obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QDnsHostAddressRecord * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QHostAddress( obj->value() );
@@ -219,18 +219,18 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -257,16 +257,16 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
