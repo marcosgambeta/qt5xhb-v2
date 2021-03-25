@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/qt5xhb-cpp11
+  https://github.com/magsoftinfo/qt5xhb-cpp11
 
 */
 
@@ -27,7 +27,7 @@ PROCEDURE Main()
    oWindow:resize( 800, 600 )
 
    oWebView := QWebView():new( oWindow )
-   oWebView:setUrl( QUrl():new( "https://github.com/marcosgambeta/qt5xhb-cpp11" ) )
+   oWebView:setUrl( QUrl():new( "https://github.com/magsoftinfo/qt5xhb-cpp11" ) )
 
    oWindow:show()
 

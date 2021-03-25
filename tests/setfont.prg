@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/qt5xhb-cpp11
+  https://github.com/magsoftinfo/qt5xhb-cpp11
 
 */
 

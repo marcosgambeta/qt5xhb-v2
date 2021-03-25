@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/qt5xhb-cpp11
+  https://github.com/magsoftinfo/qt5xhb-cpp11
 
 */
 
@@ -27,7 +27,7 @@ PROCEDURE Main()
    oAxWidget := QAxWidget():new( "Shell.Explorer.2", oWindow )
    oAxWidget:move( 10, 10 )
    oAxWidget:resize( 1024 - 20, 768 - 20 )
-   oAxWidget:dynamiccall( "Navigate(const QString&)", QVariant():new( "https://github.com/marcosgambeta/qt5xhb-cpp11" ) )
+   oAxWidget:dynamiccall( "Navigate(const QString&)", QVariant():new( "https://github.com/magsoftinfo/qt5xhb-cpp11" ) )
 
    oWindow:onResizeEvent( {||oAxWidget:resize( oWindow:width() - 20, oWindow:height() - 20 )} )
 
