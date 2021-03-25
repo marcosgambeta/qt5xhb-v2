@@ -59,9 +59,9 @@ QWebInspector( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QWebInspector( OPQWIDGET(1,nullptr) );
+    auto obj = new QWebInspector( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
-  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebInspector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -97,12 +97,12 @@ QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebInspector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWebPage * ptr = obj->page();
@@ -122,15 +122,15 @@ void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebInspector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBPAGE(1) )
+    if( ISNUMPAR( 1 ) && ISQWEBPAGE( 1 ) )
     {
 #endif
-      obj->setPage( PQWEBPAGE(1) );
+      obj->setPage( PQWEBPAGE( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,15 +148,15 @@ virtual bool event( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebInspector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,12 +172,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QWebInspector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint() );
