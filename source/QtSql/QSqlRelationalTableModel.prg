@@ -67,9 +67,9 @@ QSqlRelationalTableModel( QObject * parent = nullptr, QSqlDatabase db = QSqlData
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (ISQSQLDATABASE(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) && ( ISQSQLDATABASE( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QSqlRelationalTableModel( OPQOBJECT(1,nullptr), HB_ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
+    auto obj = new QSqlRelationalTableModel( OPQOBJECT( 1, nullptr ), HB_ISNIL( 2 ) ? QSqlDatabase() : *static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtr( 2 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -102,15 +102,15 @@ QSqlRelation relation( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QSqlRelation( obj->relation( PINT(1) ) );
+      auto ptr = new QSqlRelation( obj->relation( PINT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QSQLRELATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -127,15 +127,15 @@ virtual QSqlTableModel * relationModel( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      QSqlTableModel * ptr = obj->relationModel( PINT(1) );
+      QSqlTableModel * ptr = obj->relationModel( PINT( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QSQLTABLEMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -152,15 +152,15 @@ virtual void setRelation( int column, const QSqlRelation & relation )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRELATION(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSQLRELATION( 2 ) )
     {
 #endif
-      obj->setRelation( PINT(1), *PQSQLRELATION(2) );
+      obj->setRelation( PINT( 1 ), *PQSQLRELATION( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,12 +178,12 @@ void clear()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -204,15 +204,15 @@ QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,15 +229,15 @@ bool removeColumns( int column, int count, const QModelIndex & parent = QModelIn
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,12 +253,12 @@ bool select()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->select() );
@@ -277,15 +277,15 @@ bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,15 +301,15 @@ void setTable( const QString & table )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTable( PQSTRING(1) );
+      obj->setTable( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,15 +327,15 @@ void revertRow( int row )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->revertRow( PINT(1) );
+      obj->revertRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,15 +353,15 @@ void setJoinMode( QSqlRelationalTableModel::JoinMode joinMode )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETJOINMODE )
 {
-  auto obj = (QSqlRelationalTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlRelationalTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setJoinMode( (QSqlRelationalTableModel::JoinMode) hb_parni(1) );
+      obj->setJoinMode( static_cast<QSqlRelationalTableModel::JoinMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

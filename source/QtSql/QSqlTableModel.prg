@@ -95,9 +95,9 @@ QSqlTableModel( QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (ISQSQLDATABASE(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) && ( ISQSQLDATABASE( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QSqlTableModel( OPQOBJECT(1,nullptr), HB_ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
+    auto obj = new QSqlTableModel( OPQOBJECT( 1, nullptr ), HB_ISNIL( 2 ) ? QSqlDatabase() : *static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtr( 2 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
 
 HB_FUNC_STATIC( QSQLTABLEMODEL_DELETE )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -130,12 +130,12 @@ QSqlDatabase database() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSqlDatabase( obj->database() );
@@ -155,12 +155,12 @@ QSqlTableModel::EditStrategy editStrategy() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->editStrategy() );
@@ -179,15 +179,15 @@ virtual void setEditStrategy( QSqlTableModel::EditStrategy strategy )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setEditStrategy( (QSqlTableModel::EditStrategy) hb_parni(1) );
+      obj->setEditStrategy( static_cast<QSqlTableModel::EditStrategy>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,15 +205,15 @@ int fieldIndex( const QString & fieldName ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->fieldIndex( PQSTRING(1) ) );
+      RINT( obj->fieldIndex( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,12 +229,12 @@ QString filter() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->filter() );
@@ -253,15 +253,15 @@ virtual void setFilter( const QString & filter )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setFilter( PQSTRING(1) );
+      obj->setFilter( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,15 +279,15 @@ bool insertRecord( int row, const QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSQLRECORD( 2 ) )
     {
 #endif
-      RBOOL( obj->insertRecord( PINT(1), *PQSQLRECORD(2) ) );
+      RBOOL( obj->insertRecord( PINT( 1 ), *PQSQLRECORD( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ bool isDirty() const
 */
 void QSqlTableModel_isDirty1()
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -316,21 +316,21 @@ bool isDirty( const QModelIndex & index ) const
 */
 void QSqlTableModel_isDirty2()
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->isDirty( *PQMODELINDEX(1) ) );
+    RBOOL( obj->isDirty( *PQMODELINDEX( 1 ) ) );
   }
 }
 
 HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSqlTableModel_isDirty1();
   }
-  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+  else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
     QSqlTableModel_isDirty2();
   }
@@ -345,12 +345,12 @@ QSqlIndex primaryKey() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSqlIndex( obj->primaryKey() );
@@ -370,15 +370,15 @@ virtual void revertRow( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->revertRow( PINT(1) );
+      obj->revertRow( PINT( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,12 +396,12 @@ virtual bool select()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->select() );
@@ -420,15 +420,15 @@ bool setRecord( int row, const QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSQLRECORD( 2 ) )
     {
 #endif
-      RBOOL( obj->setRecord( PINT(1), *PQSQLRECORD(2) ) );
+      RBOOL( obj->setRecord( PINT( 1 ), *PQSQLRECORD( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,15 +444,15 @@ void sort( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->sort( PINT(1), (Qt::SortOrder) hb_parni(2) );
+      obj->sort( PINT( 1 ), static_cast<Qt::SortOrder>( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,15 +470,15 @@ virtual void setSort( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
-      obj->setSort( PINT(1), (Qt::SortOrder) hb_parni(2) );
+      obj->setSort( PINT( 1 ), static_cast<Qt::SortOrder>( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,15 +496,15 @@ virtual void setTable( const QString & tableName )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTable( PQSTRING(1) );
+      obj->setTable( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,12 +522,12 @@ QString tableName() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->tableName() );
@@ -546,12 +546,12 @@ void clear()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -572,15 +572,15 @@ QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -597,15 +597,15 @@ bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,15 +621,15 @@ Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM( obj->flags( *PQMODELINDEX( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,15 +645,15 @@ QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::Di
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->headerData( PINT( 1 ), static_cast<Qt::Orientation>( hb_parni( 2 ) ), OPINT( 3, Qt::DisplayRole ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -670,15 +670,15 @@ bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() 
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->insertRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->insertRows( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -694,15 +694,15 @@ bool removeColumns( int column, int count, const QModelIndex & parent = QModelIn
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -718,15 +718,15 @@ bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() 
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeRows( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -742,15 +742,15 @@ int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 1 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,12 +766,12 @@ void revert()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->revert();
@@ -792,12 +792,12 @@ void revertAll()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->revertAll();
@@ -818,12 +818,12 @@ bool submit()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->submit() );
@@ -842,12 +842,12 @@ bool submitAll()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->submitAll() );
@@ -866,7 +866,7 @@ QSqlRecord record() const
 */
 void QSqlTableModel_record1()
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -880,22 +880,22 @@ QSqlRecord record( int row ) const
 */
 void QSqlTableModel_record2()
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QSqlRecord( obj->record( PINT(1) ) );
+    auto ptr = new QSqlRecord( obj->record( PINT( 1 ) ) );
     Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
   }
 }
 
 HB_FUNC( QSQLTABLEMODEL_RECORD )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSqlTableModel_record1();
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QSqlTableModel_record2();
   }
@@ -910,15 +910,15 @@ virtual bool selectRow( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
 {
-  auto obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->selectRow( PINT(1) ) );
+      RBOOL( obj->selectRow( PINT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
