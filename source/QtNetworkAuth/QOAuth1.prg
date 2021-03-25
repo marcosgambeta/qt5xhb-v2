@@ -78,7 +78,7 @@ QOAuth1( QObject * parent = nullptr )
 void QOAuth1_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QOAuth1( OPQOBJECT(1,nullptr) );
+  auto obj = new QOAuth1( OPQOBJECT( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -89,7 +89,7 @@ QOAuth1( QNetworkAccessManager * manager, QObject * parent = nullptr )
 void QOAuth1_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QOAuth1( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QOAuth1( PQNETWORKACCESSMANAGER( 1 ), OPQOBJECT( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -100,22 +100,22 @@ QOAuth1( const QString & clientIdentifier, const QString & clientSharedSecret, Q
 void QOAuth1_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QOAuth1( PQSTRING(1), PQSTRING(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT(4,nullptr) );
+  auto obj = new QOAuth1( PQSTRING( 1 ), PQSTRING( 2 ), PQNETWORKACCESSMANAGER( 3 ), OPQOBJECT( 4, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QOAuth1_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQNETWORKACCESSMANAGER( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QOAuth1_new2();
   }
-  else if( ISBETWEEN(3,4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN( 3, 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ISQNETWORKACCESSMANAGER( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QOAuth1_new3();
   }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
 HB_FUNC_STATIC( QOAUTH1_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -152,12 +152,12 @@ QString clientSharedSecret() const
 HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->clientSharedSecret() );
@@ -178,15 +178,15 @@ void setClientSharedSecret( const QString & clientSharedSecret )
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setClientSharedSecret( PQSTRING(1) );
+      obj->setClientSharedSecret( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,15 +206,15 @@ void setClientCredentials( const QString & clientIdentifier, const QString & cli
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setClientCredentials( PQSTRING(1), PQSTRING(2) );
+      obj->setClientCredentials( PQSTRING( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,12 +234,12 @@ QString tokenSecret() const
 HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->tokenSecret() );
@@ -260,15 +260,15 @@ void setTokenSecret( const QString & tokenSecret )
 HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTokenSecret( PQSTRING(1) );
+      obj->setTokenSecret( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,15 +288,15 @@ void setTokenCredentials( const QString & token, const QString & tokenSecret )
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
-      obj->setTokenCredentials( PQSTRING(1), PQSTRING(2) );
+      obj->setTokenCredentials( PQSTRING( 1 ), PQSTRING( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,12 +316,12 @@ QUrl temporaryCredentialsUrl() const
 HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->temporaryCredentialsUrl() );
@@ -343,15 +343,15 @@ void setTemporaryCredentialsUrl( const QUrl & url )
 HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setTemporaryCredentialsUrl( *PQURL(1) );
+      obj->setTemporaryCredentialsUrl( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,12 +371,12 @@ QUrl tokenCredentialsUrl() const
 HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->tokenCredentialsUrl() );
@@ -398,15 +398,15 @@ void setTokenCredentialsUrl( const QUrl & url )
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setTokenCredentialsUrl( *PQURL(1) );
+      obj->setTokenCredentialsUrl( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,15 +426,15 @@ void setSignatureMethod( QOAuth1::SignatureMethod value )
 HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setSignatureMethod( (QOAuth1::SignatureMethod) hb_parni(1) );
+      obj->setSignatureMethod( static_cast<QOAuth1::SignatureMethod>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,12 +454,12 @@ void grant() override
 HB_FUNC_STATIC( QOAUTH1_GRANT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->grant();
@@ -482,15 +482,15 @@ void continueGrantWithVerifier( const QString & verifier )
 HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOAuth1 * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->continueGrantWithVerifier( PQSTRING(1) );
+      obj->continueGrantWithVerifier( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

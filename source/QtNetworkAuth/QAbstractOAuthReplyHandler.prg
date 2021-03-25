@@ -62,7 +62,7 @@ virtual ~QAbstractOAuthReplyHandler()
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractOAuthReplyHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,12 +86,12 @@ virtual QString callback() const = 0
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractOAuthReplyHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->callback() );
@@ -112,15 +112,15 @@ virtual void networkReplyFinished( QNetworkReply * reply ) = 0
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAbstractOAuthReplyHandler * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKREPLY(1) )
+    if( ISNUMPAR( 1 ) && ISQNETWORKREPLY( 1 ) )
     {
 #endif
-      obj->networkReplyFinished( PQNETWORKREPLY(1) );
+      obj->networkReplyFinished( PQNETWORKREPLY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
