@@ -69,9 +69,9 @@ QGraphicsVideoItem( QGraphicsItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QGraphicsVideoItem( HB_ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    auto obj = new QGraphicsVideoItem( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_DELETE )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -104,12 +104,12 @@ QMediaObject * mediaObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
@@ -129,12 +129,12 @@ Qt::AspectRatioMode aspectRatioMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ASPECTRATIOMODE )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->aspectRatioMode() );
@@ -153,15 +153,15 @@ void setAspectRatioMode( Qt::AspectRatioMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAspectRatioMode( (Qt::AspectRatioMode) hb_parni(1) );
+      obj->setAspectRatioMode( static_cast<Qt::AspectRatioMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,12 +179,12 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QPointF( obj->offset() );
@@ -204,15 +204,15 @@ void setOffset( const QPointF & offset )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setOffset( *PQPOINTF(1) );
+      obj->setOffset( *PQPOINTF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,12 +230,12 @@ QSizeF size() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSizeF( obj->size() );
@@ -255,15 +255,15 @@ void setSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZEF(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZEF( 1 ) )
     {
 #endif
-      obj->setSize( *PQSIZEF(1) );
+      obj->setSize( *PQSIZEF( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,12 +281,12 @@ QSizeF nativeSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NATIVESIZE )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSizeF( obj->nativeSize() );
@@ -306,12 +306,12 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect() );
@@ -331,15 +331,15 @@ void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
 {
-  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QGraphicsVideoItem * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, nullptr ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
