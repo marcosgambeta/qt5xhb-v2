@@ -58,15 +58,15 @@ virtual QCanBusDevice * createDevice( const QString & interfaceName, QString * e
 HB_FUNC_STATIC( QCANBUSFACTORYV2_CREATEDEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QCanBusFactoryV2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QCanBusFactoryV2 * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), nullptr );
+      QCanBusDevice * ptr = obj->createDevice( PQSTRING( 1 ), nullptr );
       Qt5xHb::createReturnQObjectClass( ptr, "QCANBUSDEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -85,17 +85,17 @@ virtual QList<QCanBusDeviceInfo> availableDevices( QString * errorMessage ) cons
 HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QCanBusFactoryV2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QCanBusFactoryV2 * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       QList<QCanBusDeviceInfo> list = obj->availableDevices( nullptr );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSDEVICEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QCanBusDeviceInfo *) new QCanBusDeviceInfo( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QCanBusDeviceInfo * >( new QCanBusDeviceInfo( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );

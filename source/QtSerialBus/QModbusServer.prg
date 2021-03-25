@@ -62,9 +62,9 @@ QModbusServer( QObject * parent = nullptr )
 HB_FUNC_STATIC( QMODBUSSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QModbusServer( OPQOBJECT(1,nullptr) );
+    auto obj = new QModbusServer( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_NEW )
 HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QModbusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -104,12 +104,12 @@ int serverAddress() const
 HB_FUNC_STATIC( QMODBUSSERVER_SERVERADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QModbusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->serverAddress() );
@@ -136,12 +136,12 @@ virtual bool processesBroadcast() const
 HB_FUNC_STATIC( QMODBUSSERVER_PROCESSESBROADCAST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QModbusServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->processesBroadcast() );
