@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
 {
-  auto obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpIndexWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -75,12 +75,12 @@ void activateCurrentItem()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
-  auto obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpIndexWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->activateCurrentItem();
@@ -101,15 +101,15 @@ void filterIndices( const QString & filter, const QString & wildcard = QString()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {
-  auto obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpIndexWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->filterIndices( PQSTRING(1), OPQSTRING(2,QString()) );
+      obj->filterIndices( PQSTRING( 1 ), OPQSTRING( 2, QString() ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

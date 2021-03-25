@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
 {
-  auto obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpContentWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -77,15 +77,15 @@ QModelIndex indexOf( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
 {
-  auto obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpContentWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->indexOf( *PQURL(1) ) );
+      auto ptr = new QModelIndex( obj->indexOf( *PQURL( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -67,9 +67,9 @@ QHelpEngine( const QString & collectionFile, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QHelpEngine( PQSTRING(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QHelpEngine( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
-  auto obj = (QHelpEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -102,12 +102,12 @@ QHelpContentModel * contentModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
-  auto obj = (QHelpEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpContentModel * ptr = obj->contentModel();
@@ -127,12 +127,12 @@ QHelpContentWidget * contentWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
-  auto obj = (QHelpEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpContentWidget * ptr = obj->contentWidget();
@@ -152,12 +152,12 @@ QHelpIndexModel * indexModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
-  auto obj = (QHelpEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpIndexModel * ptr = obj->indexModel();
@@ -177,12 +177,12 @@ QHelpIndexWidget * indexWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
-  auto obj = (QHelpEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpIndexWidget * ptr = obj->indexWidget();
@@ -202,12 +202,12 @@ QHelpSearchEngine * searchEngine()
 */
 HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
-  auto obj = (QHelpEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpSearchEngine * ptr = obj->searchEngine();

@@ -58,15 +58,15 @@ void createIndex( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
-  auto obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpIndexModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->createIndex( PQSTRING(1) );
+      obj->createIndex( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -84,15 +84,15 @@ QModelIndex filter( const QString & filter, const QString & wildcard = QString()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
-  auto obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpIndexModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      auto ptr = new QModelIndex( obj->filter( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
       Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -109,12 +109,12 @@ bool isCreatingIndex() const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
-  auto obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpIndexModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCreatingIndex() );

@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 {
-  auto obj = (QHelpSearchResultWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchResultWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -75,15 +75,15 @@ QUrl linkAt( const QPoint & point )
 */
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
 {
-  auto obj = (QHelpSearchResultWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchResultWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      auto ptr = new QUrl( obj->linkAt( *PQPOINT(1) ) );
+      auto ptr = new QUrl( obj->linkAt( *PQPOINT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

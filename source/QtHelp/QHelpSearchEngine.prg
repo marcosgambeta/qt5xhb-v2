@@ -72,9 +72,9 @@ QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQHELPENGINECORE( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QHelpSearchEngine( PQHELPENGINECORE(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QHelpSearchEngine( PQHELPENGINECORE( 1 ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -107,12 +107,12 @@ int hitCount() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->hitCount() );
@@ -131,17 +131,17 @@ QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QHelpSearchQuery * >( new QHelpSearchQuery( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -183,12 +183,12 @@ QHelpSearchQueryWidget * queryWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpSearchQueryWidget * ptr = obj->queryWidget();
@@ -208,12 +208,12 @@ QHelpSearchResultWidget * resultWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHelpSearchResultWidget * ptr = obj->resultWidget();
@@ -233,12 +233,12 @@ void cancelIndexing()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancelIndexing();
@@ -259,12 +259,12 @@ void cancelSearching()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancelSearching();
@@ -285,12 +285,12 @@ void reindexDocumentation()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reindexDocumentation();
@@ -311,20 +311,20 @@ void search( const QList<QHelpSearchQuery> & queryList )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {
-  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<QHelpSearchQuery> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen(aList1);
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QHelpSearchQuery *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *static_cast< QHelpSearchQuery * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->search( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

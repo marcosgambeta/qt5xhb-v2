@@ -69,17 +69,17 @@ QHelpSearchQuery( QHelpSearchQuery::FieldName field, const QStringList & wordLis
 */
 void QHelpSearchQuery_new2()
 {
-  auto obj = new QHelpSearchQuery( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
+  auto obj = new QHelpSearchQuery( static_cast<QHelpSearchQuery::FieldName>( hb_parni( 1 ) ), PQSTRINGLIST( 2 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QHelpSearchQuery_new1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
   {
     QHelpSearchQuery_new2();
   }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_DELETE )
 {
-  auto obj = (QHelpSearchQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QHelpSearchQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -110,18 +110,18 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -148,16 +148,16 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

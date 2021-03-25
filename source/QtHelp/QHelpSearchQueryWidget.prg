@@ -57,9 +57,9 @@ QHelpSearchQueryWidget( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QHelpSearchQueryWidget( OPQWIDGET(1,nullptr) );
+    auto obj = new QHelpSearchQueryWidget( OPQWIDGET( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 {
-  auto obj = (QHelpSearchQueryWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchQueryWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -92,17 +92,17 @@ QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
-  auto obj = (QHelpSearchQueryWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHelpSearchQueryWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QHelpSearchQuery * >( new QHelpSearchQuery( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
