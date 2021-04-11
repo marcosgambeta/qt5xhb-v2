@@ -618,239 +618,286 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
     return data;
   }
 
-  if( ( role == Qt::DisplayRole ) && ( m_getFieldCB != nullptr ) )
+  switch( role )
   {
-    PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-    PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldCB, 2, pRow, pCol ) );
-    if( hb_itemType( pRet ) & HB_IT_STRING )
+    case Qt::DisplayRole:
     {
-      #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-      data = QLatin1String( hb_itemGetCPtr( pRet ) );
-      #else
-      data = hb_itemGetCPtr( pRet );
-      #endif
-    }
-    else if( hb_itemType( pRet ) & HB_IT_MEMO )
-    {
-      #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-      data = QLatin1String( hb_itemGetCPtr( pRet ) );
-      #else
-      data = hb_itemGetCPtr( pRet );
-      #endif
-    }
-    else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
-    {
-      data = hb_itemGetND( pRet );
-    }
-    else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
-    {
-      data = hb_itemGetNI( pRet );
-    }
-    else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
-    {
-      data = hb_itemGetL( pRet );
-    }
-    else if( hb_itemType( pRet ) & HB_IT_DATE )
-    {
-      int y,m,d;
-      hb_dateDecode( hb_itemGetDL( pRet ), &y, &m, &d );
-      QDate date(y,m,d);
-      data = date;
-    }
-    else if( hb_itemType( pRet ) & HB_IT_OBJECT )
-    {
-      void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-      if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
+      if( m_getFieldCB != nullptr )
       {
-        data = *( (QVariant *) ptr );
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+          #endif
+        }
+        else if( hb_itemType( pRet ) & HB_IT_MEMO )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+          #endif
+        }
+        else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
+        {
+          data = hb_itemGetND( pRet );
+        }
+        else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+        {
+          data = hb_itemGetNI( pRet );
+        }
+        else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
+        {
+          data = hb_itemGetL( pRet );
+        }
+        else if( hb_itemType( pRet ) & HB_IT_DATE )
+        {
+          int y,m,d;
+          hb_dateDecode( hb_itemGetDL( pRet ), &y, &m, &d );
+          QDate date(y,m,d);
+          data = date;
+        }
+        else if( hb_itemType( pRet ) & HB_IT_OBJECT )
+        {
+          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+          if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
+          {
+            data = *( static_cast< QVariant * >( ptr ) );
+          }
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
       }
+      break;
     }
-    hb_itemRelease( pRow );
-    hb_itemRelease( pCol );
-    hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::DecorationRole ) && ( m_getFieldDecorationCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldDecorationCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
-       {
-         data = *( (QIcon *) ptr );
-       }
-       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
-       {
-         data = *( (QPixmap *) ptr );
-       }
-       ptr = nullptr;
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QIcon( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::EditRole ) && ( m_getFieldEditCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldEditCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-       data = QLatin1String( hb_itemGetCPtr( pRet ) );
-       #else
-       data = hb_itemGetCPtr( pRet );
-       #endif
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::ToolTipRole ) && ( m_getFieldToolTipCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldToolTipCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-       data = QLatin1String( hb_itemGetCPtr( pRet ) );
-       #else
-       data = hb_itemGetCPtr( pRet );
-       #endif
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::StatusTipRole ) && ( m_getFieldStatusTipCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldStatusTipCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-       data = QLatin1String( hb_itemGetCPtr( pRet ) );
-       #else
-       data = hb_itemGetCPtr( pRet );
-       #endif
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::WhatsThisRole ) && ( m_getFieldWhatsThisCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldWhatsThisCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-       data = QLatin1String( hb_itemGetCPtr( pRet ) );
-       #else
-       data = hb_itemGetCPtr( pRet );
-       #endif
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::SizeHintRole ) && ( m_getFieldSizeHintCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldSizeHintCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QSize *) ptr );
-       ptr = nullptr;
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::FontRole ) && ( m_getFieldFontCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFontCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QFont *) ptr );
-       ptr = nullptr;
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::TextAlignmentRole ) && ( m_getFieldAlignCB != nullptr ) )
-  {
-    PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-    PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldAlignCB, 2, pRow, pCol ) );
-    if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+    case Qt::DecorationRole:
     {
-      data = hb_itemGetNI( pRet );
+      if( m_getFieldDecorationCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldDecorationCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_OBJECT )
+        {
+          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+          if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
+          {
+            data = *( static_cast< QIcon * >( ptr ) );
+          }
+          else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
+          {
+            data = *( static_cast< QPixmap * >( ptr ) );
+          }
+          ptr = nullptr;
+        }
+        else if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          data = QIcon( hb_itemGetCPtr( pRet ) );
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
     }
-    hb_itemRelease( pRow );
-    hb_itemRelease( pCol );
-    hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::BackgroundRole ) && ( m_getFieldBGColorCB != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldBGColorCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
+    case Qt::EditRole:
+    {
+      if( m_getFieldEditCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldEditCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+         #endif
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::ToolTipRole:
+    {
+      if( m_getFieldToolTipCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldToolTipCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+          #endif
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::StatusTipRole:
+    {
+      if( m_getFieldStatusTipCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldStatusTipCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+         #endif
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+       hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::WhatsThisRole:
+    {
+      if( m_getFieldWhatsThisCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldWhatsThisCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+          #endif
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::SizeHintRole:
+    {
+      if( m_getFieldSizeHintCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldSizeHintCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_OBJECT )
+        {
+          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+          data = *( static_cast< QSize * >( ptr ) );
+          ptr = nullptr;
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::FontRole:
+    {
+      if( m_getFieldFontCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFontCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_OBJECT )
+        {
+          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+          data = *( static_cast< QFont * >( ptr ) );
+          ptr = nullptr;
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::TextAlignmentRole:
+    {
+      if( m_getFieldAlignCB != nullptr )
+      {
+       PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+       PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+       PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldAlignCB, 2, pRow, pCol ) );
+       if( hb_itemType( pRet ) & HB_IT_NUMERIC )
        {
-         data = *( (QColor *) ptr );
+         data = hb_itemGetNI( pRet );
        }
-       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
-       {
-         data = *( (QBrush *) ptr );
-       }
-       ptr = nullptr;
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QColor( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-  }
-  else if( ( role == Qt::ForegroundRole ) && ( m_getFieldFGColorCB  != nullptr ) )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFGColorCB, 2, pRow, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QColor *) ptr );
-       ptr = nullptr;
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QColor( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
+       hb_itemRelease( pRow );
+       hb_itemRelease( pCol );
+       hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::BackgroundRole:
+    {
+      if( m_getFieldBGColorCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldBGColorCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_OBJECT )
+        {
+          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+          if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
+          {
+            data = *( static_cast< QColor * >( ptr ) );
+          }
+          else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
+          {
+            data = *( static_cast< QBrush * >( ptr ) );
+          }
+          ptr = nullptr;
+        }
+        else if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          data = QColor( hb_itemGetCPtr( pRet ) );
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::ForegroundRole:
+    {
+      if( m_getFieldFGColorCB  != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFGColorCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_OBJECT )
+        {
+          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+          data = *( static_cast< QColor * >( ptr ) );
+          ptr = nullptr;
+        }
+        else if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          data = QColor( hb_itemGetCPtr( pRet ) );
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
   }
 
   return data;
@@ -863,241 +910,300 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
 {
   QVariant data;
 
-  if( orientation == Qt::Horizontal )
+  switch( orientation )
   {
-    if( ( role == Qt::DisplayRole ) && ( m_getHHCB != nullptr ) )
+    case Qt::Horizontal:
     {
-      PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHCB, 1, pCol ) );
-      if( hb_itemType( pRet ) & HB_IT_STRING )
+      switch( role )
       {
-        #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-        data = QLatin1String( hb_itemGetCPtr( pRet ) );
-        #else
-        data = hb_itemGetCPtr( pRet );
-        #endif
-      }
-      else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
-      {
-        data = hb_itemGetND( pRet );
-      }
-      else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
-      {
-        data = hb_itemGetNI( pRet );
-      }
-      else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
-      {
-        data = hb_itemGetL( pRet );
-      }
-      hb_itemRelease( pCol );
-      hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::DecorationRole ) && ( m_getHHDecorationCB != nullptr ) )
-    {
-      PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHDecorationCB, 1, pCol ) );
-      if( hb_itemType( pRet ) & HB_IT_OBJECT )
-      {
-        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
+        case Qt::DisplayRole:
         {
-          data = *( (QIcon *) ptr );
+          if( m_getHHCB != nullptr )
+          {
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHCB, 1, pCol ) );
+            if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+              data = QLatin1String( hb_itemGetCPtr( pRet ) );
+              #else
+              data = hb_itemGetCPtr( pRet );
+              #endif
+            }
+            else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
+            {
+              data = hb_itemGetND( pRet );
+            }
+            else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+            {
+              data = hb_itemGetNI( pRet );
+            }
+            else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
+            {
+              data = hb_itemGetL( pRet );
+            }
+            hb_itemRelease( pCol );
+            hb_itemRelease( pRet );
+          }
+          break;
         }
-        else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
+        case Qt::DecorationRole:
         {
-          data = *( (QPixmap *) ptr );
+          if( m_getHHDecorationCB != nullptr )
+          {
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHDecorationCB, 1, pCol ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
+              {
+                data = *( static_cast< QIcon * >( ptr ) );
+              }
+              else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
+              {
+                data = *( static_cast< QPixmap * >( ptr ) );
+              }
+              ptr = nullptr;
+            }
+            else if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              data = QIcon( hb_itemGetCPtr( pRet ) );
+            }
+            hb_itemRelease( pCol );
+            hb_itemRelease( pRet );
+          }
+          break;
         }
-        ptr = nullptr;
-      }
-      else if( hb_itemType( pRet ) & HB_IT_STRING )
-      {
-        data = QIcon( hb_itemGetCPtr( pRet ) );
-      }
-      hb_itemRelease( pCol );
-      hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::FontRole ) && ( m_getHHFontCB != nullptr ) )
-    {
-     PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFontCB, 1, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QFont *) ptr );
-       ptr = nullptr;
-     }
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::TextAlignmentRole ) && ( m_getHHAlignCB != nullptr ) )
-    {
-      PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHAlignCB, 1, pCol ) );
-      if( hb_itemType( pRet ) & HB_IT_NUMERIC )
-      {
-        data = hb_itemGetNI( pRet );
-      }
-      hb_itemRelease( pCol );
-      hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::BackgroundRole ) && ( m_getHHBGColorCB != nullptr ) )
-    {
-     PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHBGColorCB, 1, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
-       {
-         data = *( (QColor *) ptr );
-       }
-       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
-       {
-         data = *( (QBrush *) ptr );
-       }
-       ptr = nullptr;
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QColor( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::ForegroundRole ) && ( m_getHHFGColorCB != nullptr ) )
-    {
-     PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFGColorCB, 1, pCol ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QColor *) ptr );
-       ptr = nullptr;
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QColor( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pCol );
-     hb_itemRelease( pRet );
-    }
-  }
-  else if( orientation == Qt::Vertical )
-  {
-    if( ( role == Qt::DisplayRole ) && ( m_getVHCB != nullptr ) )
-    {
-      PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHCB, 1, pRow ) );
-      if( hb_itemType( pRet ) & HB_IT_STRING )
-      {
-        #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-        data = QLatin1String( hb_itemGetCPtr( pRet ) );
-        #else
-        data = hb_itemGetCPtr( pRet );
-        #endif
-      }
-      else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
-      {
-        data = hb_itemGetND( pRet );
-      }
-      else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
-      {
-        data = hb_itemGetNI( pRet );
-      }
-      else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
-      {
-        data = hb_itemGetL( pRet );
-      }
-      hb_itemRelease( pRow );
-      hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::DecorationRole ) && ( m_getVHDecorationCB != nullptr ) )
-    {
-      PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHDecorationCB, 1, pRow ) );
-      if( hb_itemType( pRet ) & HB_IT_OBJECT )
-      {
-        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
+        case Qt::FontRole:
         {
-          data = *( (QIcon *) ptr );
+          if( m_getHHFontCB != nullptr )
+          {
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFontCB, 1, pCol ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              data = *( static_cast< QFont * >( ptr ) );
+              ptr = nullptr;
+            }
+            hb_itemRelease( pCol );
+            hb_itemRelease( pRet );
+          }
+          break;
         }
-        else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
+        case Qt::TextAlignmentRole:
         {
-          data = *( (QPixmap *) ptr );
+          if( m_getHHAlignCB != nullptr )
+          {
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHAlignCB, 1, pCol ) );
+            if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+            {
+              data = hb_itemGetNI( pRet );
+            }
+            hb_itemRelease( pCol );
+            hb_itemRelease( pRet );
+          }
+          break;
         }
-        ptr = nullptr;
+        case Qt::BackgroundRole:
+        {
+          if( m_getHHBGColorCB != nullptr )
+          {
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHBGColorCB, 1, pCol ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
+              {
+                data = *( static_cast< QColor * >( ptr ) );
+              }
+              else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
+              {
+                data = *( static_cast< QBrush * >( ptr ) );
+              }
+              ptr = nullptr;
+            }
+            else if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              data = QColor( hb_itemGetCPtr( pRet ) );
+            }
+            hb_itemRelease( pCol );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        case Qt::ForegroundRole:
+        {
+          if( m_getHHFGColorCB != nullptr )
+          {
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFGColorCB, 1, pCol ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              data = *( static_cast< QColor * >( ptr ) );
+              ptr = nullptr;
+            }
+            else if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              data = QColor( hb_itemGetCPtr( pRet ) );
+            }
+            hb_itemRelease( pCol );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
       }
-      else if( hb_itemType( pRet ) & HB_IT_STRING )
+      break;
+    }
+    case Qt::Vertical:
+    {
+      switch( role )
       {
-        data = QIcon( hb_itemGetCPtr( pRet ) );
+        case Qt::DisplayRole:
+        {
+          if( m_getVHCB != nullptr )
+          {
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHCB, 1, pRow ) );
+            if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+              data = QLatin1String( hb_itemGetCPtr( pRet ) );
+              #else
+              data = hb_itemGetCPtr( pRet );
+              #endif
+            }
+            else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
+            {
+              data = hb_itemGetND( pRet );
+            }
+            else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+            {
+              data = hb_itemGetNI( pRet );
+            }
+            else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
+            {
+              data = hb_itemGetL( pRet );
+            }
+            hb_itemRelease( pRow );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        case Qt::DecorationRole:
+        {
+          if( m_getVHDecorationCB != nullptr )
+          {
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHDecorationCB, 1, pRow ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
+              {
+                data = *( static_cast< QIcon * >( ptr ) );
+              }
+              else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
+              {
+                data = *( static_cast< QPixmap * >( ptr ) );
+              }
+              ptr = nullptr;
+            }
+            else if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              data = QIcon( hb_itemGetCPtr( pRet ) );
+            }
+            hb_itemRelease( pRow );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        case Qt::FontRole:
+        {
+          if( m_getVHFontCB != nullptr )
+          {
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFontCB, 1, pRow ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              data = *( static_cast< QFont * >( ptr ) );
+              ptr = nullptr;
+            }
+            hb_itemRelease( pRow );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        case Qt::TextAlignmentRole:
+        {
+          if( m_getVHAlignCB != nullptr )
+          {
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHAlignCB, 1, pRow ) );
+            if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+            {
+              data = hb_itemGetNI( pRet );
+            }
+            hb_itemRelease( pRow );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        case Qt::BackgroundRole:
+        {
+          if( m_getVHBGColorCB != nullptr )
+          {
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHBGColorCB, 1, pRow ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
+              {
+                data = *( static_cast< QColor * >( ptr ) );
+              }
+              else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
+              {
+                data = *( static_cast< QBrush * >( ptr ) );
+              }
+              ptr = nullptr;
+            }
+            else if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              data = QColor( hb_itemGetCPtr( pRet ) );
+            }
+            hb_itemRelease( pRow );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        case Qt::ForegroundRole:
+        {
+          if( m_getVHFGColorCB != nullptr )
+          {
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFGColorCB, 1, pRow ) );
+            if( hb_itemType( pRet ) & HB_IT_OBJECT )
+            {
+              void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+              data = *( static_cast< QColor * >( ptr ) );
+            }
+            else if( hb_itemType( pRet ) & HB_IT_STRING )
+            {
+              data = QColor( hb_itemGetCPtr( pRet ) );
+            }
+            hb_itemRelease( pRow );
+            hb_itemRelease( pRet );
+          }
+          break;
+        }
+        break;
       }
-      hb_itemRelease( pRow );
-      hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::FontRole ) && ( m_getVHFontCB != nullptr ) )
-    {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFontCB, 1, pRow ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QFont *) ptr );
-       ptr = nullptr;
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::TextAlignmentRole ) && ( m_getVHAlignCB != nullptr ) )
-    {
-      PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHAlignCB, 1, pRow ) );
-      if( hb_itemType( pRet ) & HB_IT_NUMERIC )
-      {
-        data = hb_itemGetNI( pRet );
-      }
-      hb_itemRelease( pRow );
-      hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::BackgroundRole ) && ( m_getVHBGColorCB != nullptr ) )
-    {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHBGColorCB, 1, pRow ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
-       {
-         data = *( (QColor *) ptr );
-       }
-       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
-       {
-         data = *( (QBrush *) ptr );
-       }
-       ptr = nullptr;
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QColor( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pRet );
-    }
-    else if( ( role == Qt::ForegroundRole ) && ( m_getVHFGColorCB != nullptr ) )
-    {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFGColorCB, 1, pRow ) );
-     if( hb_itemType( pRet ) & HB_IT_OBJECT )
-     {
-       void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       data = *( (QColor *) ptr );
-     }
-     else if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       data = QColor( hb_itemGetCPtr( pRet ) );
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pRet );
     }
   }
 
@@ -1113,17 +1219,13 @@ int HAbstractTableModel::rowCount( const QModelIndex & parent ) const
   {
     return 0;
   }
-  else
+
+  if( m_rowCountCB != nullptr )
   {
-    if( m_rowCountCB != nullptr )
-    {
-      return (int) hb_itemGetNI( hb_vmEvalBlockV( m_rowCountCB, 0 ) );
-    }
-    else
-    {
-      return 0;
-    }
+    return hb_itemGetNI( hb_vmEvalBlockV( m_rowCountCB, 0 ) );
   }
+
+  return 0;
 }
 
 /*
@@ -1135,17 +1237,13 @@ int HAbstractTableModel::columnCount( const QModelIndex & parent ) const
   {
     return 0;
   }
-  else
+
+  if( m_colCountCB != nullptr )
   {
-    if( m_colCountCB != nullptr )
-    {
-      return (int) hb_itemGetNI( hb_vmEvalBlockV( m_colCountCB, 0 ) );
-    }
-    else
-    {
-      return 0;
-    }
+    return hb_itemGetNI( hb_vmEvalBlockV( m_colCountCB, 0 ) );
   }
+
+  return 0;
 }
 
 Qt::ItemFlags HAbstractTableModel::flags( const QModelIndex &index ) const
@@ -1154,14 +1252,14 @@ Qt::ItemFlags HAbstractTableModel::flags( const QModelIndex &index ) const
 
   if( m_flagsCB != nullptr )
   {
-    PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-    PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
+    PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+    PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsCB, 2, pRow, pCol ) );
 
     if( hb_itemType( pRet ) & HB_IT_NUMERIC )
     {
-      flags = (Qt::ItemFlags) hb_itemGetNI( pRet );
+      flags = static_cast< Qt::ItemFlags >( hb_itemGetNI( pRet ) );
     }
 
     hb_itemRelease( pRow );
@@ -1170,10 +1268,8 @@ Qt::ItemFlags HAbstractTableModel::flags( const QModelIndex &index ) const
 
     return flags;
   }
-  else
-  {
-    return flags;
-  }
+
+  return flags;
 }
 
 bool HAbstractTableModel::setData( const QModelIndex &index, const QVariant &value, int role )
@@ -1182,9 +1278,9 @@ bool HAbstractTableModel::setData( const QModelIndex &index, const QVariant &val
 
   if( m_setDataCB != nullptr )
   {
-    PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-    PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
-    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( (void *) &value );
+    PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+    PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: cast
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataCB, 3, pRow, pCol, pValue /*, pRole*/ ) );
 
@@ -1213,8 +1309,6 @@ void HAbstractTableModel::reloadData()
   // Remember the QModelIndex that will change
   // Update your internal data
   // Call changePersistentIndex()
-  // emit layoutChanged
-  //emit QAbstractItemModel::layoutChanged();
   emit QAbstractItemModel::layoutChanged();
 }
 
