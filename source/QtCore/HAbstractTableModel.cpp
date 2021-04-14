@@ -29,6 +29,7 @@ HAbstractTableModel::HAbstractTableModel( QObject * parent ) : QAbstractTableMod
   m_getFieldAlignCB = nullptr;
   m_getFieldBGColorCB = nullptr;
   m_getFieldFGColorCB = nullptr;
+  m_getFieldCheckStateCB = nullptr;
 
   // cabeçalho horizontal
   m_getHHCB = nullptr;
@@ -122,6 +123,11 @@ HAbstractTableModel::~HAbstractTableModel()
   {
     hb_itemRelease( m_getFieldFGColorCB );
     m_getFieldFGColorCB = nullptr;
+  }
+  if( m_getFieldCheckStateCB != nullptr )
+  {
+    hb_itemRelease( m_getFieldCheckStateCB );
+    m_getFieldCheckStateCB = nullptr;
   }
 
   // cabeçalho horizontal
@@ -392,6 +398,21 @@ void HAbstractTableModel::setForegroundRoleCB( PHB_ITEM block )
   if( block != nullptr )
   {
     m_getFieldFGColorCB = hb_itemNew( block );
+  }
+}
+
+/*
+  define o codeblock para o checkstate da célula
+*/
+void HAbstractTableModel::setCheckStateRoleCB( PHB_ITEM block )
+{
+  if( m_getFieldCheckStateCB != nullptr )
+  {
+    hb_itemRelease( m_getFieldCheckStateCB );
+  }
+  if( block != nullptr )
+  {
+    m_getFieldCheckStateCB = hb_itemNew( block );
   }
 }
 
@@ -898,6 +919,23 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
       }
       break;
     }
+    case Qt::CheckStateRole:
+    {
+      if( m_getFieldCheckStateCB != nullptr )
+      {
+       PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+       PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+       PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldCheckStateCB, 2, pRow, pCol ) );
+       if( hb_itemType( pRet ) & HB_IT_NUMERIC )
+       {
+         data = hb_itemGetNI( pRet );
+       }
+       hb_itemRelease( pRow );
+       hb_itemRelease( pCol );
+       hb_itemRelease( pRet );
+      }
+      break;
+    }
   }
 
   return data;
@@ -1265,8 +1303,6 @@ Qt::ItemFlags HAbstractTableModel::flags( const QModelIndex &index ) const
     hb_itemRelease( pRow );
     hb_itemRelease( pCol );
     hb_itemRelease( pRet );
-
-    return flags;
   }
 
   return flags;
@@ -1280,7 +1316,7 @@ bool HAbstractTableModel::setData( const QModelIndex &index, const QVariant &val
   {
     PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
     PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
-    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: cast
+    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: C++ cast
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataCB, 3, pRow, pCol, pValue /*, pRole*/ ) );
 

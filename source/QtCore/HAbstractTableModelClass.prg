@@ -31,6 +31,7 @@ CLASS HAbstractTableModel INHERIT QAbstractTableModel
    METHOD setTextAlignmentRoleCB
    METHOD setBackgroundRoleCB
    METHOD setForegroundRoleCB
+   METHOD setCheckStateRoleCB
 
    METHOD setHorizontalHeaderDisplayRoleCB
    METHOD setHorizontalHeaderDecorationRoleCB
@@ -457,7 +458,33 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-// cabeçalho horizontal
+/*
+void setCheckStateRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETCHECKSTATEROLECB )
+{
+  auto obj = qobject_cast< HAbstractTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setCheckStateRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+// horizontal header
 
 /*
 void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
@@ -615,7 +642,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-// cabeçalho vertical
+// vertical header
 
 /*
 void setVerticalHeaderDisplayRoleCB( PHB_ITEM block )

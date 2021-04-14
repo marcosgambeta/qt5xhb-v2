@@ -45,6 +45,7 @@ private:
   PHB_ITEM m_getFieldAlignCB;
   PHB_ITEM m_getFieldBGColorCB;
   PHB_ITEM m_getFieldFGColorCB;
+  PHB_ITEM m_getFieldCheckStateCB;
 
   PHB_ITEM m_getHHCB;
   PHB_ITEM m_getHHDecorationCB;
@@ -78,6 +79,7 @@ public:
   void setTextAlignmentRoleCB( PHB_ITEM block );
   void setBackgroundRoleCB( PHB_ITEM block );
   void setForegroundRoleCB( PHB_ITEM block );
+  void setCheckStateRoleCB( PHB_ITEM block );
 
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );
