@@ -1317,8 +1317,9 @@ bool HAbstractTableModel::setData( const QModelIndex &index, const QVariant &val
     PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
     PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
     PHB_ITEM pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: C++ cast
+    PHB_ITEM pRole = hb_itemPutNI( nullptr, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataCB, 3, pRow, pCol, pValue /*, pRole*/ ) );
+    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataCB, 4, pRow, pCol, pValue, pRole ) );
 
     if( hb_itemType( pRet ) & HB_IT_LOGICAL )
     {
@@ -1328,6 +1329,7 @@ bool HAbstractTableModel::setData( const QModelIndex &index, const QVariant &val
     hb_itemRelease( pRow );
     hb_itemRelease( pCol );
     hb_itemRelease( pValue );
+    hb_itemRelease( pRole );
     hb_itemRelease( pRet );
   }
 
