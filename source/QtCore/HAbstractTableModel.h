@@ -32,34 +32,34 @@ public:
 
 private:
   PHB_ITEM m_rowCountCB;
-  PHB_ITEM m_colCountCB;
+  PHB_ITEM m_columnCountCB;
 
-  PHB_ITEM m_getFieldCB;
-  PHB_ITEM m_getFieldDecorationCB;
-  PHB_ITEM m_getFieldEditCB;
-  PHB_ITEM m_getFieldToolTipCB;
-  PHB_ITEM m_getFieldStatusTipCB;
-  PHB_ITEM m_getFieldWhatsThisCB;
-  PHB_ITEM m_getFieldSizeHintCB;
-  PHB_ITEM m_getFieldFontCB;
-  PHB_ITEM m_getFieldAlignCB;
-  PHB_ITEM m_getFieldBGColorCB;
-  PHB_ITEM m_getFieldFGColorCB;
-  PHB_ITEM m_getFieldCheckStateCB;
+  PHB_ITEM m_itemDisplayCB;
+  PHB_ITEM m_itemDecorationCB;
+  PHB_ITEM m_itemEditCB;
+  PHB_ITEM m_itemToolTipCB;
+  PHB_ITEM m_itemStatusTipCB;
+  PHB_ITEM m_itemWhatsThisCB;
+  PHB_ITEM m_itemSizeHintCB;
+  PHB_ITEM m_itemFontCB;
+  PHB_ITEM m_itemTextAlignmentCB;
+  PHB_ITEM m_itemBackgroundCB;
+  PHB_ITEM m_itemForegroundCB;
+  PHB_ITEM m_itemCheckStateCB;
 
-  PHB_ITEM m_getHHCB;
-  PHB_ITEM m_getHHDecorationCB;
-  PHB_ITEM m_getHHFontCB;
-  PHB_ITEM m_getHHAlignCB;
-  PHB_ITEM m_getHHBGColorCB;
-  PHB_ITEM m_getHHFGColorCB;
+  PHB_ITEM m_horizontalHeaderDisplayCB;
+  PHB_ITEM m_horizontalHeaderDecorationCB;
+  PHB_ITEM m_horizontalHeaderFontCB;
+  PHB_ITEM m_horizontalHeaderTextAlignmentCB;
+  PHB_ITEM m_horizontalHeaderBackgroundCB;
+  PHB_ITEM m_horizontalHeaderForegroundCB;
 
-  PHB_ITEM m_getVHCB;
-  PHB_ITEM m_getVHDecorationCB;
-  PHB_ITEM m_getVHFontCB;
-  PHB_ITEM m_getVHAlignCB;
-  PHB_ITEM m_getVHBGColorCB;
-  PHB_ITEM m_getVHFGColorCB;
+  PHB_ITEM m_verticalHeaderDisplayCB;
+  PHB_ITEM m_verticalHeaderDecorationCB;
+  PHB_ITEM m_verticalHeaderFontCB;
+  PHB_ITEM m_verticalHeaderTextAlignmentCB;
+  PHB_ITEM m_verticalHeaderBackgroundCB;
+  PHB_ITEM m_verticalHeaderForegroundCB;
 
   PHB_ITEM m_flagsCB;
   PHB_ITEM m_setDataCB;
