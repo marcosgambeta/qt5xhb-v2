@@ -32,6 +32,8 @@ CLASS HAbstractTableModel INHERIT QAbstractTableModel
    METHOD setBackgroundRoleCB
    METHOD setForegroundRoleCB
    METHOD setCheckStateRoleCB
+   METHOD setAccessibleTextRoleCB
+   METHOD setAccessibleDescriptionRoleCB
 
    METHOD setHorizontalHeaderDisplayRoleCB
    METHOD setHorizontalHeaderDecorationRoleCB
@@ -472,6 +474,58 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETCHECKSTATEROLECB )
     {
 #endif
       obj->setCheckStateRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setAccessibleTextRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETACCESSIBLETEXTROLECB )
+{
+  auto obj = qobject_cast< HAbstractTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setAccessibleTextRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setAccessibleDescriptionRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETACCESSIBLEDESCRIPTIONROLECB )
+{
+  auto obj = qobject_cast< HAbstractTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setAccessibleDescriptionRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

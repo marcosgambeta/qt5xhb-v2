@@ -46,6 +46,8 @@ private:
   PHB_ITEM m_itemBackgroundCB;
   PHB_ITEM m_itemForegroundCB;
   PHB_ITEM m_itemCheckStateCB;
+  PHB_ITEM m_itemAccessibleTextCB;
+  PHB_ITEM m_itemAccessibleDescriptionCB;
 
   PHB_ITEM m_horizontalHeaderDisplayCB;
   PHB_ITEM m_horizontalHeaderDecorationCB;
@@ -80,6 +82,8 @@ public:
   void setBackgroundRoleCB( PHB_ITEM block );
   void setForegroundRoleCB( PHB_ITEM block );
   void setCheckStateRoleCB( PHB_ITEM block );
+  void setAccessibleTextRoleCB( PHB_ITEM block );
+  void setAccessibleDescriptionRoleCB( PHB_ITEM block );
 
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );

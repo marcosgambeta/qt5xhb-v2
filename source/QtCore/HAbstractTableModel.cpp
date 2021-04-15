@@ -30,6 +30,8 @@ HAbstractTableModel::HAbstractTableModel( QObject * parent ) : QAbstractTableMod
   m_itemBackgroundCB = nullptr;
   m_itemForegroundCB = nullptr;
   m_itemCheckStateCB = nullptr;
+  m_itemAccessibleTextCB = nullptr;
+  m_itemAccessibleDescriptionCB = nullptr;
 
   // cabeçalho horizontal
   m_horizontalHeaderDisplayCB = nullptr;
@@ -128,6 +130,16 @@ HAbstractTableModel::~HAbstractTableModel()
   {
     hb_itemRelease( m_itemCheckStateCB );
     m_itemCheckStateCB = nullptr;
+  }
+  if( m_itemAccessibleTextCB != nullptr )
+  {
+    hb_itemRelease( m_itemAccessibleTextCB );
+    m_itemAccessibleTextCB = nullptr;
+  }
+  if( m_itemAccessibleDescriptionCB != nullptr )
+  {
+    hb_itemRelease( m_itemAccessibleDescriptionCB );
+    m_itemAccessibleDescriptionCB = nullptr;
   }
 
   // cabeçalho horizontal
@@ -417,6 +429,36 @@ void HAbstractTableModel::setCheckStateRoleCB( PHB_ITEM block )
 }
 
 /*
+  define o codeblock para o accessibleText da célula
+*/
+void HAbstractTableModel::setAccessibleTextRoleCB( PHB_ITEM block )
+{
+  if( m_itemAccessibleTextCB != nullptr )
+  {
+    hb_itemRelease( m_itemAccessibleTextCB );
+  }
+  if( block != nullptr )
+  {
+    m_itemAccessibleTextCB = hb_itemNew( block );
+  }
+}
+
+/*
+  define o codeblock para o accessibleDescription da célula
+*/
+void HAbstractTableModel::setAccessibleDescriptionRoleCB( PHB_ITEM block )
+{
+  if( m_itemAccessibleDescriptionCB != nullptr )
+  {
+    hb_itemRelease( m_itemAccessibleDescriptionCB );
+  }
+  if( block != nullptr )
+  {
+    m_itemAccessibleDescriptionCB = hb_itemNew( block );
+  }
+}
+
+/*
   define o codeblock para o conteúdo do cabeçalho horizontal
 */
 void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
@@ -648,47 +690,49 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
         PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
         PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
         PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemDisplayCB, 2, pRow, pCol ) );
-        if( hb_itemType( pRet ) & HB_IT_STRING )
+        switch( hb_itemType( pRet ) )
         {
-          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-          data = QLatin1String( hb_itemGetCPtr( pRet ) );
-          #else
-          data = hb_itemGetCPtr( pRet );
-          #endif
-        }
-        else if( hb_itemType( pRet ) & HB_IT_MEMO )
-        {
-          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-          data = QLatin1String( hb_itemGetCPtr( pRet ) );
-          #else
-          data = hb_itemGetCPtr( pRet );
-          #endif
-        }
-        else if( hb_itemType( pRet ) & HB_IT_DOUBLE )
-        {
-          data = hb_itemGetND( pRet );
-        }
-        else if( hb_itemType( pRet ) & HB_IT_NUMERIC )
-        {
-          data = hb_itemGetNI( pRet );
-        }
-        else if( hb_itemType( pRet ) & HB_IT_LOGICAL )
-        {
-          data = hb_itemGetL( pRet );
-        }
-        else if( hb_itemType( pRet ) & HB_IT_DATE )
-        {
-          int y,m,d;
-          hb_dateDecode( hb_itemGetDL( pRet ), &y, &m, &d );
-          QDate date(y,m,d);
-          data = date;
-        }
-        else if( hb_itemType( pRet ) & HB_IT_OBJECT )
-        {
-          void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-          if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
+          case HB_IT_STRING:
+          case HB_IT_MEMO:
           {
-            data = *( static_cast< QVariant * >( ptr ) );
+            #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+            data = QLatin1String( hb_itemGetCPtr( pRet ) );
+            #else
+            data = hb_itemGetCPtr( pRet );
+            #endif
+            break;
+          }
+          case HB_IT_DOUBLE:
+          {
+            data = hb_itemGetND( pRet );
+            break;
+          }
+          case HB_IT_NUMERIC:
+          {
+            data = hb_itemGetNI( pRet );
+            break;
+          }
+          case HB_IT_LOGICAL:
+          {
+            data = hb_itemGetL( pRet );
+            break;
+          }
+          case HB_IT_DATE:
+          {
+            int y,m,d;
+            hb_dateDecode( hb_itemGetDL( pRet ), &y, &m, &d );
+            QDate date(y,m,d);
+            data = date;
+            break;
+          }
+          case HB_IT_OBJECT:
+          {
+            void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+            if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
+            {
+              data = *( static_cast< QVariant * >( ptr ) );
+            }
+            break;
           }
         }
         hb_itemRelease( pRow );
@@ -933,6 +977,48 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
        hb_itemRelease( pRow );
        hb_itemRelease( pCol );
        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::AccessibleTextRole:
+    {
+      if( m_itemAccessibleTextCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemAccessibleTextCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+          #endif
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
+      }
+      break;
+    }
+    case Qt::AccessibleDescriptionRole:
+    {
+      if( m_itemAccessibleDescriptionCB != nullptr )
+      {
+        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+        PHB_ITEM pCol = hb_itemPutNI( nullptr, index.column() );
+        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemAccessibleDescriptionCB, 2, pRow, pCol ) );
+        if( hb_itemType( pRet ) & HB_IT_STRING )
+        {
+          #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+          data = QLatin1String( hb_itemGetCPtr( pRet ) );
+          #else
+          data = hb_itemGetCPtr( pRet );
+          #endif
+        }
+        hb_itemRelease( pRow );
+        hb_itemRelease( pCol );
+        hb_itemRelease( pRet );
       }
       break;
     }
