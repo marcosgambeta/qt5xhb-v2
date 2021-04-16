@@ -722,11 +722,11 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    if( hb_param( 1, HB_IT_DOUBLE ) != NULL )
+    if( hb_param( 1, HB_IT_DOUBLE ) != nullptr )
     {
       HB_FUNC_EXEC( QVARIANT_NEW12 );
     }
-    else if( hb_param( 1, HB_IT_LONG ) != NULL )
+    else if( hb_param( 1, HB_IT_LONG ) != nullptr )
     {
       HB_FUNC_EXEC( QVARIANT_NEW9 );
     }
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   {
     QVariant_new4();
   }
-  else if( ISNUMPAR( 1 ) && hb_param( 1, HB_IT_DATE ) != NULL )
+  else if( ISNUMPAR( 1 ) && hb_param( 1, HB_IT_DATE ) != nullptr )
   {
     int y, m, d;
     hb_dateDecode( hb_itemGetDL( hb_param( 1, HB_IT_DATE ) ), &y, &m, &d );
