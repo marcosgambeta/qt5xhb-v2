@@ -9,6 +9,12 @@ rem
 hbmk2 HAbstractListModel1     %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractListModel2     %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractListModel3     %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel4     %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel5     %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModelV21  %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModelV22  %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModelV23  %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModelV24  %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModel1    %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModel2    %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModel3    %1 %2 %3 ..\..\qt5xhb.hbc
