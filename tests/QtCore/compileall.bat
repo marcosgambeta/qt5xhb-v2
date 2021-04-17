@@ -28,6 +28,9 @@ hbmk2 HAbstractTableModel10   %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModel11   %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModel12   %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModel13   %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractTableModel14   %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractTableModel15   %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractTableModel16   %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModelV21  %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModelV22  %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractTableModelV23  %1 %2 %3 ..\..\qt5xhb.hbc
