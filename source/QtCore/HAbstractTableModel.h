@@ -51,6 +51,8 @@ private:
 
   PHB_ITEM m_horizontalHeaderDisplayCB;
   PHB_ITEM m_horizontalHeaderDecorationCB;
+  PHB_ITEM m_horizontalHeaderToolTipCB;
+  PHB_ITEM m_horizontalHeaderSizeHintCB;
   PHB_ITEM m_horizontalHeaderFontCB;
   PHB_ITEM m_horizontalHeaderTextAlignmentCB;
   PHB_ITEM m_horizontalHeaderBackgroundCB;
@@ -58,6 +60,8 @@ private:
 
   PHB_ITEM m_verticalHeaderDisplayCB;
   PHB_ITEM m_verticalHeaderDecorationCB;
+  PHB_ITEM m_verticalHeaderToolTipCB;
+  PHB_ITEM m_verticalHeaderSizeHintCB;
   PHB_ITEM m_verticalHeaderFontCB;
   PHB_ITEM m_verticalHeaderTextAlignmentCB;
   PHB_ITEM m_verticalHeaderBackgroundCB;
@@ -87,6 +91,8 @@ public:
 
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );
+  void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block );
+  void setHorizontalHeaderSizeHintRoleCB( PHB_ITEM block );
   void setHorizontalHeaderFontRoleCB( PHB_ITEM block );
   void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block );
   void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block );
@@ -94,6 +100,8 @@ public:
 
   void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );
   void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );
+  void setVerticalHeaderToolTipRoleCB( PHB_ITEM block );
+  void setVerticalHeaderSizeHintRoleCB( PHB_ITEM block );
   void setVerticalHeaderFontRoleCB( PHB_ITEM block );
   void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block );
   void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block );
