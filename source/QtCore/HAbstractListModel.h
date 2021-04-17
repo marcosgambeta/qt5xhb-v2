@@ -64,10 +64,10 @@ private:
   PHB_ITEM m_horizontalHeaderDisplayCB;       // Qt::DisplayRole
   PHB_ITEM m_horizontalHeaderDecorationCB;    // Qt::DecorationRole
                                               // Qt::EditRole
-                                              // Qt::ToolTipRole
+  PHB_ITEM m_horizontalHeaderToolTipCB;       // Qt::ToolTipRole
                                               // Qt::StatusTipRole
                                               // Qt::WhatsThisRole
-                                              // Qt::SizeHintRole
+  PHB_ITEM m_horizontalHeaderSizeHintCB;      // Qt::SizeHintRole
   PHB_ITEM m_horizontalHeaderFontCB;          // Qt::FontRole
   PHB_ITEM m_horizontalHeaderTextAlignmentCB; // Qt::TextAlignmentRole
   PHB_ITEM m_horizontalHeaderBackgroundCB;    // Qt::BackgroundRole / Qt::BackgroundColorRole
@@ -83,10 +83,10 @@ private:
   PHB_ITEM m_verticalHeaderDisplayCB;       // Qt::DisplayRole
   PHB_ITEM m_verticalHeaderDecorationCB;    // Qt::DecorationRole
                                             // Qt::EditRole
-                                            // Qt::ToolTipRole
+  PHB_ITEM m_verticalHeaderToolTipCB;       // Qt::ToolTipRole
                                             // Qt::StatusTipRole
                                             // Qt::WhatsThisRole
-                                            // Qt::SizeHintRole
+  PHB_ITEM m_verticalHeaderSizeHintCB;      // Qt::SizeHintRole
   PHB_ITEM m_verticalHeaderFontCB;          // Qt::FontRole
   PHB_ITEM m_verticalHeaderTextAlignmentCB; // Qt::TextAlignmentRole
   PHB_ITEM m_verticalHeaderBackgroundCB;    // Qt::BackgroundRole / Qt::BackgroundColorRole
@@ -132,10 +132,10 @@ public:
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );       // Qt::DisplayRole
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );    // Qt::DecorationRole
                                                                  // Qt::EditRole
-                                                                 // Qt::ToolTipRole
+  void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block );       // Qt::ToolTipRole
                                                                  // Qt::StatusTipRole
                                                                  // Qt::WhatsThisRole
-                                                                 // Qt::SizeHintRole
+  void setHorizontalHeaderSizeHintRoleCB( PHB_ITEM block );      // Qt::SizeHintRole
   void setHorizontalHeaderFontRoleCB( PHB_ITEM block );          // Qt::FontRole
   void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block ); // Qt::TextAlignmentRole
   void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block );    // Qt::BackgroundRole / Qt::BackgroundColorRole
@@ -151,10 +151,10 @@ public:
   void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );         // Qt::DisplayRole
   void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );      // Qt::DecorationRole
                                                                  // Qt::EditRole
-                                                                 // Qt::ToolTipRole
+  void setVerticalHeaderToolTipRoleCB( PHB_ITEM block );         // Qt::ToolTipRole
                                                                  // Qt::StatusTipRole
                                                                  // Qt::WhatsThisRole
-                                                                 // Qt::SizeHintRole
+  void setVerticalHeaderSizeHintRoleCB( PHB_ITEM block );        // Qt::SizeHintRole
   void setVerticalHeaderFontRoleCB( PHB_ITEM block );            // Qt::FontRole
   void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block );   // Qt::TextAlignmentRole
   void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block );      // Qt::BackgroundRole / Qt::BackgroundColorRole

@@ -32,6 +32,8 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
 
    METHOD setHorizontalHeaderDisplayRoleCB
    METHOD setHorizontalHeaderDecorationRoleCB
+   METHOD setHorizontalHeaderToolTipRoleCB
+   METHOD setHorizontalHeaderSizeHintRoleCB
    METHOD setHorizontalHeaderFontRoleCB
    METHOD setHorizontalHeaderTextAlignmentRoleCB
    METHOD setHorizontalHeaderBackgroundRoleCB
@@ -39,6 +41,8 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
 
    METHOD setVerticalHeaderDisplayRoleCB
    METHOD setVerticalHeaderDecorationRoleCB
+   METHOD setVerticalHeaderToolTipRoleCB
+   METHOD setVerticalHeaderSizeHintRoleCB
    METHOD setVerticalHeaderFontRoleCB
    METHOD setVerticalHeaderTextAlignmentRoleCB
    METHOD setVerticalHeaderBackgroundRoleCB
@@ -568,6 +572,58 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
 }
 
 /*
+void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTOOLTIPROLECB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setHorizontalHeaderToolTipRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setHorizontalHeaderSizeHintRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERSIZEHINTROLECB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setHorizontalHeaderSizeHintRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
 void setHorizontalHeaderFontRoleCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB )
@@ -715,6 +771,58 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB )
     {
 #endif
       obj->setVerticalHeaderDecorationRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderToolTipRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTOOLTIPROLECB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setVerticalHeaderToolTipRoleCB( PBLOCKORSYMBOL( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setVerticalHeaderSizeHintRoleCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERSIZEHINTROLECB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ( HB_ISBLOCK( 1 ) || HB_ISSYMBOL( 1 ) ) )
+    {
+#endif
+      obj->setVerticalHeaderSizeHintRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
