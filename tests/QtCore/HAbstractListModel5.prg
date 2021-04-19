@@ -53,7 +53,7 @@ PROCEDURE Main()
       ENDIF
       } ) // grava conteúdo da linha se não for vazio
 
-   oView := QTableView():new( oWindow )
+   oView := QListView():new( oWindow )
    oView:move( 10, 10 )
    oView:resize( 800 - 20, 600 - 20 )
    oView:setModel( oModel )
