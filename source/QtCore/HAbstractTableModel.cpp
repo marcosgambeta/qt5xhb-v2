@@ -273,6 +273,58 @@ void HAbstractTableModel::setColumnCountCB( PHB_ITEM block )
 }
 
 /*
+  define o codeblock para o conteúdo da célula, conforme o 'role'
+*/
+void HAbstractTableModel::setCB( int role, PHB_ITEM block )
+{
+  switch( role )
+  {
+    case Qt::DisplayRole:
+      setDisplayRoleCB( block );
+      break;
+    case Qt::DecorationRole:
+      setDecorationRoleCB( block );
+      break;
+    case Qt::EditRole:
+      setEditRoleCB( block );
+      break;
+    case Qt::ToolTipRole:
+      setToolTipRoleCB( block );
+      break;
+    case Qt::StatusTipRole:
+      setStatusTipRoleCB( block );
+      break;
+    case Qt::WhatsThisRole:
+      setWhatsThisRoleCB( block );
+      break;
+    case Qt::SizeHintRole:
+      setSizeHintRoleCB( block );
+      break;
+    case Qt::FontRole:
+      setFontRoleCB( block );
+      break;
+    case Qt::TextAlignmentRole:
+      setTextAlignmentRoleCB( block );
+      break;
+    case Qt::BackgroundRole:
+      setBackgroundRoleCB( block );
+      break;
+    case Qt::ForegroundRole:
+      setForegroundRoleCB( block );
+      break;
+    case Qt::CheckStateRole:
+      setCheckStateRoleCB( block );
+      break;
+    case Qt::AccessibleTextRole:
+      setAccessibleTextRoleCB( block );
+      break;
+    case Qt::AccessibleDescriptionRole:
+      setAccessibleDescriptionRoleCB( block );
+      break;
+  }
+}
+
+/*
   define o codeblock para o conteúdo da célula
 */
 void HAbstractTableModel::setDisplayRoleCB( PHB_ITEM block )
@@ -483,6 +535,40 @@ void HAbstractTableModel::setAccessibleDescriptionRoleCB( PHB_ITEM block )
 }
 
 /*
+  define o codeblock para o conteúdo do cabeçalho horizontal, conforme o 'role'
+*/
+void HAbstractTableModel::setHorizontalHeaderCB( int role, PHB_ITEM block )
+{
+  switch( role )
+  {
+    case Qt::DisplayRole:
+      setHorizontalHeaderDisplayRoleCB( block );
+      break;
+    case Qt::DecorationRole:
+      setHorizontalHeaderDecorationRoleCB( block );
+      break;
+    case Qt::ToolTipRole:
+      setHorizontalHeaderToolTipRoleCB( block );
+      break;
+    case Qt::SizeHintRole:
+      setHorizontalHeaderSizeHintRoleCB( block );
+      break;
+    case Qt::FontRole:
+      setHorizontalHeaderFontRoleCB( block );
+      break;
+    case Qt::TextAlignmentRole:
+      setHorizontalHeaderTextAlignmentRoleCB( block );
+      break;
+    case Qt::BackgroundRole:
+      setHorizontalHeaderBackgroundRoleCB( block );
+      break;
+    case Qt::ForegroundRole:
+      setHorizontalHeaderForegroundRoleCB( block );
+      break;
+  }
+}
+
+/*
   define o codeblock para o conteúdo do cabeçalho horizontal
 */
 void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
@@ -599,6 +685,40 @@ void HAbstractTableModel::setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
   if( block != nullptr )
   {
     m_horizontalHeaderForegroundCB = hb_itemNew( block );
+  }
+}
+
+/*
+  define o codeblock para o conteúdo do cabeçalho vertical, conforme o 'role'
+*/
+void HAbstractTableModel::setVerticalHeaderCB( int role, PHB_ITEM block )
+{
+  switch( role )
+  {
+    case Qt::DisplayRole:
+      setVerticalHeaderDisplayRoleCB( block );
+      break;
+    case Qt::DecorationRole:
+      setVerticalHeaderDecorationRoleCB( block );
+      break;
+    case Qt::ToolTipRole:
+      setVerticalHeaderToolTipRoleCB( block );
+      break;
+    case Qt::SizeHintRole:
+      setVerticalHeaderSizeHintRoleCB( block );
+      break;
+    case Qt::FontRole:
+      setVerticalHeaderFontRoleCB( block );
+      break;
+    case Qt::TextAlignmentRole:
+      setVerticalHeaderTextAlignmentRoleCB( block );
+      break;
+    case Qt::BackgroundRole:
+      setVerticalHeaderBackgroundRoleCB( block );
+      break;
+    case Qt::ForegroundRole:
+      setVerticalHeaderForegroundRoleCB( block );
+      break;
   }
 }
 
@@ -1234,15 +1354,15 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
         {
           if( m_horizontalHeaderSizeHintCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderSizeHintCB, 1, pRow ) );
+            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderSizeHintCB, 1, pCol ) );
             if( hb_itemType( pRet ) & HB_IT_OBJECT )
             {
               void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
               data = *( static_cast< QSize * >( ptr ) );
               ptr = nullptr;
             }
-            hb_itemRelease( pRow );
+            hb_itemRelease( pCol );
             hb_itemRelease( pRet );
           }
           break;
@@ -1421,8 +1541,8 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
         {
           if( m_verticalHeaderToolTipCB != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderToolTipCB, 1, pCol ) );
+            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
+            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderToolTipCB, 1, pRow ) );
             if( hb_itemType( pRet ) & HB_IT_STRING )
             {
               #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -1431,7 +1551,7 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
               data = hb_itemGetCPtr( pRet );
               #endif
             }
-            hb_itemRelease( pCol );
+            hb_itemRelease( pRow );
             hb_itemRelease( pRet );
           }
           break;

@@ -74,6 +74,7 @@ public:
   void setRowCountCB( PHB_ITEM block );
   void setColumnCountCB( PHB_ITEM block );
 
+  void setCB( int role, PHB_ITEM block );
   void setDisplayRoleCB( PHB_ITEM block );
   void setDecorationRoleCB( PHB_ITEM block );
   void setEditRoleCB( PHB_ITEM block );
@@ -89,6 +90,7 @@ public:
   void setAccessibleTextRoleCB( PHB_ITEM block );
   void setAccessibleDescriptionRoleCB( PHB_ITEM block );
 
+  void setHorizontalHeaderCB( int role, PHB_ITEM block );
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );
   void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block );
@@ -98,6 +100,7 @@ public:
   void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block );
   void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block );
 
+  void setVerticalHeaderCB( int role, PHB_ITEM block );
   void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );
   void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );
   void setVerticalHeaderToolTipRoleCB( PHB_ITEM block );
