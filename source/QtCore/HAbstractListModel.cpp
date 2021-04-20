@@ -213,6 +213,58 @@ void HAbstractListModel::setRowCountCB( PHB_ITEM block )
 
 // células
 
+/*
+  define o codeblock para o conteúdo da célula, conforme o 'role'
+*/
+void HAbstractListModel::setCB( int role, PHB_ITEM block )
+{
+  switch( role )
+  {
+    case Qt::DisplayRole:
+      setDisplayRoleCB( block );
+      break;
+    case Qt::DecorationRole:
+      setDecorationRoleCB( block );
+      break;
+    case Qt::EditRole:
+      setEditRoleCB( block );
+      break;
+    case Qt::ToolTipRole:
+      setToolTipRoleCB( block );
+      break;
+    case Qt::StatusTipRole:
+      setStatusTipRoleCB( block );
+      break;
+    case Qt::WhatsThisRole:
+      setWhatsThisRoleCB( block );
+      break;
+    case Qt::SizeHintRole:
+      setSizeHintRoleCB( block );
+      break;
+    case Qt::FontRole:
+      setFontRoleCB( block );
+      break;
+    case Qt::TextAlignmentRole:
+      setTextAlignmentRoleCB( block );
+      break;
+    case Qt::BackgroundRole:
+      setBackgroundRoleCB( block );
+      break;
+    case Qt::ForegroundRole:
+      setForegroundRoleCB( block );
+      break;
+    case Qt::CheckStateRole:
+      setCheckStateRoleCB( block );
+      break;
+    case Qt::AccessibleTextRole:
+      setAccessibleTextRoleCB( block );
+      break;
+    case Qt::AccessibleDescriptionRole:
+      setAccessibleDescriptionRoleCB( block );
+      break;
+  }
+}
+
 void HAbstractListModel::setDisplayRoleCB( PHB_ITEM block )
 {
   if( m_itemDisplayCB != nullptr )
@@ -383,6 +435,40 @@ void HAbstractListModel::setAccessibleDescriptionRoleCB( PHB_ITEM block )
 
 // cabeçalho horizontal
 
+/*
+  define o codeblock para o conteúdo do cabeçalho horizontal, conforme o 'role'
+*/
+void HAbstractListModel::setHorizontalHeaderCB( int role, PHB_ITEM block )
+{
+  switch( role )
+  {
+    case Qt::DisplayRole:
+      setHorizontalHeaderDisplayRoleCB( block );
+      break;
+    case Qt::DecorationRole:
+      setHorizontalHeaderDecorationRoleCB( block );
+      break;
+    case Qt::ToolTipRole:
+      setHorizontalHeaderToolTipRoleCB( block );
+      break;
+    case Qt::SizeHintRole:
+      setHorizontalHeaderSizeHintRoleCB( block );
+      break;
+    case Qt::FontRole:
+      setHorizontalHeaderFontRoleCB( block );
+      break;
+    case Qt::TextAlignmentRole:
+      setHorizontalHeaderTextAlignmentRoleCB( block );
+      break;
+    case Qt::BackgroundRole:
+      setHorizontalHeaderBackgroundRoleCB( block );
+      break;
+    case Qt::ForegroundRole:
+      setHorizontalHeaderForegroundRoleCB( block );
+      break;
+  }
+}
+
 void HAbstractListModel::setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 {
   if( m_horizontalHeaderDisplayCB != nullptr )
@@ -479,6 +565,40 @@ void HAbstractListModel::setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
 }
 
 // cabeçalho vertical
+
+/*
+  define o codeblock para o conteúdo do cabeçalho vertical, conforme o 'role'
+*/
+void HAbstractListModel::setVerticalHeaderCB( int role, PHB_ITEM block )
+{
+  switch( role )
+  {
+    case Qt::DisplayRole:
+      setVerticalHeaderDisplayRoleCB( block );
+      break;
+    case Qt::DecorationRole:
+      setVerticalHeaderDecorationRoleCB( block );
+      break;
+    case Qt::ToolTipRole:
+      setVerticalHeaderToolTipRoleCB( block );
+      break;
+    case Qt::SizeHintRole:
+      setVerticalHeaderSizeHintRoleCB( block );
+      break;
+    case Qt::FontRole:
+      setVerticalHeaderFontRoleCB( block );
+      break;
+    case Qt::TextAlignmentRole:
+      setVerticalHeaderTextAlignmentRoleCB( block );
+      break;
+    case Qt::BackgroundRole:
+      setVerticalHeaderBackgroundRoleCB( block );
+      break;
+    case Qt::ForegroundRole:
+      setVerticalHeaderForegroundRoleCB( block );
+      break;
+  }
+}
 
 void HAbstractListModel::setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
 {

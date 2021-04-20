@@ -15,6 +15,7 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
 
    METHOD setRowCountCB
 
+   METHOD setCB
    METHOD setDisplayRoleCB
    METHOD setDecorationRoleCB
    METHOD setEditRoleCB
@@ -30,6 +31,7 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
    METHOD setAccessibleTextRoleCB
    METHOD setAccessibleDescriptionRoleCB
 
+   METHOD setHorizontalHeaderCB
    METHOD setHorizontalHeaderDisplayRoleCB
    METHOD setHorizontalHeaderDecorationRoleCB
    METHOD setHorizontalHeaderToolTipRoleCB
@@ -39,6 +41,7 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
    METHOD setHorizontalHeaderBackgroundRoleCB
    METHOD setHorizontalHeaderForegroundRoleCB
 
+   METHOD setVerticalHeaderCB
    METHOD setVerticalHeaderDisplayRoleCB
    METHOD setVerticalHeaderDecorationRoleCB
    METHOD setVerticalHeaderToolTipRoleCB
@@ -150,6 +153,32 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETROWCOUNTCB )
 /*
   células
 */
+
+/*
+void setCB( int role, PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETCB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ( HB_ISBLOCK( 2 ) || HB_ISSYMBOL( 2 ) ) )
+    {
+#endif
+      obj->setCB( PINT( 1 ), PBLOCKORSYMBOL( 2 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 /*
 void setDisplayRoleCB( PHB_ITEM block )
@@ -520,6 +549,32 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETACCESSIBLEDESCRIPTIONROLECB )
 */
 
 /*
+void setHorizontalHeaderCB( int role, PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERCB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ( HB_ISBLOCK( 2 ) || HB_ISSYMBOL( 2 ) ) )
+    {
+#endif
+      obj->setHorizontalHeaderCB( PINT( 1 ), PBLOCKORSYMBOL( 2 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
 void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
@@ -730,6 +785,32 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
 /*
   cabeçalho vertical
 */
+
+/*
+void setverticalHeaderCB( int role, PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERCB )
+{
+  auto obj = qobject_cast< HAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ( HB_ISBLOCK( 2 ) || HB_ISSYMBOL( 2 ) ) )
+    {
+#endif
+      obj->setVerticalHeaderCB( PINT( 1 ), PBLOCKORSYMBOL( 2 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 /*
 void setVerticalHeaderDisplayRoleCB( PHB_ITEM block )

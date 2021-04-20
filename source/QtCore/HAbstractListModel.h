@@ -110,6 +110,7 @@ public:
    células
   */
 
+  void setCB( int role, PHB_ITEM block );
   void setDisplayRoleCB( PHB_ITEM block );                       // Qt::DisplayRole
   void setDecorationRoleCB( PHB_ITEM block );                    // Qt::DecorationRole
   void setEditRoleCB( PHB_ITEM block );                          // Qt::EditRole
@@ -129,6 +130,7 @@ public:
    cabeçalho horizontal
   */
 
+  void setHorizontalHeaderCB( int role, PHB_ITEM block );
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );       // Qt::DisplayRole
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );    // Qt::DecorationRole
                                                                  // Qt::EditRole
@@ -148,6 +150,7 @@ public:
    cabeçalho vertical
   */
 
+  void setVerticalHeaderCB( int role, PHB_ITEM block );
   void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );         // Qt::DisplayRole
   void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );      // Qt::DecorationRole
                                                                  // Qt::EditRole
