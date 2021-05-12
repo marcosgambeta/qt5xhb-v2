@@ -755,7 +755,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
             data = hb_itemGetND( pRet );
             break;
           }
-          case HB_IT_NUMERIC:
+          case HB_IT_INTEGER:
+          case HB_IT_LONG:
           {
             data = hb_itemGetNI( pRet );
             break;
@@ -1087,7 +1088,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
                 data = hb_itemGetND( pRet );
                 break;
               }
-              case HB_IT_NUMERIC:
+              case HB_IT_INTEGER:
+              case HB_IT_LONG:
               {
                 data = hb_itemGetNI( pRet );
                 break;
@@ -1288,7 +1290,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
                 data = hb_itemGetND( pRet );
                 break;
               }
-              case HB_IT_NUMERIC:
+              case HB_IT_INTEGER:
+              case HB_IT_LONG:
               {
                 data = hb_itemGetNI( pRet );
                 break;
