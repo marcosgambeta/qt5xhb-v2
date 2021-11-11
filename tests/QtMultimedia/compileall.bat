@@ -6,5 +6,6 @@ rem
 rem Batch to compile all tests
 rem
 
-hbmk2 QCamera      %1 %2 %3 ..\..\qt5xhb.hbc
-hbmk2 QMediaPlayer %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 QCamera             %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 QCameraImageCapture %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 QMediaPlayer        %1 %2 %3 ..\..\qt5xhb.hbc
