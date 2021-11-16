@@ -17,7 +17,9 @@
 
 CLASS QModbusClient INHERIT QModbusDevice
 
+#if 0
    METHOD new
+#endif
    METHOD delete
    METHOD timeout
    METHOD numberOfRetries
@@ -59,6 +61,7 @@ RETURN
 /*
 QModbusClient( QObject * parent = nullptr )
 */
+#if 0
 HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -73,6 +76,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
   }
 #endif
 }
+#endif
 
 /*
 ~QModbusClient()

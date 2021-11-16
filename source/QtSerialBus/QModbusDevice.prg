@@ -17,7 +17,9 @@
 
 CLASS QModbusDevice INHERIT QObject
 
+#if 0
    METHOD new
+#endif
    METHOD delete
    METHOD connectDevice
    METHOD disconnectDevice
@@ -63,6 +65,7 @@ RETURN
 /*
 QModbusDevice( QObject * parent = nullptr )
 */
+#if 0
 HB_FUNC_STATIC( QMODBUSDEVICE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -77,6 +80,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_NEW )
   }
 #endif
 }
+#endif
 
 /*
 ~QModbusDevice()
