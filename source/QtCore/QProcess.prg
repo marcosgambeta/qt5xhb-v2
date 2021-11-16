@@ -1171,7 +1171,7 @@ void QProcess_startDetached3()
 }
 
 /*
-bool startDetached( qint64 *pid = nullptr )
+bool startDetached( qint64 * pid = nullptr )
 */
 void QProcess_startDetached4()
 {
@@ -1180,7 +1180,9 @@ void QProcess_startDetached4()
 
   if( obj != nullptr )
   {
-    RBOOL( obj->startDetached( OPQINT64( 1, nullptr ) ) );
+    qint64 par1;
+    RBOOL( obj->startDetached( &par1 ) );
+    hb_stornll( par1, 1 );
   }
 #endif
 }
@@ -1198,6 +1200,10 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QProcess_startDetached3();
+  }
+  else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+  {
+    QProcess_startDetached4();
   }
   else
   {
