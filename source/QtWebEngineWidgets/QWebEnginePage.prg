@@ -95,6 +95,7 @@ RETURN
 #endif
 #endif
 
+#include <QtNetwork/QAuthenticator>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
 

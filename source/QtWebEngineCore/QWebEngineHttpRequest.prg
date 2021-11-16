@@ -22,8 +22,7 @@ CLASS QWebEngineHttpRequest
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
+   METHOD new
    METHOD delete
    METHOD swap
    METHOD method
@@ -73,7 +72,7 @@ RETURN
 /*
 QWebEngineHttpRequest( const QUrl & url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get )
 */
-HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW1 )
+void QWebEngineHttpRequest_new1()
 {
   auto obj = new QWebEngineHttpRequest( HB_ISNIL( 1 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QWebEngineHttpRequest::Method >( QWebEngineHttpRequest::Get ) : static_cast< QWebEngineHttpRequest::Method >( hb_parni( 2 ) ) );
   Qt5xHb::returnNewObject( obj, true );
@@ -82,7 +81,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW1 )
 /*
 QWebEngineHttpRequest( const QWebEngineHttpRequest & other )
 */
-HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW2 )
+void QWebEngineHttpRequest_new2()
 {
   auto obj = new QWebEngineHttpRequest( *PQWEBENGINEHTTPREQUEST( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
@@ -94,7 +93,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
   {
     QWebEngineHttpRequest_new1();
   }
-  elseif( ISNUMPAR( 1 ) && ISQWEBENGINEHTTPREQUEST( 1 ) )
+  else if( ISNUMPAR( 1 ) && ISQWEBENGINEHTTPREQUEST( 1 ) )
   {
     QWebEngineHttpRequest_new2();
   }
