@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -598,45 +598,37 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-Q_INVOKABLE void commit()
-*/
-void QVirtualKeyboardInputContext_commit1()
-{
-  auto obj = qobject_cast< QVirtualKeyboardInputContext * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->commit();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-Q_INVOKABLE void commit( const QString & text, int replaceFrom = 0, int replaceLength = 0 )
-*/
-void QVirtualKeyboardInputContext_commit2()
-{
-  auto obj = qobject_cast< QVirtualKeyboardInputContext * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->commit( PQSTRING( 1 ), OPINT( 2, 0 ), OPINT( 3, 0 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVirtualKeyboardInputContext_commit1();
+    /*
+    Q_INVOKABLE void commit()
+    */
+    auto obj = qobject_cast< QVirtualKeyboardInputContext * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->commit();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QVirtualKeyboardInputContext_commit2();
+    /*
+    Q_INVOKABLE void commit( const QString & text, int replaceFrom = 0, int replaceLength = 0 )
+    */
+    auto obj = qobject_cast< QVirtualKeyboardInputContext * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->commit( PQSTRING( 1 ), OPINT( 2, 0 ), OPINT( 3, 0 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
