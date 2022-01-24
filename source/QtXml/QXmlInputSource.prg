@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,25 @@ RETURN
 #include <QtXml/QXmlInputSource>
 #endif
 
-/*
-QXmlInputSource()
-*/
-void QXmlInputSource_new1()
-{
-  auto obj = new QXmlInputSource();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlInputSource( QIODevice * dev )
-*/
-void QXmlInputSource_new2()
-{
-  auto obj = new QXmlInputSource( PQIODEVICE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlInputSource_new1();
+    /*
+    QXmlInputSource()
+    */
+    auto obj = new QXmlInputSource();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QXmlInputSource_new2();
+    /*
+    QXmlInputSource( QIODevice * dev )
+    */
+    auto obj = new QXmlInputSource( PQIODEVICE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -213,45 +205,37 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void setData( const QString & dat )
-*/
-void QXmlInputSource_setData1()
-{
-  auto obj = static_cast< QXmlInputSource * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setData( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void setData( const QByteArray & dat )
-*/
-void QXmlInputSource_setData2()
-{
-  auto obj = static_cast< QXmlInputSource * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setData( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlInputSource_setData1();
+    /*
+    virtual void setData( const QString & dat )
+    */
+    auto obj = static_cast< QXmlInputSource * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setData( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QXmlInputSource_setData2();
+    /*
+    virtual void setData( const QByteArray & dat )
+    */
+    auto obj = static_cast< QXmlInputSource * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setData( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

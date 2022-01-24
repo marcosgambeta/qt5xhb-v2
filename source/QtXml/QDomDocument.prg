@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -80,59 +80,43 @@ RETURN
 #include <QtXml/QDomDocument>
 #endif
 
-/*
-QDomDocument()
-*/
-void QDomDocument_new1()
-{
-  auto obj = new QDomDocument();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomDocument( const QString & name )
-*/
-void QDomDocument_new2()
-{
-  auto obj = new QDomDocument( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomDocument( const QDomDocumentType & doctype )
-*/
-void QDomDocument_new3()
-{
-  auto obj = new QDomDocument( *PQDOMDOCUMENTTYPE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomDocument( const QDomDocument & x )
-*/
-void QDomDocument_new4()
-{
-  auto obj = new QDomDocument( *PQDOMDOCUMENT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomDocument_new1();
+    /*
+    QDomDocument()
+    */
+    auto obj = new QDomDocument();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QDomDocument_new2();
+    /*
+    QDomDocument( const QString & name )
+    */
+    auto obj = new QDomDocument( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTTYPE( 1 ) )
   {
-    QDomDocument_new3();
+    /*
+    QDomDocument( const QDomDocumentType & doctype )
+    */
+    auto obj = new QDomDocument( *PQDOMDOCUMENTTYPE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENT( 1 ) )
   {
-    QDomDocument_new4();
+    /*
+    QDomDocument( const QDomDocument & x )
+    */
+    auto obj = new QDomDocument( *PQDOMDOCUMENT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -606,175 +590,143 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
   }
 }
 
-/*
-bool setContent( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent1()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par4;
-    int par5;
-    RBOOL( obj->setContent( *PQBYTEARRAY( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
-    hb_storni( par4, 4 );
-    hb_storni( par5, 5 );
-  }
-}
-
-/*
-bool setContent( const QString & text, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent2()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par4;
-    int par5;
-    RBOOL( obj->setContent( PQSTRING( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
-    hb_storni( par4, 4 );
-    hb_storni( par5, 5 );
-  }
-}
-
-/*
-bool setContent( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent3()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par4;
-    int par5;
-    RBOOL( obj->setContent( PQIODEVICE( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
-    hb_storni( par4, 4 );
-    hb_storni( par5, 5 );
-  }
-}
-
-/*
-bool setContent( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent4()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par4;
-    int par5;
-    RBOOL( obj->setContent( PQXMLINPUTSOURCE( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
-    hb_storni( par4, 4 );
-    hb_storni( par5, 5 );
-  }
-}
-
-/*
-bool setContent( const QString & text, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent5()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par3;
-    int par4;
-    RBOOL( obj->setContent( PQSTRING( 1 ), nullptr, &par3, &par4 ) );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-}
-
-/*
-bool setContent( const QByteArray & buffer, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent6()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par3;
-    int par4;
-    RBOOL( obj->setContent( *PQBYTEARRAY( 1 ), nullptr, &par3, &par4 ) );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-}
-
-/*
-bool setContent( QIODevice * dev, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent7()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par3;
-    int par4;
-    RBOOL( obj->setContent( PQIODEVICE( 1 ), nullptr, &par3, &par4 ) );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-}
-
-/*
-bool setContent( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
-*/
-void QDomDocument_setContent8()
-{
-  auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par4;
-    int par5;
-    RBOOL( obj->setContent( PQXMLINPUTSOURCE( 1 ), PQXMLREADER( 2 ), nullptr, &par4, &par5 ) );
-    hb_storni( par4, 4 );
-    hb_storni( par5, 5 );
-  }
-}
-
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
   if( ISBETWEEN( 2, 5 ) && ISQBYTEARRAY( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QDomDocument_setContent1();
+    /*
+    bool setContent( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par4;
+      int par5;
+      RBOOL( obj->setContent( *PQBYTEARRAY( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
+      hb_storni( par4, 4 );
+      hb_storni( par5, 5 );
+    }
+
   }
   else if( ISBETWEEN( 2, 5 ) && HB_ISCHAR( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QDomDocument_setContent2();
+    /*
+    bool setContent( const QString & text, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par4;
+      int par5;
+      RBOOL( obj->setContent( PQSTRING( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
+      hb_storni( par4, 4 );
+      hb_storni( par5, 5 );
+    }
+
   }
   else if( ISBETWEEN( 2, 5 ) && ISQIODEVICE( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QDomDocument_setContent3();
+    /*
+    bool setContent( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par4;
+      int par5;
+      RBOOL( obj->setContent( PQIODEVICE( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
+      hb_storni( par4, 4 );
+      hb_storni( par5, 5 );
+    }
+
   }
   else if( ISBETWEEN( 2, 5 ) && ISQXMLINPUTSOURCE( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QDomDocument_setContent4();
+    /*
+    bool setContent( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par4;
+      int par5;
+      RBOOL( obj->setContent( PQXMLINPUTSOURCE( 1 ), PBOOL( 2 ), nullptr, &par4, &par5 ) );
+      hb_storni( par4, 4 );
+      hb_storni( par5, 5 );
+    }
+
   }
   else if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDomDocument_setContent5();
+    /*
+    bool setContent( const QString & text, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par3;
+      int par4;
+      RBOOL( obj->setContent( PQSTRING( 1 ), nullptr, &par3, &par4 ) );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
+    }
+
   }
   else if( ISBETWEEN( 1, 4 ) && ISQBYTEARRAY( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDomDocument_setContent6();
+    /*
+    bool setContent( const QByteArray & buffer, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par3;
+      int par4;
+      RBOOL( obj->setContent( *PQBYTEARRAY( 1 ), nullptr, &par3, &par4 ) );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
+    }
+
   }
   else if( ISBETWEEN( 1, 4 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDomDocument_setContent7();
+    /*
+    bool setContent( QIODevice * dev, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par3;
+      int par4;
+      RBOOL( obj->setContent( PQIODEVICE( 1 ), nullptr, &par3, &par4 ) );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
+    }
+
   }
   else if( ISBETWEEN( 1, 4 ) && ISQXMLINPUTSOURCE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDomDocument_setContent8();
+    /*
+    bool setContent( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
+    */
+    auto obj = static_cast< QDomDocument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par4;
+      int par5;
+      RBOOL( obj->setContent( PQXMLINPUTSOURCE( 1 ), PQXMLREADER( 2 ), nullptr, &par4, &par5 ) );
+      hb_storni( par4, 4 );
+      hb_storni( par5, 5 );
+    }
+
   }
   else
   {

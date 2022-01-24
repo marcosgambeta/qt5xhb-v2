@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,33 +47,25 @@ RETURN
 #include <QtXml/QDomDocumentFragment>
 #endif
 
-/*
-QDomDocumentFragment()
-*/
-void QDomDocumentFragment_new1()
-{
-  auto obj = new QDomDocumentFragment();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomDocumentFragment( const QDomDocumentFragment & x )
-*/
-void QDomDocumentFragment_new2()
-{
-  auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomDocumentFragment_new1();
+    /*
+    QDomDocumentFragment()
+    */
+    auto obj = new QDomDocumentFragment();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTFRAGMENT( 1 ) )
   {
-    QDomDocumentFragment_new2();
+    /*
+    QDomDocumentFragment( const QDomDocumentFragment & x )
+    */
+    auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

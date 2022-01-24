@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -147,41 +147,33 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
   }
 }
 
-/*
-QStringList prefixes() const
-*/
-void QXmlNamespaceSupport_prefixes1()
-{
-  auto obj = static_cast< QXmlNamespaceSupport * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRINGLIST( obj->prefixes() );
-  }
-}
-
-/*
-QStringList prefixes( const QString & uri ) const
-*/
-void QXmlNamespaceSupport_prefixes2()
-{
-  auto obj = static_cast< QXmlNamespaceSupport * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRINGLIST( obj->prefixes( PQSTRING( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlNamespaceSupport_prefixes1();
+    /*
+    QStringList prefixes() const
+    */
+    auto obj = static_cast< QXmlNamespaceSupport * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRINGLIST( obj->prefixes() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlNamespaceSupport_prefixes2();
+    /*
+    QStringList prefixes( const QString & uri ) const
+    */
+    auto obj = static_cast< QXmlNamespaceSupport * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRINGLIST( obj->prefixes( PQSTRING( 1 ) ) );
+    }
+
   }
   else
   {

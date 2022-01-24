@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,33 +50,25 @@ RETURN
 #include <QtXml/QDomEntity>
 #endif
 
-/*
-QDomEntity()
-*/
-void QDomEntity_new1()
-{
-  auto obj = new QDomEntity();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomEntity( const QDomEntity & x )
-*/
-void QDomEntity_new2()
-{
-  auto obj = new QDomEntity( *PQDOMENTITY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomEntity_new1();
+    /*
+    QDomEntity()
+    */
+    auto obj = new QDomEntity();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDOMENTITY( 1 ) )
   {
-    QDomEntity_new2();
+    /*
+    QDomEntity( const QDomEntity & x )
+    */
+    auto obj = new QDomEntity( *PQDOMENTITY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,33 +49,25 @@ RETURN
 #include <QtXml/QDomNotation>
 #endif
 
-/*
-QDomNotation()
-*/
-void QDomNotation_new1()
-{
-  auto obj = new QDomNotation();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomNotation( const QDomNotation & x )
-*/
-void QDomNotation_new2()
-{
-  auto obj = new QDomNotation( *PQDOMNOTATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomNotation_new1();
+    /*
+    QDomNotation()
+    */
+    auto obj = new QDomNotation();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDOMNOTATION( 1 ) )
   {
-    QDomNotation_new2();
+    /*
+    QDomNotation( const QDomNotation & x )
+    */
+    auto obj = new QDomNotation( *PQDOMNOTATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
