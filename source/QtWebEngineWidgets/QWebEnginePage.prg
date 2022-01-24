@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -95,7 +95,6 @@ RETURN
 #endif
 #endif
 
-#include <QtNetwork/QAuthenticator>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
 
@@ -684,35 +683,29 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
 /*
 void runJavaScript( const QString & scriptSource )
 */
-void QWebEnginePage_runJavaScript1()
+HB_FUNC_STATIC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast< QWebEnginePage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
-    obj->runJavaScript( PQSTRING( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    {
+#endif
+      obj->runJavaScript( PQSTRING( 1 ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 #endif
-}
-
-/*
-[1]void runJavaScript(const QString& scriptSource)
-[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
-*/
-
-HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
-{
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
-  {
-    QWebEnginePage_runJavaScript1();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 /*
