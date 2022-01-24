@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,33 +82,25 @@ RETURN
 #include <QtSql/QSqlField>
 #endif
 
-/*
-QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
-*/
-void QSqlField_new1()
-{
-  auto obj = new QSqlField( OPQSTRING( 1, QString() ), HB_ISNIL( 2 ) ? static_cast< QVariant::Type >( QVariant::Invalid ) : static_cast< QVariant::Type >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSqlField( const QSqlField & other )
-*/
-void QSqlField_new2()
-{
-  auto obj = new QSqlField( *PQSQLFIELD( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSQLFIELD_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSqlField_new1();
+    /*
+    QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
+    */
+    auto obj = new QSqlField( OPQSTRING( 1, QString() ), HB_ISNIL( 2 ) ? static_cast< QVariant::Type >( QVariant::Invalid ) : static_cast< QVariant::Type >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSQLFIELD( 1 ) )
   {
-    QSqlField_new2();
+    /*
+    QSqlField( const QSqlField & other )
+    */
+    auto obj = new QSqlField( *PQSQLFIELD( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

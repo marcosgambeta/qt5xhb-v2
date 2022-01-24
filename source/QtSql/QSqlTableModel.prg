@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -298,41 +298,33 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
   }
 }
 
-/*
-bool isDirty() const
-*/
-void QSqlTableModel_isDirty1()
-{
-  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->isDirty() );
-  }
-}
-
-/*
-bool isDirty( const QModelIndex & index ) const
-*/
-void QSqlTableModel_isDirty2()
-{
-  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->isDirty( *PQMODELINDEX( 1 ) ) );
-  }
-}
-
 HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSqlTableModel_isDirty1();
+    /*
+    bool isDirty() const
+    */
+    auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->isDirty() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QSqlTableModel_isDirty2();
+    /*
+    bool isDirty( const QModelIndex & index ) const
+    */
+    auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->isDirty( *PQMODELINDEX( 1 ) ) );
+    }
+
   }
   else
   {
@@ -861,43 +853,35 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
   }
 }
 
-/*
-QSqlRecord record() const
-*/
-void QSqlTableModel_record1()
-{
-  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QSqlRecord( obj->record() );
-    Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
-  }
-}
-
-/*
-QSqlRecord record( int row ) const
-*/
-void QSqlTableModel_record2()
-{
-  auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QSqlRecord( obj->record( PINT( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
-  }
-}
-
 HB_FUNC( QSQLTABLEMODEL_RECORD )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSqlTableModel_record1();
+    /*
+    QSqlRecord record() const
+    */
+    auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QSqlRecord( obj->record() );
+      Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QSqlTableModel_record2();
+    /*
+    QSqlRecord record( int row ) const
+    */
+    auto obj = qobject_cast< QSqlTableModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QSqlRecord( obj->record( PINT( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
+    }
+
   }
   else
   {
