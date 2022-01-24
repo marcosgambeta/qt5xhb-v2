@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -351,50 +351,37 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setViewBox( const QRect & viewBox )
-*/
-void QSvgGenerator_setViewBox1()
-{
-  auto obj = static_cast< QSvgGenerator * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setViewBox( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setViewBox( const QRectF & viewBox )
-*/
-void QSvgGenerator_setViewBox2()
-{
-  auto obj = static_cast< QSvgGenerator * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setViewBox( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void setViewBox ( const QRect & viewBox )
-[2]void setViewBox ( const QRectF & viewBox )
-*/
-
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
   if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QSvgGenerator_setViewBox1();
+    /*
+    void setViewBox( const QRect & viewBox )
+    */
+    auto obj = static_cast< QSvgGenerator * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setViewBox( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QSvgGenerator_setViewBox2();
+    /*
+    void setViewBox( const QRectF & viewBox )
+    */
+    auto obj = static_cast< QSvgGenerator * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setViewBox( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

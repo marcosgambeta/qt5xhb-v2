@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,33 +62,25 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
-/*
-QGraphicsSvgItem( QGraphicsItem * parent = nullptr )
-*/
-void QGraphicsSvgItem_new1()
-{
-  auto obj = new QGraphicsSvgItem( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = nullptr )
-*/
-void QGraphicsSvgItem_new2()
-{
-  auto obj = new QGraphicsSvgItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsSvgItem_new1();
+    /*
+    QGraphicsSvgItem( QGraphicsItem * parent = nullptr )
+    */
+    auto obj = new QGraphicsSvgItem( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsSvgItem_new2();
+    /*
+    QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = nullptr )
+    */
+    auto obj = new QGraphicsSvgItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
