@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -102,53 +102,41 @@ RETURN
 #endif
 #endif
 
-/*
-QSerialPort( QObject * parent = nullptr )
-*/
-void QSerialPort_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QSerialPort( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QSerialPort( const QString & name, QObject * parent = nullptr )
-*/
-void QSerialPort_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QSerialPort( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QSerialPort( const QSerialPortInfo & info, QObject * parent = nullptr )
-*/
-void QSerialPort_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QSerialPort( *PQSERIALPORTINFO( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0) )
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSerialPort_new1();
+    /*
+    QSerialPort( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QSerialPort( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSerialPort_new2();
+    /*
+    QSerialPort( const QString & name, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QSerialPort( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQSERIALPORTINFO( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSerialPort_new3();
+    /*
+    QSerialPort( const QSerialPortInfo & info, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QSerialPort( *PQSERIALPORTINFO( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {
