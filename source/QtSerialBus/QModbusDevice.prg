@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -17,9 +17,6 @@
 
 CLASS QModbusDevice INHERIT QObject
 
-#if 0
-   METHOD new
-#endif
    METHOD delete
    METHOD connectDevice
    METHOD disconnectDevice
@@ -60,26 +57,6 @@ RETURN
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtSerialBus/QModbusDevice>
 #endif
-#endif
-
-/*
-QModbusDevice( QObject * parent = nullptr )
-*/
-#if 0
-HB_FUNC_STATIC( QMODBUSDEVICE_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
-  {
-    auto obj = new QModbusDevice( OPQOBJECT( 1, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-#endif
-}
 #endif
 
 /*

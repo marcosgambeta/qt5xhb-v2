@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -80,37 +80,29 @@ RETURN
 #endif
 #endif
 
-/*
-QCanBusFrame( QCanBusFrame::FrameType type = QCanBusFrame::DataFrame ) Q_DECL_NOTHROW
-*/
-void QCanBusFrame_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = new QCanBusFrame( HB_ISNIL( 1 ) ? static_cast< QCanBusFrame::FrameType >( QCanBusFrame::DataFrame ) : static_cast< QCanBusFrame::FrameType >( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QCanBusFrame( quint32 identifier, const QByteArray & data )
-*/
-void QCanBusFrame_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = new QCanBusFrame( PQUINT32( 1 ), *PQBYTEARRAY( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QCanBusFrame_new1();
+    /*
+    QCanBusFrame( QCanBusFrame::FrameType type = QCanBusFrame::DataFrame ) Q_DECL_NOTHROW
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    auto obj = new QCanBusFrame( HB_ISNIL( 1 ) ? static_cast< QCanBusFrame::FrameType >( QCanBusFrame::DataFrame ) : static_cast< QCanBusFrame::FrameType >( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQBYTEARRAY( 2 ) )
   {
-    QCanBusFrame_new2();
+    /*
+    QCanBusFrame( quint32 identifier, const QByteArray & data )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    auto obj = new QCanBusFrame( PQUINT32( 1 ), *PQBYTEARRAY( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
