@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,33 +69,25 @@ RETURN
 #include <QtWebEngineCore/QWebEngineHttpRequest>
 #endif
 
-/*
-QWebEngineHttpRequest( const QUrl & url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get )
-*/
-void QWebEngineHttpRequest_new1()
-{
-  auto obj = new QWebEngineHttpRequest( HB_ISNIL( 1 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QWebEngineHttpRequest::Method >( QWebEngineHttpRequest::Get ) : static_cast< QWebEngineHttpRequest::Method >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QWebEngineHttpRequest( const QWebEngineHttpRequest & other )
-*/
-void QWebEngineHttpRequest_new2()
-{
-  auto obj = new QWebEngineHttpRequest( *PQWEBENGINEHTTPREQUEST( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQURL( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QWebEngineHttpRequest_new1();
+    /*
+    QWebEngineHttpRequest( const QUrl & url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get )
+    */
+    auto obj = new QWebEngineHttpRequest( HB_ISNIL( 1 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QWebEngineHttpRequest::Method >( QWebEngineHttpRequest::Get ) : static_cast< QWebEngineHttpRequest::Method >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBENGINEHTTPREQUEST( 1 ) )
+  elseif( ISNUMPAR( 1 ) && ISQWEBENGINEHTTPREQUEST( 1 ) )
   {
-    QWebEngineHttpRequest_new2();
+    /*
+    QWebEngineHttpRequest( const QWebEngineHttpRequest & other )
+    */
+    auto obj = new QWebEngineHttpRequest( *PQWEBENGINEHTTPREQUEST( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

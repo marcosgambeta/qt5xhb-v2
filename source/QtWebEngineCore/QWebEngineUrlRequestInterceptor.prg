@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -17,9 +17,7 @@
 
 CLASS QWebEngineUrlRequestInterceptor INHERIT QObject
 
-#if 0
    METHOD new
-#endif
    METHOD interceptRequest
 
    DESTRUCTOR destroyObject
@@ -53,7 +51,6 @@ RETURN
 /*
 QWebEngineUrlRequestInterceptor( QObject * p = nullptr )
 */
-#if 0
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
@@ -66,7 +63,6 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-#endif
 
 /*
 virtual void interceptRequest( QWebEngineUrlRequestInfo & info ) = 0
