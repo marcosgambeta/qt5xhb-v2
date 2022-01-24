@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -285,28 +285,24 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
 #endif
 }
 
-/*
-void addCategory( QWinJumpListCategory * category )
-*/
-void QWinJumpList_addCategory1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinJumpList * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addCategory( PQWINJUMPLISTCATEGORY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 {
   if( ISNUMPAR( 1 ) && ISQWINJUMPLISTCATEGORY( 1 ) )
   {
-    QWinJumpList_addCategory1();
+    /*
+    void addCategory( QWinJumpListCategory * category )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = qobject_cast< QWinJumpList * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addCategory( PQWINJUMPLISTCATEGORY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {

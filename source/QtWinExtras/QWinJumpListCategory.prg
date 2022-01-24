@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -401,47 +401,39 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
 #endif
 }
 
-/*
-QWinJumpListItem * addLink( const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
-*/
-void QWinJumpListCategory_addLink1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QWinJumpListCategory * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWinJumpListItem * ptr = obj->addLink( PQSTRING( 1 ), PQSTRING( 2 ), OPQSTRINGLIST( 3, QStringList() ) );
-    Qt5xHb::createReturnClass( ptr, "QWINJUMPLISTITEM", false );
-  }
-#endif
-}
-
-/*
-QWinJumpListItem * addLink( const QIcon & icon, const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
-*/
-void QWinJumpListCategory_addLink2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QWinJumpListCategory * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWinJumpListItem * ptr = obj->addLink( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), PQSTRING( 3 ), OPQSTRINGLIST( 4, QStringList() ) );
-    Qt5xHb::createReturnClass( ptr, "QWINJUMPLISTITEM", false );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {
   if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ISOPTARRAY( 3 ) )
   {
-    QWinJumpListCategory_addLink1();
+    /*
+    QWinJumpListItem * addLink( const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = static_cast< QWinJumpListCategory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWinJumpListItem * ptr = obj->addLink( PQSTRING( 1 ), PQSTRING( 2 ), OPQSTRINGLIST( 3, QStringList() ) );
+      Qt5xHb::createReturnClass( ptr, "QWINJUMPLISTITEM", false );
+    }
+#endif
+
   }
   else if( ISBETWEEN( 3, 4 ) && ISQICON( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ISOPTARRAY( 4 ) )
   {
-    QWinJumpListCategory_addLink2();
+    /*
+    QWinJumpListItem * addLink( const QIcon & icon, const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = static_cast< QWinJumpListCategory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWinJumpListItem * ptr = obj->addLink( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), PQSTRING( 3 ), OPQSTRINGLIST( 4, QStringList() ) );
+      Qt5xHb::createReturnClass( ptr, "QWINJUMPLISTITEM", false );
+    }
+#endif
+
   }
   else
   {
