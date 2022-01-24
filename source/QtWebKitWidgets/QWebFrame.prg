@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -689,50 +689,37 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
   }
 }
 
-/*
-void load( const QUrl & url )
-*/
-void QWebFrame_load1()
-{
-  auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQURL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-void QWebFrame_load2()
-{
-  auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQNETWORKREQUEST( 1 ), HB_ISNIL( 2 ) ? static_cast< QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast< QNetworkAccessManager::Operation >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void load ( const QUrl & url )
-[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
   if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QWebFrame_load1();
+    /*
+    void load( const QUrl & url )
+    */
+    auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQURL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQNETWORKREQUEST( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ISOPTQBYTEARRAY( 3 ) )
   {
-    QWebFrame_load2();
+    /*
+    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    */
+    auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQNETWORKREQUEST( 1 ), HB_ISNIL( 2 ) ? static_cast< QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast< QNetworkAccessManager::Operation >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -815,50 +802,37 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
   }
 }
 
-/*
-void render( QPainter *, const QRegion & clip = QRegion() )
-*/
-void QWebFrame_render1()
-{
-  auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->render( PQPAINTER( 1 ), HB_ISNIL( 2 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
-*/
-void QWebFrame_render2()
-{
-  auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->render( PQPAINTER( 1 ), static_cast<QWebFrame::RenderLayers>( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void render(QPainter*, const QRegion& clip = QRegion() )
-[2]void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion() )
-*/
-
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
   if( ISBETWEEN( 1, 2 ) && ISQPAINTER( 1 ) && ( ISQREGION( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QWebFrame_render1();
+    /*
+    void render( QPainter *, const QRegion & clip = QRegion() )
+    */
+    auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->render( PQPAINTER( 1 ), HB_ISNIL( 2 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && HB_ISNUM( 2 ) && ( ISQREGION( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QWebFrame_render2();
+    /*
+    void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
+    */
+    auto obj = qobject_cast< QWebFrame * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->render( PQPAINTER( 1 ), static_cast<QWebFrame::RenderLayers>( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -536,50 +536,37 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
   }
 }
 
-/*
-void load( const QUrl & url )
-*/
-void QWebView_load1()
-{
-  auto obj = qobject_cast< QWebView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQURL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-void QWebView_load2()
-{
-  auto obj = qobject_cast< QWebView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQNETWORKREQUEST( 1 ), HB_ISNIL( 2 ) ? static_cast< QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast< QNetworkAccessManager::Operation >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void load ( const QUrl & url )
-[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-
 HB_FUNC_STATIC( QWEBVIEW_LOAD )
 {
   if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QWebView_load1();
+    /*
+    void load( const QUrl & url )
+    */
+    auto obj = qobject_cast< QWebView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQURL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQNETWORKREQUEST( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ISOPTQBYTEARRAY( 3 ) )
   {
-    QWebView_load2();
+    /*
+    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    */
+    auto obj = qobject_cast< QWebView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQNETWORKREQUEST( 1 ), HB_ISNIL( 2 ) ? static_cast< QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast< QNetworkAccessManager::Operation >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -795,7 +782,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 }
 
 /*
-void back() 
+void back()
 */
 HB_FUNC_STATIC( QWEBVIEW_BACK )
 {
@@ -821,7 +808,7 @@ HB_FUNC_STATIC( QWEBVIEW_BACK )
 }
 
 /*
-void forward() 
+void forward()
 */
 HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 {
@@ -873,7 +860,7 @@ HB_FUNC_STATIC( QWEBVIEW_PRINT )
 }
 
 /*
-void reload() 
+void reload()
 */
 HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 {
@@ -899,7 +886,7 @@ HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 }
 
 /*
-void stop() 
+void stop()
 */
 HB_FUNC_STATIC( QWEBVIEW_STOP )
 {

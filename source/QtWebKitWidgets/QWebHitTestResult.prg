@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,33 +82,25 @@ RETURN
 
 #include <QtWebKit/QWebElement>
 
-/*
-QWebHitTestResult()
-*/
-void QWebHitTestResult_new1()
-{
-  auto obj = new QWebHitTestResult();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QWebHitTestResult( const QWebHitTestResult & other )
-*/
-void QWebHitTestResult_new2()
-{
-  auto obj = new QWebHitTestResult( *PQWEBHITTESTRESULT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QWebHitTestResult_new1();
+    /*
+    QWebHitTestResult()
+    */
+    auto obj = new QWebHitTestResult();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQWEBHITTESTRESULT( 1 ) )
   {
-    QWebHitTestResult_new2();
+    /*
+    QWebHitTestResult( const QWebHitTestResult & other )
+    */
+    auto obj = new QWebHitTestResult( *PQWEBHITTESTRESULT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
