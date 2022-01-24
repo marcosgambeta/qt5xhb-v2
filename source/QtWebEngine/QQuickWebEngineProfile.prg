@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -98,10 +98,10 @@ RETURN
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0) )
-#include <QtWebEngineCore/QWebEngineCookieStore>
+#include <QtWebEngine/QWebEngineCookieStore>
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0) )
-#include <QtWebEngineCore/QWebEngineUrlSchemeHandler>
+#include <QtWebEngine/QWebEngineUrlSchemeHandler>
 #endif
 
 /*
