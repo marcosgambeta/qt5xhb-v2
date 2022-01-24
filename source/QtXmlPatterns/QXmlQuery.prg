@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,59 +79,43 @@ RETURN
 #include <QtXmlPatterns/QAbstractMessageHandler>
 #include <QtXmlPatterns/QAbstractUriResolver>
 
-/*
-QXmlQuery()
-*/
-void QXmlQuery_new1()
-{
-  auto obj = new QXmlQuery();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlQuery( const QXmlQuery & other )
-*/
-void QXmlQuery_new2()
-{
-  auto obj = new QXmlQuery( *PQXMLQUERY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlQuery( const QXmlNamePool & np )
-*/
-void QXmlQuery_new3()
-{
-  auto obj = new QXmlQuery( *PQXMLNAMEPOOL( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlQuery( QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
-*/
-void QXmlQuery_new4()
-{
-  auto obj = new QXmlQuery( static_cast<QXmlQuery::QueryLanguage>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? QXmlNamePool() : *static_cast< QXmlNamePool * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLQUERY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlQuery_new1();
+    /*
+    QXmlQuery()
+    */
+    auto obj = new QXmlQuery();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLQUERY( 1 ) )
   {
-    QXmlQuery_new2();
+    /*
+    QXmlQuery( const QXmlQuery & other )
+    */
+    auto obj = new QXmlQuery( *PQXMLQUERY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLNAMEPOOL( 1 ) )
   {
-    QXmlQuery_new3();
+    /*
+    QXmlQuery( const QXmlNamePool & np )
+    */
+    auto obj = new QXmlQuery( *PQXMLNAMEPOOL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQXMLNAMEPOOL( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QXmlQuery_new4();
+    /*
+    QXmlQuery( QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
+    */
+    auto obj = new QXmlQuery( static_cast<QXmlQuery::QueryLanguage>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? QXmlNamePool() : *static_cast< QXmlNamePool * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -156,121 +140,97 @@ HB_FUNC_STATIC( QXMLQUERY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void bindVariable( const QXmlName & name, const QXmlItem & value )
-*/
-void QXmlQuery_bindVariable1()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->bindVariable( *PQXMLNAME( 1 ), *PQXMLITEM( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void bindVariable( const QXmlName & name, QIODevice * device )
-*/
-void QXmlQuery_bindVariable2()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->bindVariable( *PQXMLNAME( 1 ), PQIODEVICE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void bindVariable( const QXmlName & name, const QXmlQuery & query )
-*/
-void QXmlQuery_bindVariable3()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->bindVariable( *PQXMLNAME( 1 ), *PQXMLQUERY( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void bindVariable( const QString & localName, const QXmlItem & value )
-*/
-void QXmlQuery_bindVariable4()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->bindVariable( PQSTRING( 1 ), *PQXMLITEM( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void bindVariable( const QString & localName, QIODevice * device )
-*/
-void QXmlQuery_bindVariable5()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->bindVariable( PQSTRING( 1 ), PQIODEVICE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void bindVariable( const QString & localName, const QXmlQuery & query )
-*/
-void QXmlQuery_bindVariable6()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->bindVariable( PQSTRING( 1 ), *PQXMLQUERY( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 {
   if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISQXMLITEM( 2 ) )
   {
-    QXmlQuery_bindVariable1();
+    /*
+    void bindVariable( const QXmlName & name, const QXmlItem & value )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->bindVariable( *PQXMLNAME( 1 ), *PQXMLITEM( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISQIODEVICE( 2 ) )
   {
-    QXmlQuery_bindVariable2();
+    /*
+    void bindVariable( const QXmlName & name, QIODevice * device )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->bindVariable( *PQXMLNAME( 1 ), PQIODEVICE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISQXMLQUERY( 2 ) )
   {
-    QXmlQuery_bindVariable3();
+    /*
+    void bindVariable( const QXmlName & name, const QXmlQuery & query )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->bindVariable( *PQXMLNAME( 1 ), *PQXMLQUERY( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQXMLITEM( 2 ) )
   {
-    QXmlQuery_bindVariable4();
+    /*
+    void bindVariable( const QString & localName, const QXmlItem & value )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->bindVariable( PQSTRING( 1 ), *PQXMLITEM( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQIODEVICE( 2 ) )
   {
-    QXmlQuery_bindVariable5();
+    /*
+    void bindVariable( const QString & localName, QIODevice * device )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->bindVariable( PQSTRING( 1 ), PQIODEVICE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQXMLQUERY( 2 ) )
   {
-    QXmlQuery_bindVariable6();
+    /*
+    void bindVariable( const QString & localName, const QXmlQuery & query )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->bindVariable( PQSTRING( 1 ), *PQXMLQUERY( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -278,60 +238,48 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
   }
 }
 
-/*
-void evaluateTo( QXmlResultItems * result ) const
-*/
-void QXmlQuery_evaluateTo1()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->evaluateTo( PQXMLRESULTITEMS( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool evaluateTo( QAbstractXmlReceiver * callback ) const
-*/
-void QXmlQuery_evaluateTo2()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->evaluateTo( PQABSTRACTXMLRECEIVER( 1 ) ) );
-  }
-}
-
-/*
-bool evaluateTo( QIODevice * target ) const
-*/
-void QXmlQuery_evaluateTo5()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->evaluateTo( PQIODEVICE( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 {
   if( ISNUMPAR( 1 ) && ISQXMLRESULTITEMS( 1 ) )
   {
-    QXmlQuery_evaluateTo1();
+    /*
+    void evaluateTo( QXmlResultItems * result ) const
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->evaluateTo( PQXMLRESULTITEMS( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQABSTRACTXMLRECEIVER( 1 ) )
   {
-    QXmlQuery_evaluateTo2();
+    /*
+    bool evaluateTo( QAbstractXmlReceiver * callback ) const
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->evaluateTo( PQABSTRACTXMLRECEIVER( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QXmlQuery_evaluateTo5();
+    /*
+    bool evaluateTo( QIODevice * target ) const
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->evaluateTo( PQIODEVICE( 1 ) ) );
+    }
+
   }
   else
   {
@@ -487,77 +435,61 @@ HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
   }
 }
 
-/*
-void setFocus( const QXmlItem & item )
-*/
-void QXmlQuery_setFocus1()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFocus( *PQXMLITEM( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool setFocus( const QUrl & documentURI )
-*/
-void QXmlQuery_setFocus2()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setFocus( *PQURL( 1 ) ) );
-  }
-}
-
-/*
-bool setFocus( QIODevice * document )
-*/
-void QXmlQuery_setFocus3()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setFocus( PQIODEVICE( 1 ) ) );
-  }
-}
-
-/*
-bool setFocus( const QString & focus )
-*/
-void QXmlQuery_setFocus4()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setFocus( PQSTRING( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 {
   if( ISNUMPAR( 1 ) && ISQXMLITEM( 1 ) )
   {
-    QXmlQuery_setFocus1();
+    /*
+    void setFocus( const QXmlItem & item )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFocus( *PQXMLITEM( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QXmlQuery_setFocus2();
+    /*
+    bool setFocus( const QUrl & documentURI )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setFocus( *PQURL( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QXmlQuery_setFocus3();
+    /*
+    bool setFocus( QIODevice * document )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setFocus( PQIODEVICE( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlQuery_setFocus4();
+    /*
+    bool setFocus( const QString & focus )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setFocus( PQSTRING( 1 ) ) );
+    }
+
   }
   else
   {
@@ -565,45 +497,37 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
   }
 }
 
-/*
-void setInitialTemplateName( const QXmlName & name )
-*/
-void QXmlQuery_setInitialTemplateName1()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setInitialTemplateName( *PQXMLNAME( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setInitialTemplateName( const QString & localName )
-*/
-void QXmlQuery_setInitialTemplateName2()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setInitialTemplateName( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 {
   if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
   {
-    QXmlQuery_setInitialTemplateName1();
+    /*
+    void setInitialTemplateName( const QXmlName & name )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setInitialTemplateName( *PQXMLNAME( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlQuery_setInitialTemplateName2();
+    /*
+    void setInitialTemplateName( const QString & localName )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setInitialTemplateName( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -663,64 +587,52 @@ HB_FUNC_STATIC( QXMLQUERY_SETNETWORKACCESSMANAGER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setQuery( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
-*/
-void QXmlQuery_setQuery1()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setQuery( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setQuery( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
-*/
-void QXmlQuery_setQuery2()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setQuery( *PQURL( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setQuery( const QString & sourceCode, const QUrl & documentURI = QUrl() )
-*/
-void QXmlQuery_setQuery3()
-{
-  auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setQuery( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 {
   if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QXmlQuery_setQuery1();
+    /*
+    void setQuery( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setQuery( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QXmlQuery_setQuery2();
+    /*
+    void setQuery( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setQuery( *PQURL( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QXmlQuery_setQuery3();
+    /*
+    void setQuery( const QString & sourceCode, const QUrl & documentURI = QUrl() )
+    */
+    auto obj = static_cast< QXmlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setQuery( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,25 @@ RETURN
 #include <QtXmlPatterns/QXmlNamePool>
 #endif
 
-/*
-QXmlNamePool()
-*/
-void QXmlNamePool_new1()
-{
-  auto obj = new QXmlNamePool();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlNamePool( const QXmlNamePool & other )
-*/
-void QXmlNamePool_new2()
-{
-  auto obj = new QXmlNamePool( *PQXMLNAMEPOOL( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlNamePool_new1();
+    /*
+    QXmlNamePool()
+    */
+    auto obj = new QXmlNamePool();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLNAMEPOOL( 1 ) )
   {
-    QXmlNamePool_new2();
+    /*
+    QXmlNamePool( const QXmlNamePool & other )
+    */
+    auto obj = new QXmlNamePool( *PQXMLNAMEPOOL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

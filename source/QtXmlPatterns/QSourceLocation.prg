@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,46 +63,34 @@ RETURN
 #include <QtXmlPatterns/QSourceLocation>
 #endif
 
-/*
-QSourceLocation()
-*/
-void QSourceLocation_new1()
-{
-  auto obj = new QSourceLocation();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSourceLocation( const QSourceLocation & other )
-*/
-void QSourceLocation_new2()
-{
-  auto obj = new QSourceLocation( *PQSOURCELOCATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
-*/
-void QSourceLocation_new3()
-{
-  auto obj = new QSourceLocation( *PQURL( 1 ), OPINT( 2, -1 ), OPINT( 3, -1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSourceLocation_new1();
+    /*
+    QSourceLocation()
+    */
+    auto obj = new QSourceLocation();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSOURCELOCATION( 1 ) )
   {
-    QSourceLocation_new2();
+    /*
+    QSourceLocation( const QSourceLocation & other )
+    */
+    auto obj = new QSourceLocation( *PQSOURCELOCATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQURL( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSourceLocation_new3();
+    /*
+    QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
+    */
+    auto obj = new QSourceLocation( *PQURL( 1 ), OPINT( 2, -1 ), OPINT( 3, -1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
