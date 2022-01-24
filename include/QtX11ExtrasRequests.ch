@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -14,6 +14,6 @@
 #define QTX11EXTRASREQUESTS_CH
 
 REQUEST QX11Info
-REQUEST QtX11ExtrasVersion
+REQUEST QtX11Extras_Version
 
 #endif /* QTX11EXTRASREQUESTS_CH */

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,5 +29,6 @@ REQUEST QXmlResultItems
 REQUEST QXmlSchema
 REQUEST QXmlSchemaValidator
 REQUEST QXmlSerializer
+REQUEST QtXmlPatterns_Version
 
 #endif /* QTXMLPATTERNSREQUESTS_CH */

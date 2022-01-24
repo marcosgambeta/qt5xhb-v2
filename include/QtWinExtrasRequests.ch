@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -14,7 +14,6 @@
 #define QTWINEXTRASREQUESTS_CH
 
 REQUEST QtWin
-REQUEST QtWinExtrasVersion
 REQUEST QWinColorizationChangeEvent
 REQUEST QWinCompositionChangeEvent
 REQUEST QWinEvent
@@ -25,5 +24,6 @@ REQUEST QWinTaskbarButton
 REQUEST QWinTaskbarProgress
 REQUEST QWinThumbnailToolBar
 REQUEST QWinThumbnailToolButton
+REQUEST QtWinExtras_Version
 
 #endif /* QTWINEXTRASREQUESTS_CH */
