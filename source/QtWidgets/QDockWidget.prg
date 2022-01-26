@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,33 +70,25 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-/*
-QDockWidget( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-*/
-void QDockWidget_new1()
-{
-  auto obj = new QDockWidget( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDockWidget( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-*/
-void QDockWidget_new2()
-{
-  auto obj = new QDockWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
   if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDockWidget_new1();
+    /*
+    QDockWidget( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+    */
+    auto obj = new QDockWidget( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDockWidget_new2();
+    /*
+    QDockWidget( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+    */
+    auto obj = new QDockWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

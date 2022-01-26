@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -109,45 +109,37 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addButton( QAbstractButton * button )
-*/
-void QButtonGroup_addButton1()
-{
-  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addButton( PQABSTRACTBUTTON( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addButton( QAbstractButton * button, int id )
-*/
-void QButtonGroup_addButton2()
-{
-  auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addButton( PQABSTRACTBUTTON( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {
   if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
   {
-    QButtonGroup_addButton1 ();
+    /*
+    void addButton( QAbstractButton * button )
+    */
+    auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addButton( PQABSTRACTBUTTON( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
   {
-    QButtonGroup_addButton2 ();
+    /*
+    void addButton( QAbstractButton * button, int id )
+    */
+    auto obj = qobject_cast< QButtonGroup * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addButton( PQABSTRACTBUTTON( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

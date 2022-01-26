@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -171,54 +171,46 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLERPROPERTIES )
   }
 }
 
-/*
-void setSnapPositionsX( const QList<qreal> & positions )
-*/
-void QScroller_setSnapPositionsX1()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<qreal> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    qreal temp1;
-    for( auto i1 = 0; i1 < nLen1; i1++ )
-    {
-      temp1 = hb_arrayGetND(aList1, i1+1);
-      par1 << temp1;
-    }
-    obj->setSnapPositionsX( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setSnapPositionsX( qreal first, qreal interval )
-*/
-void QScroller_setSnapPositionsX2()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSnapPositionsX( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QScroller_setSnapPositionsX1();
+    /*
+    void setSnapPositionsX( const QList<qreal> & positions )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<qreal> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      qreal temp1;
+      for( auto i1 = 0; i1 < nLen1; i1++ )
+      {
+        temp1 = hb_arrayGetND(aList1, i1+1);
+        par1 << temp1;
+      }
+      obj->setSnapPositionsX( par1 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QScroller_setSnapPositionsX2();
+    /*
+    void setSnapPositionsX( qreal first, qreal interval )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSnapPositionsX( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -226,54 +218,46 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
   }
 }
 
-/*
-void setSnapPositionsY( const QList<qreal> & positions )
-*/
-void QScroller_setSnapPositionsY1()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<qreal> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    qreal temp1;
-    for( auto i1 = 0; i1 < nLen1; i1++ )
-    {
-      temp1 = hb_arrayGetND(aList1, i1+1);
-      par1 << temp1;
-    }
-    obj->setSnapPositionsY( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setSnapPositionsY( qreal first, qreal interval )
-*/
-void QScroller_setSnapPositionsY2()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSnapPositionsY( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QScroller_setSnapPositionsY1();
+    /*
+    void setSnapPositionsY( const QList<qreal> & positions )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<qreal> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      qreal temp1;
+      for( auto i1 = 0; i1 < nLen1; i1++ )
+      {
+        temp1 = hb_arrayGetND(aList1, i1+1);
+        par1 << temp1;
+      }
+      obj->setSnapPositionsY( par1 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QScroller_setSnapPositionsY2();
+    /*
+    void setSnapPositionsY( qreal first, qreal interval )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSnapPositionsY( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -381,45 +365,37 @@ HB_FUNC_STATIC( QSCROLLER_VELOCITY )
   }
 }
 
-/*
-void ensureVisible( const QRectF & rect, qreal xmargin, qreal ymargin )
-*/
-void QScroller_ensureVisible1()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->ensureVisible( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void ensureVisible( const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime )
-*/
-void QScroller_ensureVisible2()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->ensureVisible( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QScroller_ensureVisible1();
+    /*
+    void ensureVisible( const QRectF & rect, qreal xmargin, qreal ymargin )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->ensureVisible( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QScroller_ensureVisible2();
+    /*
+    void ensureVisible( const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->ensureVisible( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -453,45 +429,37 @@ HB_FUNC_STATIC( QSCROLLER_RESENDPREPAREEVENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void scrollTo( const QPointF & pos )
-*/
-void QScroller_scrollTo1()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scrollTo( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void scrollTo( const QPointF & pos, int scrollTime )
-*/
-void QScroller_scrollTo2()
-{
-  auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scrollTo( *PQPOINTF( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QScroller_scrollTo1();
+    /*
+    void scrollTo( const QPointF & pos )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scrollTo( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QScroller_scrollTo2();
+    /*
+    void scrollTo( const QPointF & pos, int scrollTime )
+    */
+    auto obj = qobject_cast< QScroller * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scrollTo( *PQPOINTF( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -628,24 +596,21 @@ HB_FUNC_STATIC( QSCROLLER_HASSCROLLER )
 /*
 static QScroller * scroller( QObject * target )
 */
-void QScroller_scroller1()
-{
-  QScroller * ptr = QScroller::scroller( PQOBJECT( 1 ) );
-  Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
-}
-
-/*
-static const QScroller * scroller( const QObject * target )
-*/
-void QScroller_scroller2()
-{
-  const QScroller * ptr = QScroller::scroller( PQOBJECT( 1 ) );
-  Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
-}
-
 HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 {
-  QScroller_scroller1();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
+  {
+#endif
+    QScroller * ptr = QScroller::scroller( PQOBJECT( 1 ) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 }
 
 /*

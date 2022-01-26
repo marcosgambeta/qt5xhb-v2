@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,33 +70,25 @@ RETURN
 
 #include <QtWidgets/QMenu>
 
-/*
-QSystemTrayIcon( QObject * parent = nullptr )
-*/
-void QSystemTrayIcon_new1()
-{
-  auto obj = new QSystemTrayIcon( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QSystemTrayIcon( const QIcon & icon, QObject * parent = nullptr )
-*/
-void QSystemTrayIcon_new2()
-{
-  auto obj = new QSystemTrayIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSystemTrayIcon_new1();
+    /*
+    QSystemTrayIcon( QObject * parent = nullptr )
+    */
+    auto obj = new QSystemTrayIcon( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ( ISQICON( 1 )|| HB_ISCHAR( 1 ) ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSystemTrayIcon_new2();
+    /*
+    QSystemTrayIcon( const QIcon & icon, QObject * parent = nullptr )
+    */
+    auto obj = new QSystemTrayIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

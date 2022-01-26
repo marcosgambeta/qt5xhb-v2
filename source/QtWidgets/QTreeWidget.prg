@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -485,43 +485,35 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
   }
 }
 
-/*
-QTreeWidgetItem * itemAt( const QPoint & p ) const
-*/
-void QTreeWidget_itemAt1()
-{
-  auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QTreeWidgetItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
-  }
-}
-
-/*
-QTreeWidgetItem * itemAt( int x, int y ) const
-*/
-void QTreeWidget_itemAt2()
-{
-  auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QTreeWidgetItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
-    Qt5xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
-  }
-}
-
 HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 {
   if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QTreeWidget_itemAt1();
+    /*
+    QTreeWidgetItem * itemAt( const QPoint & p ) const
+    */
+    auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QTreeWidgetItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTreeWidget_itemAt2();
+    /*
+    QTreeWidgetItem * itemAt( int x, int y ) const
+    */
+    auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QTreeWidgetItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
+      Qt5xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+    }
+
   }
   else
   {
@@ -631,64 +623,52 @@ HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCurrentItem( QTreeWidgetItem * item )
-*/
-void QTreeWidget_setCurrentItem1()
-{
-  auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCurrentItem( PQTREEWIDGETITEM( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setCurrentItem( QTreeWidgetItem * item, int column )
-*/
-void QTreeWidget_setCurrentItem2()
-{
-  auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCurrentItem( PQTREEWIDGETITEM( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setCurrentItem( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
-*/
-void QTreeWidget_setCurrentItem3()
-{
-  auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCurrentItem( PQTREEWIDGETITEM( 1 ), PINT( 2 ), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 {
   if( ISNUMPAR( 1 ) && ISQTREEWIDGETITEM( 1 ) )
   {
-    QTreeWidget_setCurrentItem1();
+    /*
+    void setCurrentItem( QTreeWidgetItem * item )
+    */
+    auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCurrentItem( PQTREEWIDGETITEM( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQTREEWIDGETITEM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTreeWidget_setCurrentItem2();
+    /*
+    void setCurrentItem( QTreeWidgetItem * item, int column )
+    */
+    auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCurrentItem( PQTREEWIDGETITEM( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && ISQTREEWIDGETITEM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QTreeWidget_setCurrentItem3();
+    /*
+    void setCurrentItem( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+    */
+    auto obj = qobject_cast< QTreeWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCurrentItem( PQTREEWIDGETITEM( 1 ), PINT( 2 ), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

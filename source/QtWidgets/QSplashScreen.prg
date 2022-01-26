@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,33 +57,25 @@ RETURN
 #include <QtWidgets/QSplashScreen>
 #endif
 
-/*
-QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
-void QSplashScreen_new1()
-{
-  auto obj = new QSplashScreen( HB_ISNIL( 1 ) ? QPixmap() : *static_cast< QPixmap * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
-void QSplashScreen_new2()
-{
-  auto obj = new QSplashScreen( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? QPixmap() : *static_cast< QPixmap * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQPIXMAP( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSplashScreen_new1();
+    /*
+    QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QSplashScreen( HB_ISNIL( 1 ) ? QPixmap() : *static_cast< QPixmap * >( Qt5xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( ISQPIXMAP( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSplashScreen_new2();
+    /*
+    QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QSplashScreen( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? QPixmap() : *static_cast< QPixmap * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

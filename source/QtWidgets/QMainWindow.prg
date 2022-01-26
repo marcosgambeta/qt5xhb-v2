@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -142,45 +142,37 @@ HB_FUNC_STATIC( QMAINWINDOW_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
-*/
-void QMainWindow_addDockWidget1()
-{
-  auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addDockWidget( static_cast<Qt::DockWidgetArea>( hb_parni( 1 ) ), PQDOCKWIDGET( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
-*/
-void QMainWindow_addDockWidget2()
-{
-  auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addDockWidget( static_cast<Qt::DockWidgetArea>( hb_parni( 1 ) ), PQDOCKWIDGET( 2 ), static_cast<Qt::Orientation>( hb_parni( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQDOCKWIDGET( 2 ) )
   {
-    QMainWindow_addDockWidget1();
+    /*
+    void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
+    */
+    auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addDockWidget( static_cast<Qt::DockWidgetArea>( hb_parni( 1 ) ), PQDOCKWIDGET( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQDOCKWIDGET( 2 ) && HB_ISNUM( 3 ) )
   {
-    QMainWindow_addDockWidget2();
+    /*
+    void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+    */
+    auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addDockWidget( static_cast<Qt::DockWidgetArea>( hb_parni( 1 ) ), PQDOCKWIDGET( 2 ), static_cast<Qt::Orientation>( hb_parni( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -188,63 +180,51 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
   }
 }
 
-/*
-void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
-*/
-void QMainWindow_addToolBar1()
-{
-  auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addToolBar( static_cast<Qt::ToolBarArea>( hb_parni( 1 ) ), PQTOOLBAR( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addToolBar( QToolBar * toolbar )
-*/
-void QMainWindow_addToolBar2()
-{
-  auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addToolBar( PQTOOLBAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QToolBar * addToolBar( const QString & title )
-*/
-void QMainWindow_addToolBar3()
-{
-  auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QToolBar * ptr = obj->addToolBar( PQSTRING( 1 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR" );
-  }
-}
-
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQTOOLBAR( 2 ) )
   {
-    QMainWindow_addToolBar1();
+    /*
+    void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
+    */
+    auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addToolBar( static_cast<Qt::ToolBarArea>( hb_parni( 1 ) ), PQTOOLBAR( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
   {
-    QMainWindow_addToolBar2();
+    /*
+    void addToolBar( QToolBar * toolbar )
+    */
+    auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addToolBar( PQTOOLBAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QMainWindow_addToolBar3();
+    /*
+    QToolBar * addToolBar( const QString & title )
+    */
+    auto obj = qobject_cast< QMainWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QToolBar * ptr = obj->addToolBar( PQSTRING( 1 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR" );
+    }
+
   }
   else
   {

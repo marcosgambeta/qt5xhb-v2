@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 }
 
 /*
-void setShowGrid( bool show ) 
+void setShowGrid( bool show )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
 {
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
 }
 
 /*
-void selectRow( int row ) 
+void selectRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
 {
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
 }
 
 /*
-void selectColumn( int column ) 
+void selectColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
 {
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
 }
 
 /*
-void hideRow( int row ) 
+void hideRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
 {
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
 }
 
 /*
-void hideColumn( int column ) 
+void hideColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
 {
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
 }
 
 /*
-void showRow( int row ) 
+void showRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
 {
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
 }
 
 /*
-void showColumn( int column ) 
+void showColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
 {
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
 }
 
 /*
-void resizeRowToContents( int row ) 
+void resizeRowToContents( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 {
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 }
 
 /*
-void resizeRowsToContents() 
+void resizeRowsToContents()
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 {
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 }
 
 /*
-void resizeColumnToContents( int column ) 
+void resizeColumnToContents( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 }
 
 /*
-void resizeColumnsToContents() 
+void resizeColumnsToContents()
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 {
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 }
 
 /*
-void sortByColumn(int column) 
+void sortByColumn(int column)
 */
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -107,59 +107,43 @@ RETURN
 
 #include <QtWidgets/QCalendarWidget>
 
-/*
-QDateTimeEdit( QWidget * parent = nullptr )
-*/
-void QDateTimeEdit_new1()
-{
-  auto obj = new QDateTimeEdit( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDateTimeEdit( const QDateTime & datetime, QWidget * parent = nullptr )
-*/
-void QDateTimeEdit_new2()
-{
-  auto obj = new QDateTimeEdit( *PQDATETIME( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDateTimeEdit( const QDate & date, QWidget * parent = nullptr )
-*/
-void QDateTimeEdit_new3()
-{
-  auto obj = new QDateTimeEdit( *PQDATE( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDateTimeEdit( const QTime & time, QWidget * parent = nullptr )
-*/
-void QDateTimeEdit_new4()
-{
-  auto obj = new QDateTimeEdit( *PQTIME( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDateTimeEdit_new1();
+    /*
+    QDateTimeEdit( QWidget * parent = nullptr )
+    */
+    auto obj = new QDateTimeEdit( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQDATETIME( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDateTimeEdit_new2();
+    /*
+    QDateTimeEdit( const QDateTime & datetime, QWidget * parent = nullptr )
+    */
+    auto obj = new QDateTimeEdit( *PQDATETIME( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQDATE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDateTimeEdit_new3();
+    /*
+    QDateTimeEdit( const QDate & date, QWidget * parent = nullptr )
+    */
+    auto obj = new QDateTimeEdit( *PQDATE( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQTIME( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDateTimeEdit_new4();
+    /*
+    QDateTimeEdit( const QTime & time, QWidget * parent = nullptr )
+    */
+    auto obj = new QDateTimeEdit( *PQTIME( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

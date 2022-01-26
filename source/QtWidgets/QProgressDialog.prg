@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,33 +75,25 @@ RETURN
 #include <QtWidgets/QProgressDialog>
 #endif
 
-/*
-QProgressDialog( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
-*/
-void QProgressDialog_new1()
-{
-  auto obj = new QProgressDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
-*/
-void QProgressDialog_new2()
-{
-  auto obj = new QProgressDialog( PQSTRING( 1 ), PQSTRING( 2 ), PINT( 3 ), PINT( 4 ), OPQWIDGET( 5, nullptr ), HB_ISNIL( 6 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 6 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QProgressDialog_new1();
+    /*
+    QProgressDialog( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QProgressDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 4, 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQWIDGET( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QProgressDialog_new2();
+    /*
+    QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QProgressDialog( PQSTRING( 1 ), PQSTRING( 2 ), PINT( 3 ), PINT( 4 ), OPQWIDGET( 5, nullptr ), HB_ISNIL( 6 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 6 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

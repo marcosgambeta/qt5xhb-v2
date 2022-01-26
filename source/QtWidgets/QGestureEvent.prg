@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -99,64 +99,52 @@ HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void accept()
-*/
-void QGestureEvent_accept1()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->accept();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void accept( QGesture * gesture )
-*/
-void QGestureEvent_accept2()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->accept( PQGESTURE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void accept( Qt::GestureType gestureType )
-*/
-void QGestureEvent_accept3()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->accept( static_cast<Qt::GestureType>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGestureEvent_accept1();
+    /*
+    void accept()
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->accept();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQGESTURE( 1 ) )
   {
-    QGestureEvent_accept2();
+    /*
+    void accept( QGesture * gesture )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->accept( PQGESTURE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGestureEvent_accept3();
+    /*
+    void accept( Qt::GestureType gestureType )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->accept( static_cast<Qt::GestureType>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -333,64 +321,52 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
   }
 }
 
-/*
-void ignore()
-*/
-void QGestureEvent_ignore1()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->ignore();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void ignore( QGesture * gesture )
-*/
-void QGestureEvent_ignore2()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->ignore( PQGESTURE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void ignore( Qt::GestureType gestureType )
-*/
-void QGestureEvent_ignore3()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->ignore( static_cast<Qt::GestureType>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGestureEvent_ignore1();
+    /*
+    void ignore()
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->ignore();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQGESTURE( 1 ) )
   {
-    QGestureEvent_ignore2();
+    /*
+    void ignore( QGesture * gesture )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->ignore( PQGESTURE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGestureEvent_ignore3();
+    /*
+    void ignore( Qt::GestureType gestureType )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->ignore( static_cast<Qt::GestureType>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -398,58 +374,46 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   }
 }
 
-/*
-bool isAccepted() const
-*/
-void QGestureEvent_isAccepted1()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->isAccepted() );
-  }
-}
-
-/*
-bool isAccepted( QGesture * gesture ) const
-*/
-void QGestureEvent_isAccepted2()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->isAccepted( PQGESTURE( 1 ) ) );
-  }
-}
-
-/*
-bool isAccepted( Qt::GestureType gestureType ) const
-*/
-void QGestureEvent_isAccepted3()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->isAccepted( static_cast<Qt::GestureType>( hb_parni( 1 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGestureEvent_isAccepted1();
+    /*
+    bool isAccepted() const
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->isAccepted() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQGESTURE( 1 ) )
   {
-    QGestureEvent_isAccepted2();
+    /*
+    bool isAccepted( QGesture * gesture ) const
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->isAccepted( PQGESTURE( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGestureEvent_isAccepted3();
+    /*
+    bool isAccepted( Qt::GestureType gestureType ) const
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->isAccepted( static_cast<Qt::GestureType>( hb_parni( 1 ) ) ) );
+    }
+
   }
   else
   {
@@ -482,64 +446,52 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
   }
 }
 
-/*
-void setAccepted( bool accepted )
-*/
-void QGestureEvent_setAccepted1()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setAccepted( PBOOL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setAccepted( QGesture * gesture, bool value )
-*/
-void QGestureEvent_setAccepted2()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setAccepted( PQGESTURE( 1 ), PBOOL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setAccepted( Qt::GestureType gestureType, bool value )
-*/
-void QGestureEvent_setAccepted3()
-{
-  auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setAccepted( static_cast<Qt::GestureType>( hb_parni( 1 ) ), PBOOL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 {
   if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    QGestureEvent_setAccepted1();
+    /*
+    void setAccepted( bool accepted )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setAccepted( PBOOL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQGESTURE( 1 ) && HB_ISLOG( 2 ) )
   {
-    QGestureEvent_setAccepted2();
+    /*
+    void setAccepted( QGesture * gesture, bool value )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setAccepted( PQGESTURE( 1 ), PBOOL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
   {
-    QGestureEvent_setAccepted3();
+    /*
+    void setAccepted( Qt::GestureType gestureType, bool value )
+    */
+    auto obj = static_cast< QGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setAccepted( static_cast<Qt::GestureType>( hb_parni( 1 ) ), PBOOL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

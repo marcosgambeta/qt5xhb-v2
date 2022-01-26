@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,25 @@ RETURN
 #include <QtWidgets/QTileRules>
 #endif
 
-/*
-QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
-*/
-void QTileRules_new1()
-{
-  auto obj = new QTileRules( static_cast<Qt::TileRule>( hb_parni( 1 ) ), static_cast<Qt::TileRule>( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTileRules( Qt::TileRule rule = Qt::StretchTile )
-*/
-void QTileRules_new2()
-{
-  auto obj = new QTileRules( HB_ISNIL( 1 ) ? static_cast< Qt::TileRule >( Qt::StretchTile ) : static_cast< Qt::TileRule >( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTILERULES_NEW )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTileRules_new1();
+    /*
+    QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
+    */
+    auto obj = new QTileRules( static_cast<Qt::TileRule>( hb_parni( 1 ) ), static_cast<Qt::TileRule>( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QTileRules_new2();
+    /*
+    QTileRules( Qt::TileRule rule = Qt::StretchTile )
+    */
+    auto obj = new QTileRules( HB_ISNIL( 1 ) ? static_cast< Qt::TileRule >( Qt::StretchTile ) : static_cast< Qt::TileRule >( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

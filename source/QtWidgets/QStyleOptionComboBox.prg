@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,25 @@ RETURN
 #include <QtWidgets/QStyleOptionComboBox>
 #endif
 
-/*
-QStyleOptionComboBox()
-*/
-void QStyleOptionComboBox_new1()
-{
-  auto obj = new QStyleOptionComboBox();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionComboBox( const QStyleOptionComboBox & other )
-*/
-void QStyleOptionComboBox_new2()
-{
-  auto obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionComboBox_new1();
+    /*
+    QStyleOptionComboBox()
+    */
+    auto obj = new QStyleOptionComboBox();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONCOMBOBOX( 1 ) )
   {
-    QStyleOptionComboBox_new2();
+    /*
+    QStyleOptionComboBox( const QStyleOptionComboBox & other )
+    */
+    auto obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

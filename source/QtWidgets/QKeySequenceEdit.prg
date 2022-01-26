@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,38 +59,30 @@ RETURN
 #endif
 #endif
 
-/*
-QKeySequenceEdit( QWidget * parent = nullptr )
-*/
-void QKeySequenceEdit_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QKeySequenceEdit( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = nullptr )
-*/
-void QKeySequenceEdit_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0) )
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QKeySequenceEdit_new1();
+    /*
+    QKeySequenceEdit( QWidget * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QKeySequenceEdit( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQKEYSEQUENCE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QKeySequenceEdit_new2();
+    /*
+    QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

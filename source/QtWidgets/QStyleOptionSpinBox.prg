@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,33 +51,25 @@ RETURN
 #include <QtWidgets/QStyleOptionSpinBox>
 #endif
 
-/*
-QStyleOptionSpinBox()
-*/
-void QStyleOptionSpinBox_new1()
-{
-  auto obj = new QStyleOptionSpinBox();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
-*/
-void QStyleOptionSpinBox_new2()
-{
-  auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionSpinBox_new1();
+    /*
+    QStyleOptionSpinBox()
+    */
+    auto obj = new QStyleOptionSpinBox();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSPINBOX( 1 ) )
   {
-    QStyleOptionSpinBox_new2();
+    /*
+    QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
+    */
+    auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

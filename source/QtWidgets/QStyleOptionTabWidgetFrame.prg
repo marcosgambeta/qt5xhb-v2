@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,33 +63,25 @@ RETURN
 #include <QtWidgets/QStyleOptionTabWidgetFrame>
 #endif
 
-/*
-QStyleOptionTabWidgetFrame()
-*/
-void QStyleOptionTabWidgetFrame_new1()
-{
-  auto obj = new QStyleOptionTabWidgetFrame();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionTabWidgetFrame( const QStyleOptionTabWidgetFrame & other )
-*/
-void QStyleOptionTabWidgetFrame_new2()
-{
-  auto obj = new QStyleOptionTabWidgetFrame( *PQSTYLEOPTIONTABWIDGETFRAME( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionTabWidgetFrame_new1();
+    /*
+    QStyleOptionTabWidgetFrame()
+    */
+    auto obj = new QStyleOptionTabWidgetFrame();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTABWIDGETFRAME( 1 ) )
   {
-    QStyleOptionTabWidgetFrame_new2();
+    /*
+    QStyleOptionTabWidgetFrame( const QStyleOptionTabWidgetFrame & other )
+    */
+    auto obj = new QStyleOptionTabWidgetFrame( *PQSTYLEOPTIONTABWIDGETFRAME( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

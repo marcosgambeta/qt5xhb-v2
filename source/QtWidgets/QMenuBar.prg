@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -141,62 +141,50 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
   }
 }
 
-/*
-QAction * addAction( const QString & text )
-*/
-void QMenuBar_addAction1()
-{
-  auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QAction * ptr = obj->addAction( PQSTRING( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-QAction * addAction( const QString & text, const QObject * receiver, const char * member )
-*/
-void QMenuBar_addAction2()
-{
-  auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QAction * ptr = obj->addAction( PQSTRING( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-void addAction( QAction * action )
-*/
-void QMenuBar_addAction3()
-{
-  auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addAction( PQACTION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QMenuBar_addAction1();
+    /*
+    QAction * addAction( const QString & text )
+    */
+    auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QAction * ptr = obj->addAction( PQSTRING( 1 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QMenuBar_addAction2();
+    /*
+    QAction * addAction( const QString & text, const QObject * receiver, const char * member )
+    */
+    auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QAction * ptr = obj->addAction( PQSTRING( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQACTION( 1 ) )
   {
-    QMenuBar_addAction3();
+    /*
+    void addAction( QAction * action )
+    */
+    auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addAction( PQACTION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -204,61 +192,49 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
   }
 }
 
-/*
-QAction * addMenu( QMenu * menu )
-*/
-void QMenuBar_addMenu1()
-{
-  auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QAction * ptr = obj->addMenu( PQMENU( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-QMenu * addMenu( const QString & title )
-*/
-void QMenuBar_addMenu2()
-{
-  auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QMenu * ptr = obj->addMenu( PQSTRING( 1 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
-  }
-}
-
-/*
-QMenu * addMenu( const QIcon & icon, const QString & title )
-*/
-void QMenuBar_addMenu3()
-{
-  auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QMenu * ptr = obj->addMenu( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
-  }
-}
-
 HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 {
   if( ISNUMPAR( 1 ) && ISQMENU( 1 ) )
   {
-    QMenuBar_addMenu1();
+    /*
+    QAction * addMenu( QMenu * menu )
+    */
+    auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QAction * ptr = obj->addMenu( PQMENU( 1 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QMenuBar_addMenu2();
+    /*
+    QMenu * addMenu( const QString & title )
+    */
+    auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QMenu * ptr = obj->addMenu( PQSTRING( 1 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ( ISQICON( 1 )|| HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) )
   {
-    QMenuBar_addMenu3();
+    /*
+    QMenu * addMenu( const QIcon & icon, const QString & title )
+    */
+    auto obj = qobject_cast< QMenuBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QMenu * ptr = obj->addMenu( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,46 +52,34 @@ RETURN
 #include <QtWidgets/QCommandLinkButton>
 #endif
 
-/*
-QCommandLinkButton( QWidget * parent = nullptr )
-*/
-void QCommandLinkButton_new1()
-{
-  auto obj = new QCommandLinkButton( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QCommandLinkButton( const QString & text, QWidget * parent = nullptr )
-*/
-void QCommandLinkButton_new2()
-{
-  auto obj = new QCommandLinkButton( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = nullptr )
-*/
-void QCommandLinkButton_new3()
-{
-  auto obj = new QCommandLinkButton( PQSTRING( 1 ), PQSTRING( 2 ), OPQWIDGET( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QCommandLinkButton_new1();
+    /*
+    QCommandLinkButton( QWidget * parent = nullptr )
+    */
+    auto obj = new QCommandLinkButton( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCommandLinkButton_new2();
+    /*
+    QCommandLinkButton( const QString & text, QWidget * parent = nullptr )
+    */
+    auto obj = new QCommandLinkButton( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QCommandLinkButton_new3();
+    /*
+    QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = nullptr )
+    */
+    auto obj = new QCommandLinkButton( PQSTRING( 1 ), PQSTRING( 2 ), OPQWIDGET( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

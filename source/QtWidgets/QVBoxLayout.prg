@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,33 +48,25 @@ RETURN
 #include <QtWidgets/QVBoxLayout>
 #endif
 
-/*
-QVBoxLayout()
-*/
-void QVBoxLayout_new1()
-{
-  auto obj = new QVBoxLayout();
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QVBoxLayout( QWidget * parent )
-*/
-void QVBoxLayout_new2()
-{
-  auto obj = new QVBoxLayout( PQWIDGET( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVBoxLayout_new1();
+    /*
+    QVBoxLayout()
+    */
+    auto obj = new QVBoxLayout();
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QVBoxLayout_new2();
+    /*
+    QVBoxLayout( QWidget * parent )
+    */
+    auto obj = new QVBoxLayout( PQWIDGET( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

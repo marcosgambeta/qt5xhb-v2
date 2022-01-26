@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,33 +67,25 @@ RETURN
 #include <QtWidgets/QColorDialog>
 #endif
 
-/*
-QColorDialog( QWidget * parent = nullptr )
-*/
-void QColorDialog_new1()
-{
-  auto obj = new QColorDialog( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QColorDialog( const QColor & initial, QWidget * parent = nullptr )
-*/
-void QColorDialog_new2()
-{
-  auto obj = new QColorDialog( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QColorDialog_new1();
+    /*
+    QColorDialog( QWidget * parent = nullptr )
+    */
+    auto obj = new QColorDialog( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ( ISQCOLOR( 1 )|| HB_ISCHAR( 1 ) ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QColorDialog_new2();
+    /*
+    QColorDialog( const QColor & initial, QWidget * parent = nullptr )
+    */
+    auto obj = new QColorDialog( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -171,47 +163,39 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void open ()
-*/
-void QColorDialog_open1()
-{
-#ifdef Q_NO_USING_KEYWORD
-  auto obj = qobject_cast< QColorDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->open();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void open( QObject * receiver, const char * member )
-*/
-void QColorDialog_open2()
-{
-  auto obj = qobject_cast< QColorDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QColorDialog_open1();
+#ifdef Q_NO_USING_KEYWORD
+    /*
+    void open()
+    */
+    auto obj = qobject_cast< QColorDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->open();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
+#endif
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QColorDialog_open2();
+    /*
+    void open( QObject * receiver, const char * member )
+    */
+    auto obj = qobject_cast< QColorDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,33 +68,25 @@ RETURN
 #include <QtWidgets/QLCDNumber>
 #endif
 
-/*
-QLCDNumber( QWidget * parent = nullptr )
-*/
-void QLCDNumber_new1()
-{
-  auto obj = new QLCDNumber( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QLCDNumber( uint numDigits, QWidget * parent = nullptr )
-*/
-void QLCDNumber_new2()
-{
-  auto obj = new QLCDNumber( PUINT( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QLCDNumber_new1();
+    /*
+    QLCDNumber( QWidget * parent = nullptr )
+    */
+    auto obj = new QLCDNumber( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLCDNumber_new2();
+    /*
+    QLCDNumber( uint numDigits, QWidget * parent = nullptr )
+    */
+    auto obj = new QLCDNumber( PUINT( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -121,32 +113,6 @@ HB_FUNC_STATIC( QLCDNUMBER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool checkOverflow( double num ) const
-*/
-void QLCDNumber_checkOverflow1()
-{
-  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->checkOverflow( PDOUBLE( 1 ) ) );
-  }
-}
-
-/*
-bool checkOverflow( int num ) const
-*/
-void QLCDNumber_checkOverflow2()
-{
-  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->checkOverflow( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
@@ -156,11 +122,29 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
     {
       if( HB_IS_DOUBLE(pNum) )
       {
-        QLCDNumber_checkOverflow1();
+        /*
+        bool checkOverflow( double num ) const
+        */
+        auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+        if( obj != nullptr )
+        {
+          RBOOL( obj->checkOverflow( PDOUBLE( 1 ) ) );
+        }
+
       }
       else if( HB_IS_INTEGER(pNum) )
       {
-        QLCDNumber_checkOverflow2();
+        /*
+        bool checkOverflow( int num ) const
+        */
+        auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+        if( obj != nullptr )
+        {
+          RBOOL( obj->checkOverflow( PINT( 1 ) ) );
+        }
+
       }
       else
       {
@@ -425,58 +409,24 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
   }
 }
 
-/*
-void display( const QString & s )
-*/
-void QLCDNumber_display1()
-{
-  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->display( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void display( double num )
-*/
-void QLCDNumber_display2()
-{
-  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->display( PDOUBLE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void display( int num )
-*/
-void QLCDNumber_display3()
-{
-  auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->display( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
   if( ISNUMPAR( 1 ) )
   {
     if( HB_ISCHAR( 1 ) )
     {
-      QLCDNumber_display1();
+      /*
+      void display( const QString & s )
+      */
+      auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+      if( obj != nullptr )
+      {
+        obj->display( PQSTRING( 1 ) );
+      }
+
+      hb_itemReturn( hb_stackSelfItem() );
+
     }
     else if( HB_ISNUM( 1 ) )
     {
@@ -485,11 +435,33 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
       {
         if( HB_IS_DOUBLE(pNum) )
         {
-          QLCDNumber_display2();
+          /*
+          void display( double num )
+          */
+          auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+          if( obj != nullptr )
+          {
+            obj->display( PDOUBLE( 1 ) );
+          }
+
+          hb_itemReturn( hb_stackSelfItem() );
+
         }
         else if( HB_IS_INTEGER(pNum) )
         {
-          QLCDNumber_display3();
+          /*
+          void display( int num )
+          */
+          auto obj = qobject_cast< QLCDNumber * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+          if( obj != nullptr )
+          {
+            obj->display( PINT( 1 ) );
+          }
+
+          hb_itemReturn( hb_stackSelfItem() );
+
         }
         else
         {

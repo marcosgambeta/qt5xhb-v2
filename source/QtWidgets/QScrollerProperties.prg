@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,25 @@ RETURN
 #include <QtWidgets/QScrollerProperties>
 #endif
 
-/*
-QScrollerProperties()
-*/
-void QScrollerProperties_new1()
-{
-  auto obj = new QScrollerProperties();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScrollerProperties( const QScrollerProperties & sp )
-*/
-void QScrollerProperties_new2()
-{
-  auto obj = new QScrollerProperties( *PQSCROLLERPROPERTIES( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QScrollerProperties_new1();
+    /*
+    QScrollerProperties()
+    */
+    auto obj = new QScrollerProperties();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSCROLLERPROPERTIES( 1 ) )
   {
-    QScrollerProperties_new2();
+    /*
+    QScrollerProperties( const QScrollerProperties & sp )
+    */
+    auto obj = new QScrollerProperties( *PQSCROLLERPROPERTIES( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

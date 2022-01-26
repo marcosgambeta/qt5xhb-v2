@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -176,45 +176,37 @@ HB_FUNC_STATIC( QCOMBOBOX_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addItem( const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_addItem1()
-{
-  auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addItem( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_addItem2()
-{
-  auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addItem( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QComboBox_addItem1();
+    /*
+    void addItem( const QString & text, const QVariant & userData = QVariant() )
+    */
+    auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ( ISQICON( 1 )|| HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) && ( ISQVARIANT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QComboBox_addItem2();
+    /*
+    void addItem( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+    */
+    auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addItem( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -492,45 +484,37 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
   }
 }
 
-/*
-void insertItem( int index, const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_insertItem1()
-{
-  auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertItem( PINT( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertItem( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_insertItem2()
-{
-  auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertItem( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {
   if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ( ISQVARIANT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QComboBox_insertItem1();
+    /*
+    void insertItem( int index, const QString & text, const QVariant & userData = QVariant() )
+    */
+    auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertItem( PINT( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && ( ISQICON( 2 )|| HB_ISCHAR( 2 ) ) && HB_ISCHAR( 3 ) && ( ISQVARIANT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QComboBox_insertItem2();
+    /*
+    void insertItem( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+    */
+    auto obj = qobject_cast< QComboBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertItem( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

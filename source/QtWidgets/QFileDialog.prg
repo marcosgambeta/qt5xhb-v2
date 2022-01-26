@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -130,33 +130,25 @@ RETURN
 #include <QtCore/QUrl>
 #include <QtWidgets/QAbstractItemDelegate>
 
-/*
-QFileDialog( QWidget * parent, Qt::WindowFlags flags )
-*/
-void QFileDialog_new1()
-{
-  auto obj = new QFileDialog( PQWIDGET( 1 ), static_cast<Qt::WindowFlags>( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QFileDialog( QWidget * parent = nullptr, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
-*/
-void QFileDialog_new2()
-{
-  auto obj = new QFileDialog( OPQWIDGET( 1, nullptr ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
   if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
-    QFileDialog_new1();
+    /*
+    QFileDialog( QWidget * parent, Qt::WindowFlags flags )
+    */
+    auto obj = new QFileDialog( PQWIDGET( 1 ), static_cast<Qt::WindowFlags>( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 0, 4 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QFileDialog_new2();
+    /*
+    QFileDialog( QWidget * parent = nullptr, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+    */
+    auto obj = new QFileDialog( OPQWIDGET( 1, nullptr ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -1140,45 +1132,37 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
   }
 }
 
-/*
-void setDirectory( const QString & directory )
-*/
-void QFileDialog_setDirectory1()
-{
-  auto obj = qobject_cast< QFileDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setDirectory( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setDirectory( const QDir & directory )
-*/
-void QFileDialog_setDirectory2()
-{
-  auto obj = qobject_cast< QFileDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setDirectory( *PQDIR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFileDialog_setDirectory1();
+    /*
+    void setDirectory( const QString & directory )
+    */
+    auto obj = qobject_cast< QFileDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setDirectory( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDIR( 1 ) )
   {
-    QFileDialog_setDirectory2();
+    /*
+    void setDirectory( const QDir & directory )
+    */
+    auto obj = qobject_cast< QFileDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setDirectory( *PQDIR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,7 +23,6 @@ CLASS QCalendarWidget INHERIT QWidget
    METHOD new
    METHOD delete
    METHOD dateEditAcceptDelay
-   METHOD dateTextFormat2
    METHOD dateTextFormat
    METHOD firstDayOfWeek
    METHOD headerTextFormat
@@ -161,7 +160,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
 /*
 QTextCharFormat dateTextFormat( const QDate & date ) const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
+HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 {
   auto obj = qobject_cast< QCalendarWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
@@ -180,18 +179,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
       hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
-  }
-}
-
-HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
-{
-  if( ISNUMPAR( 1 ) && ISQDATE( 1 ) )
-  {
-    HB_FUNC_EXEC( QCALENDARWIDGET_DATETEXTFORMAT2 );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

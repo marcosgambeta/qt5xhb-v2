@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -105,41 +105,33 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
-*/
-void QToolBox_addItem1()
-{
-  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->addItem( PQWIDGET( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ) ) );
-  }
-}
-
-/*
-int addItem( QWidget * w, const QString & text )
-*/
-void QToolBox_addItem2()
-{
-  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->addItem( PQWIDGET( 1 ), PQSTRING( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
   if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ( ISQICON( 2 )|| HB_ISCHAR( 2 ) ) && HB_ISCHAR( 3 ) )
   {
-    QToolBox_addItem1();
+    /*
+    int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
+    */
+    auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->addItem( PQWIDGET( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QToolBox_addItem2();
+    /*
+    int addItem( QWidget * w, const QString & text )
+    */
+    auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->addItem( PQWIDGET( 1 ), PQSTRING( 2 ) ) );
+    }
+
   }
   else
   {
@@ -244,41 +236,33 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
   }
 }
 
-/*
-int insertItem( int index, QWidget * widget, const QIcon & icon, const QString & text )
-*/
-void QToolBox_insertItem1()
-{
-  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->insertItem( PINT( 1 ), PQWIDGET( 2 ), HB_ISOBJECT( 3 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 3 ) ) : QIcon( hb_parc( 3 ) ), PQSTRING( 4 ) ) );
-  }
-}
-
-/*
-int insertItem( int index, QWidget * widget, const QString & text )
-*/
-void QToolBox_insertItem2()
-{
-  auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->insertItem( PINT( 1 ), PQWIDGET( 2 ), PQSTRING( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && ( ISQICON( 3 )|| HB_ISCHAR( 3 ) ) && HB_ISCHAR( 4 ) )
   {
-    QToolBox_insertItem1();
+    /*
+    int insertItem( int index, QWidget * widget, const QIcon & icon, const QString & text )
+    */
+    auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->insertItem( PINT( 1 ), PQWIDGET( 2 ), HB_ISOBJECT( 3 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 3 ) ) : QIcon( hb_parc( 3 ) ), PQSTRING( 4 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QToolBox_insertItem2();
+    /*
+    int insertItem( int index, QWidget * widget, const QString & text )
+    */
+    auto obj = qobject_cast< QToolBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->insertItem( PINT( 1 ), PQWIDGET( 2 ), PQSTRING( 3 ) ) );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -554,58 +554,46 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   }
 }
 
-/*
-int logicalIndexAt( int position ) const
-*/
-void QHeaderView_logicalIndexAt1()
-{
-  auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->logicalIndexAt( PINT( 1 ) ) );
-  }
-}
-
-/*
-int logicalIndexAt( int x, int y ) const
-*/
-void QHeaderView_logicalIndexAt2()
-{
-  auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->logicalIndexAt( PINT( 1 ), PINT( 2 ) ) );
-  }
-}
-
-/*
-int logicalIndexAt( const QPoint & pos ) const
-*/
-void QHeaderView_logicalIndexAt3()
-{
-  auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->logicalIndexAt( *PQPOINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QHeaderView_logicalIndexAt1();
+    /*
+    int logicalIndexAt( int position ) const
+    */
+    auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->logicalIndexAt( PINT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QHeaderView_logicalIndexAt2();
+    /*
+    int logicalIndexAt( int x, int y ) const
+    */
+    auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->logicalIndexAt( PINT( 1 ), PINT( 2 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QHeaderView_logicalIndexAt3();
+    /*
+    int logicalIndexAt( const QPoint & pos ) const
+    */
+    auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->logicalIndexAt( *PQPOINT( 1 ) ) );
+    }
+
   }
   else
   {
@@ -1587,45 +1575,37 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
   }
 }
 
-/*
-void setSectionResizeMode( QHeaderView::ResizeMode mode )
-*/
-void QHeaderView_setSectionResizeMode1()
-{
-  auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSectionResizeMode( static_cast<QHeaderView::ResizeMode>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setSectionResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
-*/
-void QHeaderView_setSectionResizeMode2()
-{
-  auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSectionResizeMode( PINT( 1 ), static_cast<QHeaderView::ResizeMode>( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QHeaderView_setSectionResizeMode1();
+    /*
+    void setSectionResizeMode( QHeaderView::ResizeMode mode )
+    */
+    auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSectionResizeMode( static_cast<QHeaderView::ResizeMode>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QHeaderView_setSectionResizeMode2();
+    /*
+    void setSectionResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
+    */
+    auto obj = qobject_cast< QHeaderView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSectionResizeMode( PINT( 1 ), static_cast<QHeaderView::ResizeMode>( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

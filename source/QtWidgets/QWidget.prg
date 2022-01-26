@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -799,45 +799,37 @@ HB_FUNC_STATIC( QWIDGET_BASESIZE )
   }
 }
 
-/*
-void setBaseSize( const QSize & )
-*/
-void QWidget_setBaseSize1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setBaseSize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setBaseSize( int basew, int baseh )
-*/
-void QWidget_setBaseSize2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setBaseSize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWidget_setBaseSize1();
+    /*
+    void setBaseSize( const QSize & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setBaseSize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setBaseSize2();
+    /*
+    void setBaseSize( int basew, int baseh )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setBaseSize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -845,43 +837,35 @@ HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
   }
 }
 
-/*
-QWidget * childAt( int x, int y ) const
-*/
-void QWidget_childAt1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWidget * ptr = obj->childAt( PINT( 1 ), PINT( 2 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
-  }
-}
-
-/*
-QWidget * childAt( const QPoint & p ) const
-*/
-void QWidget_childAt2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWidget * ptr = obj->childAt( *PQPOINT( 1 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
-  }
-}
-
 HB_FUNC_STATIC( QWIDGET_CHILDAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_childAt1();
+    /*
+    QWidget * childAt( int x, int y ) const
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWidget * ptr = obj->childAt( PINT( 1 ), PINT( 2 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QWidget_childAt2();
+    /*
+    QWidget * childAt( const QPoint & p ) const
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWidget * ptr = obj->childAt( *PQPOINT( 1 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    }
+
   }
   else
   {
@@ -1611,48 +1595,40 @@ HB_FUNC_STATIC( QWIDGET_GRABKEYBOARD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void grabMouse()
-*/
-void QWidget_grabMouse1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->grabMouse();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void grabMouse( const QCursor & cursor )
-*/
-void QWidget_grabMouse2()
-{
-#ifndef QT_NO_CURSOR
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->grabMouse( *PQCURSOR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QWidget_grabMouse1();
+    /*
+    void grabMouse()
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->grabMouse();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
+#ifndef QT_NO_CURSOR
   else if( ISNUMPAR( 1 ) && ISQCURSOR( 1 ) )
   {
-    QWidget_grabMouse2();
+    /*
+    void grabMouse( const QCursor & cursor )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->grabMouse( *PQCURSOR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
+#endif
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -2746,45 +2722,37 @@ HB_FUNC_STATIC( QWIDGET_MASK )
   }
 }
 
-/*
-void setMask( const QBitmap & bitmap )
-*/
-void QWidget_setMask1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMask( *PQBITMAP( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setMask( const QRegion & region )
-*/
-void QWidget_setMask2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMask( *PQREGION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETMASK )
 {
   if( ISNUMPAR( 1 ) && ISQBITMAP( 1 ) )
   {
-    QWidget_setMask1();
+    /*
+    void setMask( const QBitmap & bitmap )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMask( *PQBITMAP( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QWidget_setMask2();
+    /*
+    void setMask( const QRegion & region )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMask( *PQREGION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3042,45 +3010,37 @@ HB_FUNC_STATIC( QWIDGET_POS )
   }
 }
 
-/*
-void move( const QPoint & )
-*/
-void QWidget_move1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->move( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void move( int x, int y )
-*/
-void QWidget_move2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->move( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_MOVE )
 {
   if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QWidget_move1();
+    /*
+    void move( const QPoint & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->move( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_move2();
+    /*
+    void move( int x, int y )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->move( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3423,129 +3383,105 @@ HB_FUNC_STATIC( QWIDGET_REMOVEACTION )
 #endif
 }
 
-/*
-void render( QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
-*/
-void QWidget_render1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->render( PQPAINTDEVICE( 1 ), HB_ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QWidget::RenderFlags >( QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) ) : static_cast< QWidget::RenderFlags >( hb_parni( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void render( QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
-*/
-void QWidget_render2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->render( PQPAINTER( 1 ), HB_ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QWidget::RenderFlags >( QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) ) : static_cast< QWidget::RenderFlags >( hb_parni( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
   if( ISBETWEEN( 1, 4 ) && ISQPAINTER( 1 ) && ( ISQPOINT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQREGION( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QWidget_render2();
+    /*
+    void render( QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->render( PQPAINTDEVICE( 1 ), HB_ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QWidget::RenderFlags >( QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) ) : static_cast< QWidget::RenderFlags >( hb_parni( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 4 ) && HB_ISOBJECT( 1 ) && ( ISQPOINT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQREGION( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QWidget_render1();
+    /*
+    void render( QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->render( PQPAINTER( 1 ), HB_ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QWidget::RenderFlags >( QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) ) : static_cast< QWidget::RenderFlags >( hb_parni( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void repaint( int x, int y, int w, int h )
-*/
-void QWidget_repaint1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->repaint( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void repaint( const QRect & rect )
-*/
-void QWidget_repaint2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->repaint( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void repaint( const QRegion & rgn )
-*/
-void QWidget_repaint3()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->repaint( *PQREGION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void repaint()
-*/
-void QWidget_repaint4()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->repaint();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QWIDGET_REPAINT )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QWidget_repaint1();
+    /*
+    void repaint( int x, int y, int w, int h )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->repaint( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QWidget_repaint2();
+    /*
+    void repaint( const QRect & rect )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->repaint( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QWidget_repaint3();
+    /*
+    void repaint( const QRegion & rgn )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->repaint( *PQREGION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QWidget_repaint4();
+    /*
+    void repaint()
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->repaint();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3553,45 +3489,37 @@ HB_FUNC_STATIC( QWIDGET_REPAINT )
   }
 }
 
-/*
-void resize( const QSize & )
-*/
-void QWidget_resize1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->resize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void resize( int w, int h )
-*/
-void QWidget_resize2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->resize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_RESIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWidget_resize1();
+    /*
+    void resize( const QSize & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->resize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_resize2();
+    /*
+    void resize( int w, int h )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->resize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3648,45 +3576,37 @@ HB_FUNC_STATIC( QWIDGET_SAVEGEOMETRY )
   }
 }
 
-/*
-void scroll( int dx, int dy )
-*/
-void QWidget_scroll1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scroll( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void scroll( int dx, int dy, const QRect & r )
-*/
-void QWidget_scroll2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scroll( PINT( 1 ), PINT( 2 ), *PQRECT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SCROLL )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_scroll1();
+    /*
+    void scroll( int dx, int dy )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scroll( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQRECT( 3 ) )
   {
-    QWidget_scroll2();
+    /*
+    void scroll( int dx, int dy, const QRect & r )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scroll( PINT( 1 ), PINT( 2 ), *PQRECT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3720,45 +3640,37 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setContentsMargins( int left, int top, int right, int bottom )
-*/
-void QWidget_setContentsMargins1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setContentsMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setContentsMargins( const QMargins & margins )
-*/
-void QWidget_setContentsMargins2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setContentsMargins( *PQMARGINS( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QWidget_setContentsMargins1();
+    /*
+    void setContentsMargins( int left, int top, int right, int bottom )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setContentsMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQMARGINS( 1 ) )
   {
-    QWidget_setContentsMargins2();
+    /*
+    void setContentsMargins( const QMargins & margins )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setContentsMargins( *PQMARGINS( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3820,45 +3732,37 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setFixedSize( const QSize & s )
-*/
-void QWidget_setFixedSize1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFixedSize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setFixedSize( int w, int h )
-*/
-void QWidget_setFixedSize2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFixedSize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWidget_setFixedSize1();
+    /*
+    void setFixedSize( const QSize & s )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFixedSize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setFixedSize2();
+    /*
+    void setFixedSize( int w, int h )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFixedSize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3892,45 +3796,37 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setFocus( Qt::FocusReason reason )
-*/
-void QWidget_setFocus1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFocus( static_cast<Qt::FocusReason>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setFocus()
-*/
-void QWidget_setFocus2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFocus();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETFOCUS )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QWidget_setFocus1();
+    /*
+    void setFocus( Qt::FocusReason reason )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFocus( static_cast<Qt::FocusReason>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QWidget_setFocus2();
+    /*
+    void setFocus()
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFocus();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -3989,45 +3885,37 @@ HB_FUNC_STATIC( QWIDGET_GEOMETRY )
   }
 }
 
-/*
-void setGeometry( const QRect & )
-*/
-void QWidget_setGeometry1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setGeometry( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setGeometry( int x, int y, int w, int h )
-*/
-void QWidget_setGeometry2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setGeometry( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
 {
   if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QWidget_setGeometry1();
+    /*
+    void setGeometry( const QRect & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setGeometry( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QWidget_setGeometry2();
+    /*
+    void setGeometry( int x, int y, int w, int h )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setGeometry( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -4086,45 +3974,37 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
   }
 }
 
-/*
-void setMaximumSize( const QSize & )
-*/
-void QWidget_setMaximumSize1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMaximumSize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setMaximumSize( int maxw, int maxh )
-*/
-void QWidget_setMaximumSize2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMaximumSize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETMAXIMUMSIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWidget_setMaximumSize1();
+    /*
+    void setMaximumSize( const QSize & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMaximumSize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setMaximumSize2();
+    /*
+    void setMaximumSize( int maxw, int maxh )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMaximumSize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -4157,45 +4037,37 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZE )
   }
 }
 
-/*
-void setMinimumSize( const QSize & )
-*/
-void QWidget_setMinimumSize1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMinimumSize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setMinimumSize( int minw, int minh )
-*/
-void QWidget_setMinimumSize2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMinimumSize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWidget_setMinimumSize1();
+    /*
+    void setMinimumSize( const QSize & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMinimumSize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setMinimumSize2();
+    /*
+    void setMinimumSize( int minw, int minh )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMinimumSize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -4203,45 +4075,37 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
   }
 }
 
-/*
-void setParent( QWidget * parent )
-*/
-void QWidget_setParent1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setParent( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setParent( QWidget * parent, Qt::WindowFlags f )
-*/
-void QWidget_setParent2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setParent( PQWIDGET( 1 ), static_cast<Qt::WindowFlags>( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETPARENT )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QWidget_setParent1();
+    /*
+    void setParent( QWidget * parent )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setParent( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setParent2();
+    /*
+    void setParent( QWidget * parent, Qt::WindowFlags f )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setParent( PQWIDGET( 1 ), static_cast<Qt::WindowFlags>( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -4330,45 +4194,37 @@ HB_FUNC_STATIC( QWIDGET_SIZEINCREMENT )
   }
 }
 
-/*
-void setSizeIncrement( const QSize & )
-*/
-void QWidget_setSizeIncrement1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSizeIncrement( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setSizeIncrement( int w, int h )
-*/
-void QWidget_setSizeIncrement2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSizeIncrement( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWidget_setSizeIncrement1();
+    /*
+    void setSizeIncrement( const QSize & )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSizeIncrement( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setSizeIncrement2();
+    /*
+    void setSizeIncrement( int w, int h )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSizeIncrement( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -4401,45 +4257,37 @@ HB_FUNC_STATIC( QWIDGET_SIZEPOLICY )
   }
 }
 
-/*
-void setSizePolicy( QSizePolicy )
-*/
-void QWidget_setSizePolicy1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSizePolicy( *PQSIZEPOLICY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
-*/
-void QWidget_setSizePolicy2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni( 1 ) ), static_cast<QSizePolicy::Policy>( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_SETSIZEPOLICY )
 {
   if( ISNUMPAR( 1 ) && ISQSIZEPOLICY( 1 ) )
   {
-    QWidget_setSizePolicy1();
+    /*
+    void setSizePolicy( QSizePolicy )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSizePolicy( *PQSIZEPOLICY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWidget_setSizePolicy2();
+    /*
+    void setSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni( 1 ) ), static_cast<QSizePolicy::Policy>( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -4972,83 +4820,67 @@ HB_FUNC_STATIC( QWIDGET_UNGRABGESTURE )
 #endif
 }
 
-/*
-void update( int x, int y, int w, int h )
-*/
-void QWidget_update1()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->update( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void update( const QRect & rect )
-*/
-void QWidget_update2()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->update( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void update( const QRegion & rgn )
-*/
-void QWidget_update3()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->update( *PQREGION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void update()
-*/
-void QWidget_update4()
-{
-  auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->update();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWIDGET_UPDATE )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QWidget_update1();
+    /*
+    void update( int x, int y, int w, int h )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->update( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QWidget_update2();
+    /*
+    void update( const QRect & rect )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->update( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QWidget_update3();
+    /*
+    void update( const QRegion & rgn )
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->update( *PQREGION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QWidget_update4();
+    /*
+    void update()
+    */
+    auto obj = qobject_cast< QWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->update();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

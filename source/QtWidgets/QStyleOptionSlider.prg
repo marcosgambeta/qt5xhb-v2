@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,33 +69,25 @@ RETURN
 #include <QtWidgets/QStyleOptionSlider>
 #endif
 
-/*
-QStyleOptionSlider()
-*/
-void QStyleOptionSlider_new1()
-{
-  auto obj = new QStyleOptionSlider();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionSlider( const QStyleOptionSlider & other )
-*/
-void QStyleOptionSlider_new2()
-{
-  auto obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionSlider_new1();
+    /*
+    QStyleOptionSlider()
+    */
+    auto obj = new QStyleOptionSlider();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSLIDER( 1 ) )
   {
-    QStyleOptionSlider_new2();
+    /*
+    QStyleOptionSlider( const QStyleOptionSlider & other )
+    */
+    auto obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

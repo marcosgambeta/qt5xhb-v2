@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,33 +54,25 @@ RETURN
 #include <QtWidgets/QStyleOptionTitleBar>
 #endif
 
-/*
-QStyleOptionTitleBar()
-*/
-void QStyleOptionTitleBar_new1()
-{
-  auto obj = new QStyleOptionTitleBar();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
-*/
-void QStyleOptionTitleBar_new2()
-{
-  auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionTitleBar_new1();
+    /*
+    QStyleOptionTitleBar()
+    */
+    auto obj = new QStyleOptionTitleBar();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTITLEBAR( 1 ) )
   {
-    QStyleOptionTitleBar_new2();
+    /*
+    QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
+    */
+    auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,46 +62,34 @@ RETURN
 #include <QtWidgets/QUndoGroup>
 #include <QtWidgets/QUndoStack>
 
-/*
-QUndoView( QWidget * parent = nullptr )
-*/
-void QUndoView_new1()
-{
-  auto obj = new QUndoView( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QUndoView( QUndoStack * stack, QWidget * parent = nullptr )
-*/
-void QUndoView_new2()
-{
-  auto obj = new QUndoView( PQUNDOSTACK( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QUndoView( QUndoGroup * group, QWidget * parent = nullptr )
-*/
-void QUndoView_new3()
-{
-  auto obj = new QUndoView( PQUNDOGROUP( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QUndoView_new1();
+    /*
+    QUndoView( QWidget * parent = nullptr )
+    */
+    auto obj = new QUndoView( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQUNDOSTACK( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QUndoView_new2();
+    /*
+    QUndoView( QUndoStack * stack, QWidget * parent = nullptr )
+    */
+    auto obj = new QUndoView( PQUNDOSTACK( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQUNDOGROUP( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QUndoView_new3();
+    /*
+    QUndoView( QUndoGroup * group, QWidget * parent = nullptr )
+    */
+    auto obj = new QUndoView( PQUNDOGROUP( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

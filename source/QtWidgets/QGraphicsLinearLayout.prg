@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,33 +69,25 @@ RETURN
 #include <QtWidgets/QGraphicsLinearLayout>
 #endif
 
-/*
-QGraphicsLinearLayout( QGraphicsLayoutItem * parent = nullptr )
-*/
-void QGraphicsLinearLayout_new1()
-{
-  auto obj = new QGraphicsLinearLayout( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsLayoutItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
-*/
-void QGraphicsLinearLayout_new2()
-{
-  auto obj = new QGraphicsLinearLayout( static_cast<Qt::Orientation>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsLayoutItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSLAYOUTITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsLinearLayout_new1();
+    /*
+    QGraphicsLinearLayout( QGraphicsLayoutItem * parent = nullptr )
+    */
+    auto obj = new QGraphicsLinearLayout( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsLayoutItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQGRAPHICSLAYOUTITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsLinearLayout_new2();
+    /*
+    QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
+    */
+    auto obj = new QGraphicsLinearLayout( static_cast<Qt::Orientation>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsLayoutItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

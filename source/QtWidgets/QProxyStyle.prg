@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,33 +76,25 @@ RETURN
 #include <QtWidgets/QProxyStyle>
 #endif
 
-/*
-QProxyStyle( QStyle * style = nullptr )
-*/
-void QProxyStyle_new1()
-{
-  auto obj = new QProxyStyle( OPQSTYLE( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QProxyStyle( const QString & key )
-*/
-void QProxyStyle_new2()
-{
-  auto obj = new QProxyStyle( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QProxyStyle_new1();
+    /*
+    QProxyStyle( QStyle * style = nullptr )
+    */
+    auto obj = new QProxyStyle( OPQSTYLE( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QProxyStyle_new2();
+    /*
+    QProxyStyle( const QString & key )
+    */
+    auto obj = new QProxyStyle( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -631,64 +623,52 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
   }
 }
 
-/*
-void polish( QWidget * widget )
-*/
-void QProxyStyle_polish1()
-{
-  auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->polish( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void polish( QPalette & pal )
-*/
-void QProxyStyle_polish2()
-{
-  auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->polish( *PQPALETTE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void polish( QApplication * app )
-*/
-void QProxyStyle_polish3()
-{
-  auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->polish( PQAPPLICATION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QProxyStyle_polish1();
+    /*
+    void polish( QWidget * widget )
+    */
+    auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->polish( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
   {
-    QProxyStyle_polish2();
+    /*
+    void polish( QPalette & pal )
+    */
+    auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->polish( *PQPALETTE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
   {
-    QProxyStyle_polish3();
+    /*
+    void polish( QApplication * app )
+    */
+    auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->polish( PQAPPLICATION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -696,45 +676,37 @@ HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
   }
 }
 
-/*
-void unpolish( QWidget * widget )
-*/
-void QProxyStyle_unpolish1()
-{
-  auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->unpolish( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void unpolish( QApplication * app )
-*/
-void QProxyStyle_unpolish2()
-{
-  auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->unpolish( PQAPPLICATION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPROXYSTYLE_UNPOLISH )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QProxyStyle_unpolish1();
+    /*
+    void unpolish( QWidget * widget )
+    */
+    auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->unpolish( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
   {
-    QProxyStyle_unpolish2();
+    /*
+    void unpolish( QApplication * app )
+    */
+    auto obj = qobject_cast< QProxyStyle * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->unpolish( PQAPPLICATION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -84,33 +84,25 @@ RETURN
 #include <QtWidgets/QStyleOptionViewItem>
 #endif
 
-/*
-QStyleOptionViewItem()
-*/
-void QStyleOptionViewItem_new1()
-{
-  auto obj = new QStyleOptionViewItem();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionViewItem( const QStyleOptionViewItem & other )
-*/
-void QStyleOptionViewItem_new2()
-{
-  auto obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionViewItem_new1();
+    /*
+    QStyleOptionViewItem()
+    */
+    auto obj = new QStyleOptionViewItem();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONVIEWITEM( 1 ) )
   {
-    QStyleOptionViewItem_new2();
+    /*
+    QStyleOptionViewItem( const QStyleOptionViewItem & other )
+    */
+    auto obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

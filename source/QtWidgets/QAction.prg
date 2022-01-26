@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -116,46 +116,34 @@ RETURN
 
 #include <QtWidgets/QMenu>
 
-/*
-QAction( QObject * parent = nullptr )
-*/
-void QAction_new1()
-{
-  auto obj = new QAction( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QAction( const QString & text, QObject * parent = nullptr )
-*/
-void QAction_new2()
-{
-  auto obj = new QAction( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QAction( const QIcon & icon, const QString & text, QObject * parent = nullptr )
-*/
-void QAction_new3()
-{
-  auto obj = new QAction( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QACTION_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QAction_new1();
+    /*
+    QAction( QObject * parent = nullptr )
+    */
+    auto obj = new QAction( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QAction_new2();
+    /*
+    QAction( const QString & text, QObject * parent = nullptr )
+    */
+    auto obj = new QAction( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ( ISQICON( 1 )|| HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAction_new3();
+    /*
+    QAction( const QIcon & icon, const QString & text, QObject * parent = nullptr )
+    */
+    auto obj = new QAction( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -1058,52 +1046,44 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setShortcuts( const QList<QKeySequence> & shortcuts )
-*/
-void QAction_setShortcuts1()
-{
-  auto obj = qobject_cast< QAction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QKeySequence> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    for( auto i1 = 0; i1 < nLen1; i1++ )
-    {
-      par1 << *static_cast< QKeySequence * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-    }
-    obj->setShortcuts( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setShortcuts( QKeySequence::StandardKey key )
-*/
-void QAction_setShortcuts2()
-{
-  auto obj = qobject_cast< QAction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setShortcuts( static_cast<QKeySequence::StandardKey>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QAction_setShortcuts1();
+    /*
+    void setShortcuts( const QList<QKeySequence> & shortcuts )
+    */
+    auto obj = qobject_cast< QAction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QKeySequence> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( auto i1 = 0; i1 < nLen1; i1++ )
+      {
+        par1 << *static_cast< QKeySequence * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      }
+      obj->setShortcuts( par1 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QAction_setShortcuts2();
+    /*
+    void setShortcuts( QKeySequence::StandardKey key )
+    */
+    auto obj = qobject_cast< QAction * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setShortcuts( static_cast<QKeySequence::StandardKey>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

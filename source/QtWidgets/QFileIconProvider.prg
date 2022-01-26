@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -91,43 +91,35 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual QIcon icon( QFileIconProvider::IconType type ) const
-*/
-void QFileIconProvider_icon1()
-{
-  auto obj = static_cast< QFileIconProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QIcon( obj->icon( static_cast<QFileIconProvider::IconType>( hb_parni( 1 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QICON", true );
-  }
-}
-
-/*
-virtual QIcon icon( const QFileInfo & info ) const
-*/
-void QFileIconProvider_icon2()
-{
-  auto obj = static_cast< QFileIconProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QIcon( obj->icon( *PQFILEINFO( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QICON", true );
-  }
-}
-
 HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QFileIconProvider_icon1();
+    /*
+    virtual QIcon icon( QFileIconProvider::IconType type ) const
+    */
+    auto obj = static_cast< QFileIconProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QIcon( obj->icon( static_cast<QFileIconProvider::IconType>( hb_parni( 1 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQFILEINFO( 1 ) )
   {
-    QFileIconProvider_icon2();
+    /*
+    virtual QIcon icon( const QFileInfo & info ) const
+    */
+    auto obj = static_cast< QFileIconProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QIcon( obj->icon( *PQFILEINFO( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
+    }
+
   }
   else
   {

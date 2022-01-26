@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -85,45 +85,37 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void showMessage( const QString & message )
-*/
-void QErrorMessage_showMessage1()
-{
-  auto obj = qobject_cast< QErrorMessage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->showMessage( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void showMessage( const QString & message, const QString & type )
-*/
-void QErrorMessage_showMessage2()
-{
-  auto obj = qobject_cast< QErrorMessage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->showMessage( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QErrorMessage_showMessage1();
+    /*
+    void showMessage( const QString & message )
+    */
+    auto obj = qobject_cast< QErrorMessage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->showMessage( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QErrorMessage_showMessage2();
+    /*
+    void showMessage( const QString & message, const QString & type )
+    */
+    auto obj = qobject_cast< QErrorMessage * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->showMessage( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

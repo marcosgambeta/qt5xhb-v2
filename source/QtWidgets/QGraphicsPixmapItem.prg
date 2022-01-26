@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,25 @@ RETURN
 #include <QtWidgets/QGraphicsPixmapItem>
 #endif
 
-/*
-QGraphicsPixmapItem( QGraphicsItem * parent = nullptr )
-*/
-void QGraphicsPixmapItem_new1()
-{
-  auto obj = new QGraphicsPixmapItem( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
-*/
-void QGraphicsPixmapItem_new2()
-{
-  auto obj = new QGraphicsPixmapItem( *PQPIXMAP( 1 ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsPixmapItem_new1();
+    /*
+    QGraphicsPixmapItem( QGraphicsItem * parent = nullptr )
+    */
+    auto obj = new QGraphicsPixmapItem( HB_ISNIL( 1 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQPIXMAP( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsPixmapItem_new2();
+    /*
+    QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
+    */
+    auto obj = new QGraphicsPixmapItem( *PQPIXMAP( 1 ), HB_ISNIL( 2 ) ? nullptr : static_cast< QGraphicsItem * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -166,45 +158,37 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
   }
 }
 
-/*
-void setOffset( const QPointF & offset )
-*/
-void QGraphicsPixmapItem_setOffset1()
-{
-  auto obj = static_cast< QGraphicsPixmapItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setOffset( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setOffset( qreal x, qreal y )
-*/
-void QGraphicsPixmapItem_setOffset2()
-{
-  auto obj = static_cast< QGraphicsPixmapItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QGraphicsPixmapItem_setOffset1();
+    /*
+    void setOffset( const QPointF & offset )
+    */
+    auto obj = static_cast< QGraphicsPixmapItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setOffset( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QGraphicsPixmapItem_setOffset2();
+    /*
+    void setOffset( qreal x, qreal y )
+    */
+    auto obj = static_cast< QGraphicsPixmapItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

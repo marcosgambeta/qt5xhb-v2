@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -88,33 +88,25 @@ RETURN
 #include <QtWidgets/QDirModel>
 #endif
 
-/*
-QDirModel( const QStringList & nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = nullptr )
-*/
-void QDirModel_new1()
-{
-  auto obj = new QDirModel( PQSTRINGLIST( 1 ), static_cast<QDir::Filters>( hb_parni( 2 ) ), static_cast<QDir::SortFlags>( hb_parni( 3 ) ), OPQOBJECT( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDirModel( QObject * parent = nullptr )
-*/
-void QDirModel_new2()
-{
-  auto obj = new QDirModel( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
   if( ISBETWEEN( 3, 4 ) && HB_ISARRAY( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDirModel_new1();
+    /*
+    QDirModel( const QStringList & nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = nullptr )
+    */
+    auto obj = new QDirModel( PQSTRINGLIST( 1 ), static_cast<QDir::Filters>( hb_parni( 2 ) ), static_cast<QDir::SortFlags>( hb_parni( 3 ) ), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDirModel_new2();
+    /*
+    QDirModel( QObject * parent = nullptr )
+    */
+    auto obj = new QDirModel( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -141,43 +133,35 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
-void QDirModel_index1()
-{
-  auto obj = qobject_cast< QDirModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
-  }
-}
-
-/*
-QModelIndex index( const QString & path, int column = 0 ) const
-*/
-void QDirModel_index2()
-{
-  auto obj = qobject_cast< QDirModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QModelIndex( obj->index( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
-  }
-}
-
 HB_FUNC_STATIC( QDIRMODEL_INDEX )
 {
   if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDirModel_index1();
+    /*
+    QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+    */
+    auto obj = qobject_cast< QDirModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
+    }
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDirModel_index2();
+    /*
+    QModelIndex index( const QString & path, int column = 0 ) const
+    */
+    auto obj = qobject_cast< QDirModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QModelIndex( obj->index( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
+    }
+
   }
   else
   {

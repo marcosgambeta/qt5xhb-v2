@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,25 @@ RETURN
 #include <QtWidgets/QStyleOptionDockWidget>
 #endif
 
-/*
-QStyleOptionDockWidget()
-*/
-void QStyleOptionDockWidget_new1()
-{
-  auto obj = new QStyleOptionDockWidget();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
-*/
-void QStyleOptionDockWidget_new2()
-{
-  auto obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionDockWidget_new1();
+    /*
+    QStyleOptionDockWidget()
+    */
+    auto obj = new QStyleOptionDockWidget();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONDOCKWIDGET( 1 ) )
   {
-    QStyleOptionDockWidget_new2();
+    /*
+    QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
+    */
+    auto obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

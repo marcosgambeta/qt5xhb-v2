@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,46 +61,34 @@ RETURN
 #include <QtWidgets/QStackedLayout>
 #endif
 
-/*
-QStackedLayout()
-*/
-void QStackedLayout_new1()
-{
-  auto obj = new QStackedLayout();
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QStackedLayout( QWidget * parent )
-*/
-void QStackedLayout_new2()
-{
-  auto obj = new QStackedLayout( PQWIDGET( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QStackedLayout( QLayout * parentLayout )
-*/
-void QStackedLayout_new3()
-{
-  auto obj = new QStackedLayout( PQLAYOUT( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStackedLayout_new1();
+    /*
+    QStackedLayout()
+    */
+    auto obj = new QStackedLayout();
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QStackedLayout_new2();
+    /*
+    QStackedLayout( QWidget * parent )
+    */
+    auto obj = new QStackedLayout( PQWIDGET( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQLAYOUT( 1 ) )
   {
-    QStackedLayout_new3();
+    /*
+    QStackedLayout( QLayout * parentLayout )
+    */
+    auto obj = new QStackedLayout( PQLAYOUT( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

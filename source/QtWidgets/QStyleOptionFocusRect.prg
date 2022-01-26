@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,33 +48,25 @@ RETURN
 #include <QtWidgets/QStyleOptionFocusRect>
 #endif
 
-/*
-QStyleOptionFocusRect()
-*/
-void QStyleOptionFocusRect_new1()
-{
-  auto obj = new QStyleOptionFocusRect();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
-*/
-void QStyleOptionFocusRect_new2()
-{
-  auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionFocusRect_new1();
+    /*
+    QStyleOptionFocusRect()
+    */
+    auto obj = new QStyleOptionFocusRect();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONFOCUSRECT( 1 ) )
   {
-    QStyleOptionFocusRect_new2();
+    /*
+    QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
+    */
+    auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

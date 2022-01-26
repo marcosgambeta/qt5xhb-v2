@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -147,41 +147,33 @@ HB_FUNC_STATIC( QTABBAR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-int addTab( const QString & text )
-*/
-void QTabBar_addTab1()
-{
-  auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->addTab( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-int addTab( const QIcon & icon, const QString & text )
-*/
-void QTabBar_addTab2()
-{
-  auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->addTab( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTabBar_addTab1();
+    /*
+    int addTab( const QString & text )
+    */
+    auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->addTab( PQSTRING( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ( ISQICON( 1 )|| HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) )
   {
-    QTabBar_addTab2();
+    /*
+    int addTab( const QIcon & icon, const QString & text )
+    */
+    auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->addTab( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) ) );
+    }
+
   }
   else
   {
@@ -358,41 +350,33 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
   }
 }
 
-/*
-int insertTab( int index, const QString & text )
-*/
-void QTabBar_insertTab1()
-{
-  auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->insertTab( PINT( 1 ), PQSTRING( 2 ) ) );
-  }
-}
-
-/*
-int insertTab( int index, const QIcon & icon, const QString & text )
-*/
-void QTabBar_insertTab2()
-{
-  auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->insertTab( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTabBar_insertTab1();
+    /*
+    int insertTab( int index, const QString & text )
+    */
+    auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->insertTab( PINT( 1 ), PQSTRING( 2 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ( ISQICON( 2 )|| HB_ISCHAR( 2 ) ) && HB_ISCHAR( 3 ) )
   {
-    QTabBar_insertTab2();
+    /*
+    int insertTab( int index, const QIcon & icon, const QString & text )
+    */
+    auto obj = qobject_cast< QTabBar * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->insertTab( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 2 ) ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ) ) );
+    }
+
   }
   else
   {

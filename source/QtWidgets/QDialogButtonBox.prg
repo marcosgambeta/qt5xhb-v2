@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,46 +68,34 @@ RETURN
 
 #include <QtWidgets/QPushButton>
 
-/*
-QDialogButtonBox( QWidget * parent = nullptr )
-*/
-void QDialogButtonBox_new1()
-{
-  auto obj = new QDialogButtonBox( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = nullptr )
-*/
-void QDialogButtonBox_new2()
-{
-  auto obj = new QDialogButtonBox( static_cast<Qt::Orientation>( hb_parni( 1 ) ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
-*/
-void QDialogButtonBox_new3()
-{
-  auto obj = new QDialogButtonBox( static_cast<QDialogButtonBox::StandardButtons>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< Qt::Orientation >( Qt::Horizontal ) : static_cast< Qt::Orientation >( hb_parni( 2 ) ), OPQWIDGET( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDialogButtonBox_new1();
+    /*
+    QDialogButtonBox( QWidget * parent = nullptr )
+    */
+    auto obj = new QDialogButtonBox( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDialogButtonBox_new2();
+    /*
+    QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = nullptr )
+    */
+    auto obj = new QDialogButtonBox( static_cast<Qt::Orientation>( hb_parni( 1 ) ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDialogButtonBox_new3();
+    /*
+    QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+    */
+    auto obj = new QDialogButtonBox( static_cast<QDialogButtonBox::StandardButtons>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< Qt::Orientation >( Qt::Horizontal ) : static_cast< Qt::Orientation >( hb_parni( 2 ) ), OPQWIDGET( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -134,62 +122,50 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addButton( QAbstractButton * button, QDialogButtonBox::ButtonRole role )
-*/
-void QDialogButtonBox_addButton1()
-{
-  auto obj = qobject_cast< QDialogButtonBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addButton( PQABSTRACTBUTTON( 1 ), static_cast<QDialogButtonBox::ButtonRole>( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QPushButton * addButton( const QString & text, QDialogButtonBox::ButtonRole role )
-*/
-void QDialogButtonBox_addButton2()
-{
-  auto obj = qobject_cast< QDialogButtonBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QPushButton * ptr = obj->addButton( PQSTRING( 1 ), static_cast<QDialogButtonBox::ButtonRole>( hb_parni( 2 ) ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
-  }
-}
-
-/*
-QPushButton * addButton( QDialogButtonBox::StandardButton button )
-*/
-void QDialogButtonBox_addButton3()
-{
-  auto obj = qobject_cast< QDialogButtonBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QPushButton * ptr = obj->addButton( static_cast<QDialogButtonBox::StandardButton>( hb_parni( 1 ) ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
-  }
-}
-
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {
   if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDialogButtonBox_addButton1();
+    /*
+    void addButton( QAbstractButton * button, QDialogButtonBox::ButtonRole role )
+    */
+    auto obj = qobject_cast< QDialogButtonBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addButton( PQABSTRACTBUTTON( 1 ), static_cast<QDialogButtonBox::ButtonRole>( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDialogButtonBox_addButton2();
+    /*
+    QPushButton * addButton( const QString & text, QDialogButtonBox::ButtonRole role )
+    */
+    auto obj = qobject_cast< QDialogButtonBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QPushButton * ptr = obj->addButton( PQSTRING( 1 ), static_cast<QDialogButtonBox::ButtonRole>( hb_parni( 2 ) ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QDialogButtonBox_addButton3();
+    /*
+    QPushButton * addButton( QDialogButtonBox::StandardButton button )
+    */
+    auto obj = qobject_cast< QDialogButtonBox * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QPushButton * ptr = obj->addButton( static_cast<QDialogButtonBox::StandardButton>( hb_parni( 1 ) ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -148,33 +148,25 @@ RETURN
 #include <QtPrintSupport/QPrinter>
 #include <QtWidgets/QMenu>
 
-/*
-QTextEdit( QWidget * parent = nullptr )
-*/
-void QTextEdit_new1()
-{
-  auto obj = new QTextEdit( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QTextEdit( const QString & text, QWidget * parent = nullptr )
-*/
-void QTextEdit_new2()
-{
-  auto obj = new QTextEdit( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QTextEdit_new1();
+    /*
+    QTextEdit( QWidget * parent = nullptr )
+    */
+    auto obj = new QTextEdit( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextEdit_new2();
+    /*
+    QTextEdit( const QString & text, QWidget * parent = nullptr )
+    */
+    auto obj = new QTextEdit( PQSTRING( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -321,43 +313,35 @@ HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
   }
 }
 
-/*
-QMenu * createStandardContextMenu()
-*/
-void QTextEdit_createStandardContextMenu1()
-{
-  auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QMenu * ptr = obj->createStandardContextMenu();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
-  }
-}
-
-/*
-QMenu * createStandardContextMenu( const QPoint & position )
-*/
-void QTextEdit_createStandardContextMenu2()
-{
-  auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QMenu * ptr = obj->createStandardContextMenu( *PQPOINT( 1 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextEdit_createStandardContextMenu1();
+    /*
+    QMenu * createStandardContextMenu()
+    */
+    auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QMenu * ptr = obj->createStandardContextMenu();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QTextEdit_createStandardContextMenu2();
+    /*
+    QMenu * createStandardContextMenu( const QPoint & position )
+    */
+    auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QMenu * ptr = obj->createStandardContextMenu( *PQPOINT( 1 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+    }
+
   }
   else
   {
@@ -439,43 +423,35 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
   }
 }
 
-/*
-QRect cursorRect( const QTextCursor & cursor ) const
-*/
-void QTextEdit_cursorRect1()
-{
-  auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
-/*
-QRect cursorRect() const
-*/
-void QTextEdit_cursorRect2()
-{
-  auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QRect( obj->cursorRect() );
-    Qt5xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
-    QTextEdit_cursorRect1();
+    /*
+    QRect cursorRect( const QTextCursor & cursor ) const
+    */
+    auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
+    }
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QTextEdit_cursorRect2();
+    /*
+    QRect cursorRect() const
+    */
+    auto obj = qobject_cast< QTextEdit * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QRect( obj->cursorRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -579,45 +579,37 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void resize( const QSizeF & size )
-*/
-void QGraphicsWidget_resize1()
-{
-  auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->resize( *PQSIZEF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void resize( qreal w, qreal h )
-*/
-void QGraphicsWidget_resize2()
-{
-  auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->resize( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZEF( 1 ) )
   {
-    QGraphicsWidget_resize1();
+    /*
+    void resize( const QSizeF & size )
+    */
+    auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->resize( *PQSIZEF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QGraphicsWidget_resize2();
+    /*
+    void resize( qreal w, qreal h )
+    */
+    auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->resize( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -755,45 +747,37 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setGeometry( qreal x, qreal y, qreal w, qreal h )
-*/
-void QGraphicsWidget_setGeometry1()
-{
-  auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setGeometry( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void setGeometry( const QRectF & rect )
-*/
-void QGraphicsWidget_setGeometry2()
-{
-  auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setGeometry( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QGraphicsWidget_setGeometry1();
+    /*
+    void setGeometry( qreal x, qreal y, qreal w, qreal h )
+    */
+    auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setGeometry( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QGraphicsWidget_setGeometry2();
+    /*
+    virtual void setGeometry( const QRectF & rect )
+    */
+    auto obj = qobject_cast< QGraphicsWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setGeometry( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -118,121 +118,97 @@ HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addRow( QWidget * label, QWidget * field )
-*/
-void QFormLayout_addRow1()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRow( PQWIDGET( 1 ), PQWIDGET( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRow( QWidget * label, QLayout * field )
-*/
-void QFormLayout_addRow2()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRow( PQWIDGET( 1 ), PQLAYOUT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRow( const QString & labelText, QWidget * field )
-*/
-void QFormLayout_addRow3()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRow( PQSTRING( 1 ), PQWIDGET( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRow( const QString & labelText, QLayout * field )
-*/
-void QFormLayout_addRow4()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRow( PQSTRING( 1 ), PQLAYOUT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRow( QWidget * widget )
-*/
-void QFormLayout_addRow5()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRow( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRow( QLayout * layout )
-*/
-void QFormLayout_addRow6()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRow( PQLAYOUT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 {
   if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISQWIDGET( 2 ) )
   {
-    QFormLayout_addRow1();
+    /*
+    void addRow( QWidget * label, QWidget * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRow( PQWIDGET( 1 ), PQWIDGET( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISQLAYOUT( 2 ) )
   {
-    QFormLayout_addRow2();
+    /*
+    void addRow( QWidget * label, QLayout * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRow( PQWIDGET( 1 ), PQLAYOUT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQWIDGET( 2 ) )
   {
-    QFormLayout_addRow3();
+    /*
+    void addRow( const QString & labelText, QWidget * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRow( PQSTRING( 1 ), PQWIDGET( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQLAYOUT( 2 ) )
   {
-    QFormLayout_addRow4();
+    /*
+    void addRow( const QString & labelText, QLayout * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRow( PQSTRING( 1 ), PQLAYOUT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QFormLayout_addRow5();
+    /*
+    void addRow( QWidget * widget )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRow( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQLAYOUT( 1 ) )
   {
-    QFormLayout_addRow6();
+    /*
+    void addRow( QLayout * layout )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRow( PQLAYOUT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -312,121 +288,97 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
   }
 }
 
-/*
-void insertRow( int row, QWidget * label, QWidget * field )
-*/
-void QFormLayout_insertRow1()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQWIDGET( 2 ), PQWIDGET( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertRow( int row, QWidget * label, QLayout * field )
-*/
-void QFormLayout_insertRow2()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQWIDGET( 2 ), PQLAYOUT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertRow( int row, const QString & labelText, QWidget * field )
-*/
-void QFormLayout_insertRow3()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQSTRING( 2 ), PQWIDGET( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertRow( int row, const QString & labelText, QLayout * field )
-*/
-void QFormLayout_insertRow4()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQSTRING( 2 ), PQLAYOUT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertRow( int row, QWidget * widget )
-*/
-void QFormLayout_insertRow5()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQWIDGET( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertRow( int row, QLayout * layout )
-*/
-void QFormLayout_insertRow6()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQLAYOUT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && ISQWIDGET( 3 ) )
   {
-    QFormLayout_insertRow1();
+    /*
+    void insertRow( int row, QWidget * label, QWidget * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQWIDGET( 2 ), PQWIDGET( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && ISQLAYOUT( 3 ) )
   {
-    QFormLayout_insertRow2();
+    /*
+    void insertRow( int row, QWidget * label, QLayout * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQWIDGET( 2 ), PQLAYOUT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ISQWIDGET( 3 ) )
   {
-    QFormLayout_insertRow3();
+    /*
+    void insertRow( int row, const QString & labelText, QWidget * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQSTRING( 2 ), PQWIDGET( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ISQLAYOUT( 3 ) )
   {
-    QFormLayout_insertRow4();
+    /*
+    void insertRow( int row, const QString & labelText, QLayout * field )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQSTRING( 2 ), PQLAYOUT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) )
   {
-    QFormLayout_insertRow5();
+    /*
+    void insertRow( int row, QWidget * widget )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQWIDGET( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQLAYOUT( 2 ) )
   {
-    QFormLayout_insertRow6();
+    /*
+    void insertRow( int row, QLayout * layout )
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQLAYOUT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -434,43 +386,35 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
   }
 }
 
-/*
-QLayoutItem * itemAt( int row, QFormLayout::ItemRole role ) const
-*/
-void QFormLayout_itemAt1()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QLayoutItem * ptr = obj->itemAt( PINT( 1 ), static_cast<QFormLayout::ItemRole>( hb_parni( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
-  }
-}
-
-/*
-virtual QLayoutItem * itemAt( int index ) const
-*/
-void QFormLayout_itemAt2()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
-  }
-}
-
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QFormLayout_itemAt1();
+    /*
+    QLayoutItem * itemAt( int row, QFormLayout::ItemRole role ) const
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QLayoutItem * ptr = obj->itemAt( PINT( 1 ), static_cast<QFormLayout::ItemRole>( hb_parni( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QFormLayout_itemAt2();
+    /*
+    virtual QLayoutItem * itemAt( int index ) const
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
+    }
+
   }
   else
   {
@@ -502,43 +446,35 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
   }
 }
 
-/*
-QWidget * labelForField( QWidget * field ) const
-*/
-void QFormLayout_labelForField1()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWidget * ptr = obj->labelForField( PQWIDGET( 1 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
-  }
-}
-
-/*
-QWidget * labelForField( QLayout * field ) const
-*/
-void QFormLayout_labelForField2()
-{
-  auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWidget * ptr = obj->labelForField( PQLAYOUT( 1 ) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
-  }
-}
-
 HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QFormLayout_labelForField1();
+    /*
+    QWidget * labelForField( QWidget * field ) const
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWidget * ptr = obj->labelForField( PQWIDGET( 1 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQLAYOUT( 1 ) )
   {
-    QFormLayout_labelForField2();
+    /*
+    QWidget * labelForField( QLayout * field ) const
+    */
+    auto obj = qobject_cast< QFormLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWidget * ptr = obj->labelForField( PQLAYOUT( 1 ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    }
+
   }
   else
   {

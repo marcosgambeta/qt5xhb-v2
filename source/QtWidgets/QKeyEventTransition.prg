@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,25 @@ RETURN
 #include <QtWidgets/QKeyEventTransition>
 #endif
 
-/*
-QKeyEventTransition( QState * sourceState = nullptr )
-*/
-void QKeyEventTransition_new1()
-{
-  auto obj = new QKeyEventTransition( OPQSTATE( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
-*/
-void QKeyEventTransition_new2()
-{
-  auto obj = new QKeyEventTransition( PQOBJECT( 1 ), static_cast<QEvent::Type>( hb_parni( 2 ) ), PINT( 3 ), OPQSTATE( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QKeyEventTransition_new1();
+    /*
+    QKeyEventTransition( QState * sourceState = nullptr )
+    */
+    auto obj = new QKeyEventTransition( OPQSTATE( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 3, 4 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( ISQSTATE( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QKeyEventTransition_new2();
+    /*
+    QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
+    */
+    auto obj = new QKeyEventTransition( PQOBJECT( 1 ), static_cast<QEvent::Type>( hb_parni( 2 ) ), PINT( 3 ), OPQSTATE( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -504,41 +504,33 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool setStretchFactor( QWidget * widget, int stretch )
-*/
-void QBoxLayout_setStretchFactor1()
-{
-  auto obj = qobject_cast< QBoxLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setStretchFactor( PQWIDGET( 1 ), PINT( 2 ) ) );
-  }
-}
-
-/*
-bool setStretchFactor( QLayout * layout, int stretch )
-*/
-void QBoxLayout_setStretchFactor2()
-{
-  auto obj = qobject_cast< QBoxLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setStretchFactor( PQLAYOUT( 1 ), PINT( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {
   if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
-    QBoxLayout_setStretchFactor1();
+    /*
+    bool setStretchFactor( QWidget * widget, int stretch )
+    */
+    auto obj = qobject_cast< QBoxLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setStretchFactor( PQWIDGET( 1 ), PINT( 2 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQLAYOUT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QBoxLayout_setStretchFactor2();
+    /*
+    bool setStretchFactor( QLayout * layout, int stretch )
+    */
+    auto obj = qobject_cast< QBoxLayout * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setStretchFactor( PQLAYOUT( 1 ), PINT( 2 ) ) );
+    }
+
   }
   else
   {

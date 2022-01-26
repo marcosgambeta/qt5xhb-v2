@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,33 +48,25 @@ RETURN
 #include <QtWidgets/QDateEdit>
 #endif
 
-/*
-QDateEdit( QWidget * parent = nullptr )
-*/
-void QDateEdit_new1()
-{
-  auto obj = new QDateEdit( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDateEdit( const QDate & date, QWidget * parent = nullptr )
-*/
-void QDateEdit_new2()
-{
-  auto obj = new QDateEdit( *PQDATE( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDateEdit_new1();
+    /*
+    QDateEdit( QWidget * parent = nullptr )
+    */
+    auto obj = new QDateEdit( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQDATE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDateEdit_new2();
+    /*
+    QDateEdit( const QDate & date, QWidget * parent = nullptr )
+    */
+    auto obj = new QDateEdit( *PQDATE( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

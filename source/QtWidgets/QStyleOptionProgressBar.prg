@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,33 +63,25 @@ RETURN
 #include <QtWidgets/QStyleOptionProgressBar>
 #endif
 
-/*
-QStyleOptionProgressBar()
-*/
-void QStyleOptionProgressBar_new1()
-{
-  auto obj = new QStyleOptionProgressBar();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
-*/
-void QStyleOptionProgressBar_new2()
-{
-  auto obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionProgressBar_new1();
+    /*
+    QStyleOptionProgressBar()
+    */
+    auto obj = new QStyleOptionProgressBar();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONPROGRESSBAR( 1 ) )
   {
-    QStyleOptionProgressBar_new2();
+    /*
+    QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
+    */
+    auto obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
