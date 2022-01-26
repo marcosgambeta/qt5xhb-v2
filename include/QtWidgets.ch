@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,8 +32,6 @@
 #include "QDirModel.ch"
 #include "QDockWidget.ch"
 #include "QFileDialog.ch"
-#include "QFileIconProvider.ch"
-#include "QFileSystemModel.ch"
 #include "QFontComboBox.ch"
 #include "QFontDialog.ch"
 #include "QFormLayout.ch"
@@ -71,6 +69,29 @@
 #include "QStyleHintReturnMask.ch"
 #include "QStyleHintReturnVariant.ch"
 #include "QStyleOption.ch"
+#include "QStyleOptionButton.ch"
+#include "QStyleOptionComboBox.ch"
+#include "QStyleOptionComplex.ch"
+#include "QStyleOptionDockWidget.ch"
+#include "QStyleOptionFocusRect.ch"
+#include "QStyleOptionFrame.ch"
+#include "QStyleOptionGraphicsItem.ch"
+#include "QStyleOptionGroupBox.ch"
+#include "QStyleOptionHeader.ch"
+#include "QStyleOptionMenuItem.ch"
+#include "QStyleOptionProgressBar.ch"
+#include "QStyleOptionRubberBand.ch"
+#include "QStyleOptionSizeGrip.ch"
+#include "QStyleOptionSlider.ch"
+#include "QStyleOptionSpinBox.ch"
+#include "QStyleOptionTab.ch"
+#include "QStyleOptionTabBarBase.ch"
+#include "QStyleOptionTabWidgetFrame.ch"
+#include "QStyleOptionTitleBar.ch"
+#include "QStyleOptionToolBar.ch"
+#include "QStyleOptionToolBox.ch"
+#include "QStyleOptionToolButton.ch"
+#include "QStyleOptionViewItem.ch"
 #include "QSwipeGesture.ch"
 #include "QSystemTrayIcon.ch"
 #include "QTabBar.ch"

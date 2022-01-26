@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -114,6 +114,8 @@ REQUEST QLineEdit
 REQUEST QListView
 REQUEST QListWidget
 REQUEST QListWidgetItem
+REQUEST QMacCocoaViewContainer
+REQUEST QMacNativeWidget
 REQUEST QMainWindow
 REQUEST QMdiArea
 REQUEST QMdiSubWindow
@@ -121,6 +123,7 @@ REQUEST QMenu
 REQUEST QMenuBar
 REQUEST QMessageBox
 REQUEST QMouseEventTransition
+REQUEST QOpenGLWidget
 REQUEST QPanGesture
 REQUEST QPinchGesture
 REQUEST QPlainTextDocumentLayout
@@ -213,5 +216,6 @@ REQUEST QWidgetItem
 REQUEST QWidgetItemV2
 REQUEST QWizard
 REQUEST QWizardPage
+REQUEST QtWidgets_Version
 
 #endif /* QTWIDGETSREQUESTS_CH */
