@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -81,53 +81,41 @@ RETURN
 #include <QtQml/QQmlError>
 #include <QtQuick/QQuickItem>
 
-/*
-QQuickWidget( QWidget * parent = nullptr )
-*/
-void QQuickWidget_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QQuickWidget( OPQWIDGET( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QQuickWidget( QQmlEngine * engine, QWidget * parent )
-*/
-void QQuickWidget_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QQuickWidget( PQQMLENGINE( 1 ), PQWIDGET( 2 ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QQuickWidget( const QUrl & source, QWidget * parent = nullptr )
-*/
-void QQuickWidget_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QQuickWidget( *PQURL( 1 ), OPQWIDGET( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0) )
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QQuickWidget_new1();
+    /*
+    QQuickWidget( QWidget * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QQuickWidget( OPQWIDGET( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && ISQQMLENGINE( 1 ) && ISQWIDGET( 2 ) )
   {
-    QQuickWidget_new2();
+    /*
+    QQuickWidget( QQmlEngine * engine, QWidget * parent )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QQuickWidget( PQQMLENGINE( 1 ), PQWIDGET( 2 ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QQuickWidget_new3();
+    /*
+    QQuickWidget( const QUrl & source, QWidget * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QQuickWidget( *PQURL( 1 ), OPQWIDGET( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {
