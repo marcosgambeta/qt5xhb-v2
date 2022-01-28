@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,37 +69,29 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoSatelliteInfo()
-*/
-void QGeoSatelliteInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoSatelliteInfo();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoSatelliteInfo( const QGeoSatelliteInfo & other )
-*/
-void QGeoSatelliteInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoSatelliteInfo( *PQGEOSATELLITEINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGeoSatelliteInfo_new1();
+    /*
+    QGeoSatelliteInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoSatelliteInfo();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQGEOSATELLITEINFO( 1 ) )
   {
-    QGeoSatelliteInfo_new2();
+    /*
+    QGeoSatelliteInfo( const QGeoSatelliteInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoSatelliteInfo( *PQGEOSATELLITEINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

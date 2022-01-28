@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,37 +63,29 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoShape()
-*/
-void QGeoShape_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoShape();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoShape( const QGeoShape & other )
-*/
-void QGeoShape_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoShape( *PQGEOSHAPE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGeoShape_new1();
+    /*
+    QGeoShape()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoShape();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQGEOSHAPE( 1 ) )
   {
-    QGeoShape_new2();
+    /*
+    QGeoShape( const QGeoShape & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoShape( *PQGEOSHAPE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

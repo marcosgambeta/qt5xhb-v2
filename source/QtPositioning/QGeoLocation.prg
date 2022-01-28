@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -73,37 +73,29 @@ RETURN
 #include <QtPositioning/QGeoCoordinate>
 #include <QtPositioning/QGeoRectangle>
 
-/*
-QGeoLocation()
-*/
-void QGeoLocation_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoLocation();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoLocation( const QGeoLocation & other )
-*/
-void QGeoLocation_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoLocation( *PQGEOLOCATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QGEOLOCATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGeoLocation_new1();
+    /*
+    QGeoLocation()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoLocation();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQGEOLOCATION( 1 ) )
   {
-    QGeoLocation_new2();
+    /*
+    QGeoLocation( const QGeoLocation & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoLocation( *PQGEOLOCATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

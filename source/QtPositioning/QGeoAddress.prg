@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,37 +82,29 @@ RETURN
 
 #include <QtCore/QString>
 
-/*
-QGeoAddress()
-*/
-void QGeoAddress_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoAddress();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoAddress( const QGeoAddress & other )
-*/
-void QGeoAddress_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoAddress( *PQGEOADDRESS( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QGEOADDRESS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGeoAddress_new1();
+    /*
+    QGeoAddress()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoAddress();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQGEOADDRESS( 1 ) )
   {
-    QGeoAddress_new2();
+    /*
+    QGeoAddress( const QGeoAddress & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QGeoAddress( *PQGEOADDRESS( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
