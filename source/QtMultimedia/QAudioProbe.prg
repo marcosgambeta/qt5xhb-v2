@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -115,46 +115,33 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
   }
 }
 
-/*
-bool setSource( QMediaObject * source )
-*/
-void QAudioProbe_setSource1()
-{
-  auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setSource( PQMEDIAOBJECT( 1 ) ) );
-  }
-}
-
-/*
-bool setSource( QMediaRecorder * source )
-*/
-void QAudioProbe_setSource2()
-{
-  auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setSource( PQMEDIARECORDER( 1 ) ) );
-  }
-}
-
-/*
-[1]bool setSource(QMediaObject * source)
-[2]bool setSource(QMediaRecorder * mediaRecorder)
-*/
-
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 {
   if( ISNUMPAR( 1 ) && ISQMEDIAOBJECT( 1 ) )
   {
-    QAudioProbe_setSource1();
+    /*
+    bool setSource( QMediaObject * source )
+    */
+    auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setSource( PQMEDIAOBJECT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQMEDIARECORDER( 1 ) )
   {
-    QAudioProbe_setSource2();
+    /*
+    bool setSource( QMediaRecorder * source )
+    */
+    auto obj = qobject_cast< QAudioProbe * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setSource( PQMEDIARECORDER( 1 ) ) );
+    }
+
   }
   else
   {

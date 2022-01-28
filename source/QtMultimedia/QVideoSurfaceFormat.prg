@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,46 +82,34 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QVideoSurfaceFormat()
-*/
-void QVideoSurfaceFormat_new1()
-{
-  auto obj = new QVideoSurfaceFormat();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoSurfaceFormat( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
-*/
-void QVideoSurfaceFormat_new2()
-{
-  auto obj = new QVideoSurfaceFormat( *PQSIZE( 1 ), static_cast<QVideoFrame::PixelFormat>( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QAbstractVideoBuffer::HandleType >( QAbstractVideoBuffer::NoHandle ) : static_cast< QAbstractVideoBuffer::HandleType >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoSurfaceFormat( const QVideoSurfaceFormat & other )
-*/
-void QVideoSurfaceFormat_new3()
-{
-  auto obj = new QVideoSurfaceFormat( *PQVIDEOSURFACEFORMAT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVideoSurfaceFormat_new1();
+    /*
+    QVideoSurfaceFormat()
+    */
+    auto obj = new QVideoSurfaceFormat();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQSIZE( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QVideoSurfaceFormat_new2();
+    /*
+    QVideoSurfaceFormat( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
+    */
+    auto obj = new QVideoSurfaceFormat( *PQSIZE( 1 ), static_cast<QVideoFrame::PixelFormat>( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QAbstractVideoBuffer::HandleType >( QAbstractVideoBuffer::NoHandle ) : static_cast< QAbstractVideoBuffer::HandleType >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQVIDEOSURFACEFORMAT( 1 ) )
   {
-    QVideoSurfaceFormat_new3();
+    /*
+    QVideoSurfaceFormat( const QVideoSurfaceFormat & other )
+    */
+    auto obj = new QVideoSurfaceFormat( *PQVIDEOSURFACEFORMAT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -470,45 +458,37 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMERATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setFrameSize( const QSize & size )
-*/
-void QVideoSurfaceFormat_setFrameSize1()
-{
-  auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFrameSize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setFrameSize( int width, int height )
-*/
-void QVideoSurfaceFormat_setFrameSize2()
-{
-  auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFrameSize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QVideoSurfaceFormat_setFrameSize1();
+    /*
+    void setFrameSize( const QSize & size )
+    */
+    auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFrameSize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QVideoSurfaceFormat_setFrameSize2();
+    /*
+    void setFrameSize( int width, int height )
+    */
+    auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFrameSize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -516,45 +496,37 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
   }
 }
 
-/*
-void setPixelAspectRatio( const QSize & ratio )
-*/
-void QVideoSurfaceFormat_setPixelAspectRatio1()
-{
-  auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setPixelAspectRatio( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setPixelAspectRatio( int horizontal, int vertical )
-*/
-void QVideoSurfaceFormat_setPixelAspectRatio2()
-{
-  auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setPixelAspectRatio( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QVideoSurfaceFormat_setPixelAspectRatio1();
+    /*
+    void setPixelAspectRatio( const QSize & ratio )
+    */
+    auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setPixelAspectRatio( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QVideoSurfaceFormat_setPixelAspectRatio2();
+    /*
+    void setPixelAspectRatio( int horizontal, int vertical )
+    */
+    auto obj = static_cast< QVideoSurfaceFormat * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setPixelAspectRatio( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -241,45 +241,33 @@ HB_FUNC_STATIC( QSOUND_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void play()
-*/
-void QSound_play1()
-{
-  auto obj = qobject_cast< QSound * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->play();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void play( const QString & filename )
-*/
-void QSound_play2()
-{
-  QSound::play( PQSTRING( 1 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void play()
-[2]static void play(const QString& filename)
-*/
-
 HB_FUNC_STATIC( QSOUND_PLAY )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSound_play1();
+    /*
+    void play()
+    */
+    auto obj = qobject_cast< QSound * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->play();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSound_play2();
+    /*
+    static void play( const QString & filename )
+    */
+
+    QSound::play( PQSTRING( 1 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

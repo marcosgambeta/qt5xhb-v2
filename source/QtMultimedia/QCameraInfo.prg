@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,52 +66,40 @@ RETURN
 #endif
 #endif
 
-/*
-QCameraInfo( const QByteArray & name = QByteArray() )
-*/
-void QCameraInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QCameraInfo( HB_ISNIL( 1 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QCameraInfo( const QCamera & camera )
-*/
-void QCameraInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QCameraInfo( *PQCAMERA( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QCameraInfo( const QCameraInfo & other )
-*/
-void QCameraInfo_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QCameraInfo( *PQCAMERAINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QCAMERAINFO_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QCameraInfo_new1();
+    /*
+    QCameraInfo( const QByteArray & name = QByteArray() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QCameraInfo( HB_ISNIL( 1 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQCAMERA( 1 ) )
   {
-    QCameraInfo_new2();
+    /*
+    QCameraInfo( const QCamera & camera )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QCameraInfo( *PQCAMERA( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQCAMERAINFO( 1 ) )
   {
-    QCameraInfo_new3();
+    /*
+    QCameraInfo( const QCameraInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QCameraInfo( *PQCAMERAINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
@@ -340,69 +328,6 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
   }
 #endif
 #endif
-}
-
-HB_FUNC_STATIC( QCAMERAINFO_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QCAMERAINFO_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QCAMERAINFO_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCAMERAINFO_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QCAMERAINFO_NEWFROM );
-}
-
-HB_FUNC_STATIC( QCAMERAINFO_SELFDESTRUCTION )
-{
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
-}
-
-HB_FUNC_STATIC( QCAMERAINFO_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
-  {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-
-  hb_itemReturn( self );
 }
 
 #pragma ENDDUMP

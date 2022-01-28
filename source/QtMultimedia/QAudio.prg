@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,47 +55,22 @@ RETURN
 #endif
 
 /*
-qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
+static qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
 */
-#if 0
 HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = static_cast< QAudio * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
-    {
 #endif
-      RQREAL( obj->convertVolume( PQREAL( 1 ), static_cast<QAudio::VolumeScale>( hb_parni( 2 ) ), static_cast<QAudio::VolumeScale>( hb_parni( 3 ) ) ) );
+    RQREAL( QAudio::convertVolume( PQREAL( 1 ), static_cast<QAudio::VolumeScale>( hb_parni( 2 ) ), static_cast<QAudio::VolumeScale>( hb_parni( 3 ) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
   }
-#endif
-}
-#endif
-
-HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
-    {
-#endif
-      RQREAL( QAudio::convertVolume( PQREAL( 1 ), static_cast<QAudio::VolumeScale>( hb_parni( 2 ) ), static_cast<QAudio::VolumeScale>( hb_parni( 3 ) ) ) );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 #endif
 }

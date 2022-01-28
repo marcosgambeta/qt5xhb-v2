@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -91,63 +91,47 @@ RETURN
 #include <QtMultimedia/QCamera>
 #endif
 
-/*
-QCamera( QObject * parent = nullptr )
-*/
-void QCamera_new1()
-{
-  auto obj = new QCamera( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QCamera( const QByteArray & deviceName, QObject * parent = nullptr )
-*/
-void QCamera_new2()
-{
-  auto obj = new QCamera( *PQBYTEARRAY( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QCamera( const QCameraInfo & cameraInfo, QObject * parent = nullptr )
-*/
-void QCamera_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QCamera( *PQCAMERAINFO( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QCamera( QCamera::Position position, QObject * parent = nullptr )
-*/
-void QCamera_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QCamera( static_cast<QCamera::Position>( hb_parni( 1 ) ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QCAMERA_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QCamera_new1();
+    /*
+    QCamera( QObject * parent = nullptr )
+    */
+    auto obj = new QCamera( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCamera_new2();
+    /*
+    QCamera( const QByteArray & deviceName, QObject * parent = nullptr )
+    */
+    auto obj = new QCamera( *PQBYTEARRAY( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQCAMERAINFO( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCamera_new3();
+    /*
+    QCamera( const QCameraInfo & cameraInfo, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QCamera( *PQCAMERAINFO( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCamera_new4();
+    /*
+    QCamera( QCamera::Position position, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QCamera( static_cast<QCamera::Position>( hb_parni( 1 ) ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {
@@ -275,41 +259,33 @@ HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QCamera::LockStatus lockStatus() const
-*/
-void QCamera_lockStatus1()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RENUM( obj->lockStatus() );
-  }
-}
-
-/*
-QCamera::LockStatus lockStatus( QCamera::LockType lockType ) const
-*/
-void QCamera_lockStatus2()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RENUM( obj->lockStatus( static_cast<QCamera::LockType>( hb_parni( 1 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QCamera_lockStatus1();
+    /*
+    QCamera::LockStatus lockStatus() const
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RENUM( obj->lockStatus() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QCamera_lockStatus2();
+    /*
+    QCamera::LockStatus lockStatus( QCamera::LockType lockType ) const
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RENUM( obj->lockStatus( static_cast<QCamera::LockType>( hb_parni( 1 ) ) ) );
+    }
+
   }
   else
   {
@@ -488,64 +464,52 @@ HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
   }
 }
 
-/*
-void setViewfinder( QVideoWidget * viewfinder )
-*/
-void QCamera_setViewfinder1()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setViewfinder( PQVIDEOWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setViewfinder( QGraphicsVideoItem * viewfinder )
-*/
-void QCamera_setViewfinder2()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setViewfinder( PQGRAPHICSVIDEOITEM( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setViewfinder( QAbstractVideoSurface * surface )
-*/
-void QCamera_setViewfinder3()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setViewfinder( PQABSTRACTVIDEOSURFACE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
 {
   if( ISNUMPAR( 1 ) && ISQVIDEOWIDGET( 1 ) )
   {
-    QCamera_setViewfinder1();
+    /*
+    void setViewfinder( QVideoWidget * viewfinder )
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setViewfinder( PQVIDEOWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQGRAPHICSVIDEOITEM( 1 ) )
   {
-    QCamera_setViewfinder2();
+    /*
+    void setViewfinder( QGraphicsVideoItem * viewfinder )
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setViewfinder( PQGRAPHICSVIDEOITEM( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQABSTRACTVIDEOSURFACE( 1 ) )
   {
-    QCamera_setViewfinder3();
+    /*
+    void setViewfinder( QAbstractVideoSurface * surface )
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setViewfinder( PQABSTRACTVIDEOSURFACE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -603,45 +567,37 @@ HB_FUNC_STATIC( QCAMERA_LOAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void searchAndLock()
-*/
-void QCamera_searchAndLock1()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->searchAndLock();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void searchAndLock( QCamera::LockTypes locks )
-*/
-void QCamera_searchAndLock2()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->searchAndLock( static_cast<QCamera::LockTypes>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QCamera_searchAndLock1();
+    /*
+    void searchAndLock()
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->searchAndLock();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QCamera_searchAndLock2();
+    /*
+    void searchAndLock( QCamera::LockTypes locks )
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->searchAndLock( static_cast<QCamera::LockTypes>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -727,45 +683,37 @@ HB_FUNC_STATIC( QCAMERA_UNLOAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void unlock()
-*/
-void QCamera_unlock1()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->unlock();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void unlock( QCamera::LockTypes locks )
-*/
-void QCamera_unlock2()
-{
-  auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->unlock( static_cast<QCamera::LockTypes>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCAMERA_UNLOCK )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QCamera_unlock1();
+    /*
+    void unlock()
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->unlock();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QCamera_unlock2();
+    /*
+    void unlock( QCamera::LockTypes locks )
+    */
+    auto obj = qobject_cast< QCamera * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->unlock( static_cast<QCamera::LockTypes>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

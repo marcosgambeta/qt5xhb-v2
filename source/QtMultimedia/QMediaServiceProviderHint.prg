@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -21,12 +21,8 @@ CLASS QMediaServiceProviderHint
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new4
    METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD isNull
@@ -70,33 +66,6 @@ RETURN
 #endif
 
 /*
-QMediaServiceProviderHint()
-*/
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
-{
-  auto obj = new QMediaServiceProviderHint();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMediaServiceProviderHint( const QString & mimeType, const QStringList & codecs )
-*/
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
-{
-  auto obj = new QMediaServiceProviderHint( PQSTRING( 1 ), PQSTRINGLIST( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMediaServiceProviderHint( const QByteArray & device )
-*/
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
-{
-  auto obj = new QMediaServiceProviderHint( *PQBYTEARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QMediaServiceProviderHint( QCamera::Position position )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
@@ -114,28 +83,34 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
-*/
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
-{
-  auto obj = new QMediaServiceProviderHint( *PQMEDIASERVICEPROVIDERHINT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    HB_FUNC_EXEC( QMEDIASERVICEPROVIDERHINT_NEW1 );
+    /*
+    QMediaServiceProviderHint()
+    */
+    auto obj = new QMediaServiceProviderHint();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 )  )
   {
-    HB_FUNC_EXEC( QMEDIASERVICEPROVIDERHINT_NEW2 );
+    /*
+    QMediaServiceProviderHint( const QString & mimeType, const QStringList & codecs )
+    */
+    auto obj = new QMediaServiceProviderHint( PQSTRING( 1 ), PQSTRINGLIST( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    HB_FUNC_EXEC( QMEDIASERVICEPROVIDERHINT_NEW3 );
+    /*
+    QMediaServiceProviderHint( const QByteArray & device )
+    */
+    auto obj = new QMediaServiceProviderHint( *PQBYTEARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -143,7 +118,12 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
   }
   else if( ISNUMPAR( 1 ) && ISQMEDIASERVICEPROVIDERHINT( 1 ) )
   {
-    HB_FUNC_EXEC( QMEDIASERVICEPROVIDERHINT_NEW5 );
+    /*
+    QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
+    */
+    auto obj = new QMediaServiceProviderHint( *PQMEDIASERVICEPROVIDERHINT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

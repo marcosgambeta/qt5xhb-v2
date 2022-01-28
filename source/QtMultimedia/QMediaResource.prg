@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,59 +82,43 @@ RETURN
 
 #include <QtCore/QSize>
 
-/*
-QMediaResource()
-*/
-void QMediaResource_new1()
-{
-  auto obj = new QMediaResource();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMediaResource( const QUrl & url, const QString & mimeType = QString() )
-*/
-void QMediaResource_new2()
-{
-  auto obj = new QMediaResource( *PQURL( 1 ), OPQSTRING( 2, QString() ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMediaResource( const QNetworkRequest & request, const QString & mimeType = QString() )
-*/
-void QMediaResource_new3()
-{
-  auto obj = new QMediaResource( *PQNETWORKREQUEST( 1 ), OPQSTRING( 2, QString() ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMediaResource( const QMediaResource & other )
-*/
-void QMediaResource_new4()
-{
-  auto obj = new QMediaResource( *PQMEDIARESOURCE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QMediaResource_new1();
+    /*
+    QMediaResource()
+    */
+    auto obj = new QMediaResource();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QMediaResource_new2();
+    /*
+    QMediaResource( const QUrl & url, const QString & mimeType = QString() )
+    */
+    auto obj = new QMediaResource( *PQURL( 1 ), OPQSTRING( 2, QString() ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQNETWORKREQUEST( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QMediaResource_new3();
+    /*
+    QMediaResource( const QNetworkRequest & request, const QString & mimeType = QString() )
+    */
+    auto obj = new QMediaResource( *PQNETWORKREQUEST( 1 ), OPQSTRING( 2, QString() ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQMEDIARESOURCE( 1 ) )
   {
-    QMediaResource_new4();
+    /*
+    QMediaResource( const QMediaResource & other )
+    */
+    auto obj = new QMediaResource( *PQMEDIARESOURCE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -534,45 +518,37 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setResolution( const QSize & resolution )
-*/
-void QMediaResource_setResolution1()
-{
-  auto obj = static_cast< QMediaResource * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setResolution( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setResolution( int width, int height )
-*/
-void QMediaResource_setResolution2()
-{
-  auto obj = static_cast< QMediaResource * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setResolution( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QMediaResource_setResolution1();
+    /*
+    void setResolution( const QSize & resolution )
+    */
+    auto obj = static_cast< QMediaResource * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setResolution( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QMediaResource_setResolution2();
+    /*
+    void setResolution( int width, int height )
+    */
+    auto obj = static_cast< QMediaResource * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setResolution( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

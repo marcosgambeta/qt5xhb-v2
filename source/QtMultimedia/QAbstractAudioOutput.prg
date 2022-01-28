@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -95,49 +95,36 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void start( QIODevice * device ) = 0
-*/
-void QAbstractAudioOutput_start1()
-{
-  auto obj = qobject_cast< QAbstractAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->start( PQIODEVICE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual QIODevice * start() = 0
-*/
-void QAbstractAudioOutput_start2()
-{
-  auto obj = qobject_cast< QAbstractAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QIODevice * ptr = obj->start();
-    Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
-  }
-}
-
-/*
-[1]virtual void start(QIODevice *device) = 0
-[2]virtual QIODevice* start() = 0
-*/
-
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_START )
 {
   if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QAbstractAudioOutput_start1();
+    /*
+    virtual void start( QIODevice * device ) = 0
+    */
+    auto obj = qobject_cast< QAbstractAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->start( PQIODEVICE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QAbstractAudioOutput_start2();
+    /*
+    virtual QIODevice * start() = 0
+    */
+    auto obj = qobject_cast< QAbstractAudioOutput * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QIODevice * ptr = obj->start();
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+    }
+
   }
   else
   {

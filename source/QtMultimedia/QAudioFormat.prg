@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,33 +75,25 @@ RETURN
 #include <QtMultimedia/QAudioFormat>
 #endif
 
-/*
-QAudioFormat()
-*/
-void QAudioFormat_new1()
-{
-  auto obj = new QAudioFormat();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QAudioFormat( const QAudioFormat & other )
-*/
-void QAudioFormat_new2()
-{
-  auto obj = new QAudioFormat( *PQAUDIOFORMAT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QAudioFormat_new1();
+    /*
+    QAudioFormat()
+    */
+    auto obj = new QAudioFormat();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQAUDIOFORMAT( 1 ) )
   {
-    QAudioFormat_new2();
+    /*
+    QAudioFormat( const QAudioFormat & other )
+    */
+    auto obj = new QAudioFormat( *PQAUDIOFORMAT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

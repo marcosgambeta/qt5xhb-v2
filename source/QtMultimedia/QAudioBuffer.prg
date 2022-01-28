@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,59 +64,43 @@ RETURN
 #include <QtMultimedia/QAudioBuffer>
 #endif
 
-/*
-QAudioBuffer()
-*/
-void QAudioBuffer_new1()
-{
-  auto obj = new QAudioBuffer();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QAudioBuffer( const QAudioBuffer & other )
-*/
-void QAudioBuffer_new2()
-{
-  auto obj = new QAudioBuffer( *PQAUDIOBUFFER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QAudioBuffer( const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1 )
-*/
-void QAudioBuffer_new3()
-{
-  auto obj = new QAudioBuffer( *PQBYTEARRAY( 1 ), *PQAUDIOFORMAT( 2 ), OPQINT64( 3, -1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QAudioBuffer( int numFrames, const QAudioFormat & format, qint64 startTime = -1 )
-*/
-void QAudioBuffer_new4()
-{
-  auto obj = new QAudioBuffer( PINT( 1 ), *PQAUDIOFORMAT( 2 ), OPQINT64( 3, -1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QAudioBuffer_new1();
+    /*
+    QAudioBuffer()
+    */
+    auto obj = new QAudioBuffer();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQAUDIOBUFFER( 1 ) )
   {
-    QAudioBuffer_new2();
+    /*
+    QAudioBuffer( const QAudioBuffer & other )
+    */
+    auto obj = new QAudioBuffer( *PQAUDIOBUFFER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQBYTEARRAY( 1 ) && ISQAUDIOFORMAT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAudioBuffer_new3();
+    /*
+    QAudioBuffer( const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1 )
+    */
+    auto obj = new QAudioBuffer( *PQBYTEARRAY( 1 ), *PQAUDIOFORMAT( 2 ), OPQINT64( 3, -1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && ISQAUDIOFORMAT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAudioBuffer_new4();
+    /*
+    QAudioBuffer( int numFrames, const QAudioFormat & format, qint64 startTime = -1 )
+    */
+    auto obj = new QAudioBuffer( PINT( 1 ), *PQAUDIOFORMAT( 2 ), OPQINT64( 3, -1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,33 +66,25 @@ RETURN
 #include <QtMultimedia/QImageEncoderSettings>
 #endif
 
-/*
-QImageEncoderSettings()
-*/
-void QImageEncoderSettings_new1()
-{
-  auto obj = new QImageEncoderSettings();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageEncoderSettings( const QImageEncoderSettings & other )
-*/
-void QImageEncoderSettings_new2()
-{
-  auto obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageEncoderSettings_new1();
+    /*
+    QImageEncoderSettings()
+    */
+    auto obj = new QImageEncoderSettings();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIMAGEENCODERSETTINGS( 1 ) )
   {
-    QImageEncoderSettings_new2();
+    /*
+    QImageEncoderSettings( const QImageEncoderSettings & other )
+    */
+    auto obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -219,45 +211,37 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
   }
 }
 
-/*
-void setResolution( const QSize & )
-*/
-void QImageEncoderSettings_setResolution1()
-{
-  auto obj = static_cast< QImageEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setResolution( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setResolution( int width, int height )
-*/
-void QImageEncoderSettings_setResolution2()
-{
-  auto obj = static_cast< QImageEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setResolution( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QImageEncoderSettings_setResolution1();
+    /*
+    void setResolution( const QSize & )
+    */
+    auto obj = static_cast< QImageEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setResolution( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QImageEncoderSettings_setResolution2();
+    /*
+    void setResolution( int width, int height )
+    */
+    auto obj = static_cast< QImageEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setResolution( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

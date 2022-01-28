@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -765,70 +765,52 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
   }
 }
 
-/*
-void setVideoOutput( QVideoWidget * output )
-*/
-void QMediaPlayer_setVideoOutput1()
-{
-  auto obj = qobject_cast< QMediaPlayer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setVideoOutput( PQVIDEOWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setVideoOutput( QGraphicsVideoItem * output )
-*/
-void QMediaPlayer_setVideoOutput2()
-{
-  auto obj = qobject_cast< QMediaPlayer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setVideoOutput( PQGRAPHICSVIDEOITEM( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setVideoOutput( QAbstractVideoSurface * surface )
-*/
-void QMediaPlayer_setVideoOutput3()
-{
-  auto obj = qobject_cast< QMediaPlayer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setVideoOutput( PQABSTRACTVIDEOSURFACE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void setVideoOutput(QVideoWidget * output)
-[2]void setVideoOutput(QGraphicsVideoItem * output)
-[3]void setVideoOutput(QAbstractVideoSurface * surface)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
 {
   if( ISNUMPAR( 1 ) && ISQVIDEOWIDGET( 1 ) )
   {
-    QMediaPlayer_setVideoOutput1();
+    /*
+    void setVideoOutput( QVideoWidget * output )
+    */
+    auto obj = qobject_cast< QMediaPlayer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setVideoOutput( PQVIDEOWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQGRAPHICSVIDEOITEM( 1 ) )
   {
-    QMediaPlayer_setVideoOutput2();
+    /*
+    void setVideoOutput( QGraphicsVideoItem * output )
+    */
+    auto obj = qobject_cast< QMediaPlayer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setVideoOutput( PQGRAPHICSVIDEOITEM( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQABSTRACTVIDEOSURFACE( 1 ) )
   {
-    QMediaPlayer_setVideoOutput3();
+    /*
+    void setVideoOutput( QAbstractVideoSurface * surface )
+    */
+    auto obj = qobject_cast< QMediaPlayer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setVideoOutput( PQABSTRACTVIDEOSURFACE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -85,72 +85,52 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QVideoFrame()
-*/
-void QVideoFrame_new1()
-{
-  auto obj = new QVideoFrame();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
-*/
-void QVideoFrame_new2()
-{
-  auto obj = new QVideoFrame( PQABSTRACTVIDEOBUFFER( 1 ), *PQSIZE( 2 ), static_cast<QVideoFrame::PixelFormat>( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
-*/
-void QVideoFrame_new3()
-{
-  auto obj = new QVideoFrame( PINT( 1 ), *PQSIZE( 2 ), PINT( 3 ), static_cast<QVideoFrame::PixelFormat>( hb_parni( 4 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoFrame( const QImage & image )
-*/
-void QVideoFrame_new4()
-{
-  auto obj = new QVideoFrame( *PQIMAGE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoFrame( const QVideoFrame & other )
-*/
-void QVideoFrame_new5()
-{
-  auto obj = new QVideoFrame( *PQVIDEOFRAME( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVideoFrame_new1();
+    /*
+    QVideoFrame()
+    */
+    auto obj = new QVideoFrame();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 3 ) && ISQABSTRACTVIDEOBUFFER( 1 ) && ISQSIZE( 2 ) && HB_ISNUM( 3 )  )
   {
-    QVideoFrame_new2();
+    /*
+    QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
+    */
+    auto obj = new QVideoFrame( PQABSTRACTVIDEOBUFFER( 1 ), *PQSIZE( 2 ), static_cast<QVideoFrame::PixelFormat>( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && ISQSIZE( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QVideoFrame_new3();
+    /*
+    QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
+    */
+    auto obj = new QVideoFrame( PINT( 1 ), *PQSIZE( 2 ), PINT( 3 ), static_cast<QVideoFrame::PixelFormat>( hb_parni( 4 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIMAGE( 1 ) )
   {
-    QVideoFrame_new4();
+    /*
+    QVideoFrame( const QImage & image )
+    */
+    auto obj = new QVideoFrame( *PQIMAGE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQVIDEOFRAME( 1 ) )
   {
-    QVideoFrame_new5();
+    /*
+    QVideoFrame( const QVideoFrame & other )
+    */
+    auto obj = new QVideoFrame( *PQVIDEOFRAME( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -191,41 +171,33 @@ const uchar * bits () const
 const uchar *bits(int plane) const
 */
 
-/*
-int bytesPerLine() const
-*/
-void QVideoFrame_bytesPerLine1()
-{
-  auto obj = static_cast< QVideoFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->bytesPerLine() );
-  }
-}
-
-/*
-int bytesPerLine( int plane ) const
-*/
-void QVideoFrame_bytesPerLine2()
-{
-  auto obj = static_cast< QVideoFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->bytesPerLine( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVideoFrame_bytesPerLine1();
+    /*
+    int bytesPerLine() const
+    */
+    auto obj = static_cast< QVideoFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->bytesPerLine() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QVideoFrame_bytesPerLine2();
+    /*
+    int bytesPerLine( int plane ) const
+    */
+    auto obj = static_cast< QVideoFrame * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->bytesPerLine( PINT( 1 ) ) );
+    }
+
   }
   else
   {

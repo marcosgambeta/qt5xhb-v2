@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -248,53 +248,40 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool addMedia( const QMediaContent & content )
-*/
-void QMediaPlaylist_addMedia1()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->addMedia( *PQMEDIACONTENT( 1 ) ) );
-  }
-}
-
-/*
-bool addMedia( const QList<QMediaContent> & items )
-*/
-void QMediaPlaylist_addMedia2()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QMediaContent> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    for( auto i1 = 0; i1 < nLen1; i1++ )
-    {
-      par1 << *static_cast< QMediaContent * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-    }
-    RBOOL( obj->addMedia( par1 ) );
-  }
-}
-
-/*
-[1]bool addMedia(const QMediaContent & content)
-[2]bool addMedia(const QList<QMediaContent> & items)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
 {
   if( ISNUMPAR( 1 ) && ISQMEDIACONTENT( 1 ) )
   {
-    QMediaPlaylist_addMedia1();
+    /*
+    bool addMedia( const QMediaContent & content )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->addMedia( *PQMEDIACONTENT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QMediaPlaylist_addMedia2();
+    /*
+    bool addMedia( const QList<QMediaContent> & items )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QMediaContent> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( auto i1 = 0; i1 < nLen1; i1++ )
+      {
+        par1 << *static_cast< QMediaContent * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      }
+      RBOOL( obj->addMedia( par1 ) );
+    }
+
   }
   else
   {
@@ -374,53 +361,40 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERRORSTRING )
   }
 }
 
-/*
-bool insertMedia( int pos, const QMediaContent & content )
-*/
-void QMediaPlaylist_insertMedia1()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->insertMedia( PINT( 1 ), *PQMEDIACONTENT( 2 ) ) );
-  }
-}
-
-/*
-bool insertMedia( int pos, const QList<QMediaContent> & items )
-*/
-void QMediaPlaylist_insertMedia2()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QMediaContent> par2;
-    PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
-    int nLen2 = hb_arrayLen( aList2 );
-    for( auto i2 = 0; i2 < nLen2; i2++ )
-    {
-      par2 << *static_cast< QMediaContent * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
-    }
-    RBOOL( obj->insertMedia( PINT( 1 ), par2 ) );
-  }
-}
-
-/*
-bool insertMedia(int pos, const QMediaContent & content)
-bool insertMedia(int pos, const QList<QMediaContent> & items)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA )
 {
   if( ISNUMPAR( 1 ) && ISQMEDIACONTENT( 1 ) )
   {
-    QMediaPlaylist_insertMedia1();
+    /*
+    bool insertMedia( int pos, const QMediaContent & content )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->insertMedia( PINT( 1 ), *PQMEDIACONTENT( 2 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QMediaPlaylist_insertMedia2();
+    /*
+    bool insertMedia( int pos, const QList<QMediaContent> & items )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QMediaContent> par2;
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
+      for( auto i2 = 0; i2 < nLen2; i2++ )
+      {
+        par2 << *static_cast< QMediaContent * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+      }
+      RBOOL( obj->insertMedia( PINT( 1 ), par2 ) );
+    }
+
   }
   else
   {
@@ -476,70 +450,52 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
   }
 }
 
-/*
-void load( const QNetworkRequest & request, const char * format = nullptr )
-*/
-void QMediaPlaylist_load1()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQNETWORKREQUEST( 1 ), OPCONSTCHAR( 2, nullptr ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void load( const QUrl & location, const char * format = nullptr )
-*/
-void QMediaPlaylist_load2()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQURL( 1 ), OPCONSTCHAR( 2, nullptr ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void load( QIODevice * device, const char * format = nullptr )
-*/
-void QMediaPlaylist_load3()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( PQIODEVICE( 1 ), OPCONSTCHAR( 2, nullptr ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void load(const QNetworkRequest & request, const char * format = nullptr)
-[2]void load(const QUrl & location, const char * format = nullptr)
-[3]void load(QIODevice * device, const char * format = nullptr)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 {
   if( ISBETWEEN( 1, 2 ) && ISQNETWORKREQUEST( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QMediaPlaylist_load1();
+    /*
+    void load( const QNetworkRequest & request, const char * format = nullptr )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQNETWORKREQUEST( 1 ), OPCONSTCHAR( 2, nullptr ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QMediaPlaylist_load2();
+    /*
+    void load( const QUrl & location, const char * format = nullptr )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQURL( 1 ), OPCONSTCHAR( 2, nullptr ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QMediaPlaylist_load3();
+    /*
+    void load( QIODevice * device, const char * format = nullptr )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( PQIODEVICE( 1 ), OPCONSTCHAR( 2, nullptr ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -644,46 +600,33 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
   }
 }
 
-/*
-bool removeMedia( int pos )
-*/
-void QMediaPlaylist_removeMedia1()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->removeMedia( PINT( 1 ) ) );
-  }
-}
-
-/*
-bool removeMedia( int start, int end )
-*/
-void QMediaPlaylist_removeMedia2()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->removeMedia( PINT( 1 ), PINT( 2 ) ) );
-  }
-}
-
-/*
-[1]bool removeMedia(int pos)
-[2]bool removeMedia(int start, int end)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QMediaPlaylist_removeMedia1();
+    /*
+    bool removeMedia( int pos )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->removeMedia( PINT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QMediaPlaylist_removeMedia2();
+    /*
+    bool removeMedia( int start, int end )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->removeMedia( PINT( 1 ), PINT( 2 ) ) );
+    }
+
   }
   else
   {
@@ -691,46 +634,33 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
   }
 }
 
-/*
-bool save( const QUrl & location, const char * format = nullptr )
-*/
-void QMediaPlaylist_save1()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->save( *PQURL( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
-  }
-}
-
-/*
-bool save( QIODevice * device, const char * format )
-*/
-void QMediaPlaylist_save2()
-{
-  auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->save( PQIODEVICE( 1 ), PCONSTCHAR( 2 ) ) );
-  }
-}
-
-/*
-[1]bool save(const QUrl & location, const char * format = nullptr)
-[2]bool save(QIODevice * device, const char * format)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
 {
   if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QMediaPlaylist_save1();
+    /*
+    bool save( const QUrl & location, const char * format = nullptr )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->save( *PQURL( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQIODEVICE( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QMediaPlaylist_save2();
+    /*
+    bool save( QIODevice * device, const char * format )
+    */
+    auto obj = qobject_cast< QMediaPlaylist * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->save( PQIODEVICE( 1 ), PCONSTCHAR( 2 ) ) );
+    }
+
   }
   else
   {

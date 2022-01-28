@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,33 +72,25 @@ RETURN
 #include <QtMultimedia/QVideoEncoderSettings>
 #endif
 
-/*
-QVideoEncoderSettings()
-*/
-void QVideoEncoderSettings_new1()
-{
-  auto obj = new QVideoEncoderSettings();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVideoEncoderSettings( const QVideoEncoderSettings & other )
-*/
-void QVideoEncoderSettings_new2()
-{
-  auto obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVideoEncoderSettings_new1();
+    /*
+    QVideoEncoderSettings()
+    */
+    auto obj = new QVideoEncoderSettings();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQVIDEOENCODERSETTINGS( 1 ) )
   {
-    QVideoEncoderSettings_new2();
+    /*
+    QVideoEncoderSettings( const QVideoEncoderSettings & other )
+    */
+    auto obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -476,45 +468,37 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETQUALITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setResolution( const QSize & resolution )
-*/
-void QVideoEncoderSettings_setResolution1()
-{
-  auto obj = static_cast< QVideoEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setResolution( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setResolution( int width, int height )
-*/
-void QVideoEncoderSettings_setResolution2()
-{
-  auto obj = static_cast< QVideoEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setResolution( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QVideoEncoderSettings_setResolution1();
+    /*
+    void setResolution( const QSize & resolution )
+    */
+    auto obj = static_cast< QVideoEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setResolution( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QVideoEncoderSettings_setResolution2();
+    /*
+    void setResolution( int width, int height )
+    */
+    auto obj = static_cast< QVideoEncoderSettings * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setResolution( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
