@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,10 +27,7 @@ CLASS QScriptValue
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new3
-   METHOD new4
    METHOD new5
    METHOD new6
    METHOD new8
@@ -60,12 +57,9 @@ CLASS QScriptValue
    METHOD isValid
    METHOD isVariant
    METHOD lessThan
-   METHOD property
-   METHOD propertyFlags
    METHOD prototype
    METHOD scriptClass
    METHOD setData
-   METHOD setProperty
    METHOD setPrototype
    METHOD setScriptClass
    METHOD strictlyEquals
@@ -118,38 +112,11 @@ RETURN
 #include <QtScript/QScriptEngine>
 
 /*
-QScriptValue()
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
-{
-  auto obj = new QScriptValue();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptValue( const QScriptValue & other )
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
-{
-  auto obj = new QScriptValue( *PQSCRIPTVALUE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QScriptValue( QScriptValue::SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   auto obj = new QScriptValue( static_cast<QScriptValue::SpecialValue>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptValue( bool value )
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
-{
-  auto obj = new QScriptValue( PBOOL( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -202,11 +169,21 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW1 );
+    /*
+    QScriptValue()
+    */
+    auto obj = new QScriptValue();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW2 );
+    /*
+    QScriptValue( const QScriptValue & other )
+    */
+    auto obj = new QScriptValue( *PQSCRIPTVALUE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -214,7 +191,12 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW4 );
+    /*
+    QScriptValue( bool value )
+    */
+    auto obj = new QScriptValue( PBOOL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
@@ -246,52 +228,50 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
 /*
 QScriptValue call( const QScriptValue & thisObject, const QScriptValue & arguments )
 */
-void QScriptValue_call2()
+HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
   auto obj = static_cast< QScriptValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE( 1 ), *PQSCRIPTVALUE( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
-{
-  if( ISNUMPAR( 2 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTVALUE( 2 ) )
-  {
-    QScriptValue_call2();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 2 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTVALUE( 2 ) )
+    {
+#endif
+      auto ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE( 1 ), *PQSCRIPTVALUE( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 
 /*
 QScriptValue construct( const QScriptValue & arguments )
 */
-void QScriptValue_construct2()
+HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
   auto obj = static_cast< QScriptValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    auto ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
-{
-  if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
-  {
-    QScriptValue_construct2();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
+    {
+#endif
+      auto ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 
@@ -778,31 +758,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
 }
 
 /*
-QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-/*
-QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-/*
-QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
-{
-}
-
-/*
-QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-/*
-QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
-{
-}
-
-/*
 QScriptValue prototype() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
@@ -876,20 +831,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-/*
-void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-/*
-void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-
-HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
-{
 }
 
 /*

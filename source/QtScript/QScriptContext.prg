@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -415,43 +415,35 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
   }
 }
 
-/*
-QScriptValue throwError( QScriptContext::Error error, const QString & text )
-*/
-void QScriptContext_throwError1()
-{
-  auto obj = static_cast< QScriptContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QScriptValue( obj->throwError( static_cast<QScriptContext::Error>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-/*
-QScriptValue throwError( const QString & text )
-*/
-void QScriptContext_throwError2()
-{
-  auto obj = static_cast< QScriptContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QScriptValue( obj->throwError( PQSTRING( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QScriptContext_throwError1();
+    /*
+    QScriptValue throwError( QScriptContext::Error error, const QString & text )
+    */
+    auto obj = static_cast< QScriptContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QScriptValue( obj->throwError( static_cast<QScriptContext::Error>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QScriptContext_throwError2();
+    /*
+    QScriptValue throwError( const QString & text )
+    */
+    auto obj = static_cast< QScriptContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QScriptValue( obj->throwError( PQSTRING( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
+
   }
   else
   {

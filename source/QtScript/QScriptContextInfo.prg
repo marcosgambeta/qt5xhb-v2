@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,46 +65,34 @@ RETURN
 #include <QtScript/QScriptContextInfo>
 #endif
 
-/*
-QScriptContextInfo( const QScriptContext * context )
-*/
-void QScriptContextInfo_new1()
-{
-  auto obj = new QScriptContextInfo( PQSCRIPTCONTEXT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptContextInfo( const QScriptContextInfo & other )
-*/
-void QScriptContextInfo_new2()
-{
-  auto obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptContextInfo()
-*/
-void QScriptContextInfo_new3()
-{
-  auto obj = new QScriptContextInfo();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQSCRIPTCONTEXT( 1 ) )
   {
-    QScriptContextInfo_new1();
+    /*
+    QScriptContextInfo( const QScriptContext * context )
+    */
+    auto obj = new QScriptContextInfo( PQSCRIPTCONTEXT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTCONTEXTINFO( 1 ) )
   {
-    QScriptContextInfo_new2();
+    /*
+    QScriptContextInfo( const QScriptContextInfo & other )
+    */
+    auto obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QScriptContextInfo_new3();
+    /*
+    QScriptContextInfo()
+    */
+    auto obj = new QScriptContextInfo();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

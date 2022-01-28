@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,46 +59,34 @@ RETURN
 #include <QtScript/QScriptProgram>
 #endif
 
-/*
-QScriptProgram()
-*/
-void QScriptProgram_new1()
-{
-  auto obj = new QScriptProgram();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptProgram( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
-*/
-void QScriptProgram_new2()
-{
-  auto obj = new QScriptProgram( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptProgram( const QScriptProgram & other )
-*/
-void QScriptProgram_new3()
-{
-  auto obj = new QScriptProgram( *PQSCRIPTPROGRAM( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QScriptProgram_new1();
+    /*
+    QScriptProgram()
+    */
+    auto obj = new QScriptProgram();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QScriptProgram_new2();
+    /*
+    QScriptProgram( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
+    */
+    auto obj = new QScriptProgram( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTPROGRAM( 1 ) )
   {
-    QScriptProgram_new3();
+    /*
+    QScriptProgram( const QScriptProgram & other )
+    */
+    auto obj = new QScriptProgram( *PQSCRIPTPROGRAM( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
