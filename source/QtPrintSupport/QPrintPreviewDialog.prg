@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,33 +57,25 @@ RETURN
 
 #include <QtPrintSupport/QPrinter>
 
-/*
-QPrintPreviewDialog( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-*/
-void QPrintPreviewDialog_new1()
-{
-  auto obj = new QPrintPreviewDialog( PQPRINTER( 1 ), OPQWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QPrintPreviewDialog( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-*/
-void QPrintPreviewDialog_new2()
-{
-  auto obj = new QPrintPreviewDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {
   if( ISBETWEEN( 1, 3 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QPrintPreviewDialog_new1();
+    /*
+    QPrintPreviewDialog( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+    */
+    auto obj = new QPrintPreviewDialog( PQPRINTER( 1 ), OPQWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPrintPreviewDialog_new2();
+    /*
+    QPrintPreviewDialog( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+    */
+    auto obj = new QPrintPreviewDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
