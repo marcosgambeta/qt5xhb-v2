@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,33 +72,25 @@ RETURN
 #include <QtNetwork/QHostInfo>
 #endif
 
-/*
-QHostInfo( int lookupId = -1 )
-*/
-void QHostInfo_new1()
-{
-  auto obj = new QHostInfo( OPINT( 1, -1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QHostInfo( const QHostInfo & other )
-*/
-void QHostInfo_new2()
-{
-  auto obj = new QHostInfo( *PQHOSTINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QHostInfo_new1();
+    /*
+    QHostInfo( int lookupId = -1 )
+    */
+    auto obj = new QHostInfo( OPINT( 1, -1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQHOSTINFO( 1 ) )
   {
-    QHostInfo_new2();
+    /*
+    QHostInfo( const QHostInfo & other )
+    */
+    auto obj = new QHostInfo( *PQHOSTINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

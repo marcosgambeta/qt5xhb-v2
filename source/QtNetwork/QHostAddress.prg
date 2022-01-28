@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,10 +20,7 @@ CLASS QHostAddress
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
    METHOD new2
-   METHOD new7
-   METHOD new8
    METHOD new9
    METHOD new
    METHOD delete
@@ -74,38 +71,11 @@ RETURN
 #endif
 
 /*
-QHostAddress()
-*/
-HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
-{
-  auto obj = new QHostAddress();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QHostAddress( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
   auto obj = new QHostAddress( PQUINT32( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QHostAddress( const QString & address )
-*/
-HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
-{
-  auto obj = new QHostAddress( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QHostAddress( const QHostAddress & copy )
-*/
-HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
-{
-  auto obj = new QHostAddress( *PQHOSTADDRESS( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -122,15 +92,30 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_NEW1 );
+    /*
+    QHostAddress()
+    */
+    auto obj = new QHostAddress();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_NEW7 );
+    /*
+    QHostAddress( const QString & address )
+    */
+    auto obj = new QHostAddress( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQHOSTADDRESS( 1 ) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_NEW8 );
+    /*
+    QHostAddress( const QHostAddress & copy )
+    */
+    auto obj = new QHostAddress( *PQHOSTADDRESS( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -190,60 +175,35 @@ HB_FUNC_STATIC( QHOSTADDRESS_SWAP )
 #endif
 }
 
-/*
-void setAddress( quint32 ip4Addr )
-*/
-void QHostAddress_setAddress1()
-{
-  auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setAddress( PQUINT32( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool setAddress( const QString & address )
-*/
-void QHostAddress_setAddress6()
-{
-  auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setAddress( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-void setAddress( QHostAddress::SpecialAddress address )
-*/
-void QHostAddress_setAddress7()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setAddress( static_cast<QHostAddress::SpecialAddress>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QHostAddress_setAddress1();
+    /*
+    void setAddress( quint32 ip4Addr )
+    */
+    auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setAddress( PQUINT32( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QHostAddress_setAddress6();
+    /*
+    bool setAddress( const QString & address )
+    */
+    auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setAddress( PQSTRING( 1 ) ) );
+    }
+
   }
   else
   {
@@ -275,45 +235,37 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
   }
 }
 
-/*
-quint32 toIPv4Address() const
-*/
-void QHostAddress_toIPv4Address1()
-{
-  auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQUINT32( obj->toIPv4Address() );
-  }
-}
-
-/*
-quint32 toIPv4Address( bool * ok ) const
-*/
-void QHostAddress_toIPv4Address2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    bool par1;
-    RQUINT32( obj->toIPv4Address( &par1 ) );
-    hb_storl( par1, 1 );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QHostAddress_toIPv4Address1();
+    /*
+    quint32 toIPv4Address() const
+    */
+    auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQUINT32( obj->toIPv4Address() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    QHostAddress_toIPv4Address2();
+    /*
+    quint32 toIPv4Address( bool * ok ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      bool par1;
+      RQUINT32( obj->toIPv4Address( &par1 ) );
+      hb_storl( par1, 1 );
+    }
+#endif
+
   }
   else
   {
@@ -474,25 +426,24 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 /*
 bool isInSubnet( const QHostAddress & subnet, int netmask ) const
 */
-void QHostAddress_isInSubnet1()
+HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
   auto obj = static_cast< QHostAddress * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    RBOOL( obj->isInSubnet( *PQHOSTADDRESS( 1 ), PINT( 2 ) ) );
-  }
-}
-
-HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
-{
-  if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
-  {
-    QHostAddress_isInSubnet1();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
+    {
+#endif
+      RBOOL( obj->isInSubnet( *PQHOSTADDRESS( 1 ), PINT( 2 ) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 

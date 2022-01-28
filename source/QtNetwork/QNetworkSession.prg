@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 }
 
 /*
-void accept() 
+void accept()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 }
 
 /*
-void close() 
+void close()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 }
 
 /*
-void ignore() 
+void ignore()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 }
 
 /*
-void migrate() 
+void migrate()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 }
 
 /*
-void open() 
+void open()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 }
 
 /*
-void reject() 
+void reject()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 }
 
 /*
-void stop() 
+void stop()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {

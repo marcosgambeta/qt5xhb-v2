@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -100,33 +100,25 @@ RETURN
 #include <QtNetwork/QSslCipher>
 #include <QtNetwork/QSslKey>
 
-/*
-QSslConfiguration()
-*/
-void QSslConfiguration_new1()
-{
-  auto obj = new QSslConfiguration();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslConfiguration( const QSslConfiguration & other )
-*/
-void QSslConfiguration_new2()
-{
-  auto obj = new QSslConfiguration( *PQSSLCONFIGURATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSslConfiguration_new1();
+    /*
+    QSslConfiguration()
+    */
+    auto obj = new QSslConfiguration();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSSLCONFIGURATION( 1 ) )
   {
-    QSslConfiguration_new2();
+    /*
+    QSslConfiguration( const QSslConfiguration & other )
+    */
+    auto obj = new QSslConfiguration( *PQSSLCONFIGURATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,33 +62,25 @@ RETURN
 
 #include <QtNetwork/QHostAddress>
 
-/*
-QDnsHostAddressRecord()
-*/
-void QDnsHostAddressRecord_new1()
-{
-  auto obj = new QDnsHostAddressRecord();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
-*/
-void QDnsHostAddressRecord_new2()
-{
-  auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDnsHostAddressRecord_new1();
+    /*
+    QDnsHostAddressRecord()
+    */
+    auto obj = new QDnsHostAddressRecord();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDNSHOSTADDRESSRECORD( 1 ) )
   {
-    QDnsHostAddressRecord_new2();
+    /*
+    QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
+    */
+    auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

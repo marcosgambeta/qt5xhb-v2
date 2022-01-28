@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -81,33 +81,25 @@ RETURN
 
 #include <QtNetwork/QSslConfiguration>
 
-/*
-QNetworkRequest( const QUrl & url = QUrl() )
-*/
-void QNetworkRequest_new1()
-{
-  auto obj = new QNetworkRequest( HB_ISNIL( 1 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkRequest( const QNetworkRequest & other )
-*/
-void QNetworkRequest_new2()
-{
-  auto obj = new QNetworkRequest( *PQNETWORKREQUEST( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQURL( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QNetworkRequest_new1();
+    /*
+    QNetworkRequest( const QUrl & url = QUrl() )
+    */
+    auto obj = new QNetworkRequest( HB_ISNIL( 1 ) ? QUrl() : *static_cast< QUrl * >( Qt5xHb::itemGetPtr( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQNETWORKREQUEST( 1 ) )
   {
-    QNetworkRequest_new2();
+    /*
+    QNetworkRequest( const QNetworkRequest & other )
+    */
+    auto obj = new QNetworkRequest( *PQNETWORKREQUEST( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,25 @@ RETURN
 #include <QtNetwork/QDnsTextRecord>
 #endif
 
-/*
-QDnsTextRecord()
-*/
-void QDnsTextRecord_new1()
-{
-  auto obj = new QDnsTextRecord();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDnsTextRecord( const QDnsTextRecord & other )
-*/
-void QDnsTextRecord_new2()
-{
-  auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDnsTextRecord_new1();
+    /*
+    QDnsTextRecord()
+    */
+    auto obj = new QDnsTextRecord();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDNSTEXTRECORD( 1 ) )
   {
-    QDnsTextRecord_new2();
+    /*
+    QDnsTextRecord( const QDnsTextRecord & other )
+    */
+    auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

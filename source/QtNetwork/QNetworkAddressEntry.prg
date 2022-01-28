@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,25 @@ RETURN
 #include <QtNetwork/QNetworkAddressEntry>
 #endif
 
-/*
-QNetworkAddressEntry()
-*/
-void QNetworkAddressEntry_new1()
-{
-  auto obj = new QNetworkAddressEntry();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkAddressEntry( const QNetworkAddressEntry & other )
-*/
-void QNetworkAddressEntry_new2()
-{
-  auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QNetworkAddressEntry_new1();
+    /*
+    QNetworkAddressEntry()
+    */
+    auto obj = new QNetworkAddressEntry();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQNETWORKADDRESSENTRY( 1 ) )
   {
-    QNetworkAddressEntry_new2();
+    /*
+    QNetworkAddressEntry( const QNetworkAddressEntry & other )
+    */
+    auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

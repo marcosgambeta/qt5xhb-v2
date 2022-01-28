@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,33 +66,25 @@ RETURN
 #include <QtNetwork/QAuthenticator>
 #endif
 
-/*
-QAuthenticator()
-*/
-void QAuthenticator_new1()
-{
-  auto obj = new QAuthenticator();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QAuthenticator( const QAuthenticator & other )
-*/
-void QAuthenticator_new2()
-{
-  auto obj = new QAuthenticator( *PQAUTHENTICATOR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QAuthenticator_new1();
+    /*
+    QAuthenticator()
+    */
+    auto obj = new QAuthenticator();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQAUTHENTICATOR( 1 ) )
   {
-    QAuthenticator_new2();
+    /*
+    QAuthenticator( const QAuthenticator & other )
+    */
+    auto obj = new QAuthenticator( *PQAUTHENTICATOR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

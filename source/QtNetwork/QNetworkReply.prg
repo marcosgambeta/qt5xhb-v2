@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -610,57 +610,44 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void ignoreSslErrors( const QList<QSslError> & errors )
-*/
-void QNetworkReply_ignoreSslErrors1()
-{
-  auto obj = qobject_cast< QNetworkReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QSslError> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    for( auto i1 = 0; i1 < nLen1; i1++ )
-    {
-      par1 << *static_cast< QSslError * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-    }
-    obj->ignoreSslErrors( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void ignoreSslErrors()
-*/
-void QNetworkReply_ignoreSslErrors2()
-{
-  auto obj = qobject_cast< QNetworkReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->ignoreSslErrors();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void ignoreSslErrors ( const QList<QSslError> & errors )
-[2]virtual void ignoreSslErrors ()
-*/
-
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QNetworkReply_ignoreSslErrors1();
+    /*
+    void ignoreSslErrors( const QList<QSslError> & errors )
+    */
+    auto obj = qobject_cast< QNetworkReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QSslError> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( auto i1 = 0; i1 < nLen1; i1++ )
+      {
+        par1 << *static_cast< QSslError * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      }
+      obj->ignoreSslErrors( par1 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QNetworkReply_ignoreSslErrors2();
+    /*
+    virtual void ignoreSslErrors()
+    */
+    auto obj = qobject_cast< QNetworkReply * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->ignoreSslErrors();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

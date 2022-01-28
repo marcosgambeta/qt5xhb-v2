@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -255,46 +255,33 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   }
 }
 
-/*
-bool listen( const QString & name )
-*/
-void QLocalServer_listen1()
-{
-  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->listen( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-bool listen( qintptr socketDescriptor )
-*/
-void QLocalServer_listen2()
-{
-  auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->listen( PQINTPTR( 1 ) ) );
-  }
-}
-
-/*
-[1]bool listen(const QString &name)
-[2]bool listen(qintptr socketDescriptor)
-*/
-
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QLocalServer_listen1();
+    /*
+    bool listen( const QString & name )
+    */
+    auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->listen( PQSTRING( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QLocalServer_listen2();
+    /*
+    bool listen( qintptr socketDescriptor )
+    */
+    auto obj = qobject_cast< QLocalServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->listen( PQINTPTR( 1 ) ) );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,59 +60,43 @@ RETURN
 #include <QtNetwork/QSslError>
 #endif
 
-/*
-QSslError()
-*/
-void QSslError_new1()
-{
-  auto obj = new QSslError();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslError( QSslError::SslError error )
-*/
-void QSslError_new2()
-{
-  auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslError( QSslError::SslError error, const QSslCertificate & certificate )
-*/
-void QSslError_new3()
-{
-  auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni( 1 ) ), *PQSSLCERTIFICATE( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslError( const QSslError & other )
-*/
-void QSslError_new4()
-{
-  auto obj = new QSslError( *PQSSLERROR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSSLERROR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSslError_new1();
+    /*
+    QSslError()
+    */
+    auto obj = new QSslError();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QSslError_new2();
+    /*
+    QSslError( QSslError::SslError error )
+    */
+    auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSSLCERTIFICATE( 2 ) )
   {
-    QSslError_new3();
+    /*
+    QSslError( QSslError::SslError error, const QSslCertificate & certificate )
+    */
+    auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni( 1 ) ), *PQSSLCERTIFICATE( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSSLERROR( 1 ) )
   {
-    QSslError_new4();
+    /*
+    QSslError( const QSslError & other )
+    */
+    auto obj = new QSslError( *PQSSLERROR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

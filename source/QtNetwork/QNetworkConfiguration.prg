@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,33 +69,25 @@ RETURN
 #include <QtNetwork/QNetworkConfiguration>
 #endif
 
-/*
-QNetworkConfiguration()
-*/
-void QNetworkConfiguration_new1()
-{
-  auto obj = new QNetworkConfiguration();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkConfiguration( const QNetworkConfiguration & other )
-*/
-void QNetworkConfiguration_new2()
-{
-  auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QNetworkConfiguration_new1();
+    /*
+    QNetworkConfiguration()
+    */
+    auto obj = new QNetworkConfiguration();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQNETWORKCONFIGURATION( 1 ) )
   {
-    QNetworkConfiguration_new2();
+    /*
+    QNetworkConfiguration( const QNetworkConfiguration & other )
+    */
+    auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

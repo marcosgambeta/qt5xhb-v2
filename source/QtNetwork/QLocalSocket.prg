@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -115,50 +115,37 @@ HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void connectToServer( QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QLocalSocket_connectToServer1()
-{
-  auto obj = qobject_cast< QLocalSocket * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->connectToServer( HB_ISNIL( 1 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QLocalSocket_connectToServer2()
-{
-  auto obj = qobject_cast< QLocalSocket * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->connectToServer( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void connectToServer(OpenMode openMode = ReadWrite)
-[2]void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
-*/
-
 HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QLocalSocket_connectToServer1();
+    /*
+    void connectToServer( QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    auto obj = qobject_cast< QLocalSocket * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->connectToServer( HB_ISNIL( 1 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocalSocket_connectToServer2();
+    /*
+    void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    auto obj = qobject_cast< QLocalSocket * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->connectToServer( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
