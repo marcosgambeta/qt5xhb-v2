@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -627,50 +627,37 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setRenderTarget( QOpenGLFramebufferObject * fbo )
-*/
-void QQuickWindow_setRenderTarget1()
-{
-  auto obj = qobject_cast< QQuickWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setRenderTarget( PQOPENGLFRAMEBUFFEROBJECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setRenderTarget( uint fboId, const QSize & size )
-*/
-void QQuickWindow_setRenderTarget2()
-{
-  auto obj = qobject_cast< QQuickWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setRenderTarget( PUINT( 1 ), *PQSIZE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
-[2]void setRenderTarget(uint fboId, const QSize & size)
-*/
-
 HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 {
   if( ISNUMPAR( 1 ) && ISQOPENGLFRAMEBUFFEROBJECT( 1 ) )
   {
-    QQuickWindow_setRenderTarget1();
+    /*
+    void setRenderTarget( QOpenGLFramebufferObject * fbo )
+    */
+    auto obj = qobject_cast< QQuickWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setRenderTarget( PQOPENGLFRAMEBUFFEROBJECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSIZE( 2 ) )
   {
-    QQuickWindow_setRenderTarget2();
+    /*
+    void setRenderTarget( uint fboId, const QSize & size )
+    */
+    auto obj = qobject_cast< QQuickWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setRenderTarget( PUINT( 1 ), *PQSIZE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

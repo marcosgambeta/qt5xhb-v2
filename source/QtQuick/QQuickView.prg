@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,46 +69,34 @@ RETURN
 #include <QtQml/QQmlEngine>
 #include <QtQuick/QQuickItem>
 
-/*
-QQuickView( QWindow * parent = nullptr )
-*/
-void QQuickView_new1()
-{
-  auto obj = new QQuickView( OPQWINDOW( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QQuickView( QQmlEngine * engine, QWindow * parent )
-*/
-void QQuickView_new2()
-{
-  auto obj = new QQuickView( PQQMLENGINE( 1 ), PQWINDOW( 2 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QQuickView( const QUrl & source, QWindow * parent = nullptr )
-*/
-void QQuickView_new3()
-{
-  auto obj = new QQuickView( *PQURL( 1 ), OPQWINDOW( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWINDOW( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QQuickView_new1();
+    /*
+    QQuickView( QWindow * parent = nullptr )
+    */
+    auto obj = new QQuickView( OPQWINDOW( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 2 ) && ISQQMLENGINE( 1 ) && ISQWINDOW( 2 ) )
   {
-    QQuickView_new2();
+    /*
+    QQuickView( QQmlEngine * engine, QWindow * parent )
+    */
+    auto obj = new QQuickView( PQQMLENGINE( 1 ), PQWINDOW( 2 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( ISQWINDOW( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QQuickView_new3();
+    /*
+    QQuickView( const QUrl & source, QWindow * parent = nullptr )
+    */
+    auto obj = new QQuickView( *PQURL( 1 ), OPQWINDOW( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

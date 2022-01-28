@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -162,50 +162,37 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setRect( const QRectF & r )
-*/
-void QSGSimpleTextureNode_setRect1()
-{
-  auto obj = static_cast< QSGSimpleTextureNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setRect( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setRect( qreal x, qreal y, qreal w, qreal h )
-*/
-void QSGSimpleTextureNode_setRect2()
-{
-  auto obj = static_cast< QSGSimpleTextureNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void setRect(const QRectF & r)
-[2]void setRect(qreal x, qreal y, qreal w, qreal h)
-*/
-
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QSGSimpleTextureNode_setRect1();
+    /*
+    void setRect( const QRectF & r )
+    */
+    auto obj = static_cast< QSGSimpleTextureNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setRect( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QSGSimpleTextureNode_setRect2();
+    /*
+    void setRect( qreal x, qreal y, qreal w, qreal h )
+    */
+    auto obj = static_cast< QSGSimpleTextureNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
