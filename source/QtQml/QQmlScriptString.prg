@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,25 @@ RETURN
 #include <QtQml/QQmlScriptString>
 #endif
 
-/*
-QQmlScriptString()
-*/
-void QQmlScriptString_new1()
-{
-  auto obj = new QQmlScriptString();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlScriptString( const QQmlScriptString & other )
-*/
-void QQmlScriptString_new2()
-{
-  auto obj = new QQmlScriptString( *PQQMLSCRIPTSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QQmlScriptString_new1();
+    /*
+    QQmlScriptString()
+    */
+    auto obj = new QQmlScriptString();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQQMLSCRIPTSTRING( 1 ) )
   {
-    QQmlScriptString_new2();
+    /*
+    QQmlScriptString( const QQmlScriptString & other )
+    */
+    auto obj = new QQmlScriptString( *PQQMLSCRIPTSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

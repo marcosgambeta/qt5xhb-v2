@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -73,46 +73,34 @@ RETURN
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlEngine>
 
-/*
-QQmlExpression()
-*/
-void QQmlExpression_new1()
-{
-  auto obj = new QQmlExpression();
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QQmlExpression( QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
-*/
-void QQmlExpression_new2()
-{
-  auto obj = new QQmlExpression( PQQMLCONTEXT( 1 ), PQOBJECT( 2 ), PQSTRING( 3 ), OPQOBJECT( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QQmlExpression( const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr )
-*/
-void QQmlExpression_new3()
-{
-  auto obj = new QQmlExpression( *PQQMLSCRIPTSTRING( 1 ), OPQQMLCONTEXT( 2, nullptr ), OPQOBJECT( 3, nullptr ), OPQOBJECT( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QQmlExpression_new1();
+    /*
+    QQmlExpression()
+    */
+    auto obj = new QQmlExpression();
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 3, 4 ) && ISQQMLCONTEXT( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QQmlExpression_new2();
+    /*
+    QQmlExpression( QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+    */
+    auto obj = new QQmlExpression( PQQMLCONTEXT( 1 ), PQOBJECT( 2 ), PQSTRING( 3 ), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 4 ) && ISQQMLSCRIPTSTRING( 1 ) && ( ISQQMLCONTEXT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QQmlExpression_new3();
+    /*
+    QQmlExpression( const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr )
+    */
+    auto obj = new QQmlExpression( *PQQMLSCRIPTSTRING( 1 ), OPQQMLCONTEXT( 2, nullptr ), OPQOBJECT( 3, nullptr ), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

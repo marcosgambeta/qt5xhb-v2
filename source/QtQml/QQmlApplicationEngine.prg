@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,52 +58,40 @@ RETURN
 #endif
 #endif
 
-/*
-QQmlApplicationEngine( QObject * parent = nullptr )
-*/
-void QQmlApplicationEngine_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QQmlApplicationEngine( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QQmlApplicationEngine( const QUrl & url, QObject * parent = nullptr )
-*/
-void QQmlApplicationEngine_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QQmlApplicationEngine( *PQURL( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QQmlApplicationEngine( const QString & filePath, QObject * parent = nullptr )
-*/
-void QQmlApplicationEngine_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QQmlApplicationEngine( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QQmlApplicationEngine_new1();
+    /*
+    QQmlApplicationEngine( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QQmlApplicationEngine( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QQmlApplicationEngine_new2();
+    /*
+    QQmlApplicationEngine( const QUrl & url, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QQmlApplicationEngine( *PQURL( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QQmlApplicationEngine_new3();
+    /*
+    QQmlApplicationEngine( const QString & filePath, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QQmlApplicationEngine( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {
@@ -182,49 +170,41 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 #endif
 }
 
-/*
-void load( const QUrl & url )
-*/
-void QQmlApplicationEngine_load1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = qobject_cast< QQmlApplicationEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( *PQURL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void load( const QString & filePath )
-*/
-void QQmlApplicationEngine_load2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = qobject_cast< QQmlApplicationEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->load( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 {
   if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QQmlApplicationEngine_load1();
+    /*
+    void load( const QUrl & url )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = qobject_cast< QQmlApplicationEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( *PQURL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QQmlApplicationEngine_load2();
+    /*
+    void load( const QString & filePath )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = qobject_cast< QQmlApplicationEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->load( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {

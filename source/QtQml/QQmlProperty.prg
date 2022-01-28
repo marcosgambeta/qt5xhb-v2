@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -80,111 +80,79 @@ RETURN
 #include <QtQml/QQmlProperty>
 #endif
 
-/*
-QQmlProperty()
-*/
-void QQmlProperty_new1()
-{
-  auto obj = new QQmlProperty();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( QObject * obj )
-*/
-void QQmlProperty_new2()
-{
-  auto obj = new QQmlProperty( PQOBJECT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( QObject * obj, QQmlContext * ctxt )
-*/
-void QQmlProperty_new3()
-{
-  auto obj = new QQmlProperty( PQOBJECT( 1 ), PQQMLCONTEXT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( QObject * obj, QQmlEngine * engine )
-*/
-void QQmlProperty_new4()
-{
-  auto obj = new QQmlProperty( PQOBJECT( 1 ), PQQMLENGINE( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( QObject * obj, const QString & name )
-*/
-void QQmlProperty_new5()
-{
-  auto obj = new QQmlProperty( PQOBJECT( 1 ), PQSTRING( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
-*/
-void QQmlProperty_new6()
-{
-  auto obj = new QQmlProperty( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLCONTEXT( 3 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
-*/
-void QQmlProperty_new7()
-{
-  auto obj = new QQmlProperty( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLENGINE( 3 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlProperty( const QQmlProperty & other )
-*/
-void QQmlProperty_new8()
-{
-  auto obj = new QQmlProperty( *PQQMLPROPERTY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QQmlProperty_new1();
+    /*
+    QQmlProperty()
+    */
+    auto obj = new QQmlProperty();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QQmlProperty_new2();
+    /*
+    QQmlProperty( QObject * obj )
+    */
+    auto obj = new QQmlProperty( PQOBJECT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQQMLCONTEXT( 2 ) )
   {
-    QQmlProperty_new3();
+    /*
+    QQmlProperty( QObject * obj, QQmlContext * ctxt )
+    */
+    auto obj = new QQmlProperty( PQOBJECT( 1 ), PQQMLCONTEXT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQQMLENGINE( 2 ) )
   {
-    QQmlProperty_new4();
+    /*
+    QQmlProperty( QObject * obj, QQmlEngine * engine )
+    */
+    auto obj = new QQmlProperty( PQOBJECT( 1 ), PQQMLENGINE( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QQmlProperty_new5();
+    /*
+    QQmlProperty( QObject * obj, const QString & name )
+    */
+    auto obj = new QQmlProperty( PQOBJECT( 1 ), PQSTRING( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQQMLCONTEXT( 3 ) )
   {
-    QQmlProperty_new6();
+    /*
+    QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
+    */
+    auto obj = new QQmlProperty( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLCONTEXT( 3 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQQMLENGINE( 3 ) )
   {
-    QQmlProperty_new7();
+    /*
+    QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
+    */
+    auto obj = new QQmlProperty( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLENGINE( 3 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQQMLPROPERTY( 1 ) )
   {
-    QQmlProperty_new8();
+    /*
+    QQmlProperty( const QQmlProperty & other )
+    */
+    auto obj = new QQmlProperty( *PQQMLPROPERTY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -209,41 +177,33 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool connectNotifySignal( QObject * dest, const char * slot ) const
-*/
-void QQmlProperty_connectNotifySignal1()
-{
-  auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->connectNotifySignal( PQOBJECT( 1 ), PCONSTCHAR( 2 ) ) );
-  }
-}
-
-/*
-bool connectNotifySignal( QObject * dest, int method ) const
-*/
-void QQmlProperty_connectNotifySignal2()
-{
-  auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->connectNotifySignal( PQOBJECT( 1 ), PINT( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 {
   if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QQmlProperty_connectNotifySignal1();
+    /*
+    bool connectNotifySignal( QObject * dest, const char * slot ) const
+    */
+    auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->connectNotifySignal( PQOBJECT( 1 ), PCONSTCHAR( 2 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QQmlProperty_connectNotifySignal2();
+    /*
+    bool connectNotifySignal( QObject * dest, int method ) const
+    */
+    auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->connectNotifySignal( PQOBJECT( 1 ), PINT( 2 ) ) );
+    }
+
   }
   else
   {
@@ -638,64 +598,51 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
   }
 }
 
-/*
-QVariant read() const
-*/
-void QQmlProperty_read1()
-{
-  auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QVariant( obj->read() );
-    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-  }
-}
-
-/*
-static QVariant read( QObject * object, const QString & name )
-*/
-void QQmlProperty_read2()
-{
-  auto ptr = new QVariant( QQmlProperty::read( PQOBJECT( 1 ), PQSTRING( 2 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-}
-
-/*
-static QVariant read( QObject * object, const QString & name, QQmlContext * ctxt )
-*/
-void QQmlProperty_read3()
-{
-  auto ptr = new QVariant( QQmlProperty::read( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLCONTEXT( 3 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-}
-
-/*
-static QVariant read( QObject * object, const QString & name, QQmlEngine * engine )
-*/
-void QQmlProperty_read4()
-{
-  auto ptr = new QVariant( QQmlProperty::read( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLENGINE( 3 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-}
-
 HB_FUNC_STATIC( QQMLPROPERTY_READ )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QQmlProperty_read1();
+    /*
+    QVariant read() const
+    */
+    auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QVariant( obj->read() );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QQmlProperty_read2();
+    /*
+    static QVariant read( QObject * object, const QString & name )
+    */
+
+    auto ptr = new QVariant( QQmlProperty::read( PQOBJECT( 1 ), PQSTRING( 2 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+
   }
   else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQQMLCONTEXT( 3 ) )
   {
-    QQmlProperty_read3();
+    /*
+    static QVariant read( QObject * object, const QString & name, QQmlContext * ctxt )
+    */
+
+    auto ptr = new QVariant( QQmlProperty::read( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLCONTEXT( 3 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+
   }
   else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQQMLENGINE( 3 ) )
   {
-    QQmlProperty_read4();
+    /*
+    static QVariant read( QObject * object, const QString & name, QQmlEngine * engine )
+    */
+
+    auto ptr = new QVariant( QQmlProperty::read( PQOBJECT( 1 ), PQSTRING( 2 ), PQQMLENGINE( 3 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+
   }
   else
   {
@@ -751,60 +698,47 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
   }
 }
 
-/*
-bool write( const QVariant & value ) const
-*/
-void QQmlProperty_write1()
-{
-  auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->write( *PQVARIANT( 1 ) ) );
-  }
-}
-
-/*
-static bool write( QObject * object, const QString & name, const QVariant & value )
-*/
-void QQmlProperty_write2()
-{
-  RBOOL( QQmlProperty::write( PQOBJECT( 1 ), PQSTRING( 2 ), *PQVARIANT( 3 ) ) );
-}
-
-/*
-static bool write( QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt )
-*/
-void QQmlProperty_write3()
-{
-  RBOOL( QQmlProperty::write( PQOBJECT( 1 ), PQSTRING( 2 ), *PQVARIANT( 3 ), PQQMLCONTEXT( 4 ) ) );
-}
-
-/*
-static bool write( QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine )
-*/
-void QQmlProperty_write4()
-{
-  RBOOL( QQmlProperty::write( PQOBJECT( 1 ), PQSTRING( 2 ), *PQVARIANT( 3 ), PQQMLENGINE( 4 ) ) );
-}
-
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 {
   if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
   {
-    QQmlProperty_write1();
+    /*
+    bool write( const QVariant & value ) const
+    */
+    auto obj = static_cast< QQmlProperty * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->write( *PQVARIANT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQVARIANT( 3 ) )
   {
-    QQmlProperty_write2();
+    /*
+    static bool write( QObject * object, const QString & name, const QVariant & value )
+    */
+
+    RBOOL( QQmlProperty::write( PQOBJECT( 1 ), PQSTRING( 2 ), *PQVARIANT( 3 ) ) );
+
   }
   else if( ISNUMPAR( 4 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQVARIANT( 3 ) && ISQQMLCONTEXT( 4 ) )
   {
-    QQmlProperty_write3();
+    /*
+    static bool write( QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt )
+    */
+
+    RBOOL( QQmlProperty::write( PQOBJECT( 1 ), PQSTRING( 2 ), *PQVARIANT( 3 ), PQQMLCONTEXT( 4 ) ) );
+
   }
   else if( ISNUMPAR( 4 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ISQVARIANT( 3 ) && ISQQMLENGINE( 4 ) )
   {
-    QQmlProperty_write4();
+    /*
+    static bool write( QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine )
+    */
+
+    RBOOL( QQmlProperty::write( PQOBJECT( 1 ), PQSTRING( 2 ), *PQVARIANT( 3 ), PQQMLENGINE( 4 ) ) );
+
   }
   else
   {

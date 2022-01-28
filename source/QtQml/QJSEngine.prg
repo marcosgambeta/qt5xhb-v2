@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,25 @@ RETURN
 #include <QtQml/QJSEngine>
 #endif
 
-/*
-QJSEngine()
-*/
-void QJSEngine_new1()
-{
-  auto obj = new QJSEngine();
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QJSEngine( QObject * parent )
-*/
-void QJSEngine_new2()
-{
-  auto obj = new QJSEngine( PQOBJECT( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QJSENGINE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QJSEngine_new1();
+    /*
+    QJSEngine()
+    */
+    auto obj = new QJSEngine();
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QJSEngine_new2();
+    /*
+    QJSEngine( QObject * parent )
+    */
+    auto obj = new QJSEngine( PQOBJECT( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

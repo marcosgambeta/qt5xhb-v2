@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,33 +68,25 @@ RETURN
 #include <QtQml/QQmlListReference>
 #endif
 
-/*
-QQmlListReference()
-*/
-void QQmlListReference_new1()
-{
-  auto obj = new QQmlListReference();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = nullptr )
-*/
-void QQmlListReference_new2()
-{
-  auto obj = new QQmlListReference( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQQMLENGINE( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QQmlListReference_new1();
+    /*
+    QQmlListReference()
+    */
+    auto obj = new QQmlListReference();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQQMLENGINE( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QQmlListReference_new2();
+    /*
+    QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = nullptr )
+    */
+    auto obj = new QQmlListReference( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQQMLENGINE( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

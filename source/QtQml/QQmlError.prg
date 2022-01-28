@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,33 +66,25 @@ RETURN
 #include <QtQml/QQmlError>
 #endif
 
-/*
-QQmlError()
-*/
-void QQmlError_new1()
-{
-  auto obj = new QQmlError();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QQmlError( const QQmlError & other )
-*/
-void QQmlError_new2()
-{
-  auto obj = new QQmlError( *PQQMLERROR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QQMLERROR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QQmlError_new1();
+    /*
+    QQmlError()
+    */
+    auto obj = new QQmlError();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQQMLERROR( 1 ) )
   {
-    QQmlError_new2();
+    /*
+    QQmlError( const QQmlError & other )
+    */
+    auto obj = new QQmlError( *PQQMLERROR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

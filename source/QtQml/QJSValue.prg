@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,12 +24,12 @@ CLASS QJSValue
    DATA self_destruction INIT .F.
 
    METHOD new1
-   METHOD new
    METHOD new4
    METHOD new5
    METHOD new6
    METHOD new7
    METHOD new9
+   METHOD new
    METHOD delete
    METHOD deleteProperty
    METHOD equals
@@ -107,24 +107,6 @@ HB_FUNC_STATIC( QJSVALUE_NEW1 )
 }
 
 /*
-QJSValue( const QJSValue & other )
-*/
-void QJSValue_new2()
-{
-  auto obj = new QJSValue( *PQJSVALUE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJSValue( bool value )
-*/
-void QJSValue_new3()
-{
-  auto obj = new QJSValue( PBOOL( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QJSValue( int value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
@@ -161,15 +143,6 @@ HB_FUNC_STATIC( QJSVALUE_NEW7 )
 }
 
 /*
-QJSValue( const QLatin1String & value )
-*/
-void QJSValue_new8()
-{
-  auto obj = new QJSValue( *PQLATIN1STRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QJSValue( const char * value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
@@ -186,11 +159,21 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
   }
   else if( ISNUMPAR( 1 ) && ISQJSVALUE( 1 ) )
   {
-    QJSValue_new2();
+    /*
+    QJSValue( const QJSValue & other )
+    */
+    auto obj = new QJSValue( *PQJSVALUE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    QJSValue_new3();
+    /*
+    QJSValue( bool value )
+    */
+    auto obj = new QJSValue( PBOOL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
@@ -198,7 +181,12 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
   }
   else if( ISNUMPAR( 1 ) && ISQLATIN1STRING( 1 ) )
   {
-    QJSValue_new8();
+    /*
+    QJSValue( const QLatin1String & value )
+    */
+    auto obj = new QJSValue( *PQLATIN1STRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -631,43 +619,35 @@ HB_FUNC_STATIC( QJSVALUE_ISVARIANT )
   }
 }
 
-/*
-QJSValue property( const QString & name ) const
-*/
-void QJSValue_property1()
-{
-  auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QJSValue( obj->property( PQSTRING( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
-  }
-}
-
-/*
-QJSValue property( quint32 arrayIndex ) const
-*/
-void QJSValue_property2()
-{
-  auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QJSValue( obj->property( PQUINT32( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
-  }
-}
-
 HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QJSValue_property1();
+    /*
+    QJSValue property( const QString & name ) const
+    */
+    auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QJSValue( obj->property( PQSTRING( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QJSValue_property2();
+    /*
+    QJSValue property( quint32 arrayIndex ) const
+    */
+    auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QJSValue( obj->property( PQUINT32( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+    }
+
   }
   else
   {
@@ -700,45 +680,37 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
   }
 }
 
-/*
-void setProperty( const QString & name, const QJSValue & value )
-*/
-void QJSValue_setProperty1()
-{
-  auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setProperty( PQSTRING( 1 ), *PQJSVALUE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setProperty( quint32 arrayIndex, const QJSValue & value )
-*/
-void QJSValue_setProperty2()
-{
-  auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setProperty( PQUINT32( 1 ), *PQJSVALUE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQJSVALUE( 2 ) )
   {
-    QJSValue_setProperty1();
+    /*
+    void setProperty( const QString & name, const QJSValue & value )
+    */
+    auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setProperty( PQSTRING( 1 ), *PQJSVALUE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQJSVALUE( 2 ) )
   {
-    QJSValue_setProperty2();
+    /*
+    void setProperty( quint32 arrayIndex, const QJSValue & value )
+    */
+    auto obj = static_cast< QJSValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setProperty( PQUINT32( 1 ), *PQJSVALUE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
