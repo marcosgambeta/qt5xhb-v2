@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,22 +78,18 @@ RETURN
 #endif
 #endif
 
-/*
-QOAuth1Signature( const QOAuth1Signature & other )
-*/
-void QOAuth1Signature_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = new QOAuth1Signature( *PQOAUTH1SIGNATURE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQOAUTH1SIGNATURE( 1 ) )
   {
-    QOAuth1Signature_new3();
+    /*
+    QOAuth1Signature( const QOAuth1Signature & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    auto obj = new QOAuth1Signature( *PQOAUTH1SIGNATURE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
@@ -512,42 +508,35 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
 #endif
 }
 
-/*
-QByteArray plainText() const
-*/
-void QOAuth1Signature_plainText1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QOAuth1Signature * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QByteArray( obj->plainText() );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-  }
-#endif
-}
-
-/*
-static QByteArray plainText( const QString & clientSharedSecret, const QString & tokenSecret )
-*/
-void QOAuth1Signature_plainText2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto ptr = new QByteArray( QOAuth1Signature::plainText( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-#endif
-}
-
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOAuth1Signature_plainText1();
+    /*
+    QByteArray plainText() const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    auto obj = static_cast< QOAuth1Signature * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QByteArray( obj->plainText() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    }
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QOAuth1Signature_plainText2();
+    /*
+    static QByteArray plainText( const QString & clientSharedSecret, const QString & tokenSecret )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+
+    auto ptr = new QByteArray( QOAuth1Signature::plainText( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+#endif
+
   }
   else
   {
