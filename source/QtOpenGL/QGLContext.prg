@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -109,100 +109,72 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
-*/
-void QGLContext_bindTexture1()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QString & fileName )
-*/
-void QGLContext_bindTexture2()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
-void QGLContext_bindTexture3()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
-void QGLContext_bindTexture4()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
-*/
-void QGLContext_bindTexture5()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
-  }
-}
-
-/*
-[1]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
-[2]GLuint bindTexture ( const QString & fileName )
-[3]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[4]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[5]GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
-*/
-
 HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 {
   if( ISNUMPAR( 4 ) && ISQIMAGE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QGLContext_bindTexture1();
+    /*
+    GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QGLContext_bindTexture2();
+    /*
+    GLuint bindTexture( const QString & fileName )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( PQSTRING( 1 ) ) );
+    }
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQIMAGE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLContext_bindTexture3();
+    /*
+    GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
+    }
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQPIXMAP( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLContext_bindTexture4();
+    /*
+    GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
+    }
+
   }
   else if( ISNUMPAR( 4 ) && ISQPIXMAP( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QGLContext_bindTexture5();
+    /*
+    GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
+    }
+
   }
   else
   {
@@ -287,50 +259,37 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-void QGLContext_drawTexture1()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawTexture( *PQRECTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-void QGLContext_drawTexture2()
-{
-  auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawTexture( *PQPOINTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {
   if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLContext_drawTexture1();
+    /*
+    void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawTexture( *PQRECTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLContext_drawTexture2();
+    /*
+    void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    */
+    auto obj = static_cast< QGLContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawTexture( *PQPOINTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

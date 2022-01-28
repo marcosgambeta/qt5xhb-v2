@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,46 +70,34 @@ RETURN
 #include <QtOpenGL/QGLBuffer>
 #endif
 
-/*
-QGLBuffer()
-*/
-void QGLBuffer_new1()
-{
-  auto obj = new QGLBuffer();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QGLBuffer( QGLBuffer::Type type )
-*/
-void QGLBuffer_new2()
-{
-  auto obj = new QGLBuffer( static_cast<QGLBuffer::Type>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QGLBuffer( const QGLBuffer & other )
-*/
-void QGLBuffer_new3()
-{
-  auto obj = new QGLBuffer( *PQGLBUFFER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGLBUFFER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGLBuffer_new1();
+    /*
+    QGLBuffer()
+    */
+    auto obj = new QGLBuffer();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGLBuffer_new2();
+    /*
+    QGLBuffer( QGLBuffer::Type type )
+    */
+    auto obj = new QGLBuffer( static_cast<QGLBuffer::Type>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQGLBUFFER( 1 ) )
   {
-    QGLBuffer_new3();
+    /*
+    QGLBuffer( const QGLBuffer & other )
+    */
+    auto obj = new QGLBuffer( *PQGLBUFFER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -134,45 +122,37 @@ HB_FUNC_STATIC( QGLBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void allocate( const void * data, int count )
-*/
-void QGLBuffer_allocate1()
-{
-  auto obj = static_cast< QGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->allocate( static_cast< const void * >( hb_parptr( 1 ) ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void allocate( int count )
-*/
-void QGLBuffer_allocate2()
-{
-  auto obj = static_cast< QGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->allocate( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 {
   if( ISNUMPAR( 2 ) && HB_ISPOINTER( 1 ) && HB_ISNUM( 2 ) )
   {
-    QGLBuffer_allocate1();
+    /*
+    void allocate( const void * data, int count )
+    */
+    auto obj = static_cast< QGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->allocate( static_cast< const void * >( hb_parptr( 1 ) ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGLBuffer_allocate2();
+    /*
+    void allocate( int count )
+    */
+    auto obj = static_cast< QGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->allocate( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -350,40 +330,33 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
   }
 }
 
-/*
-void release()
-*/
-void QGLBuffer_release1()
-{
-  auto obj = static_cast< QGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->release();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void release( QGLBuffer::Type type )
-*/
-void QGLBuffer_release2()
-{
-  QGLBuffer::release( static_cast<QGLBuffer::Type>( hb_parni( 1 ) ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLBUFFER_RELEASE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGLBuffer_release1();
+    /*
+    void release()
+    */
+    auto obj = static_cast< QGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->release();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGLBuffer_release2();
+    /*
+    static void release( QGLBuffer::Type type )
+    */
+
+    QGLBuffer::release( static_cast<QGLBuffer::Type>( hb_parni( 1 ) ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

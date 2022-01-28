@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,33 +63,25 @@ RETURN
 #include <QtOpenGL/QGLColormap>
 #endif
 
-/*
-QGLColormap()
-*/
-void QGLColormap_new1()
-{
-  auto obj = new QGLColormap();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QGLColormap( const QGLColormap & map )
-*/
-void QGLColormap_new2()
-{
-  auto obj = new QGLColormap( *PQGLCOLORMAP( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGLColormap_new1();
+    /*
+    QGLColormap()
+    */
+    auto obj = new QGLColormap();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQGLCOLORMAP( 1 ) )
   {
-    QGLColormap_new2();
+    /*
+    QGLColormap( const QGLColormap & map )
+    */
+    auto obj = new QGLColormap( *PQGLCOLORMAP( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -239,45 +231,37 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 void setEntries ( int count, const QRgb * colors, int base = 0 )
 */
 
-/*
-void setEntry( int idx, QRgb color )
-*/
-void QGLColormap_setEntry1()
-{
-  auto obj = static_cast< QGLColormap * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setEntry( PINT( 1 ), PQRGB( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setEntry( int idx, const QColor & color )
-*/
-void QGLColormap_setEntry2()
-{
-  auto obj = static_cast< QGLColormap * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setEntry( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QGLColormap_setEntry1();
+    /*
+    void setEntry( int idx, QRgb color )
+    */
+    auto obj = static_cast< QGLColormap * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setEntry( PINT( 1 ), PQRGB( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ( ISQCOLOR( 2 )|| HB_ISCHAR( 2 ) ) )
   {
-    QGLColormap_setEntry2();
+    /*
+    void setEntry( int idx, const QColor & color )
+    */
+    auto obj = static_cast< QGLColormap * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setEntry( PINT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

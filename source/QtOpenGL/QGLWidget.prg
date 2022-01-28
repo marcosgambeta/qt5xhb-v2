@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,46 +77,34 @@ RETURN
 #include <QtOpenGL/QGLWidget>
 #endif
 
-/*
-QGLWidget( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
-*/
-void QGLWidget_new1()
-{
-  auto obj = new QGLWidget( OPQWIDGET( 1, nullptr ), OPQGLWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QGLWidget( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
-*/
-void QGLWidget_new2()
-{
-  auto obj = new QGLWidget( PQGLCONTEXT( 1 ), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL( 4 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 4 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QGLWidget( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
-*/
-void QGLWidget_new3()
-{
-  auto obj = new QGLWidget( *PQGLFORMAT( 1 ), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL( 4 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 4 ) ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QGLWIDGET_NEW )
 {
   if( ISBETWEEN( 0, 3 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( ISQGLWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLWidget_new1();
+    /*
+    QGLWidget( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QGLWidget( OPQWIDGET( 1, nullptr ), OPQGLWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 4 ) && ISQGLCONTEXT( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( ISQGLWIDGET( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGLWidget_new2();
+    /*
+    QGLWidget( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QGLWidget( PQGLCONTEXT( 1 ), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL( 4 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 4 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 4 ) && ISQGLFORMAT( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( ISQGLWIDGET( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGLWidget_new3();
+    /*
+    QGLWidget( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
+    */
+    auto obj = new QGLWidget( *PQGLFORMAT( 1 ), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL( 4 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 4 ) ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -143,92 +131,72 @@ HB_FUNC_STATIC( QGLWIDGET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
-void QGLWidget_bindTexture1()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-*/
-void QGLWidget_bindTexture2()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
-*/
-void QGLWidget_bindTexture3()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
-*/
-void QGLWidget_bindTexture4()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QString & fileName )
-*/
-void QGLWidget_bindTexture5()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RGLUINT( obj->bindTexture( PQSTRING( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
   if( ISBETWEEN( 1, 3 ) && ISQIMAGE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLWidget_bindTexture1();
+    /*
+    GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
+    }
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQPIXMAP( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLWidget_bindTexture2();
+    /*
+    GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
+    }
+
   }
   else if( ISBETWEEN( 3, 4 ) && ISQIMAGE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGLWidget_bindTexture3();
+    /*
+    GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
+    }
+
   }
   else if( ISBETWEEN( 3, 4 ) && ISQPIXMAP( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGLWidget_bindTexture4();
+    /*
+    GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), PGLENUM( 2 ), PGLINT( 3 ), static_cast<QGLContext::BindOptions>( hb_parni( 4 ) ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QGLWidget_bindTexture5();
+    /*
+    GLuint bindTexture( const QString & fileName )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RGLUINT( obj->bindTexture( PQSTRING( 1 ) ) );
+    }
+
   }
   else
   {
@@ -362,45 +330,37 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
   }
 }
 
-/*
-void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-void QGLWidget_drawTexture1()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawTexture( *PQRECTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-void QGLWidget_drawTexture2()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawTexture( *PQPOINTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 {
   if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLWidget_drawTexture1();
+    /*
+    void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawTexture( *PQRECTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGLWidget_drawTexture2();
+    /*
+    void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawTexture( *PQPOINTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -660,45 +620,37 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
   }
 }
 
-/*
-void renderText( int x, int y, const QString & str, const QFont & font = QFont() )
-*/
-void QGLWidget_renderText1()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->renderText( PINT( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? QFont() : *static_cast< QFont * >( Qt5xHb::itemGetPtr( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void renderText( double x, double y, double z, const QString & str, const QFont & font = QFont() )
-*/
-void QGLWidget_renderText2()
-{
-  auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->renderText( PDOUBLE( 1 ), PDOUBLE( 2 ), PDOUBLE( 3 ), PQSTRING( 4 ), HB_ISNIL( 5 ) ? QFont() : *static_cast< QFont * >( Qt5xHb::itemGetPtr( 5 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
 {
   if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( ISQFONT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGLWidget_renderText1();
+    /*
+    void renderText( int x, int y, const QString & str, const QFont & font = QFont() )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->renderText( PINT( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? QFont() : *static_cast< QFont * >( Qt5xHb::itemGetPtr( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISCHAR( 4 ) && ( ISQFONT( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QGLWidget_renderText2();
+    /*
+    void renderText( double x, double y, double z, const QString & str, const QFont & font = QFont() )
+    */
+    auto obj = qobject_cast< QGLWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->renderText( PDOUBLE( 1 ), PDOUBLE( 2 ), PDOUBLE( 3 ), PQSTRING( 4 ), HB_ISNIL( 5 ) ? QFont() : *static_cast< QFont * >( Qt5xHb::itemGetPtr( 5 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
