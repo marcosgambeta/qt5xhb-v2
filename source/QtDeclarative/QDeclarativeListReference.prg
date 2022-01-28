@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,25 @@ RETURN
 #include <QtDeclarative/QDeclarativeListReference>
 #endif
 
-/*
-QDeclarativeListReference()
-*/
-void QDeclarativeListReference_new1()
-{
-  auto obj = new QDeclarativeListReference();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
-*/
-void QDeclarativeListReference_new2()
-{
-  auto obj = new QDeclarativeListReference( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQDECLARATIVEENGINE( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDeclarativeListReference_new1();
+    /*
+    QDeclarativeListReference()
+    */
+    auto obj = new QDeclarativeListReference();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQDECLARATIVEENGINE( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDeclarativeListReference_new2();
+    /*
+    QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
+    */
+    auto obj = new QDeclarativeListReference( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQDECLARATIVEENGINE( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

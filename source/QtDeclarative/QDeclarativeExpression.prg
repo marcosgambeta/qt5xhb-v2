@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,33 +72,25 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtDeclarative/QDeclarativeEngine>
 
-/*
-QDeclarativeExpression()
-*/
-void QDeclarativeExpression_new1()
-{
-  auto obj = new QDeclarativeExpression();
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
-*/
-void QDeclarativeExpression_new2()
-{
-  auto obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT( 1 ), PQOBJECT( 2 ), PQSTRING( 3 ), OPQOBJECT( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDeclarativeExpression_new1();
+    /*
+    QDeclarativeExpression()
+    */
+    auto obj = new QDeclarativeExpression();
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 3, 4 ) && ISQDECLARATIVECONTEXT( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDeclarativeExpression_new2();
+    /*
+    QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+    */
+    auto obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT( 1 ), PQOBJECT( 2 ), PQSTRING( 3 ), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
