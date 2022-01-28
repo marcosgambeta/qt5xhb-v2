@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,41 +67,29 @@ RETURN
 
 #include <QtCore/QVersionNumber>
 
-/*
-QCompressedHelpInfo()
-*/
-void QCompressedHelpInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = new QCompressedHelpInfo();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QCompressedHelpInfo( const QCompressedHelpInfo & other )
-*/
-void QCompressedHelpInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = new QCompressedHelpInfo( *PQCOMPRESSEDHELPINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QCompressedHelpInfo(QCompressedHelpInfo &&other)
-*/
-
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QCompressedHelpInfo_new1();
+    /*
+    QCompressedHelpInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+    auto obj = new QCompressedHelpInfo();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQCOMPRESSEDHELPINFO( 1 ) )
   {
-    QCompressedHelpInfo_new2();
+    /*
+    QCompressedHelpInfo( const QCompressedHelpInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+    auto obj = new QCompressedHelpInfo( *PQCOMPRESSEDHELPINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
