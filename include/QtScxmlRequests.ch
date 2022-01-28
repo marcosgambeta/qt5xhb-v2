@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,5 +26,6 @@ REQUEST QScxmlNullDataModel
 REQUEST QScxmlStateMachine
 REQUEST QScxmlStaticScxmlServiceFactory
 REQUEST QScxmlTableData
+REQUEST QtScxml_Version
 
 #endif /* QTSCXMLREQUESTS_CH */

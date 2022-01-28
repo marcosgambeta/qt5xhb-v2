@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -13,9 +13,10 @@
 #ifndef QTMULTIMEDIAWIDGETSREQUESTS_CH
 #define QTMULTIMEDIAWIDGETSREQUESTS_CH
 
-REQUEST QVideoWidget
-REQUEST QVideoWidgetControl
 REQUEST QCameraViewfinder
 REQUEST QGraphicsVideoItem
+REQUEST QVideoWidget
+REQUEST QVideoWidgetControl
+REQUEST QtMultimediaWidgets_Version
 
 #endif /* QTMULTIMEDIAWIDGETSREQUESTS_CH */
