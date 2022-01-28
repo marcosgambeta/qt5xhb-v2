@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,46 +62,34 @@ RETURN
 #include <QtGui/QOpenGLPaintDevice>
 #endif
 
-/*
-QOpenGLPaintDevice()
-*/
-void QOpenGLPaintDevice_new1()
-{
-  auto obj = new QOpenGLPaintDevice();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLPaintDevice( const QSize & size )
-*/
-void QOpenGLPaintDevice_new2()
-{
-  auto obj = new QOpenGLPaintDevice( *PQSIZE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLPaintDevice( int width, int height )
-*/
-void QOpenGLPaintDevice_new3()
-{
-  auto obj = new QOpenGLPaintDevice( PINT( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOpenGLPaintDevice_new1();
+    /*
+    QOpenGLPaintDevice()
+    */
+    auto obj = new QOpenGLPaintDevice();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QOpenGLPaintDevice_new2();
+    /*
+    QOpenGLPaintDevice( const QSize & size )
+    */
+    auto obj = new QOpenGLPaintDevice( *PQSIZE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QOpenGLPaintDevice_new3();
+    /*
+    QOpenGLPaintDevice( int width, int height )
+    */
+    auto obj = new QOpenGLPaintDevice( PINT( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

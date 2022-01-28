@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,33 +63,25 @@ RETURN
 #include <QtGui/QOpenGLDebugMessage>
 #endif
 
-/*
-QOpenGLDebugMessage()
-*/
-void QOpenGLDebugMessage_new1()
-{
-  auto obj = new QOpenGLDebugMessage();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
-*/
-void QOpenGLDebugMessage_new2()
-{
-  auto obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOpenGLDebugMessage_new1();
+    /*
+    QOpenGLDebugMessage()
+    */
+    auto obj = new QOpenGLDebugMessage();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOPENGLDEBUGMESSAGE( 1 ) )
   {
-    QOpenGLDebugMessage_new2();
+    /*
+    QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
+    */
+    auto obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,11 +20,10 @@ CLASS QColor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new
    METHOD new3
-   METHOD new4
    METHOD new5
    METHOD new7
+   METHOD new
    METHOD delete
    METHOD alpha
    METHOD alphaF
@@ -145,24 +144,6 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QColor()
-*/
-void QColor_new1()
-{
-  auto obj = new QColor();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QColor( int r, int g, int b, int a = 255 )
-*/
-void QColor_new2()
-{
-  auto obj = new QColor( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 255 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QColor( QRgb color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW3 )
@@ -172,29 +153,11 @@ HB_FUNC_STATIC( QCOLOR_NEW3 )
 }
 
 /*
-QColor( const QString & name )
-*/
-HB_FUNC_STATIC( QCOLOR_NEW4 )
-{
-  auto obj = new QColor( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QColor( const char * name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
   auto obj = new QColor( PCONSTCHAR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QColor( const QColor & color )
-*/
-void QColor_new6()
-{
-  auto obj = new QColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -211,11 +174,21 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QColor_new1();
+    /*
+    QColor()
+    */
+    auto obj = new QColor();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QColor_new2();
+    /*
+    QColor( int r, int g, int b, int a = 255 )
+    */
+    auto obj = new QColor( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 255 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -223,11 +196,21 @@ HB_FUNC_STATIC( QCOLOR_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW4 );
+    /*
+    QColor( const QString & name )
+    */
+    auto obj = new QColor( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
   {
-    QColor_new6();
+    /*
+    QColor( const QColor & color )
+    */
+    auto obj = new QColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -1761,45 +1744,37 @@ HB_FUNC_STATIC( QCOLOR_SETREDF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setRgb( int r, int g, int b, int a = 255 )
-*/
-void QColor_setRgb1()
-{
-  auto obj = static_cast< QColor * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setRgb( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 255 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setRgb( QRgb rgb )
-*/
-void QColor_setRgb2()
-{
-  auto obj = static_cast< QColor * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setRgb( PQRGB( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOLOR_SETRGB )
 {
   if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QColor_setRgb1();
+    /*
+    void setRgb( int r, int g, int b, int a = 255 )
+    */
+    auto obj = static_cast< QColor * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setRgb( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 255 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QColor_setRgb2();
+    /*
+    void setRgb( QRgb rgb )
+    */
+    auto obj = static_cast< QColor * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setRgb( PQRGB( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -2218,33 +2193,27 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
 #endif
 }
 
-/*
-static QColor fromRgb( QRgb rgb )
-*/
-void QColor_fromRgb1()
-{
-  auto ptr = new QColor( QColor::fromRgb( PQRGB( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
-}
-
-/*
-static QColor fromRgb( int r, int g, int b, int a = 255 )
-*/
-void QColor_fromRgb2()
-{
-  auto ptr = new QColor( QColor::fromRgb( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 255 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
-}
-
 HB_FUNC_STATIC( QCOLOR_FROMRGB )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QColor_fromRgb1();
+    /*
+    static QColor fromRgb( QRgb rgb )
+    */
+
+    auto ptr = new QColor( QColor::fromRgb( PQRGB( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
+
   }
   else if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QColor_fromRgb2();
+    /*
+    static QColor fromRgb( int r, int g, int b, int a = 255 )
+    */
+
+    auto ptr = new QColor( QColor::fromRgb( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 255 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
+
   }
   else
   {
@@ -2380,6 +2349,10 @@ HB_FUNC( QGRAY )
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     HB_FUNC_EXEC( QGRAY2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

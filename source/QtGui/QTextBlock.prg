@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -93,33 +93,25 @@ RETURN
 #include <QtGui/QTextDocument>
 #include <QtGui/QTextList>
 
-/*
-QTextBlock()
-*/
-void QTextBlock_new2()
-{
-  auto obj = new QTextBlock();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextBlock( const QTextBlock & o )
-*/
-void QTextBlock_new3()
-{
-  auto obj = new QTextBlock( *PQTEXTBLOCK( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextBlock_new2();
+    /*
+    QTextBlock()
+    */
+    auto obj = new QTextBlock();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
   {
-    QTextBlock_new3();
+    /*
+    QTextBlock( const QTextBlock & o )
+    */
+    auto obj = new QTextBlock( *PQTEXTBLOCK( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,33 +51,25 @@ RETURN
 #include <QtGui/QInputMethodEvent>
 #endif
 
-/*
-QInputMethodEvent()
-*/
-void QInputMethodEvent_new1()
-{
-  auto obj = new QInputMethodEvent();
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QInputMethodEvent( const QInputMethodEvent & other )
-*/
-void QInputMethodEvent_new3()
-{
-  auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QInputMethodEvent_new1();
+    /*
+    QInputMethodEvent()
+    */
+    auto obj = new QInputMethodEvent();
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQINPUTMETHODEVENT( 1 ) )
   {
-    QInputMethodEvent_new3();
+    /*
+    QInputMethodEvent( const QInputMethodEvent & other )
+    */
+    auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

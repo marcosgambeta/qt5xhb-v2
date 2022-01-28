@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -92,59 +92,43 @@ RETURN
 #include <QtGui/QImage>
 #include <QtGui/QPainterPath>
 
-/*
-QRawFont()
-*/
-void QRawFont_new1()
-{
-  auto obj = new QRawFont();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-*/
-void QRawFont_new2()
-{
-  auto obj = new QRawFont( PQSTRING( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? static_cast< QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast< QFont::HintingPreference >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-*/
-void QRawFont_new3()
-{
-  auto obj = new QRawFont( *PQBYTEARRAY( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? static_cast< QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast< QFont::HintingPreference >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QRawFont( const QRawFont & other )
-*/
-void QRawFont_new4()
-{
-  auto obj = new QRawFont( *PQRAWFONT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QRawFont_new1();
+    /*
+    QRawFont()
+    */
+    auto obj = new QRawFont();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QRawFont_new2();
+    /*
+    QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+    */
+    auto obj = new QRawFont( PQSTRING( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? static_cast< QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast< QFont::HintingPreference >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QRawFont_new3();
+    /*
+    QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+    */
+    auto obj = new QRawFont( *PQBYTEARRAY( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? static_cast< QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast< QFont::HintingPreference >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRAWFONT( 1 ) )
   {
-    QRawFont_new4();
+    /*
+    QRawFont( const QRawFont & other )
+    */
+    auto obj = new QRawFont( *PQRAWFONT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -350,66 +334,61 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 /*
 QVector<QPointF> advancesForGlyphIndexes( const QVector<quint32> & glyphIndexes ) const
 */
-void QRawFont_advancesForGlyphIndexes1()
+HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
   auto obj = static_cast< QRawFont * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
-    QVector<quint32> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    quint32 temp1;
-    for( auto i1 = 0; i1 < nLen1; i1++ )
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
-      temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
-      par1 << temp1;
-    }
-    QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
-    if( pDynSym )
-    {
-      for( auto i = 0; i < list.count(); i++ )
+#endif
+      QVector<quint32> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      quint32 temp1;
+      for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QPointF * >( new QPointF( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
+        par1 << temp1;
       }
+      QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      if( pDynSym )
+      {
+        for( auto i = 0; i < list.count(); i++ )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( nullptr );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( nullptr );
+          hb_itemPutPtr( pItem, static_cast< QPointF * >( new QPointF( list[ i ] ) ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( nullptr );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+      }
+      hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
-/*
-bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
-*/
-
-HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
-{
-  if( ISNUMPAR( 1 )  && HB_ISARRAY( 1 ) )
-  {
-    QRawFont_advancesForGlyphIndexes1();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+#endif
   }
 }
 
@@ -833,41 +812,33 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool supportsCharacter( uint ucs4 ) const
-*/
-void QRawFont_supportsCharacter1()
-{
-  auto obj = static_cast< QRawFont * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->supportsCharacter( PUINT( 1 ) ) );
-  }
-}
-
-/*
-bool supportsCharacter( QChar character ) const
-*/
-void QRawFont_supportsCharacter2()
-{
-  auto obj = static_cast< QRawFont * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->supportsCharacter( *PQCHAR( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QRawFont_supportsCharacter1();
+    /*
+    bool supportsCharacter( uint ucs4 ) const
+    */
+    auto obj = static_cast< QRawFont * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->supportsCharacter( PUINT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQCHAR( 1 ) )
   {
-    QRawFont_supportsCharacter2();
+    /*
+    bool supportsCharacter( QChar character ) const
+    */
+    auto obj = static_cast< QRawFont * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->supportsCharacter( *PQCHAR( 1 ) ) );
+    }
+
   }
   else
   {

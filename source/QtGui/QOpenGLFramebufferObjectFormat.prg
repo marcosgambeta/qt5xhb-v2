@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,25 @@ RETURN
 #include <QtGui/QOpenGLFramebufferObjectFormat>
 #endif
 
-/*
-QOpenGLFramebufferObjectFormat()
-*/
-void QOpenGLFramebufferObjectFormat_new1()
-{
-  auto obj = new QOpenGLFramebufferObjectFormat();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
-*/
-void QOpenGLFramebufferObjectFormat_new2()
-{
-  auto obj = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOpenGLFramebufferObjectFormat_new1();
+    /*
+    QOpenGLFramebufferObjectFormat()
+    */
+    auto obj = new QOpenGLFramebufferObjectFormat();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT( 1 ) )
   {
-    QOpenGLFramebufferObjectFormat_new2();
+    /*
+    QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
+    */
+    auto obj = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

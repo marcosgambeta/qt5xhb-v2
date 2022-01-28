@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -97,59 +97,43 @@ RETURN
 #include <QtGui/QTextBlock>
 #include <QtGui/QTextCursor>
 
-/*
-QTextLayout()
-*/
-void QTextLayout_new1()
-{
-  auto obj = new QTextLayout();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextLayout( const QString & text )
-*/
-void QTextLayout_new2()
-{
-  auto obj = new QTextLayout( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = nullptr )
-*/
-void QTextLayout_new3()
-{
-  auto obj = new QTextLayout( PQSTRING( 1 ), *PQFONT( 2 ), HB_ISNIL( 3 ) ? nullptr : static_cast< QPaintDevice * >( Qt5xHb::itemGetPtr( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextLayout( const QTextBlock & b )
-*/
-void QTextLayout_new4()
-{
-  auto obj = new QTextLayout( *PQTEXTBLOCK( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextLayout_new1();
+    /*
+    QTextLayout()
+    */
+    auto obj = new QTextLayout();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTextLayout_new2();
+    /*
+    QTextLayout( const QString & text )
+    */
+    auto obj = new QTextLayout( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && ISQFONT( 2 ) && ( HB_ISOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTextLayout_new3();
+    /*
+    QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = nullptr )
+    */
+    auto obj = new QTextLayout( PQSTRING( 1 ), *PQFONT( 2 ), HB_ISNIL( 3 ) ? nullptr : static_cast< QPaintDevice * >( Qt5xHb::itemGetPtr( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
   {
-    QTextLayout_new4();
+    /*
+    QTextLayout( const QTextBlock & b )
+    */
+    auto obj = new QTextLayout( *PQTEXTBLOCK( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -849,45 +833,37 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
   }
 }
 
-/*
-void drawCursor( QPainter * p, const QPointF & pos, int cursorPosition ) const
-*/
-void QTextLayout_drawCursor1()
-{
-  auto obj = static_cast< QTextLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawCursor( PQPAINTER( 1 ), *PQPOINTF( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawCursor( QPainter * p, const QPointF & pos, int cursorPosition, int width ) const
-*/
-void QTextLayout_drawCursor2()
-{
-  auto obj = static_cast< QTextLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawCursor( PQPAINTER( 1 ), *PQPOINTF( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {
   if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) )
   {
-    QTextLayout_drawCursor1();
+    /*
+    void drawCursor( QPainter * p, const QPointF & pos, int cursorPosition ) const
+    */
+    auto obj = static_cast< QTextLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawCursor( PQPAINTER( 1 ), *PQPOINTF( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && ISQPAINTER( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QTextLayout_drawCursor2();
+    /*
+    void drawCursor( QPainter * p, const QPointF & pos, int cursorPosition, int width ) const
+    */
+    auto obj = static_cast< QTextLayout * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawCursor( PQPAINTER( 1 ), *PQPOINTF( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

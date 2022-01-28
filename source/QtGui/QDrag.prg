@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -156,41 +156,33 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
   }
 }
 
-/*
-Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
-*/
-void QDrag_exec1()
-{
-  auto obj = qobject_cast< QDrag * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RENUM( obj->exec( HB_ISNIL( 1 ) ? static_cast< Qt::DropActions >( Qt::MoveAction ) : static_cast< Qt::DropActions >( hb_parni( 1 ) ) ) );
-  }
-}
-
-/*
-Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
-*/
-void QDrag_exec2()
-{
-  auto obj = qobject_cast< QDrag * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RENUM( obj->exec( static_cast<Qt::DropActions>( hb_parni( 1 ) ), static_cast<Qt::DropAction>( hb_parni( 2 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDrag_exec1();
+    /*
+    Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
+    */
+    auto obj = qobject_cast< QDrag * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RENUM( obj->exec( HB_ISNIL( 1 ) ? static_cast< Qt::DropActions >( Qt::MoveAction ) : static_cast< Qt::DropActions >( hb_parni( 1 ) ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDrag_exec2();
+    /*
+    Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
+    */
+    auto obj = qobject_cast< QDrag * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RENUM( obj->exec( static_cast<Qt::DropActions>( hb_parni( 1 ) ), static_cast<Qt::DropAction>( hb_parni( 2 ) ) ) );
+    }
+
   }
   else
   {

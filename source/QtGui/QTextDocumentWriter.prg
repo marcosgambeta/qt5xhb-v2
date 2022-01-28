@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,46 +69,34 @@ RETURN
 
 #include <QtCore/QIODevice>
 
-/*
-QTextDocumentWriter()
-*/
-void QTextDocumentWriter_new1()
-{
-  auto obj = new QTextDocumentWriter();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextDocumentWriter( QIODevice * device, const QByteArray & format )
-*/
-void QTextDocumentWriter_new2()
-{
-  auto obj = new QTextDocumentWriter( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
-void QTextDocumentWriter_new3()
-{
-  auto obj = new QTextDocumentWriter( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextDocumentWriter_new1();
+    /*
+    QTextDocumentWriter()
+    */
+    auto obj = new QTextDocumentWriter();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQIODEVICE( 1 ) && ISQBYTEARRAY( 2 ) )
   {
-    QTextDocumentWriter_new2();
+    /*
+    QTextDocumentWriter( QIODevice * device, const QByteArray & format )
+    */
+    auto obj = new QTextDocumentWriter( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ISOPTQBYTEARRAY( 2 ) )
   {
-    QTextDocumentWriter_new3();
+    /*
+    QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
+    */
+    auto obj = new QTextDocumentWriter( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -285,41 +273,33 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
   }
 }
 
-/*
-bool write( const QTextDocument * document )
-*/
-void QTextDocumentWriter_write1()
-{
-  auto obj = static_cast< QTextDocumentWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->write( PQTEXTDOCUMENT( 1 ) ) );
-  }
-}
-
-/*
-bool write( const QTextDocumentFragment & fragment )
-*/
-void QTextDocumentWriter_write2()
-{
-  auto obj = static_cast< QTextDocumentWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
-    QTextDocumentWriter_write1();
+    /*
+    bool write( const QTextDocument * document )
+    */
+    auto obj = static_cast< QTextDocumentWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->write( PQTEXTDOCUMENT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENTFRAGMENT( 1 ) )
   {
-    QTextDocumentWriter_write2();
+    /*
+    bool write( const QTextDocumentFragment & fragment )
+    */
+    auto obj = static_cast< QTextDocumentWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT( 1 ) ) );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,33 +58,25 @@ RETURN
 #include <QtGui/QDoubleValidator>
 #endif
 
-/*
-QDoubleValidator( QObject * parent = nullptr )
-*/
-void QDoubleValidator_new1()
-{
-  auto obj = new QDoubleValidator( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDoubleValidator( double bottom, double top, int decimals, QObject * parent = nullptr )
-*/
-void QDoubleValidator_new2()
-{
-  auto obj = new QDoubleValidator( PDOUBLE( 1 ), PDOUBLE( 2 ), PINT( 3 ), OPQOBJECT( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDoubleValidator_new1();
+    /*
+    QDoubleValidator( QObject * parent = nullptr )
+    */
+    auto obj = new QDoubleValidator( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDoubleValidator_new2();
+    /*
+    QDoubleValidator( double bottom, double top, int decimals, QObject * parent = nullptr )
+    */
+    auto obj = new QDoubleValidator( PDOUBLE( 1 ), PDOUBLE( 2 ), PINT( 3 ), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

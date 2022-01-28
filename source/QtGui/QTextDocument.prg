@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -143,33 +143,25 @@ RETURN
 #include <QtGui/QTextCursor>
 #include <QtGui/QTextOption>
 
-/*
-QTextDocument( QObject * parent = nullptr )
-*/
-void QTextDocument_new1()
-{
-  auto obj = new QTextDocument( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QTextDocument( const QString & text, QObject * parent = nullptr )
-*/
-void QTextDocument_new2()
-{
-  auto obj = new QTextDocument( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QTextDocument_new1();
+    /*
+    QTextDocument( QObject * parent = nullptr )
+    */
+    auto obj = new QTextDocument( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextDocument_new2();
+    /*
+    QTextDocument( const QString & text, QObject * parent = nullptr )
+    */
+    auto obj = new QTextDocument( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -667,79 +659,63 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
   }
 }
 
-/*
-QTextCursor find( const QString & subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
-*/
-void QTextDocument_find1()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QTextCursor( obj->find( PQSTRING( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
-  }
-}
-
-/*
-QTextCursor find( const QString & subString, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
-*/
-void QTextDocument_find2()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QTextCursor( obj->find( PQSTRING( 1 ), *PQTEXTCURSOR( 2 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
-  }
-}
-
-/*
-QTextCursor find( const QRegExp & expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
-*/
-void QTextDocument_find3()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QTextCursor( obj->find( *PQREGEXP( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
-  }
-}
-
-/*
-QTextCursor find( const QRegExp & expr, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
-*/
-void QTextDocument_find4()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QTextCursor( obj->find( *PQREGEXP( 1 ), *PQTEXTCURSOR( 2 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
   if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTextDocument_find1();
+    /*
+    QTextCursor find( const QString & subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QTextCursor( obj->find( PQSTRING( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+    }
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && ISQTEXTCURSOR( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTextDocument_find2();
+    /*
+    QTextCursor find( const QString & subString, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QTextCursor( obj->find( PQSTRING( 1 ), *PQTEXTCURSOR( 2 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+    }
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQREGEXP( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTextDocument_find3();
+    /*
+    QTextCursor find( const QRegExp & expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QTextCursor( obj->find( *PQREGEXP( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+    }
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQREGEXP( 1 ) && ISQTEXTCURSOR( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTextDocument_find4();
+    /*
+    QTextCursor find( const QRegExp & expr, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QTextCursor( obj->find( *PQREGEXP( 1 ), *PQTEXTCURSOR( 2 ), HB_ISNIL( 3 ) ? static_cast< QTextDocument::FindFlags >( 0 ) : static_cast< QTextDocument::FindFlags >( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+    }
+
   }
   else
   {
@@ -1875,45 +1851,37 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void undo( QTextCursor * cursor )
-*/
-void QTextDocument_undo1()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->undo( PQTEXTCURSOR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void undo()
-*/
-void QTextDocument_undo2()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->undo();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
-    QTextDocument_undo1();
+    /*
+    void undo( QTextCursor * cursor )
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->undo( PQTEXTCURSOR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QTextDocument_undo2();
+    /*
+    void undo()
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->undo();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1921,45 +1889,37 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
   }
 }
 
-/*
-void redo( QTextCursor * cursor )
-*/
-void QTextDocument_redo1()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->redo( PQTEXTCURSOR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void redo()
-*/
-void QTextDocument_redo2()
-{
-  auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->redo();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
-    QTextDocument_redo1();
+    /*
+    void redo( QTextCursor * cursor )
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->redo( PQTEXTCURSOR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QTextDocument_redo2();
+    /*
+    void redo()
+    */
+    auto obj = qobject_cast< QTextDocument * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->redo();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

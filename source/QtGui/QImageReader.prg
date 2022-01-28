@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -102,46 +102,34 @@ RETURN
 
 #include <QtGui/QColor>
 
-/*
-QImageReader()
-*/
-void QImageReader_new1()
-{
-  auto obj = new QImageReader();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
-*/
-void QImageReader_new2()
-{
-  auto obj = new QImageReader( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
-void QImageReader_new3()
-{
-  auto obj = new QImageReader( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QIMAGEREADER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageReader_new1();
+    /*
+    QImageReader()
+    */
+    auto obj = new QImageReader();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ISOPTQBYTEARRAY( 2 ) )
   {
-    QImageReader_new2();
+    /*
+    QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
+    */
+    auto obj = new QImageReader( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ISOPTQBYTEARRAY( 2 ) )
   {
-    QImageReader_new3();
+    /*
+    QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
+    */
+    auto obj = new QImageReader( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -603,42 +591,34 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
   }
 }
 
-/*
-QImage read()
-*/
-void QImageReader_read1()
-{
-  auto obj = static_cast< QImageReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QImage( obj->read() );
-    Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
-  }
-}
-
-/*
-bool read( QImage * image )
-*/
-void QImageReader_read2()
-{
-  auto obj = static_cast< QImageReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->read( PQIMAGE( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QIMAGEREADER_READ )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageReader_read1();
+    /*
+    QImage read()
+    */
+    auto obj = static_cast< QImageReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QImage( obj->read() );
+      Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQIMAGE( 1 ) )
   {
-    QImageReader_read2();
+    /*
+    bool read( QImage * image )
+    */
+    auto obj = static_cast< QImageReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->read( PQIMAGE( 1 ) ) );
+    }
+
   }
   else
   {
@@ -1077,50 +1057,40 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
   }
 }
 
-/*
-QImage::Format imageFormat() const
-*/
-void QImageReader_imageFormat1()
-{
-  auto obj = static_cast< QImageReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RENUM( obj->imageFormat() );
-  }
-}
-
-/*
-static QByteArray imageFormat( const QString & fileName )
-*/
-void QImageReader_imageFormat2()
-{
-  auto ptr = new QByteArray( QImageReader::imageFormat( PQSTRING( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
-/*
-static QByteArray imageFormat( QIODevice * device )
-*/
-void QImageReader_imageFormat3()
-{
-  auto ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
 HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageReader_imageFormat1();
+    /*
+    QImage::Format imageFormat() const
+    */
+    auto obj = static_cast< QImageReader * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RENUM( obj->imageFormat() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QImageReader_imageFormat2();
+    /*
+    static QByteArray imageFormat( const QString & fileName )
+    */
+
+    auto ptr = new QByteArray( QImageReader::imageFormat( PQSTRING( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QImageReader_imageFormat3();
+    /*
+    static QByteArray imageFormat( QIODevice * device )
+    */
+
+    auto ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+
   }
   else
   {

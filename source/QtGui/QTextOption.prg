@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,46 +71,34 @@ RETURN
 
 #include <QtCore/QList>
 
-/*
-QTextOption()
-*/
-void QTextOption_new1()
-{
-  auto obj = new QTextOption();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextOption( Qt::Alignment alignment )
-*/
-void QTextOption_new2()
-{
-  auto obj = new QTextOption( static_cast<Qt::Alignment>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextOption( const QTextOption & o )
-*/
-void QTextOption_new3()
-{
-  auto obj = new QTextOption( *PQTEXTOPTION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextOption_new1();
+    /*
+    QTextOption()
+    */
+    auto obj = new QTextOption();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextOption_new2();
+    /*
+    QTextOption( Qt::Alignment alignment )
+    */
+    auto obj = new QTextOption( static_cast<Qt::Alignment>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTOPTION( 1 ) )
   {
-    QTextOption_new3();
+    /*
+    QTextOption( const QTextOption & o )
+    */
+    auto obj = new QTextOption( *PQTEXTOPTION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

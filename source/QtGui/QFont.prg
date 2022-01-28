@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -117,59 +117,43 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtCore/QVariant>
 
-/*
-QFont()
-*/
-void QFont_new1()
-{
-  auto obj = new QFont();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
-*/
-void QFont_new2()
-{
-  auto obj = new QFont( PQSTRING( 1 ), OPINT( 2, -1 ), OPINT( 3, -1 ), OPBOOL( 4, false ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QFont( const QFont & font, QPaintDevice * pd )
-*/
-void QFont_new3()
-{
-  auto obj = new QFont( *PQFONT( 1 ), PQPAINTDEVICE( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QFont( const QFont & font )
-*/
-void QFont_new4()
-{
-  auto obj = new QFont( *PQFONT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QFONT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QFont_new1();
+    /*
+    QFont()
+    */
+    auto obj = new QFont();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ISOPTLOG( 4 ) )
   {
-    QFont_new2();
+    /*
+    QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
+    */
+    auto obj = new QFont( PQSTRING( 1 ), OPINT( 2, -1 ), OPINT( 3, -1 ), OPBOOL( 4, false ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQFONT( 1 ) && HB_ISOBJECT( 2 ) )
   {
-    QFont_new3();
+    /*
+    QFont( const QFont & font, QPaintDevice * pd )
+    */
+    auto obj = new QFont( *PQFONT( 1 ), PQPAINTDEVICE( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
   {
-    QFont_new4();
+    /*
+    QFont( const QFont & font )
+    */
+    auto obj = new QFont( *PQFONT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

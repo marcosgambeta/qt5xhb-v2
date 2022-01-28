@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -359,45 +359,37 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
   }
 }
 
-/*
-void setManagerProperty( const QString & name, const QString & value )
-*/
-void QSessionManager_setManagerProperty1()
-{
-  auto obj = qobject_cast< QSessionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setManagerProperty( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setManagerProperty( const QString & name, const QStringList & value )
-*/
-void QSessionManager_setManagerProperty2()
-{
-  auto obj = qobject_cast< QSessionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setManagerProperty( PQSTRING( 1 ), PQSTRINGLIST( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QSessionManager_setManagerProperty1();
+    /*
+    void setManagerProperty( const QString & name, const QString & value )
+    */
+    auto obj = qobject_cast< QSessionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setManagerProperty( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QSessionManager_setManagerProperty2();
+    /*
+    void setManagerProperty( const QString & name, const QStringList & value )
+    */
+    auto obj = qobject_cast< QSessionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setManagerProperty( PQSTRING( 1 ), PQSTRINGLIST( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

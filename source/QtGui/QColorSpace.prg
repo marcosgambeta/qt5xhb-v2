@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,97 +70,73 @@ RETURN
 #endif
 #endif
 
-/*
-QColorSpace()
-*/
-void QColorSpace_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QColorSpace( QColorSpace::NamedColorSpace namedColorSpace )
-*/
-void QColorSpace_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( static_cast<QColorSpace::NamedColorSpace>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QColorSpace( QColorSpace::Primaries primaries, QColorSpace::TransferFunction fun, float gamma = 0.0f )
-*/
-void QColorSpace_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ), static_cast<QColorSpace::TransferFunction>( hb_parni( 2 ) ), OPFLOAT( 3, 0.0f ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QColorSpace( QColorSpace::Primaries primaries, float gamma )
-*/
-void QColorSpace_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ), PFLOAT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QColorSpace( const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF & bluePoint, QColorSpace::TransferFunction fun, float gamma = 0.0f )
-*/
-void QColorSpace_new5()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ), static_cast<QColorSpace::TransferFunction>( hb_parni( 5 ) ), OPFLOAT( 6, 0.0f ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QColorSpace( const QColorSpace & colorSpace )
-*/
-void QColorSpace_new6()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QColorSpace( *PQCOLORSPACE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QCOLORSPACE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QColorSpace_new1();
+    /*
+    QColorSpace()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QColorSpace();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QColorSpace_new2();
+    /*
+    QColorSpace( QColorSpace::NamedColorSpace namedColorSpace )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QColorSpace( static_cast<QColorSpace::NamedColorSpace>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) )
   {
-    QColorSpace_new3();
+    /*
+    QColorSpace( QColorSpace::Primaries primaries, QColorSpace::TransferFunction fun, float gamma = 0.0f )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ), static_cast<QColorSpace::TransferFunction>( hb_parni( 2 ) ), OPFLOAT( 3, 0.0f ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QColorSpace_new4();
+    /*
+    QColorSpace( QColorSpace::Primaries primaries, float gamma )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ), PFLOAT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISBETWEEN( 5, 6 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) && ISQPOINTF( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QColorSpace_new5();
+    /*
+    QColorSpace( const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF & bluePoint, QColorSpace::TransferFunction fun, float gamma = 0.0f )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QColorSpace( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ), static_cast<QColorSpace::TransferFunction>( hb_parni( 5 ) ), OPFLOAT( 6, 0.0f ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQCOLORSPACE( 1 ) )
   {
-    QColorSpace_new6();
+    /*
+    QColorSpace( const QColorSpace & colorSpace )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QColorSpace( *PQCOLORSPACE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
@@ -351,49 +327,41 @@ HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
 #endif
 }
 
-/*
-void setPrimaries( QColorSpace::Primaries primariesId )
-*/
-void QColorSpace_setPrimaries1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setPrimaries( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void setPrimaries( const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF & bluePoint )
-*/
-void QColorSpace_setPrimaries2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setPrimaries( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QColorSpace_setPrimaries1();
+    /*
+    void setPrimaries( QColorSpace::Primaries primariesId )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setPrimaries( static_cast<QColorSpace::Primaries>( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else if( ISNUMPAR( 4 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) && ISQPOINTF( 4 ) )
   {
-    QColorSpace_setPrimaries2();
+    /*
+    void setPrimaries( const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF & bluePoint )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = static_cast< QColorSpace * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setPrimaries( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {

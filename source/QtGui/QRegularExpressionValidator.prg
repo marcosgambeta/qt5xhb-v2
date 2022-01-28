@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,37 +57,29 @@ RETURN
 #endif
 #endif
 
-/*
-QRegularExpressionValidator( QObject * parent = nullptr )
-*/
-void QRegularExpressionValidator_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QRegularExpressionValidator( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = nullptr )
-*/
-void QRegularExpressionValidator_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QRegularExpressionValidator_new1();
+    /*
+    QRegularExpressionValidator( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QRegularExpressionValidator( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQREGULAREXPRESSION( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QRegularExpressionValidator_new2();
+    /*
+    QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

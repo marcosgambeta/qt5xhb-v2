@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,46 +70,34 @@ RETURN
 #include <QtGui/QStaticText>
 #endif
 
-/*
-QStaticText()
-*/
-void QStaticText_new1()
-{
-  auto obj = new QStaticText();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStaticText( const QString & text )
-*/
-void QStaticText_new2()
-{
-  auto obj = new QStaticText( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStaticText( const QStaticText & other )
-*/
-void QStaticText_new3()
-{
-  auto obj = new QStaticText( *PQSTATICTEXT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStaticText_new1();
+    /*
+    QStaticText()
+    */
+    auto obj = new QStaticText();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QStaticText_new2();
+    /*
+    QStaticText( const QString & text )
+    */
+    auto obj = new QStaticText( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTATICTEXT( 1 ) )
   {
-    QStaticText_new3();
+    /*
+    QStaticText( const QStaticText & other )
+    */
+    auto obj = new QStaticText( *PQSTATICTEXT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

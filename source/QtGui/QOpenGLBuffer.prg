@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,46 +61,34 @@ RETURN
 #include <QtGui/QOpenGLBuffer>
 #endif
 
-/*
-QOpenGLBuffer()
-*/
-void QOpenGLBuffer_new1()
-{
-  auto obj = new QOpenGLBuffer();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLBuffer( QOpenGLBuffer::Type type )
-*/
-void QOpenGLBuffer_new2()
-{
-  auto obj = new QOpenGLBuffer( static_cast<QOpenGLBuffer::Type>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLBuffer( const QOpenGLBuffer & other )
-*/
-void QOpenGLBuffer_new3()
-{
-  auto obj = new QOpenGLBuffer( *PQOPENGLBUFFER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOpenGLBuffer_new1();
+    /*
+    QOpenGLBuffer()
+    */
+    auto obj = new QOpenGLBuffer();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QOpenGLBuffer_new2();
+    /*
+    QOpenGLBuffer( QOpenGLBuffer::Type type )
+    */
+    auto obj = new QOpenGLBuffer( static_cast<QOpenGLBuffer::Type>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOPENGLBUFFER( 1 ) )
   {
-    QOpenGLBuffer_new3();
+    /*
+    QOpenGLBuffer( const QOpenGLBuffer & other )
+    */
+    auto obj = new QOpenGLBuffer( *PQOPENGLBUFFER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -125,45 +113,37 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void allocate( const void * data, int count )
-*/
-void QOpenGLBuffer_allocate1()
-{
-  auto obj = static_cast< QOpenGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->allocate( static_cast< const void * >( hb_parptr( 1 ) ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void allocate( int count )
-*/
-void QOpenGLBuffer_allocate2()
-{
-  auto obj = static_cast< QOpenGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->allocate( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 {
   if( ISNUMPAR( 2 ) && HB_ISPOINTER( 1 ) && HB_ISNUM( 2 ) )
   {
-    QOpenGLBuffer_allocate1();
+    /*
+    void allocate( const void * data, int count )
+    */
+    auto obj = static_cast< QOpenGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->allocate( static_cast< const void * >( hb_parptr( 1 ) ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QOpenGLBuffer_allocate2();
+    /*
+    void allocate( int count )
+    */
+    auto obj = static_cast< QOpenGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->allocate( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -341,40 +321,33 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
   }
 }
 
-/*
-void release()
-*/
-void QOpenGLBuffer_release1()
-{
-  auto obj = static_cast< QOpenGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->release();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void release( QOpenGLBuffer::Type type )
-*/
-void QOpenGLBuffer_release2()
-{
-  QOpenGLBuffer::release( static_cast<QOpenGLBuffer::Type>( hb_parni( 1 ) ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOpenGLBuffer_release1();
+    /*
+    void release()
+    */
+    auto obj = static_cast< QOpenGLBuffer * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->release();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QOpenGLBuffer_release2();
+    /*
+    static void release( QOpenGLBuffer::Type type )
+    */
+
+    QOpenGLBuffer::release( static_cast<QOpenGLBuffer::Type>( hb_parni( 1 ) ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

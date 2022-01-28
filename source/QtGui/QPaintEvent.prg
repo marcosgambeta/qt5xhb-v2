@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,33 +50,25 @@ RETURN
 #include <QtGui/QPaintEvent>
 #endif
 
-/*
-QPaintEvent( const QRegion & paintRegion )
-*/
-void QPaintEvent_new1()
-{
-  auto obj = new QPaintEvent( *PQREGION( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QPaintEvent( const QRect & paintRect )
-*/
-void QPaintEvent_new2()
-{
-  auto obj = new QPaintEvent( *PQRECT( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QPaintEvent_new1();
+    /*
+    QPaintEvent( const QRegion & paintRegion )
+    */
+    auto obj = new QPaintEvent( *PQREGION( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPaintEvent_new2();
+    /*
+    QPaintEvent( const QRect & paintRect )
+    */
+    auto obj = new QPaintEvent( *PQRECT( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

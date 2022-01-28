@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,33 +72,25 @@ RETURN
 #include <QtGui/QOpenGLPixelTransferOptions>
 #endif
 
-/*
-QOpenGLPixelTransferOptions()
-*/
-void QOpenGLPixelTransferOptions_new1()
-{
-  auto obj = new QOpenGLPixelTransferOptions();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
-*/
-void QOpenGLPixelTransferOptions_new2()
-{
-  auto obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QOpenGLPixelTransferOptions_new1();
+    /*
+    QOpenGLPixelTransferOptions()
+    */
+    auto obj = new QOpenGLPixelTransferOptions();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOPENGLPIXELTRANSFEROPTIONS( 1 ) )
   {
-    QOpenGLPixelTransferOptions_new2();
+    /*
+    QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
+    */
+    auto obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

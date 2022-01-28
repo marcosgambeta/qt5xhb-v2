@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,12 +26,8 @@ CLASS QPaintEngine
    METHOD begin
    METHOD drawEllipse
    METHOD drawImage
-   METHOD drawLines
    METHOD drawPath
    METHOD drawPixmap
-   METHOD drawPoints
-   METHOD drawPolygon
-   METHOD drawRects
    METHOD drawTextItem
    METHOD drawTiledPixmap
    METHOD end
@@ -116,45 +112,37 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
   }
 }
 
-/*
-virtual void drawEllipse( const QRectF & rect )
-*/
-void QPaintEngine_drawEllipse1()
-{
-  auto obj = static_cast< QPaintEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawEllipse( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void drawEllipse( const QRect & rect )
-*/
-void QPaintEngine_drawEllipse2()
-{
-  auto obj = static_cast< QPaintEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->drawEllipse( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPaintEngine_drawEllipse1();
+    /*
+    virtual void drawEllipse( const QRectF & rect )
+    */
+    auto obj = static_cast< QPaintEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawEllipse( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPaintEngine_drawEllipse2();
+    /*
+    virtual void drawEllipse( const QRect & rect )
+    */
+    auto obj = static_cast< QPaintEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->drawEllipse( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -186,15 +174,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]virtual void drawLines ( const QLineF * lines, int lineCount )
-[2]virtual void drawLines ( const QLine * lines, int lineCount )
-*/
-
-HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
-{
 }
 
 /*
@@ -247,33 +226,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-[1]virtual void drawPoints ( const QPointF * points, int pointCount )
-[2]virtual void drawPoints ( const QPoint * points, int pointCount )
-*/
-
-HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
-{
-}
-
-/*
-[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
-[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
-*/
-
-HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
-{
-}
-
-/*
-[1]virtual void drawRects ( const QRectF * rects, int rectCount )
-[2]virtual void drawRects ( const QRect * rects, int rectCount )
-*/
-
-HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
-{
 }
 
 /*

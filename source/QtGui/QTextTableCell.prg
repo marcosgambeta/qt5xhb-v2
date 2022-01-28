@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,33 +71,25 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-/*
-QTextTableCell()
-*/
-void QTextTableCell_new1()
-{
-  auto obj = new QTextTableCell();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextTableCell( const QTextTableCell & o )
-*/
-void QTextTableCell_new2()
-{
-  auto obj = new QTextTableCell( *PQTEXTTABLECELL( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextTableCell_new1();
+    /*
+    QTextTableCell()
+    */
+    auto obj = new QTextTableCell();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTTABLECELL( 1 ) )
   {
-    QTextTableCell_new2();
+    /*
+    QTextTableCell( const QTextTableCell & o )
+    */
+    auto obj = new QTextTableCell( *PQTEXTTABLECELL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

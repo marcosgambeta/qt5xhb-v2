@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -356,41 +356,33 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
   }
 }
 
-/*
-QString styleString( const QFont & font )
-*/
-void QFontDatabase_styleString1()
-{
-  auto obj = static_cast< QFontDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRING( obj->styleString( *PQFONT( 1 ) ) );
-  }
-}
-
-/*
-QString styleString( const QFontInfo & fontInfo )
-*/
-void QFontDatabase_styleString2()
-{
-  auto obj = static_cast< QFontDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRING( obj->styleString( *PQFONTINFO( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
   if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
   {
-    QFontDatabase_styleString1();
+    /*
+    QString styleString( const QFont & font )
+    */
+    auto obj = static_cast< QFontDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRING( obj->styleString( *PQFONT( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQFONTINFO( 1 ) )
   {
-    QFontDatabase_styleString2();
+    /*
+    QString styleString( const QFontInfo & fontInfo )
+    */
+    auto obj = static_cast< QFontDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRING( obj->styleString( *PQFONTINFO( 1 ) ) );
+    }
+
   }
   else
   {

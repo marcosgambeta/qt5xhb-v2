@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -453,43 +453,35 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
   }
 }
 
-/*
-qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
-*/
-void QTextLine_cursorToX1()
-{
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    int par1;
-    RQREAL( obj->cursorToX( &par1, HB_ISNIL( 2 ) ? static_cast< QTextLine::Edge >( QTextLine::Leading ) : static_cast< QTextLine::Edge >( hb_parni( 2 ) ) ) );
-    hb_storni( par1, 1 );
-  }
-}
-
-/*
-qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
-*/
-void QTextLine_cursorToX2()
-{
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQREAL( obj->cursorToX( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QTextLine::Edge >( QTextLine::Leading ) : static_cast< QTextLine::Edge >( hb_parni( 2 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextLine_cursorToX1();
+    /*
+    qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
+    */
+    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      int par1;
+      RQREAL( obj->cursorToX( &par1, HB_ISNIL( 2 ) ? static_cast< QTextLine::Edge >( QTextLine::Leading ) : static_cast< QTextLine::Edge >( hb_parni( 2 ) ) ) );
+      hb_storni( par1, 1 );
+    }
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextLine_cursorToX2();
+    /*
+    qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
+    */
+    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQREAL( obj->cursorToX( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QTextLine::Edge >( QTextLine::Leading ) : static_cast< QTextLine::Edge >( hb_parni( 2 ) ) ) );
+    }
+
   }
   else
   {
@@ -547,45 +539,37 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setNumColumns( int columns )
-*/
-void QTextLine_setNumColumns1()
-{
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setNumColumns( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setNumColumns( int columns, qreal alignmentWidth )
-*/
-void QTextLine_setNumColumns2()
-{
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setNumColumns( PINT( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextLine_setNumColumns1();
+    /*
+    void setNumColumns( int columns )
+    */
+    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setNumColumns( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextLine_setNumColumns2();
+    /*
+    void setNumColumns( int columns, qreal alignmentWidth )
+    */
+    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setNumColumns( PINT( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

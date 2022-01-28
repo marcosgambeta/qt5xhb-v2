@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -94,46 +94,34 @@ RETURN
 #include <QtGui/QColor>
 #include <QtGui/QPixmap>
 
-/*
-QMovie( QObject * parent = nullptr )
-*/
-void QMovie_new1()
-{
-  auto obj = new QMovie( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
-*/
-void QMovie_new2()
-{
-  auto obj = new QMovie( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
-*/
-void QMovie_new3()
-{
-  auto obj = new QMovie( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QMovie_new1();
+    /*
+    QMovie( QObject * parent = nullptr )
+    */
+    auto obj = new QMovie( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 3 ) && ISQIODEVICE( 1 ) && ISOPTQBYTEARRAY( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QMovie_new2();
+    /*
+    QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
+    */
+    auto obj = new QMovie( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ISOPTQBYTEARRAY( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QMovie_new3();
+    /*
+    QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = nullptr )
+    */
+    auto obj = new QMovie( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -732,7 +720,7 @@ HB_FUNC_STATIC( QMOVIE_STATE )
 }
 
 /*
-bool jumpToNextFrame() 
+bool jumpToNextFrame()
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {
@@ -756,7 +744,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 }
 
 /*
-void setPaused( bool paused ) 
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
@@ -782,7 +770,7 @@ HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 }
 
 /*
-void setSpeed( int percentSpeed ) 
+void setSpeed( int percentSpeed )
 */
 HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {
@@ -808,7 +796,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
 }
 
 /*
-void start() 
+void start()
 */
 HB_FUNC_STATIC( QMOVIE_START )
 {
@@ -834,7 +822,7 @@ HB_FUNC_STATIC( QMOVIE_START )
 }
 
 /*
-void stop() 
+void stop()
 */
 HB_FUNC_STATIC( QMOVIE_STOP )
 {

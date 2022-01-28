@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -100,46 +100,34 @@ RETURN
 #include <QtGui/QPainterPath>
 #endif
 
-/*
-QPainterPath()
-*/
-void QPainterPath_new1()
-{
-  auto obj = new QPainterPath();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPainterPath( const QPointF & startPoint )
-*/
-void QPainterPath_new2()
-{
-  auto obj = new QPainterPath( *PQPOINTF( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPainterPath( const QPainterPath & path )
-*/
-void QPainterPath_new3()
-{
-  auto obj = new QPainterPath( *PQPAINTERPATH( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPainterPath_new1();
+    /*
+    QPainterPath()
+    */
+    auto obj = new QPainterPath();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainterPath_new2();
+    /*
+    QPainterPath( const QPointF & startPoint )
+    */
+    auto obj = new QPainterPath( *PQPOINTF( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
   {
-    QPainterPath_new3();
+    /*
+    QPainterPath( const QPainterPath & path )
+    */
+    auto obj = new QPainterPath( *PQPAINTERPATH( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -167,64 +155,52 @@ HB_FUNC_STATIC( QPAINTERPATH_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addEllipse( const QRectF & boundingRectangle )
-*/
-void QPainterPath_addEllipse1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addEllipse( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addEllipse( qreal x, qreal y, qreal width, qreal height )
-*/
-void QPainterPath_addEllipse2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addEllipse( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addEllipse( const QPointF & center, qreal rx, qreal ry )
-*/
-void QPainterPath_addEllipse3()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addEllipse( *PQPOINTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainterPath_addEllipse1();
+    /*
+    void addEllipse( const QRectF & boundingRectangle )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addEllipse( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainterPath_addEllipse2();
+    /*
+    void addEllipse( qreal x, qreal y, qreal width, qreal height )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addEllipse( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainterPath_addEllipse3();
+    /*
+    void addEllipse( const QPointF & center, qreal rx, qreal ry )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addEllipse( *PQPOINTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -284,45 +260,37 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDPOLYGON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addRect( const QRectF & rectangle )
-*/
-void QPainterPath_addRect1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRect( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRect( qreal x, qreal y, qreal width, qreal height )
-*/
-void QPainterPath_addRect2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainterPath_addRect1();
+    /*
+    void addRect( const QRectF & rectangle )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRect( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainterPath_addRect2();
+    /*
+    void addRect( qreal x, qreal y, qreal width, qreal height )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -356,45 +324,37 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDREGION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addRoundedRect( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
-void QPainterPath_addRoundedRect1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRoundedRect( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? static_cast< Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast< Qt::SizeMode >( hb_parni( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addRoundedRect( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
-void QPainterPath_addRoundedRect2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addRoundedRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ), HB_ISNIL( 7 ) ? static_cast< Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast< Qt::SizeMode >( hb_parni( 7 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
 {
   if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainterPath_addRoundedRect1();
+    /*
+    void addRoundedRect( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRoundedRect( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? static_cast< Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast< Qt::SizeMode >( hb_parni( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 6, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) )
   {
-    QPainterPath_addRoundedRect2();
+    /*
+    void addRoundedRect( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addRoundedRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ), HB_ISNIL( 7 ) ? static_cast< Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast< Qt::SizeMode >( hb_parni( 7 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -402,45 +362,37 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
   }
 }
 
-/*
-void addText( const QPointF & point, const QFont & font, const QString & text )
-*/
-void QPainterPath_addText1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addText( *PQPOINTF( 1 ), *PQFONT( 2 ), PQSTRING( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addText( qreal x, qreal y, const QFont & font, const QString & text )
-*/
-void QPainterPath_addText2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addText( PQREAL( 1 ), PQREAL( 2 ), *PQFONT( 3 ), PQSTRING( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
 {
   if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISQFONT( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QPainterPath_addText1();
+    /*
+    void addText( const QPointF & point, const QFont & font, const QString & text )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addText( *PQPOINTF( 1 ), *PQFONT( 2 ), PQSTRING( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQFONT( 3 ) && HB_ISCHAR( 4 ) )
   {
-    QPainterPath_addText2();
+    /*
+    void addText( qreal x, qreal y, const QFont & font, const QString & text )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addText( PQREAL( 1 ), PQREAL( 2 ), *PQFONT( 3 ), PQSTRING( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -472,45 +424,37 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
   }
 }
 
-/*
-void arcMoveTo( const QRectF & rectangle, qreal angle )
-*/
-void QPainterPath_arcMoveTo1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->arcMoveTo( *PQRECTF( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void arcMoveTo( qreal x, qreal y, qreal width, qreal height, qreal angle )
-*/
-void QPainterPath_arcMoveTo2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->arcMoveTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
 {
   if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainterPath_arcMoveTo1();
+    /*
+    void arcMoveTo( const QRectF & rectangle, qreal angle )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->arcMoveTo( *PQRECTF( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
-    QPainterPath_arcMoveTo2();
+    /*
+    void arcMoveTo( qreal x, qreal y, qreal width, qreal height, qreal angle )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->arcMoveTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -518,45 +462,37 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
   }
 }
 
-/*
-void arcTo( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
-*/
-void QPainterPath_arcTo1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->arcTo( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void arcTo( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
-*/
-void QPainterPath_arcTo2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->arcTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainterPath_arcTo1();
+    /*
+    void arcTo( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->arcTo( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QPainterPath_arcTo2();
+    /*
+    void arcTo( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->arcTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -641,58 +577,46 @@ HB_FUNC_STATIC( QPAINTERPATH_CONNECTPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool contains( const QPointF & point ) const
-*/
-void QPainterPath_contains1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
-  }
-}
-
-/*
-bool contains( const QRectF & rectangle ) const
-*/
-void QPainterPath_contains2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( *PQRECTF( 1 ) ) );
-  }
-}
-
-/*
-bool contains( const QPainterPath & p ) const
-*/
-void QPainterPath_contains3()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( *PQPAINTERPATH( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainterPath_contains1();
+    /*
+    bool contains( const QPointF & point ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainterPath_contains2();
+    /*
+    bool contains( const QRectF & rectangle ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( *PQRECTF( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
   {
-    QPainterPath_contains3();
+    /*
+    bool contains( const QPainterPath & p ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( *PQPAINTERPATH( 1 ) ) );
+    }
+
   }
   else
   {
@@ -725,45 +649,37 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
   }
 }
 
-/*
-void cubicTo( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
-*/
-void QPainterPath_cubicTo1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->cubicTo( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void cubicTo( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
-*/
-void QPainterPath_cubicTo2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->cubicTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
 {
   if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) )
   {
-    QPainterPath_cubicTo1();
+    /*
+    void cubicTo( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->cubicTo( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QPainterPath_cubicTo2();
+    /*
+    void cubicTo( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->cubicTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -869,41 +785,33 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
   }
 }
 
-/*
-bool intersects( const QRectF & rectangle ) const
-*/
-void QPainterPath_intersects1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->intersects( *PQRECTF( 1 ) ) );
-  }
-}
-
-/*
-bool intersects( const QPainterPath & p ) const
-*/
-void QPainterPath_intersects2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->intersects( *PQPAINTERPATH( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainterPath_intersects1();
+    /*
+    bool intersects( const QRectF & rectangle ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->intersects( *PQRECTF( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
   {
-    QPainterPath_intersects2();
+    /*
+    bool intersects( const QPainterPath & p ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->intersects( *PQPAINTERPATH( 1 ) ) );
+    }
+
   }
   else
   {
@@ -959,45 +867,37 @@ HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
   }
 }
 
-/*
-void lineTo( const QPointF & endPoint )
-*/
-void QPainterPath_lineTo1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->lineTo( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void lineTo( qreal x, qreal y )
-*/
-void QPainterPath_lineTo2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->lineTo( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_LINETO )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainterPath_lineTo1();
+    /*
+    void lineTo( const QPointF & endPoint )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->lineTo( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainterPath_lineTo2();
+    /*
+    void lineTo( qreal x, qreal y )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->lineTo( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1005,45 +905,37 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO )
   }
 }
 
-/*
-void moveTo( const QPointF & point )
-*/
-void QPainterPath_moveTo1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->moveTo( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void moveTo( qreal x, qreal y )
-*/
-void QPainterPath_moveTo2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->moveTo( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainterPath_moveTo1();
+    /*
+    void moveTo( const QPointF & point )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->moveTo( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainterPath_moveTo2();
+    /*
+    void moveTo( qreal x, qreal y )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->moveTo( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1100,45 +992,37 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
   }
 }
 
-/*
-void quadTo( const QPointF & c, const QPointF & endPoint )
-*/
-void QPainterPath_quadTo1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->quadTo( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void quadTo( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
-*/
-void QPainterPath_quadTo2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->quadTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
 {
   if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) )
   {
-    QPainterPath_quadTo1();
+    /*
+    void quadTo( const QPointF & c, const QPointF & endPoint )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->quadTo( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainterPath_quadTo2();
+    /*
+    void quadTo( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->quadTo( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1298,43 +1182,35 @@ HB_FUNC_STATIC( QPAINTERPATH_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QPolygonF toFillPolygon( const QTransform & matrix ) const
-*/
-void QPainterPath_toFillPolygon1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPolygonF( obj->toFillPolygon( *PQTRANSFORM( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
-  }
-}
-
-/*
-QPolygonF toFillPolygon( const QMatrix & matrix = QMatrix() ) const
-*/
-void QPainterPath_toFillPolygon2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPolygonF( obj->toFillPolygon( HB_ISNIL( 1 ) ? QMatrix() : *static_cast< QMatrix * >( Qt5xHb::itemGetPtr( 1 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
-  }
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
 {
   if( ISNUMPAR( 1 ) && ISQTRANSFORM( 1 ) )
   {
-    QPainterPath_toFillPolygon1();
+    /*
+    QPolygonF toFillPolygon( const QTransform & matrix ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPolygonF( obj->toFillPolygon( *PQTRANSFORM( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
+    }
+
   }
   else if( ISBETWEEN( 0, 1 ) && ISQMATRIX( 1 ) )
   {
-    QPainterPath_toFillPolygon2();
+    /*
+    QPolygonF toFillPolygon( const QMatrix & matrix = QMatrix() ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPolygonF( obj->toFillPolygon( HB_ISNIL( 1 ) ? QMatrix() : *static_cast< QMatrix * >( Qt5xHb::itemGetPtr( 1 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
+    }
+
   }
   else
   {
@@ -1367,45 +1243,37 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
   }
 }
 
-/*
-void translate( qreal dx, qreal dy )
-*/
-void QPainterPath_translate1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void translate( const QPointF & offset )
-*/
-void QPainterPath_translate2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->translate( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainterPath_translate1();
+    /*
+    void translate( qreal dx, qreal dy )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainterPath_translate2();
+    /*
+    void translate( const QPointF & offset )
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->translate( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1413,43 +1281,35 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
   }
 }
 
-/*
-QPainterPath translated( qreal dx, qreal dy ) const
-*/
-void QPainterPath_translated1()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPainterPath( obj->translated( PQREAL( 1 ), PQREAL( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
-  }
-}
-
-/*
-QPainterPath translated( const QPointF & offset ) const
-*/
-void QPainterPath_translated2()
-{
-  auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPainterPath( obj->translated( *PQPOINTF( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
-  }
-}
-
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainterPath_translated1();
+    /*
+    QPainterPath translated( qreal dx, qreal dy ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPainterPath( obj->translated( PQREAL( 1 ), PQREAL( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainterPath_translated2();
+    /*
+    QPainterPath translated( const QPointF & offset ) const
+    */
+    auto obj = static_cast< QPainterPath * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPainterPath( obj->translated( *PQPOINTF( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,85 +78,61 @@ RETURN
 #include <QtGui/QVector3D>
 #include <QtGui/QVector4D>
 
-/*
-QVector2D()
-*/
-void QVector2D_new1()
-{
-  auto obj = new QVector2D();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVector2D( float xpos, float ypos )
-*/
-void QVector2D_new2()
-{
-  auto obj = new QVector2D( PFLOAT( 1 ), PFLOAT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVector2D( const QPoint & point )
-*/
-void QVector2D_new3()
-{
-  auto obj = new QVector2D( *PQPOINT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVector2D( const QPointF & point )
-*/
-void QVector2D_new4()
-{
-  auto obj = new QVector2D( *PQPOINTF( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVector2D( const QVector3D & vector )
-*/
-void QVector2D_new5()
-{
-  auto obj = new QVector2D( *PQVECTOR3D( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QVector2D( const QVector4D & vector )
-*/
-void QVector2D_new6()
-{
-  auto obj = new QVector2D( *PQVECTOR4D( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QVECTOR2D_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QVector2D_new1();
+    /*
+    QVector2D()
+    */
+    auto obj = new QVector2D();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QVector2D_new2();
+    /*
+    QVector2D( float xpos, float ypos )
+    */
+    auto obj = new QVector2D( PFLOAT( 1 ), PFLOAT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QVector2D_new3();
+    /*
+    QVector2D( const QPoint & point )
+    */
+    auto obj = new QVector2D( *PQPOINT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QVector2D_new4();
+    /*
+    QVector2D( const QPointF & point )
+    */
+    auto obj = new QVector2D( *PQPOINTF( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
   {
-    QVector2D_new5();
+    /*
+    QVector2D( const QVector3D & vector )
+    */
+    auto obj = new QVector2D( *PQVECTOR3D( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQVECTOR4D( 1 ) )
   {
-    QVector2D_new6();
+    /*
+    QVector2D( const QVector4D & vector )
+    */
+    auto obj = new QVector2D( *PQVECTOR4D( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

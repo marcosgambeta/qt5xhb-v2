@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,72 +78,52 @@ RETURN
 #include <QtGui/QPen>
 #endif
 
-/*
-QPen()
-*/
-void QPen_new1()
-{
-  auto obj = new QPen();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPen( Qt::PenStyle style )
-*/
-void QPen_new2()
-{
-  auto obj = new QPen( static_cast<Qt::PenStyle>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPen( const QColor & color )
-*/
-void QPen_new3()
-{
-  auto obj = new QPen( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
-*/
-void QPen_new4()
-{
-  auto obj = new QPen( *PQBRUSH( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::PenStyle >( Qt::SolidLine ) : static_cast< Qt::PenStyle >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< Qt::PenCapStyle >( Qt::SquareCap ) : static_cast< Qt::PenCapStyle >( hb_parni( 4 ) ), HB_ISNIL( 5 ) ? static_cast< Qt::PenJoinStyle >( Qt::BevelJoin ) : static_cast< Qt::PenJoinStyle >( hb_parni( 5 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPen( const QPen & pen )
-*/
-void QPen_new5()
-{
-  auto obj = new QPen( *PQPEN( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPEN_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPen_new1();
+    /*
+    QPen()
+    */
+    auto obj = new QPen();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPen_new2();
+    /*
+    QPen( Qt::PenStyle style )
+    */
+    auto obj = new QPen( static_cast<Qt::PenStyle>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 )|| HB_ISCHAR( 1 ) ) )
   {
-    QPen_new3();
+    /*
+    QPen( const QColor & color )
+    */
+    auto obj = new QPen( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt5xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 5 ) && ISQBRUSH( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QPen_new4();
+    /*
+    QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
+    */
+    auto obj = new QPen( *PQBRUSH( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::PenStyle >( Qt::SolidLine ) : static_cast< Qt::PenStyle >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< Qt::PenCapStyle >( Qt::SquareCap ) : static_cast< Qt::PenCapStyle >( hb_parni( 4 ) ), HB_ISNIL( 5 ) ? static_cast< Qt::PenJoinStyle >( Qt::BevelJoin ) : static_cast< Qt::PenJoinStyle >( hb_parni( 5 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
   {
-    QPen_new5();
+    /*
+    QPen( const QPen & pen )
+    */
+    auto obj = new QPen( *PQPEN( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

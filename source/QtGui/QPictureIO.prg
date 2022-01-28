@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -81,46 +81,34 @@ RETURN
 #include <QtGui/QPictureIO>
 #endif
 
-/*
-QPictureIO()
-*/
-void QPictureIO_new1()
-{
-  auto obj = new QPictureIO();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPictureIO( QIODevice * ioDevice, const char * format )
-*/
-void QPictureIO_new2()
-{
-  auto obj = new QPictureIO( PQIODEVICE( 1 ), PCONSTCHAR( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPictureIO( const QString & fileName, const char * format )
-*/
-void QPictureIO_new3()
-{
-  auto obj = new QPictureIO( PQSTRING( 1 ), PCONSTCHAR( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPICTUREIO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPictureIO_new1();
+    /*
+    QPictureIO()
+    */
+    auto obj = new QPictureIO();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQIODEVICE( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QPictureIO_new2();
+    /*
+    QPictureIO( QIODevice * ioDevice, const char * format )
+    */
+    auto obj = new QPictureIO( PQIODEVICE( 1 ), PCONSTCHAR( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QPictureIO_new3();
+    /*
+    QPictureIO( const QString & fileName, const char * format )
+    */
+    auto obj = new QPictureIO( PQSTRING( 1 ), PCONSTCHAR( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -645,33 +633,27 @@ HB_FUNC_STATIC( QPICTUREIO_WRITE )
   }
 }
 
-/*
-static QByteArray pictureFormat( const QString & fileName )
-*/
-void QPictureIO_pictureFormat1()
-{
-  auto ptr = new QByteArray( QPictureIO::pictureFormat( PQSTRING( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
-/*
-static QByteArray pictureFormat( QIODevice * )
-*/
-void QPictureIO_pictureFormat2()
-{
-  auto ptr = new QByteArray( QPictureIO::pictureFormat( PQIODEVICE( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
 HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QPictureIO_pictureFormat1();
+    /*
+    static QByteArray pictureFormat( const QString & fileName )
+    */
+
+    auto ptr = new QByteArray( QPictureIO::pictureFormat( PQSTRING( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QPictureIO_pictureFormat2();
+    /*
+    static QByteArray pictureFormat( QIODevice * )
+    */
+
+    auto ptr = new QByteArray( QPictureIO::pictureFormat( PQIODEVICE( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+
   }
   else
   {

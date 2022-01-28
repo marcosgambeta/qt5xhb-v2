@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,25 @@ RETURN
 #include <QtGui/QTextFragment>
 #endif
 
-/*
-QTextFragment()
-*/
-void QTextFragment_new2()
-{
-  auto obj = new QTextFragment();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextFragment( const QTextFragment & o )
-*/
-void QTextFragment_new3()
-{
-  auto obj = new QTextFragment( *PQTEXTFRAGMENT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextFragment_new2();
+    /*
+    QTextFragment()
+    */
+    auto obj = new QTextFragment();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTFRAGMENT( 1 ) )
   {
-    QTextFragment_new3();
+    /*
+    QTextFragment( const QTextFragment & o )
+    */
+    auto obj = new QTextFragment( *PQTEXTFRAGMENT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

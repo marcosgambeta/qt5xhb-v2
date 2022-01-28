@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -106,33 +106,25 @@ RETURN
 
 #include <QtCore/QMimeData>
 
-/*
-QStandardItemModel( QObject * parent = nullptr )
-*/
-void QStandardItemModel_new1()
-{
-  auto obj = new QStandardItemModel( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QStandardItemModel( int rows, int columns, QObject * parent = nullptr )
-*/
-void QStandardItemModel_new2()
-{
-  auto obj = new QStandardItemModel( PINT( 1 ), PINT( 2 ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QStandardItemModel_new1();
+    /*
+    QStandardItemModel( QObject * parent = nullptr )
+    */
+    auto obj = new QStandardItemModel( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QStandardItemModel_new2();
+    /*
+    QStandardItemModel( int rows, int columns, QObject * parent = nullptr )
+    */
+    auto obj = new QStandardItemModel( PINT( 1 ), PINT( 2 ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -192,52 +184,44 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void appendRow( const QList<QStandardItem *> & items )
-*/
-void QStandardItemModel_appendRow1()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QStandardItem *> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    for( auto i1 = 0; i1 < nLen1; i1++ )
-    {
-      par1 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-    }
-    obj->appendRow( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void appendRow( QStandardItem * item )
-*/
-void QStandardItemModel_appendRow2()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->appendRow( PQSTANDARDITEM( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QStandardItemModel_appendRow1();
+    /*
+    void appendRow( const QList<QStandardItem *> & items )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QStandardItem *> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( auto i1 = 0; i1 < nLen1; i1++ )
+      {
+        par1 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      }
+      obj->appendRow( par1 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTANDARDITEM( 1 ) )
   {
-    QStandardItemModel_appendRow2();
+    /*
+    void appendRow( QStandardItem * item )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->appendRow( PQSTANDARDITEM( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -369,50 +353,42 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEXFROMITEM )
   }
 }
 
-/*
-void insertColumn( int column, const QList<QStandardItem *> & items )
-*/
-void QStandardItemModel_insertColumn1()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QStandardItem *> par2;
-    PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
-    int nLen2 = hb_arrayLen( aList2 );
-    for( auto i2 = 0; i2 < nLen2; i2++ )
-    {
-      par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
-    }
-    obj->insertColumn( PINT( 1 ), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
-*/
-void QStandardItemModel_insertColumn2()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->insertColumn( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QStandardItemModel_insertColumn1();
+    /*
+    void insertColumn( int column, const QList<QStandardItem *> & items )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QStandardItem *> par2;
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
+      for( auto i2 = 0; i2 < nLen2; i2++ )
+      {
+        par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+      }
+      obj->insertColumn( PINT( 1 ), par2 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQMODELINDEX( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QStandardItemModel_insertColumn2();
+    /*
+    bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->insertColumn( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
+    }
+
   }
   else
   {
@@ -420,69 +396,57 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
   }
 }
 
-/*
-void insertRow( int row, const QList<QStandardItem *> & items )
-*/
-void QStandardItemModel_insertRow1()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QStandardItem *> par2;
-    PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
-    int nLen2 = hb_arrayLen( aList2 );
-    for( auto i2 = 0; i2 < nLen2; i2++ )
-    {
-      par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
-    }
-    obj->insertRow( PINT( 1 ), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void insertRow( int row, QStandardItem * item )
-*/
-void QStandardItemModel_insertRow2()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->insertRow( PINT( 1 ), PQSTANDARDITEM( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
-*/
-void QStandardItemModel_insertRow3()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->insertRow( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QStandardItemModel_insertRow1();
+    /*
+    void insertRow( int row, const QList<QStandardItem *> & items )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QStandardItem *> par2;
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
+      for( auto i2 = 0; i2 < nLen2; i2++ )
+      {
+        par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+      }
+      obj->insertRow( PINT( 1 ), par2 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSTANDARDITEM( 2 ) )
   {
-    QStandardItemModel_insertRow2();
+    /*
+    void insertRow( int row, QStandardItem * item )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->insertRow( PINT( 1 ), PQSTANDARDITEM( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQMODELINDEX( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QStandardItemModel_insertRow3();
+    /*
+    bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->insertRow( PINT( 1 ), HB_ISNIL( 2 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
+    }
+
   }
   else
   {
@@ -615,43 +579,35 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEX )
   }
 }
 
-/*
-QModelIndex parent( const QModelIndex & child ) const
-*/
-void QStandardItemModel_parent1()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
-  }
-}
-
-/*
-QObject * parent() const
-*/
-void QStandardItemModel_parent2()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QObject * ptr = obj->parent();
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
 {
   if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QStandardItemModel_parent1();
+    /*
+    QModelIndex parent( const QModelIndex & child ) const
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
+    }
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QStandardItemModel_parent2();
+    /*
+    QObject * parent() const
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QObject * ptr = obj->parent();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
+
   }
   else
   {
@@ -1024,45 +980,37 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setItem( int row, int column, QStandardItem * item )
-*/
-void QStandardItemModel_setItem1()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setItem( PINT( 1 ), PINT( 2 ), PQSTANDARDITEM( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setItem( int row, QStandardItem * item )
-*/
-void QStandardItemModel_setItem2()
-{
-  auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setItem( PINT( 1 ), PQSTANDARDITEM( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQSTANDARDITEM( 3 ) )
   {
-    QStandardItemModel_setItem1();
+    /*
+    void setItem( int row, int column, QStandardItem * item )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setItem( PINT( 1 ), PINT( 2 ), PQSTANDARDITEM( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSTANDARDITEM( 2 ) )
   {
-    QStandardItemModel_setItem2();
+    /*
+    void setItem( int row, QStandardItem * item )
+    */
+    auto obj = qobject_cast< QStandardItemModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setItem( PINT( 1 ), PQSTANDARDITEM( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

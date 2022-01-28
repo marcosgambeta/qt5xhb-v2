@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -279,45 +279,37 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 #endif
 }
 
-/*
-bool setPageMargins( const QMarginsF & margins )
-*/
-void QPagedPaintDevice_setPageMargins1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = static_cast< QPagedPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setPageMargins( *PQMARGINSF( 1 ) ) );
-  }
-#endif
-}
-
-/*
-bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
-*/
-void QPagedPaintDevice_setPageMargins2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = static_cast< QPagedPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->setPageMargins( *PQMARGINSF( 1 ), static_cast<QPageLayout::Unit>( hb_parni( 2 ) ) ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 {
   if( ISNUMPAR( 1 ) && ISQMARGINSF( 1 ) )
   {
-    QPagedPaintDevice_setPageMargins1();
+    /*
+    bool setPageMargins( const QMarginsF & margins )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = static_cast< QPagedPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setPageMargins( *PQMARGINSF( 1 ) ) );
+    }
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && ISQMARGINSF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPagedPaintDevice_setPageMargins2();
+    /*
+    bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = static_cast< QPagedPaintDevice * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->setPageMargins( *PQMARGINSF( 1 ), static_cast<QPageLayout::Unit>( hb_parni( 2 ) ) ) );
+    }
+#endif
+
   }
   else
   {

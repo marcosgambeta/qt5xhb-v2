@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -182,33 +182,25 @@ RETURN
 
 #include <QtGui/QScreen>
 
-/*
-QWindow( QScreen * screen = nullptr )
-*/
-void QWindow_new1()
-{
-  auto obj = new QWindow( OPQSCREEN( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QWindow( QWindow * parent )
-*/
-void QWindow_new2()
-{
-  auto obj = new QWindow( PQWINDOW( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QWINDOW_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQSCREEN( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QWindow_new1();
+    /*
+    QWindow( QScreen * screen = nullptr )
+    */
+    auto obj = new QWindow( OPQSCREEN( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISNUMPAR( 1 ) && ISQWINDOW( 1 ) )
   {
-    QWindow_new2();
+    /*
+    QWindow( QWindow * parent )
+    */
+    auto obj = new QWindow( PQWINDOW( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -1422,45 +1414,37 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
   }
 }
 
-/*
-QWindow * parent( QWindow::AncestorMode mode ) const
-*/
-void QWindow_parent1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWindow * ptr = obj->parent( static_cast<QWindow::AncestorMode>( hb_parni( 1 ) ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
-  }
-#endif
-}
-
-/*
-QWindow * parent() const
-*/
-void QWindow_parent2()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QWindow * ptr = obj->parent();
-    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
-  }
-}
-
 HB_FUNC_STATIC( QWINDOW_PARENT )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QWindow_parent1();
+    /*
+    QWindow * parent( QWindow::AncestorMode mode ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWindow * ptr = obj->parent( static_cast<QWindow::AncestorMode>( hb_parni( 1 ) ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+    }
+#endif
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QWindow_parent2();
+    /*
+    QWindow * parent() const
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QWindow * ptr = obj->parent();
+      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+    }
+
   }
   else
   {
@@ -1493,45 +1477,37 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
   }
 }
 
-/*
-void resize( const QSize & newSize )
-*/
-void QWindow_resize1()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->resize( *PQSIZE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void resize( int w, int h )
-*/
-void QWindow_resize2()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->resize( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWINDOW_RESIZE )
 {
   if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QWindow_resize1();
+    /*
+    void resize( const QSize & newSize )
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->resize( *PQSIZE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWindow_resize2();
+    /*
+    void resize( int w, int h )
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->resize( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1644,45 +1620,37 @@ HB_FUNC_STATIC( QWINDOW_SETFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setGeometry( int posx, int posy, int w, int h )
-*/
-void QWindow_setGeometry1()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setGeometry( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setGeometry( const QRect & rect )
-*/
-void QWindow_setGeometry2()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setGeometry( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QWindow_setGeometry1();
+    /*
+    void setGeometry( int posx, int posy, int w, int h )
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setGeometry( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QWindow_setGeometry2();
+    /*
+    void setGeometry( const QRect & rect )
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setGeometry( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -2353,45 +2321,37 @@ HB_FUNC_STATIC( QWINDOW_POSITION )
   }
 }
 
-/*
-void setPosition( const QPoint & pt )
-*/
-void QWindow_setPosition1()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setPosition( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setPosition( int posx, int posy )
-*/
-void QWindow_setPosition2()
-{
-  auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setPosition( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 {
   if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QWindow_setPosition1();
+    /*
+    void setPosition( const QPoint & pt )
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setPosition( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QWindow_setPosition2();
+    /*
+    void setPosition( int posx, int posy )
+    */
+    auto obj = qobject_cast< QWindow * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setPosition( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,59 +78,43 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QIcon()
-*/
-void QIcon_new1()
-{
-  auto obj = new QIcon();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QIcon( const QPixmap & pixmap )
-*/
-void QIcon_new2()
-{
-  auto obj = new QIcon( *PQPIXMAP( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QIcon( const QIcon & other )
-*/
-void QIcon_new3()
-{
-  auto obj = new QIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QIcon( const QString & fileName )
-*/
-void QIcon_new4()
-{
-  auto obj = new QIcon( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QICON_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QIcon_new1();
+    /*
+    QIcon()
+    */
+    auto obj = new QIcon();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPIXMAP( 1 ) )
   {
-    QIcon_new2();
+    /*
+    QIcon( const QPixmap & pixmap )
+    */
+    auto obj = new QIcon( *PQPIXMAP( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQICON( 1 ) )
   {
-    QIcon_new3();
+    /*
+    QIcon( const QIcon & other )
+    */
+    auto obj = new QIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QIcon_new4();
+    /*
+    QIcon( const QString & fileName )
+    */
+    auto obj = new QIcon( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -356,45 +340,37 @@ HB_FUNC_STATIC( QICON_NAME )
   }
 }
 
-/*
-void paint( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
-void QIcon_paint1()
-{
-  auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->paint( PQPAINTER( 1 ), *PQRECT( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::Alignment >( Qt::AlignCenter ) : static_cast< Qt::Alignment >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 4 ) ), HB_ISNIL( 5 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 5 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
-void QIcon_paint2()
-{
-  auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->paint( PQPAINTER( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? static_cast< Qt::Alignment >( Qt::AlignCenter ) : static_cast< Qt::Alignment >( hb_parni( 6 ) ), HB_ISNIL( 7 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 7 ) ), HB_ISNIL( 8 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 8 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QICON_PAINT )
 {
   if( ISBETWEEN( 2, 5 ) && ISQPAINTER( 1 ) && ISQRECT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QIcon_paint1();
+    /*
+    void paint( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
+    */
+    auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->paint( PQPAINTER( 1 ), *PQRECT( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::Alignment >( Qt::AlignCenter ) : static_cast< Qt::Alignment >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 4 ) ), HB_ISNIL( 5 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 5 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 5, 8 ) && ISQPAINTER( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) && ( HB_ISNUM( 8 ) || HB_ISNIL( 8 ) ) )
   {
-    QIcon_paint2();
+    /*
+    void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
+    */
+    auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->paint( PQPAINTER( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? static_cast< Qt::Alignment >( Qt::AlignCenter ) : static_cast< Qt::Alignment >( hb_parni( 6 ) ), HB_ISNIL( 7 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 7 ) ), HB_ISNIL( 8 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 8 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -402,61 +378,49 @@ HB_FUNC_STATIC( QICON_PAINT )
   }
 }
 
-/*
-QPixmap pixmap( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
-void QIcon_pixmap1()
-{
-  auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPixmap( obj->pixmap( *PQSIZE( 1 ), HB_ISNIL( 2 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
-  }
-}
-
-/*
-QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
-void QIcon_pixmap2()
-{
-  auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPixmap( obj->pixmap( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 4 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
-  }
-}
-
-/*
-QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
-void QIcon_pixmap3()
-{
-  auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QPixmap( obj->pixmap( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
-  }
-}
-
 HB_FUNC_STATIC( QICON_PIXMAP )
 {
   if( ISBETWEEN( 1, 3 ) && ISQSIZE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QIcon_pixmap1();
+    /*
+    QPixmap pixmap( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
+    */
+    auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPixmap( obj->pixmap( *PQSIZE( 1 ), HB_ISNIL( 2 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
+    }
+
   }
   else if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QIcon_pixmap2();
+    /*
+    QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
+    */
+    auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPixmap( obj->pixmap( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 4 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
+    }
+
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QIcon_pixmap3();
+    /*
+    QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
+    */
+    auto obj = static_cast< QIcon * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QPixmap( obj->pixmap( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QIcon::Mode >( QIcon::Normal ) : static_cast< QIcon::Mode >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QIcon::State >( QIcon::Off ) : static_cast< QIcon::State >( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
+    }
+
   }
   else
   {

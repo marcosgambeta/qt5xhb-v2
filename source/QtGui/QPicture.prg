@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,33 +57,25 @@ RETURN
 #include <QtGui/QPicture>
 #endif
 
-/*
-QPicture( int formatVersion = -1 )
-*/
-void QPicture_new1()
-{
-  auto obj = new QPicture( OPINT( 1, -1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPicture( const QPicture & pic )
-*/
-void QPicture_new2()
-{
-  auto obj = new QPicture( *PQPICTURE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QPicture_new1();
+    /*
+    QPicture( int formatVersion = -1 )
+    */
+    auto obj = new QPicture( OPINT( 1, -1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPICTURE( 1 ) )
   {
-    QPicture_new2();
+    /*
+    QPicture( const QPicture & pic )
+    */
+    auto obj = new QPicture( *PQPICTURE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -181,41 +173,33 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
   }
 }
 
-/*
-bool load( const QString & fileName, const char * format = nullptr )
-*/
-void QPicture_load1()
-{
-  auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->load( PQSTRING( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
-  }
-}
-
-/*
-bool load( QIODevice * dev, const char * format = nullptr )
-*/
-void QPicture_load2()
-{
-  auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->load( PQIODEVICE( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPicture_load1();
+    /*
+    bool load( const QString & fileName, const char * format = nullptr )
+    */
+    auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->load( PQSTRING( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
+    }
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPicture_load2();
+    /*
+    bool load( QIODevice * dev, const char * format = nullptr )
+    */
+    auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->load( PQIODEVICE( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
+    }
+
   }
   else
   {
@@ -247,41 +231,33 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
   }
 }
 
-/*
-bool save( const QString & fileName, const char * format = nullptr )
-*/
-void QPicture_save1()
-{
-  auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->save( PQSTRING( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
-  }
-}
-
-/*
-bool save( QIODevice * dev, const char * format = nullptr )
-*/
-void QPicture_save2()
-{
-  auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->save( PQIODEVICE( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPicture_save1();
+    /*
+    bool save( const QString & fileName, const char * format = nullptr )
+    */
+    auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->save( PQSTRING( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
+    }
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPicture_save2();
+    /*
+    bool save( QIODevice * dev, const char * format = nullptr )
+    */
+    auto obj = static_cast< QPicture * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->save( PQIODEVICE( 1 ), OPCONSTCHAR( 2, nullptr ) ) );
+    }
+
   }
   else
   {
