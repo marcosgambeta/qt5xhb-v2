@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,37 +75,29 @@ RETURN
 
 #include <QtPositioning/QGeoCoordinate>
 
-/*
-QGeoManeuver()
-*/
-void QGeoManeuver_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QGeoManeuver();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoManeuver( const QGeoManeuver & other )
-*/
-void QGeoManeuver_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QGeoManeuver( *PQGEOMANEUVER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QGEOMANEUVER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGeoManeuver_new1();
+    /*
+    QGeoManeuver()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QGeoManeuver();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQGEOMANEUVER( 1 ) )
   {
-    QGeoManeuver_new2();
+    /*
+    QGeoManeuver( const QGeoManeuver & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QGeoManeuver( *PQGEOMANEUVER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

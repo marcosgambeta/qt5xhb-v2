@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,37 +63,29 @@ RETURN
 #endif
 #endif
 
-/*
-QPlaceUser()
-*/
-void QPlaceUser_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceUser();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QPlaceUser( const QPlaceUser & other )
-*/
-void QPlaceUser_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceUser( *PQPLACEUSER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QPLACEUSER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPlaceUser_new1();
+    /*
+    QPlaceUser()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QPlaceUser();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQPLACEUSER( 1 ) )
   {
-    QPlaceUser_new2();
+    /*
+    QPlaceUser( const QPlaceUser & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QPlaceUser( *PQPLACEUSER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

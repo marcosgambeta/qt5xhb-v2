@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,37 +67,29 @@ RETURN
 
 #include <QtLocation/QPlaceManager>
 
-/*
-QPlaceIcon()
-*/
-void QPlaceIcon_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceIcon();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QPlaceIcon( const QPlaceIcon & other )
-*/
-void QPlaceIcon_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceIcon( *PQPLACEICON( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QPLACEICON_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPlaceIcon_new1();
+    /*
+    QPlaceIcon()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QPlaceIcon();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQPLACEICON( 1 ) )
   {
-    QPlaceIcon_new2();
+    /*
+    QPlaceIcon( const QPlaceIcon & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QPlaceIcon( *PQPLACEICON( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

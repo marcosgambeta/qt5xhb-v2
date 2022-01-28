@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -80,60 +80,47 @@ RETURN
 
 #include <QtPositioning/QGeoRectangle>
 
-/*
-QGeoRouteRequest( const QList<QGeoCoordinate> & waypoints = QList<QGeoCoordinate>() )
-*/
-void QGeoRouteRequest_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0) )
-  QList<QGeoCoordinate> par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  auto obj = new QGeoRouteRequest( par1 );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoRouteRequest( const QGeoCoordinate & origin, const QGeoCoordinate & destination )
-*/
-void QGeoRouteRequest_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QGeoRouteRequest( *PQGEOCOORDINATE( 1 ), *PQGEOCOORDINATE( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QGeoRouteRequest( const QGeoRouteRequest & other )
-*/
-void QGeoRouteRequest_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QGeoRouteRequest( *PQGEOROUTEREQUEST( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISARRAY( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGeoRouteRequest_new1();
+    /*
+    QGeoRouteRequest( const QList<QGeoCoordinate> & waypoints = QList<QGeoCoordinate>() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0) )
+    QList<QGeoCoordinate> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    auto obj = new QGeoRouteRequest( par1 );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
   }
   else if( ISNUMPAR( 2 ) && ISQGEOCOORDINATE( 1 ) && ISQGEOCOORDINATE( 2 ) )
   {
-    QGeoRouteRequest_new2();
+    /*
+    QGeoRouteRequest( const QGeoCoordinate & origin, const QGeoCoordinate & destination )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QGeoRouteRequest( *PQGEOCOORDINATE( 1 ), *PQGEOCOORDINATE( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQGEOROUTEREQUEST( 1 ) )
   {
-    QGeoRouteRequest_new3();
+    /*
+    QGeoRouteRequest( const QGeoRouteRequest & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QGeoRouteRequest( *PQGEOROUTEREQUEST( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

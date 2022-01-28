@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -137,47 +137,39 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
 #endif
 }
 
-/*
-QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & bounds = QGeoShape() )
-*/
-void QGeoCodingManager_geocode1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = qobject_cast< QGeoCodingManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS( 1 ), HB_ISNIL( 2 ) ? QGeoShape() : *static_cast< QGeoShape * >( Qt5xHb::itemGetPtr( 2 ) ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
-  }
-#endif
-}
-
-/*
-QGeoCodeReply * geocode( const QString & searchString, int limit = -1, int offset = 0, const QGeoShape & bounds = QGeoShape() )
-*/
-void QGeoCodingManager_geocode2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = qobject_cast< QGeoCodingManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QGeoCodeReply * ptr = obj->geocode( PQSTRING( 1 ), OPINT( 2, -1 ), OPINT( 3, 0 ), HB_ISNIL( 4 ) ? QGeoShape() : *static_cast< QGeoShape * >( Qt5xHb::itemGetPtr( 4 ) ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
 {
   if( ISBETWEEN( 1, 2 ) && ISQGEOADDRESS( 1 ) && ( ISQGEOSHAPE( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGeoCodingManager_geocode1();
+    /*
+    QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & bounds = QGeoShape() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = qobject_cast< QGeoCodingManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS( 1 ), HB_ISNIL( 2 ) ? QGeoShape() : *static_cast< QGeoShape * >( Qt5xHb::itemGetPtr( 2 ) ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
+    }
+#endif
+
   }
   else if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( ISQGEOSHAPE( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGeoCodingManager_geocode2();
+    /*
+    QGeoCodeReply * geocode( const QString & searchString, int limit = -1, int offset = 0, const QGeoShape & bounds = QGeoShape() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = qobject_cast< QGeoCodingManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QGeoCodeReply * ptr = obj->geocode( PQSTRING( 1 ), OPINT( 2, -1 ), OPINT( 3, 0 ), HB_ISNIL( 4 ) ? QGeoShape() : *static_cast< QGeoShape * >( Qt5xHb::itemGetPtr( 4 ) ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
+    }
+#endif
+
   }
   else
   {

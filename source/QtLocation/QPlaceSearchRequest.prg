@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -83,37 +83,29 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtPositioning/QGeoShape>
 
-/*
-QPlaceSearchRequest()
-*/
-void QPlaceSearchRequest_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceSearchRequest();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QPlaceSearchRequest( const QPlaceSearchRequest & other )
-*/
-void QPlaceSearchRequest_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceSearchRequest( *PQPLACESEARCHREQUEST( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPlaceSearchRequest_new1();
+    /*
+    QPlaceSearchRequest()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QPlaceSearchRequest();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQPLACESEARCHREQUEST( 1 ) )
   {
-    QPlaceSearchRequest_new2();
+    /*
+    QPlaceSearchRequest( const QPlaceSearchRequest & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QPlaceSearchRequest( *PQPLACESEARCHREQUEST( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
