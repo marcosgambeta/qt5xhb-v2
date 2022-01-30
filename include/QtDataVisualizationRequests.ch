@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,5 +48,6 @@ REQUEST QSurfaceDataProxy
 REQUEST QTouch3DInputHandler
 REQUEST QValue3DAxis
 REQUEST QValue3DAxisFormatter
+REQUEST QtDataVisualization_Version
 
 #endif /* QTDATAVISUALIZATIONREQUESTS_CH */
