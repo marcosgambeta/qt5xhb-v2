@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -138,46 +138,38 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 #endif
 }
 
-/*
-bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
-*/
-void QBluetoothServer_listen1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QBluetoothServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->listen( HB_ISNIL( 1 ) ? QBluetoothAddress() : *static_cast< QBluetoothAddress * >( Qt5xHb::itemGetPtr( 1 ) ), OPQUINT16( 2, 0 ) ) );
-  }
-#endif
-}
-
-/*
-QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
-*/
-void QBluetoothServer_listen2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QBluetoothServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QBluetoothServiceInfo( obj->listen( *PQBLUETOOTHUUID( 1 ), OPQSTRING( 2, QString() ) ) );
-    Qt5xHb::createReturnClass( ptr, "QBLUETOOTHSERVICEINFO", true );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQBLUETOOTHADDRESS( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QBluetoothServer_listen1();
+    /*
+    bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = qobject_cast< QBluetoothServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->listen( HB_ISNIL( 1 ) ? QBluetoothAddress() : *static_cast< QBluetoothAddress * >( Qt5xHb::itemGetPtr( 1 ) ), OPQUINT16( 2, 0 ) ) );
+    }
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBLUETOOTHUUID( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QBluetoothServer_listen2();
+    /*
+    QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = qobject_cast< QBluetoothServer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QBluetoothServiceInfo( obj->listen( *PQBLUETOOTHUUID( 1 ), OPQSTRING( 2, QString() ) ) );
+      Qt5xHb::createReturnClass( ptr, "QBLUETOOTHSERVICEINFO", true );
+    }
+#endif
+
   }
   else
   {

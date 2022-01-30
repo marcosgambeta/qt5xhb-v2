@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,37 +64,29 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothHostInfo()
-*/
-void QBluetoothHostInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothHostInfo();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QBluetoothHostInfo( const QBluetoothHostInfo & other )
-*/
-void QBluetoothHostInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothHostInfo( *PQBLUETOOTHHOSTINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QBluetoothHostInfo_new1();
+    /*
+    QBluetoothHostInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QBluetoothHostInfo();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQBLUETOOTHHOSTINFO( 1 ) )
   {
-    QBluetoothHostInfo_new2();
+    /*
+    QBluetoothHostInfo( const QBluetoothHostInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QBluetoothHostInfo( *PQBLUETOOTHHOSTINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

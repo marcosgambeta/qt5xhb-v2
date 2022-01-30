@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,37 +64,29 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothTransferRequest( const QBluetoothAddress & address = QBluetoothAddress() )
-*/
-void QBluetoothTransferRequest_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothTransferRequest( HB_ISNIL( 1 ) ? QBluetoothAddress() : *static_cast< QBluetoothAddress * >( Qt5xHb::itemGetPtr( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QBluetoothTransferRequest( const QBluetoothTransferRequest & other )
-*/
-void QBluetoothTransferRequest_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothTransferRequest( *PQBLUETOOTHTRANSFERREQUEST( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQBLUETOOTHADDRESS( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QBluetoothTransferRequest_new1();
+    /*
+    QBluetoothTransferRequest( const QBluetoothAddress & address = QBluetoothAddress() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QBluetoothTransferRequest( HB_ISNIL( 1 ) ? QBluetoothAddress() : *static_cast< QBluetoothAddress * >( Qt5xHb::itemGetPtr( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQBLUETOOTHTRANSFERREQUEST( 1 ) )
   {
-    QBluetoothTransferRequest_new2();
+    /*
+    QBluetoothTransferRequest( const QBluetoothTransferRequest & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    auto obj = new QBluetoothTransferRequest( *PQBLUETOOTHTRANSFERREQUEST( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
