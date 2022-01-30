@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -100,37 +100,29 @@ using namespace QtCharts;
 
 #include <QtCharts/QLineSeries>
 
-/*
-QAreaSeries( QObject * parent = nullptr )
-*/
-void QAreaSeries_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QAreaSeries( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
-*/
-void QAreaSeries_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QAreaSeries( PQLINESERIES( 1 ), OPQLINESERIES( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QAreaSeries_new1();
+    /*
+    QAreaSeries( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QAreaSeries( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQLINESERIES( 1 ) && ( ISQLINESERIES( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QAreaSeries_new2();
+    /*
+    QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QAreaSeries( PQLINESERIES( 1 ), OPQLINESERIES( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

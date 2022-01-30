@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -85,37 +85,29 @@ RETURN
 using namespace QtCharts;
 #endif
 
-/*
-QCandlestickSet( qreal timestamp = 0.0, QObject * parent = nullptr )
-*/
-void QCandlestickSet_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = new QCandlestickSet( OPQREAL( 1, 0.0 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QCandlestickSet( qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject * parent = nullptr )
-*/
-void QCandlestickSet_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = new QCandlestickSet( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), OPQREAL( 5, 0.0 ), OPQOBJECT( 6, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCandlestickSet_new1();
+    /*
+    QCandlestickSet( qreal timestamp = 0.0, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    auto obj = new QCandlestickSet( OPQREAL( 1, 0.0 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 4, 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( ISQOBJECT( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QCandlestickSet_new2();
+    /*
+    QCandlestickSet( qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    auto obj = new QCandlestickSet( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), OPQREAL( 5, 0.0 ), OPQOBJECT( 6, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {
