@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -229,39 +229,33 @@ static void runOnAndroidThread(const Runnable &runnable)
 static void runOnAndroidThreadSync(const Runnable &runnable, int timeoutMs = INT_MAX)
 */
 
-/*
-static void hideSplashScreen()
-*/
-void QtAndroid_hideSplashScreen1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QtAndroid::hideSplashScreen();
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-static void hideSplashScreen( int duration )
-*/
-void QtAndroid_hideSplashScreen2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QtAndroid::hideSplashScreen( PINT( 1 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QtAndroid_hideSplashScreen1();
+    /*
+    static void hideSplashScreen()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+
+    QtAndroid::hideSplashScreen();
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QtAndroid_hideSplashScreen2();
+    /*
+    static void hideSplashScreen( int duration )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+
+    QtAndroid::hideSplashScreen( PINT( 1 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {
