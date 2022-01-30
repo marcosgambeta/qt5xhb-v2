@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,14 +28,7 @@ CLASS QBarDataProxy INHERIT QAbstractDataProxy
    METHOD setColumnLabels
    METHOD series
    METHOD itemAt
-   METHOD resetArray
-   METHOD setRow
-   METHOD setRows
    METHOD setItem
-   METHOD addRow
-   METHOD addRows
-   METHOD insertRow
-   METHOD insertRows
    METHOD removeRows
 
    METHOD onArrayReset
@@ -296,226 +289,86 @@ const QBarDataArray *array() const
 const QBarDataRow *rowAt(int rowIndex) const
 */
 
-/*
-const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
-*/
-void QBarDataProxy_itemAt1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    const QBarDataItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
-    Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
-  }
-#endif
-}
-
-/*
-const QBarDataItem * itemAt( const QPoint & position ) const
-*/
-void QBarDataProxy_itemAt2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    const QBarDataItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QBarDataProxy_itemAt1();
+    /*
+    const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      const QBarDataItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
+      Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
+    }
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QBarDataProxy_itemAt2();
+    /*
+    const QBarDataItem * itemAt( const QPoint & position ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      const QBarDataItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
+    }
+#endif
+
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void resetArray()
-*/
-
-/*
-void resetArray(QBarDataArray *newArray)
-*/
-
-/*
-void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
-*/
-
-/*
-[1]void resetArray()
-[2]void resetArray(QBarDataArray *newArray)
-[3]void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_RESETARRAY )
-{
-}
-
-/*
-void setRow(int rowIndex, QBarDataRow *row)
-*/
-
-/*
-void setRow(int rowIndex, QBarDataRow *row, const QString &label)
-*/
-
-/*
-[1]void setRow(int rowIndex, QBarDataRow *row)
-[2]void setRow(int rowIndex, QBarDataRow *row, const QString &label)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_SETROW )
-{
-}
-
-/*
-void setRows(int rowIndex, const QBarDataArray &rows)
-*/
-
-/*
-void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
-*/
-
-/*
-[1]void setRows(int rowIndex, const QBarDataArray &rows)
-[2]void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
-{
-}
-
-/*
-void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
-*/
-void QBarDataProxy_setItem1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setItem( PINT( 1 ), PINT( 2 ), *PQBARDATAITEM( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void setItem( const QPoint & position, const QBarDataItem & item )
-*/
-void QBarDataProxy_setItem2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setItem( *PQPOINT( 1 ), *PQBARDATAITEM( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQBARDATAITEM( 3 ) )
   {
-    QBarDataProxy_setItem1();
+    /*
+    void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setItem( PINT( 1 ), PINT( 2 ), *PQBARDATAITEM( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQBARDATAITEM( 2 ) )
   {
-    QBarDataProxy_setItem2();
+    /*
+    void setItem( const QPoint & position, const QBarDataItem & item )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QBarDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setItem( *PQPOINT( 1 ), *PQBARDATAITEM( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-int addRow(QBarDataRow *row)
-*/
-
-/*
-int addRow(QBarDataRow *row, const QString &label)
-*/
-
-/*
-[1]int addRow(QBarDataRow *row)
-[2]int addRow(QBarDataRow *row, const QString &label)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_ADDROW )
-{
-}
-
-/*
-int addRows(const QBarDataArray &rows)
-*/
-
-/*
-int addRows(const QBarDataArray &rows, const QStringList &labels)
-*/
-
-/*
-[1]int addRows(const QBarDataArray &rows)
-[2]int addRows(const QBarDataArray &rows, const QStringList &labels)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_ADDROWS )
-{
-}
-
-/*
-void insertRow(int rowIndex, QBarDataRow *row)
-*/
-
-/*
-void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
-*/
-
-/*
-[1]void insertRow(int rowIndex, QBarDataRow *row)
-[2]void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_INSERTROW )
-{
-}
-
-/*
-void insertRows(int rowIndex, const QBarDataArray &rows)
-*/
-
-/*
-void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
-*/
-
-/*
-[1]void insertRows(int rowIndex, const QBarDataArray &rows)
-[2]void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
-*/
-
-HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
-{
 }
 
 /*

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -195,111 +195,81 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 #endif
 }
 
-/*
-const QSurfaceDataArray *array() const
-*/
-
-/*
-const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
-*/
-void QSurfaceDataProxy_itemAt1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    const QSurfaceDataItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
-    Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
-  }
-#endif
-}
-
-/*
-const QSurfaceDataItem * itemAt( const QPoint & position ) const
-*/
-void QSurfaceDataProxy_itemAt2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSurfaceDataProxy_itemAt1();
+    /*
+    const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      const QSurfaceDataItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
+    }
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QSurfaceDataProxy_itemAt2();
+    /*
+    const QSurfaceDataItem * itemAt( const QPoint & position ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
+    }
+#endif
+
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void resetArray(QSurfaceDataArray *newArray)
-*/
-/*
-void setRow(int rowIndex, QSurfaceDataRow *row)
-*/
-/*
-void setRows(int rowIndex, const QSurfaceDataArray &rows)
-*/
-
-/*
-void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
-*/
-void QSurfaceDataProxy_setItem1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setItem( PINT( 1 ), PINT( 2 ), *PQSURFACEDATAITEM( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void setItem( const QPoint & position, const QSurfaceDataItem & item )
-*/
-void QSurfaceDataProxy_setItem2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setItem( *PQPOINT( 1 ), *PQSURFACEDATAITEM( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
 }
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQSURFACEDATAITEM( 3 ) )
   {
-    QSurfaceDataProxy_setItem1();
+    /*
+    void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setItem( PINT( 1 ), PINT( 2 ), *PQSURFACEDATAITEM( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQSURFACEDATAITEM( 2 ) )
   {
-    QSurfaceDataProxy_setItem2();
+    /*
+    void setItem( const QPoint & position, const QSurfaceDataItem & item )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QSurfaceDataProxy * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setItem( *PQPOINT( 1 ), *PQSURFACEDATAITEM( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {
@@ -307,18 +277,6 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
   }
 }
 
-/*
-int addRow(QSurfaceDataRow *row)
-*/
-/*
-int addRows(const QSurfaceDataArray &rows)
-*/
-/*
-void insertRow(int rowIndex, QSurfaceDataRow *row)
-*/
-/*
-void insertRows(int rowIndex, const QSurfaceDataArray &rows)
-*/
 /*
 void removeRows( int rowIndex, int removeCount )
 */

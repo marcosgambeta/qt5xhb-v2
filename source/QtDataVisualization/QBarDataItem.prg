@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,67 +65,51 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QBarDataItem()
-*/
-void QBarDataItem_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QBarDataItem( float value )
-*/
-void QBarDataItem_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem( PFLOAT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QBarDataItem( float value, float angle )
-*/
-void QBarDataItem_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem( PFLOAT( 1 ), PFLOAT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QBarDataItem( const QBarDataItem & other )
-*/
-void QBarDataItem_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem( *PQBARDATAITEM( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QBARDATAITEM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QBarDataItem_new1();
+    /*
+    QBarDataItem()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QBarDataItem();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QBarDataItem_new2();
+    /*
+    QBarDataItem( float value )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QBarDataItem( PFLOAT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QBarDataItem_new3();
+    /*
+    QBarDataItem( float value, float angle )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QBarDataItem( PFLOAT( 1 ), PFLOAT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQBARDATAITEM( 1 ) )
   {
-    QBarDataItem_new4();
+    /*
+    QBarDataItem( const QBarDataItem & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QBarDataItem( *PQBARDATAITEM( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

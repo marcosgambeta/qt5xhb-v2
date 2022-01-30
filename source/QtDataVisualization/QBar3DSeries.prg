@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,37 +67,29 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QBar3DSeries( QObject * parent = nullptr )
-*/
-void QBar3DSeries_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBar3DSeries( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
-*/
-void QBar3DSeries_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBar3DSeries( PQBARDATAPROXY( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QBar3DSeries_new1();
+    /*
+    QBar3DSeries( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QBar3DSeries( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBARDATAPROXY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QBar3DSeries_new2();
+    /*
+    QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QBar3DSeries( PQBARDATAPROXY( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

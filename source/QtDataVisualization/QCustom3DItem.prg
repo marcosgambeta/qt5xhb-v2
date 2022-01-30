@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -86,37 +86,29 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QCustom3DItem( QObject * parent = nullptr )
-*/
-void QCustom3DItem_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DItem( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QCustom3DItem( const QString & meshFile, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, const QImage & texture, QObject * parent = nullptr )
-*/
-void QCustom3DItem_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DItem( PQSTRING( 1 ), *PQVECTOR3D( 2 ), *PQVECTOR3D( 3 ), *PQQUATERNION( 4 ), *PQIMAGE( 5 ), OPQOBJECT( 6, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QCustom3DItem_new1();
+    /*
+    QCustom3DItem( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QCustom3DItem( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 5, 6 ) && HB_ISCHAR( 1 ) && ISQVECTOR3D( 2 ) && ISQVECTOR3D( 3 ) && ISQQUATERNION( 4 ) && ISQIMAGE( 5 ) && ( ISQOBJECT( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QCustom3DItem_new2();
+    /*
+    QCustom3DItem( const QString & meshFile, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, const QImage & texture, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QCustom3DItem( PQSTRING( 1 ), *PQVECTOR3D( 2 ), *PQVECTOR3D( 3 ), *PQQUATERNION( 4 ), *PQIMAGE( 5 ), OPQOBJECT( 6, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

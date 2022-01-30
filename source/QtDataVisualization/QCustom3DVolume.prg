@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,7 +20,6 @@ REQUEST QVECTOR3D
 
 CLASS QCustom3DVolume INHERIT QCustom3DItem
 
-   METHOD new
    METHOD delete
    METHOD textureWidth
    METHOD setTextureWidth
@@ -115,25 +114,6 @@ using namespace QtDataVisualization;
 /*
 QCustom3DVolume( QObject * parent = nullptr )
 */
-void QCustom3DVolume_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DVolume( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
-{
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
-  {
-    QCustom3DVolume_new1();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
 
 /*
 virtual ~QCustom3DVolume()
@@ -1055,49 +1035,41 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
 #endif
 }
 
-/*
-void setSubTextureData( Qt::Axis axis, int index, const uchar * data )
-*/
-void QCustom3DVolume_setSubTextureData1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QCustom3DVolume * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSubTextureData( static_cast<Qt::Axis>( hb_parni( 1 ) ), PINT( 2 ), PCONSTUCHAR( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void setSubTextureData( Qt::Axis axis, int index, const QImage & image )
-*/
-void QCustom3DVolume_setSubTextureData2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QCustom3DVolume * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setSubTextureData( static_cast<Qt::Axis>( hb_parni( 1 ) ), PINT( 2 ), *PQIMAGE( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QCustom3DVolume_setSubTextureData1();
+    /*
+    void setSubTextureData( Qt::Axis axis, int index, const uchar * data )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QCustom3DVolume * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSubTextureData( static_cast<Qt::Axis>( hb_parni( 1 ) ), PINT( 2 ), PCONSTUCHAR( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQIMAGE( 3 ) )
   {
-    QCustom3DVolume_setSubTextureData2();
+    /*
+    void setSubTextureData( Qt::Axis axis, int index, const QImage & image )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = qobject_cast< QCustom3DVolume * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setSubTextureData( static_cast<Qt::Axis>( hb_parni( 1 ) ), PINT( 2 ), *PQIMAGE( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {

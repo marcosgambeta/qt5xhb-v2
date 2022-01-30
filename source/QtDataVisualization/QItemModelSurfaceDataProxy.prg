@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -126,112 +126,84 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QItemModelSurfaceDataProxy( QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & yPosRole, QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), OPQOBJECT( 5, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new5()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), PQSTRING( 6 ), OPQOBJECT( 7, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new6()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRINGLIST( 5 ), PQSTRINGLIST( 6 ), OPQOBJECT( 7, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
-*/
-void QItemModelSurfaceDataProxy_new7()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), PQSTRING( 6 ), PQSTRINGLIST( 7 ), PQSTRINGLIST( 8 ), OPQOBJECT( 9, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QItemModelSurfaceDataProxy_new1();
+    /*
+    QItemModelSurfaceDataProxy( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQABSTRACTITEMMODEL( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QItemModelSurfaceDataProxy_new2();
+    /*
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QItemModelSurfaceDataProxy_new3();
+    /*
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & yPosRole, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 4, 5 ) && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && ( ISQOBJECT( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QItemModelSurfaceDataProxy_new4();
+    /*
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), OPQOBJECT( 5, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 6, 7 ) && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) && HB_ISCHAR( 6 ) && ( ISQOBJECT( 7 ) || HB_ISNIL( 7 ) ) )
   {
-    QItemModelSurfaceDataProxy_new5();
+    /*
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), PQSTRING( 6 ), OPQOBJECT( 7, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 6, 7 )  && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISARRAY( 5 ) && HB_ISARRAY( 6 ) && ( ISQOBJECT( 7 ) || HB_ISNIL( 7 ) ) )
   {
-    QItemModelSurfaceDataProxy_new6();
+    /*
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRINGLIST( 5 ), PQSTRINGLIST( 6 ), OPQOBJECT( 7, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 8, 9 ) && ISQABSTRACTITEMMODEL( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) && HB_ISCHAR( 6 ) && HB_ISARRAY( 7 ) && HB_ISARRAY( 8 ) && ( ISQOBJECT( 9 ) || HB_ISNIL( 9 ) ) )
   {
-    QItemModelSurfaceDataProxy_new7();
+    /*
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQSTRING( 5 ), PQSTRING( 6 ), PQSTRINGLIST( 7 ), PQSTRINGLIST( 8 ), OPQOBJECT( 9, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,52 +70,40 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QSurfaceDataItem()
-*/
-void QSurfaceDataItem_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QSurfaceDataItem();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QSurfaceDataItem( const QVector3D & position )
-*/
-void QSurfaceDataItem_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QSurfaceDataItem( *PQVECTOR3D( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QSurfaceDataItem( const QSurfaceDataItem & other )
-*/
-void QSurfaceDataItem_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QSurfaceDataItem( *PQSURFACEDATAITEM( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSurfaceDataItem_new1();
+    /*
+    QSurfaceDataItem()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QSurfaceDataItem();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
   {
-    QSurfaceDataItem_new2();
+    /*
+    QSurfaceDataItem( const QVector3D & position )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QSurfaceDataItem( *PQVECTOR3D( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQSURFACEDATAITEM( 1 ) )
   {
-    QSurfaceDataItem_new3();
+    /*
+    QSurfaceDataItem( const QSurfaceDataItem & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    auto obj = new QSurfaceDataItem( *PQSURFACEDATAITEM( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {
