@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -163,43 +163,35 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
   }
 }
 
-/*
-bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-*/
-void QEventLoop_processEvents1()
-{
-  auto obj = qobject_cast< QEventLoop * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->processEvents( HB_ISNIL( 1 ) ? static_cast< QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast< QEventLoop::ProcessEventsFlags >( hb_parni( 1 ) ) ) );
-  }
-}
-
-/*
-void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
-*/
-void QEventLoop_processEvents2()
-{
-  auto obj = qobject_cast< QEventLoop * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->processEvents( static_cast<QEventLoop::ProcessEventsFlags>( hb_parni( 1 ) ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QEventLoop_processEvents1();
+    /*
+    bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+    */
+    auto obj = qobject_cast< QEventLoop * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->processEvents( HB_ISNIL( 1 ) ? static_cast< QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast< QEventLoop::ProcessEventsFlags >( hb_parni( 1 ) ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QEventLoop_processEvents2();
+    /*
+    void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
+    */
+    auto obj = qobject_cast< QEventLoop * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->processEvents( static_cast<QEventLoop::ProcessEventsFlags>( hb_parni( 1 ) ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

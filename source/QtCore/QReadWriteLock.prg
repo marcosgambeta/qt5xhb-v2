@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -119,41 +119,33 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool tryLockForRead()
-*/
-void QReadWriteLock_tryLockForRead1()
-{
-  auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->tryLockForRead() );
-  }
-}
-
-/*
-bool tryLockForRead( int timeout )
-*/
-void QReadWriteLock_tryLockForRead2()
-{
-  auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->tryLockForRead( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QReadWriteLock_tryLockForRead1();
+    /*
+    bool tryLockForRead()
+    */
+    auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->tryLockForRead() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QReadWriteLock_tryLockForRead2();
+    /*
+    bool tryLockForRead( int timeout )
+    */
+    auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->tryLockForRead( PINT( 1 ) ) );
+    }
+
   }
   else
   {
@@ -187,41 +179,33 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool tryLockForWrite()
-*/
-void QReadWriteLock_tryLockForWrite1()
-{
-  auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->tryLockForWrite() );
-  }
-}
-
-/*
-bool tryLockForWrite( int timeout )
-*/
-void QReadWriteLock_tryLockForWrite2()
-{
-  auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->tryLockForWrite( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QReadWriteLock_tryLockForWrite1();
+    /*
+    bool tryLockForWrite()
+    */
+    auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->tryLockForWrite() );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QReadWriteLock_tryLockForWrite2();
+    /*
+    bool tryLockForWrite( int timeout )
+    */
+    auto obj = static_cast< QReadWriteLock * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->tryLockForWrite( PINT( 1 ) ) );
+    }
+
   }
   else
   {

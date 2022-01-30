@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,59 +74,43 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QUrlQuery()
-*/
-void QUrlQuery_new1()
-{
-  auto obj = new QUrlQuery();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrlQuery( const QUrl & url )
-*/
-void QUrlQuery_new2()
-{
-  auto obj = new QUrlQuery( *PQURL( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrlQuery( const QString & queryString )
-*/
-void QUrlQuery_new3()
-{
-  auto obj = new QUrlQuery( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrlQuery( const QUrlQuery & other )
-*/
-void QUrlQuery_new4()
-{
-  auto obj = new QUrlQuery( *PQURLQUERY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QUrlQuery_new1();
+    /*
+    QUrlQuery()
+    */
+    auto obj = new QUrlQuery();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QUrlQuery_new2();
+    /*
+    QUrlQuery( const QUrl & url )
+    */
+    auto obj = new QUrlQuery( *PQURL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QUrlQuery_new3();
+    /*
+    QUrlQuery( const QString & queryString )
+    */
+    auto obj = new QUrlQuery( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQURLQUERY( 1 ) )
   {
-    QUrlQuery_new4();
+    /*
+    QUrlQuery( const QUrlQuery & other )
+    */
+    auto obj = new QUrlQuery( *PQURLQUERY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

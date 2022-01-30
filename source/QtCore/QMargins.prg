@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,33 +64,25 @@ RETURN
 #include <QtCore/QMargins>
 #endif
 
-/*
-QMargins()
-*/
-void QMargins_new1()
-{
-  auto obj = new QMargins();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMargins( int left, int top, int right, int bottom )
-*/
-void QMargins_new2()
-{
-  auto obj = new QMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QMARGINS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QMargins_new1();
+    /*
+    QMargins()
+    */
+    auto obj = new QMargins();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QMargins_new2();
+    /*
+    QMargins( int left, int top, int right, int bottom )
+    */
+    auto obj = new QMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

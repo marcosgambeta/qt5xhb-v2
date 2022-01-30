@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -83,46 +83,34 @@ RETURN
 #include <QtCore/QXmlStreamWriter>
 #endif
 
-/*
-QXmlStreamWriter()
-*/
-void QXmlStreamWriter_new1()
-{
-  auto obj = new QXmlStreamWriter();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamWriter( QIODevice * device )
-*/
-void QXmlStreamWriter_new2()
-{
-  auto obj = new QXmlStreamWriter( PQIODEVICE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamWriter( QByteArray * array )
-*/
-void QXmlStreamWriter_new3()
-{
-  auto obj = new QXmlStreamWriter( PQBYTEARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamWriter_new1();
+    /*
+    QXmlStreamWriter()
+    */
+    auto obj = new QXmlStreamWriter();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QXmlStreamWriter_new2();
+    /*
+    QXmlStreamWriter( QIODevice * device )
+    */
+    auto obj = new QXmlStreamWriter( PQIODEVICE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QXmlStreamWriter_new3();
+    /*
+    QXmlStreamWriter( QByteArray * array )
+    */
+    auto obj = new QXmlStreamWriter( PQBYTEARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -321,45 +309,37 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCodec( QTextCodec * codec )
-*/
-void QXmlStreamWriter_setCodec1()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCodec( PQTEXTCODEC( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setCodec( const char * codecName )
-*/
-void QXmlStreamWriter_setCodec2()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCodec( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
-    QXmlStreamWriter_setCodec1();
+    /*
+    void setCodec( QTextCodec * codec )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCodec( PQTEXTCODEC( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamWriter_setCodec2();
+    /*
+    void setCodec( const char * codecName )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCodec( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -393,64 +373,52 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void writeAttribute( const QString & namespaceUri, const QString & name, const QString & value )
-*/
-void QXmlStreamWriter_writeAttribute1()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeAttribute( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeAttribute( const QString & qualifiedName, const QString & value )
-*/
-void QXmlStreamWriter_writeAttribute2()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeAttribute( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeAttribute( const QXmlStreamAttribute & attribute )
-*/
-void QXmlStreamWriter_writeAttribute3()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeAttribute( *PQXMLSTREAMATTRIBUTE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 {
   if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QXmlStreamWriter_writeAttribute1();
+    /*
+    void writeAttribute( const QString & namespaceUri, const QString & name, const QString & value )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeAttribute( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamWriter_writeAttribute2();
+    /*
+    void writeAttribute( const QString & qualifiedName, const QString & value )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeAttribute( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMATTRIBUTE( 1 ) )
   {
-    QXmlStreamWriter_writeAttribute3();
+    /*
+    void writeAttribute( const QXmlStreamAttribute & attribute )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeAttribute( *PQXMLSTREAMATTRIBUTE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -640,45 +608,37 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void writeEmptyElement( const QString & namespaceUri, const QString & name )
-*/
-void QXmlStreamWriter_writeEmptyElement1()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeEmptyElement( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeEmptyElement( const QString & qualifiedName )
-*/
-void QXmlStreamWriter_writeEmptyElement2()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeEmptyElement( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamWriter_writeEmptyElement1();
+    /*
+    void writeEmptyElement( const QString & namespaceUri, const QString & name )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeEmptyElement( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamWriter_writeEmptyElement2();
+    /*
+    void writeEmptyElement( const QString & qualifiedName )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeEmptyElement( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -816,110 +776,90 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void writeStartDocument( const QString & version )
-*/
-void QXmlStreamWriter_writeStartDocument1()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeStartDocument( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeStartDocument( const QString & version, bool standalone )
-*/
-void QXmlStreamWriter_writeStartDocument2()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeStartDocument( PQSTRING( 1 ), PBOOL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeStartDocument()
-*/
-void QXmlStreamWriter_writeStartDocument3()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeStartDocument();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamWriter_writeStartDocument1();
+    /*
+    void writeStartDocument( const QString & version )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeStartDocument( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISLOG( 2 ) )
   {
-    QXmlStreamWriter_writeStartDocument2();
+    /*
+    void writeStartDocument( const QString & version, bool standalone )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeStartDocument( PQSTRING( 1 ), PBOOL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamWriter_writeStartDocument3();
+    /*
+    void writeStartDocument()
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeStartDocument();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void writeStartElement( const QString & namespaceUri, const QString & name )
-*/
-void QXmlStreamWriter_writeStartElement1()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeStartElement( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeStartElement( const QString & qualifiedName )
-*/
-void QXmlStreamWriter_writeStartElement2()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeStartElement( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamWriter_writeStartElement1();
+    /*
+    void writeStartElement( const QString & namespaceUri, const QString & name )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeStartElement( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamWriter_writeStartElement2();
+    /*
+    void writeStartElement( const QString & qualifiedName )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeStartElement( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -927,45 +867,37 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
   }
 }
 
-/*
-void writeTextElement( const QString & namespaceUri, const QString & name, const QString & text )
-*/
-void QXmlStreamWriter_writeTextElement1()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeTextElement( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void writeTextElement( const QString & qualifiedName, const QString & text )
-*/
-void QXmlStreamWriter_writeTextElement2()
-{
-  auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->writeTextElement( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
 {
   if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QXmlStreamWriter_writeTextElement1();
+    /*
+    void writeTextElement( const QString & namespaceUri, const QString & name, const QString & text )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeTextElement( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamWriter_writeTextElement2();
+    /*
+    void writeTextElement( const QString & qualifiedName, const QString & text )
+    */
+    auto obj = static_cast< QXmlStreamWriter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->writeTextElement( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

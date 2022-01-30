@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -95,71 +95,43 @@ RETURN
 #include <QtCore/QTextStream>
 #endif
 
-/*
-QTextStream()
-*/
-void QTextStream_new1()
-{
-  auto obj = new QTextStream();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( QIODevice * device )
-*/
-void QTextStream_new2()
-{
-  auto obj = new QTextStream( PQIODEVICE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QTextStream_new3()
-{
-  auto obj = new QTextStream( static_cast< FILE * >( hb_parptr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream[4](QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
-/*
-QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QTextStream_new5()
-{
-  auto obj = new QTextStream( PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
-*/
-void QTextStream_new6()
-{
-  auto obj = new QTextStream( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadOnly ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextStream_new1();
+    /*
+    QTextStream()
+    */
+    auto obj = new QTextStream();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QTextStream_new2();
+    /*
+    QTextStream( QIODevice * device )
+    */
+    auto obj = new QTextStream( PQIODEVICE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISPOINTER( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextStream_new3();
+    /*
+    QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    auto obj = new QTextStream( static_cast< FILE * >( hb_parptr( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextStream_new6();
+    /*
+    QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
+    */
+    auto obj = new QTextStream( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadOnly ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -184,45 +156,37 @@ HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCodec( QTextCodec * codec )
-*/
-void QTextStream_setCodec1()
-{
-  auto obj = static_cast< QTextStream * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCodec( PQTEXTCODEC( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setCodec( const char * codecName )
-*/
-void QTextStream_setCodec2()
-{
-  auto obj = static_cast< QTextStream * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setCodec( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
-    QTextStream_setCodec1();
+    /*
+    void setCodec( QTextCodec * codec )
+    */
+    auto obj = static_cast< QTextStream * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCodec( PQTEXTCODEC( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTextStream_setCodec2();
+    /*
+    void setCodec( const char * codecName )
+    */
+    auto obj = static_cast< QTextStream * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setCodec( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

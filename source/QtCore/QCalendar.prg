@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,37 +82,29 @@ RETURN
 
 #include <QtCore/QDate>
 
-/*
-QCalendar()
-*/
-void QCalendar_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QCalendar();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QCalendar( QCalendar::System system )
-*/
-void QCalendar_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = new QCalendar( static_cast<QCalendar::System>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QCALENDAR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QCalendar_new1();
+    /*
+    QCalendar()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QCalendar();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QCalendar_new2();
+    /*
+    QCalendar( QCalendar::System system )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    auto obj = new QCalendar( static_cast<QCalendar::System>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

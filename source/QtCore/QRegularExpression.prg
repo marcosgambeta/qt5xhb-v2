@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,46 +71,34 @@ RETURN
 #include <QtCore/QRegularExpression>
 #endif
 
-/*
-QRegularExpression()
-*/
-void QRegularExpression_new1()
-{
-  auto obj = new QRegularExpression();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options = QRegularExpression::NoPatternOption )
-*/
-void QRegularExpression_new2()
-{
-  auto obj = new QRegularExpression( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QRegularExpression::PatternOptions >( QRegularExpression::NoPatternOption ) : static_cast< QRegularExpression::PatternOptions >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegularExpression( const QRegularExpression & re )
-*/
-void QRegularExpression_new3()
-{
-  auto obj = new QRegularExpression( *PQREGULAREXPRESSION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QRegularExpression_new1();
+    /*
+    QRegularExpression()
+    */
+    auto obj = new QRegularExpression();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QRegularExpression_new2();
+    /*
+    QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options = QRegularExpression::NoPatternOption )
+    */
+    auto obj = new QRegularExpression( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QRegularExpression::PatternOptions >( QRegularExpression::NoPatternOption ) : static_cast< QRegularExpression::PatternOptions >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQREGULAREXPRESSION( 1 ) )
   {
-    QRegularExpression_new3();
+    /*
+    QRegularExpression( const QRegularExpression & re )
+    */
+    auto obj = new QRegularExpression( *PQREGULAREXPRESSION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

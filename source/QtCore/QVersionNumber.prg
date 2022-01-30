@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -73,67 +73,51 @@ RETURN
 #endif
 #endif
 
-/*
-QVersionNumber( int maj, int min, int mic )
-*/
-void QVersionNumber_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = new QVersionNumber( PINT( 1 ), PINT( 2 ), PINT( 3 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QVersionNumber( int maj, int min )
-*/
-void QVersionNumber_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = new QVersionNumber( PINT( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QVersionNumber( int maj )
-*/
-void QVersionNumber_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = new QVersionNumber( PINT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QVersionNumber()
-*/
-void QVersionNumber_new7()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = new QVersionNumber();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC( QVERSIONNUMBER_NEW )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QVersionNumber_new1();
+    /*
+    QVersionNumber( int maj, int min, int mic )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    auto obj = new QVersionNumber( PINT( 1 ), PINT( 2 ), PINT( 3 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QVersionNumber_new2();
+    /*
+    QVersionNumber( int maj, int min )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    auto obj = new QVersionNumber( PINT( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QVersionNumber_new3();
+    /*
+    QVersionNumber( int maj )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    auto obj = new QVersionNumber( PINT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QVersionNumber_new7();
+    /*
+    QVersionNumber()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    auto obj = new QVersionNumber();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

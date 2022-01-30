@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,33 +74,25 @@ RETURN
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonObject>
 
-/*
-QJsonValueRef( QJsonArray * array, int idx )
-*/
-void QJsonValueRef_new1()
-{
-  auto obj = new QJsonValueRef( PQJSONARRAY( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonValueRef( QJsonObject * object, int idx )
-*/
-void QJsonValueRef_new2()
-{
-  auto obj = new QJsonValueRef( PQJSONOBJECT( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 {
   if( ISNUMPAR( 2 ) && ISQJSONARRAY( 1 ) && HB_ISNUM( 2 ) )
   {
-    QJsonValueRef_new1();
+    /*
+    QJsonValueRef( QJsonArray * array, int idx )
+    */
+    auto obj = new QJsonValueRef( PQJSONARRAY( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQJSONOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QJsonValueRef_new2();
+    /*
+    QJsonValueRef( QJsonObject * object, int idx )
+    */
+    auto obj = new QJsonValueRef( PQJSONOBJECT( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

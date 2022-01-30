@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,25 @@ RETURN
 #include <QtCore/QSignalTransition>
 #endif
 
-/*
-QSignalTransition( QState * sourceState = nullptr )
-*/
-void QSignalTransition_new1()
-{
-  auto obj = new QSignalTransition( OPQSTATE( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = nullptr )
-*/
-void QSignalTransition_new2()
-{
-  auto obj = new QSignalTransition( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQSTATE( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSignalTransition_new1();
+    /*
+    QSignalTransition( QState * sourceState = nullptr )
+    */
+    auto obj = new QSignalTransition( OPQSTATE( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQSTATE( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSignalTransition_new2();
+    /*
+    QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = nullptr )
+    */
+    auto obj = new QSignalTransition( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQSTATE( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

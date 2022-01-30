@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,59 +77,43 @@ RETURN
 #include <QtCore/QDataStream>
 #endif
 
-/*
-QDataStream()
-*/
-void QDataStream_new1()
-{
-  auto obj = new QDataStream();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDataStream( QIODevice * )
-*/
-void QDataStream_new2()
-{
-  auto obj = new QDataStream( PQIODEVICE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDataStream( QByteArray *, QIODevice::OpenMode flags )
-*/
-void QDataStream_new3()
-{
-  auto obj = new QDataStream( PQBYTEARRAY( 1 ), static_cast<QIODevice::OpenMode>( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDataStream( const QByteArray & )
-*/
-void QDataStream_new4()
-{
-  auto obj = new QDataStream( *PQBYTEARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDATASTREAM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDataStream_new1();
+    /*
+    QDataStream()
+    */
+    auto obj = new QDataStream();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QDataStream_new2();
+    /*
+    QDataStream( QIODevice * )
+    */
+    auto obj = new QDataStream( PQIODEVICE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDataStream_new3();
+    /*
+    QDataStream( QByteArray *, QIODevice::OpenMode flags )
+    */
+    auto obj = new QDataStream( PQBYTEARRAY( 1 ), static_cast<QIODevice::OpenMode>( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QDataStream_new4();
+    /*
+    QDataStream( const QByteArray & )
+    */
+    auto obj = new QDataStream( *PQBYTEARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,46 +64,34 @@ RETURN
 #include <QtCore/QCommandLineOption>
 #endif
 
-/*
-QCommandLineOption( const QString & name, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
-*/
-void QCommandLineOption_new1()
-{
-  auto obj = new QCommandLineOption( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QCommandLineOption( const QStringList & names, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
-*/
-void QCommandLineOption_new2()
-{
-  auto obj = new QCommandLineOption( PQSTRINGLIST( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QCommandLineOption( const QCommandLineOption & other )
-*/
-void QCommandLineOption_new3()
-{
-  auto obj = new QCommandLineOption( *PQCOMMANDLINEOPTION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 {
   if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QCommandLineOption_new1();
+    /*
+    QCommandLineOption( const QString & name, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
+    */
+    auto obj = new QCommandLineOption( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 4 ) && HB_ISARRAY( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QCommandLineOption_new2();
+    /*
+    QCommandLineOption( const QStringList & names, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
+    */
+    auto obj = new QCommandLineOption( PQSTRINGLIST( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQCOMMANDLINEOPTION( 1 ) )
   {
-    QCommandLineOption_new3();
+    /*
+    QCommandLineOption( const QCommandLineOption & other )
+    */
+    auto obj = new QCommandLineOption( *PQCOMMANDLINEOPTION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

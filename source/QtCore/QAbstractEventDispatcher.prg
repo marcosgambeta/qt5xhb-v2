@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -292,43 +292,35 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
-*/
-void QAbstractEventDispatcher_registerTimer1()
-{
-  auto obj = qobject_cast< QAbstractEventDispatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->registerTimer( PINT( 1 ), static_cast<Qt::TimerType>( hb_parni( 2 ) ), PQOBJECT( 3 ) ) );
-  }
-}
-
-/*
-virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
-*/
-void QAbstractEventDispatcher_registerTimer2()
-{
-  auto obj = qobject_cast< QAbstractEventDispatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->registerTimer( PINT( 1 ), PINT( 2 ), static_cast<Qt::TimerType>( hb_parni( 3 ) ), PQOBJECT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQOBJECT( 3 ) )
   {
-    QAbstractEventDispatcher_registerTimer1();
+    /*
+    int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
+    */
+    auto obj = qobject_cast< QAbstractEventDispatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->registerTimer( PINT( 1 ), static_cast<Qt::TimerType>( hb_parni( 2 ) ), PQOBJECT( 3 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ISQOBJECT( 4 ) )
   {
-    QAbstractEventDispatcher_registerTimer2();
+    /*
+    virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
+    */
+    auto obj = qobject_cast< QAbstractEventDispatcher * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->registerTimer( PINT( 1 ), PINT( 2 ), static_cast<Qt::TimerType>( hb_parni( 3 ) ), PQOBJECT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

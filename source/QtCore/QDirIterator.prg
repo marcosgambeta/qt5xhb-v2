@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,59 +62,43 @@ RETURN
 #include <QtCore/QDirIterator>
 #endif
 
-/*
-QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
-*/
-void QDirIterator_new1()
-{
-  auto obj = new QDirIterator( *PQDIR( 1 ), HB_ISNIL( 2 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
-*/
-void QDirIterator_new2()
-{
-  auto obj = new QDirIterator( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
-*/
-void QDirIterator_new3()
-{
-  auto obj = new QDirIterator( PQSTRING( 1 ), static_cast<QDir::Filters>( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
-*/
-void QDirIterator_new4()
-{
-  auto obj = new QDirIterator( PQSTRING( 1 ), PQSTRINGLIST( 2 ), HB_ISNIL( 3 ) ? static_cast< QDir::Filters >( QDir::NoFilter ) : static_cast< QDir::Filters >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 4 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
   if( ISBETWEEN( 1, 2 ) && ISQDIR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDirIterator_new1();
+    /*
+    QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    */
+    auto obj = new QDirIterator( *PQDIR( 1 ), HB_ISNIL( 2 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDirIterator_new2();
+    /*
+    QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    */
+    auto obj = new QDirIterator( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDirIterator_new3();
+    /*
+    QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    */
+    auto obj = new QDirIterator( PQSTRING( 1 ), static_cast<QDir::Filters>( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 4 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QDirIterator_new4();
+    /*
+    QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    */
+    auto obj = new QDirIterator( PQSTRING( 1 ), PQSTRINGLIST( 2 ), HB_ISNIL( 3 ) ? static_cast< QDir::Filters >( QDir::NoFilter ) : static_cast< QDir::Filters >( hb_parni( 3 ) ), HB_ISNIL( 4 ) ? static_cast< QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast< QDirIterator::IteratorFlags >( hb_parni( 4 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

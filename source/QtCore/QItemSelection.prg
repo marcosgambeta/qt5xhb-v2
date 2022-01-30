@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,25 @@ RETURN
 #include <QtCore/QItemSelection>
 #endif
 
-/*
-QItemSelection()
-*/
-void QItemSelection_new1()
-{
-  auto obj = new QItemSelection();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-*/
-void QItemSelection_new2()
-{
-  auto obj = new QItemSelection( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QITEMSELECTION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QItemSelection_new1();
+    /*
+    QItemSelection()
+    */
+    auto obj = new QItemSelection();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQMODELINDEX( 2 ) )
   {
-    QItemSelection_new2();
+    /*
+    QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+    */
+    auto obj = new QItemSelection( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

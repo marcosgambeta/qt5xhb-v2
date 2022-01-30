@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,52 +70,40 @@ RETURN
 #endif
 #endif
 
-/*
-QMarginsF()
-*/
-void QMarginsF_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QMarginsF();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
-*/
-void QMarginsF_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QMarginsF( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QMarginsF( const QMargins & margins )
-*/
-void QMarginsF_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QMarginsF( *PQMARGINS( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QMARGINSF_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QMarginsF_new1();
+    /*
+    QMarginsF()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QMarginsF();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QMarginsF_new2();
+    /*
+    QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QMarginsF( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQMARGINSF( 1 ) )
   {
-    QMarginsF_new3();
+    /*
+    QMarginsF( const QMargins & margins )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    auto obj = new QMarginsF( *PQMARGINS( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

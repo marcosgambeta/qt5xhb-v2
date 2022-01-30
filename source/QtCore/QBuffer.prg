@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,33 +62,25 @@ RETURN
 #include <QtCore/QBuffer>
 #endif
 
-/*
-QBuffer( QObject * parent = nullptr )
-*/
-void QBuffer_new1()
-{
-  auto obj = new QBuffer( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QBuffer( QByteArray * byteArray, QObject * parent = nullptr )
-*/
-void QBuffer_new2()
-{
-  auto obj = new QBuffer( PQBYTEARRAY( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QBuffer_new1();
+    /*
+    QBuffer( QObject * parent = nullptr )
+    */
+    auto obj = new QBuffer( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QBuffer_new2();
+    /*
+    QBuffer( QByteArray * byteArray, QObject * parent = nullptr )
+    */
+    auto obj = new QBuffer( PQBYTEARRAY( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -221,45 +213,37 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setData( const QByteArray & data )
-*/
-void QBuffer_setData1()
-{
-  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setData( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setData( const char * data, int size )
-*/
-void QBuffer_setData2()
-{
-  auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setData( PCONSTCHAR( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QBuffer_setData1();
+    /*
+    void setData( const QByteArray & data )
+    */
+    auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setData( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QBuffer_setData2();
+    /*
+    void setData( const char * data, int size )
+    */
+    auto obj = qobject_cast< QBuffer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setData( PCONSTCHAR( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

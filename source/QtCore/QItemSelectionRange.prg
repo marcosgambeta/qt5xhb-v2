@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,59 +74,43 @@ RETURN
 #include <QtCore/QItemSelectionRange>
 #endif
 
-/*
-QItemSelectionRange()
-*/
-void QItemSelectionRange_new1()
-{
-  auto obj = new QItemSelectionRange();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelectionRange( const QItemSelectionRange & other )
-*/
-void QItemSelectionRange_new2()
-{
-  auto obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-*/
-void QItemSelectionRange_new3()
-{
-  auto obj = new QItemSelectionRange( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelectionRange( const QModelIndex & index )
-*/
-void QItemSelectionRange_new4()
-{
-  auto obj = new QItemSelectionRange( *PQMODELINDEX( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QItemSelectionRange_new1();
+    /*
+    QItemSelectionRange()
+    */
+    auto obj = new QItemSelectionRange();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQITEMSELECTIONRANGE( 1 ) )
   {
-    QItemSelectionRange_new2();
+    /*
+    QItemSelectionRange( const QItemSelectionRange & other )
+    */
+    auto obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQMODELINDEX( 2 ) )
   {
-    QItemSelectionRange_new3();
+    /*
+    QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+    */
+    auto obj = new QItemSelectionRange( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QItemSelectionRange_new4();
+    /*
+    QItemSelectionRange( const QModelIndex & index )
+    */
+    auto obj = new QItemSelectionRange( *PQMODELINDEX( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -395,41 +379,33 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
   }
 }
 
-/*
-bool contains( const QModelIndex & index ) const
-*/
-void QItemSelectionRange_contains1()
-{
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( *PQMODELINDEX( 1 ) ) );
-  }
-}
-
-/*
-bool contains( int row, int column, const QModelIndex & parentIndex ) const
-*/
-void QItemSelectionRange_contains2()
-{
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( PINT( 1 ), PINT( 2 ), *PQMODELINDEX( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {
   if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QItemSelectionRange_contains1();
+    /*
+    bool contains( const QModelIndex & index ) const
+    */
+    auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( *PQMODELINDEX( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQMODELINDEX( 3 ) )
   {
-    QItemSelectionRange_contains2();
+    /*
+    bool contains( int row, int column, const QModelIndex & parentIndex ) const
+    */
+    auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( PINT( 1 ), PINT( 2 ), *PQMODELINDEX( 3 ) ) );
+    }
+
   }
   else
   {

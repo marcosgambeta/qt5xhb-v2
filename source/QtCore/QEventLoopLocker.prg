@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,46 +55,34 @@ RETURN
 #include <QtCore/QEventLoopLocker>
 #endif
 
-/*
-QEventLoopLocker()
-*/
-void QEventLoopLocker_new1()
-{
-  auto obj = new QEventLoopLocker();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QEventLoopLocker( QEventLoop * loop )
-*/
-void QEventLoopLocker_new2()
-{
-  auto obj = new QEventLoopLocker( PQEVENTLOOP( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QEventLoopLocker( QThread * thread )
-*/
-void QEventLoopLocker_new3()
-{
-  auto obj = new QEventLoopLocker( PQTHREAD( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QEventLoopLocker_new1();
+    /*
+    QEventLoopLocker()
+    */
+    auto obj = new QEventLoopLocker();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQEVENTLOOP( 1 ) )
   {
-    QEventLoopLocker_new2();
+    /*
+    QEventLoopLocker( QEventLoop * loop )
+    */
+    auto obj = new QEventLoopLocker( PQEVENTLOOP( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTHREAD( 1 ) )
   {
-    QEventLoopLocker_new3();
+    /*
+    QEventLoopLocker( QThread * thread )
+    */
+    auto obj = new QEventLoopLocker( PQTHREAD( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

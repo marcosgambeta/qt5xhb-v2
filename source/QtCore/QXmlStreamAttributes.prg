@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -97,64 +97,52 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void append( const QString & namespaceUri, const QString & name, const QString & value )
-*/
-void QXmlStreamAttributes_append1()
-{
-  auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->append( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void append( const QXmlStreamAttribute & attribute )
-*/
-void QXmlStreamAttributes_append2()
-{
-  auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->append( *PQXMLSTREAMATTRIBUTE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void append( const QString & qualifiedName, const QString & value )
-*/
-void QXmlStreamAttributes_append3()
-{
-  auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->append( PQSTRING( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 {
   if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QXmlStreamAttributes_append1();
+    /*
+    void append( const QString & namespaceUri, const QString & name, const QString & value )
+    */
+    auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->append( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMATTRIBUTE( 1 ) )
   {
-    QXmlStreamAttributes_append2();
+    /*
+    void append( const QXmlStreamAttribute & attribute )
+    */
+    auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->append( *PQXMLSTREAMATTRIBUTE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamAttributes_append3();
+    /*
+    void append( const QString & qualifiedName, const QString & value )
+    */
+    auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->append( PQSTRING( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -162,58 +150,46 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
   }
 }
 
-/*
-bool hasAttribute( const QString & qualifiedName ) const
-*/
-void QXmlStreamAttributes_hasAttribute1()
-{
-  auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->hasAttribute( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-bool hasAttribute( QLatin1String qualifiedName ) const
-*/
-void QXmlStreamAttributes_hasAttribute2()
-{
-  auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->hasAttribute( *PQLATIN1STRING( 1 ) ) );
-  }
-}
-
-/*
-bool hasAttribute( const QString & namespaceUri, const QString & name ) const
-*/
-void QXmlStreamAttributes_hasAttribute3()
-{
-  auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->hasAttribute( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamAttributes_hasAttribute1();
+    /*
+    bool hasAttribute( const QString & qualifiedName ) const
+    */
+    auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->hasAttribute( PQSTRING( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISOBJECT( 1 ) )
   {
-    QXmlStreamAttributes_hasAttribute2();
+    /*
+    bool hasAttribute( QLatin1String qualifiedName ) const
+    */
+    auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->hasAttribute( *PQLATIN1STRING( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamAttributes_hasAttribute3();
+    /*
+    bool hasAttribute( const QString & namespaceUri, const QString & name ) const
+    */
+    auto obj = static_cast< QXmlStreamAttributes * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->hasAttribute( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+    }
+
   }
   else
   {

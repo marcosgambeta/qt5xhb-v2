@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,46 +58,34 @@ RETURN
 #include <QtCore/QXmlStreamNamespaceDeclaration>
 #endif
 
-/*
-QXmlStreamNamespaceDeclaration()
-*/
-void QXmlStreamNamespaceDeclaration_new1()
-{
-  auto obj = new QXmlStreamNamespaceDeclaration();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
-*/
-void QXmlStreamNamespaceDeclaration_new2()
-{
-  auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
-*/
-void QXmlStreamNamespaceDeclaration_new3()
-{
-  auto obj = new QXmlStreamNamespaceDeclaration( PQSTRING( 1 ), PQSTRING( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamNamespaceDeclaration_new1();
+    /*
+    QXmlStreamNamespaceDeclaration()
+    */
+    auto obj = new QXmlStreamNamespaceDeclaration();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMNAMESPACEDECLARATION( 1 ) )
   {
-    QXmlStreamNamespaceDeclaration_new2();
+    /*
+    QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
+    */
+    auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamNamespaceDeclaration_new3();
+    /*
+    QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
+    */
+    auto obj = new QXmlStreamNamespaceDeclaration( PQSTRING( 1 ), PQSTRING( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

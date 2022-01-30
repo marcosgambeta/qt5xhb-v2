@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,67 +77,51 @@ RETURN
 #endif
 #endif
 
-/*
-QStorageInfo()
-*/
-void QStorageInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QStorageInfo();
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QStorageInfo( const QString & path )
-*/
-void QStorageInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QStorageInfo( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QStorageInfo( const QDir & dir )
-*/
-void QStorageInfo_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QStorageInfo( *PQDIR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
-/*
-QStorageInfo( const QStorageInfo & other )
-*/
-void QStorageInfo_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QStorageInfo( *PQSTORAGEINFO( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-#endif
-}
-
 HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStorageInfo_new1();
+    /*
+    QStorageInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QStorageInfo();
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QStorageInfo_new2();
+    /*
+    QStorageInfo( const QString & path )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QStorageInfo( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQDIR( 1 ) )
   {
-    QStorageInfo_new3();
+    /*
+    QStorageInfo( const QDir & dir )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QStorageInfo( *PQDIR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTORAGEINFO( 1 ) )
   {
-    QStorageInfo_new4();
+    /*
+    QStorageInfo( const QStorageInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    auto obj = new QStorageInfo( *PQSTORAGEINFO( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+#endif
+
   }
   else
   {

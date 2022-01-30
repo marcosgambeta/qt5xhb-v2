@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,33 +71,25 @@ RETURN
 
 #include <QtCore/QPointF>
 
-/*
-QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
-*/
-void QEasingCurve_new1()
-{
-  auto obj = new QEasingCurve( HB_ISNIL( 1 ) ? static_cast< QEasingCurve::Type >( QEasingCurve::Linear ) : static_cast< QEasingCurve::Type >( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QEasingCurve( const QEasingCurve & other )
-*/
-void QEasingCurve_new2()
-{
-  auto obj = new QEasingCurve( *PQEASINGCURVE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QEasingCurve_new1();
+    /*
+    QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
+    */
+    auto obj = new QEasingCurve( HB_ISNIL( 1 ) ? static_cast< QEasingCurve::Type >( QEasingCurve::Linear ) : static_cast< QEasingCurve::Type >( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQEASINGCURVE( 1 ) )
   {
-    QEasingCurve_new2();
+    /*
+    QEasingCurve( const QEasingCurve & other )
+    */
+    auto obj = new QEasingCurve( *PQEASINGCURVE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

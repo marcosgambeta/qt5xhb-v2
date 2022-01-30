@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -90,42 +90,34 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QString select( const QString & filePath ) const
-*/
-void QFileSelector_select1()
-{
-  auto obj = qobject_cast< QFileSelector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRING( obj->select( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-QUrl select( const QUrl & filePath ) const
-*/
-void QFileSelector_select2()
-{
-  auto obj = qobject_cast< QFileSelector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QUrl( obj->select( *PQURL( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QURL", true );
-  }
-}
-
 HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFileSelector_select1();
+    /*
+    QString select( const QString & filePath ) const
+    */
+    auto obj = qobject_cast< QFileSelector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRING( obj->select( PQSTRING( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QFileSelector_select2();
+    /*
+    QUrl select( const QUrl & filePath ) const
+    */
+    auto obj = qobject_cast< QFileSelector * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QUrl( obj->select( *PQURL( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
+    }
+
   }
   else
   {

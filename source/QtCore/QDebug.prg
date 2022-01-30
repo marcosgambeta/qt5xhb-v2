@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,46 +67,34 @@ RETURN
 #include <QtCore/QDebug>
 #endif
 
-/*
-QDebug( QIODevice * device )
-*/
-void QDebug_new1()
-{
-  auto obj = new QDebug( PQIODEVICE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDebug( QtMsgType t )
-*/
-void QDebug_new3()
-{
-  auto obj = new QDebug( static_cast<QtMsgType>( hb_parni( 1 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDebug( const QDebug & o )
-*/
-void QDebug_new4()
-{
-  auto obj = new QDebug( *PQDEBUG( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDEBUG_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QDebug_new1();
+    /*
+    QDebug( QIODevice * device )
+    */
+    auto obj = new QDebug( PQIODEVICE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QDebug_new3();
+    /*
+    QDebug( QtMsgType t )
+    */
+    auto obj = new QDebug( static_cast<QtMsgType>( hb_parni( 1 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDEBUG( 1 ) )
   {
-    QDebug_new4();
+    /*
+    QDebug( const QDebug & o )
+    */
+    auto obj = new QDebug( *PQDEBUG( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -418,46 +406,38 @@ HB_FUNC_STATIC( QDEBUG_SETVERBOSITY )
 #endif
 }
 
-/*
-int verbosity() const
-*/
-void QDebug_verbosity1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->verbosity() );
-  }
-#endif
-}
-
-/*
-QDebug & verbosity( int verbosityLevel )
-*/
-void QDebug_verbosity2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QDebug * ptr = &obj->verbosity( PINT( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QDEBUG_VERBOSITY )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDebug_verbosity1();
+    /*
+    int verbosity() const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->verbosity() );
+    }
+#endif
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QDebug_verbosity2();
+    /*
+    QDebug & verbosity( int verbosityLevel )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+    auto obj = static_cast< QDebug * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QDebug * ptr = &obj->verbosity( PINT( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
+    }
+#endif
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -87,59 +87,43 @@ RETURN
 #include <QtCore/QDateTime>
 #endif
 
-/*
-QDateTime()
-*/
-void QDateTime_new1()
-{
-  auto obj = new QDateTime();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDateTime( const QDate & date )
-*/
-void QDateTime_new2()
-{
-  auto obj = new QDateTime( *PQDATE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
-*/
-void QDateTime_new3()
-{
-  auto obj = new QDateTime( *PQDATE( 1 ), *PQTIME( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::TimeSpec >( Qt::LocalTime ) : static_cast< Qt::TimeSpec >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDateTime( const QDateTime & other )
-*/
-void QDateTime_new4()
-{
-  auto obj = new QDateTime( *PQDATETIME( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDATETIME_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDateTime_new1();
+    /*
+    QDateTime()
+    */
+    auto obj = new QDateTime();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDATE( 1 ) )
   {
-    QDateTime_new2();
+    /*
+    QDateTime( const QDate & date )
+    */
+    auto obj = new QDateTime( *PQDATE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQDATE( 1 ) && ISQTIME( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDateTime_new3();
+    /*
+    QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
+    */
+    auto obj = new QDateTime( *PQDATE( 1 ), *PQTIME( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::TimeSpec >( Qt::LocalTime ) : static_cast< Qt::TimeSpec >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
   {
-    QDateTime_new4();
+    /*
+    QDateTime( const QDateTime & other )
+    */
+    auto obj = new QDateTime( *PQDATETIME( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -662,41 +646,33 @@ HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
   }
 }
 
-/*
-QString toString( const QString & format ) const
-*/
-void QDateTime_toString1()
-{
-  auto obj = static_cast< QDateTime * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRING( obj->toString( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-QString toString( Qt::DateFormat format = Qt::TextDate ) const
-*/
-void QDateTime_toString2()
-{
-  auto obj = static_cast< QDateTime * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RQSTRING( obj->toString( HB_ISNIL( 1 ) ? static_cast< Qt::DateFormat >( Qt::TextDate ) : static_cast< Qt::DateFormat >( hb_parni( 1 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QDATETIME_TOSTRING )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QDateTime_toString1();
+    /*
+    QString toString( const QString & format ) const
+    */
+    auto obj = static_cast< QDateTime * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRING( obj->toString( PQSTRING( 1 ) ) );
+    }
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDateTime_toString2();
+    /*
+    QString toString( Qt::DateFormat format = Qt::TextDate ) const
+    */
+    auto obj = static_cast< QDateTime * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RQSTRING( obj->toString( HB_ISNIL( 1 ) ? static_cast< Qt::DateFormat >( Qt::TextDate ) : static_cast< Qt::DateFormat >( hb_parni( 1 ) ) ) );
+    }
+
   }
   else
   {
@@ -857,33 +833,27 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 #endif
 }
 
-/*
-static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
-*/
-void QDateTime_fromString1()
-{
-  auto ptr = new QDateTime( QDateTime::fromString( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::DateFormat >( Qt::TextDate ) : static_cast< Qt::DateFormat >( hb_parni( 2 ) ) ) );
-  Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
-}
-
-/*
-static QDateTime fromString( const QString & string, const QString & format )
-*/
-void QDateTime_fromString2()
-{
-  auto ptr = new QDateTime( QDateTime::fromString( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
-}
-
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDateTime_fromString1();
+    /*
+    static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
+    */
+
+    auto ptr = new QDateTime( QDateTime::fromString( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::DateFormat >( Qt::TextDate ) : static_cast< Qt::DateFormat >( hb_parni( 2 ) ) ) );
+    Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QDateTime_fromString2();
+    /*
+    static QDateTime fromString( const QString & string, const QString & format )
+    */
+
+    auto ptr = new QDateTime( QDateTime::fromString( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
+
   }
   else
   {

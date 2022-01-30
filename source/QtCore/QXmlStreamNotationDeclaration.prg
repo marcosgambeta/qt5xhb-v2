@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,33 +59,25 @@ RETURN
 #include <QtCore/QXmlStreamNotationDeclaration>
 #endif
 
-/*
-QXmlStreamNotationDeclaration()
-*/
-void QXmlStreamNotationDeclaration_new1()
-{
-  auto obj = new QXmlStreamNotationDeclaration();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
-*/
-void QXmlStreamNotationDeclaration_new2()
-{
-  auto obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamNotationDeclaration_new1();
+    /*
+    QXmlStreamNotationDeclaration()
+    */
+    auto obj = new QXmlStreamNotationDeclaration();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMNOTATIONDECLARATION( 1 ) )
   {
-    QXmlStreamNotationDeclaration_new2();
+    /*
+    QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
+    */
+    auto obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,46 +55,34 @@ RETURN
 #include <QtCore/QMessageLogger>
 #endif
 
-/*
-QMessageLogger()
-*/
-void QMessageLogger_new1()
-{
-  auto obj = new QMessageLogger();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMessageLogger( const char * file, int line, const char * function )
-*/
-void QMessageLogger_new2()
-{
-  auto obj = new QMessageLogger( PCONSTCHAR( 1 ), PINT( 2 ), PCONSTCHAR( 3 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QMessageLogger( const char * file, int line, const char * function, const char * category )
-*/
-void QMessageLogger_new3()
-{
-  auto obj = new QMessageLogger( PCONSTCHAR( 1 ), PINT( 2 ), PCONSTCHAR( 3 ), PCONSTCHAR( 4 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QMessageLogger_new1();
+    /*
+    QMessageLogger()
+    */
+    auto obj = new QMessageLogger();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QMessageLogger_new2();
+    /*
+    QMessageLogger( const char * file, int line, const char * function )
+    */
+    auto obj = new QMessageLogger( PCONSTCHAR( 1 ), PINT( 2 ), PCONSTCHAR( 3 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) )
   {
-    QMessageLogger_new3();
+    /*
+    QMessageLogger( const char * file, int line, const char * function, const char * category )
+    */
+    auto obj = new QMessageLogger( PCONSTCHAR( 1 ), PINT( 2 ), PCONSTCHAR( 3 ), PCONSTCHAR( 4 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,33 +77,25 @@ RETURN
 #include <QtCore/QAtomicInt>
 #endif
 
-/*
-QAtomicInt( int value = 0 )
-*/
-void QAtomicInt_new1()
-{
-  auto obj = new QAtomicInt( OPINT( 1, 0 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QAtomicInt( const QAtomicInt & other )
-*/
-void QAtomicInt_new2()
-{
-  auto obj = new QAtomicInt( *PQATOMICINT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QAtomicInt_new1();
+    /*
+    QAtomicInt( int value = 0 )
+    */
+    auto obj = new QAtomicInt( OPINT( 1, 0 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQATOMICINT( 1 ) )
   {
-    QAtomicInt_new2();
+    /*
+    QAtomicInt( const QAtomicInt & other )
+    */
+    auto obj = new QAtomicInt( *PQATOMICINT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

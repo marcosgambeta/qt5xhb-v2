@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,46 +71,34 @@ RETURN
 #include <QtCore/QLine>
 #endif
 
-/*
-QLine()
-*/
-void QLine_new1()
-{
-  auto obj = new QLine();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QLine( const QPoint & p1, const QPoint & p2 )
-*/
-void QLine_new2()
-{
-  auto obj = new QLine( *PQPOINT( 1 ), *PQPOINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QLine( int x1, int y1, int x2, int y2 )
-*/
-void QLine_new3()
-{
-  auto obj = new QLine( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QLINE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QLine_new1();
+    /*
+    QLine()
+    */
+    auto obj = new QLine();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPOINT( 2 ) )
   {
-    QLine_new2();
+    /*
+    QLine( const QPoint & p1, const QPoint & p2 )
+    */
+    auto obj = new QLine( *PQPOINT( 1 ), *PQPOINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QLine_new3();
+    /*
+    QLine( int x1, int y1, int x2, int y2 )
+    */
+    auto obj = new QLine( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -457,45 +445,37 @@ HB_FUNC_STATIC( QLINE_SETPOINTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void translate( const QPoint & offset )
-*/
-void QLine_translate1()
-{
-  auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->translate( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void translate( int dx, int dy )
-*/
-void QLine_translate2()
-{
-  auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->translate( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QLINE_TRANSLATE )
 {
   if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QLine_translate1();
+    /*
+    void translate( const QPoint & offset )
+    */
+    auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->translate( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QLine_translate2();
+    /*
+    void translate( int dx, int dy )
+    */
+    auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->translate( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -503,43 +483,35 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
   }
 }
 
-/*
-QLine translated( const QPoint & offset ) const
-*/
-void QLine_translated1()
-{
-  auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QLine( obj->translated( *PQPOINT( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QLINE", true );
-  }
-}
-
-/*
-QLine translated( int dx, int dy ) const
-*/
-void QLine_translated2()
-{
-  auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QLine( obj->translated( PINT( 1 ), PINT( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QLINE", true );
-  }
-}
-
 HB_FUNC_STATIC( QLINE_TRANSLATED )
 {
   if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QLine_translated1();
+    /*
+    QLine translated( const QPoint & offset ) const
+    */
+    auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QLine( obj->translated( *PQPOINT( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QLINE", true );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QLine_translated2();
+    /*
+    QLine translated( int dx, int dy ) const
+    */
+    auto obj = static_cast< QLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QLine( obj->translated( PINT( 1 ), PINT( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QLINE", true );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -169,72 +169,52 @@ RETURN
 #include <QtCore/QList>
 #include <QtCore/QString>
 
-/*
-QByteArray()
-*/
-void QByteArray_new1()
-{
-  auto obj = new QByteArray();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArray( const char * str )
-*/
-void QByteArray_new2()
-{
-  auto obj = new QByteArray( PCONSTCHAR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArray( const char * data, int size )
-*/
-void QByteArray_new3()
-{
-  auto obj = new QByteArray( PCONSTCHAR( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArray( int size, char ch )
-*/
-void QByteArray_new4()
-{
-  auto obj = new QByteArray( PINT( 1 ), PCHAR( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArray( const QByteArray & other )
-*/
-void QByteArray_new5()
-{
-  auto obj = new QByteArray( *PQBYTEARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QByteArray_new1();
+    /*
+    QByteArray()
+    */
+    auto obj = new QByteArray();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_new2();
+    /*
+    QByteArray( const char * str )
+    */
+    auto obj = new QByteArray( PCONSTCHAR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QByteArray_new3();
+    /*
+    QByteArray( const char * data, int size )
+    */
+    auto obj = new QByteArray( PCONSTCHAR( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QByteArray_new4();
+    /*
+    QByteArray( int size, char ch )
+    */
+    auto obj = new QByteArray( PINT( 1 ), PCHAR( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_new5();
+    /*
+    QByteArray( const QByteArray & other )
+    */
+    auto obj = new QByteArray( *PQBYTEARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -563,58 +543,46 @@ HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
   }
 }
 
-/*
-bool contains( const QByteArray & ba ) const
-*/
-void QByteArray_contains1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
-/*
-bool contains( const char * str ) const
-*/
-void QByteArray_contains2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( PCONSTCHAR( 1 ) ) );
-  }
-}
-
-/*
-bool contains( char ch ) const
-*/
-void QByteArray_contains3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->contains( PCHAR( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_contains1();
+    /*
+    bool contains( const QByteArray & ba ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( *PQBYTEARRAY( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_contains2();
+    /*
+    bool contains( const char * str ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( PCONSTCHAR( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_contains3();
+    /*
+    bool contains( char ch ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->contains( PCHAR( 1 ) ) );
+    }
+
   }
   else
   {
@@ -622,75 +590,59 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
   }
 }
 
-/*
-int count( const QByteArray & ba ) const
-*/
-void QByteArray_count1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->count( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
-/*
-int count( const char * str ) const
-*/
-void QByteArray_count2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->count( PCONSTCHAR( 1 ) ) );
-  }
-}
-
-/*
-int count( char ch ) const
-*/
-void QByteArray_count3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->count( PCHAR( 1 ) ) );
-  }
-}
-
-/*
-int count() const
-*/
-void QByteArray_count4()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->count() );
-  }
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_count1();
+    /*
+    int count( const QByteArray & ba ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->count( *PQBYTEARRAY( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_count2();
+    /*
+    int count( const char * str ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->count( PCONSTCHAR( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_count3();
+    /*
+    int count( char ch ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->count( PCHAR( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QByteArray_count4();
+    /*
+    int count() const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->count() );
+    }
+
   }
   else
   {
@@ -727,58 +679,46 @@ HB_FUNC_STATIC( QBYTEARRAY_DATA )
   HB_FUNC_EXEC( QBYTEARRAY_DATA2 );
 }
 
-/*
-bool endsWith( const QByteArray & ba ) const
-*/
-void QByteArray_endsWith1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->endsWith( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
-/*
-bool endsWith( const char * str ) const
-*/
-void QByteArray_endsWith2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->endsWith( PCONSTCHAR( 1 ) ) );
-  }
-}
-
-/*
-bool endsWith( char ch ) const
-*/
-void QByteArray_endsWith3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->endsWith( PCHAR( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_endsWith1();
+    /*
+    bool endsWith( const QByteArray & ba ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->endsWith( *PQBYTEARRAY( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_endsWith2();
+    /*
+    bool endsWith( const char * str ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->endsWith( PCONSTCHAR( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_endsWith3();
+    /*
+    bool endsWith( char ch ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->endsWith( PCHAR( 1 ) ) );
+    }
+
   }
   else
   {
@@ -1347,144 +1287,116 @@ HB_FUNC_STATIC( QBYTEARRAY_MID )
   }
 }
 
-/*
-QByteArray & prepend( const QByteArray & ba )
-*/
-void QByteArray_prepend1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QByteArray * ptr = &obj->prepend( *PQBYTEARRAY( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
-  }
-}
-
-/*
-QByteArray & prepend( const char * str )
-*/
-void QByteArray_prepend2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QByteArray * ptr = &obj->prepend( PCONSTCHAR( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
-  }
-}
-
-/*
-QByteArray & prepend( const char * str, int len )
-*/
-void QByteArray_prepend3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QByteArray * ptr = &obj->prepend( PCONSTCHAR( 1 ), PINT( 2 ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
-  }
-}
-
-/*
-QByteArray & prepend( char ch )
-*/
-void QByteArray_prepend4()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QByteArray * ptr = &obj->prepend( PCHAR( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
-  }
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_prepend1();
+    /*
+    QByteArray & prepend( const QByteArray & ba )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QByteArray * ptr = &obj->prepend( *PQBYTEARRAY( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_prepend2();
+    /*
+    QByteArray & prepend( const char * str )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QByteArray * ptr = &obj->prepend( PCONSTCHAR( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QByteArray_prepend3();
+    /*
+    QByteArray & prepend( const char * str, int len )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QByteArray * ptr = &obj->prepend( PCONSTCHAR( 1 ), PINT( 2 ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_prepend4();
+    /*
+    QByteArray & prepend( char ch )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QByteArray * ptr = &obj->prepend( PCHAR( 1 ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
+    }
+
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void push_back( const QByteArray & other )
-*/
-void QByteArray_push_back1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->push_back( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void push_back( const char * str )
-*/
-void QByteArray_push_back2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->push_back( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void push_back( char ch )
-*/
-void QByteArray_push_back3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->push_back( PCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_push_back1();
+    /*
+    void push_back( const QByteArray & other )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->push_back( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_push_back2();
+    /*
+    void push_back( const char * str )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->push_back( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_push_back3();
+    /*
+    void push_back( char ch )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->push_back( PCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -1492,64 +1404,52 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
   }
 }
 
-/*
-void push_front( const QByteArray & other )
-*/
-void QByteArray_push_front1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->push_front( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void push_front( const char * str )
-*/
-void QByteArray_push_front2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->push_front( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void push_front( char ch )
-*/
-void QByteArray_push_front3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->push_front( PCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_push_front1();
+    /*
+    void push_front( const QByteArray & other )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->push_front( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_push_front2();
+    /*
+    void push_front( const char * str )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->push_front( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_push_front3();
+    /*
+    void push_front( char ch )
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->push_front( PCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -2487,58 +2387,46 @@ HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool startsWith( const QByteArray & ba ) const
-*/
-void QByteArray_startsWith1()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->startsWith( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
-/*
-bool startsWith( const char * str ) const
-*/
-void QByteArray_startsWith2()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->startsWith( PCONSTCHAR( 1 ) ) );
-  }
-}
-
-/*
-bool startsWith( char ch ) const
-*/
-void QByteArray_startsWith3()
-{
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->startsWith( PCHAR( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_startsWith1();
+    /*
+    bool startsWith( const QByteArray & ba ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->startsWith( *PQBYTEARRAY( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QByteArray_startsWith2();
+    /*
+    bool startsWith( const char * str ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->startsWith( PCONSTCHAR( 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QByteArray_startsWith3();
+    /*
+    bool startsWith( char ch ) const
+    */
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->startsWith( PCHAR( 1 ) ) );
+    }
+
   }
   else
   {
@@ -2982,35 +2870,29 @@ HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-static QByteArray fromBase64( const QByteArray & base64 )
-*/
-void QByteArray_fromBase641()
-{
-  auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
-/*
-static QByteArray fromBase64( const QByteArray & base64, QByteArray::Base64Options options )
-*/
-void QByteArray_fromBase642()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY( 1 ), static_cast<QByteArray::Base64Options>( hb_parni( 2 ) ) ) );
-  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-#endif
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArray_fromBase641();
+    /*
+    static QByteArray fromBase64( const QByteArray & base64 )
+    */
+
+    auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
   {
-    QByteArray_fromBase642();
+    /*
+    static QByteArray fromBase64( const QByteArray & base64, QByteArray::Base64Options options )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+
+    auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY( 1 ), static_cast<QByteArray::Base64Options>( hb_parni( 2 ) ) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+#endif
+
   }
   else
   {
@@ -3263,45 +3145,37 @@ HB_FUNC_STATIC( QBYTEARRAY_CHOPPED )
 #endif
 }
 
-/*
-int compare( const char * c, Qt::CaseSensitivity cs = Qt::CaseSensitive ) const
-*/
-void QByteArray_compare1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->compare( PCONSTCHAR( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 2 ) ) ) );
-  }
-#endif
-}
-
-/*
-int compare( const QByteArray & a, Qt::CaseSensitivity cs = Qt::CaseSensitive ) const
-*/
-void QByteArray_compare2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->compare( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 2 ) ) ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QBYTEARRAY_COMPARE )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QByteArray_compare1();
+    /*
+    int compare( const char * c, Qt::CaseSensitivity cs = Qt::CaseSensitive ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->compare( PCONSTCHAR( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 2 ) ) ) );
+    }
+#endif
+
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QByteArray_compare2();
+    /*
+    int compare( const QByteArray & a, Qt::CaseSensitivity cs = Qt::CaseSensitive ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+    auto obj = static_cast< QByteArray * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->compare( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 2 ) ) ) );
+    }
+#endif
+
   }
   else
   {

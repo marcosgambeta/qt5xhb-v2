@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -703,66 +703,54 @@ HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void start( const QString & program, const QStringList & arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite )
-*/
-void QProcess_start1()
-{
-  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->start( PQSTRING( 1 ), PQSTRINGLIST( 2 ), HB_ISNIL( 3 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void start( const QString & command, QIODevice::OpenMode mode = QIODevice::ReadWrite )
-*/
-void QProcess_start2()
-{
-  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->start( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void start( QIODevice::OpenMode mode = QIODevice::ReadWrite )
-*/
-void QProcess_start3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->start( HB_ISNIL( 1 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
 HB_FUNC_STATIC( QPROCESS_START )
 {
   if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QProcess_start1();
+    /*
+    void start( const QString & program, const QStringList & arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite )
+    */
+    auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->start( PQSTRING( 1 ), PQSTRINGLIST( 2 ), HB_ISNIL( 3 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QProcess_start2();
+    /*
+    void start( const QString & command, QIODevice::OpenMode mode = QIODevice::ReadWrite )
+    */
+    auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->start( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QProcess_start3();
+    /*
+    void start( QIODevice::OpenMode mode = QIODevice::ReadWrite )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->start( HB_ISNIL( 1 ) ? static_cast< QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast< QIODevice::OpenMode >( hb_parni( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
   }
   else
   {
@@ -1112,31 +1100,25 @@ HB_FUNC_STATIC( QPROCESS_TERMINATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-static int execute( const QString & program, const QStringList & arguments )
-*/
-void QProcess_execute1()
-{
-  RINT( QProcess::execute( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
-}
-
-/*
-static int execute( const QString & command )
-*/
-void QProcess_execute2()
-{
-  RINT( QProcess::execute( PQSTRING( 1 ) ) );
-}
-
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QProcess_execute1();
+    /*
+    static int execute( const QString & program, const QStringList & arguments )
+    */
+
+    RINT( QProcess::execute( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QProcess_execute2();
+    /*
+    static int execute( const QString & command )
+    */
+
+    RINT( QProcess::execute( PQSTRING( 1 ) ) );
+
   }
   else
   {
@@ -1144,66 +1126,53 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
   }
 }
 
-/*
-static bool startDetached( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
-*/
-void QProcess_startDetached1()
-{
-  qint64 par4;
-  RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ), PQSTRING( 3 ), &par4 ) );
-  hb_stornll( par4, 4 );
-}
-
-/*
-static bool startDetached( const QString & program, const QStringList & arguments )
-*/
-void QProcess_startDetached2()
-{
-  RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
-}
-
-/*
-static bool startDetached( const QString & program )
-*/
-void QProcess_startDetached3()
-{
-  RBOOL( QProcess::startDetached( PQSTRING( 1 ) ) );
-}
-
-/*
-bool startDetached( qint64 * pid = nullptr )
-*/
-void QProcess_startDetached4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    qint64 par1;
-    RBOOL( obj->startDetached( &par1 ) );
-    hb_stornll( par1, 1 );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
   if( ISBETWEEN( 3, 4 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QProcess_startDetached1();
+    /*
+    static bool startDetached( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+    */
+
+    qint64 par4;
+    RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ), PQSTRING( 3 ), &par4 ) );
+    hb_stornll( par4, 4 );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QProcess_startDetached2();
+    /*
+    static bool startDetached( const QString & program, const QStringList & arguments )
+    */
+
+    RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QProcess_startDetached3();
+    /*
+    static bool startDetached( const QString & program )
+    */
+
+    RBOOL( QProcess::startDetached( PQSTRING( 1 ) ) );
+
   }
-  else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QProcess_startDetached4();
+    /*
+    bool startDetached( qint64 * pid = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    auto obj = qobject_cast< QProcess * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      qint64 par1;
+      RBOOL( obj->startDetached( &par1 ) );
+      hb_stornll( par1, 1 );
+    }
+#endif
+
   }
   else
   {

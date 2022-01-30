@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -83,33 +83,25 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtCore/QVariantList>
 
-/*
-QJsonArray()
-*/
-void QJsonArray_new1()
-{
-  auto obj = new QJsonArray();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonArray( const QJsonArray & other )
-*/
-void QJsonArray_new2()
-{
-  auto obj = new QJsonArray( *PQJSONARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QJSONARRAY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QJsonArray_new1();
+    /*
+    QJsonArray()
+    */
+    auto obj = new QJsonArray();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONARRAY( 1 ) )
   {
-    QJsonArray_new2();
+    /*
+    QJsonArray( const QJsonArray & other )
+    */
+    auto obj = new QJsonArray( *PQJSONARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

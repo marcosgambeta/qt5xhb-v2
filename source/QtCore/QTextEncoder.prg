@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,33 +58,25 @@ RETURN
 #include <QtCore/QTextEncoder>
 #endif
 
-/*
-QTextEncoder( const QTextCodec * codec )
-*/
-void QTextEncoder_new1()
-{
-  auto obj = new QTextEncoder( PQTEXTCODEC( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
-*/
-void QTextEncoder_new2()
-{
-  auto obj = new QTextEncoder( PQTEXTCODEC( 1 ), static_cast<QTextCodec::ConversionFlags>( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTENCODER_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
-    QTextEncoder_new1();
+    /*
+    QTextEncoder( const QTextCodec * codec )
+    */
+    auto obj = new QTextEncoder( PQTEXTCODEC( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && ISQTEXTCODEC( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextEncoder_new2();
+    /*
+    QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
+    */
+    auto obj = new QTextEncoder( PQTEXTCODEC( 1 ), static_cast<QTextCodec::ConversionFlags>( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -109,43 +101,35 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QByteArray fromUnicode( const QString & str )
-*/
-void QTextEncoder_fromUnicode1()
-{
-  auto obj = static_cast< QTextEncoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QByteArray( obj->fromUnicode( PQSTRING( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-  }
-}
-
-/*
-QByteArray fromUnicode( const QChar * uc, int len )
-*/
-void QTextEncoder_fromUnicode2()
-{
-  auto obj = static_cast< QTextEncoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QByteArray( obj->fromUnicode( PQCHAR( 1 ), PINT( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTextEncoder_fromUnicode1();
+    /*
+    QByteArray fromUnicode( const QString & str )
+    */
+    auto obj = static_cast< QTextEncoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QByteArray( obj->fromUnicode( PQSTRING( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextEncoder_fromUnicode2();
+    /*
+    QByteArray fromUnicode( const QChar * uc, int len )
+    */
+    auto obj = static_cast< QTextEncoder * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QByteArray( obj->fromUnicode( PQCHAR( 1 ), PINT( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,25 @@ RETURN
 #include <QtCore/QPoint>
 #endif
 
-/*
-QPoint()
-*/
-void QPoint_new1()
-{
-  auto obj = new QPoint();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPoint( int xpos, int ypos )
-*/
-void QPoint_new2()
-{
-  auto obj = new QPoint( PINT( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPoint_new1();
+    /*
+    QPoint()
+    */
+    auto obj = new QPoint();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPoint_new2();
+    /*
+    QPoint( int xpos, int ypos )
+    */
+    auto obj = new QPoint( PINT( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

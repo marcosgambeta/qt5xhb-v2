@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -179,45 +179,37 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
   }
 }
 
-/*
-void setFilterRegExp( const QRegExp & regExp )
-*/
-void QSortFilterProxyModel_setFilterRegExp1()
-{
-  auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFilterRegExp( *PQREGEXP( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setFilterRegExp( const QString & pattern )
-*/
-void QSortFilterProxyModel_setFilterRegExp2()
-{
-  auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFilterRegExp( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
   if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
   {
-    QSortFilterProxyModel_setFilterRegExp1();
+    /*
+    void setFilterRegExp( const QRegExp & regExp )
+    */
+    auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFilterRegExp( *PQREGEXP( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSortFilterProxyModel_setFilterRegExp2();
+    /*
+    void setFilterRegExp( const QString & pattern )
+    */
+    auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFilterRegExp( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -254,58 +246,45 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGULAREXPRESSION )
 #endif
 }
 
-/*
-void setFilterRegularExpression(const QString &pattern)
-*/
-void QSortFilterProxyModel_setFilterRegularExpression1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-#if QT_CONFIG(regularexpression)
-  auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFilterRegularExpression( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
-
-/*
-void setFilterRegularExpression(const QRegularExpression &regularExpression)
-*/
-void QSortFilterProxyModel_setFilterRegularExpression2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-#if QT_CONFIG(regularexpression)
-  auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setFilterRegularExpression( *PQREGULAREXPRESSION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
-
-/*
-[1]void setFilterRegularExpression(const QString &pattern);
-[2]void setFilterRegularExpression(const QRegularExpression &regularExpression);
-*/
-
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSortFilterProxyModel_setFilterRegularExpression1();
+#if QT_CONFIG(regularexpression)
+    /*
+    void setFilterRegularExpression( const QString & pattern )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+    auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFilterRegularExpression( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
+#endif
   }
   else if( ISNUMPAR( 1 ) && ISQREGULAREXPRESSION( 1 ) )
   {
-    QSortFilterProxyModel_setFilterRegularExpression2();
+#if QT_CONFIG(regularexpression)
+    /*
+    void setFilterRegularExpression( const QRegularExpression & regularExpression )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+    auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setFilterRegularExpression( *PQREGULAREXPRESSION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+#endif
+
+#endif
   }
   else
   {
@@ -995,43 +974,35 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QObject * parent() const
-*/
-void QSortFilterProxyModel_parent1()
-{
-  auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QObject * ptr = obj->parent();
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
-/*
-QModelIndex parent( const QModelIndex & child ) const
-*/
-void QSortFilterProxyModel_parent2()
-{
-  auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
-  }
-}
-
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSortFilterProxyModel_parent1();
+    /*
+    QObject * parent() const
+    */
+    auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QObject * ptr = obj->parent();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QSortFilterProxyModel_parent2();
+    /*
+    QModelIndex parent( const QModelIndex & child ) const
+    */
+    auto obj = qobject_cast< QSortFilterProxyModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
+    }
+
   }
   else
   {

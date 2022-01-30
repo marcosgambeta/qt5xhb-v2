@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,12 +24,7 @@ CLASS QJsonValue
    DATA self_destruction INIT .F.
 
    METHOD new1
-   METHOD new2
    METHOD new3
-   METHOD new4
-   METHOD new6
-   METHOD new7
-   METHOD new8
    METHOD new9
    METHOD new
    METHOD delete
@@ -95,56 +90,11 @@ HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 }
 
 /*
-QJsonValue( bool b )
-*/
-HB_FUNC_STATIC( QJSONVALUE_NEW2 )
-{
-  auto obj = new QJsonValue( PBOOL( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
 QJsonValue( double n )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 {
   auto obj = new QJsonValue( PDOUBLE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonValue( const QString & s )
-*/
-HB_FUNC_STATIC( QJSONVALUE_NEW4 )
-{
-  auto obj = new QJsonValue( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonValue( const QJsonArray & a )
-*/
-HB_FUNC_STATIC( QJSONVALUE_NEW6 )
-{
-  auto obj = new QJsonValue( *PQJSONARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonValue( const QJsonObject & o )
-*/
-HB_FUNC_STATIC( QJSONVALUE_NEW7 )
-{
-  auto obj = new QJsonValue( *PQJSONOBJECT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonValue( const QJsonValue & other )
-*/
-HB_FUNC_STATIC( QJSONVALUE_NEW8 )
-{
-  auto obj = new QJsonValue( *PQJSONVALUE( 1 ) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -165,7 +115,12 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    HB_FUNC_EXEC( QJSONVALUE_NEW2 );
+    /*
+    QJsonValue( bool b )
+    */
+    auto obj = new QJsonValue( PBOOL( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -174,19 +129,39 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    HB_FUNC_EXEC( QJSONVALUE_NEW4 );
+    /*
+    QJsonValue( const QString & s )
+    */
+    auto obj = new QJsonValue( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONARRAY( 1 ) )
   {
-    HB_FUNC_EXEC( QJSONVALUE_NEW6 );
+    /*
+    QJsonValue( const QJsonArray & a )
+    */
+    auto obj = new QJsonValue( *PQJSONARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONOBJECT( 1 ) )
   {
-    HB_FUNC_EXEC( QJSONVALUE_NEW7 );
+    /*
+    QJsonValue( const QJsonObject & o )
+    */
+    auto obj = new QJsonValue( *PQJSONOBJECT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONVALUE( 1 ) )
   {
-    HB_FUNC_EXEC( QJSONVALUE_NEW8 );
+    /*
+    QJsonValue( const QJsonValue & other )
+    */
+    auto obj = new QJsonValue( *PQJSONVALUE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -379,43 +354,35 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
   }
 }
 
-/*
-QJsonArray toArray( const QJsonArray & defaultValue ) const
-*/
-void QJsonValue_toArray1()
-{
-  auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QJsonArray( obj->toArray( *PQJSONARRAY( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
-  }
-}
-
-/*
-QJsonArray toArray() const
-*/
-void QJsonValue_toArray2()
-{
-  auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QJsonArray( obj->toArray() );
-    Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
-  }
-}
-
 HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 {
   if( ISNUMPAR( 1 ) && ISQJSONARRAY( 1 ) )
   {
-    QJsonValue_toArray1();
+    /*
+    QJsonArray toArray( const QJsonArray & defaultValue ) const
+    */
+    auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QJsonArray( obj->toArray( *PQJSONARRAY( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
+    }
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QJsonValue_toArray2();
+    /*
+    QJsonArray toArray() const
+    */
+    auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QJsonArray( obj->toArray() );
+      Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
+    }
+
   }
   else
   {
@@ -471,43 +438,35 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
   }
 }
 
-/*
-QJsonObject toObject( const QJsonObject & defaultValue ) const
-*/
-void QJsonValue_toObject1()
-{
-  auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QJsonObject( obj->toObject( *PQJSONOBJECT( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
-  }
-}
-
-/*
-QJsonObject toObject() const
-*/
-void QJsonValue_toObject2()
-{
-  auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QJsonObject( obj->toObject() );
-    Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
-  }
-}
-
 HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 {
   if( ISNUMPAR( 1 ) && ISQJSONOBJECT( 1 ) )
   {
-    QJsonValue_toObject1();
+    /*
+    QJsonObject toObject( const QJsonObject & defaultValue ) const
+    */
+    auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QJsonObject( obj->toObject( *PQJSONOBJECT( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
+    }
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QJsonValue_toObject2();
+    /*
+    QJsonObject toObject() const
+    */
+    auto obj = static_cast< QJsonValue * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QJsonObject( obj->toObject() );
+      Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
+    }
+
   }
   else
   {

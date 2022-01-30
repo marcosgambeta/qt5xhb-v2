@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -99,83 +99,67 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setMapping( QObject * sender, int id )
-*/
-void QSignalMapper_setMapping1()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMapping( PQOBJECT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setMapping( QObject * sender, const QString & text )
-*/
-void QSignalMapper_setMapping2()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMapping( PQOBJECT( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setMapping( QObject * sender, QWidget * widget )
-*/
-void QSignalMapper_setMapping3()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMapping( PQOBJECT( 1 ), PQWIDGET( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setMapping( QObject * sender, QObject * object )
-*/
-void QSignalMapper_setMapping4()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setMapping( PQOBJECT( 1 ), PQOBJECT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
   if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSignalMapper_setMapping1();
+    /*
+    void setMapping( QObject * sender, int id )
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMapping( PQOBJECT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QSignalMapper_setMapping2();
+    /*
+    void setMapping( QObject * sender, const QString & text )
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMapping( PQOBJECT( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQWIDGET( 2 ) )
   {
-    QSignalMapper_setMapping3();
+    /*
+    void setMapping( QObject * sender, QWidget * widget )
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMapping( PQOBJECT( 1 ), PQWIDGET( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQOBJECT( 2 ) )
   {
-    QSignalMapper_setMapping4();
+    /*
+    void setMapping( QObject * sender, QObject * object )
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setMapping( PQOBJECT( 1 ), PQOBJECT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -209,79 +193,63 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QObject * mapping( int id ) const
-*/
-void QSignalMapper_mapping1()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QObject * ptr = obj->mapping( PINT( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
-/*
-QObject * mapping( const QString & text ) const
-*/
-void QSignalMapper_mapping2()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QObject * ptr = obj->mapping( PQSTRING( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
-/*
-QObject * mapping( QWidget * widget ) const
-*/
-void QSignalMapper_mapping3()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QObject * ptr = obj->mapping( PQWIDGET( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
-/*
-QObject * mapping( QObject * object ) const
-*/
-void QSignalMapper_mapping4()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QObject * ptr = obj->mapping( PQOBJECT( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
 HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QSignalMapper_mapping1();
+    /*
+    QObject * mapping( int id ) const
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QObject * ptr = obj->mapping( PINT( 1 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSignalMapper_mapping2();
+    /*
+    QObject * mapping( const QString & text ) const
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QObject * ptr = obj->mapping( PQSTRING( 1 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QSignalMapper_mapping3();
+    /*
+    QObject * mapping( QWidget * widget ) const
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QObject * ptr = obj->mapping( PQWIDGET( 1 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QSignalMapper_mapping4();
+    /*
+    QObject * mapping( QObject * object ) const
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QObject * ptr = obj->mapping( PQOBJECT( 1 ) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
+
   }
   else
   {
@@ -289,45 +257,37 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
   }
 }
 
-/*
-void map()
-*/
-void QSignalMapper_map1()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->map();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void map( QObject * sender )
-*/
-void QSignalMapper_map2()
-{
-  auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->map( PQOBJECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSignalMapper_map1();
+    /*
+    void map()
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->map();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QSignalMapper_map2();
+    /*
+    void map( QObject * sender )
+    */
+    auto obj = qobject_cast< QSignalMapper * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->map( PQOBJECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

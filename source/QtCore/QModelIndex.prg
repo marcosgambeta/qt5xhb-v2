@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,33 +68,25 @@ RETURN
 #include <QtCore/QModelIndex>
 #endif
 
-/*
-QModelIndex()
-*/
-void QModelIndex_new1()
-{
-  auto obj = new QModelIndex();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QModelIndex( const QModelIndex & other )
-*/
-void QModelIndex_new2()
-{
-  auto obj = new QModelIndex( *PQMODELINDEX( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QModelIndex_new1();
+    /*
+    QModelIndex()
+    */
+    auto obj = new QModelIndex();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QModelIndex_new2();
+    /*
+    QModelIndex( const QModelIndex & other )
+    */
+    auto obj = new QModelIndex( *PQMODELINDEX( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

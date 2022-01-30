@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -120,62 +120,50 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addData( const char * data, int length )
-*/
-void QCryptographicHash_addData1()
-{
-  auto obj = static_cast< QCryptographicHash * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addData( PCONSTCHAR( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addData( const QByteArray & data )
-*/
-void QCryptographicHash_addData2()
-{
-  auto obj = static_cast< QCryptographicHash * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->addData( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool addData( QIODevice * device )
-*/
-void QCryptographicHash_addData3()
-{
-  auto obj = static_cast< QCryptographicHash * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->addData( PQIODEVICE( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QCryptographicHash_addData1();
+    /*
+    void addData( const char * data, int length )
+    */
+    auto obj = static_cast< QCryptographicHash * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addData( PCONSTCHAR( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QCryptographicHash_addData2();
+    /*
+    void addData( const QByteArray & data )
+    */
+    auto obj = static_cast< QCryptographicHash * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->addData( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QCryptographicHash_addData3();
+    /*
+    bool addData( QIODevice * device )
+    */
+    auto obj = static_cast< QCryptographicHash * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->addData( PQIODEVICE( 1 ) ) );
+    }
+
   }
   else
   {

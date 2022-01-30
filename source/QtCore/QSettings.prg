@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,72 +82,52 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QSettings( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
-*/
-void QSettings_new1()
-{
-  auto obj = new QSettings( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QSettings( QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
-*/
-void QSettings_new2()
-{
-  auto obj = new QSettings( static_cast<QSettings::Scope>( hb_parni( 1 ) ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQOBJECT( 4, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QSettings( QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
-*/
-void QSettings_new3()
-{
-  auto obj = new QSettings( static_cast<QSettings::Format>( hb_parni( 1 ) ), static_cast<QSettings::Scope>( hb_parni( 2 ) ), PQSTRING( 3 ), OPQSTRING( 4, QString() ), OPQOBJECT( 5, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QSettings( const QString & fileName, QSettings::Format format, QObject * parent = nullptr )
-*/
-void QSettings_new4()
-{
-  auto obj = new QSettings( PQSTRING( 1 ), static_cast<QSettings::Format>( hb_parni( 2 ) ), OPQOBJECT( 3, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QSettings( QObject * parent = nullptr )
-*/
-void QSettings_new5()
-{
-  auto obj = new QSettings( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
   if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSettings_new1();
+    /*
+    QSettings( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+    */
+    auto obj = new QSettings( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QSettings_new2();
+    /*
+    QSettings( QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+    */
+    auto obj = new QSettings( static_cast<QSettings::Scope>( hb_parni( 1 ) ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 3, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( ISQOBJECT( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QSettings_new3();
+    /*
+    QSettings( QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+    */
+    auto obj = new QSettings( static_cast<QSettings::Format>( hb_parni( 1 ) ), static_cast<QSettings::Scope>( hb_parni( 2 ) ), PQSTRING( 3 ), OPQSTRING( 4, QString() ), OPQOBJECT( 5, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSettings_new4();
+    /*
+    QSettings( const QString & fileName, QSettings::Format format, QObject * parent = nullptr )
+    */
+    auto obj = new QSettings( PQSTRING( 1 ), static_cast<QSettings::Format>( hb_parni( 2 ) ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSettings_new5();
+    /*
+    QSettings( QObject * parent = nullptr )
+    */
+    auto obj = new QSettings( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {
@@ -719,45 +699,37 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setIniCodec( QTextCodec * codec )
-*/
-void QSettings_setIniCodec1()
-{
-  auto obj = qobject_cast< QSettings * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setIniCodec( PQTEXTCODEC( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setIniCodec( const char * codecName )
-*/
-void QSettings_setIniCodec2()
-{
-  auto obj = qobject_cast< QSettings * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->setIniCodec( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
-    QSettings_setIniCodec1();
+    /*
+    void setIniCodec( QTextCodec * codec )
+    */
+    auto obj = qobject_cast< QSettings * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setIniCodec( PQTEXTCODEC( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSettings_setIniCodec2();
+    /*
+    void setIniCodec( const char * codecName )
+    */
+    auto obj = qobject_cast< QSettings * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->setIniCodec( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

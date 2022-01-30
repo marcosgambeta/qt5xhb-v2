@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,46 +70,34 @@ RETURN
 #include <QtCore/QSizeF>
 #endif
 
-/*
-QSizeF()
-*/
-void QSizeF_new1()
-{
-  auto obj = new QSizeF();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSizeF( const QSize & sz )
-*/
-void QSizeF_new2()
-{
-  auto obj = new QSizeF( *PQSIZE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSizeF( qreal w, qreal h )
-*/
-void QSizeF_new3()
-{
-  auto obj = new QSizeF( PQREAL( 1 ), PQREAL( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSIZEF_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSizeF_new1();
+    /*
+    QSizeF()
+    */
+    auto obj = new QSizeF();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QSizeF_new2();
+    /*
+    QSizeF( const QSize & sz )
+    */
+    auto obj = new QSizeF( *PQSIZE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSizeF_new3();
+    /*
+    QSizeF( qreal w, qreal h )
+    */
+    auto obj = new QSizeF( PQREAL( 1 ), PQREAL( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -357,45 +345,37 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
   }
 }
 
-/*
-void scale( qreal w, qreal h, Qt::AspectRatioMode mode )
-*/
-void QSizeF_scale1()
-{
-  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scale( PQREAL( 1 ), PQREAL( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void scale( const QSizeF & s, Qt::AspectRatioMode mode )
-*/
-void QSizeF_scale2()
-{
-  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scale( *PQSIZEF( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QSizeF_scale1();
+    /*
+    void scale( qreal w, qreal h, Qt::AspectRatioMode mode )
+    */
+    auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scale( PQREAL( 1 ), PQREAL( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQSIZEF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSizeF_scale2();
+    /*
+    void scale( const QSizeF & s, Qt::AspectRatioMode mode )
+    */
+    auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scale( *PQSIZEF( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -403,43 +383,35 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
   }
 }
 
-/*
-QSizeF scaled( qreal w, qreal h, Qt::AspectRatioMode mode ) const
-*/
-void QSizeF_scaled1()
-{
-  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QSizeF( obj->scaled( PQREAL( 1 ), PQREAL( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
-  }
-}
-
-/*
-QSizeF scaled( const QSizeF & s, Qt::AspectRatioMode mode ) const
-*/
-void QSizeF_scaled2()
-{
-  auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QSizeF( obj->scaled( *PQSIZEF( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
-  }
-}
-
 HB_FUNC_STATIC( QSIZEF_SCALED )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QSizeF_scaled1();
+    /*
+    QSizeF scaled( qreal w, qreal h, Qt::AspectRatioMode mode ) const
+    */
+    auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QSizeF( obj->scaled( PQREAL( 1 ), PQREAL( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && ISQSIZEF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSizeF_scaled2();
+    /*
+    QSizeF scaled( const QSizeF & s, Qt::AspectRatioMode mode ) const
+    */
+    auto obj = static_cast< QSizeF * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QSizeF( obj->scaled( *PQSIZEF( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
+    }
+
   }
   else
   {

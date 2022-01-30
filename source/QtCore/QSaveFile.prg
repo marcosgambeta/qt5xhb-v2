@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,53 +59,41 @@ RETURN
 #endif
 #endif
 
-/*
-QSaveFile( const QString & name )
-*/
-void QSaveFile_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QSaveFile( PQSTRING( 1 ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QSaveFile( QObject * parent = nullptr )
-*/
-void QSaveFile_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QSaveFile( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QSaveFile( const QString & name, QObject * parent )
-*/
-void QSaveFile_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = new QSaveFile( PQSTRING( 1 ), PQOBJECT( 2 ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
 HB_FUNC_STATIC( QSAVEFILE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0) )
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSaveFile_new1();
+    /*
+    QSaveFile( const QString & name )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QSaveFile( PQSTRING( 1 ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSaveFile_new2();
+    /*
+    QSaveFile( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QSaveFile( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) )
   {
-    QSaveFile_new3();
+    /*
+    QSaveFile( const QString & name, QObject * parent )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    auto obj = new QSaveFile( PQSTRING( 1 ), PQOBJECT( 2 ) );
+    Qt5xHb::returnNewObject( obj, false );
+#endif
+
   }
   else
   {

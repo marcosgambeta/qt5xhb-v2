@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,46 +63,34 @@ RETURN
 #include <QtCore/QPointF>
 #endif
 
-/*
-QPointF()
-*/
-void QPointF_new1()
-{
-  auto obj = new QPointF();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPointF( const QPoint & point )
-*/
-void QPointF_new2()
-{
-  auto obj = new QPointF( *PQPOINT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QPointF( qreal xpos, qreal ypos )
-*/
-void QPointF_new3()
-{
-  auto obj = new QPointF( PQREAL( 1 ), PQREAL( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPOINTF_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPointF_new1();
+    /*
+    QPointF()
+    */
+    auto obj = new QPointF();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QPointF_new2();
+    /*
+    QPointF( const QPoint & point )
+    */
+    auto obj = new QPointF( *PQPOINT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPointF_new3();
+    /*
+    QPointF( qreal xpos, qreal ypos )
+    */
+    auto obj = new QPointF( PQREAL( 1 ), PQREAL( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

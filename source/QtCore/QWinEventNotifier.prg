@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,27 +50,19 @@ RETURN
 #include <QtCore/QWinEventNotifier>
 #endif
 
-/*
-QWinEventNotifier(QObject *parent = nullptr)
-*/
-void QWinEventNotifier_new1()
-{
-#ifdef Q_OS_WIN
-  auto obj = new QWinEventNotifier( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-#endif
-}
-
-/*
-QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {
 #ifdef Q_OS_WIN
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QWinEventNotifier_new1();
+#ifdef Q_OS_WIN
+    /*
+    QWinEventNotifier( QObject * parent = nullptr )
+    */
+    auto obj = new QWinEventNotifier( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
+#endif
   }
   else
   {

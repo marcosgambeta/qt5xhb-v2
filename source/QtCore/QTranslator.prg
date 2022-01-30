@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -110,58 +110,46 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
   }
 }
 
-/*
-bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString() )
-*/
-void QTranslator_load1()
-{
-  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->load( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) ) );
-  }
-}
-
-/*
-bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString() )
-*/
-void QTranslator_load2()
-{
-  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->load( *PQLOCALE( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) ) );
-  }
-}
-
-/*
-bool load( const uchar * data, int len, const QString & directory = QString() )
-*/
-void QTranslator_load3()
-{
-  auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->load( PCONSTUCHAR( 1 ), PINT( 2 ), OPQSTRING( 3, QString() ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
   if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QTranslator_load1();
+    /*
+    bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString() )
+    */
+    auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->load( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) ) );
+    }
+
   }
   else if( ISBETWEEN( 2, 5 ) && ISQLOCALE( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QTranslator_load2();
+    /*
+    bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString() )
+    */
+    auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->load( *PQLOCALE( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) ) );
+    }
+
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTranslator_load3();
+    /*
+    bool load( const uchar * data, int len, const QString & directory = QString() )
+    */
+    auto obj = qobject_cast< QTranslator * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->load( PCONSTUCHAR( 1 ), PINT( 2 ), OPQSTRING( 3, QString() ) ) );
+    }
+
   }
   else
   {

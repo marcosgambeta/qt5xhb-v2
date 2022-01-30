@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,59 +79,43 @@ RETURN
 #include <QtCore/QJsonObject>
 #include <QtCore/QVariant>
 
-/*
-QJsonDocument()
-*/
-void QJsonDocument_new1()
-{
-  auto obj = new QJsonDocument();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonDocument( const QJsonObject & object )
-*/
-void QJsonDocument_new2()
-{
-  auto obj = new QJsonDocument( *PQJSONOBJECT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonDocument( const QJsonArray & array )
-*/
-void QJsonDocument_new3()
-{
-  auto obj = new QJsonDocument( *PQJSONARRAY( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QJsonDocument( const QJsonDocument & other )
-*/
-void QJsonDocument_new4()
-{
-  auto obj = new QJsonDocument( *PQJSONDOCUMENT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QJsonDocument_new1();
+    /*
+    QJsonDocument()
+    */
+    auto obj = new QJsonDocument();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONOBJECT( 1 ) )
   {
-    QJsonDocument_new2();
+    /*
+    QJsonDocument( const QJsonObject & object )
+    */
+    auto obj = new QJsonDocument( *PQJSONOBJECT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONARRAY( 1 ) )
   {
-    QJsonDocument_new3();
+    /*
+    QJsonDocument( const QJsonArray & array )
+    */
+    auto obj = new QJsonDocument( *PQJSONARRAY( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQJSONDOCUMENT( 1 ) )
   {
-    QJsonDocument_new4();
+    /*
+    QJsonDocument( const QJsonDocument & other )
+    */
+    auto obj = new QJsonDocument( *PQJSONDOCUMENT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

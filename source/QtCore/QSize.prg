@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,33 +66,25 @@ RETURN
 #include <QtCore/QSize>
 #endif
 
-/*
-QSize()
-*/
-void QSize_new1()
-{
-  auto obj = new QSize();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QSize( int width, int height )
-*/
-void QSize_new2()
-{
-  auto obj = new QSize( PINT( 1 ), PINT( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSIZE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSize_new1();
+    /*
+    QSize()
+    */
+    auto obj = new QSize();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSize_new2();
+    /*
+    QSize( int width, int height )
+    */
+    auto obj = new QSize( PINT( 1 ), PINT( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -263,45 +255,37 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
   }
 }
 
-/*
-void scale( int width, int height, Qt::AspectRatioMode mode )
-*/
-void QSize_scale1()
-{
-  auto obj = static_cast< QSize * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scale( PINT( 1 ), PINT( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void scale( const QSize & size, Qt::AspectRatioMode mode )
-*/
-void QSize_scale2()
-{
-  auto obj = static_cast< QSize * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->scale( *PQSIZE( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSIZE_SCALE )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QSize_scale1();
+    /*
+    void scale( int width, int height, Qt::AspectRatioMode mode )
+    */
+    auto obj = static_cast< QSize * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scale( PINT( 1 ), PINT( 2 ), static_cast<Qt::AspectRatioMode>( hb_parni( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 2 ) && ISQSIZE( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSize_scale2();
+    /*
+    void scale( const QSize & size, Qt::AspectRatioMode mode )
+    */
+    auto obj = static_cast< QSize * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->scale( *PQSIZE( 1 ), static_cast<Qt::AspectRatioMode>( hb_parni( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

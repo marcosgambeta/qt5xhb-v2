@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,59 +60,43 @@ RETURN
 #include <QtCore/QStringMatcher>
 #endif
 
-/*
-QStringMatcher()
-*/
-void QStringMatcher_new1()
-{
-  auto obj = new QStringMatcher();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStringMatcher( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
-*/
-void QStringMatcher_new2()
-{
-  auto obj = new QStringMatcher( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 2 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStringMatcher( const QChar * uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive )
-*/
-void QStringMatcher_new3()
-{
-  auto obj = new QStringMatcher( PQCHAR( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 3 ) ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QStringMatcher( const QStringMatcher & other )
-*/
-void QStringMatcher_new4()
-{
-  auto obj = new QStringMatcher( *PQSTRINGMATCHER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStringMatcher_new1();
+    /*
+    QStringMatcher()
+    */
+    auto obj = new QStringMatcher();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QStringMatcher_new2();
+    /*
+    QStringMatcher( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
+    */
+    auto obj = new QStringMatcher( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 2 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QStringMatcher_new3();
+    /*
+    QStringMatcher( const QChar * uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive )
+    */
+    auto obj = new QStringMatcher( PQCHAR( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? static_cast< Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast< Qt::CaseSensitivity >( hb_parni( 3 ) ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQSTRINGMATCHER( 1 ) )
   {
-    QStringMatcher_new4();
+    /*
+    QStringMatcher( const QStringMatcher & other )
+    */
+    auto obj = new QStringMatcher( *PQSTRINGMATCHER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -189,41 +173,33 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-int indexIn( const QString & str, int from = 0 ) const
-*/
-void QStringMatcher_indexIn1()
-{
-  auto obj = static_cast< QStringMatcher * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->indexIn( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
-  }
-}
-
-/*
-int indexIn( const QChar * str, int length, int from = 0 ) const
-*/
-void QStringMatcher_indexIn2()
-{
-  auto obj = static_cast< QStringMatcher * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RINT( obj->indexIn( PQCHAR( 1 ), PINT( 2 ), OPINT( 3, 0 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QStringMatcher_indexIn1();
+    /*
+    int indexIn( const QString & str, int from = 0 ) const
+    */
+    auto obj = static_cast< QStringMatcher * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->indexIn( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
+    }
+
   }
   else if( ISBETWEEN( 2, 3 ) && ISQCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QStringMatcher_indexIn2();
+    /*
+    int indexIn( const QChar * str, int length, int from = 0 ) const
+    */
+    auto obj = static_cast< QStringMatcher * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RINT( obj->indexIn( PQCHAR( 1 ), PINT( 2 ), OPINT( 3, 0 ) ) );
+    }
+
   }
   else
   {

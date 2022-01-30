@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -118,41 +118,33 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool tryAcquire( int n = 1 )
-*/
-void QSemaphore_tryAcquire1()
-{
-  auto obj = static_cast< QSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
-  }
-}
-
-/*
-bool tryAcquire( int n, int timeout )
-*/
-void QSemaphore_tryAcquire2()
-{
-  auto obj = static_cast< QSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    RBOOL( obj->tryAcquire( PINT( 1 ), PINT( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSemaphore_tryAcquire1();
+    /*
+    bool tryAcquire( int n = 1 )
+    */
+    auto obj = static_cast< QSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSemaphore_tryAcquire2();
+    /*
+    bool tryAcquire( int n, int timeout )
+    */
+    auto obj = static_cast< QSemaphore * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      RBOOL( obj->tryAcquire( PINT( 1 ), PINT( 2 ) ) );
+    }
+
   }
   else
   {

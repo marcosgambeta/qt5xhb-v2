@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,46 +66,34 @@ RETURN
 #include <QtCore/QTextBoundaryFinder>
 #endif
 
-/*
-QTextBoundaryFinder()
-*/
-void QTextBoundaryFinder_new1()
-{
-  auto obj = new QTextBoundaryFinder();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextBoundaryFinder( const QTextBoundaryFinder & other )
-*/
-void QTextBoundaryFinder_new2()
-{
-  auto obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
-*/
-void QTextBoundaryFinder_new3()
-{
-  auto obj = new QTextBoundaryFinder( static_cast<QTextBoundaryFinder::BoundaryType>( hb_parni( 1 ) ), PQSTRING( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextBoundaryFinder_new1();
+    /*
+    QTextBoundaryFinder()
+    */
+    auto obj = new QTextBoundaryFinder();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTBOUNDARYFINDER( 1 ) )
   {
-    QTextBoundaryFinder_new2();
+    /*
+    QTextBoundaryFinder( const QTextBoundaryFinder & other )
+    */
+    auto obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QTextBoundaryFinder_new3();
+    /*
+    QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
+    */
+    auto obj = new QTextBoundaryFinder( static_cast<QTextBoundaryFinder::BoundaryType>( hb_parni( 1 ) ), PQSTRING( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
