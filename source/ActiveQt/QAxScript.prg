@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -100,43 +100,35 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
-void QAxScript_call1()
-{
-  auto obj = static_cast< QAxScript * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QVariant( obj->call( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ), HB_ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 5 ) ), HB_ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 6 ) ), HB_ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 7 ) ), HB_ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 8 ) ), HB_ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 9 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-  }
-}
-
-/*
-QVariant call( const QString & function, QList<QVariant> & arguments )
-*/
-void QAxScript_call2()
-{
-  auto obj = static_cast< QAxScript * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QVariant( obj->call( PQSTRING( 1 ), PQVARIANTLIST( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-  }
-}
-
 HB_FUNC_STATIC( QAXSCRIPT_CALL )
 {
   if( ISBETWEEN( 1, 9 ) && HB_ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQVARIANT( 3 ) || HB_ISNIL( 3 ) ) && ( ISQVARIANT( 4 ) || HB_ISNIL( 4 ) ) && ( ISQVARIANT( 5 ) || HB_ISNIL( 5 ) ) && ( ISQVARIANT( 6 ) || HB_ISNIL( 6 ) ) && ( ISQVARIANT( 7 ) || HB_ISNIL( 7 ) ) && ( ISQVARIANT( 8 ) || HB_ISNIL( 8 ) ) && ( ISQVARIANT( 9 ) || HB_ISNIL( 9 ) ) )
   {
-    QAxScript_call1();
+    /*
+    QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+    */
+    auto obj = static_cast< QAxScript * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QVariant( obj->call( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ), HB_ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 5 ) ), HB_ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 6 ) ), HB_ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 7 ) ), HB_ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 8 ) ), HB_ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 9 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QAxScript_call2();
+    /*
+    QVariant call( const QString & function, QList<QVariant> & arguments )
+    */
+    auto obj = static_cast< QAxScript * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QVariant( obj->call( PQSTRING( 1 ), PQVARIANTLIST( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+    }
+
   }
   else
   {
