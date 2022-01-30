@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,59 +60,43 @@ RETURN
 #include <QtDBus/QDBusError>
 #endif
 
-/*
-QDBusError()
-*/
-void QDBusError_new1()
-{
-  auto obj = new QDBusError();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusError( const QDBusMessage & msg )
-*/
-void QDBusError_new3()
-{
-  auto obj = new QDBusError( *PQDBUSMESSAGE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusError( QDBusError::ErrorType error, const QString & message )
-*/
-void QDBusError_new4()
-{
-  auto obj = new QDBusError( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), PQSTRING( 2 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusError( const QDBusError & other )
-*/
-void QDBusError_new5()
-{
-  auto obj = new QDBusError( *PQDBUSERROR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDBusError_new1();
+    /*
+    QDBusError()
+    */
+    auto obj = new QDBusError();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSMESSAGE( 1 ) )
   {
-    QDBusError_new3();
+    /*
+    QDBusError( const QDBusMessage & msg )
+    */
+    auto obj = new QDBusError( *PQDBUSMESSAGE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QDBusError_new4();
+    /*
+    QDBusError( QDBusError::ErrorType error, const QString & message )
+    */
+    auto obj = new QDBusError( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), PQSTRING( 2 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSERROR( 1 ) )
   {
-    QDBusError_new5();
+    /*
+    QDBusError( const QDBusError & other )
+    */
+    auto obj = new QDBusError( *PQDBUSERROR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

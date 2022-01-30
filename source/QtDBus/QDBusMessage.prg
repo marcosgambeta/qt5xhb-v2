@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,33 +78,25 @@ RETURN
 #include <QtDBus/QDBusMessage>
 #endif
 
-/*
-QDBusMessage()
-*/
-void QDBusMessage_new1()
-{
-  auto obj = new QDBusMessage();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusMessage( const QDBusMessage & other )
-*/
-void QDBusMessage_new2()
-{
-  auto obj = new QDBusMessage( *PQDBUSMESSAGE( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDBusMessage_new1();
+    /*
+    QDBusMessage()
+    */
+    auto obj = new QDBusMessage();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSMESSAGE( 1 ) )
   {
-    QDBusMessage_new2();
+    /*
+    QDBusMessage( const QDBusMessage & other )
+    */
+    auto obj = new QDBusMessage( *PQDBUSMESSAGE( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -129,53 +121,45 @@ HB_FUNC_STATIC( QDBUSMESSAGE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QDBusMessage createReply( const QList<QVariant> & arguments = QList<QVariant>() ) const
-*/
-void QDBusMessage_createReply1()
-{
-  auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QVariant> par1;
-    if( HB_ISARRAY( 1 ) )
-    {
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
-      for( auto i1 = 0; i1 < nLen1; i1++ )
-      {
-        par1 << *static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-      }
-    }
-    auto ptr = new QDBusMessage( obj->createReply( par1 ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
-/*
-QDBusMessage createReply( const QVariant & argument ) const
-*/
-void QDBusMessage_createReply2()
-{
-  auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QDBusMessage( obj->createReply( *PQVARIANT( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 {
   if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QDBusMessage_createReply1();
+    /*
+    QDBusMessage createReply( const QList<QVariant> & arguments = QList<QVariant>() ) const
+    */
+    auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QVariant> par1;
+      if( HB_ISARRAY( 1 ) )
+      {
+        PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+        int nLen1 = hb_arrayLen( aList1 );
+        for( auto i1 = 0; i1 < nLen1; i1++ )
+        {
+          par1 << *static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        }
+      }
+      auto ptr = new QDBusMessage( obj->createReply( par1 ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
   {
-    QDBusMessage_createReply2();
+    /*
+    QDBusMessage createReply( const QVariant & argument ) const
+    */
+    auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QDBusMessage( obj->createReply( *PQVARIANT( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else
   {
@@ -183,61 +167,49 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
   }
 }
 
-/*
-QDBusMessage createErrorReply( const QString name, const QString & msg ) const
-*/
-void QDBusMessage_createErrorReply1()
-{
-  auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QDBusMessage( obj->createErrorReply( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
-/*
-QDBusMessage createErrorReply( const QDBusError & err ) const
-*/
-void QDBusMessage_createErrorReply2()
-{
-  auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QDBusMessage( obj->createErrorReply( *PQDBUSERROR( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
-/*
-QDBusMessage createErrorReply( QDBusError::ErrorType type, const QString & msg ) const
-*/
-void QDBusMessage_createErrorReply3()
-{
-  auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QDBusMessage( obj->createErrorReply( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QDBusMessage_createErrorReply1();
+    /*
+    QDBusMessage createErrorReply( const QString name, const QString & msg ) const
+    */
+    auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QDBusMessage( obj->createErrorReply( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSERROR( 1 ) )
   {
-    QDBusMessage_createErrorReply2();
+    /*
+    QDBusMessage createErrorReply( const QDBusError & err ) const
+    */
+    auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QDBusMessage( obj->createErrorReply( *PQDBUSERROR( 1 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QDBusMessage_createErrorReply3();
+    /*
+    QDBusMessage createErrorReply( QDBusError::ErrorType type, const QString & msg ) const
+    */
+    auto obj = static_cast< QDBusMessage * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QDBusMessage( obj->createErrorReply( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else
   {
@@ -658,46 +630,37 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
 #endif
 }
 
-/*
-static QDBusMessage createError( const QString & name, const QString & msg )
-*/
-void QDBusMessage_createError1()
-{
-  auto ptr = new QDBusMessage( QDBusMessage::createError( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-}
-
-/*
-static QDBusMessage createError( const QDBusError & err )
-*/
-void QDBusMessage_createError2()
-{
-  auto ptr = new QDBusMessage( QDBusMessage::createError( *PQDBUSERROR( 1 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-}
-
-/*
-static QDBusMessage createError( QDBusError::ErrorType type, const QString & msg )
-*/
-void QDBusMessage_createError3()
-{
-  auto ptr = new QDBusMessage( QDBusMessage::createError( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
-  Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-}
-
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QDBusMessage_createError1();
+    /*
+    static QDBusMessage createError( const QString & name, const QString & msg )
+    */
+
+    auto ptr = new QDBusMessage( QDBusMessage::createError( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSERROR( 1 ) )
   {
-    QDBusMessage_createError2();
+    /*
+    static QDBusMessage createError( const QDBusError & err )
+    */
+
+    auto ptr = new QDBusMessage( QDBusMessage::createError( *PQDBUSERROR( 1 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QDBusMessage_createError3();
+    /*
+    static QDBusMessage createError( QDBusError::ErrorType type, const QString & msg )
+    */
+
+    auto ptr = new QDBusMessage( QDBusMessage::createError( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), PQSTRING( 2 ) ) );
+    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+
   }
   else
   {

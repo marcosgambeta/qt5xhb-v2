@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,46 +62,34 @@ RETURN
 #include <QtDBus/QDBusUnixFileDescriptor>
 #endif
 
-/*
-QDBusUnixFileDescriptor()
-*/
-void QDBusUnixFileDescriptor_new1()
-{
-  auto obj = new QDBusUnixFileDescriptor();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusUnixFileDescriptor( int fileDescriptor )
-*/
-void QDBusUnixFileDescriptor_new2()
-{
-  auto obj = new QDBusUnixFileDescriptor( PINT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
-*/
-void QDBusUnixFileDescriptor_new3()
-{
-  auto obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDBusUnixFileDescriptor_new1();
+    /*
+    QDBusUnixFileDescriptor()
+    */
+    auto obj = new QDBusUnixFileDescriptor();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QDBusUnixFileDescriptor_new2();
+    /*
+    QDBusUnixFileDescriptor( int fileDescriptor )
+    */
+    auto obj = new QDBusUnixFileDescriptor( PINT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSUNIXFILEDESCRIPTOR( 1 ) )
   {
-    QDBusUnixFileDescriptor_new3();
+    /*
+    QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
+    */
+    auto obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {

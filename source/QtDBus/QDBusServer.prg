@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,33 +56,25 @@ RETURN
 
 #include <QtDBus/QDBusError>
 
-/*
-QDBusServer( const QString & address, QObject * parent = nullptr )
-*/
-void QDBusServer_new1()
-{
-  auto obj = new QDBusServer( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
-/*
-QDBusServer( QObject * parent = nullptr )
-*/
-void QDBusServer_new2()
-{
-  auto obj = new QDBusServer( OPQOBJECT( 1, nullptr ) );
-  Qt5xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDBusServer_new1();
+    /*
+    QDBusServer( const QString & address, QObject * parent = nullptr )
+    */
+    auto obj = new QDBusServer( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDBusServer_new2();
+    /*
+    QDBusServer( QObject * parent = nullptr )
+    */
+    auto obj = new QDBusServer( OPQOBJECT( 1, nullptr ) );
+    Qt5xHb::returnNewObject( obj, false );
+
   }
   else
   {

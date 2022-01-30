@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -281,43 +281,35 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
   }
 }
 
-/*
-QDBusMessage call( const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
-*/
-void QDBusAbstractInterface_call1()
-{
-  auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QDBusMessage( obj->call( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ), HB_ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 5 ) ), HB_ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 6 ) ), HB_ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 7 ) ), HB_ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 8 ) ), HB_ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 9 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
-/*
-QDBusMessage call( QDBus::CallMode mode, const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
-*/
-void QDBusAbstractInterface_call2()
-{
-  auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    auto ptr = new QDBusMessage( obj->call( static_cast<QDBus::CallMode>( hb_parni( 1 ) ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ), HB_ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 5 ) ), HB_ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 6 ) ), HB_ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 7 ) ), HB_ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 8 ) ), HB_ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 9 ) ), HB_ISNIL( 10 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 10 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
-  }
-}
-
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL )
 {
   if( ISBETWEEN( 1, 9 ) && HB_ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQVARIANT( 3 ) || HB_ISNIL( 3 ) ) && ( ISQVARIANT( 4 ) || HB_ISNIL( 4 ) ) && ( ISQVARIANT( 5 ) || HB_ISNIL( 5 ) ) && ( ISQVARIANT( 6 ) || HB_ISNIL( 6 ) ) && ( ISQVARIANT( 7 ) || HB_ISNIL( 7 ) ) && ( ISQVARIANT( 8 ) || HB_ISNIL( 8 ) ) && ( ISQVARIANT( 9 ) || HB_ISNIL( 9 ) ) )
   {
-    QDBusAbstractInterface_call1();
+    /*
+    QDBusMessage call( const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
+    */
+    auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QDBusMessage( obj->call( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ), HB_ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 5 ) ), HB_ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 6 ) ), HB_ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 7 ) ), HB_ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 8 ) ), HB_ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 9 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else if( ISBETWEEN( 2, 10 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ( ISQVARIANT( 3 ) || HB_ISNIL( 3 ) ) && ( ISQVARIANT( 4 ) || HB_ISNIL( 4 ) ) && ( ISQVARIANT( 5 ) || HB_ISNIL( 5 ) ) && ( ISQVARIANT( 6 ) || HB_ISNIL( 6 ) ) && ( ISQVARIANT( 7 ) || HB_ISNIL( 7 ) ) && ( ISQVARIANT( 8 ) || HB_ISNIL( 8 ) ) && ( ISQVARIANT( 9 ) || HB_ISNIL( 9 ) ) && ( ISQVARIANT( 10 ) || HB_ISNIL( 10 ) ) )
   {
-    QDBusAbstractInterface_call2();
+    /*
+    QDBusMessage call( QDBus::CallMode mode, const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
+    */
+    auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      auto ptr = new QDBusMessage( obj->call( static_cast<QDBus::CallMode>( hb_parni( 1 ) ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 4 ) ), HB_ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 5 ) ), HB_ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 6 ) ), HB_ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 7 ) ), HB_ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 8 ) ), HB_ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 9 ) ), HB_ISNIL( 10 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 10 ) ) ) );
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    }
+
   }
   else
   {
@@ -357,55 +349,47 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
   }
 }
 
-/*
-bool callWithCallback( const QString & method, const QList<QVariant> & args, QObject * receiver, const char * member, const char * errorSlot )
-*/
-void QDBusAbstractInterface_callWithCallback1()
-{
-  auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
-    int nLen2 = hb_arrayLen( aList2 );
-    for( auto i2 = 0; i2 < nLen2; i2++ )
-    {
-      par2 << *static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
-    }
-    RBOOL( obj->callWithCallback( PQSTRING( 1 ), par2, PQOBJECT( 3 ), PCONSTCHAR( 4 ), PCONSTCHAR( 5 ) ) );
-  }
-}
-
-/*
-bool callWithCallback( const QString & method, const QList<QVariant> & args, QObject * receiver, const char * member )
-*/
-void QDBusAbstractInterface_callWithCallback2()
-{
-  auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj != nullptr )
-  {
-    QList<QVariant> par2;
-    PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
-    int nLen2 = hb_arrayLen( aList2 );
-    for( auto i2 = 0; i2 < nLen2; i2++ )
-    {
-      par2 << *static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
-    }
-    RBOOL( obj->callWithCallback( PQSTRING( 1 ), par2, PQOBJECT( 3 ), PCONSTCHAR( 4 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
 {
   if( ISNUMPAR( 5 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && ISQOBJECT( 3 ) && HB_ISCHAR( 4 ) && HB_ISCHAR( 5 ) )
   {
-    QDBusAbstractInterface_callWithCallback1();
+    /*
+    bool callWithCallback( const QString & method, const QList<QVariant> & args, QObject * receiver, const char * member, const char * errorSlot )
+    */
+    auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QVariant> par2;
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
+      for( auto i2 = 0; i2 < nLen2; i2++ )
+      {
+        par2 << *static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+      }
+      RBOOL( obj->callWithCallback( PQSTRING( 1 ), par2, PQOBJECT( 3 ), PCONSTCHAR( 4 ), PCONSTCHAR( 5 ) ) );
+    }
+
   }
   else if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) && ISQOBJECT( 3 ) && HB_ISCHAR( 4 ) )
   {
-    QDBusAbstractInterface_callWithCallback2();
+    /*
+    bool callWithCallback( const QString & method, const QList<QVariant> & args, QObject * receiver, const char * member )
+    */
+    auto obj = qobject_cast< QDBusAbstractInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != nullptr )
+    {
+      QList<QVariant> par2;
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
+      for( auto i2 = 0; i2 < nLen2; i2++ )
+      {
+        par2 << *static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+      }
+      RBOOL( obj->callWithCallback( PQSTRING( 1 ), par2, PQOBJECT( 3 ), PCONSTCHAR( 4 ) ) );
+    }
+
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -222,45 +222,37 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void sendErrorReply( const QString & name, const QString & msg = QString() ) const
-*/
-void QDBusContext_sendErrorReply1()
-{
-  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->sendErrorReply( PQSTRING( 1 ), OPQSTRING( 2, QString() ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
-*/
-void QDBusContext_sendErrorReply2()
-{
-  auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), OPQSTRING( 2, QString() ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDBusContext_sendErrorReply1();
+    /*
+    void sendErrorReply( const QString & name, const QString & msg = QString() ) const
+    */
+    auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->sendErrorReply( PQSTRING( 1 ), OPQSTRING( 2, QString() ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDBusContext_sendErrorReply2();
+    /*
+    void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
+    */
+    auto obj = static_cast< QDBusContext * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni( 1 ) ), OPQSTRING( 2, QString() ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {

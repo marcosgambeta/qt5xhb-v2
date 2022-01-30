@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,33 +69,25 @@ RETURN
 #include <QtDBus/QDBusArgument>
 #endif
 
-/*
-QDBusArgument()
-*/
-void QDBusArgument_new1()
-{
-  auto obj = new QDBusArgument();
-  Qt5xHb::returnNewObject( obj, true );
-}
-
-/*
-QDBusArgument( const QDBusArgument & other )
-*/
-void QDBusArgument_new2()
-{
-  auto obj = new QDBusArgument( *PQDBUSARGUMENT( 1 ) );
-  Qt5xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDBusArgument_new1();
+    /*
+    QDBusArgument()
+    */
+    auto obj = new QDBusArgument();
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else if( ISNUMPAR( 1 ) && ISQDBUSARGUMENT( 1 ) )
   {
-    QDBusArgument_new2();
+    /*
+    QDBusArgument( const QDBusArgument & other )
+    */
+    auto obj = new QDBusArgument( *PQDBUSARGUMENT( 1 ) );
+    Qt5xHb::returnNewObject( obj, true );
+
   }
   else
   {
@@ -172,45 +164,37 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void beginArray( int elementMetaTypeId )
-*/
-void QDBusArgument_beginArray1()
-{
-  auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->beginArray( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void beginArray() const
-*/
-void QDBusArgument_beginArray2()
-{
-  auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->beginArray();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QDBusArgument_beginArray1();
+    /*
+    void beginArray( int elementMetaTypeId )
+    */
+    auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->beginArray( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QDBusArgument_beginArray2();
+    /*
+    void beginArray() const
+    */
+    auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->beginArray();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
@@ -244,45 +228,37 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void beginMap( int keyMetaTypeId, int valueMetaTypeId )
-*/
-void QDBusArgument_beginMap1()
-{
-  auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->beginMap( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void beginMap() const
-*/
-void QDBusArgument_beginMap2()
-{
-  auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
-
-  if( obj != nullptr )
-  {
-    obj->beginMap();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDBusArgument_beginMap1();
+    /*
+    void beginMap( int keyMetaTypeId, int valueMetaTypeId )
+    */
+    auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->beginMap( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QDBusArgument_beginMap2();
+    /*
+    void beginMap() const
+    */
+    auto obj = static_cast< QDBusArgument * >( Qt5xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != nullptr )
+    {
+      obj->beginMap();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
+
   }
   else
   {
