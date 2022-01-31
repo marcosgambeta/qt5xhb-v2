@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta
+  Copyright (C) 2022 Marcos Antonio Gambeta
 
   E-mail:
   marcosgambeta AT outlook DOT com
@@ -13,15 +13,10 @@
 */
 
 #include "qt5xhb.ch"
-#include "QChart.ch"
 
 #ifdef __XHARBOUR__
 REQUEST HB_GT_WIN
 #endif
-
-REQUEST QAbstractAxis
-REQUEST QLegend
-REQUEST QBarSet
 
 PROCEDURE Main()
 
