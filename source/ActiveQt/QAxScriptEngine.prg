@@ -59,34 +59,34 @@ QAxScriptEngine( const QString & language, QAxScript * script )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
-  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQAXSCRIPT( 2 ) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2) )
   {
-    auto obj = new QAxScriptEngine( PQSTRING( 1 ), PQAXSCRIPT( 2 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QAxScriptEngine( PQSTRING(1), PQAXSCRIPT(2) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -94,25 +94,25 @@ void addItem( const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->addItem( PQSTRING( 1 ) );
+      obj->addItem( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -120,12 +120,12 @@ bool hasIntrospection() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasIntrospection() );
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -144,12 +144,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -168,12 +168,12 @@ QString scriptLanguage() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->scriptLanguage() );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -192,25 +192,25 @@ void setState( QAxScriptEngine::State st )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setState( static_cast<QAxScriptEngine::State>( hb_parni( 1 ) ) );
+      obj->setState( static_cast<QAxScriptEngine::State>( hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -218,12 +218,12 @@ QAxScriptEngine::State state() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
-  auto obj = static_cast< QAxScriptEngine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->state() );
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
