@@ -43,78 +43,225 @@ CLASS QWidget INHERIT QObject
 
 #ifndef QT5XHB_NO_PROPERTIES
 
+   // acceptDrops : bool
    ACCESS lAcceptDrops INLINE ::acceptDrops()
    ASSIGN lAcceptDrops(l) INLINE ::setAcceptDrops(l)
 
+   // accessibleDescription : QString
+   ACCESS cAccessibleDescription INLINE ::accessibleDescription()
+   ASSIGN cAccessibleDescription(c) INLINE ::setAccessibleDescription(c)
+
+   // accessibleName : QString
+   ACCESS cAccessibleName INLINE ::accessibleName()
+   ASSIGN cAccessibleName(c) INLINE ::setAccessibleName(c)
+
+   // autoFillBackground : bool
    ACCESS lAutoFillBackground INLINE ::autoFillBackground()
    ASSIGN lAutoFillBackground(l) INLINE ::setAutoFillBackground(l)
 
+   // baseSize : QSize
+   ACCESS oBaseSize INLINE ::baseSize()
+   ASSIGN oBaseSize(o) INLINE ::setBaseSize(o)
+
+   // childrenRect : const QRect
+   ACCESS oChildrenRect INLINE ::childrenRect()
+
+   // childrenRegion : const QRegion
+   ACCESS oChildrenRegion INLINE ::childrenRegion()
+
+   // contextMenuPolicy : Qt::ContextMenuPolicy
+   ACCESS nContextMenuPolicy INLINE ::contextMenuPolicy()
+   ASSIGN nContextMenuPolicy(n) INLINE ::setContextMenuPolicy(n)
+
+   // cursor : QCursor
+   ACCESS oCursor INLINE ::cursor()
+   ASSIGN oCursor(o) INLINE iif(o == NIL, ::unsetCursor(), ::setCursor(o))
+
+   // enabled : bool
    ACCESS lEnabled INLINE ::isEnabled()
    ASSIGN lEnabled(l) INLINE ::setEnabled(l)
 
+   // focus : const bool
    ACCESS lFocus INLINE ::hasFocus()
 
+   // focusPolicy : Qt::FocusPolicy
+   ACCESS nFocusPolicy INLINE ::focusPolicy()
+   ASSIGN nFocusPolicy(n) INLINE ::setFocusPolicy(n)
+
+   // font : QFont
+   ACCESS oFont INLINE ::font()
+   ASSIGN oFont(o) INLINE ::setFont(o)
+
+   // frameGeometry : const QRect
+   ACCESS oFrameGeometry INLINE ::frameGeometry()
+
+   // frameSize : const QSize
+   ACCESS oFrameSize INLINE ::frameSize()
+
+   // fullScreen : const bool
    ACCESS lFullScreen INLINE ::isFullScreen()
 
+   // geometry : QRect
+   ACCESS oGeometry INLINE ::geometry()
+   ASSIGN oGeometry(o) INLINE ::setGeometry(o)
+
+   // height : const int
    ACCESS nHeight INLINE ::height()
    ASSIGN nHeight(n) INLINE ::resize(::width(), n)
 
+   // inputMethodHints : Qt::InputMethodHints
+   ACCESS nInputMethodHints INLINE ::inputMethodHints()
+   ASSIGN nInputMethodHints(n) INLINE ::setInputMethodHints(n)
+
+   // isActiveWindow : const bool
    ACCESS lIsActiveWindow INLINE ::isActiveWindow()
 
+   // layoutDirection : Qt::LayoutDirection
+   ACCESS nLayoutDirection INLINE ::layoutDirection()
+   ASSIGN nLayoutDirection(n) INLINE iif(n == NIL, ::unsetLayoutDirection(), ::setLayoutDirection(n))
+
+   // locale : QLocale
+   ACCESS oLocale INLINE ::locale()
+   ASSIGN oLocale(o) INLINE iif(o == NIL, ::unsetLocale(), ::setLocale(o))
+
+   // maximized : const bool
    ACCESS lMaximized INLINE ::isMaximized()
 
+   // maximumHeight : int
    ACCESS nMaximumHeight INLINE ::maximumHeight()
    ASSIGN nMaximumHeight(n) INLINE ::setMaximumHeight(n)
 
+   // maximumSize : QSize
+   ACCESS oMaximumSize INLINE ::maximumSize()
+   ASSIGN oMaximumSize(o) INLINE ::setMaximumSize(o)
+
+   // maximumWidth : int
    ACCESS nMaximumWidth INLINE ::maximumWidth()
    ASSIGN nMaximumWidth(n) INLINE ::setMaximumWidth(n)
 
+   // minimized : const bool
    ACCESS lMinimized INLINE ::isMinimized()
 
+   // minimumHeight : int
    ACCESS nMinimumHeight INLINE ::minimumHeight()
    ASSIGN nMinimumHeight(n) INLINE ::setMinimumHeight(n)
 
+   // minimumSize : QSize
+   ACCESS oMinimumSize INLINE ::minimumSize()
+   ASSIGN oMinimumSize(o) INLINE ::setMinimumSize(o)
+
+   // minimumSizeHint : const QSize
+   ACCESS oMinimumSizeHint INLINE ::minimumSizeHint()
+
+   // minimumWidth : int
    ACCESS nMinimumWidth INLINE ::minimumWidth()
    ASSIGN nMinimumWidth(n) INLINE ::setMinimumWidth(n)
 
+   // modal : const bool
    ACCESS lModal INLINE ::isModal()
 
+   // mouseTracking : bool
    ACCESS lMouseTracking INLINE ::hasMouseTracking()
    ASSIGN lMouseTracking(l) INLINE ::setMouseTracking(l)
 
+   // normalGeometry : const QRect
+   ACCESS oNormalGeometry INLINE ::NormalGeometry()
+
+   // palette : QPalette
+   ACCESS oPalette INLINE ::palette()
+   ASSIGN oPalette(o) INLINE ::setPalette(o)
+
+   // pos : QPoint
+   ACCESS oPos INLINE ::pos()
+   ASSIGN oPos(o) INLINE ::move(o)
+
+   // rect : const QRect
+   ACCESS oRect INLINE ::rect()
+
+   // size : QSize
+   ACCESS oSize INLINE ::size()
+   ASSIGN oSize(o) INLINE ::resize(o)
+
+   // sizeHint : const QSize
+   ACCESS osizeHint INLINE ::sizeHint()
+
+   // sizeIncrement : QSize
+   ACCESS oSizeIncrement INLINE ::sizeIncrement()
+   ASSIGN oSizeIncrement(o) INLINE ::setSizeIncrement(o)
+
+   // sizePolicy : QSizePolicy
+   ACCESS oSizePolicy INLINE ::sizePolicy()
+   ASSIGN oSizePolicy(o) INLINE ::setSizePolicy(o)
+
+   // statusTip : QString
    ACCESS cStatusTip INLINE ::statusTip()
    ASSIGN cStatusTip(c) INLINE ::setStatusTip(c)
 
+   // styleSheet : QString
    ACCESS cStyleSheet INLINE ::styleSheet()
    ASSIGN cStyleSheet(c) INLINE ::setStyleSheet(c)
 
+   // tabletTracking : bool
+   ACCESS lTabletTracking INLINE ::hasTabletTracking()
+   ASSIGN lTabletTracking(l) INLINE ::setTabletTracking(l)
+
+   // toolTip : QString
    ACCESS cToolTip INLINE ::toolTip()
    ASSIGN cToolTip(c) INLINE ::setToolTip(c)
 
+   // toolTipDuration : int
    ACCESS nToolTipDuration INLINE ::toolTipDuration()
    ASSIGN nToolTipDuration(n) INLINE ::setToolTipDuration(n)
 
+   // updatesEnabled : bool
    ACCESS lUpdatesEnabled INLINE ::updatesEnabled()
    ASSIGN lUpdatesEnabled(l) INLINE ::setUpdatesEnabled(l)
 
+   // visible : bool
    ACCESS lVisible INLINE ::isVisible()
    ASSIGN lVisible(l) INLINE ::setVisible(l)
 
+   // whatsThis : QString
    ACCESS cWhatsThis INLINE ::whatsThis()
    ASSIGN cWhatsThis(c) INLINE ::setWhatsThis(c)
 
+   // width : const int
    ACCESS nWidth INLINE ::width()
    ASSIGN nWidth(n) INLINE ::resize(n, ::height())
 
+   // windowFilePath : QString
+   ACCESS cWindowFilePath INLINE ::windowFilePath()
+   ASSIGN cWindowFilePath(c) INLINE ::setWindowFilePath(c)
+
+   // windowFlags : Qt::WindowFlags
+   ACCESS nWindowFlags INLINE ::windowFlags()
+   ASSIGN nWindowFlags(n) INLINE ::setWindowFlags(n)
+
+   // windowIcon : QIcon
+   ACCESS oWindowIcon INLINE ::windowIcon()
+   ASSIGN oWindowIcon(o) INLINE ::setWindowIcon(o)
+
+   // windowModality : Qt::WindowModality
+   ACCESS nWindowModality INLINE ::windowModality()
+   ASSIGN nWindowModality(n) INLINE ::setWindowModality(n)
+
+   // windowModified : bool
+   ACCESS lWindowModified INLINE ::isWindowModified()
+   ASSIGN lWindowModified(l) INLINE ::setWindowModified(l)
+
+   // windowOpacity : double
    ACCESS nWindowOpacity INLINE ::windowOpacity()
    ASSIGN nWindowOpacity(n) INLINE ::setWindowOpacity(n)
 
+   // windowTitle : QString
    ACCESS cWindowTitle INLINE ::windowTitle()
    ASSIGN cWindowTitle(c) INLINE ::setWindowTitle(c)
 
+   // x : const int
    ACCESS nX INLINE ::x()
    ASSIGN nX(n) INLINE ::move(n, ::y())
 
+   // y : const int
    ACCESS nY INLINE ::y()
    ASSIGN nY(n) INLINE ::move(::x(), n)
 
@@ -6592,7 +6739,7 @@ void windowTitleChanged( const QString & title )
 HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( sender != nullptr )
   {
@@ -6604,8 +6751,8 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWidget::windowTitleChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWidget::windowTitleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -6633,9 +6780,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-
       hb_retl(true);
     }
     else
@@ -6658,7 +6803,7 @@ void windowIconChanged( const QIcon & icon )
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( sender != nullptr )
   {
@@ -6670,8 +6815,8 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWidget::windowIconChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWidget::windowIconChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QIcon & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -6699,9 +6844,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-
       hb_retl(true);
     }
     else
@@ -6723,7 +6866,7 @@ void windowIconTextChanged( const QString & iconText )
 */
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
-  auto sender = (QWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( sender != nullptr )
   {
@@ -6735,8 +6878,8 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWidget::windowIconTextChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWidget::windowIconTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -6764,9 +6907,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-
       hb_retl(true);
     }
     else
@@ -6785,7 +6926,7 @@ void customContextMenuRequested( const QPoint & pos )
 */
 HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
-  auto sender = (QWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( sender != nullptr )
   {
@@ -6797,8 +6938,8 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWidget::customContextMenuRequested, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWidget::customContextMenuRequested,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -6826,9 +6967,7 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-
       hb_retl(true);
     }
     else
