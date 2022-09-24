@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QAndroidIntent()
@@ -79,42 +79,42 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && ISQANDROIDJNIOBJECT( 1 ) )
+  else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
   {
     /*
     QAndroidIntent( const QAndroidJniObject & intent )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT( 1 ) );
+    auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QAndroidIntent( const QString & action )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidIntent( PQSTRING( 1 ) );
+    auto obj = new QAndroidIntent( PQSTRING(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 2 ) && ISQANDROIDJNIOBJECT( 1 ) && HB_ISCHAR( 2 ) )
+  else if( ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && HB_ISCHAR(2) )
   {
     /*
     QAndroidIntent( const QAndroidJniObject & packageContext, const char * className )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT( 1 ), PCONSTCHAR( 2 ) );
+    auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1), PCONSTCHAR(2) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -124,19 +124,19 @@ virtual ~QAndroidIntent()
 HB_FUNC_STATIC( QANDROIDINTENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAndroidIntent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -146,25 +146,25 @@ void putExtra( const QString & key, const QByteArray & data )
 HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAndroidIntent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQBYTEARRAY( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      obj->putExtra( PQSTRING( 1 ), *PQBYTEARRAY( 2 ) );
+      obj->putExtra( PQSTRING(1), *PQBYTEARRAY(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -174,21 +174,21 @@ QByteArray extraBytes( const QString & key )
 HB_FUNC_STATIC( QANDROIDINTENT_EXTRABYTES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAndroidIntent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      auto ptr = new QByteArray( obj->extraBytes( PQSTRING( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->extraBytes( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -201,25 +201,25 @@ void putExtra( const QString & key, const QVariant & value )
 HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAndroidIntent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->putExtra( PQSTRING( 1 ), *PQVARIANT( 2 ) );
+      obj->putExtra( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -229,21 +229,21 @@ QVariant extraVariant( const QString & key )
 HB_FUNC_STATIC( QANDROIDINTENT_EXTRAVARIANT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAndroidIntent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      auto ptr = new QVariant( obj->extraVariant( PQSTRING( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->extraVariant( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -256,21 +256,21 @@ QAndroidJniObject handle() const
 HB_FUNC_STATIC( QANDROIDINTENT_HANDLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = static_cast< QAndroidIntent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAndroidIntent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QAndroidJniObject( obj->handle() );
-      Qt5xHb::createReturnClass( ptr, "QANDROIDJNIOBJECT", true );
+      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
