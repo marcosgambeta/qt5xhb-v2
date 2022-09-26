@@ -65,14 +65,14 @@ QPieLegendMarker( QPieSeries * series, QPieSlice * slice, QLegend * legend, QObj
 HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN( 3, 4 ) && ISQPIESERIES( 1 ) && ISQPIESLICE( 2 ) && ISQLEGEND( 3 ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
+  if( ISBETWEEN(3, 4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && ( ISQOBJECT(4) || HB_ISNIL(4) ) )
   {
-    auto obj = new QPieLegendMarker( PQPIESERIES( 1 ), PQPIESLICE( 2 ), PQLEGEND( 3 ), OPQOBJECT( 4, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QPieLegendMarker( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT( 4, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -83,21 +83,21 @@ virtual ~QPieLegendMarker()
 HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPieLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -107,12 +107,12 @@ virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPieLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->type() );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -133,21 +133,21 @@ virtual QPieSeries * series()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPieLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPieSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPIESERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPIESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -160,21 +160,21 @@ QPieSlice * slice()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QPieLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPieLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPieSlice * ptr = obj->slice();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPIESLICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPIESLICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

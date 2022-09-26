@@ -63,14 +63,14 @@ QAreaLegendMarker( QAreaSeries * series, QLegend * legend, QObject * parent = nu
 HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN( 2, 3 ) && ISQAREASERIES( 1 ) && ISQLEGEND( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
+  if( ISBETWEEN(2, 3) && ISQAREASERIES(1) && ISQLEGEND(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
-    auto obj = new QAreaLegendMarker( PQAREASERIES( 1 ), PQLEGEND( 2 ), OPQOBJECT( 3, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QAreaLegendMarker( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -81,21 +81,21 @@ virtual ~QAreaLegendMarker()
 HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QAreaLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QAreaLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -105,12 +105,12 @@ virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QAreaLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QAreaLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->type() );
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -131,21 +131,21 @@ virtual QAreaSeries * series()
 HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = qobject_cast< QAreaLegendMarker * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QAreaLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAreaSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QAREASERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QAREASERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
