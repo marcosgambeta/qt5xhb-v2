@@ -67,34 +67,34 @@ QHelpEngine( const QString & collectionFile, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
-    auto obj = new QHelpEngine( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QHelpEngine( PQSTRING(1), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
-  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -102,21 +102,21 @@ QHelpContentModel * contentModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
-  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpContentModel * ptr = obj->contentModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHELPCONTENTMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHELPCONTENTMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -127,21 +127,21 @@ QHelpContentWidget * contentWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
-  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpContentWidget * ptr = obj->contentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPCONTENTWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPCONTENTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -152,21 +152,21 @@ QHelpIndexModel * indexModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
-  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpIndexModel * ptr = obj->indexModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHELPINDEXMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHELPINDEXMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -177,21 +177,21 @@ QHelpIndexWidget * indexWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
-  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpIndexWidget * ptr = obj->indexWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPINDEXWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPINDEXWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -202,21 +202,21 @@ QHelpSearchEngine * searchEngine()
 */
 HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
-  auto obj = qobject_cast< QHelpEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpSearchEngine * ptr = obj->searchEngine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHELPSEARCHENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHELPSEARCHENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

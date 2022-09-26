@@ -87,34 +87,34 @@ QHelpEngineCore( const QString & collectionFile, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
-    auto obj = new QHelpEngineCore( PQSTRING( 1 ), OPQOBJECT( 2, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QHelpEngineCore( PQSTRING(1), OPQOBJECT( 2, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -122,20 +122,20 @@ bool addCustomFilter( const QString & filterName, const QStringList & attributes
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISARRAY( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
     {
 #endif
-      RBOOL( obj->addCustomFilter( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
+      RBOOL( obj->addCustomFilter( PQSTRING(1), PQSTRINGLIST(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -146,12 +146,12 @@ bool autoSaveFilter() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->autoSaveFilter() );
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -170,12 +170,12 @@ QString collectionFile() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->collectionFile() );
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -194,20 +194,20 @@ bool copyCollectionFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->copyCollectionFile( PQSTRING( 1 ) ) );
+      RBOOL( obj->copyCollectionFile( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -218,12 +218,12 @@ QString currentFilter() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->currentFilter() );
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -242,12 +242,12 @@ QStringList customFilters() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->customFilters() );
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -266,21 +266,21 @@ QVariant customValue( const QString & key, const QVariant & defaultValue = QVari
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->customValue( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->customValue( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -291,20 +291,20 @@ QString documentationFileName( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->documentationFileName( PQSTRING( 1 ) ) );
+      RQSTRING( obj->documentationFileName( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -315,12 +315,12 @@ QString error() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->error() );
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -339,21 +339,21 @@ QByteArray fileData( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
+    if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      auto ptr = new QByteArray( obj->fileData( *PQURL( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->fileData( *PQURL(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -361,12 +361,12 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStringList filterAttributes() const
     */
-    auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+    auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj != nullptr )
     {
@@ -374,22 +374,22 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
     }
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QStringList filterAttributes( const QString & filterName ) const
     */
-    auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+    auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj != nullptr )
     {
-      RQSTRINGLIST( obj->filterAttributes( PQSTRING( 1 ) ) );
+      RQSTRINGLIST( obj->filterAttributes( PQSTRING(1) ) );
     }
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -398,21 +398,21 @@ QUrl findFile( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
+    if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      auto ptr = new QUrl( obj->findFile( *PQURL( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->findFile( *PQURL(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -423,20 +423,20 @@ bool registerDocumentation( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->registerDocumentation( PQSTRING( 1 ) ) );
+      RBOOL( obj->registerDocumentation( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -447,12 +447,12 @@ QStringList registeredDocumentations() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->registeredDocumentations() );
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -471,20 +471,20 @@ bool removeCustomFilter( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeCustomFilter( PQSTRING( 1 ) ) );
+      RBOOL( obj->removeCustomFilter( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -495,20 +495,20 @@ bool removeCustomValue( const QString & key )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeCustomValue( PQSTRING( 1 ) ) );
+      RBOOL( obj->removeCustomValue( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -519,25 +519,25 @@ void setAutoSaveFilter( bool save )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAutoSaveFilter( PBOOL( 1 ) );
+      obj->setAutoSaveFilter( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -545,25 +545,25 @@ void setCollectionFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setCollectionFile( PQSTRING( 1 ) );
+      obj->setCollectionFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -571,25 +571,25 @@ void setCurrentFilter( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setCurrentFilter( PQSTRING( 1 ) );
+      obj->setCurrentFilter( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -597,20 +597,20 @@ bool setCustomValue( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      RBOOL( obj->setCustomValue( PQSTRING( 1 ), *PQVARIANT( 2 ) ) );
+      RBOOL( obj->setCustomValue( PQSTRING(1), *PQVARIANT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -621,12 +621,12 @@ bool setupData()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->setupData() );
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -645,20 +645,20 @@ bool unregisterDocumentation( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
 {
-  auto obj = qobject_cast< QHelpEngineCore * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->unregisterDocumentation( PQSTRING( 1 ) ) );
+      RBOOL( obj->unregisterDocumentation( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -670,16 +670,16 @@ static QVariant metaData( const QString & documentationFileName, const QString &
 HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
 #endif
-    auto ptr = new QVariant( QHelpEngineCore::metaData( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+    auto ptr = new QVariant( QHelpEngineCore::metaData( PQSTRING(1), PQSTRING(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -690,15 +690,15 @@ static QString namespaceName( const QString & documentationFileName )
 HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRING( QHelpEngineCore::namespaceName( PQSTRING( 1 ) ) );
+    RQSTRING( QHelpEngineCore::namespaceName( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -717,51 +717,51 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::currentFilterChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
@@ -779,49 +779,49 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::setupFinished, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
             hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
+            hb_itemRelease(pSender);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
@@ -839,49 +839,49 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::setupStarted, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
             hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
+            hb_itemRelease(pSender);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
@@ -899,51 +899,51 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHelpEngineCore::warning, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
