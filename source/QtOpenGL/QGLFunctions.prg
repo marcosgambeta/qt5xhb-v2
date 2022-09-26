@@ -112,7 +112,7 @@ RETURN
 
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QGLFunctions()
@@ -121,36 +121,36 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQGLCONTEXT( 1 ) )
+  else if( ISNUMPAR(1) && ISQGLCONTEXT(1) )
   {
     /*
     QGLFunctions( const QGLContext * context )
     */
-    auto obj = new QGLFunctions( PQGLCONTEXT( 1 ) );
+    auto obj = new QGLFunctions( PQGLCONTEXT(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QGLFUNCTIONS_DELETE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -158,25 +158,25 @@ void glActiveTexture( GLenum texture )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLACTIVETEXTURE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glActiveTexture( PGLENUM( 1 ) );
+      obj->glActiveTexture( PGLENUM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -184,25 +184,25 @@ void glAttachShader( GLuint program, GLuint shader )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLATTACHSHADER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glAttachShader( PGLUINT( 1 ), PGLUINT( 2 ) );
+      obj->glAttachShader( PGLUINT(1), PGLUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -210,25 +210,25 @@ void glBindAttribLocation( GLuint program, GLuint index, const char * name )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
     {
 #endif
-      obj->glBindAttribLocation( PGLUINT( 1 ), PGLUINT( 2 ), PCONSTCHAR( 3 ) );
+      obj->glBindAttribLocation( PGLUINT(1), PGLUINT(2), PCONSTCHAR(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -236,25 +236,25 @@ void glBindBuffer( GLenum target, GLuint buffer )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glBindBuffer( PGLENUM( 1 ), PGLUINT( 2 ) );
+      obj->glBindBuffer( PGLENUM(1), PGLUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -262,25 +262,25 @@ void glBindFramebuffer( GLenum target, GLuint framebuffer )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDFRAMEBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glBindFramebuffer( PGLENUM( 1 ), PGLUINT( 2 ) );
+      obj->glBindFramebuffer( PGLENUM(1), PGLUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -288,25 +288,25 @@ void glBindRenderbuffer( GLenum target, GLuint renderbuffer )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDRENDERBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glBindRenderbuffer( PGLENUM( 1 ), PGLUINT( 2 ) );
+      obj->glBindRenderbuffer( PGLENUM(1), PGLUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -314,25 +314,25 @@ void glBlendColor( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDCOLOR )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glBlendColor( PGLCLAMPF( 1 ), PGLCLAMPF( 2 ), PGLCLAMPF( 3 ), PGLCLAMPF( 4 ) );
+      obj->glBlendColor( PGLCLAMPF(1), PGLCLAMPF(2), PGLCLAMPF(3), PGLCLAMPF(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -340,25 +340,25 @@ void glBlendEquation( GLenum mode )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDEQUATION )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glBlendEquation( PGLENUM( 1 ) );
+      obj->glBlendEquation( PGLENUM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -366,25 +366,25 @@ void glBlendEquationSeparate( GLenum modeRGB, GLenum modeAlpha )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glBlendEquationSeparate( PGLENUM( 1 ), PGLENUM( 2 ) );
+      obj->glBlendEquationSeparate( PGLENUM(1), PGLENUM(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -392,25 +392,25 @@ void glBlendFuncSeparate( GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum 
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDFUNCSEPARATE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glBlendFuncSeparate( PGLENUM( 1 ), PGLENUM( 2 ), PGLENUM( 3 ), PGLENUM( 4 ) );
+      obj->glBlendFuncSeparate( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLENUM(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -418,20 +418,20 @@ GLenum glCheckFramebufferStatus( GLenum target )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLENUM( obj->glCheckFramebufferStatus( PGLENUM( 1 ) ) );
+      RGLENUM( obj->glCheckFramebufferStatus( PGLENUM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -442,25 +442,25 @@ void glClearDepthf( GLclampf depth )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLCLEARDEPTHF )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glClearDepthf( PGLCLAMPF( 1 ) );
+      obj->glClearDepthf( PGLCLAMPF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -468,25 +468,25 @@ void glCompileShader( GLuint shader )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPILESHADER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glCompileShader( PGLUINT( 1 ) );
+      obj->glCompileShader( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -494,12 +494,12 @@ GLuint glCreateProgram()
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RGLUINT( obj->glCreateProgram() );
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -518,20 +518,20 @@ GLuint glCreateShader( GLenum type )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATESHADER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLUINT( obj->glCreateShader( PGLENUM( 1 ) ) );
+      RGLUINT( obj->glCreateShader( PGLENUM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -548,25 +548,25 @@ void glDeleteProgram( GLuint program )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLDELETEPROGRAM )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glDeleteProgram( PGLUINT( 1 ) );
+      obj->glDeleteProgram( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -577,25 +577,25 @@ void glDeleteShader( GLuint shader )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLDELETESHADER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glDeleteShader( PGLUINT( 1 ) );
+      obj->glDeleteShader( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -603,25 +603,25 @@ void glDepthRangef( GLclampf zNear, GLclampf zFar )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLDEPTHRANGEF )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glDepthRangef( PGLCLAMPF( 1 ), PGLCLAMPF( 2 ) );
+      obj->glDepthRangef( PGLCLAMPF(1), PGLCLAMPF(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -629,25 +629,25 @@ void glDetachShader( GLuint program, GLuint shader )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLDETACHSHADER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glDetachShader( PGLUINT( 1 ), PGLUINT( 2 ) );
+      obj->glDetachShader( PGLUINT(1), PGLUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -655,25 +655,25 @@ void glDisableVertexAttribArray( GLuint index )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glDisableVertexAttribArray( PGLUINT( 1 ) );
+      obj->glDisableVertexAttribArray( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -681,25 +681,25 @@ void glEnableVertexAttribArray( GLuint index )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glEnableVertexAttribArray( PGLUINT( 1 ) );
+      obj->glEnableVertexAttribArray( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -707,25 +707,25 @@ void glFramebufferRenderbuffer( GLenum target, GLenum attachment, GLenum renderb
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glFramebufferRenderbuffer( PGLENUM( 1 ), PGLENUM( 2 ), PGLENUM( 3 ), PGLUINT( 4 ) );
+      obj->glFramebufferRenderbuffer( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLUINT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -733,25 +733,25 @@ void glFramebufferTexture2D( GLenum target, GLenum attachment, GLenum textarget,
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
+    if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
     {
 #endif
-      obj->glFramebufferTexture2D( PGLENUM( 1 ), PGLENUM( 2 ), PGLENUM( 3 ), PGLUINT( 4 ), PGLINT( 5 ) );
+      obj->glFramebufferTexture2D( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLUINT(4), PGLINT(5) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -768,25 +768,25 @@ void glGenerateMipmap( GLenum target )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLGENERATEMIPMAP )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glGenerateMipmap( PGLENUM( 1 ) );
+      obj->glGenerateMipmap( PGLENUM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -803,20 +803,20 @@ int glGetAttribLocation( GLuint program, const char * name )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      RINT( obj->glGetAttribLocation( PGLUINT( 1 ), PCONSTCHAR( 2 ) ) );
+      RINT( obj->glGetAttribLocation( PGLUINT(1), PCONSTCHAR(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -854,20 +854,20 @@ int glGetUniformLocation( GLuint program, const char * name )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      RINT( obj->glGetUniformLocation( PGLUINT( 1 ), PCONSTCHAR( 2 ) ) );
+      RINT( obj->glGetUniformLocation( PGLUINT(1), PCONSTCHAR(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -890,20 +890,20 @@ GLboolean glIsBuffer( GLuint buffer )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLISBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsBuffer( PGLUINT( 1 ) ) );
+      RGLBOOLEAN( obj->glIsBuffer( PGLUINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -914,20 +914,20 @@ GLboolean glIsFramebuffer( GLuint framebuffer )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLISFRAMEBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsFramebuffer( PGLUINT( 1 ) ) );
+      RGLBOOLEAN( obj->glIsFramebuffer( PGLUINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -938,20 +938,20 @@ GLboolean glIsProgram( GLuint program )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLISPROGRAM )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsProgram( PGLUINT( 1 ) ) );
+      RGLBOOLEAN( obj->glIsProgram( PGLUINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -962,20 +962,20 @@ GLboolean glIsRenderbuffer( GLuint renderbuffer )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLISRENDERBUFFER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsRenderbuffer( PGLUINT( 1 ) ) );
+      RGLBOOLEAN( obj->glIsRenderbuffer( PGLUINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -986,20 +986,20 @@ GLboolean glIsShader( GLuint shader )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLISSHADER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsShader( PGLUINT( 1 ) ) );
+      RGLBOOLEAN( obj->glIsShader( PGLUINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1010,25 +1010,25 @@ void glLinkProgram( GLuint program )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLLINKPROGRAM )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glLinkProgram( PGLUINT( 1 ) );
+      obj->glLinkProgram( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1036,12 +1036,12 @@ void glReleaseShaderCompiler()
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->glReleaseShaderCompiler();
@@ -1049,12 +1049,12 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1062,25 +1062,25 @@ void glRenderbufferStorage( GLenum target, GLenum internalformat, GLsizei width,
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLRENDERBUFFERSTORAGE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glRenderbufferStorage( PGLENUM( 1 ), PGLENUM( 2 ), PGLSIZEI( 3 ), PGLSIZEI( 4 ) );
+      obj->glRenderbufferStorage( PGLENUM(1), PGLENUM(2), PGLSIZEI(3), PGLSIZEI(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1088,25 +1088,25 @@ void glSampleCoverage( GLclampf value, GLboolean invert )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLSAMPLECOVERAGE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
     {
 #endif
-      obj->glSampleCoverage( PGLCLAMPF( 1 ), PGLBOOLEAN( 2 ) );
+      obj->glSampleCoverage( PGLCLAMPF(1), PGLBOOLEAN(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1114,25 +1114,25 @@ void glStencilFuncSeparate( GLenum face, GLenum func, GLint ref, GLuint mask )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILFUNCSEPARATE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glStencilFuncSeparate( PGLENUM( 1 ), PGLENUM( 2 ), PGLINT( 3 ), PGLUINT( 4 ) );
+      obj->glStencilFuncSeparate( PGLENUM(1), PGLENUM(2), PGLINT(3), PGLUINT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1140,25 +1140,25 @@ void glStencilMaskSeparate( GLenum face, GLuint mask )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILMASKSEPARATE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glStencilMaskSeparate( PGLENUM( 1 ), PGLUINT( 2 ) );
+      obj->glStencilMaskSeparate( PGLENUM(1), PGLUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1166,25 +1166,25 @@ void glStencilOpSeparate( GLenum face, GLenum fail, GLenum zfail, GLenum zpass )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILOPSEPARATE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glStencilOpSeparate( PGLENUM( 1 ), PGLENUM( 2 ), PGLENUM( 3 ), PGLENUM( 4 ) );
+      obj->glStencilOpSeparate( PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLENUM(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1192,25 +1192,25 @@ void glUniform1f( GLint location, GLfloat x )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM1F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glUniform1f( PGLINT( 1 ), PGLFLOAT( 2 ) );
+      obj->glUniform1f( PGLINT(1), PGLFLOAT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1218,25 +1218,25 @@ void glUniform1i( GLint location, GLint x )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM1I )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glUniform1i( PGLINT( 1 ), PGLINT( 2 ) );
+      obj->glUniform1i( PGLINT(1), PGLINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1244,25 +1244,25 @@ void glUniform2f( GLint location, GLfloat x, GLfloat y )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM2F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      obj->glUniform2f( PGLINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ) );
+      obj->glUniform2f( PGLINT(1), PGLFLOAT(2), PGLFLOAT(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1270,25 +1270,25 @@ void glUniform2i( GLint location, GLint x, GLint y )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM2I )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      obj->glUniform2i( PGLINT( 1 ), PGLINT( 2 ), PGLINT( 3 ) );
+      obj->glUniform2i( PGLINT(1), PGLINT(2), PGLINT(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1296,25 +1296,25 @@ void glUniform3f( GLint location, GLfloat x, GLfloat y, GLfloat z )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM3F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glUniform3f( PGLINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ) );
+      obj->glUniform3f( PGLINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1322,25 +1322,25 @@ void glUniform3i( GLint location, GLint x, GLint y, GLint z )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM3I )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glUniform3i( PGLINT( 1 ), PGLINT( 2 ), PGLINT( 3 ), PGLINT( 4 ) );
+      obj->glUniform3i( PGLINT(1), PGLINT(2), PGLINT(3), PGLINT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1348,25 +1348,25 @@ void glUniform4f( GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM4F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
+    if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
     {
 #endif
-      obj->glUniform4f( PGLINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ), PGLFLOAT( 5 ) );
+      obj->glUniform4f( PGLINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1374,25 +1374,25 @@ void glUniform4i( GLint location, GLint x, GLint y, GLint z, GLint w )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM4I )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
+    if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
     {
 #endif
-      obj->glUniform4i( PGLINT( 1 ), PGLINT( 2 ), PGLINT( 3 ), PGLINT( 4 ), PGLINT( 5 ) );
+      obj->glUniform4i( PGLINT(1), PGLINT(2), PGLINT(3), PGLINT(4), PGLINT(5) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1400,25 +1400,25 @@ void glUseProgram( GLuint program )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLUSEPROGRAM )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glUseProgram( PGLUINT( 1 ) );
+      obj->glUseProgram( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1426,25 +1426,25 @@ void glValidateProgram( GLuint program )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLVALIDATEPROGRAM )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->glValidateProgram( PGLUINT( 1 ) );
+      obj->glValidateProgram( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1452,25 +1452,25 @@ void glVertexAttrib1f( GLuint indx, GLfloat x )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB1F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->glVertexAttrib1f( PGLUINT( 1 ), PGLFLOAT( 2 ) );
+      obj->glVertexAttrib1f( PGLUINT(1), PGLFLOAT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1478,25 +1478,25 @@ void glVertexAttrib2f( GLuint indx, GLfloat x, GLfloat y )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB2F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      obj->glVertexAttrib2f( PGLUINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ) );
+      obj->glVertexAttrib2f( PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1504,25 +1504,25 @@ void glVertexAttrib3f( GLuint indx, GLfloat x, GLfloat y, GLfloat z )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB3F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->glVertexAttrib3f( PGLUINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ) );
+      obj->glVertexAttrib3f( PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1530,25 +1530,25 @@ void glVertexAttrib4f( GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB4F )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
+    if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
     {
 #endif
-      obj->glVertexAttrib4f( PGLUINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ), PGLFLOAT( 5 ) );
+      obj->glVertexAttrib4f( PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1556,20 +1556,20 @@ bool hasOpenGLFeature( QGLFunctions::OpenGLFeature feature ) const
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasOpenGLFeature( static_cast<QGLFunctions::OpenGLFeature>( hb_parni( 1 ) ) ) );
+      RBOOL( obj->hasOpenGLFeature( static_cast<QGLFunctions::OpenGLFeature>( hb_parni(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1580,25 +1580,25 @@ void initializeGLFunctions( const QGLContext * context = nullptr )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQGLCONTEXT( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQGLCONTEXT(1) || HB_ISNIL(1) ) )
     {
 #endif
-      obj->initializeGLFunctions( HB_ISNIL( 1 ) ? nullptr : static_cast< QGLContext * >( Qt5xHb::itemGetPtr( 1 ) ) );
+      obj->initializeGLFunctions( HB_ISNIL(1) ? nullptr : static_cast<QGLContext*>(Qt5xHb::itemGetPtr(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1606,12 +1606,12 @@ QGLFunctions::OpenGLFeatures openGLFeatures() const
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
 {
-  auto obj = static_cast< QGLFunctions * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QGLFunctions*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->openGLFeatures() );
@@ -1619,7 +1619,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1629,30 +1629,30 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QGLFUNCTIONS_NEWFROMOBJECT )
@@ -1667,25 +1667,25 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QGLFUNCTIONS_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QGLFUNCTIONS_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
