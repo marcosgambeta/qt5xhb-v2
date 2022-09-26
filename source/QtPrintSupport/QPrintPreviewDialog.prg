@@ -59,47 +59,47 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {
-  if( ISBETWEEN( 1, 3 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
+  if( ISBETWEEN(1, 3) && ISQPRINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
     /*
     QPrintPreviewDialog( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewDialog( PQPRINTER( 1 ), OPQWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QPrintPreviewDialog( PQPRINTER(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     QPrintPreviewDialog( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QPrintPreviewDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
-  auto obj = qobject_cast< QPrintPreviewDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -107,25 +107,25 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
-  auto obj = qobject_cast< QPrintPreviewDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -133,21 +133,21 @@ QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
-  auto obj = qobject_cast< QPrintPreviewDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPrinter * ptr = obj->printer();
-      Qt5xHb::createReturnClass( ptr, "QPRINTER", false );
+      Qt5xHb::createReturnClass(ptr, "QPRINTER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -158,25 +158,25 @@ virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
-  auto obj = qobject_cast< QPrintPreviewDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->done( PINT( 1 ) );
+      obj->done( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -184,25 +184,25 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {
-  auto obj = qobject_cast< QPrintPreviewDialog * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setVisible( PBOOL( 1 ) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -219,51 +219,51 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPrintPreviewDialog::paintRequested, 
                                                               [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QPRINTPREVIEWDIALOG" );
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPRINTPREVIEWDIALOG");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 

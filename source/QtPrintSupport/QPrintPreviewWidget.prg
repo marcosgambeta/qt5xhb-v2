@@ -76,47 +76,47 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {
-  if( ISBETWEEN( 1, 3 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
+  if( ISBETWEEN(1, 3) && ISQPRINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
     /*
     QPrintPreviewWidget( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewWidget( PQPRINTER( 1 ), OPQWIDGET( 2, nullptr ), HB_ISNIL( 3 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 3 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QPrintPreviewWidget( PQPRINTER(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     QPrintPreviewWidget( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QPrintPreviewWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -124,12 +124,12 @@ int currentPage() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->currentPage() );
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -148,12 +148,12 @@ QPrinter::Orientation orientation() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,12 +172,12 @@ int pageCount() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->pageCount() );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,12 +196,12 @@ QPrintPreviewWidget::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->viewMode() );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -220,12 +220,12 @@ qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->zoomFactor() );
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -244,12 +244,12 @@ QPrintPreviewWidget::ZoomMode zoomMode() const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->zoomMode() );
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -268,25 +268,25 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setVisible( PBOOL( 1 ) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -294,12 +294,12 @@ void fitInView()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->fitInView();
@@ -307,12 +307,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -320,12 +320,12 @@ void fitToWidth()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->fitToWidth();
@@ -333,12 +333,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -346,12 +346,12 @@ void print()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->print();
@@ -359,12 +359,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -372,12 +372,12 @@ void setAllPagesViewMode()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setAllPagesViewMode();
@@ -385,12 +385,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -398,25 +398,25 @@ void setCurrentPage( int page )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCurrentPage( PINT( 1 ) );
+      obj->setCurrentPage( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -424,12 +424,12 @@ void setFacingPagesViewMode()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setFacingPagesViewMode();
@@ -437,12 +437,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -450,12 +450,12 @@ void setLandscapeOrientation()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setLandscapeOrientation();
@@ -463,12 +463,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -476,25 +476,25 @@ void setOrientation( QPrinter::Orientation orientation )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setOrientation( static_cast<QPrinter::Orientation>( hb_parni( 1 ) ) );
+      obj->setOrientation( static_cast<QPrinter::Orientation>( hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -502,12 +502,12 @@ void setPortraitOrientation()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setPortraitOrientation();
@@ -515,12 +515,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -528,12 +528,12 @@ void setSinglePageViewMode()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setSinglePageViewMode();
@@ -541,12 +541,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -554,25 +554,25 @@ void setViewMode( QPrintPreviewWidget::ViewMode mode )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setViewMode( static_cast<QPrintPreviewWidget::ViewMode>( hb_parni( 1 ) ) );
+      obj->setViewMode( static_cast<QPrintPreviewWidget::ViewMode>( hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -580,25 +580,25 @@ void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setZoomFactor( PQREAL( 1 ) );
+      obj->setZoomFactor( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -606,25 +606,25 @@ void setZoomMode( QPrintPreviewWidget::ZoomMode zoomMode )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setZoomMode( static_cast<QPrintPreviewWidget::ZoomMode>( hb_parni( 1 ) ) );
+      obj->setZoomMode( static_cast<QPrintPreviewWidget::ZoomMode>( hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -632,12 +632,12 @@ void updatePreview()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->updatePreview();
@@ -645,12 +645,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -658,12 +658,12 @@ void zoomIn( qreal factor = 1.1 )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
       obj->zoomIn( OPQREAL( 1, 1.1 ) );
@@ -671,12 +671,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -684,12 +684,12 @@ void zoomOut( qreal factor = 1.1 )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
 {
-  auto obj = qobject_cast< QPrintPreviewWidget * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
       obj->zoomOut( OPQREAL( 1, 1.1 ) );
@@ -697,12 +697,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -719,51 +719,51 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPrintPreviewWidget::paintRequested, 
                                                               [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QPRINTPREVIEWWIDGET" );
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPRINTPREVIEWWIDGET");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
@@ -781,49 +781,49 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QPrintPreviewWidget::previewChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QPRINTPREVIEWWIDGET" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPRINTPREVIEWWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
+            hb_itemRelease(pSender);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
