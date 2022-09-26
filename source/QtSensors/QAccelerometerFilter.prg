@@ -53,19 +53,19 @@ RETURN
 HB_FUNC_STATIC( QACCELEROMETERFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = static_cast< QAccelerometerFilter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccelerometerFilter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -75,20 +75,20 @@ virtual bool filter( QAccelerometerReading * reading ) = 0
 HB_FUNC_STATIC( QACCELEROMETERFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = static_cast< QAccelerometerFilter * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccelerometerFilter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQACCELEROMETERREADING( 1 ) )
+    if( ISNUMPAR(1) && ISQACCELEROMETERREADING(1) )
     {
 #endif
-      RBOOL( obj->filter( PQACCELEROMETERREADING( 1 ) ) );
+      RBOOL( obj->filter( PQACCELEROMETERREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
