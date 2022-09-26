@@ -108,7 +108,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDATABASE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QSqlDatabase()
@@ -117,36 +117,36 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQSQLDATABASE( 1 ) )
+  else if( ISNUMPAR(1) && ISQSQLDATABASE(1) )
   {
     /*
     QSqlDatabase( const QSqlDatabase & other )
     */
-    auto obj = new QSqlDatabase( *PQSQLDATABASE( 1 ) );
+    auto obj = new QSqlDatabase( *PQSQLDATABASE(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_DELETE )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -154,12 +154,12 @@ void close()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->close();
@@ -167,12 +167,12 @@ HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -180,12 +180,12 @@ bool commit()
 */
 HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->commit() );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -204,12 +204,12 @@ QString connectOptions() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->connectOptions() );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -228,12 +228,12 @@ void setConnectOptions( const QString & options = QString() )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
     {
 #endif
       obj->setConnectOptions( OPQSTRING( 1, QString() ) );
@@ -241,12 +241,12 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -254,12 +254,12 @@ QString connectionName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->connectionName() );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -278,12 +278,12 @@ QString databaseName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->databaseName() );
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -302,25 +302,25 @@ void setDatabaseName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setDatabaseName( PQSTRING( 1 ) );
+      obj->setDatabaseName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -328,21 +328,21 @@ QSqlDriver * driver() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSqlDriver * ptr = obj->driver();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSQLDRIVER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -353,12 +353,12 @@ QString driverName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->driverName() );
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -377,21 +377,21 @@ QSqlQuery exec( const QString & query = QString() ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
     {
 #endif
       auto ptr = new QSqlQuery( obj->exec( OPQSTRING( 1, QString() ) ) );
-      Qt5xHb::createReturnClass( ptr, "QSQLQUERY", true );
+      Qt5xHb::createReturnClass(ptr, "QSQLQUERY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -402,12 +402,12 @@ QString hostName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->hostName() );
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -426,25 +426,25 @@ void setHostName( const QString & host )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setHostName( PQSTRING( 1 ) );
+      obj->setHostName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -452,12 +452,12 @@ bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isOpen() );
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -476,12 +476,12 @@ bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isOpenError() );
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -500,12 +500,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -524,21 +524,21 @@ QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QSqlError( obj->lastError() );
-      Qt5xHb::createReturnClass( ptr, "QSQLERROR", true );
+      Qt5xHb::createReturnClass(ptr, "QSQLERROR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -549,12 +549,12 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->numericalPrecisionPolicy() );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -573,35 +573,35 @@ void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setNumericalPrecisionPolicy( static_cast<QSql::NumericalPrecisionPolicy>( hb_parni( 1 ) ) );
+      obj->setNumericalPrecisionPolicy( static_cast<QSql::NumericalPrecisionPolicy>( hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     bool open()
     */
-    auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
@@ -609,22 +609,22 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
     }
 
   }
-  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     /*
     bool open( const QString & user, const QString & password )
     */
-    auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      RBOOL( obj->open( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      RBOOL( obj->open( PQSTRING(1), PQSTRING(2) ) );
     }
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -633,12 +633,12 @@ QString password() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->password() );
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -657,25 +657,25 @@ void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setPassword( PQSTRING( 1 ) );
+      obj->setPassword( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -683,12 +683,12 @@ int port() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PORT )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->port() );
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PORT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -707,25 +707,25 @@ void setPort( int port )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setPort( PINT( 1 ) );
+      obj->setPort( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -733,21 +733,21 @@ QSqlIndex primaryIndex( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      auto ptr = new QSqlIndex( obj->primaryIndex( PQSTRING( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QSQLINDEX", true );
+      auto ptr = new QSqlIndex( obj->primaryIndex( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSQLINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -758,21 +758,21 @@ QSqlRecord record( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_RECORD )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      auto ptr = new QSqlRecord( obj->record( PQSTRING( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
+      auto ptr = new QSqlRecord( obj->record( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -783,12 +783,12 @@ bool rollback()
 */
 HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->rollback() );
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -807,20 +807,20 @@ QStringList tables( QSql::TableType type = QSql::Tables ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RQSTRINGLIST( obj->tables( HB_ISNIL( 1 ) ? static_cast< QSql::TableType >( QSql::Tables ) : static_cast< QSql::TableType >( hb_parni( 1 ) ) ) );
+      RQSTRINGLIST( obj->tables( HB_ISNIL(1) ? static_cast<QSql::TableType >( QSql::Tables ) : static_cast<QSql::TableType >( hb_parni(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -831,12 +831,12 @@ bool transaction()
 */
 HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->transaction() );
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -855,12 +855,12 @@ QString userName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->userName() );
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -879,52 +879,52 @@ void setUserName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
 {
-  auto obj = static_cast< QSqlDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setUserName( PQSTRING( 1 ) );
+      obj->setUserName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
-  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
   {
     /*
     static QSqlDatabase addDatabase( const QString & type, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
     */
 
-    auto ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSTRING( 1 ), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    auto ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSTRING(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
+    Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQSQLDRIVER( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
   {
     /*
     static QSqlDatabase addDatabase( QSqlDriver * driver, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
     */
 
-    auto ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER( 1 ), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    auto ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
+    Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -934,16 +934,16 @@ static QSqlDatabase cloneDatabase( const QSqlDatabase & other, const QString & c
 HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && ISQSQLDATABASE( 1 ) && HB_ISCHAR( 2 ) )
+  if( ISNUMPAR(2) && ISQSQLDATABASE(1) && HB_ISCHAR(2) )
   {
 #endif
-    auto ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase( *PQSQLDATABASE( 1 ), PQSTRING( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    auto ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase( *PQSQLDATABASE(1), PQSTRING(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -954,7 +954,7 @@ static QStringList connectionNames()
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RQSTRINGLIST( QSqlDatabase::connectionNames() );
@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -973,7 +973,7 @@ static bool contains( const QString & connectionName = QLatin1String( QSqlDataba
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
   {
 #endif
     RBOOL( QSqlDatabase::contains( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -992,16 +992,16 @@ static QSqlDatabase database( const QString & connectionName = QLatin1String( QS
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 2 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
   {
 #endif
     auto ptr = new QSqlDatabase( QSqlDatabase::database( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ), OPBOOL( 2, true ) ) );
-    Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -1012,7 +1012,7 @@ static QStringList drivers()
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RQSTRINGLIST( QSqlDatabase::drivers() );
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -1031,15 +1031,15 @@ static bool isDriverAvailable( const QString & name )
 HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RBOOL( QSqlDatabase::isDriverAvailable( PQSTRING( 1 ) ) );
+    RBOOL( QSqlDatabase::isDriverAvailable( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -1050,19 +1050,19 @@ static void registerSqlDriver( const QString & name, QSqlDriverCreatorBase * cre
 HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQSQLDRIVERCREATORBASE( 2 ) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSQLDRIVERCREATORBASE(2) )
   {
 #endif
-    QSqlDatabase::registerSqlDriver( PQSTRING( 1 ), PQSQLDRIVERCREATORBASE( 2 ) );
+    QSqlDatabase::registerSqlDriver( PQSTRING(1), PQSQLDRIVERCREATORBASE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1071,49 +1071,49 @@ static void removeDatabase( const QString & connectionName )
 HB_FUNC_STATIC( QSQLDATABASE_REMOVEDATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    QSqlDatabase::removeDatabase( PQSTRING( 1 ) );
+    QSqlDatabase::removeDatabase( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_NEWFROMOBJECT )
@@ -1128,25 +1128,25 @@ HB_FUNC_STATIC( QSQLDATABASE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSQLDATABASE_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
