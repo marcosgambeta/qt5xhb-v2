@@ -77,14 +77,14 @@ QWinThumbnailToolButton( QObject * parent = nullptr )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     auto obj = new QWinThumbnailToolButton( OPQOBJECT( 1, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -92,21 +92,21 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -116,12 +116,12 @@ QString toolTip() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_TOOLTIP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toolTip() );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_TOOLTIP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -142,25 +142,25 @@ void setToolTip( const QString & toolTip )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setToolTip( PQSTRING( 1 ) );
+      obj->setToolTip( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -170,21 +170,21 @@ QIcon icon() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QIcon( obj->icon() );
-      Qt5xHb::createReturnClass( ptr, "QICON", true );
+      Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -197,25 +197,25 @@ void setIcon( const QIcon & icon )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) )
+    if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
     {
 #endif
-      obj->setIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -225,12 +225,12 @@ bool isEnabled() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -251,25 +251,25 @@ void setEnabled( bool enabled )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setEnabled( PBOOL( 1 ) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -279,12 +279,12 @@ bool isInteractive() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isInteractive() );
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -305,25 +305,25 @@ void setInteractive( bool interactive )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setInteractive( PBOOL( 1 ) );
+      obj->setInteractive( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -333,12 +333,12 @@ bool isVisible() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isVisible() );
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISVISIBLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -359,25 +359,25 @@ void setVisible( bool visible )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setVisible( PBOOL( 1 ) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -387,12 +387,12 @@ bool dismissOnClick() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->dismissOnClick() );
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -413,25 +413,25 @@ void setDismissOnClick( bool dismiss )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDismissOnClick( PBOOL( 1 ) );
+      obj->setDismissOnClick( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -441,12 +441,12 @@ bool isFlat() const
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISFLAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isFlat() );
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISFLAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -467,25 +467,25 @@ void setFlat( bool flat )
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETFLAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFlat( PBOOL( 1 ) );
+      obj->setFlat( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -495,12 +495,12 @@ void click()
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = qobject_cast< QWinThumbnailToolButton * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->click();
@@ -508,12 +508,12 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -532,52 +532,52 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWinThumbnailToolButton::clicked, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QWINTHUMBNAILTOOLBUTTON" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWINTHUMBNAILTOOLBUTTON");
             hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
+            hb_itemRelease(pSender);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -596,52 +596,52 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QWinThumbnailToolButton::changed, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QWINTHUMBNAILTOOLBUTTON" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWINTHUMBNAILTOOLBUTTON");
             hb_vmEvalBlockV( cb, 1, pSender );
-            hb_itemRelease( pSender );
+            hb_itemRelease(pSender);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

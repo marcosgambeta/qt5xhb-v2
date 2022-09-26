@@ -56,14 +56,14 @@ QWinEvent( int type )
 HB_FUNC_STATIC( QWINEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    auto obj = new QWinEvent( PINT( 1 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QWinEvent( PINT(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -71,19 +71,19 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
 HB_FUNC_STATIC( QWINEVENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QWinEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWinEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
