@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QDomText()
@@ -59,36 +59,36 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQDOMTEXT( 1 ) )
+  else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
   {
     /*
     QDomText( const QDomText & x )
     */
-    auto obj = new QDomText( *PQDOMTEXT( 1 ) );
+    auto obj = new QDomText( *PQDOMTEXT(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDOMTEXT_DELETE )
 {
-  auto obj = static_cast< QDomText * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,12 +96,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
-  auto obj = static_cast< QDomText * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -120,21 +120,21 @@ QDomText splitText( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
-  auto obj = static_cast< QDomText * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      auto ptr = new QDomText( obj->splitText( PINT( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMTEXT", true );
+      auto ptr = new QDomText( obj->splitText( PINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

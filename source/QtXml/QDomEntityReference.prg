@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QDomEntityReference()
@@ -58,36 +58,36 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQDOMENTITYREFERENCE( 1 ) )
+  else if( ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1) )
   {
     /*
     QDomEntityReference( const QDomEntityReference & x )
     */
-    auto obj = new QDomEntityReference( *PQDOMENTITYREFERENCE( 1 ) );
+    auto obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_DELETE )
 {
-  auto obj = static_cast< QDomEntityReference * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomEntityReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -95,12 +95,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
-  auto obj = static_cast< QDomEntityReference * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomEntityReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

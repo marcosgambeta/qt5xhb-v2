@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QDomNotation()
@@ -60,36 +60,36 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQDOMNOTATION( 1 ) )
+  else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
   {
     /*
     QDomNotation( const QDomNotation & x )
     */
-    auto obj = new QDomNotation( *PQDOMNOTATION( 1 ) );
+    auto obj = new QDomNotation( *PQDOMNOTATION(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDOMNOTATION_DELETE )
 {
-  auto obj = static_cast< QDomNotation * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomNotation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -97,12 +97,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
-  auto obj = static_cast< QDomNotation * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomNotation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,12 +121,12 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
-  auto obj = static_cast< QDomNotation * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomNotation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->publicId() );
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -145,12 +145,12 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {
-  auto obj = static_cast< QDomNotation * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDomNotation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->systemId() );
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
