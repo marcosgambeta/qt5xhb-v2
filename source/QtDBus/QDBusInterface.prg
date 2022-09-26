@@ -56,34 +56,34 @@ QDBusInterface( const QString & service, const QString & path, const QString & i
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
-  if( ISBETWEEN( 2, 5 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( ISQDBUSCONNECTION( 4 ) || HB_ISNIL( 4 ) ) && ( ISQOBJECT( 5 ) || HB_ISNIL( 5 ) ) )
+  if( ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( ISQDBUSCONNECTION(4) || HB_ISNIL(4) ) && ( ISQOBJECT(5) || HB_ISNIL(5) ) )
   {
-    auto obj = new QDBusInterface( PQSTRING( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), HB_ISNIL( 4 ) ? QDBusConnection::sessionBus() : *static_cast< QDBusConnection * >( Qt5xHb::itemGetPtr( 4 ) ), OPQOBJECT( 5, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING( 3, QString() ), HB_ISNIL(4) ? QDBusConnection::sessionBus() : *static_cast<QDBusConnection*>(Qt5xHb::itemGetPtr(4)), OPQOBJECT( 5, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDBUSINTERFACE_DELETE )
 {
-  auto obj = qobject_cast< QDBusInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDBusInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -91,21 +91,21 @@ virtual const QMetaObject * metaObject() const
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
 {
-  auto obj = qobject_cast< QDBusInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDBusInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QMetaObject * ptr = obj->metaObject();
-      Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -116,20 +116,20 @@ virtual void * qt_metacast( const char * )
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
 {
-  auto obj = qobject_cast< QDBusInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDBusInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      hb_retptr( static_cast< void * >( obj->qt_metacast( PCONSTCHAR( 1 ) ) ) );
+      hb_retptr( static_cast< void*>( obj->qt_metacast( PCONSTCHAR(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
