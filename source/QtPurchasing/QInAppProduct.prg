@@ -58,21 +58,21 @@ RETURN
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -80,12 +80,12 @@ QString identifier() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->identifier() );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -104,12 +104,12 @@ QInAppProduct::ProductType productType() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->productType() );
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -128,12 +128,12 @@ QString price() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->price() );
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -152,12 +152,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +176,12 @@ QString description() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->description() );
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -200,12 +200,12 @@ Q_INVOKABLE virtual void purchase() = 0
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
 {
-  auto obj = qobject_cast< QInAppProduct * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QInAppProduct*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->purchase();
@@ -213,12 +213,12 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP
