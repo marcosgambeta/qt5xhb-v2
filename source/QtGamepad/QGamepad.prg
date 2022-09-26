@@ -110,14 +110,14 @@ QGamepad( int deviceId = 0, QObject * parent = nullptr )
 HB_FUNC_STATIC( QGAMEPAD_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
     auto obj = new QGamepad( OPINT( 1, 0 ), OPQOBJECT( 2, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -128,21 +128,21 @@ HB_FUNC_STATIC( QGAMEPAD_NEW )
 HB_FUNC_STATIC( QGAMEPAD_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -152,12 +152,12 @@ int deviceId() const
 HB_FUNC_STATIC( QGAMEPAD_DEVICEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->deviceId() );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGAMEPAD_DEVICEID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -178,25 +178,25 @@ void setDeviceId( int number )
 HB_FUNC_STATIC( QGAMEPAD_SETDEVICEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDeviceId( PINT( 1 ) );
+      obj->setDeviceId( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -206,12 +206,12 @@ bool isConnected() const
 HB_FUNC_STATIC( QGAMEPAD_ISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isConnected() );
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGAMEPAD_ISCONNECTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -232,12 +232,12 @@ QString name() const
 HB_FUNC_STATIC( QGAMEPAD_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGAMEPAD_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -258,12 +258,12 @@ double axisLeftX() const
 HB_FUNC_STATIC( QGAMEPAD_AXISLEFTX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->axisLeftX() );
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISLEFTX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -284,12 +284,12 @@ double axisLeftY() const
 HB_FUNC_STATIC( QGAMEPAD_AXISLEFTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->axisLeftY() );
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISLEFTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -310,12 +310,12 @@ double axisRightX() const
 HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->axisRightX() );
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -336,12 +336,12 @@ double axisRightY() const
 HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->axisRightY() );
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -362,12 +362,12 @@ bool buttonA() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonA() );
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -388,12 +388,12 @@ bool buttonB() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonB() );
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONB )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -414,12 +414,12 @@ bool buttonX() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonX() );
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -440,12 +440,12 @@ bool buttonY() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonY() );
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -466,12 +466,12 @@ bool buttonL1() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONL1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonL1() );
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONL1 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -492,12 +492,12 @@ bool buttonR1() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONR1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonR1() );
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONR1 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -518,12 +518,12 @@ double buttonL2() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONL2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->buttonL2() );
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONL2 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -544,12 +544,12 @@ double buttonR2() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONR2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->buttonR2() );
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONR2 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -570,12 +570,12 @@ bool buttonSelect() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONSELECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonSelect() );
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONSELECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -596,12 +596,12 @@ bool buttonStart() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONSTART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonStart() );
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONSTART )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -622,12 +622,12 @@ bool buttonL3() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONL3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonL3() );
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONL3 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -648,12 +648,12 @@ bool buttonR3() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONR3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonR3() );
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONR3 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -674,12 +674,12 @@ bool buttonUp() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONUP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonUp() );
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONUP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -700,12 +700,12 @@ bool buttonDown() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONDOWN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonDown() );
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONDOWN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -726,12 +726,12 @@ bool buttonLeft() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONLEFT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonLeft() );
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONLEFT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -752,12 +752,12 @@ bool buttonRight() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONRIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonRight() );
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONRIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -778,12 +778,12 @@ bool buttonCenter() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONCENTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonCenter() );
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONCENTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -804,12 +804,12 @@ bool buttonGuide() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONGUIDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = qobject_cast< QGamepad * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->buttonGuide() );
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONGUIDE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -839,54 +839,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisLeftXChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -905,54 +905,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisLeftYChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -971,54 +971,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisRightXChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1037,54 +1037,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::axisRightYChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1103,54 +1103,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonAChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1169,54 +1169,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonBChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1235,54 +1235,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonCenterChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1301,54 +1301,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonDownChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1367,54 +1367,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonGuideChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1433,54 +1433,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL1Changed, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1499,54 +1499,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL2Changed, 
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1565,54 +1565,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonL3Changed, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1631,54 +1631,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonLeftChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1697,54 +1697,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR1Changed, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1763,54 +1763,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR2Changed, 
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1829,54 +1829,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonR3Changed, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1895,54 +1895,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonRightChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -1961,54 +1961,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonSelectChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2027,54 +2027,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonStartChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2093,54 +2093,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonUpChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2159,54 +2159,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonXChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2225,54 +2225,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::buttonYChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2291,54 +2291,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::connectedChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2357,54 +2357,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::deviceIdChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
@@ -2423,54 +2423,54 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QGamepad::nameChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QString arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGAMEPAD" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
