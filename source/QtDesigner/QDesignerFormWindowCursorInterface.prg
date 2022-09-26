@@ -71,19 +71,19 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -91,21 +91,21 @@ virtual QWidget * current() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->current();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -116,21 +116,21 @@ virtual QDesignerFormWindowInterface * formWindow() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->formWindow();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -141,12 +141,12 @@ virtual bool hasSelection() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasSelection() );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -165,20 +165,20 @@ bool isWidgetSelected( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isWidgetSelected( PQWIDGET( 1 ) ) );
+      RBOOL( obj->isWidgetSelected( PQWIDGET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -189,20 +189,20 @@ virtual bool movePosition( QDesignerFormWindowCursorInterface::MoveOperation ope
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RBOOL( obj->movePosition( static_cast<QDesignerFormWindowCursorInterface::MoveOperation>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QDesignerFormWindowCursorInterface::MoveMode >( QDesignerFormWindowCursorInterface::MoveAnchor ) : static_cast< QDesignerFormWindowCursorInterface::MoveMode >( hb_parni( 2 ) ) ) );
+      RBOOL( obj->movePosition( static_cast<QDesignerFormWindowCursorInterface::MoveOperation>( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode >( QDesignerFormWindowCursorInterface::MoveAnchor ) : static_cast<QDesignerFormWindowCursorInterface::MoveMode >( hb_parni(2) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -213,12 +213,12 @@ virtual int position() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->position() );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -237,21 +237,21 @@ virtual QWidget * selectedWidget( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->selectedWidget( PINT( 1 ) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      QWidget * ptr = obj->selectedWidget( PINT(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -262,12 +262,12 @@ virtual int selectedWidgetCount() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->selectedWidgetCount() );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -286,25 +286,25 @@ virtual void setPosition( int position, QDesignerFormWindowCursorInterface::Move
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setPosition( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QDesignerFormWindowCursorInterface::MoveMode >( QDesignerFormWindowCursorInterface::MoveAnchor ) : static_cast< QDesignerFormWindowCursorInterface::MoveMode >( hb_parni( 2 ) ) );
+      obj->setPosition( PINT(1), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode >( QDesignerFormWindowCursorInterface::MoveAnchor ) : static_cast<QDesignerFormWindowCursorInterface::MoveMode >( hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -312,21 +312,21 @@ virtual QWidget * widget( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget( PINT( 1 ) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget( PINT(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -337,12 +337,12 @@ virtual int widgetCount() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
 {
-  auto obj = static_cast< QDesignerFormWindowCursorInterface * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->widgetCount() );
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -360,30 +360,30 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROMOBJECT )
@@ -398,25 +398,25 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

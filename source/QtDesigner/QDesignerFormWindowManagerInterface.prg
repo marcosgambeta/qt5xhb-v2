@@ -85,21 +85,21 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -107,21 +107,21 @@ virtual QAction * actionAdjustSize() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionAdjustSize();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -132,21 +132,21 @@ virtual QAction * actionBreakLayout() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionBreakLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -157,21 +157,21 @@ virtual QAction * actionCopy() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionCopy();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -182,21 +182,21 @@ virtual QAction * actionCut() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionCut();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -207,21 +207,21 @@ virtual QAction * actionDelete() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionDelete();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -232,21 +232,21 @@ QAction * actionFormLayout() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionFormLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -257,21 +257,21 @@ virtual QAction * actionGridLayout() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionGridLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -282,21 +282,21 @@ virtual QAction * actionHorizontalLayout() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionHorizontalLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -307,21 +307,21 @@ virtual QAction * actionLower() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionLower();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -332,21 +332,21 @@ virtual QAction * actionPaste() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionPaste();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -357,21 +357,21 @@ virtual QAction * actionRaise() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionRaise();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -382,21 +382,21 @@ virtual QAction * actionRedo() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionRedo();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -407,21 +407,21 @@ virtual QAction * actionSelectAll() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionSelectAll();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -432,21 +432,21 @@ QAction * actionSimplifyLayout() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionSimplifyLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -457,21 +457,21 @@ virtual QAction * actionSplitHorizontal() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionSplitHorizontal();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -482,21 +482,21 @@ virtual QAction * actionSplitVertical() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionSplitVertical();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -507,21 +507,21 @@ virtual QAction * actionUndo() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionUndo();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -532,21 +532,21 @@ virtual QAction * actionVerticalLayout() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->actionVerticalLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -557,21 +557,21 @@ virtual QDesignerFormWindowInterface * activeFormWindow() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->activeFormWindow();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -582,21 +582,21 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -607,21 +607,21 @@ virtual QDesignerFormWindowInterface * createFormWindow( QWidget * parent = null
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QDesignerFormWindowInterface * ptr = obj->createFormWindow( OPQWIDGET( 1, nullptr ), HB_ISNIL( 2 ) ? static_cast< Qt::WindowFlags >( 0 ) : static_cast< Qt::WindowFlags >( hb_parni( 2 ) ) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      QDesignerFormWindowInterface * ptr = obj->createFormWindow( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -632,21 +632,21 @@ virtual QDesignerFormWindowInterface * formWindow( int index ) const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDesignerFormWindowInterface * ptr = obj->formWindow( PINT( 1 ) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      QDesignerFormWindowInterface * ptr = obj->formWindow( PINT(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -657,12 +657,12 @@ virtual int formWindowCount() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->formWindowCount() );
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -681,25 +681,25 @@ virtual void addFormWindow( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDESIGNERFORMWINDOWINTERFACE( 1 ) )
+    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
     {
 #endif
-      obj->addFormWindow( PQDESIGNERFORMWINDOWINTERFACE( 1 ) );
+      obj->addFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -707,25 +707,25 @@ virtual void removeFormWindow( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDESIGNERFORMWINDOWINTERFACE( 1 ) )
+    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
     {
 #endif
-      obj->removeFormWindow( PQDESIGNERFORMWINDOWINTERFACE( 1 ) );
+      obj->removeFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -733,25 +733,25 @@ virtual void setActiveFormWindow( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
 {
-  auto obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDESIGNERFORMWINDOWINTERFACE( 1 ) )
+    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
     {
 #endif
-      obj->setActiveFormWindow( PQDESIGNERFORMWINDOWINTERFACE( 1 ) );
+      obj->setActiveFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -768,51 +768,51 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::activeFormWindowChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QDesignerFormWindowInterface * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
@@ -830,51 +830,51 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::formWindowAdded, 
                                                               [sender, indexOfCodeBlock]
                                                               (QDesignerFormWindowInterface * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 
@@ -892,51 +892,51 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 
     if( hb_pcount() == 1 )
     {
-      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QDesignerFormWindowManagerInterface::formWindowRemoved, 
                                                               [sender, indexOfCodeBlock]
                                                               (QDesignerFormWindowInterface * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
-            hb_itemRelease( pSender );
-            hb_itemRelease( pArg1 );
+            hb_itemRelease(pSender);
+            hb_itemRelease(pArg1);
           }
 
         });
 
-        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
 
-        hb_retl( true );
+        hb_retl(true);
       }
       else
       {
-        hb_retl( false );
+        hb_retl(false);
       }
     }
     else if( hb_pcount() == 0 )
     {
-      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
 
-      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
 
-      hb_retl( true );
+      hb_retl(true);
     }
     else
     {
-      hb_retl( false );
+      hb_retl(false);
     }
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
 

@@ -57,34 +57,34 @@ QExtensionManager( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     auto obj = new QExtensionManager( OPQOBJECT( 1, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 {
-  auto obj = qobject_cast< QExtensionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -92,21 +92,21 @@ virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
-  auto obj = qobject_cast< QExtensionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
-      QObject * ptr = obj->extension( PQOBJECT( 1 ), PQSTRING( 2 ) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -117,25 +117,25 @@ virtual void registerExtensions( QAbstractExtensionFactory * factory, const QStr
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  auto obj = qobject_cast< QExtensionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY( 1 ), OPQSTRING( 2, QString() ) );
+      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING( 2, QString() ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -143,25 +143,25 @@ virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QS
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  auto obj = qobject_cast< QExtensionManager * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY( 1 ), OPQSTRING( 2, QString() ) );
+      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING( 2, QString() ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP
