@@ -66,19 +66,19 @@ virtual ~QVideoFilterRunnable()
 HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = static_cast< QVideoFilterRunnable * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVideoFilterRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -88,21 +88,21 @@ virtual QVideoFrame run( QVideoFrame * input, const QVideoSurfaceFormat & surfac
 HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_RUN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = static_cast< QVideoFilterRunnable * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVideoFilterRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQVIDEOFRAME( 1 ) && ISQVIDEOSURFACEFORMAT( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && ISQVIDEOFRAME(1) && ISQVIDEOSURFACEFORMAT(2) && HB_ISNUM(3) )
     {
 #endif
-      auto ptr = new QVideoFrame( obj->run( PQVIDEOFRAME( 1 ), *PQVIDEOSURFACEFORMAT( 2 ), static_cast<QVideoFilterRunnable::RunFlags>( hb_parni( 3 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVIDEOFRAME", true );
+      auto ptr = new QVideoFrame( obj->run( PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2), static_cast<QVideoFilterRunnable::RunFlags>( hb_parni(3) ) ) );
+      Qt5xHb::createReturnClass(ptr, "QVIDEOFRAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
