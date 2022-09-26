@@ -79,7 +79,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStorageInfo()
@@ -90,61 +90,61 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QStorageInfo( const QString & path )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QStorageInfo( PQSTRING( 1 ) );
+    auto obj = new QStorageInfo( PQSTRING(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && ISQDIR( 1 ) )
+  else if( ISNUMPAR(1) && ISQDIR(1) )
   {
     /*
     QStorageInfo( const QDir & dir )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QStorageInfo( *PQDIR( 1 ) );
+    auto obj = new QStorageInfo( *PQDIR(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && ISQSTORAGEINFO( 1 ) )
+  else if( ISNUMPAR(1) && ISQSTORAGEINFO(1) )
   {
     /*
     QStorageInfo( const QStorageInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QStorageInfo( *PQSTORAGEINFO( 1 ) );
+    auto obj = new QStorageInfo( *PQSTORAGEINFO(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSTORAGEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -154,25 +154,25 @@ void swap( QStorageInfo & other )
 HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSTORAGEINFO( 1 ) )
+    if( ISNUMPAR(1) && ISQSTORAGEINFO(1) )
     {
 #endif
-      obj->swap( *PQSTORAGEINFO( 1 ) );
+      obj->swap( *PQSTORAGEINFO(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -182,25 +182,25 @@ void setPath( const QString & path )
 HB_FUNC_STATIC( QSTORAGEINFO_SETPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setPath( PQSTRING( 1 ) );
+      obj->setPath( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -210,12 +210,12 @@ QString rootPath() const
 HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->rootPath() );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -236,21 +236,21 @@ QByteArray device() const
 HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QByteArray( obj->device() );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -263,21 +263,21 @@ QByteArray fileSystemType() const
 HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QByteArray( obj->fileSystemType() );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -290,12 +290,12 @@ QString name() const
 HB_FUNC_STATIC( QSTORAGEINFO_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -316,12 +316,12 @@ QString displayName() const
 HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->displayName() );
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -342,12 +342,12 @@ qint64 bytesTotal() const
 HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->bytesTotal() );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -368,12 +368,12 @@ qint64 bytesFree() const
 HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->bytesFree() );
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -394,12 +394,12 @@ qint64 bytesAvailable() const
 HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->bytesAvailable() );
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -420,12 +420,12 @@ bool isRoot() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isRoot() );
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -446,12 +446,12 @@ bool isReadOnly() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isReadOnly() );
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -472,12 +472,12 @@ bool isReady() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isReady() );
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -498,12 +498,12 @@ bool isValid() const
 HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -524,12 +524,12 @@ void refresh()
 HB_FUNC_STATIC( QSTORAGEINFO_REFRESH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = static_cast< QStorageInfo * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QStorageInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->refresh();
@@ -537,12 +537,12 @@ HB_FUNC_STATIC( QSTORAGEINFO_REFRESH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -553,43 +553,43 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QList<QStorageInfo> list = QStorageInfo::mountedVolumes();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTORAGEINFO" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTORAGEINFO");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QStorageInfo * >( new QStorageInfo( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QStorageInfo*>( new QStorageInfo( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QSTORAGEINFO", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSTORAGEINFO", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -602,16 +602,16 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     auto ptr = new QStorageInfo( QStorageInfo::root() );
-    Qt5xHb::createReturnClass( ptr, "QSTORAGEINFO", true );
+    Qt5xHb::createReturnClass(ptr, "QSTORAGEINFO", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -621,30 +621,30 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QSTORAGEINFO_NEWFROMOBJECT )
@@ -659,25 +659,25 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSTORAGEINFO_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QSTORAGEINFO_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

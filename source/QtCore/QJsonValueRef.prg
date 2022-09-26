@@ -76,45 +76,45 @@ RETURN
 
 HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 {
-  if( ISNUMPAR( 2 ) && ISQJSONARRAY( 1 ) && HB_ISNUM( 2 ) )
+  if( ISNUMPAR(2) && ISQJSONARRAY(1) && HB_ISNUM(2) )
   {
     /*
     QJsonValueRef( QJsonArray * array, int idx )
     */
-    auto obj = new QJsonValueRef( PQJSONARRAY( 1 ), PINT( 2 ) );
+    auto obj = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 2 ) && ISQJSONOBJECT( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && ISQJSONOBJECT(1) && HB_ISNUM(2) )
   {
     /*
     QJsonValueRef( QJsonObject * object, int idx )
     */
-    auto obj = new QJsonValueRef( PQJSONOBJECT( 1 ), PINT( 2 ) );
+    auto obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -122,12 +122,12 @@ QJsonValue::Type type() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->type() );
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -146,12 +146,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -170,12 +170,12 @@ bool isBool() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isBool() );
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -194,12 +194,12 @@ bool isDouble() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isDouble() );
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -218,12 +218,12 @@ bool isString() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isString() );
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -242,12 +242,12 @@ bool isArray() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isArray() );
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -266,12 +266,12 @@ bool isObject() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isObject() );
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -290,12 +290,12 @@ bool isUndefined() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isUndefined() );
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -314,12 +314,12 @@ bool toBool() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->toBool() );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -338,12 +338,12 @@ int toInt() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->toInt() );
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -362,12 +362,12 @@ double toDouble() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->toDouble() );
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -386,12 +386,12 @@ QString toString() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toString() );
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -410,21 +410,21 @@ QJsonArray toArray() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QJsonArray( obj->toArray() );
-      Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -435,21 +435,21 @@ QJsonObject toObject() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
 {
-  auto obj = static_cast< QJsonValueRef * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QJsonObject( obj->toObject() );
-      Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
+      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -459,30 +459,30 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QJSONVALUEREF_NEWFROMOBJECT )
@@ -497,25 +497,25 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QJSONVALUEREF_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QJSONVALUEREF_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

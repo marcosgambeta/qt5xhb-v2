@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC( QTIMEZONE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QTimeZone()
@@ -95,72 +95,72 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
     /*
     QTimeZone( const QByteArray & ianaId )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QTimeZone( *PQBYTEARRAY( 1 ) );
+    auto obj = new QTimeZone( *PQBYTEARRAY(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     QTimeZone( int offsetSeconds )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QTimeZone( PINT( 1 ) );
+    auto obj = new QTimeZone( PINT(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISBETWEEN( 4, 6 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISCHAR( 6 ) || HB_ISNIL( 6 ) ) )
+  else if( ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ( HB_ISNUM(5) || HB_ISNIL(5) ) && ( HB_ISCHAR(6) || HB_ISNIL(6) ) )
   {
     /*
     QTimeZone( const QByteArray & zoneId, int offsetSeconds, const QString & name, const QString & abbreviation, QLocale::Country country = QLocale::AnyCountry, const QString & comment = QString() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QTimeZone( *PQBYTEARRAY( 1 ), PINT( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), HB_ISNIL( 5 ) ? static_cast< QLocale::Country >( QLocale::AnyCountry ) : static_cast< QLocale::Country >( hb_parni( 5 ) ), OPQSTRING( 6, QString() ) );
+    auto obj = new QTimeZone( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), HB_ISNIL(5) ? static_cast<QLocale::Country >( QLocale::AnyCountry ) : static_cast<QLocale::Country >( hb_parni(5) ), OPQSTRING( 6, QString() ) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && ISQTIMEZONE( 1 ) )
+  else if( ISNUMPAR(1) && ISQTIMEZONE(1) )
   {
     /*
     QTimeZone( const QTimeZone & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QTimeZone( *PQTIMEZONE( 1 ) );
+    auto obj = new QTimeZone( *PQTIMEZONE(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTIMEZONE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -170,25 +170,25 @@ void swap( QTimeZone & other )
 HB_FUNC_STATIC( QTIMEZONE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTIMEZONE( 1 ) )
+    if( ISNUMPAR(1) && ISQTIMEZONE(1) )
     {
 #endif
-      obj->swap( *PQTIMEZONE( 1 ) );
+      obj->swap( *PQTIMEZONE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -198,12 +198,12 @@ bool isValid() const
 HB_FUNC_STATIC( QTIMEZONE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTIMEZONE_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -224,21 +224,21 @@ QByteArray id() const
 HB_FUNC_STATIC( QTIMEZONE_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QByteArray( obj->id() );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -251,12 +251,12 @@ QLocale::Country country() const
 HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->country() );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -277,12 +277,12 @@ QString comment() const
 HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->comment() );
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTIMEZONE_COMMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -299,39 +299,39 @@ HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 
 HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME )
 {
-  if( ISBETWEEN( 1, 3 ) && ISQDATETIME( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( ISQLOCALE( 3 ) || HB_ISNIL( 3 ) ) )
+  if( ISBETWEEN(1, 3) && ISQDATETIME(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQLOCALE(3) || HB_ISNIL(3) ) )
   {
     /*
     QString displayName( const QDateTime & atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const QLocale & locale = QLocale() ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      RQSTRING( obj->displayName( *PQDATETIME( 1 ), HB_ISNIL( 2 ) ? static_cast< QTimeZone::NameType >( QTimeZone::DefaultName ) : static_cast< QTimeZone::NameType >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QLocale() : *static_cast< QLocale * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
+      RQSTRING( obj->displayName( *PQDATETIME(1), HB_ISNIL(2) ? static_cast<QTimeZone::NameType >( QTimeZone::DefaultName ) : static_cast<QTimeZone::NameType >( hb_parni(2) ), HB_ISNIL(3) ? QLocale() : *static_cast<QLocale*>(Qt5xHb::itemGetPtr(3)) ) );
     }
 #endif
 
   }
-  else if( ISBETWEEN( 1, 3 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( ISQLOCALE( 3 ) || HB_ISNIL( 3 ) ) )
+  else if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQLOCALE(3) || HB_ISNIL(3) ) )
   {
     /*
     QString displayName( QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const QLocale & locale = QLocale() ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      RQSTRING( obj->displayName( static_cast<QTimeZone::TimeType>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QTimeZone::NameType >( QTimeZone::DefaultName ) : static_cast< QTimeZone::NameType >( hb_parni( 2 ) ), HB_ISNIL( 3 ) ? QLocale() : *static_cast< QLocale * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
+      RQSTRING( obj->displayName( static_cast<QTimeZone::TimeType>( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QTimeZone::NameType >( QTimeZone::DefaultName ) : static_cast<QTimeZone::NameType >( hb_parni(2) ), HB_ISNIL(3) ? QLocale() : *static_cast<QLocale*>(Qt5xHb::itemGetPtr(3)) ) );
     }
 #endif
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -341,20 +341,20 @@ QString abbreviation( const QDateTime & atDateTime ) const
 HB_FUNC_STATIC( QTIMEZONE_ABBREVIATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RQSTRING( obj->abbreviation( *PQDATETIME( 1 ) ) );
+      RQSTRING( obj->abbreviation( *PQDATETIME(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -367,20 +367,20 @@ int offsetFromUtc( const QDateTime & atDateTime ) const
 HB_FUNC_STATIC( QTIMEZONE_OFFSETFROMUTC )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RINT( obj->offsetFromUtc( *PQDATETIME( 1 ) ) );
+      RINT( obj->offsetFromUtc( *PQDATETIME(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -393,20 +393,20 @@ int standardTimeOffset( const QDateTime & atDateTime ) const
 HB_FUNC_STATIC( QTIMEZONE_STANDARDTIMEOFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RINT( obj->standardTimeOffset( *PQDATETIME( 1 ) ) );
+      RINT( obj->standardTimeOffset( *PQDATETIME(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -419,20 +419,20 @@ int daylightTimeOffset( const QDateTime & atDateTime ) const
 HB_FUNC_STATIC( QTIMEZONE_DAYLIGHTTIMEOFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RINT( obj->daylightTimeOffset( *PQDATETIME( 1 ) ) );
+      RINT( obj->daylightTimeOffset( *PQDATETIME(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -445,12 +445,12 @@ bool hasDaylightTime() const
 HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasDaylightTime() );
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -471,20 +471,20 @@ bool isDaylightTime( const QDateTime & atDateTime ) const
 HB_FUNC_STATIC( QTIMEZONE_ISDAYLIGHTTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
+    if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RBOOL( obj->isDaylightTime( *PQDATETIME( 1 ) ) );
+      RBOOL( obj->isDaylightTime( *PQDATETIME(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -497,12 +497,12 @@ bool hasTransitions() const
 HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = static_cast< QTimeZone * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTimeZone*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasTransitions() );
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -524,16 +524,16 @@ HB_FUNC_STATIC( QTIMEZONE_SYSTEMTIMEZONEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     auto ptr = new QByteArray( QTimeZone::systemTimeZoneId() );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -546,15 +546,15 @@ HB_FUNC_STATIC( QTIMEZONE_ISTIMEZONEIDAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    RBOOL( QTimeZone::isTimeZoneIdAvailable( *PQBYTEARRAY( 1 ) ) );
+    RBOOL( QTimeZone::isTimeZoneIdAvailable( *PQBYTEARRAY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -567,43 +567,43 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QList<QByteArray> list = QTimeZone::availableTimeZoneIds();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -616,43 +616,43 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    QList<QByteArray> list = QTimeZone::availableTimeZoneIds( static_cast<QLocale::Country>( hb_parni( 1 ) ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    QList<QByteArray> list = QTimeZone::availableTimeZoneIds( static_cast<QLocale::Country>( hb_parni(1) ) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -665,43 +665,43 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    QList<QByteArray> list = QTimeZone::availableTimeZoneIds( PINT( 1 ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    QList<QByteArray> list = QTimeZone::availableTimeZoneIds( PINT(1) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -709,21 +709,21 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
 
 HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     HB_FUNC_EXEC( QTIMEZONE_AVAILABLETIMEZONEIDS1 );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QTIMEZONE_AVAILABLETIMEZONEIDS2 );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QTIMEZONE_AVAILABLETIMEZONEIDS3 );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -734,16 +734,16 @@ HB_FUNC_STATIC( QTIMEZONE_IANAIDTOWINDOWSID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    auto ptr = new QByteArray( QTimeZone::ianaIdToWindowsId( *PQBYTEARRAY( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    auto ptr = new QByteArray( QTimeZone::ianaIdToWindowsId( *PQBYTEARRAY(1) ) );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -751,111 +751,111 @@ HB_FUNC_STATIC( QTIMEZONE_IANAIDTOWINDOWSID )
 
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID )
 {
-  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
     /*
     static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    auto ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY( 1 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    auto ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1) ) );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #endif
 
   }
-  else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
     /*
     static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId, QLocale::Country country )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    auto ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY( 1 ), static_cast<QLocale::Country>( hb_parni( 2 ) ) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    auto ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1), static_cast<QLocale::Country>( hb_parni(2) ) ) );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #endif
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
 {
-  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
     /*
     static QList<QByteArray> windowsIdToIanaIds( const QByteArray & windowsId )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY( 1 ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #endif
 
   }
-  else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
     /*
     static QList<QByteArray> windowsIdToIanaIds( const QByteArray & windowsId, QLocale::Country country )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY( 1 ), static_cast<QLocale::Country>( hb_parni( 2 ) ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), static_cast<QLocale::Country>( hb_parni(2) ) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #endif
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -871,30 +871,30 @@ HB_FUNC_STATIC( QTIMEZONE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QTIMEZONE_NEWFROMOBJECT )
@@ -909,25 +909,25 @@ HB_FUNC_STATIC( QTIMEZONE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTIMEZONE_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QTIMEZONE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

@@ -52,21 +52,21 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 {
-  auto obj = qobject_cast< QAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -74,20 +74,20 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
-  auto obj = qobject_cast< QAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && ISQMIMEDATA( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQMODELINDEX( 5 ) )
+    if( ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5) )
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA( 1 ), static_cast<Qt::DropAction>( hb_parni( 2 ) ), PINT( 3 ), PINT( 4 ), *PQMODELINDEX( 5 ) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA(1), static_cast<Qt::DropAction>( hb_parni(2) ), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -98,21 +98,21 @@ virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {
-  auto obj = qobject_cast< QAbstractListModel * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->index( PINT( 1 ), OPINT( 2, 0 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt5xHb::itemGetPtr( 3 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->index( PINT(1), OPINT( 2, 0 ), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(3)) ) );
+      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
   {
     /*
     QSignalTransition( QState * sourceState = nullptr )
@@ -63,36 +63,36 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQSTATE( 3 ) || HB_ISNIL( 3 ) ) )
+  else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ( ISQSTATE(3) || HB_ISNIL(3) ) )
   {
     /*
     QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = nullptr )
     */
-    auto obj = new QSignalTransition( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQSTATE( 3, nullptr ) );
+    auto obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE( 3, nullptr ) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 {
-  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSignalTransition*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -100,21 +100,21 @@ QObject * senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
-  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSignalTransition*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QObject * ptr = obj->senderObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -125,25 +125,25 @@ void setSenderObject( const QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
-  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSignalTransition*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->setSenderObject( PQOBJECT( 1 ) );
+      obj->setSenderObject( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -151,21 +151,21 @@ QByteArray signal() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
-  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSignalTransition*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QByteArray( obj->signal() );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,25 +176,25 @@ void setSignal( const QByteArray & signal )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
-  auto obj = static_cast< QSignalTransition * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSignalTransition*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setSignal( *PQBYTEARRAY( 1 ) );
+      obj->setSignal( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

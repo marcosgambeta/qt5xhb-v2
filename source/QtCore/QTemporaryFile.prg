@@ -57,65 +57,65 @@ RETURN
 
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QTemporaryFile()
     */
     auto obj = new QTemporaryFile();
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QTemporaryFile( const QString & templateName )
     */
-    auto obj = new QTemporaryFile( PQSTRING( 1 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QTemporaryFile( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
+  else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     /*
     QTemporaryFile( QObject * parent )
     */
-    auto obj = new QTemporaryFile( PQOBJECT( 1 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QTemporaryFile( PQOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
     /*
     QTemporaryFile( const QString & templateName, QObject * parent )
     */
-    auto obj = new QTemporaryFile( PQSTRING( 1 ), PQOBJECT( 2 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -123,12 +123,12 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->autoRemove() );
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -147,12 +147,12 @@ QString fileTemplate() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->fileTemplate() );
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -171,12 +171,12 @@ bool open()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->open() );
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -195,25 +195,25 @@ void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAutoRemove( PBOOL( 1 ) );
+      obj->setAutoRemove( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -221,25 +221,25 @@ void setFileTemplate( const QString & name )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setFileTemplate( PQSTRING( 1 ) );
+      obj->setFileTemplate( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -247,12 +247,12 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
-  auto obj = qobject_cast< QTemporaryFile * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QTemporaryFile*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -268,29 +268,29 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {
-  if( ISNUMPAR( 1 ) && ISQFILE( 1 ) )
+  if( ISNUMPAR(1) && ISQFILE(1) )
   {
     /*
     static QTemporaryFile * createNativeFile( QFile & file )
     */
 
-    QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
+    QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE(1) );
+    Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     static QTemporaryFile * createNativeFile( const QString & fileName )
     */
 
-    QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING( 1 ) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
+    QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING(1) );
+    Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 

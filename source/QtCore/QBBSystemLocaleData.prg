@@ -63,32 +63,32 @@ QBBSystemLocaleData()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     auto obj = new QBBSystemLocaleData();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DELETE )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,12 +96,12 @@ uint measurementSystem()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RUINT( obj->measurementSystem() );
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -120,21 +120,21 @@ QVariant timeFormat( QLocale::FormatType )
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      auto ptr = new QVariant( obj->timeFormat( static_cast<QLocale::FormatType>( hb_parni( 1 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->timeFormat( static_cast<QLocale::FormatType>( hb_parni(1) ) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -145,21 +145,21 @@ QVariant dateTimeFormat( QLocale::FormatType )
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      auto ptr = new QVariant( obj->dateTimeFormat( static_cast<QLocale::FormatType>( hb_parni( 1 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->dateTimeFormat( static_cast<QLocale::FormatType>( hb_parni(1) ) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -170,21 +170,21 @@ QLocale languageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QLocale( obj->languageLocale() );
-      Qt5xHb::createReturnClass( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -195,21 +195,21 @@ QLocale regionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QLocale( obj->regionLocale() );
-      Qt5xHb::createReturnClass( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -220,12 +220,12 @@ void installSocketNotifiers()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->installSocketNotifiers();
@@ -233,12 +233,12 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -246,12 +246,12 @@ void readLanguageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->readLanguageLocale();
@@ -259,12 +259,12 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -272,12 +272,12 @@ void readRegionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READREGIONLOCALE )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->readRegionLocale();
@@ -285,12 +285,12 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READREGIONLOCALE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -298,12 +298,12 @@ void readMeasurementSystem()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->readMeasurementSystem();
@@ -311,12 +311,12 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -324,12 +324,12 @@ void readHourFormat()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READHOURFORMAT )
 {
-  auto obj = static_cast< QBBSystemLocaleData * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QBBSystemLocaleData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->readHourFormat();
@@ -337,12 +337,12 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READHOURFORMAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

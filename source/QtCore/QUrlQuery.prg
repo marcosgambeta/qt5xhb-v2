@@ -76,7 +76,7 @@ RETURN
 
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QUrlQuery()
@@ -85,54 +85,54 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
+  else if( ISNUMPAR(1) && ISQURL(1) )
   {
     /*
     QUrlQuery( const QUrl & url )
     */
-    auto obj = new QUrlQuery( *PQURL( 1 ) );
+    auto obj = new QUrlQuery( *PQURL(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QUrlQuery( const QString & queryString )
     */
-    auto obj = new QUrlQuery( PQSTRING( 1 ) );
+    auto obj = new QUrlQuery( PQSTRING(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQURLQUERY( 1 ) )
+  else if( ISNUMPAR(1) && ISQURLQUERY(1) )
   {
     /*
     QUrlQuery( const QUrlQuery & other )
     */
-    auto obj = new QUrlQuery( *PQURLQUERY( 1 ) );
+    auto obj = new QUrlQuery( *PQURLQUERY(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QURLQUERY_DELETE )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -140,25 +140,25 @@ void addQueryItem( const QString & key, const QString & value )
 */
 HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->addQueryItem( PQSTRING( 1 ), PQSTRING( 2 ) );
+      obj->addQueryItem( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -166,20 +166,20 @@ QStringList allQueryItemValues( const QString & key, QUrl::ComponentFormattingOp
 */
 HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RQSTRINGLIST( obj->allQueryItemValues( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast< QUrl::ComponentFormattingOptions >( hb_parni( 2 ) ) ) );
+      RQSTRINGLIST( obj->allQueryItemValues( PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >( hb_parni(2) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -190,12 +190,12 @@ void clear()
 */
 HB_FUNC_STATIC( QURLQUERY_CLEAR )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clear();
@@ -203,12 +203,12 @@ HB_FUNC_STATIC( QURLQUERY_CLEAR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -216,20 +216,20 @@ bool hasQueryItem( const QString & key ) const
 */
 HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasQueryItem( PQSTRING( 1 ) ) );
+      RBOOL( obj->hasQueryItem( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -240,12 +240,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -264,20 +264,20 @@ QString query( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded )
 */
 HB_FUNC_STATIC( QURLQUERY_QUERY )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RQSTRING( obj->query( HB_ISNIL( 1 ) ? static_cast< QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast< QUrl::ComponentFormattingOptions >( hb_parni( 1 ) ) ) );
+      RQSTRING( obj->query( HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >( hb_parni(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -288,20 +288,20 @@ QString queryItemValue( const QString & key, QUrl::ComponentFormattingOptions en
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RQSTRING( obj->queryItemValue( PQSTRING( 1 ), HB_ISNIL( 2 ) ? static_cast< QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast< QUrl::ComponentFormattingOptions >( hb_parni( 2 ) ) ) );
+      RQSTRING( obj->queryItemValue( PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >( hb_parni(2) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -312,21 +312,21 @@ QChar queryPairDelimiter() const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QChar( obj->queryPairDelimiter() );
-      Qt5xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -337,21 +337,21 @@ QChar queryValueDelimiter() const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QChar( obj->queryValueDelimiter() );
-      Qt5xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -362,25 +362,25 @@ void removeAllQueryItems( const QString & key )
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->removeAllQueryItems( PQSTRING( 1 ) );
+      obj->removeAllQueryItems( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -388,25 +388,25 @@ void removeQueryItem( const QString & key )
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->removeQueryItem( PQSTRING( 1 ) );
+      obj->removeQueryItem( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -414,25 +414,25 @@ void setQuery( const QString & queryString )
 */
 HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setQuery( PQSTRING( 1 ) );
+      obj->setQuery( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -440,25 +440,25 @@ void swap( QUrlQuery & other )
 */
 HB_FUNC_STATIC( QURLQUERY_SWAP )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQURLQUERY( 1 ) )
+    if( ISNUMPAR(1) && ISQURLQUERY(1) )
     {
 #endif
-      obj->swap( *PQURLQUERY( 1 ) );
+      obj->swap( *PQURLQUERY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -466,20 +466,20 @@ QString toString( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecode
 */
 HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 {
-  auto obj = static_cast< QUrlQuery * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RQSTRING( obj->toString( HB_ISNIL( 1 ) ? static_cast< QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast< QUrl::ComponentFormattingOptions >( hb_parni( 1 ) ) ) );
+      RQSTRING( obj->toString( HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >( hb_parni(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -491,16 +491,16 @@ static QChar defaultQueryPairDelimiter()
 HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     auto ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter() );
-    Qt5xHb::createReturnClass( ptr, "QCHAR", true );
+    Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -511,16 +511,16 @@ static QChar defaultQueryValueDelimiter()
 HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     auto ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter() );
-    Qt5xHb::createReturnClass( ptr, "QCHAR", true );
+    Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -529,30 +529,30 @@ HB_FUNC_STATIC( QURLQUERY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QURLQUERY_NEWFROMOBJECT )
@@ -567,25 +567,25 @@ HB_FUNC_STATIC( QURLQUERY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QURLQUERY_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QURLQUERY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

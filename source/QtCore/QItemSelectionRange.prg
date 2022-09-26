@@ -76,7 +76,7 @@ RETURN
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QItemSelectionRange()
@@ -85,54 +85,54 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQITEMSELECTIONRANGE( 1 ) )
+  else if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
   {
     /*
     QItemSelectionRange( const QItemSelectionRange & other )
     */
-    auto obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE( 1 ) );
+    auto obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQMODELINDEX( 2 ) )
+  else if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
   {
     /*
     QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
     */
-    auto obj = new QItemSelectionRange( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
+    auto obj = new QItemSelectionRange( *PQMODELINDEX(1), *PQMODELINDEX(2) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
     /*
     QItemSelectionRange( const QModelIndex & index )
     */
-    auto obj = new QItemSelectionRange( *PQMODELINDEX( 1 ) );
+    auto obj = new QItemSelectionRange( *PQMODELINDEX(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -140,12 +140,12 @@ int top() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->top() );
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -164,12 +164,12 @@ int left() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->left() );
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -188,12 +188,12 @@ int bottom() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->bottom() );
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -212,12 +212,12 @@ int right() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->right() );
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -236,12 +236,12 @@ int width() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->width() );
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -260,12 +260,12 @@ int height() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->height() );
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -284,21 +284,21 @@ const QPersistentModelIndex & topLeft() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPersistentModelIndex * ptr = &obj->topLeft();
-      Qt5xHb::createReturnClass( ptr, "QPERSISTENTMODELINDEX", false );
+      Qt5xHb::createReturnClass(ptr, "QPERSISTENTMODELINDEX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -309,21 +309,21 @@ const QPersistentModelIndex & bottomRight() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPersistentModelIndex * ptr = &obj->bottomRight();
-      Qt5xHb::createReturnClass( ptr, "QPERSISTENTMODELINDEX", false );
+      Qt5xHb::createReturnClass(ptr, "QPERSISTENTMODELINDEX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -334,21 +334,21 @@ QModelIndex parent() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QModelIndex( obj->parent() );
-      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -359,21 +359,21 @@ const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -381,35 +381,35 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {
-  if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+  if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
     /*
     bool contains( const QModelIndex & index ) const
     */
-    auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      RBOOL( obj->contains( *PQMODELINDEX( 1 ) ) );
+      RBOOL( obj->contains( *PQMODELINDEX(1) ) );
     }
 
   }
-  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQMODELINDEX( 3 ) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3) )
   {
     /*
     bool contains( int row, int column, const QModelIndex & parentIndex ) const
     */
-    auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      RBOOL( obj->contains( PINT( 1 ), PINT( 2 ), *PQMODELINDEX( 3 ) ) );
+      RBOOL( obj->contains( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
     }
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -418,20 +418,20 @@ bool intersects( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQITEMSELECTIONRANGE( 1 ) )
+    if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      RBOOL( obj->intersects( *PQITEMSELECTIONRANGE( 1 ) ) );
+      RBOOL( obj->intersects( *PQITEMSELECTIONRANGE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -442,21 +442,21 @@ QItemSelectionRange intersected( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQITEMSELECTIONRANGE( 1 ) )
+    if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      auto ptr = new QItemSelectionRange( obj->intersected( *PQITEMSELECTIONRANGE( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QITEMSELECTIONRANGE", true );
+      auto ptr = new QItemSelectionRange( obj->intersected( *PQITEMSELECTIONRANGE(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QITEMSELECTIONRANGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -467,12 +467,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -491,12 +491,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -515,48 +515,48 @@ QModelIndexList indexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
-  auto obj = static_cast< QItemSelectionRange * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QItemSelectionRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QModelIndexList list = obj->indexes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX");
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( nullptr );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, static_cast< QModelIndex * >( new QModelIndex( list[ i ] ) ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( nullptr );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(nullptr);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemNew(nullptr);
+          hb_itemPutPtr( pItem, static_cast<QModelIndex*>( new QModelIndex( list[ i ] ) ) );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemNew(nullptr);
           hb_itemPutL( pDestroy, true );
           hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
           hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -566,30 +566,30 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEWFROMOBJECT )
@@ -604,25 +604,25 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

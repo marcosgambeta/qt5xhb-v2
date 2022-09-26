@@ -75,40 +75,40 @@ RETURN
 
 HB_FUNC( QVERSIONNUMBER_NEW )
 {
-  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     /*
     QVersionNumber( int maj, int min, int mic )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    auto obj = new QVersionNumber( PINT( 1 ), PINT( 2 ), PINT( 3 ) );
+    auto obj = new QVersionNumber( PINT(1), PINT(2), PINT(3) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     QVersionNumber( int maj, int min )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    auto obj = new QVersionNumber( PINT( 1 ), PINT( 2 ) );
+    auto obj = new QVersionNumber( PINT(1), PINT(2) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     QVersionNumber( int maj )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    auto obj = new QVersionNumber( PINT( 1 ) );
+    auto obj = new QVersionNumber( PINT(1) );
     Qt5xHb::returnNewObject( obj, true );
 #endif
 
   }
-  else if( ISNUMPAR( 0 ) )
+  else if( ISNUMPAR(0) )
   {
     /*
     QVersionNumber()
@@ -121,26 +121,26 @@ HB_FUNC( QVERSIONNUMBER_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QVERSIONNUMBER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -150,12 +150,12 @@ bool isNormalized() const
 HB_FUNC_STATIC( QVERSIONNUMBER_ISNORMALIZED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isNormalized() );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNORMALIZED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +176,12 @@ bool isNull() const
 HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -202,20 +202,20 @@ bool isPrefixOf( const QVersionNumber & other ) const
 HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQVERSIONNUMBER( 1 ) )
+    if( ISNUMPAR(1) && ISQVERSIONNUMBER(1) )
     {
 #endif
-      RBOOL( obj->isPrefixOf( *PQVERSIONNUMBER( 1 ) ) );
+      RBOOL( obj->isPrefixOf( *PQVERSIONNUMBER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -228,12 +228,12 @@ int majorVersion() const
 HB_FUNC_STATIC( QVERSIONNUMBER_MAJORVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->majorVersion() );
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MAJORVERSION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -254,12 +254,12 @@ int microVersion() const
 HB_FUNC_STATIC( QVERSIONNUMBER_MICROVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->microVersion() );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MICROVERSION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -280,12 +280,12 @@ int minorVersion() const
 HB_FUNC_STATIC( QVERSIONNUMBER_MINORVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->minorVersion() );
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MINORVERSION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -306,21 +306,21 @@ QVersionNumber normalized() const
 HB_FUNC_STATIC( QVERSIONNUMBER_NORMALIZED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QVersionNumber( obj->normalized() );
-      Qt5xHb::createReturnClass( ptr, "QVERSIONNUMBER", true );
+      Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -333,20 +333,20 @@ int segmentAt( int index ) const
 HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->segmentAt( PINT( 1 ) ) );
+      RINT( obj->segmentAt( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -359,12 +359,12 @@ int segmentCount() const
 HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->segmentCount() );
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -385,28 +385,28 @@ QVector<int> segments() const
 HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QVector<int> list = obj->segments();
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       for( auto i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( nullptr, list[ i ] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease( pArray );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -419,12 +419,12 @@ QString toString() const
 HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = static_cast< QVersionNumber * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toString() );
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -446,16 +446,16 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && ISQVERSIONNUMBER( 1 ) && ISQVERSIONNUMBER( 2 ) )
+  if( ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2) )
   {
 #endif
-    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix( *PQVERSIONNUMBER( 1 ), *PQVERSIONNUMBER( 2 ) ) );
-    Qt5xHb::createReturnClass( ptr, "QVERSIONNUMBER", true );
+    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -468,15 +468,15 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && ISQVERSIONNUMBER( 1 ) && ISQVERSIONNUMBER( 2 ) )
+  if( ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2) )
   {
 #endif
-    RINT( QVersionNumber::compare( *PQVERSIONNUMBER( 1 ), *PQVERSIONNUMBER( 2 ) ) );
+    RINT( QVersionNumber::compare( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -489,18 +489,18 @@ HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
 #endif
     int par2;
-    auto ptr = new QVersionNumber( QVersionNumber::fromString( PQSTRING( 1 ), &par2 ) );
-    Qt5xHb::createReturnClass( ptr, "QVERSIONNUMBER", true );
+    auto ptr = new QVersionNumber( QVersionNumber::fromString( PQSTRING(1), &par2 ) );
+    Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
     hb_storni( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 #endif
@@ -510,30 +510,30 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROMOBJECT )
@@ -548,25 +548,25 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QVERSIONNUMBER_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QVERSIONNUMBER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

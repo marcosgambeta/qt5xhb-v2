@@ -142,7 +142,7 @@ QVariant HAbstractListModelV2::data( const QModelIndex & index, int role ) const
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
       void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-      data = *( static_cast< QVariant * >( ptr ) );
+      data = *( static_cast<QVariant*>( ptr ) );
     }
 
     hb_itemRelease( pIndex );
@@ -168,7 +168,7 @@ QVariant HAbstractListModelV2::headerData( int section, Qt::Orientation orientat
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
       void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-      data = *( static_cast< QVariant * >( ptr ) );
+      data = *( static_cast<QVariant*>( ptr ) );
     }
 
     hb_itemRelease( pSection );
@@ -192,7 +192,7 @@ Qt::ItemFlags HAbstractListModelV2::flags( const QModelIndex &index ) const
 
     if( hb_itemType( pRet ) & HB_IT_NUMERIC )
     {
-      flags = static_cast< Qt::ItemFlags >( hb_itemGetNI( pRet ) );
+      flags = static_cast<Qt::ItemFlags >( hb_itemGetNI( pRet ) );
     }
 
     hb_itemRelease( pIndex );

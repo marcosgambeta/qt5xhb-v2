@@ -57,34 +57,34 @@ QSocketNotifier( qintptr socket, QSocketNotifier::Type, QObject * parent = nullp
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
-  if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
+  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
-    auto obj = new QSocketNotifier( PQINTPTR( 1 ), static_cast<QSocketNotifier::Type>( hb_parni( 2 ) ), OPQOBJECT( 3, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QSocketNotifier( PQINTPTR(1), static_cast<QSocketNotifier::Type>( hb_parni(2) ), OPQOBJECT( 3, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
-  auto obj = qobject_cast< QSocketNotifier * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QSocketNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -92,12 +92,12 @@ qintptr socket() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
-  auto obj = qobject_cast< QSocketNotifier * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QSocketNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINTPTR( obj->socket() );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -116,12 +116,12 @@ QSocketNotifier::Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
-  auto obj = qobject_cast< QSocketNotifier * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QSocketNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->type() );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -140,12 +140,12 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
-  auto obj = qobject_cast< QSocketNotifier * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QSocketNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -164,25 +164,25 @@ void setEnabled( bool )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
-  auto obj = qobject_cast< QSocketNotifier * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QSocketNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setEnabled( PBOOL( 1 ) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP
