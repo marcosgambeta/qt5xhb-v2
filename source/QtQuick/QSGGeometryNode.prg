@@ -56,32 +56,32 @@ QSGGeometryNode()
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     auto obj = new QSGGeometryNode();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSGGEOMETRYNODE_DELETE )
 {
-  auto obj = static_cast< QSGGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -89,21 +89,21 @@ QSGMaterial * material() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
 {
-  auto obj = static_cast< QSGGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSGMaterial * ptr = obj->material();
-      Qt5xHb::createReturnClass( ptr, "QSGMATERIAL", false );
+      Qt5xHb::createReturnClass(ptr, "QSGMATERIAL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -114,21 +114,21 @@ QSGMaterial * opaqueMaterial() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
 {
-  auto obj = static_cast< QSGGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSGMaterial * ptr = obj->opaqueMaterial();
-      Qt5xHb::createReturnClass( ptr, "QSGMATERIAL", false );
+      Qt5xHb::createReturnClass(ptr, "QSGMATERIAL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -139,25 +139,25 @@ void setMaterial( QSGMaterial * material )
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 {
-  auto obj = static_cast< QSGGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSGMATERIAL( 1 ) )
+    if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
     {
 #endif
-      obj->setMaterial( PQSGMATERIAL( 1 ) );
+      obj->setMaterial( PQSGMATERIAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -165,25 +165,25 @@ void setOpaqueMaterial( QSGMaterial * material )
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
 {
-  auto obj = static_cast< QSGGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSGMATERIAL( 1 ) )
+    if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
     {
 #endif
-      obj->setOpaqueMaterial( PQSGMATERIAL( 1 ) );
+      obj->setOpaqueMaterial( PQSGMATERIAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

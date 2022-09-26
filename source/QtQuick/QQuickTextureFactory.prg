@@ -58,21 +58,21 @@ RETURN
 
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 {
-  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -80,21 +80,21 @@ virtual QSGTexture * createTexture( QQuickWindow * window ) const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
 {
-  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQQUICKWINDOW( 1 ) )
+    if( ISNUMPAR(1) && ISQQUICKWINDOW(1) )
     {
 #endif
-      QSGTexture * ptr = obj->createTexture( PQQUICKWINDOW( 1 ) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
+      QSGTexture * ptr = obj->createTexture( PQQUICKWINDOW(1) );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -105,21 +105,21 @@ virtual QImage image() const
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
 {
-  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QImage( obj->image() );
-      Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -130,12 +130,12 @@ virtual int textureByteCount() const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
 {
-  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->textureByteCount() );
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -154,21 +154,21 @@ virtual QSize textureSize() const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
 {
-  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QSize( obj->textureSize() );
-      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
