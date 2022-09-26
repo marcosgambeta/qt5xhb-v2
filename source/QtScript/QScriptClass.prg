@@ -75,32 +75,32 @@ QScriptClass( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISQSCRIPTENGINE( 1 ) )
+  if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
   {
-    auto obj = new QScriptClass( PQSCRIPTENGINE( 1 ) );
+    auto obj = new QScriptClass( PQSCRIPTENGINE(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -108,21 +108,21 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QScriptEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCRIPTENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -133,21 +133,21 @@ virtual QVariant extension( QScriptClass::Extension extension, const QVariant & 
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) )
     {
 #endif
-      auto ptr = new QVariant( obj->extension( static_cast<QScriptClass::Extension>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt5xHb::itemGetPtr( 2 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->extension( static_cast<QScriptClass::Extension>( hb_parni(1) ), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -158,12 +158,12 @@ virtual QString name() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -182,21 +182,21 @@ virtual QScriptClassPropertyIterator * newIterator( const QScriptValue & object 
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
+    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      QScriptClassPropertyIterator * ptr = obj->newIterator( *PQSCRIPTVALUE( 1 ) );
-      Qt5xHb::createReturnClass( ptr, "QSCRIPTCLASSPROPERTYITERATOR", false );
+      QScriptClassPropertyIterator * ptr = obj->newIterator( *PQSCRIPTVALUE(1) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTCLASSPROPERTYITERATOR", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -207,21 +207,21 @@ virtual QScriptValue property( const QScriptValue & object, const QScriptString 
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTSTRING( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) )
     {
 #endif
-      auto ptr = new QScriptValue( obj->property( *PQSCRIPTVALUE( 1 ), *PQSCRIPTSTRING( 2 ), PUINT( 3 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      auto ptr = new QScriptValue( obj->property( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -232,20 +232,20 @@ virtual QScriptValue::PropertyFlags propertyFlags( const QScriptValue & object, 
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTSTRING( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) )
     {
 #endif
-      RENUM( obj->propertyFlags( *PQSCRIPTVALUE( 1 ), *PQSCRIPTSTRING( 2 ), PUINT( 3 ) ) );
+      RENUM( obj->propertyFlags( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -256,21 +256,21 @@ virtual QScriptValue prototype() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QScriptValue( obj->prototype() );
-      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -284,25 +284,25 @@ virtual void setProperty( QScriptValue & object, const QScriptString & name, uin
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTSTRING( 2 ) && HB_ISNUM( 3 ) && ISQSCRIPTVALUE( 4 ) )
+    if( ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4) )
     {
 #endif
-      obj->setProperty( *PQSCRIPTVALUE( 1 ), *PQSCRIPTSTRING( 2 ), PUINT( 3 ), *PQSCRIPTVALUE( 4 ) );
+      obj->setProperty( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3), *PQSCRIPTVALUE(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -310,20 +310,20 @@ virtual bool supportsExtension( QScriptClass::Extension extension ) const
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
 {
-  auto obj = static_cast< QScriptClass * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScriptClass*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsExtension( static_cast<QScriptClass::Extension>( hb_parni( 1 ) ) ) );
+      RBOOL( obj->supportsExtension( static_cast<QScriptClass::Extension>( hb_parni(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -333,30 +333,30 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROMOBJECT )
@@ -371,25 +371,25 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSCRIPTCLASS_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QSCRIPTCLASS_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
