@@ -60,7 +60,7 @@ static void initialize()
 HB_FUNC_STATIC( QTWEBENGINE_INITIALIZE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QtWebEngine::initialize();
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QTWEBENGINE_INITIALIZE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP
