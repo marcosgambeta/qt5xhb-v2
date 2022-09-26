@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC( QVECTOR4D_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QVector4D()
@@ -93,90 +93,90 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     /*
     QVector4D( float xpos, float ypos, float zpos, float wpos )
     */
-    auto obj = new QVector4D( PFLOAT( 1 ), PFLOAT( 2 ), PFLOAT( 3 ), PFLOAT( 4 ) );
+    auto obj = new QVector4D( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     /*
     QVector4D( const QPoint & point )
     */
-    auto obj = new QVector4D( *PQPOINT( 1 ) );
+    auto obj = new QVector4D( *PQPOINT(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     QVector4D( const QPointF & point )
     */
-    auto obj = new QVector4D( *PQPOINTF( 1 ) );
+    auto obj = new QVector4D( *PQPOINTF(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQVECTOR2D( 1 ) )
+  else if( ISNUMPAR(1) && ISQVECTOR2D(1) )
   {
     /*
     QVector4D( const QVector2D & vector )
     */
-    auto obj = new QVector4D( *PQVECTOR2D( 1 ) );
+    auto obj = new QVector4D( *PQVECTOR2D(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 3 ) && ISQVECTOR2D( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && ISQVECTOR2D(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     /*
     QVector4D( const QVector2D & vector, float zpos, float wpos )
     */
-    auto obj = new QVector4D( *PQVECTOR2D( 1 ), PFLOAT( 2 ), PFLOAT( 3 ) );
+    auto obj = new QVector4D( *PQVECTOR2D(1), PFLOAT(2), PFLOAT(3) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
+  else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
     /*
     QVector4D( const QVector3D & vector )
     */
-    auto obj = new QVector4D( *PQVECTOR3D( 1 ) );
+    auto obj = new QVector4D( *PQVECTOR3D(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 2 ) && ISQVECTOR3D( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
   {
     /*
     QVector4D( const QVector3D & vector, float wpos )
     */
-    auto obj = new QVector4D( *PQVECTOR3D( 1 ), PFLOAT( 2 ) );
+    auto obj = new QVector4D( *PQVECTOR3D(1), PFLOAT(2) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QVECTOR4D_DELETE )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -184,12 +184,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QVECTOR4D_ISNULL )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QVECTOR4D_ISNULL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -208,12 +208,12 @@ float x() const
 */
 HB_FUNC_STATIC( QVECTOR4D_X )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->x() );
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QVECTOR4D_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -232,12 +232,12 @@ float y() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Y )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->y() );
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QVECTOR4D_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -256,12 +256,12 @@ float z() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Z )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->z() );
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QVECTOR4D_Z )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -280,12 +280,12 @@ float w() const
 */
 HB_FUNC_STATIC( QVECTOR4D_W )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->w() );
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QVECTOR4D_W )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -304,25 +304,25 @@ void setX( float x )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETX )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setX( PFLOAT( 1 ) );
+      obj->setX( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -330,25 +330,25 @@ void setY( float y )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETY )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setY( PFLOAT( 1 ) );
+      obj->setY( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -356,25 +356,25 @@ void setZ( float z )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETZ )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setZ( PFLOAT( 1 ) );
+      obj->setZ( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -382,25 +382,25 @@ void setW( float w )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETW )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setW( PFLOAT( 1 ) );
+      obj->setW( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -408,12 +408,12 @@ float length() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTH )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->length() );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QVECTOR4D_LENGTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -432,12 +432,12 @@ float lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->lengthSquared() );
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -456,21 +456,21 @@ QVector4D normalized() const
 */
 HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QVector4D( obj->normalized() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR4D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -481,12 +481,12 @@ void normalize()
 */
 HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->normalize();
@@ -494,12 +494,12 @@ HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -507,21 +507,21 @@ QVector2D toVector2D() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2D )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QVector2D( obj->toVector2D() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR2D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR2D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -532,21 +532,21 @@ QVector2D toVector2DAffine() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2DAFFINE )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QVector2D( obj->toVector2DAffine() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR2D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR2D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -557,21 +557,21 @@ QVector3D toVector3D() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3D )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QVector3D( obj->toVector3D() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -582,21 +582,21 @@ QVector3D toVector3DAffine() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QVector3D( obj->toVector3DAffine() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -607,21 +607,21 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOPOINT )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->toPoint() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -632,21 +632,21 @@ QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
 {
-  auto obj = static_cast< QVector4D * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QVector4D*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPointF( obj->toPointF() );
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -658,15 +658,15 @@ static float dotProduct( const QVector4D & v1, const QVector4D & v2 )
 HB_FUNC_STATIC( QVECTOR4D_DOTPRODUCT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && ISQVECTOR4D( 1 ) && ISQVECTOR4D( 2 ) )
+  if( ISNUMPAR(2) && ISQVECTOR4D(1) && ISQVECTOR4D(2) )
   {
 #endif
-    RFLOAT( QVector4D::dotProduct( *PQVECTOR4D( 1 ), *PQVECTOR4D( 2 ) ) );
+    RFLOAT( QVector4D::dotProduct( *PQVECTOR4D(1), *PQVECTOR4D(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -675,30 +675,30 @@ HB_FUNC_STATIC( QVECTOR4D_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QVECTOR4D_NEWFROMOBJECT )
@@ -713,25 +713,25 @@ HB_FUNC_STATIC( QVECTOR4D_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QVECTOR4D_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QVECTOR4D_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

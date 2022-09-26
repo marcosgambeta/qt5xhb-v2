@@ -85,32 +85,32 @@ QTextLine()
 */
 HB_FUNC_STATIC( QTEXTLINE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     auto obj = new QTextLine();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTLINE_DELETE )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -118,12 +118,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTLINE_ISVALID )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTLINE_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -142,21 +142,21 @@ QRectF rect() const
 */
 HB_FUNC_STATIC( QTEXTLINE_RECT )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QRectF( obj->rect() );
-      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -167,12 +167,12 @@ qreal x() const
 */
 HB_FUNC_STATIC( QTEXTLINE_X )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->x() );
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTEXTLINE_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -191,12 +191,12 @@ qreal y() const
 */
 HB_FUNC_STATIC( QTEXTLINE_Y )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->y() );
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTEXTLINE_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -215,12 +215,12 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTLINE_WIDTH )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->width() );
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTEXTLINE_WIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -239,12 +239,12 @@ qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTLINE_ASCENT )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->ascent() );
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTEXTLINE_ASCENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -263,12 +263,12 @@ qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTLINE_DESCENT )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->descent() );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTEXTLINE_DESCENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -287,12 +287,12 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->height() );
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -311,12 +311,12 @@ qreal leading() const
 */
 HB_FUNC_STATIC( QTEXTLINE_LEADING )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->leading() );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -335,25 +335,25 @@ void setLeadingIncluded( bool included )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setLeadingIncluded( PBOOL( 1 ) );
+      obj->setLeadingIncluded( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -361,12 +361,12 @@ bool leadingIncluded() const
 */
 HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->leadingIncluded() );
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -385,12 +385,12 @@ qreal naturalTextWidth() const
 */
 HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->naturalTextWidth() );
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -409,12 +409,12 @@ qreal horizontalAdvance() const
 */
 HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->horizontalAdvance() );
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -433,21 +433,21 @@ QRectF naturalTextRect() const
 */
 HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QRectF( obj->naturalTextRect() );
-      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -455,37 +455,37 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
-  if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
     */
-    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
       int par1;
-      RQREAL( obj->cursorToX( &par1, HB_ISNIL( 2 ) ? static_cast< QTextLine::Edge >( QTextLine::Leading ) : static_cast< QTextLine::Edge >( hb_parni( 2 ) ) ) );
+      RQREAL( obj->cursorToX( &par1, HB_ISNIL(2) ? static_cast<QTextLine::Edge >( QTextLine::Leading ) : static_cast<QTextLine::Edge >( hb_parni(2) ) ) );
       hb_storni( par1, 1 );
     }
 
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
     */
-    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      RQREAL( obj->cursorToX( PINT( 1 ), HB_ISNIL( 2 ) ? static_cast< QTextLine::Edge >( QTextLine::Leading ) : static_cast< QTextLine::Edge >( hb_parni( 2 ) ) ) );
+      RQREAL( obj->cursorToX( PINT(1), HB_ISNIL(2) ? static_cast<QTextLine::Edge >( QTextLine::Leading ) : static_cast<QTextLine::Edge >( hb_parni(2) ) ) );
     }
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -494,20 +494,20 @@ int xToCursor( qreal x, QTextLine::CursorPosition = QTextLine::CursorBetweenChar
 */
 HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RINT( obj->xToCursor( PQREAL( 1 ), HB_ISNIL( 2 ) ? static_cast< QTextLine::CursorPosition >( QTextLine::CursorBetweenCharacters ) : static_cast< QTextLine::CursorPosition >( hb_parni( 2 ) ) ) );
+      RINT( obj->xToCursor( PQREAL(1), HB_ISNIL(2) ? static_cast<QTextLine::CursorPosition >( QTextLine::CursorBetweenCharacters ) : static_cast<QTextLine::CursorPosition >( hb_parni(2) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -518,62 +518,62 @@ void setLineWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setLineWidth( PQREAL( 1 ) );
+      obj->setLineWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     void setNumColumns( int columns )
     */
-    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      obj->setNumColumns( PINT( 1 ) );
+      obj->setNumColumns( PINT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void setNumColumns( int columns, qreal alignmentWidth )
     */
-    auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      obj->setNumColumns( PINT( 1 ), PQREAL( 2 ) );
+      obj->setNumColumns( PINT(1), PQREAL(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -582,25 +582,25 @@ void setPosition( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setPosition( *PQPOINTF( 1 ) );
+      obj->setPosition( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -608,21 +608,21 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTEXTLINE_POSITION )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPointF( obj->position() );
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -633,12 +633,12 @@ int textStart() const
 */
 HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->textStart() );
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -657,12 +657,12 @@ int textLength() const
 */
 HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->textLength() );
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -681,12 +681,12 @@ int lineNumber() const
 */
 HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 {
-  auto obj = static_cast< QTextLine * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTextLine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->lineNumber() );
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -704,30 +704,30 @@ HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QTEXTLINE_NEWFROMOBJECT )
@@ -742,25 +742,25 @@ HB_FUNC_STATIC( QTEXTLINE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTLINE_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QTEXTLINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

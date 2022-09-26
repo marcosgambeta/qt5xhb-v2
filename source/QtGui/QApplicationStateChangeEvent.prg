@@ -51,14 +51,14 @@ QApplicationStateChangeEvent( Qt::ApplicationState state )
 */
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    auto obj = new QApplicationStateChangeEvent( static_cast<Qt::ApplicationState>( hb_parni( 1 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QApplicationStateChangeEvent( static_cast<Qt::ApplicationState>( hb_parni(1) ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -67,12 +67,12 @@ Qt::ApplicationState applicationState() const
 */
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
 {
-  auto obj = static_cast< QApplicationStateChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QApplicationStateChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->applicationState() );
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

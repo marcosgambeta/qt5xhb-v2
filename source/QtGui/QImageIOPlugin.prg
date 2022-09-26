@@ -52,21 +52,21 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
-  auto obj = qobject_cast< QImageIOPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QImageIOPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -74,20 +74,20 @@ virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QBy
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  auto obj = qobject_cast< QImageIOPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QImageIOPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQIODEVICE( 1 ) && ISQBYTEARRAY( 2 ) )
+    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      RENUM( obj->capabilities( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) ) );
+      RENUM( obj->capabilities( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -98,21 +98,21 @@ virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format 
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  auto obj = qobject_cast< QImageIOPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QImageIOPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QImageIOHandler * ptr = obj->create( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt5xHb::itemGetPtr( 2 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QIMAGEIOHANDLER", false );
+      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(2)) );
+      Qt5xHb::createReturnClass(ptr, "QIMAGEIOHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

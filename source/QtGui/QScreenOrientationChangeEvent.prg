@@ -56,32 +56,32 @@ QScreenOrientationChangeEvent( QScreen * screen, Qt::ScreenOrientation orientati
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR( 2 ) && ISQSCREEN( 1 ) && HB_ISNUM( 2 ) )
+  if( ISNUMPAR(2) && ISQSCREEN(1) && HB_ISNUM(2) )
   {
-    auto obj = new QScreenOrientationChangeEvent( PQSCREEN( 1 ), static_cast<Qt::ScreenOrientation>( hb_parni( 2 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QScreenOrientationChangeEvent( PQSCREEN(1), static_cast<Qt::ScreenOrientation>( hb_parni(2) ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
 {
-  auto obj = static_cast< QScreenOrientationChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScreenOrientationChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -89,21 +89,21 @@ QScreen * screen() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
 {
-  auto obj = static_cast< QScreenOrientationChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScreenOrientationChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QScreen * ptr = obj->screen();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -114,12 +114,12 @@ Qt::ScreenOrientation orientation() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
 {
-  auto obj = static_cast< QScreenOrientationChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScreenOrientationChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

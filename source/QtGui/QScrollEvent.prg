@@ -55,32 +55,32 @@ QScrollEvent( const QPointF & contentPos, const QPointF & overshoot, QScrollEven
 */
 HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
-  if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) )
+  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) )
   {
-    auto obj = new QScrollEvent( *PQPOINTF( 1 ), *PQPOINTF( 2 ), static_cast<QScrollEvent::ScrollState>( hb_parni( 3 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), static_cast<QScrollEvent::ScrollState>( hb_parni(3) ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSCROLLEVENT_DELETE )
 {
-  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -88,21 +88,21 @@ QPointF contentPos() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
 {
-  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPointF( obj->contentPos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -113,21 +113,21 @@ QPointF overshootDistance() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
 {
-  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPointF( obj->overshootDistance() );
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -138,12 +138,12 @@ QScrollEvent::ScrollState scrollState() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
 {
-  auto obj = static_cast< QScrollEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->scrollState() );
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -62,32 +62,32 @@ QEnterEvent( const QPointF & localPos, const QPointF & windowPos, const QPointF 
 */
 HB_FUNC_STATIC( QENTEREVENT_NEW )
 {
-  if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) )
+  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
   {
-    auto obj = new QEnterEvent( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINTF( 3 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QEnterEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QENTEREVENT_DELETE )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -95,21 +95,21 @@ QPoint pos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_POS )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->pos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -120,21 +120,21 @@ QPoint globalPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->globalPos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -145,12 +145,12 @@ int x() const
 */
 HB_FUNC_STATIC( QENTEREVENT_X )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->x() );
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QENTEREVENT_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -169,12 +169,12 @@ int y() const
 */
 HB_FUNC_STATIC( QENTEREVENT_Y )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->y() );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QENTEREVENT_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -193,12 +193,12 @@ int globalX() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALX )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->globalX() );
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -217,12 +217,12 @@ int globalY() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALY )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->globalY() );
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -241,21 +241,21 @@ const QPointF & localPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->localPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -266,21 +266,21 @@ const QPointF & windowPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->windowPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -291,21 +291,21 @@ const QPointF & screenPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
 {
-  auto obj = static_cast< QEnterEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QEnterEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->screenPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

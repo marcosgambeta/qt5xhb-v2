@@ -63,54 +63,54 @@ RETURN
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
-  if( ISBETWEEN( 4, 5 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
+  if( ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
   {
     /*
     QWheelEvent( const QPointF & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
-    auto obj = new QWheelEvent( *PQPOINTF( 1 ), PINT( 2 ), static_cast<Qt::MouseButtons>( hb_parni( 3 ) ), static_cast<Qt::KeyboardModifiers>( hb_parni( 4 ) ), HB_ISNIL( 5 ) ? static_cast< Qt::Orientation >( Qt::Vertical ) : static_cast< Qt::Orientation >( hb_parni( 5 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QWheelEvent( *PQPOINTF(1), PINT(2), static_cast<Qt::MouseButtons>( hb_parni(3) ), static_cast<Qt::KeyboardModifiers>( hb_parni(4) ), HB_ISNIL(5) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(5) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN( 5, 6 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
+  else if( ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
   {
     /*
     QWheelEvent( const QPointF & pos, const QPointF & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
-    auto obj = new QWheelEvent( *PQPOINTF( 1 ), *PQPOINTF( 2 ), PINT( 3 ), static_cast<Qt::MouseButtons>( hb_parni( 4 ) ), static_cast<Qt::KeyboardModifiers>( hb_parni( 5 ) ), HB_ISNIL( 6 ) ? static_cast< Qt::Orientation >( Qt::Vertical ) : static_cast< Qt::Orientation >( hb_parni( 6 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), static_cast<Qt::MouseButtons>( hb_parni(4) ), static_cast<Qt::KeyboardModifiers>( hb_parni(5) ), HB_ISNIL(6) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(6) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR( 8 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) && ISQPOINT( 3 ) && ISQPOINT( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) && HB_ISNUM( 8 ) )
+  else if( ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) )
   {
     /*
     QWheelEvent( const QPointF & pos, const QPointF & globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QWheelEvent( *PQPOINTF( 1 ), *PQPOINTF( 2 ), *PQPOINT( 3 ), *PQPOINT( 4 ), PINT( 5 ), static_cast<Qt::Orientation>( hb_parni( 6 ) ), static_cast<Qt::MouseButtons>( hb_parni( 7 ) ), static_cast<Qt::KeyboardModifiers>( hb_parni( 8 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), static_cast<Qt::Orientation>( hb_parni(6) ), static_cast<Qt::MouseButtons>( hb_parni(7) ), static_cast<Qt::KeyboardModifiers>( hb_parni(8) ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWHEELEVENT_DELETE )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -118,21 +118,21 @@ QPoint pixelDelta() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_PIXELDELTA )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->pixelDelta() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -143,21 +143,21 @@ QPoint angleDelta() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_ANGLEDELTA )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->angleDelta() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -168,12 +168,12 @@ int delta() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_DELTA )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->delta() );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -192,12 +192,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -216,21 +216,21 @@ QPoint pos() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_POS )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->pos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -241,21 +241,21 @@ QPoint globalPos() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->globalPos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -266,12 +266,12 @@ int x() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_X )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->x() );
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QWHEELEVENT_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -290,12 +290,12 @@ int y() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_Y )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->y() );
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QWHEELEVENT_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -314,12 +314,12 @@ int globalX() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->globalX() );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -338,12 +338,12 @@ int globalY() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->globalY() );
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -362,21 +362,21 @@ const QPointF & posF() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_POSF )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->posF();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -387,21 +387,21 @@ const QPointF & globalPosF() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->globalPosF();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -412,12 +412,12 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
 {
-  auto obj = static_cast< QWheelEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->buttons() );
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

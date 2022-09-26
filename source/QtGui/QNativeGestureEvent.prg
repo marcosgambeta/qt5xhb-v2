@@ -60,32 +60,32 @@ QNativeGestureEvent( Qt::NativeGestureType type, const QPointF & localPos, const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 {
-  if( ISNUMPAR( 7 ) && HB_ISNUM( 1 ) && ISQPOINTF( 2 ) && ISQPOINTF( 3 ) && ISQPOINTF( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6) && HB_ISNUM( 7 ) )
+  if( ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) )
   {
-    auto obj = new QNativeGestureEvent( static_cast<Qt::NativeGestureType>( hb_parni( 1 ) ), *PQPOINTF( 2 ), *PQPOINTF( 3 ), *PQPOINTF( 4 ), PQREAL( 5 ), PULONG( 6 ), PQUINT64( 7 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QNativeGestureEvent( static_cast<Qt::NativeGestureType>( hb_parni(1) ), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQREAL(5), PULONG(6), PQUINT64(7) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -93,12 +93,12 @@ Qt::NativeGestureType gestureType() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->gestureType() );
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -117,12 +117,12 @@ qreal value() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->value() );
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -141,21 +141,21 @@ const QPoint pos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_POS )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->pos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -166,21 +166,21 @@ const QPoint globalPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GLOBALPOS )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QPoint( obj->globalPos() );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -191,21 +191,21 @@ const QPointF & localPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->localPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -216,21 +216,21 @@ const QPointF & windowPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->windowPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -241,21 +241,21 @@ const QPointF & screenPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
 {
-  auto obj = static_cast< QNativeGestureEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPointF * ptr = &obj->screenPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

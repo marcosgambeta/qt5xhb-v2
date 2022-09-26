@@ -62,12 +62,12 @@ int mouseDoubleClickInterval() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->mouseDoubleClickInterval() );
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -86,12 +86,12 @@ int startDragDistance() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGDISTANCE )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->startDragDistance() );
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGDISTANCE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -110,12 +110,12 @@ int startDragTime() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGTIME )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->startDragTime() );
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGTIME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -134,12 +134,12 @@ int startDragVelocity() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGVELOCITY )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->startDragVelocity() );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGVELOCITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -158,12 +158,12 @@ int keyboardInputInterval() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDINPUTINTERVAL )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->keyboardInputInterval() );
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDINPUTINTERVAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -182,12 +182,12 @@ int keyboardAutoRepeatRate() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDAUTOREPEATRATE )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->keyboardAutoRepeatRate() );
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDAUTOREPEATRATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -206,12 +206,12 @@ int cursorFlashTime() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_CURSORFLASHTIME )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->cursorFlashTime() );
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_CURSORFLASHTIME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -230,12 +230,12 @@ bool showIsFullScreen() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_SHOWISFULLSCREEN )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->showIsFullScreen() );
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_SHOWISFULLSCREEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -254,12 +254,12 @@ int passwordMaskDelay() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_PASSWORDMASKDELAY )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->passwordMaskDelay() );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_PASSWORDMASKDELAY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -278,12 +278,12 @@ qreal fontSmoothingGamma() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_FONTSMOOTHINGGAMMA )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->fontSmoothingGamma() );
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_FONTSMOOTHINGGAMMA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -302,12 +302,12 @@ bool useRtlExtensions() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_USERTLEXTENSIONS )
 {
-  auto obj = qobject_cast< QStyleHints * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStyleHints*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->useRtlExtensions() );
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSTYLEHINTS_USERTLEXTENSIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

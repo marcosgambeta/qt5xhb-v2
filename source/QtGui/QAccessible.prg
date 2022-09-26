@@ -58,16 +58,16 @@ static QAccessibleInterface * queryAccessibleInterface( QObject * )
 HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface( PQOBJECT( 1 ) );
-    Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+    QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface( PQOBJECT(1) );
+    Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -78,19 +78,19 @@ static void updateAccessibility( QAccessibleEvent * event )
 HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISQACCESSIBLEEVENT( 1 ) )
+  if( ISNUMPAR(1) && ISQACCESSIBLEEVENT(1) )
   {
 #endif
-    QAccessible::updateAccessibility( PQACCESSIBLEEVENT( 1 ) );
+    QAccessible::updateAccessibility( PQACCESSIBLEEVENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -99,7 +99,7 @@ static bool isActive()
 HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RBOOL( QAccessible::isActive() );
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -118,19 +118,19 @@ static void setRootObject( QObject * object )
 HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QAccessible::setRootObject( PQOBJECT( 1 ) );
+    QAccessible::setRootObject( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -139,7 +139,7 @@ static void cleanup()
 HB_FUNC_STATIC( QACCESSIBLE_CLEANUP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QAccessible::cleanup();
@@ -147,11 +147,11 @@ HB_FUNC_STATIC( QACCESSIBLE_CLEANUP )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

@@ -43,7 +43,7 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
     explicit HCodeBlockValidator( QObject *parent = nullptr )
     */
     auto obj = new HCodeBlockValidator( OPQOBJECT(1,nullptr) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
@@ -51,7 +51,7 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
     HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = nullptr )
     */
     auto obj = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -65,17 +65,17 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*

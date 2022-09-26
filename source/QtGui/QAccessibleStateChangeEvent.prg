@@ -47,19 +47,19 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLESTATECHANGEEVENT_DELETE )
 {
-  auto obj = static_cast< QAccessibleStateChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccessibleStateChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

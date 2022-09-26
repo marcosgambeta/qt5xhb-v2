@@ -52,21 +52,21 @@ RETURN
 
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_DELETE )
 {
-  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -74,20 +74,20 @@ virtual bool loadPicture( const QString & format, const QString & filename, QPic
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
 {
-  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ISQPICTURE( 3 ) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3) )
     {
 #endif
-      RBOOL( obj->loadPicture( PQSTRING( 1 ), PQSTRING( 2 ), PQPICTURE( 3 ) ) );
+      RBOOL( obj->loadPicture( PQSTRING(1), PQSTRING(2), PQPICTURE(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -98,20 +98,20 @@ virtual bool savePicture( const QString & format, const QString & filename, cons
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
 {
-  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ISQPICTURE( 3 ) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3) )
     {
 #endif
-      RBOOL( obj->savePicture( PQSTRING( 1 ), PQSTRING( 2 ), *PQPICTURE( 3 ) ) );
+      RBOOL( obj->savePicture( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -122,20 +122,20 @@ virtual bool installIOHandler( const QString & format ) = 0
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
 {
-  auto obj = qobject_cast< QPictureFormatPlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->installIOHandler( PQSTRING( 1 ) ) );
+      RBOOL( obj->installIOHandler( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

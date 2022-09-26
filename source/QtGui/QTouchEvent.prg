@@ -57,19 +57,19 @@ RETURN
 
 HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 {
-  auto obj = static_cast< QTouchEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -77,21 +77,21 @@ QWindow * window() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
 {
-  auto obj = static_cast< QTouchEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWindow * ptr = obj->window();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -102,21 +102,21 @@ QObject * target() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
 {
-  auto obj = static_cast< QTouchEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QObject * ptr = obj->target();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -127,12 +127,12 @@ Qt::TouchPointStates touchPointStates() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
 {
-  auto obj = static_cast< QTouchEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->touchPointStates() );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -151,21 +151,21 @@ QTouchDevice * device() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
 {
-  auto obj = static_cast< QTouchEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QTouchDevice * ptr = obj->device();
-      Qt5xHb::createReturnClass( ptr, "QTOUCHDEVICE", false );
+      Qt5xHb::createReturnClass(ptr, "QTOUCHDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -90,16 +90,16 @@ RETURN
 
 HB_FUNC_STATIC( QMATRIX_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     QMatrix( Qt::Initialization )
     */
-    auto obj = new QMatrix( static_cast<Qt::Initialization>( hb_parni( 1 ) ) );
+    auto obj = new QMatrix( static_cast<Qt::Initialization>( hb_parni(1) ) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 0 ) )
+  else if( ISNUMPAR(0) )
   {
     /*
     QMatrix()
@@ -108,45 +108,45 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
+  else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     /*
     QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
     */
-    auto obj = new QMatrix( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
+    auto obj = new QMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
-  else if( ISNUMPAR( 1 ) && ISQMATRIX( 1 ) )
+  else if( ISNUMPAR(1) && ISQMATRIX(1) )
   {
     /*
     QMatrix( const QMatrix & matrix )
     */
-    auto obj = new QMatrix( *PQMATRIX( 1 ) );
+    auto obj = new QMatrix( *PQMATRIX(1) );
     Qt5xHb::returnNewObject( obj, true );
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QMATRIX_DELETE )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -154,25 +154,25 @@ void setMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QMATRIX_SETMATRIX )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
+    if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
     {
 #endif
-      obj->setMatrix( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
+      obj->setMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -180,12 +180,12 @@ qreal m11() const
 */
 HB_FUNC_STATIC( QMATRIX_M11 )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->m11() );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QMATRIX_M11 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -204,12 +204,12 @@ qreal m12() const
 */
 HB_FUNC_STATIC( QMATRIX_M12 )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->m12() );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMATRIX_M12 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -228,12 +228,12 @@ qreal m21() const
 */
 HB_FUNC_STATIC( QMATRIX_M21 )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->m21() );
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMATRIX_M21 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -252,12 +252,12 @@ qreal m22() const
 */
 HB_FUNC_STATIC( QMATRIX_M22 )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->m22() );
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QMATRIX_M22 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -276,12 +276,12 @@ qreal dx() const
 */
 HB_FUNC_STATIC( QMATRIX_DX )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->dx() );
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMATRIX_DX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -300,12 +300,12 @@ qreal dy() const
 */
 HB_FUNC_STATIC( QMATRIX_DY )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->dy() );
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMATRIX_DY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -324,29 +324,29 @@ void map( int x, int y, int * tx, int * ty ) const
 */
 HB_FUNC_STATIC( QMATRIX_MAP1 )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
       int par3;
       int par4;
-      obj->map( PINT( 1 ), PINT( 2 ), &par3, &par4 );
+      obj->map( PINT(1), PINT(2), &par3, &par4 );
       hb_storni( par3, 3 );
       hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -354,192 +354,192 @@ void map( qreal x, qreal y, qreal * tx, qreal * ty ) const
 */
 HB_FUNC_STATIC( QMATRIX_MAP2 )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
       qreal par3;
       qreal par4;
-      obj->map( PQREAL( 1 ), PQREAL( 2 ), &par3, &par4 );
+      obj->map( PQREAL(1), PQREAL(2), &par3, &par4 );
       hb_stornd( par3, 3 );
       hb_stornd( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QMATRIX_MAP )
 {
-  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     HB_FUNC_EXEC( QMATRIX_MAP1 );
   }
-  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     HB_FUNC_EXEC( QMATRIX_MAP2 );
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     /*
     QPoint map( const QPoint & p ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QPoint( obj->map( *PQPOINT( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->map( *PQPOINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     QPointF map( const QPointF & p) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QPointF( obj->map( *PQPOINTF( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->map( *PQPOINTF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQLINE( 1 ) )
+  else if( ISNUMPAR(1) && ISQLINE(1) )
   {
     /*
     QLine map( const QLine & l ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QLine( obj->map( *PQLINE( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QLINE", true );
+      auto ptr = new QLine( obj->map( *PQLINE(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQLINEF( 1 ) )
+  else if( ISNUMPAR(1) && ISQLINEF(1) )
   {
     /*
     QLineF map( const QLineF & l ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QLineF( obj->map( *PQLINEF( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QLINEF", true );
+      auto ptr = new QLineF( obj->map( *PQLINEF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
     /*
     QPolygon map( const QPolygon & a ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QPolygon( obj->map( *PQPOLYGON( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
+      auto ptr = new QPolygon( obj->map( *PQPOLYGON(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
     /*
     QPolygonF map( const QPolygonF & a ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QPolygonF( obj->map( *PQPOLYGONF( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      auto ptr = new QPolygonF( obj->map( *PQPOLYGONF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
+  else if( ISNUMPAR(1) && ISQREGION(1) )
   {
     /*
     QRegion map( const QRegion & r ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QRegion( obj->map( *PQREGION( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QREGION", true );
+      auto ptr = new QRegion( obj->map( *PQREGION(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
+  else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
   {
     /*
     QPainterPath map( const QPainterPath & p ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QPainterPath( obj->map( *PQPAINTERPATH( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      auto ptr = new QPainterPath( obj->map( *PQPAINTERPATH(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QMATRIX_MAPRECT )
 {
-  if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
+  if( ISNUMPAR(1) && ISQRECT(1) )
   {
     /*
     QRect mapRect( const QRect & ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QRect( obj->mapRect( *PQRECT( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
   }
-  else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
+  else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
     /*
     QRectF mapRect( const QRectF & ) const
     */
-    auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+    auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if( obj != nullptr )
     {
-      auto ptr = new QRectF( obj->mapRect( *PQRECTF( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -548,21 +548,21 @@ QPolygon mapToPolygon( const QRect & r ) const
 */
 HB_FUNC_STATIC( QMATRIX_MAPTOPOLYGON )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
+    if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      auto ptr = new QPolygon( obj->mapToPolygon( *PQRECT( 1 ) ) );
-      Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
+      auto ptr = new QPolygon( obj->mapToPolygon( *PQRECT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -573,12 +573,12 @@ void reset()
 */
 HB_FUNC_STATIC( QMATRIX_RESET )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reset();
@@ -586,12 +586,12 @@ HB_FUNC_STATIC( QMATRIX_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -599,12 +599,12 @@ bool isIdentity() const
 */
 HB_FUNC_STATIC( QMATRIX_ISIDENTITY )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isIdentity() );
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QMATRIX_ISIDENTITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -623,21 +623,21 @@ QMatrix & translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QMATRIX_TRANSLATE )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QMatrix * ptr = &obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      QMatrix * ptr = &obj->translate( PQREAL(1), PQREAL(2) );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -648,21 +648,21 @@ QMatrix & scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QMATRIX_SCALE )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QMatrix * ptr = &obj->scale( PQREAL( 1 ), PQREAL( 2 ) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      QMatrix * ptr = &obj->scale( PQREAL(1), PQREAL(2) );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -673,21 +673,21 @@ QMatrix & shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QMATRIX_SHEAR )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QMatrix * ptr = &obj->shear( PQREAL( 1 ), PQREAL( 2 ) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      QMatrix * ptr = &obj->shear( PQREAL(1), PQREAL(2) );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -698,21 +698,21 @@ QMatrix & rotate( qreal a )
 */
 HB_FUNC_STATIC( QMATRIX_ROTATE )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QMatrix * ptr = &obj->rotate( PQREAL( 1 ) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      QMatrix * ptr = &obj->rotate( PQREAL(1) );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -723,12 +723,12 @@ bool isInvertible() const
 */
 HB_FUNC_STATIC( QMATRIX_ISINVERTIBLE )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isInvertible() );
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QMATRIX_ISINVERTIBLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -747,12 +747,12 @@ qreal determinant() const
 */
 HB_FUNC_STATIC( QMATRIX_DETERMINANT )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->determinant() );
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QMATRIX_DETERMINANT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -771,23 +771,23 @@ QMatrix inverted( bool * invertible = nullptr ) const
 */
 HB_FUNC_STATIC( QMATRIX_INVERTED )
 {
-  auto obj = static_cast< QMatrix * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QMatrix*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
     {
 #endif
       bool par1;
       auto ptr = new QMatrix( obj->inverted( &par1 ) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -797,30 +797,30 @@ HB_FUNC_STATIC( QMATRIX_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QMATRIX_NEWFROMOBJECT )
@@ -835,25 +835,25 @@ HB_FUNC_STATIC( QMATRIX_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMATRIX_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QMATRIX_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

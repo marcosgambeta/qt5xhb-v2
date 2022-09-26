@@ -57,12 +57,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {
-  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -81,21 +81,21 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
-  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -106,21 +106,21 @@ QRect rect() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
-  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QRect( obj->rect() );
-      Qt5xHb::createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -131,25 +131,25 @@ void setText( QAccessible::Text t, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
-  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setText( static_cast<QAccessible::Text>( hb_parni( 1 ) ), PQSTRING( 2 ) );
+      obj->setText( static_cast<QAccessible::Text>( hb_parni(1) ), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -157,21 +157,21 @@ QAccessibleInterface * childAt( int x, int y ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
 {
-  auto obj = static_cast< QAccessibleObject * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->childAt( PINT( 1 ), PINT( 2 ) );
-      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->childAt( PINT(1), PINT(2) );
+      Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

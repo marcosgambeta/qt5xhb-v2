@@ -55,32 +55,32 @@ QInputMethodQueryEvent( Qt::InputMethodQueries queries )
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    auto obj = new QInputMethodQueryEvent( static_cast<Qt::InputMethodQueries>( hb_parni( 1 ) ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QInputMethodQueryEvent( static_cast<Qt::InputMethodQueries>( hb_parni(1) ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_DELETE )
 {
-  auto obj = static_cast< QInputMethodQueryEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QInputMethodQueryEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -88,12 +88,12 @@ Qt::InputMethodQueries queries() const
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
 {
-  auto obj = static_cast< QInputMethodQueryEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QInputMethodQueryEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->queries() );
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -112,25 +112,25 @@ void setValue( Qt::InputMethodQuery query, const QVariant & value )
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_SETVALUE )
 {
-  auto obj = static_cast< QInputMethodQueryEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QInputMethodQueryEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setValue( static_cast<Qt::InputMethodQuery>( hb_parni( 1 ) ), *PQVARIANT( 2 ) );
+      obj->setValue( static_cast<Qt::InputMethodQuery>( hb_parni(1) ), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -138,21 +138,21 @@ QVariant value( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_VALUE )
 {
-  auto obj = static_cast< QInputMethodQueryEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QInputMethodQueryEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      auto ptr = new QVariant( obj->value( static_cast<Qt::InputMethodQuery>( hb_parni( 1 ) ) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->value( static_cast<Qt::InputMethodQuery>( hb_parni(1) ) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

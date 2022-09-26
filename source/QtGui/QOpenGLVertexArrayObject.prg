@@ -59,34 +59,34 @@ QOpenGLVertexArrayObject( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     auto obj = new QOpenGLVertexArrayObject( OPQOBJECT( 1, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DELETE )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -94,12 +94,12 @@ bool create()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->create() );
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -118,12 +118,12 @@ void destroy()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->destroy();
@@ -131,12 +131,12 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -144,12 +144,12 @@ bool isCreated() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCreated() );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -168,12 +168,12 @@ GLuint objectId() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RGLUINT( obj->objectId() );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -192,12 +192,12 @@ void bind()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->bind();
@@ -205,12 +205,12 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -218,12 +218,12 @@ void release()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
 {
-  auto obj = qobject_cast< QOpenGLVertexArrayObject * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->release();
@@ -231,12 +231,12 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

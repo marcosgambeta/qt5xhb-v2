@@ -52,32 +52,32 @@ QToolBarChangeEvent( bool t )
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
-    auto obj = new QToolBarChangeEvent( PBOOL( 1 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QToolBarChangeEvent( PBOOL(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_DELETE )
 {
-  auto obj = static_cast< QToolBarChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QToolBarChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -85,12 +85,12 @@ bool toggle() const
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
 {
-  auto obj = static_cast< QToolBarChangeEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QToolBarChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->toggle() );
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

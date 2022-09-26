@@ -60,32 +60,32 @@ QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QS
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
-  if( ISBETWEEN( 3, 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISLOG( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
+  if( ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) && ( HB_ISLOG(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
   {
-    auto obj = new QKeyEvent( static_cast<QEvent::Type>( hb_parni( 1 ) ), PINT( 2 ), static_cast<Qt::KeyboardModifiers>( hb_parni( 3 ) ), OPQSTRING( 4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1 ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QKeyEvent( static_cast<QEvent::Type>( hb_parni(1) ), PINT(2), static_cast<Qt::KeyboardModifiers>( hb_parni(3) ), OPQSTRING( 4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1 ) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -93,12 +93,12 @@ int count() const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->count() );
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -117,12 +117,12 @@ bool isAutoRepeat() const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isAutoRepeat() );
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -141,12 +141,12 @@ int key() const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->key() );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -165,20 +165,20 @@ bool matches( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->matches( static_cast<QKeySequence::StandardKey>( hb_parni( 1 ) ) ) );
+      RBOOL( obj->matches( static_cast<QKeySequence::StandardKey>( hb_parni(1) ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -189,12 +189,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -213,12 +213,12 @@ quint32 nativeModifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQUINT32( obj->nativeModifiers() );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -237,12 +237,12 @@ quint32 nativeScanCode() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQUINT32( obj->nativeScanCode() );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -261,12 +261,12 @@ quint32 nativeVirtualKey() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQUINT32( obj->nativeVirtualKey() );
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -285,12 +285,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
-  auto obj = static_cast< QKeyEvent * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QKEYEVENT_TEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
