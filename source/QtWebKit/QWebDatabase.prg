@@ -71,32 +71,32 @@ QWebDatabase( const QWebDatabase & other )
 */
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISQWEBDATABASE( 1 ) )
+  if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
   {
-    auto obj = new QWebDatabase( *PQWEBDATABASE( 1 ) );
+    auto obj = new QWebDatabase( *PQWEBDATABASE(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -104,12 +104,12 @@ QString displayName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->displayName() );
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -128,12 +128,12 @@ qint64 expectedSize() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->expectedSize() );
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -152,12 +152,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +176,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -200,21 +200,21 @@ QWebSecurityOrigin origin() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       auto ptr = new QWebSecurityOrigin( obj->origin() );
-      Qt5xHb::createReturnClass( ptr, "QWEBSECURITYORIGIN", true );
+      Qt5xHb::createReturnClass(ptr, "QWEBSECURITYORIGIN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -225,12 +225,12 @@ qint64 size() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
-  auto obj = static_cast< QWebDatabase * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebDatabase*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->size() );
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -250,7 +250,7 @@ static void removeAllDatabases()
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QWebDatabase::removeAllDatabases();
@@ -258,11 +258,11 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -271,49 +271,49 @@ static void removeDatabase( const QWebDatabase & db )
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISQWEBDATABASE( 1 ) )
+  if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
   {
 #endif
-    QWebDatabase::removeDatabase( *PQWEBDATABASE( 1 ) );
+    QWebDatabase::removeDatabase( *PQWEBDATABASE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QWEBDATABASE_NEWFROMOBJECT )
@@ -328,25 +328,25 @@ HB_FUNC_STATIC( QWEBDATABASE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QWEBDATABASE_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QWEBDATABASE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

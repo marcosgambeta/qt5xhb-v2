@@ -75,32 +75,32 @@ QWebSecurityOrigin( const QWebSecurityOrigin & other )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISQWEBSECURITYORIGIN( 1 ) )
+  if( ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1) )
   {
-    auto obj = new QWebSecurityOrigin( *PQWEBSECURITYORIGIN( 1 ) );
+    auto obj = new QWebSecurityOrigin( *PQWEBSECURITYORIGIN(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -108,12 +108,12 @@ qint64 databaseQuota() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->databaseQuota() );
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -132,12 +132,12 @@ qint64 databaseUsage() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->databaseUsage() );
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -156,48 +156,48 @@ QList<QWebDatabase> databases() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QWebDatabase> list = obj->databases();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBDATABASE" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBDATABASE");
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( nullptr );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, static_cast< QWebDatabase * >( new QWebDatabase( list[ i ] ) ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( nullptr );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(nullptr);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemNew(nullptr);
+          hb_itemPutPtr( pItem, static_cast<QWebDatabase*>( new QWebDatabase( list[ i ] ) ) );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemNew(nullptr);
           hb_itemPutL( pDestroy, true );
           hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
           hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QWEBDATABASE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBDATABASE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -208,12 +208,12 @@ QString host() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->host() );
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -232,12 +232,12 @@ int port() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->port() );
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -256,12 +256,12 @@ QString scheme() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->scheme() );
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -280,25 +280,25 @@ void setDatabaseQuota( qint64 quota )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
-  auto obj = static_cast< QWebSecurityOrigin * >( Qt5xHb::itemGetPtrStackSelfItem() );
+  auto obj = static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDatabaseQuota( PQINT64( 1 ) );
+      obj->setDatabaseQuota( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -307,19 +307,19 @@ static void addLocalScheme( const QString & scheme )
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    QWebSecurityOrigin::addLocalScheme( PQSTRING( 1 ) );
+    QWebSecurityOrigin::addLocalScheme( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -328,43 +328,43 @@ static QList<QWebSecurityOrigin> allOrigins()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN" );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN");
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( nullptr );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( nullptr );
-        hb_itemPutPtr( pItem, static_cast< QWebSecurityOrigin * >( new QWebSecurityOrigin( list[ i ] ) ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( nullptr );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(nullptr);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemNew(nullptr);
+        hb_itemPutPtr( pItem, static_cast<QWebSecurityOrigin*>( new QWebSecurityOrigin( list[ i ] ) ) );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemNew(nullptr);
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QWEBSECURITYORIGIN", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBSECURITYORIGIN", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -375,7 +375,7 @@ static QStringList localSchemes()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RQSTRINGLIST( QWebSecurityOrigin::localSchemes() );
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -394,49 +394,49 @@ static void removeLocalScheme( const QString & scheme )
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    QWebSecurityOrigin::removeLocalScheme( PQSTRING( 1 ) );
+    QWebSecurityOrigin::removeLocalScheme( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( nullptr, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, static_cast<void*>(hb_itemGetPtr(hb_param(1, HB_IT_POINTER))));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROMOBJECT )
@@ -451,25 +451,25 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SELFDESTRUCTION )
 {
-  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
+  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
 }
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
