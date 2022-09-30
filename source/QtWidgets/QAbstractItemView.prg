@@ -161,6 +161,17 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
    METHOD update
    METHOD doItemsLayout
 
+#ifndef QT5XHB_NO_SIGNAL_PROPERTIES
+
+   ASSIGN bActivated(b) INLINE ::onActivated(b)
+   ASSIGN bClicked(b) INLINE ::onClicked(b)
+   ASSIGN bDoubleClicked(b) INLINE ::onDoubleClicked(b)
+   ASSIGN bEntered(b) INLINE ::onEntered(b)
+   ASSIGN bPressed(b) INLINE ::onPressed(b)
+   ASSIGN bViewportEntered(b) INLINE ::onViewportEntered(b)
+
+#endif
+
    METHOD onActivated
    METHOD onClicked
    METHOD onDoubleClicked
