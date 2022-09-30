@@ -27,6 +27,14 @@ CLASS QObject
    DATA pointer
    DATA self_destruction INIT .F.
 
+#ifndef QT5XHB_NO_PROPERTIES
+
+   // objectName : QString
+   ACCESS cObjectName INLINE ::objectName()
+   ASSIGN cObjectName(c) INLINE ::setObjectName(c)
+
+#endif
+
    METHOD new
    METHOD delete
    METHOD blockSignals
@@ -223,6 +231,13 @@ CLASS QObject
    METHOD onWinIdChangeEvent
    METHOD onZeroTimerEventEvent
    METHOD onZOrderChangeEvent
+
+#ifndef QT5XHB_NO_SIGNAL_PROPERTIES
+
+   ASSIGN bDestroyed(b) INLINE ::onDestroyed(b)
+   ASSIGN bObjectNameChanged(b) INLINE ::onObjectNameChanged(b)
+
+#endif
 
    METHOD onDestroyed
    METHOD onObjectNameChanged
@@ -2215,7 +2230,7 @@ void destroyed( QObject * obj = nullptr )
 */
 HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
-  auto sender = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( sender != nullptr )
   {
@@ -2227,8 +2242,8 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QObject::destroyed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QObject::destroyed,
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2257,9 +2272,7 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-
       hb_retl(true);
     }
     else
@@ -2278,7 +2291,7 @@ void objectNameChanged( const QString & objectName )
 */
 HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
-  auto sender = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( sender != nullptr )
   {
@@ -2290,8 +2303,8 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QObject::objectNameChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QObject::objectNameChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2319,9 +2332,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-
       hb_retl(true);
     }
     else
