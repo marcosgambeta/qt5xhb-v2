@@ -97,6 +97,15 @@ CLASS QAbstractButton INHERIT QWidget
    METHOD click
    METHOD toggle
 
+#ifndef QT5XHB_NO_SIGNAL_PROPERTIES
+
+   ASSIGN bClicked(b) INLINE ::onClicked(b)
+   ASSIGN bPressed(b) INLINE ::onPressed(b)
+   ASSIGN bReleased(b) INLINE ::onReleased(b)
+   ASSIGN bToggled(b) INLINE ::onToggled(b)
+
+#endif
+
    METHOD onClicked
    METHOD onPressed
    METHOD onReleased
