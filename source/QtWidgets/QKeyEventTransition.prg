@@ -54,47 +54,47 @@ RETURN
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
   {
     /*
     QKeyEventTransition( QState * sourceState = nullptr )
     */
     auto obj = new QKeyEventTransition( OPQSTATE( 1, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( ISQSTATE( 4 ) || HB_ISNIL( 4 ) ) )
+  else if( ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( ISQSTATE(4) || HB_ISNIL(4) ) )
   {
     /*
     QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
     */
-    auto obj = new QKeyEventTransition( PQOBJECT( 1 ), static_cast<QEvent::Type>( hb_parni( 2 ) ), PINT( 3 ), OPQSTATE( 4, nullptr ) );
-    Qt5xHb::returnNewObject( obj, false );
+    auto obj = new QKeyEventTransition( PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2) ), PINT(3), OPQSTATE( 4, nullptr ) );
+    Qt5xHb::returnNewObject(obj, false);
 
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QKeyEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -102,12 +102,12 @@ int key() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QKeyEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->key() );
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -126,12 +126,12 @@ Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QKeyEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->modifierMask() );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -150,25 +150,25 @@ void setKey( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QKeyEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setKey( PINT( 1 ) );
+      obj->setKey( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -176,25 +176,25 @@ void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  auto obj = qobject_cast< QKeyEventTransition * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QKeyEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setModifierMask( static_cast<Qt::KeyboardModifiers>( hb_parni( 1 ) ) );
+      obj->setModifierMask( static_cast<Qt::KeyboardModifiers>( hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

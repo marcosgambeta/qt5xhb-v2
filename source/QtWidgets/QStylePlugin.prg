@@ -53,21 +53,21 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
 {
-  auto obj = qobject_cast< QStylePlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStylePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -75,21 +75,21 @@ virtual QStyle * create( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
 {
-  auto obj = qobject_cast< QStylePlugin * >( Qt5xHb::getQObjectPointerFromSelfItem() );
+  auto obj = qobject_cast<QStylePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QStyle * ptr = obj->create( PQSTRING( 1 ) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      QStyle * ptr = obj->create( PQSTRING(1) );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
