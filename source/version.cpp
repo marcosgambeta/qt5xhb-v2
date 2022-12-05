@@ -12,12 +12,12 @@
 
 HB_FUNC( QT5XHB_VERSION )
 {
-  hb_retc( ( const char * ) "2022.01" );
+  hb_retc( ( const char * ) "2.0.0dev" );
 }
 
 HB_FUNC( QT5XHB_VERSION_DATE )
 {
-  hb_retc( ( const char * ) "30/01/2022 22:45:00" );
+  hb_retc( ( const char * ) "05/12/2022 12:00:00" );
 }
 
 HB_FUNC( QT5XHB_ISCPP11 )
@@ -31,12 +31,12 @@ HB_FUNC( QT5XHB_ISCPP11 )
 
 HB_FUNC( QT4XHB_VERSION )
 {
-  hb_retc( ( const char * ) "2022.01" );
+  hb_retc( ( const char * ) "2.0.0dev" );
 }
 
 HB_FUNC( QT4XHB_VERSION_DATE )
 {
-  hb_retc( ( const char * ) "30/01/2022 22:45:00" );
+  hb_retc( ( const char * ) "05/12/2022 12:00:00" );
 }
 
 /*
