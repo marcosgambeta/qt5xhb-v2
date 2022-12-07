@@ -250,11 +250,11 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-#if QT_CONFIG(regularexpression)
     /*
     void setFilterRegularExpression( const QString & pattern )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#if QT_CONFIG(regularexpression)
     auto obj = qobject_cast<QSortFilterProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj != nullptr )
@@ -264,16 +264,15 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-
 #endif
   }
   else if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
   {
-#if QT_CONFIG(regularexpression)
     /*
     void setFilterRegularExpression( const QRegularExpression & regularExpression )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#if QT_CONFIG(regularexpression)
     auto obj = qobject_cast<QSortFilterProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj != nullptr )
@@ -283,7 +282,6 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-
 #endif
   }
   else
