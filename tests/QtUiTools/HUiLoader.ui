@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qt5xHb/C++11 - teste com a classe HUiLoader</string>
+   <string>Qt5xHb - teste com a classe HUiLoader</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
