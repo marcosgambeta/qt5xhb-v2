@@ -1,6 +1,6 @@
 /*
 
-  Qt5xHb/C++11 Project - Example Program
+  Qt5xHb Project - Example Program
 
   Copyright (C) 2021 Marcos Antonio Gambeta
 
