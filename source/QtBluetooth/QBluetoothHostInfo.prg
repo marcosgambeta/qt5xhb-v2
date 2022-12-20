@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SELFDESTRUCTION )
 {
-  hb_retl(static_cast<bool>(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0))));
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETSELFDESTRUCTION )
