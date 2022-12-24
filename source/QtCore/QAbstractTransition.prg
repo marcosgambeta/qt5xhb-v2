@@ -124,20 +124,19 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstractAnimation *> list = obj->animations();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION");
+      const QList<QAbstractAnimation *> list = obj->animations();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QAbstractAnimation*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -332,20 +331,19 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstractState *> list = obj->targetStates();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSTATE");
+      const QList<QAbstractState *> list = obj->targetStates();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSTATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QAbstractState*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -384,8 +382,8 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
 
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAbstractTransition::triggered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAbstractTransition::triggered,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);

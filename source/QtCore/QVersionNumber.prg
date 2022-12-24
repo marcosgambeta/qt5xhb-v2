@@ -393,12 +393,12 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<int> list = obj->segments();
+      const QVector<int> list = obj->segments();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, list[ i ] );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease( pArray );

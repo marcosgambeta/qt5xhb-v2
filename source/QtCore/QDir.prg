@@ -342,26 +342,24 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 
     if( obj != nullptr )
     {
-      QFileInfoList list = obj->entryInfoList( PQSTRINGLIST(1), HB_ISNIL(2) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(3) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
+      const QFileInfoList list = obj->entryInfoList( PQSTRINGLIST(1), HB_ISNIL(2) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(3) ) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QFILEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QFileInfo*>( new QFileInfo( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QFileInfo(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -383,26 +381,24 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 
     if( obj != nullptr )
     {
-      QFileInfoList list = obj->entryInfoList( HB_ISNIL(1) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(2) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
+      const QFileInfoList list = obj->entryInfoList( HB_ISNIL(1) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(2) ) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QFILEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QFileInfo*>( new QFileInfo( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QFileInfo(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -1165,26 +1161,24 @@ HB_FUNC_STATIC( QDIR_DRIVES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QFileInfoList list = QDir::drives();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
+    const QFileInfoList list = QDir::drives();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QFILEINFO");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QFileInfo*>( new QFileInfo( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QFileInfo(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
