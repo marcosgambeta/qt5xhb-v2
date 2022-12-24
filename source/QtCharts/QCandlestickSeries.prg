@@ -907,20 +907,19 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QCandlestickSet *> list = obj->sets();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET");
+      const QList<QCandlestickSet *> list = obj->sets();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QCandlestickSet*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

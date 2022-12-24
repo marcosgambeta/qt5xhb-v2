@@ -945,20 +945,19 @@ HB_FUNC_STATIC( QCHART_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstractSeries *> list = obj->series();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSERIES");
+      const QList<QAbstractSeries *> list = obj->series();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QAbstractSeries*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1161,20 +1160,19 @@ HB_FUNC_STATIC( QCHART_AXES )
     if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( ISQABSTRACTSERIES(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1) ), OPQABSTRACTSERIES( 2, nullptr ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTAXIS");
+      const QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1) ), OPQABSTRACTSERIES( 2, nullptr ) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QAbstractAxis*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
