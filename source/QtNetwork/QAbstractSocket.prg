@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QABSTRACTSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QABSTRACTSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QABSTRACTSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QABSTRACTSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QABSTRACTSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSOCKET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKPROXY");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QABSTRACTSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

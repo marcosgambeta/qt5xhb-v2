@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIZARD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIZARD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIZARD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIZARD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIZARD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIZARD");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIZARD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIZARD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1423,7 +1423,7 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIZARD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIZARD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

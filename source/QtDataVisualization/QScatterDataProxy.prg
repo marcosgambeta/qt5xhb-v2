@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCATTERDATAPROXY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBCHANNELABSTRACTTRANSPORT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBCHANNELABSTRACTTRANSPORT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QJSONOBJECT");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject( (QObject *) arg2, "QWEBCHANNELABSTRACTTRANSPORT");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

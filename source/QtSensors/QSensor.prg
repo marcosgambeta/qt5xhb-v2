@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1448,7 +1448,7 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1770,7 +1770,7 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1836,7 +1836,7 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1902,7 +1902,7 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1968,7 +1968,7 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2034,7 +2034,7 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2100,7 +2100,7 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2166,7 +2166,7 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSENSOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSENSOR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QOAUTH2AUTHORIZATIONCODEFLOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOAUTH2AUTHORIZATIONCODEFLOW");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

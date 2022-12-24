@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1243,7 +1243,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QLISTWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1429,7 +1429,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLISTWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

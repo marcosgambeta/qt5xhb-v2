@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QITEMSELECTIONMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QITEMSELECTION");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QITEMSELECTION");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QITEMSELECTIONMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QITEMSELECTIONMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QITEMSELECTIONMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

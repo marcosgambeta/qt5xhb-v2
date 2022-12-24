@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1708,7 +1708,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1774,7 +1774,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1840,7 +1840,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1906,7 +1906,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1972,7 +1972,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2038,7 +2038,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2104,7 +2104,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2170,7 +2170,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2236,7 +2236,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2302,7 +2302,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2368,7 +2368,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2434,7 +2434,7 @@ HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGAMEPAD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPAD");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

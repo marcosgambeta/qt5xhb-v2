@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCRIPTENGINEDEBUGGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCRIPTENGINEDEBUGGER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSCRIPTENGINEDEBUGGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSCRIPTENGINEDEBUGGER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

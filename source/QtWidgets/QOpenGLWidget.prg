@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QOPENGLWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QOPENGLWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QOPENGLWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QOPENGLWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

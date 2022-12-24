@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIOINPUT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOINPUT");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_ONNOTIFY )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIOINPUT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOINPUT");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

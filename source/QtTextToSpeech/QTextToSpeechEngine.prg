@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTEXTTOSPEECHENGINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECHENGINE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

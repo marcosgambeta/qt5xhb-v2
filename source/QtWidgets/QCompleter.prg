@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCOMPLETER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMPLETER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCOMPLETER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMPLETER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCOMPLETER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMPLETER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCOMPLETER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMPLETER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

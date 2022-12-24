@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOSATELLITEINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOSATELLITEINFOSOURCE");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOSATELLITEINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOSATELLITEINFOSOURCE");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOSATELLITEINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOSATELLITEINFOSOURCE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOSATELLITEINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOSATELLITEINFOSOURCE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

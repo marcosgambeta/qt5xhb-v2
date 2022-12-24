@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLCDNUMBER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLCDNUMBER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

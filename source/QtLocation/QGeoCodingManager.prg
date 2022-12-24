@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOCODINGMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QGEOCODEREPLY");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOCODINGMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QGEOCODEREPLY");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );

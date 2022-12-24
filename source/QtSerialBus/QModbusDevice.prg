@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMODBUSDEVICE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMODBUSDEVICE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMODBUSDEVICE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMODBUSDEVICE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

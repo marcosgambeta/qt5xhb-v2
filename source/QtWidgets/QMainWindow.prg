@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMAINWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMAINWINDOW");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMAINWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMAINWINDOW");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

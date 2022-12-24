@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQUICKWINDOW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWINDOW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

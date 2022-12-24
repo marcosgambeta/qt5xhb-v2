@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGRAPHICSROTATION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGRAPHICSROTATION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGRAPHICSROTATION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

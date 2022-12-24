@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1565,7 +1565,7 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1689,7 +1689,7 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1749,7 +1749,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1809,7 +1809,7 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1872,7 +1872,7 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROCESS");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROCESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

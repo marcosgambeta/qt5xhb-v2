@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCAMERALOCKSCONTROL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERALOCKSCONTROL");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( nullptr, (int) arg3 );

@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

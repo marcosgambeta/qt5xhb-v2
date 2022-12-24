@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSPLITTER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSPLITTER");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

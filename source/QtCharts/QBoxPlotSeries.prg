@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBOXSET");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBOXSET");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject( (QObject *) arg2, "QBOXSET");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBOXSET");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1365,7 +1365,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXPLOTSERIES");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBOXSET");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

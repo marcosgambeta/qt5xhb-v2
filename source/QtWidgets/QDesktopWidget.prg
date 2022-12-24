@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESKTOPWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESKTOPWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESKTOPWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESKTOPWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESKTOPWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESKTOPWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

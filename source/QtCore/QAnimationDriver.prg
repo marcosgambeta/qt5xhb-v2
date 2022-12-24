@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QANIMATIONDRIVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QANIMATIONDRIVER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QANIMATIONDRIVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QANIMATIONDRIVER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

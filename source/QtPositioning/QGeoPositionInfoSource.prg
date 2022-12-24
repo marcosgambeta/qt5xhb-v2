@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOPOSITIONINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOPOSITIONINFOSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOPOSITIONINFO");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOPOSITIONINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOPOSITIONINFOSOURCE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOPOSITIONINFOSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOPOSITIONINFOSOURCE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

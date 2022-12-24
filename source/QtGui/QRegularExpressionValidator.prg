@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QREGULAREXPRESSIONVALIDATOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QREGULAREXPRESSIONVALIDATOR");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGULAREXPRESSION");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

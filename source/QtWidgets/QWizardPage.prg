@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIZARDPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIZARDPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

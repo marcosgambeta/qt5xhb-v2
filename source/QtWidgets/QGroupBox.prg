@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGROUPBOX");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGROUPBOX");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGROUPBOX");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGROUPBOX");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

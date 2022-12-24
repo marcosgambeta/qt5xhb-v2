@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSQLDRIVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSQLDRIVER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSQLDRIVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSQLDRIVER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             PHB_ITEM pArg3 = Qt5xHb::Signals_return_object( (void *) &arg3, "QVARIANT");

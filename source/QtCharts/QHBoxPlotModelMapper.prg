@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHBOXPLOTMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHBOXPLOTMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHBOXPLOTMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHBOXPLOTMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHBOXPLOTMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHBOXPLOTMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

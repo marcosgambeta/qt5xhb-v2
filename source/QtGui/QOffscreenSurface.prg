@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QOFFSCREENSURFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOFFSCREENSURFACE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QSCREEN");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

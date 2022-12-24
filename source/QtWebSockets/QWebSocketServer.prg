@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QWEBSOCKETCORSAUTHENTICATOR");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSSLERROR");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBSOCKETSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

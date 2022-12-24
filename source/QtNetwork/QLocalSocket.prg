@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLOCALSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLOCALSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLOCALSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLOCALSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLOCALSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLOCALSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QLOCALSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLOCALSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

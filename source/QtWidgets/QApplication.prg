@@ -1660,7 +1660,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAPPLICATION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAPPLICATION");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject((QObject *) arg1, "QWIDGET");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject((QObject *) arg2, "QWIDGET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);

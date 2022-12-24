@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKREPLY");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOFORMAT");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAUDIODECODER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

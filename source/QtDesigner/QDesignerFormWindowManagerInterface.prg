@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QDESIGNERFORMWINDOWINTERFACE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

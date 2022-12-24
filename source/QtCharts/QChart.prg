@@ -1870,7 +1870,7 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCHART");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCHART");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

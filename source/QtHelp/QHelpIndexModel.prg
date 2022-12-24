@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPINDEXMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXMODEL");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPINDEXMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXMODEL");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

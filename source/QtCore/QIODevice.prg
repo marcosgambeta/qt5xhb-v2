@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QIODEVICE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QIODEVICE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QIODEVICE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QIODEVICE");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QIODEVICE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QIODEVICE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QIODEVICE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QIODEVICE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

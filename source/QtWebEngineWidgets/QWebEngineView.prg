@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBENGINEVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

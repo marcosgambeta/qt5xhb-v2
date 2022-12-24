@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHSOCKET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

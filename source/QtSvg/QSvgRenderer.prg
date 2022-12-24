@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSVGRENDERER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSVGRENDERER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

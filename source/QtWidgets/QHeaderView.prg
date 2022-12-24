@@ -1804,7 +1804,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1862,7 +1862,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -1922,7 +1922,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
@@ -1984,7 +1984,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -2044,7 +2044,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -2104,7 +2104,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -2164,7 +2164,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
@@ -2228,7 +2228,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -2288,7 +2288,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
@@ -2352,7 +2352,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHEADERVIEW");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = hb_itemPutNI(nullptr, (int) arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);

@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCALENDARWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCALENDARWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCALENDARWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCALENDARWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCALENDARWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCALENDARWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCALENDARWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCALENDARWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

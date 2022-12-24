@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMENUBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMENUBAR");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QACTION");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMENUBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMENUBAR");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QACTION");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

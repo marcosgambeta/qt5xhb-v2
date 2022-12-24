@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDECLARATIVEENGINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDECLARATIVEENGINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )

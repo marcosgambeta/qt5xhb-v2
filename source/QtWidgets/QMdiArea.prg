@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMDIAREA");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMDIAREA");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QMDISUBWINDOW");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

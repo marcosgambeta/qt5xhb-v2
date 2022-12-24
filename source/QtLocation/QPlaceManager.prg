@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QPLACEREPLY");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QPLACEREPLY");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPLACECATEGORY");
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPLACECATEGORY");
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPLACEMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

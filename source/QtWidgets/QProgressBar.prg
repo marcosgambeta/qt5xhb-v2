@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QPROGRESSBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPROGRESSBAR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

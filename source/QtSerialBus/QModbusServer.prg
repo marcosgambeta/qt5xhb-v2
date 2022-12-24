@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMODBUSSERVER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMODBUSSERVER");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );

@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPENGINECORE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPENGINECORE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPENGINECORE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHELPENGINECORE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPENGINECORE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

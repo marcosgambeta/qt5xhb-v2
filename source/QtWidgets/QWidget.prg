@@ -6759,7 +6759,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIDGET");
             PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -6823,7 +6823,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QICON");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -6886,7 +6886,7 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIDGET");
             PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
@@ -6946,7 +6946,7 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QPOINT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);

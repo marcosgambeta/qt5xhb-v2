@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCONFIGURATION");
             PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QNETWORKSESSION");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKSESSION");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

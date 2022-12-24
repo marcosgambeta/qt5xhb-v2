@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDBUSCONNECTIONINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSCONNECTIONINTERFACE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDBUSCONNECTIONINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSCONNECTIONINTERFACE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDBUSCONNECTIONINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSCONNECTIONINTERFACE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDBUSCONNECTIONINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSCONNECTIONINTERFACE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDBUSERROR");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QDBUSMESSAGE");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

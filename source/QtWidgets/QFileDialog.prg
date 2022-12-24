@@ -1820,7 +1820,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1882,7 +1882,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1944,7 +1944,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2006,7 +2006,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             for( auto i = 0; i < arg1.count(); i++ )
             {
@@ -2074,7 +2074,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2136,7 +2136,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2198,7 +2198,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QURL");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -2282,7 +2282,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2344,7 +2344,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QFILEDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

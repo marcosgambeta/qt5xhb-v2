@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTIMELINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTIMELINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTIMELINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTIMELINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

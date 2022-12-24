@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHTRANSFERMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHTRANSFERMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBLUETOOTHTRANSFERREPLY");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

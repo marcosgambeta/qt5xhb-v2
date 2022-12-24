@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOAREAMONITORSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOAREAMONITORSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOAREAMONITORSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGEOAREAMONITORSOURCE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

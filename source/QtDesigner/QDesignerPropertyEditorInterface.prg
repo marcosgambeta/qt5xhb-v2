@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDESIGNERPROPERTYEDITORINTERFACE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDESIGNERPROPERTYEDITORINTERFACE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

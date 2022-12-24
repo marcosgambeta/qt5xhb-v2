@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINTVALIDATOR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINTVALIDATOR");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

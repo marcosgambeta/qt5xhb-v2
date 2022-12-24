@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1600,7 +1600,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1664,7 +1664,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
@@ -1732,7 +1732,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1796,7 +1796,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1858,7 +1858,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1920,7 +1920,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1982,7 +1982,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2044,7 +2044,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2106,7 +2106,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2168,7 +2168,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTABLEWIDGET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

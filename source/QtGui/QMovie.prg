@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMOVIE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMOVIE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECT");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

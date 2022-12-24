@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QACTION");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QTOOLBAR");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

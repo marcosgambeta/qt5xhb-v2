@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPTMANAGER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPTMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QAXSCRIPT");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );

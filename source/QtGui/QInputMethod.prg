@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINPUTMETHOD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTMETHOD");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINPUTMETHOD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTMETHOD");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINPUTMETHOD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTMETHOD");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINPUTMETHOD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTMETHOD");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINPUTMETHOD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTMETHOD");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QINPUTMETHOD");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTMETHOD");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

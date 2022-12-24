@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVARIANT");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QAXSCRIPT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

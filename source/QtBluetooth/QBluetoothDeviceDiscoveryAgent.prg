@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHDEVICEINFO");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHDEVICEINFO");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

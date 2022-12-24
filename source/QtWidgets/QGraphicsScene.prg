@@ -1788,7 +1788,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGRAPHICSSCENE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCENE");
             PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -1872,7 +1872,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGRAPHICSSCENE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCENE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1934,7 +1934,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QGRAPHICSSCENE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCENE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

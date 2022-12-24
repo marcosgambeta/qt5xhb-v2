@@ -1577,7 +1577,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QSTANDARDITEMMODEL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSTANDARDITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSTANDARDITEM");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

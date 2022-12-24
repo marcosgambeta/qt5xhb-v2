@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QBOXSET");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXSET");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

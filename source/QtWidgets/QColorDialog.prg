@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCOLORDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QCOLORDIALOG");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

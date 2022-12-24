@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QWEBSECURITYORIGIN");
             PHB_ITEM pArg2 = hb_itemPutNLL( nullptr, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNLL( nullptr, arg3 );
@@ -1437,7 +1437,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKREQUEST");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1687,7 +1687,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1751,7 +1751,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1813,7 +1813,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECT");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1875,7 +1875,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1937,7 +1937,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
@@ -2003,7 +2003,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2065,7 +2065,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2127,7 +2127,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -2187,7 +2187,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2249,7 +2249,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -2309,7 +2309,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2371,7 +2371,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECT");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2433,7 +2433,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2495,7 +2495,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWEBFRAME");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QWEBHISTORYITEM");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -2559,7 +2559,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             PHB_ITEM pArg3 = Qt5xHb::Signals_return_object( (void *) &arg3, "QRECT");
@@ -2625,7 +2625,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -2685,7 +2685,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2747,7 +2747,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2809,7 +2809,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2871,7 +2871,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QNETWORKREPLY");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -2933,7 +2933,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -2993,7 +2993,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QWEBPAGE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBPAGE");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

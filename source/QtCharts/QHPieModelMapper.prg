@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHPIEMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHPIEMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHPIEMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHPIEMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONLABELSROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHPIEMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHPIEMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONMODELREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHPIEMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHPIEMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONSERIESREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHPIEMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHPIEMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONVALUESROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QHPIEMODELMAPPER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHPIEMODELMAPPER");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }

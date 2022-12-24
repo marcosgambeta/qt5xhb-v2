@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMEDIAVIDEOPROBECONTROL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAVIDEOPROBECONTROL");
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease(pSender);
           }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QMEDIAVIDEOPROBECONTROL");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAVIDEOPROBECONTROL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVIDEOFRAME");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

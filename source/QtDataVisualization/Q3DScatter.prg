@@ -546,7 +546,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "Q3DSCATTER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "Q3DSCATTER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "Q3DSCATTER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "Q3DSCATTER");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

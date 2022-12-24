@@ -1412,7 +1412,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDATETIMEEDIT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATE");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1474,7 +1474,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDATETIMEEDIT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATETIME");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QDATETIMEEDIT");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QTIME");
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);

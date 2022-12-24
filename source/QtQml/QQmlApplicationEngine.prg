@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QQMLAPPLICATIONENGINE");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLAPPLICATIONENGINE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QOBJECT");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QURL");
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

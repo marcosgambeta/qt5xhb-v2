@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QUNDOSTACK");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOSTACK");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QUNDOSTACK");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOSTACK");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QUNDOSTACK");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOSTACK");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QUNDOSTACK");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOSTACK");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QUNDOSTACK");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOSTACK");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject((QObject *) sender, "QUNDOSTACK");
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOSTACK");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease(pSender);
