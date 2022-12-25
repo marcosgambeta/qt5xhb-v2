@@ -312,15 +312,15 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVector<quint32> list = obj->glyphIndexesForString( PQSTRING(1) );
+      const QVector<quint32> list = obj->glyphIndexesForString( PQSTRING(1) );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< quint32 >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,26 +353,24 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
         temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
       }
-      QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF");
+      const QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QPointF*>( new QPointF( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QPointF(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -859,15 +857,15 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems();
+      const QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

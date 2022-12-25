@@ -670,26 +670,24 @@ HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QByteArray> list = QPictureIO::inputFormats();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    const QList<QByteArray> list = QPictureIO::inputFormats();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
@@ -717,26 +715,24 @@ HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QByteArray> list = QPictureIO::outputFormats();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    const QList<QByteArray> list = QPictureIO::outputFormats();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }

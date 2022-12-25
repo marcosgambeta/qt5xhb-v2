@@ -2017,20 +2017,19 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QList<QStandardItem *> list = obj->takeRow( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM");
+      const QList<QStandardItem *> list = obj->takeRow( PINT(1) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QStandardItem*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -2065,20 +2064,19 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM");
+      const QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QStandardItem*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

@@ -228,15 +228,15 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<qreal> list = obj->dashPattern();
+      const QVector<qreal> list = obj->dashPattern();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutND( nullptr, static_cast< qreal >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutND(nullptr, item);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

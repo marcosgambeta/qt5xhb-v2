@@ -290,26 +290,24 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
     if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QList<QGlyphRun> list = obj->glyphRuns( OPINT( 1, -1 ), OPINT( 2, -1 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN");
+      const QList<QGlyphRun> list = obj->glyphRuns( OPINT( 1, -1 ), OPINT( 2, -1 ) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGLYPHRUN");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QGlyphRun*>( new QGlyphRun( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QGlyphRun(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
