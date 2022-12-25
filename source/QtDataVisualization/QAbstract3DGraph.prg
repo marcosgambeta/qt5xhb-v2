@@ -1150,20 +1150,19 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstract3DInputHandler *> list = obj->inputHandlers();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACT3DINPUTHANDLER");
+      const QList<QAbstract3DInputHandler *> list = obj->inputHandlers();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACT3DINPUTHANDLER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QAbstract3DInputHandler*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1256,20 +1255,19 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<Q3DTheme *> list = obj->themes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "Q3DTHEME");
+      const QList<Q3DTheme *> list = obj->themes();
+      PHB_DYNS pDynSym = hb_dynsymFindName("Q3DTHEME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<Q3DTheme*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1498,20 +1496,19 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QCustom3DItem *> list = obj->customItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCUSTOM3DITEM");
+      const QList<QCustom3DItem *> list = obj->customItems();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCUSTOM3DITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QCustom3DItem*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
