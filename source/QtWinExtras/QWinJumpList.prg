@@ -249,20 +249,19 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QWinJumpListCategory *> list = obj->categories();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWINJUMPLISTCATEGORY");
+      const QList<QWinJumpListCategory *> list = obj->categories();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QWINJUMPLISTCATEGORY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( auto item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QWinJumpListCategory*>( list[ i ] ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
