@@ -475,15 +475,15 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
+      const QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,26 +532,24 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1) ? QImageEncoderSettings() : *static_cast<QImageEncoderSettings*>(Qt5xHb::itemGetPtr(1)), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE");
+      const QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1) ? QImageEncoderSettings() : *static_cast<QImageEncoderSettings*>(Qt5xHb::itemGetPtr(1)), &par2 );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QSize*>( new QSize( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSize(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }

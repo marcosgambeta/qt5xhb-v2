@@ -114,15 +114,15 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QString> list = obj->availableOutputs();
+      const QList<QString> list = obj->availableOutputs();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutC( nullptr, static_cast< const char*>( list[ i ].toLatin1().data() ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -814,26 +814,24 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
     if( ISBETWEEN(0, 1) && ( ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAVIEWFINDERSETTINGS");
+      const QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QCameraViewfinderSettings*>( new QCameraViewfinderSettings( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QCameraViewfinderSettings(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -868,26 +866,24 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
     if( ISBETWEEN(0, 1) && ( ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QList<QSize> list = obj->supportedViewfinderResolutions( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE");
+      const QList<QSize> list = obj->supportedViewfinderResolutions( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QSize*>( new QSize( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSize(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -925,15 +921,15 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
     if( ISBETWEEN(0, 1) && ( ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QList<QVideoFrame::PixelFormat> list = obj->supportedViewfinderPixelFormats( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
+      const QList<QVideoFrame::PixelFormat> list = obj->supportedViewfinderPixelFormats( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -954,26 +950,24 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QByteArray> list = QCamera::availableDevices();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    const QList<QByteArray> list = QCamera::availableDevices();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }

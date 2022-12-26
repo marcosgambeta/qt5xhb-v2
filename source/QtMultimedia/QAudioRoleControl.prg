@@ -148,15 +148,15 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAudio::Role> list = obj->supportedAudioRoles();
+      const QList<QAudio::Role> list = obj->supportedAudioRoles();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
