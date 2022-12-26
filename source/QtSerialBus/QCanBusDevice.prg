@@ -146,15 +146,15 @@ HB_FUNC_STATIC( QCANBUSDEVICE_CONFIGURATIONKEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<int> list = obj->configurationKeys();
+      const QVector<int> list = obj->configurationKeys();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, list[ i ] );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,26 +523,24 @@ HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<QCanBusFrame> list = obj->readAllFrames();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSFRAME");
+      const QVector<QCanBusFrame> list = obj->readAllFrames();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCANBUSFRAME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QCanBusFrame*>( new QCanBusFrame( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QCanBusFrame(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }

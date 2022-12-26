@@ -93,26 +93,24 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
     if( ISNUMPAR(1) )
     {
 #endif
-      QList<QCanBusDeviceInfo> list = obj->availableDevices( nullptr );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSDEVICEINFO");
+      const QList<QCanBusDeviceInfo> list = obj->availableDevices( nullptr );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QCanBusDeviceInfo*>( new QCanBusDeviceInfo( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QCanBusDeviceInfo(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
