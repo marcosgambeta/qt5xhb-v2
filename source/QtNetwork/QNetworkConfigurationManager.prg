@@ -112,26 +112,24 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QList<QNetworkConfiguration> list = obj->allConfigurations( HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags >( QNetworkConfiguration::StateFlags() ) : static_cast<QNetworkConfiguration::StateFlags >( hb_parni(1) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION");
+      const QList<QNetworkConfiguration> list = obj->allConfigurations( HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags >( QNetworkConfiguration::StateFlags() ) : static_cast<QNetworkConfiguration::StateFlags >( hb_parni(1) ) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QNetworkConfiguration*>( new QNetworkConfiguration( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkConfiguration(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }

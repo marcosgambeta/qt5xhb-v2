@@ -378,26 +378,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsDomainNameRecord> list = obj->canonicalNameRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD");
+      const QList<QDnsDomainNameRecord> list = obj->canonicalNameRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsDomainNameRecord*>( new QDnsDomainNameRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsDomainNameRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -430,26 +428,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsHostAddressRecord> list = obj->hostAddressRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSHOSTADDRESSRECORD");
+      const QList<QDnsHostAddressRecord> list = obj->hostAddressRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSHOSTADDRESSRECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsHostAddressRecord*>( new QDnsHostAddressRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsHostAddressRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -482,26 +478,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsMailExchangeRecord> list = obj->mailExchangeRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSMAILEXCHANGERECORD");
+      const QList<QDnsMailExchangeRecord> list = obj->mailExchangeRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSMAILEXCHANGERECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsMailExchangeRecord*>( new QDnsMailExchangeRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsMailExchangeRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -534,26 +528,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsDomainNameRecord> list = obj->nameServerRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD");
+      const QList<QDnsDomainNameRecord> list = obj->nameServerRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsDomainNameRecord*>( new QDnsDomainNameRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsDomainNameRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -586,26 +578,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsDomainNameRecord> list = obj->pointerRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD");
+      const QList<QDnsDomainNameRecord> list = obj->pointerRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsDomainNameRecord*>( new QDnsDomainNameRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsDomainNameRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -638,26 +628,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsServiceRecord> list = obj->serviceRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSSERVICERECORD");
+      const QList<QDnsServiceRecord> list = obj->serviceRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSSERVICERECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsServiceRecord*>( new QDnsServiceRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsServiceRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -690,26 +678,24 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsTextRecord> list = obj->textRecords();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSTEXTRECORD");
+      const QList<QDnsTextRecord> list = obj->textRecords();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDNSTEXTRECORD");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QDnsTextRecord*>( new QDnsTextRecord( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QDnsTextRecord(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }

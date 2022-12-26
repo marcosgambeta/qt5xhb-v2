@@ -360,26 +360,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificate> list = obj->localCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
+      const QList<QSslCertificate> list = obj->localCertificateChain();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QSslCertificate*>( new QSslCertificate( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -524,26 +522,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificate> list = obj->peerCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
+      const QList<QSslCertificate> list = obj->peerCertificateChain();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QSslCertificate*>( new QSslCertificate( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -678,26 +674,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCipher> list = obj->ciphers();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER");
+      const QList<QSslCipher> list = obj->ciphers();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QSslCipher*>( new QSslCipher( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -760,26 +754,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SUPPORTEDCIPHERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QSslCipher> list = QSslConfiguration::supportedCiphers();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER");
+    const QList<QSslCipher> list = QSslConfiguration::supportedCiphers();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QSslCipher*>( new QSslCipher( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
@@ -812,26 +804,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificate> list = obj->caCertificates();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
+      const QList<QSslCertificate> list = obj->caCertificates();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QSslCertificate*>( new QSslCertificate( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
@@ -894,26 +884,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SYSTEMCACERTIFICATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QSslCertificate> list = QSslConfiguration::systemCaCertificates();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
+    const QList<QSslCertificate> list = QSslConfiguration::systemCaCertificates();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QSslCertificate*>( new QSslCertificate( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
@@ -1251,26 +1239,24 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->allowedNextProtocols();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+      const QList<QByteArray> list = obj->allowedNextProtocols();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
-        for( auto i = 0; i < list.count(); i++ )
+        for( const auto & item : list )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(nullptr);
-          hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[ i ] ) ) );
+          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(nullptr);
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
+          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }

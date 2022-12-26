@@ -536,26 +536,24 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    QList<QNetworkCookie> list = QNetworkCookie::parseCookies( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE");
+    const QList<QNetworkCookie> list = QNetworkCookie::parseCookies( *PQBYTEARRAY(1) );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr( pItem, static_cast<QNetworkCookie*>( new QNetworkCookie( list[ i ] ) ) );
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkCookie(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemNew(nullptr);
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
+        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
