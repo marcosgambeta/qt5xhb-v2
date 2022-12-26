@@ -734,15 +734,15 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QWebSocketProtocol::Version> list = obj->supportedVersions();
+      const QList<QWebSocketProtocol::Version> list = obj->supportedVersions();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
