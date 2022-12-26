@@ -494,20 +494,19 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWidgetList list = QApplication::allWidgets();
+    const QWidgetList list = QApplication::allWidgets();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( auto item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr(pItem, static_cast<QWidget*>(list[i]));
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -1534,20 +1533,19 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWidgetList list = QApplication::topLevelWidgets();
+    const QWidgetList list = QApplication::topLevelWidgets();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
-      for( auto i = 0; i < list.count(); i++ )
+      for( auto item : list )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(nullptr);
-        hb_itemPutPtr(pItem, static_cast<QWidget*>(list[i]));
+        PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
