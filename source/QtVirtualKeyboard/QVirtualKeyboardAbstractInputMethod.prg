@@ -157,15 +157,15 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QList<QVirtualKeyboardInputEngine::InputMode> list = obj->inputModes( PQSTRING(1) );
+      const QList<QVirtualKeyboardInputEngine::InputMode> list = obj->inputModes( PQSTRING(1) );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,15 +261,15 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QVirtualKeyboardSelectionListModel::Type> list = obj->selectionLists();
+      const QList<QVirtualKeyboardSelectionListModel::Type> list = obj->selectionLists();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,15 +392,15 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_PATTERNRECOGNITIONMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QVirtualKeyboardInputEngine::PatternRecognitionMode> list = obj->patternRecognitionModes();
+      const QList<QVirtualKeyboardInputEngine::PatternRecognitionMode> list = obj->patternRecognitionModes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI( nullptr, static_cast< int >( list[ i ] ) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
