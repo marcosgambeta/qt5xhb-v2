@@ -381,7 +381,7 @@ PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
 
   PHB_DYNS pDynSym = nullptr;
 
-  pDynSym = hb_dynsymFindName( (const char *) eventname.toUpper().toLatin1().data() );
+  pDynSym = hb_dynsymFindName( static_cast<const char*>(eventname.toUpper().toLatin1().data()) );
 
   if( pDynSym == nullptr )
   {
@@ -396,8 +396,7 @@ PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( nullptr );
-    hb_itemPutPtr( pItem, (QEvent *) event );
+    PHB_ITEM pItem = hb_itemPutPtr( nullptr, event );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -419,7 +418,7 @@ PHB_ITEM Events::returnQObject( QObject * object, const char * classname )
 
   if( object != nullptr )
   {
-    pDynSym = hb_dynsymFindName( (const char *) object->metaObject()->className() );
+    pDynSym = hb_dynsymFindName( object->metaObject()->className() );
   }
 
   if( pDynSym == nullptr )
@@ -435,8 +434,7 @@ PHB_ITEM Events::returnQObject( QObject * object, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( nullptr );
-    hb_itemPutPtr( pItem, (void *) object );
+    PHB_ITEM pItem = hb_itemPutPtr( nullptr, object );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -475,7 +473,6 @@ HB_FUNC( QTXHB_EVENTS_ACTIVE )
 {
   hb_retni( s_events->active() );
 }
-
 
 HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
 {
