@@ -291,7 +291,7 @@ PHB_ITEM Signals::returnObject( void * ptr, const char * classname )
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( nullptr );
-    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_itemPutPtr( pItem, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -309,7 +309,7 @@ PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+    pDynSym = hb_dynsymFindName( ptr->metaObject()->className() );
   }
 
   if( pDynSym == nullptr )
@@ -326,7 +326,7 @@ PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( nullptr );
-    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_itemPutPtr( pItem, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
