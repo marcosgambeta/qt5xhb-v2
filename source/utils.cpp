@@ -379,7 +379,7 @@ void createReturnQObjectClass(QObject * ptr, const char * classname)
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName((const char *) ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
   if( pDynSym == nullptr )
@@ -415,7 +415,7 @@ void createReturnQObjectClass(const QObject * ptr, const char * classname)
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName((const char *) ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
   if( pDynSym == nullptr )
@@ -451,7 +451,7 @@ void createReturnQWidgetClass(QWidget * ptr, const char * classname)
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName((const char *) ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
   if( pDynSym == nullptr )
@@ -487,7 +487,7 @@ void createReturnQWidgetClass(const QWidget * ptr, const char * classname)
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName((const char *) ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
   if( pDynSym == nullptr )
@@ -535,7 +535,7 @@ bool isObjectDerivedFrom(int numpar, const QString className)
 
   if( pItem != nullptr )
   {
-    return hb_clsIsParent(hb_objGetClass(pItem), (const char *) className.toUpper().toLatin1().data());
+    return hb_clsIsParent(hb_objGetClass(pItem), static_cast<const char*>(className.toUpper().toLatin1().data()));
   }
   else
   {
@@ -808,7 +808,7 @@ PHB_ITEM returnQWidgetObject(QWidget * ptr)
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName((const char *) ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
   if( pDynSym == nullptr )
@@ -846,7 +846,7 @@ PHB_ITEM returnQObjectObject(QObject * ptr)
 
   if( ptr != nullptr )
   {
-    pDynSym = hb_dynsymFindName((const char *) ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
   if( pDynSym == nullptr )
