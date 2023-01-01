@@ -17,7 +17,7 @@ HB_FUNC( QT5XHB_VERSION )
 
 HB_FUNC( QT5XHB_VERSION_DATE )
 {
-  hb_retc( ( const char * ) "05/12/2022 12:00:00" );
+  hb_retc( ( const char * ) "01/01/2023 03:30:00" );
 }
 
 HB_FUNC( QT5XHB_ISCPP11 )
@@ -36,7 +36,7 @@ HB_FUNC( QT4XHB_VERSION )
 
 HB_FUNC( QT4XHB_VERSION_DATE )
 {
-  hb_retc( ( const char * ) "05/12/2022 12:00:00" );
+  hb_retc( ( const char * ) "01/01/2023 03:30:00" );
 }
 
 /*
