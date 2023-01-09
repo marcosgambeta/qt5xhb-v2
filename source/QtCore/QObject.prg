@@ -2231,7 +2231,7 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOBJECT");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             Qt5xHb::Signals_disconnect_signal( sender, sender->metaObject()->indexOfSignal("destroyed(QObject*)") );
@@ -2292,7 +2292,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOBJECT");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
