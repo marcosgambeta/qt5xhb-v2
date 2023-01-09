@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1024,8 +1024,8 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBARDATAPROXY");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBAR3DSERIES");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }

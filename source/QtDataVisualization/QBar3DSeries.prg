@@ -334,8 +334,8 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBAR3DSERIES");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBARDATAPROXY");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBARDATAPROXY");
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBAR3DSERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPOINT");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBAR3DSERIES");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }

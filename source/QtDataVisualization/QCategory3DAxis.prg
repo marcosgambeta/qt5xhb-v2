@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCATEGORY3DAXIS");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
