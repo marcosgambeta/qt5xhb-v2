@@ -489,8 +489,8 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONFINISHED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QGEOROUTEREPLY");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -555,10 +555,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QGEOROUTEREPLY");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
-            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
