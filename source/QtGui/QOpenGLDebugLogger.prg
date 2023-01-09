@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLDEBUGLOGGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QOPENGLDEBUGMESSAGE");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
