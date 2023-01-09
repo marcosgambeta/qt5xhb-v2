@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWINTASKBARPROGRESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWINTASKBARPROGRESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWINTASKBARPROGRESS");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWINTASKBARPROGRESS");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWINTASKBARPROGRESS");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWINTASKBARPROGRESS");
             PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
