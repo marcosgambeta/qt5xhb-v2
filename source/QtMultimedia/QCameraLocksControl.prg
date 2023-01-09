@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( nullptr, (int) arg3 );
-            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
