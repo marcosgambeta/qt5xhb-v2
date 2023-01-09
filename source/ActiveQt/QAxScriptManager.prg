@@ -347,12 +347,12 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPTMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QAXSCRIPT");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QAXSCRIPT");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
             PHB_ITEM pArg4 = hb_itemPutNI( nullptr, arg4 );
             PHB_ITEM pArg5 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg5) );
-            hb_vmEvalBlockV( cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5 );
+            hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
