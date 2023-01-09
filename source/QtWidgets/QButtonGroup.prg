@@ -420,8 +420,8 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -544,8 +544,8 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -668,8 +668,8 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -793,9 +793,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
             PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);

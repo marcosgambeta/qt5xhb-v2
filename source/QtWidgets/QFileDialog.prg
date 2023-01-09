@@ -1816,7 +1816,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1940,7 +1940,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -2008,7 +2008,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
               hb_arrayAddForward( pArg1, pTempItem );
               hb_itemRelease(pTempItem);
             }
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -2070,7 +2070,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -2132,7 +2132,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -2216,7 +2216,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
             {
               hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QURL", HB_ERR_ARGS_BASEPARAMS);
             }
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -2278,7 +2278,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -2340,7 +2340,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }

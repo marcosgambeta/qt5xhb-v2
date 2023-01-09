@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSPINBOX");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSPINBOX");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }

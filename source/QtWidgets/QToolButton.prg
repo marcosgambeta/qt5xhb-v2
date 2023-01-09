@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBUTTON");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject((QObject *) arg1, "QACTION");
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

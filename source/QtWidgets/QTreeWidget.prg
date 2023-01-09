@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QTREEWIDGETITEM");
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1407,7 +1407,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTREEWIDGETITEM");
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1659,7 +1659,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEWIDGET");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 

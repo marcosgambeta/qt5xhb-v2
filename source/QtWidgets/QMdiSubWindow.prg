@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMDISUBWINDOW");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMDISUBWINDOW");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
