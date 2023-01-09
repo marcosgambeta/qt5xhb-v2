@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKPROXY");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1568,7 +1568,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
             PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1701,7 +1701,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1767,7 +1767,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1834,7 +1834,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QBYTEARRAY");
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -1901,7 +1901,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -1989,7 +1989,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
             {
               hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
             }
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
