@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
-            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
             hb_itemRelease(pArg2);
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
