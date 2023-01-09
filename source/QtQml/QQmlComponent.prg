@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLCOMPONENT");
             PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLCOMPONENT");
             PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
-            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
           }

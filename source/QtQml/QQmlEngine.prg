@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLENGINE");
-            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
 
