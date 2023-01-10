@@ -717,6 +717,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("finished(QPlaceReply*)");
@@ -726,9 +728,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::finished, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::finished,
                                                               [sender, indexOfCodeBlock]
                                                               (QPlaceReply * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -745,31 +746,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -783,6 +771,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("error(QPlaceReply*,QPlaceReply::Error,QString)");
@@ -792,9 +782,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::error, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::error,
                                                               [sender, indexOfCodeBlock]
                                                               (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -815,31 +804,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -853,6 +829,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("placeAdded(QString)");
@@ -862,9 +840,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::placeAdded, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::placeAdded,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -881,31 +858,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -919,6 +883,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("placeUpdated(QString)");
@@ -928,9 +894,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::placeUpdated, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::placeUpdated,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -947,31 +912,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -985,6 +937,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("placeRemoved(QString)");
@@ -994,9 +948,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::placeRemoved, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::placeRemoved,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1013,31 +966,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1051,6 +991,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("categoryAdded(QPlaceCategory,QString)");
@@ -1060,9 +1002,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::categoryAdded, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::categoryAdded,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1081,31 +1022,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1119,6 +1047,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("categoryUpdated(QPlaceCategory,QString)");
@@ -1128,9 +1058,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::categoryUpdated, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::categoryUpdated,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPlaceCategory & arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1149,31 +1078,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1187,6 +1103,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("categoryRemoved(QString,QString)");
@@ -1196,9 +1114,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::categoryRemoved, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::categoryRemoved,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1217,31 +1134,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1255,6 +1159,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("dataChanged()");
@@ -1264,9 +1170,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceManager::dataChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceManager::dataChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1281,31 +1186,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

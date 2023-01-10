@@ -239,6 +239,8 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
@@ -248,9 +250,8 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QPlaceReply::finished, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QPlaceReply::finished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -265,31 +266,18 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -303,6 +291,8 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("error(QPlaceReply::Error,QString)");
@@ -312,9 +302,8 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QPlaceReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -333,31 +322,18 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

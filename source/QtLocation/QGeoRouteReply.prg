@@ -295,6 +295,8 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
@@ -304,9 +306,8 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGeoRouteReply::finished, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGeoRouteReply::finished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -321,31 +322,18 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -359,6 +347,8 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoRouteReply::Error,QString)");
@@ -368,9 +358,8 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QGeoRouteReply::Error,const QString &>::of(&QGeoRouteReply::error), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<QGeoRouteReply::Error,const QString &>::of(&QGeoRouteReply::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QGeoRouteReply::Error arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -389,31 +378,18 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
