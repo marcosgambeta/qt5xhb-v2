@@ -2211,6 +2211,8 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
   auto sender = qobject_cast<QObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("destroyed(QObject*)");
@@ -2220,7 +2222,6 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QObject::destroyed,
                                                               [sender, indexOfCodeBlock]
@@ -2240,29 +2241,18 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -2271,6 +2261,8 @@ void objectNameChanged( const QString & objectName )
 HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
   auto sender = qobject_cast<QObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2281,7 +2273,6 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QObject::objectNameChanged,
                                                               [sender, indexOfCodeBlock]
@@ -2300,29 +2291,18 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 HB_FUNC_STATIC( QOBJECT_NEWFROM )

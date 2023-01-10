@@ -1485,6 +1485,8 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("error(QProcess::ProcessError)");
@@ -1494,9 +1496,8 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QProcess::ProcessError>::of(&QProcess::error), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<QProcess::ProcessError>::of(&QProcess::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QProcess::ProcessError arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1513,31 +1514,18 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1546,6 +1534,8 @@ void finished( int exitCode, QProcess::ExitStatus exitStatus )
 HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1556,9 +1546,8 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QProcess::ExitStatus arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1577,31 +1566,18 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1610,6 +1586,8 @@ void readyReadStandardError()
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1620,9 +1598,8 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QProcess::readyReadStandardError, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QProcess::readyReadStandardError,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1637,31 +1614,18 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1670,6 +1634,8 @@ void readyReadStandardOutput()
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1680,9 +1646,8 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QProcess::readyReadStandardOutput, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QProcess::readyReadStandardOutput,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1697,31 +1662,18 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1730,6 +1682,8 @@ void started()
 HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1740,9 +1694,8 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QProcess::started, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QProcess::started,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1757,31 +1710,18 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1790,6 +1730,8 @@ void stateChanged( QProcess::ProcessState newState )
 HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1800,9 +1742,8 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QProcess::stateChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QProcess::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QProcess::ProcessState arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1819,31 +1760,18 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1854,6 +1782,8 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QProcess::ProcessError)");
@@ -1863,9 +1793,8 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QProcess::errorOccurred, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QProcess::errorOccurred,
                                                               [sender, indexOfCodeBlock]
                                                               (QProcess::ProcessError arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1882,31 +1811,18 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
