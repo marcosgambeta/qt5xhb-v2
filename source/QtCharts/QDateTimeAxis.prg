@@ -395,6 +395,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("formatChanged(QString)");
@@ -404,9 +406,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeAxis::formatChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeAxis::formatChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -423,29 +424,18 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -459,6 +449,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("maxChanged(QDateTime)");
@@ -468,9 +460,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeAxis::maxChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeAxis::maxChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QDateTime arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -487,29 +478,18 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -523,6 +503,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("minChanged(QDateTime)");
@@ -532,9 +514,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeAxis::minChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeAxis::minChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QDateTime arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -551,29 +532,18 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -587,6 +557,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("rangeChanged(QDateTime,QDateTime)");
@@ -596,9 +568,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeAxis::rangeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeAxis::rangeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QDateTime arg1, QDateTime arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -617,29 +588,18 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -653,6 +613,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("tickCountChanged(int)");
@@ -662,9 +624,8 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeAxis::tickCountChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeAxis::tickCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -681,29 +642,18 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

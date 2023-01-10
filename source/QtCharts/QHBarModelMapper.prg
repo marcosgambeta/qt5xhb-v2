@@ -429,6 +429,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QHBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
@@ -438,9 +440,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QHBarModelMapper::columnCountChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QHBarModelMapper::columnCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -455,29 +456,18 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -491,6 +481,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QHBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("firstBarSetRowChanged()");
@@ -500,9 +492,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QHBarModelMapper::firstBarSetRowChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QHBarModelMapper::firstBarSetRowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -517,29 +508,18 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -553,6 +533,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QHBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
@@ -562,9 +544,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QHBarModelMapper::firstColumnChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QHBarModelMapper::firstColumnChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -579,29 +560,18 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -615,6 +585,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QHBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("lastBarSetRowChanged()");
@@ -624,9 +596,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QHBarModelMapper::lastBarSetRowChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QHBarModelMapper::lastBarSetRowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -641,29 +612,18 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -677,6 +637,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QHBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
@@ -686,9 +648,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QHBarModelMapper::modelReplaced, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QHBarModelMapper::modelReplaced,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -703,29 +664,18 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -739,6 +689,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONSERIESREPLACED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QHBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
@@ -748,9 +700,8 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONSERIESREPLACED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QHBarModelMapper::seriesReplaced, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QHBarModelMapper::seriesReplaced,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -765,29 +716,18 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONSERIESREPLACED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

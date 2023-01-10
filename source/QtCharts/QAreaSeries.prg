@@ -844,6 +844,8 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
@@ -853,9 +855,8 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::borderColorChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::borderColorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QColor arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -872,29 +873,18 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -908,6 +898,8 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QPointF)");
@@ -917,9 +909,8 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::clicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -936,29 +927,18 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -972,6 +952,8 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
@@ -981,9 +963,8 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::colorChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::colorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QColor arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1000,29 +981,18 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1036,6 +1006,8 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QPointF)");
@@ -1045,9 +1017,8 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::doubleClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1064,29 +1035,18 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1100,6 +1060,8 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QPointF,bool)");
@@ -1109,9 +1071,8 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::hovered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPointF & arg1, bool arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1130,29 +1091,18 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1166,6 +1116,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsClippingChanged(bool)");
@@ -1175,9 +1127,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::pointLabelsClippingChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::pointLabelsClippingChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1194,29 +1145,18 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1230,6 +1170,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsColorChanged(QColor)");
@@ -1239,9 +1181,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::pointLabelsColorChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::pointLabelsColorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1258,29 +1199,18 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1294,6 +1224,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsFontChanged(QFont)");
@@ -1303,9 +1235,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::pointLabelsFontChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::pointLabelsFontChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1322,29 +1253,18 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1358,6 +1278,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsFormatChanged(QString)");
@@ -1367,9 +1289,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::pointLabelsFormatChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::pointLabelsFormatChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1386,29 +1307,18 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1422,6 +1332,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsVisibilityChanged(bool)");
@@ -1431,9 +1343,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::pointLabelsVisibilityChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::pointLabelsVisibilityChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1450,29 +1361,18 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1486,6 +1386,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QPointF)");
@@ -1495,9 +1397,8 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::pressed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1514,29 +1415,18 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1550,6 +1440,8 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("released(QPointF)");
@@ -1559,9 +1451,8 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::released, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::released,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPointF & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1578,29 +1469,18 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1614,6 +1494,8 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("selected()");
@@ -1623,9 +1505,8 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAreaSeries::selected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAreaSeries::selected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1640,29 +1521,18 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

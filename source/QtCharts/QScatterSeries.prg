@@ -450,6 +450,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
@@ -459,9 +461,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QScatterSeries::borderColorChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QScatterSeries::borderColorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QColor arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -478,29 +479,18 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -514,6 +504,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
@@ -523,9 +515,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QScatterSeries::colorChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QScatterSeries::colorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QColor arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -542,29 +533,18 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -578,6 +558,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("markerShapeChanged(QScatterSeries::MarkerShape)");
@@ -587,9 +569,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QScatterSeries::markerShapeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QScatterSeries::markerShapeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QScatterSeries::MarkerShape arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -606,29 +587,18 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -642,6 +612,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("markerSizeChanged(qreal)");
@@ -651,9 +623,8 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QScatterSeries::markerSizeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QScatterSeries::markerSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -670,29 +641,18 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

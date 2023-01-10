@@ -463,6 +463,8 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("brushChanged()");
@@ -472,9 +474,8 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::brushChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::brushChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -489,29 +490,18 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -525,6 +515,8 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("cleared()");
@@ -534,9 +526,8 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::cleared, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::cleared,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -551,29 +542,18 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -587,6 +567,8 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("clicked()");
@@ -596,9 +578,8 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::clicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -613,29 +594,18 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -649,6 +619,8 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked()");
@@ -658,9 +630,8 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::doubleClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -675,29 +646,18 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -711,6 +671,8 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool)");
@@ -720,9 +682,8 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::hovered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -739,29 +700,18 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -775,6 +725,8 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("penChanged()");
@@ -784,9 +736,8 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::penChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::penChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -801,29 +752,18 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -837,6 +777,8 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("pressed()");
@@ -846,9 +788,8 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::pressed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -863,29 +804,18 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -899,6 +829,8 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("released()");
@@ -908,9 +840,8 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::released, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::released,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -925,29 +856,18 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -961,6 +881,8 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
@@ -970,9 +892,8 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::valueChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::valueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -989,29 +910,18 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1025,6 +935,8 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("valuesChanged()");
@@ -1034,9 +946,8 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QBoxSet::valuesChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QBoxSet::valuesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1051,29 +962,18 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif

@@ -414,6 +414,8 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("categoriesChanged()");
@@ -423,9 +425,8 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QCategoryAxis::categoriesChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QCategoryAxis::categoriesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -440,29 +441,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -476,6 +466,8 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
@@ -485,9 +477,8 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QCategoryAxis::labelsPositionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QCategoryAxis::labelsPositionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QCategoryAxis::AxisLabelsPosition arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -504,29 +495,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
