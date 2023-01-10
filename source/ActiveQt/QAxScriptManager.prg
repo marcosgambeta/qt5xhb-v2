@@ -328,6 +328,8 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
 {
   auto sender = (QAxScriptManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("error(QAxScript*,int,QString,int,QString)");
@@ -337,9 +339,8 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAxScriptManager::error, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAxScriptManager::error,
                                                               [sender, indexOfCodeBlock]
                                                               (QAxScript * arg1, int arg2, const QString & arg3, int arg4, const QString & arg5) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -364,29 +365,18 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
