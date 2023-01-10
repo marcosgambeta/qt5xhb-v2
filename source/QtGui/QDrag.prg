@@ -450,6 +450,8 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 {
   auto sender = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("actionChanged(Qt::DropAction)");
@@ -459,9 +461,8 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDrag::actionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDrag::actionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::DropAction arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -478,31 +479,18 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -511,6 +499,8 @@ void targetChanged( QObject * newTarget )
 HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 {
   auto sender = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -521,9 +511,8 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDrag::targetChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDrag::targetChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -540,31 +529,18 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

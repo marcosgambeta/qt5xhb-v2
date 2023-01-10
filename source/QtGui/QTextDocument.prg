@@ -2014,6 +2014,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("contentsChange(int,int,int)");
@@ -2023,9 +2025,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::contentsChange, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::contentsChange,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2046,31 +2047,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2079,6 +2067,8 @@ void contentsChanged()
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2089,9 +2079,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::contentsChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::contentsChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2106,31 +2095,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2139,6 +2115,8 @@ void undoAvailable( bool b )
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2149,9 +2127,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::undoAvailable, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::undoAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2168,31 +2145,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2201,6 +2165,8 @@ void redoAvailable( bool b )
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2211,9 +2177,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::redoAvailable, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::redoAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2230,31 +2195,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2263,6 +2215,8 @@ void undoCommandAdded()
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2273,9 +2227,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::undoCommandAdded, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::undoCommandAdded,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2290,31 +2243,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2323,6 +2263,8 @@ void modificationChanged( bool m )
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2333,9 +2275,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::modificationChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::modificationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2352,31 +2293,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2385,6 +2313,8 @@ void cursorPositionChanged( const QTextCursor & cursor )
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2395,9 +2325,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::cursorPositionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::cursorPositionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QTextCursor & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2414,31 +2343,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2447,6 +2363,8 @@ void blockCountChanged( int newBlockCount )
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2457,9 +2375,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::blockCountChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::blockCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2476,31 +2393,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2509,6 +2413,8 @@ void documentLayoutChanged()
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 {
   auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2519,9 +2425,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTextDocument::documentLayoutChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTextDocument::documentLayoutChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2536,31 +2441,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

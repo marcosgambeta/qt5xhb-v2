@@ -1210,6 +1210,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("applicationStateChanged(Qt::ApplicationState)");
@@ -1219,9 +1221,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::applicationStateChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::applicationStateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::ApplicationState arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1238,31 +1239,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1275,6 +1263,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("commitDataRequest(QSessionManager)");
@@ -1284,9 +1274,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::commitDataRequest, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::commitDataRequest,
                                                               [sender, indexOfCodeBlock]
                                                               (QSessionManager & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1303,31 +1292,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1336,6 +1312,8 @@ void focusObjectChanged( QObject * focusObject )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1346,9 +1324,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::focusObjectChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::focusObjectChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1365,31 +1342,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1398,6 +1362,8 @@ void focusWindowChanged( QWindow * focusWindow )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1408,9 +1374,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::focusWindowChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::focusWindowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QWindow * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1427,31 +1392,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1462,6 +1414,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("fontChanged(QFont)");
@@ -1471,9 +1425,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::fontChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::fontChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QFont & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1490,31 +1443,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1527,6 +1467,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("fontDatabaseChanged()");
@@ -1536,9 +1478,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::fontDatabaseChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::fontDatabaseChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1553,31 +1494,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1586,6 +1514,8 @@ void lastWindowClosed()
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1596,9 +1526,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::lastWindowClosed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::lastWindowClosed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1613,31 +1542,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1648,6 +1564,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("layoutDirectionChanged(Qt::LayoutDirection)");
@@ -1657,9 +1575,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::layoutDirectionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::layoutDirectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::LayoutDirection arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1676,31 +1593,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1714,6 +1618,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("paletteChanged(QPalette)");
@@ -1723,9 +1629,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::paletteChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::paletteChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPalette & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1742,31 +1647,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1780,6 +1672,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("primaryScreenChanged(QScreen*)");
@@ -1789,9 +1683,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::primaryScreenChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::primaryScreenChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1808,31 +1701,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1845,6 +1725,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("saveStateRequest(QSessionManager)");
@@ -1854,9 +1736,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::saveStateRequest, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::saveStateRequest,
                                                               [sender, indexOfCodeBlock]
                                                               (QSessionManager & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1873,31 +1754,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1906,6 +1774,8 @@ void screenAdded( QScreen * screen )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 {
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1916,9 +1786,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::screenAdded, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::screenAdded,
                                                               [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1935,31 +1804,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1970,6 +1826,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("screenRemoved(QScreen*)");
@@ -1979,9 +1837,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGuiApplication::screenRemoved, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGuiApplication::screenRemoved,
                                                               [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1998,31 +1855,18 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
