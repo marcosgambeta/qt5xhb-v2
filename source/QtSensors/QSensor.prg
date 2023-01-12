@@ -1296,6 +1296,8 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1306,9 +1308,8 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::busyChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::busyChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1323,31 +1324,18 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1360,6 +1348,8 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1370,9 +1360,8 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::activeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::activeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1387,31 +1376,18 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1424,6 +1400,8 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1434,9 +1412,8 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::readingChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::readingChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1451,31 +1428,18 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1488,6 +1452,8 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1498,9 +1464,8 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::sensorError, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::sensorError,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1517,31 +1482,18 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1554,6 +1506,8 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1564,9 +1518,8 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::availableSensorsChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::availableSensorsChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1581,31 +1534,18 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1618,6 +1558,8 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1628,9 +1570,8 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::alwaysOnChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::alwaysOnChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1645,31 +1586,18 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1683,6 +1611,8 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("dataRateChanged()");
@@ -1692,9 +1622,8 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::dataRateChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::dataRateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1709,31 +1638,18 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1746,6 +1662,8 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1756,9 +1674,8 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::skipDuplicatesChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::skipDuplicatesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1775,31 +1692,18 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1813,6 +1717,8 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("axesOrientationModeChanged(QSensor::AxesOrientationMode)");
@@ -1822,9 +1728,8 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::axesOrientationModeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::axesOrientationModeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QSensor::AxesOrientationMode arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1841,31 +1746,18 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1878,6 +1770,8 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1888,9 +1782,8 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::currentOrientationChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::currentOrientationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1907,31 +1800,18 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -1944,6 +1824,8 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1954,9 +1836,8 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::userOrientationChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::userOrientationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1973,31 +1854,18 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -2010,6 +1878,8 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2020,9 +1890,8 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::maxBufferSizeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::maxBufferSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2039,31 +1908,18 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -2076,6 +1932,8 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2086,9 +1944,8 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::efficientBufferSizeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::efficientBufferSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2105,31 +1962,18 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -2142,6 +1986,8 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2152,9 +1998,8 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSensor::bufferSizeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSensor::bufferSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2171,31 +2016,18 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
