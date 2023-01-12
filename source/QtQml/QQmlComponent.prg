@@ -493,6 +493,8 @@ void progressChanged( qreal progress )
 HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {
   auto sender = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -503,9 +505,8 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QQmlComponent::progressChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QQmlComponent::progressChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -522,31 +523,18 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -555,6 +543,8 @@ void statusChanged( QQmlComponent::Status status )
 HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
 {
   auto sender = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -565,9 +555,8 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QQmlComponent::statusChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QQmlComponent::statusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QQmlComponent::Status arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -584,31 +573,18 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
