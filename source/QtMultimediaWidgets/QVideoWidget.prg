@@ -462,6 +462,8 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
 {
   auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("fullScreenChanged(bool)");
@@ -471,9 +473,8 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QVideoWidget::fullScreenChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QVideoWidget::fullScreenChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -490,31 +491,18 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -523,6 +511,8 @@ void brightnessChanged( int brightness )
 HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
 {
   auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -533,9 +523,8 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QVideoWidget::brightnessChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QVideoWidget::brightnessChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -552,31 +541,18 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -585,6 +561,8 @@ void contrastChanged( int contrast )
 HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
 {
   auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -595,9 +573,8 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QVideoWidget::contrastChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QVideoWidget::contrastChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -614,31 +591,18 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -647,6 +611,8 @@ void hueChanged( int hue )
 HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
 {
   auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -657,9 +623,8 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QVideoWidget::hueChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QVideoWidget::hueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -676,31 +641,18 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -709,6 +661,8 @@ void saturationChanged( int saturation )
 HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
 {
   auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -719,9 +673,8 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QVideoWidget::saturationChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QVideoWidget::saturationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -738,31 +691,18 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
