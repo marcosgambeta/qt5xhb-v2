@@ -521,6 +521,8 @@ void repaintNeeded()
 HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
 {
   auto sender = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -531,9 +533,8 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSvgRenderer::repaintNeeded, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSvgRenderer::repaintNeeded,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -548,31 +549,18 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
