@@ -919,6 +919,8 @@ void beforeDelete( int row )
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
   auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -929,9 +931,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSqlTableModel::beforeDelete, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSqlTableModel::beforeDelete,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -948,31 +949,18 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -981,6 +969,8 @@ void beforeInsert( QSqlRecord & record )
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
   auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -991,9 +981,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSqlTableModel::beforeInsert, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSqlTableModel::beforeInsert,
                                                               [sender, indexOfCodeBlock]
                                                               (QSqlRecord & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1010,31 +999,18 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1043,6 +1019,8 @@ void beforeUpdate( int row, QSqlRecord & record )
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
   auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1053,9 +1031,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSqlTableModel::beforeUpdate, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSqlTableModel::beforeUpdate,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QSqlRecord & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1074,31 +1051,18 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1107,6 +1071,8 @@ void primeInsert( int row, QSqlRecord & record )
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
   auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1117,9 +1083,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSqlTableModel::primeInsert, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSqlTableModel::primeInsert,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QSqlRecord & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1138,31 +1103,18 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
