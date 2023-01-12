@@ -380,6 +380,8 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("stationIdChanged(QString)");
@@ -389,9 +391,8 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QRadioData::stationIdChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QRadioData::stationIdChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -408,31 +409,18 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -441,6 +429,8 @@ void programTypeChanged( QRadioData::ProgramType programType )
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -451,9 +441,8 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QRadioData::programTypeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QRadioData::programTypeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QRadioData::ProgramType arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -470,31 +459,18 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -503,6 +479,8 @@ void programTypeNameChanged( QString programTypeName )
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -513,9 +491,8 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QRadioData::programTypeNameChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QRadioData::programTypeNameChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -532,31 +509,18 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -565,6 +529,8 @@ void stationNameChanged( QString stationName )
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -575,9 +541,8 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QRadioData::stationNameChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QRadioData::stationNameChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -594,31 +559,18 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -627,6 +579,8 @@ void radioTextChanged( QString radioText )
 HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -637,9 +591,8 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QRadioData::radioTextChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QRadioData::radioTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QString arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -656,31 +609,18 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -689,6 +629,8 @@ void alternativeFrequenciesEnabledChanged( bool enabled )
 HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -699,9 +641,8 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QRadioData::alternativeFrequenciesEnabledChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QRadioData::alternativeFrequenciesEnabledChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -718,31 +659,18 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -751,6 +679,8 @@ void error( QRadioData::Error error )
 HB_FUNC_STATIC( QRADIODATA_ONERROR )
 {
   auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -761,9 +691,8 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QRadioData::Error>::of(&QRadioData::error), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<QRadioData::Error>::of(&QRadioData::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QRadioData::Error arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -780,31 +709,18 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

@@ -521,6 +521,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("bufferAvailableChanged(bool)");
@@ -530,9 +532,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::bufferAvailableChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::bufferAvailableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -549,31 +550,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -582,6 +570,8 @@ void bufferReady()
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -592,9 +582,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::bufferReady, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::bufferReady,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -609,31 +598,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -642,6 +618,8 @@ void durationChanged( qint64 duration )
 HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -652,9 +630,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::durationChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::durationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -671,31 +648,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -704,6 +668,8 @@ void error( QAudioDecoder::Error error )
 HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -714,9 +680,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QAudioDecoder::Error>::of(&QAudioDecoder::error), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<QAudioDecoder::Error>::of(&QAudioDecoder::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QAudioDecoder::Error arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -733,31 +698,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -766,6 +718,8 @@ void finished()
 HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -776,9 +730,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::finished, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::finished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -793,31 +746,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -826,6 +766,8 @@ void formatChanged( const QAudioFormat & format )
 HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -836,9 +778,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::formatChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::formatChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QAudioFormat & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -855,31 +796,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -888,6 +816,8 @@ void positionChanged( qint64 position )
 HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -898,9 +828,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::positionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::positionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -917,31 +846,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -950,6 +866,8 @@ void sourceChanged()
 HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -960,9 +878,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::sourceChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::sourceChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -977,31 +894,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1010,6 +914,8 @@ void stateChanged( QAudioDecoder::State state )
 HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 {
   auto sender = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1020,9 +926,8 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAudioDecoder::stateChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAudioDecoder::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QAudioDecoder::State arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1039,31 +944,18 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
