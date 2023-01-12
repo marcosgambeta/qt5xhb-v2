@@ -722,6 +722,8 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 {
   auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
@@ -731,9 +733,8 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QLocalSocket::connected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QLocalSocket::connected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -748,31 +749,18 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -781,6 +769,8 @@ void disconnected()
 HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 {
   auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -791,9 +781,8 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QLocalSocket::disconnected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QLocalSocket::disconnected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -808,31 +797,18 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -841,6 +817,8 @@ void error( QLocalSocket::LocalSocketError socketError )
 HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 {
   auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -851,9 +829,8 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QLocalSocket::LocalSocketError arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -870,31 +847,18 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -903,6 +867,8 @@ void stateChanged( QLocalSocket::LocalSocketState socketState )
 HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 {
   auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -913,9 +879,8 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QLocalSocket::stateChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QLocalSocket::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QLocalSocket::LocalSocketState arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -932,31 +897,18 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

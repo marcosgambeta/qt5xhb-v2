@@ -514,6 +514,8 @@ HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
 {
   auto sender = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
@@ -523,9 +525,8 @@ HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QLocalServer::newConnection, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QLocalServer::newConnection,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -540,31 +541,18 @@ HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

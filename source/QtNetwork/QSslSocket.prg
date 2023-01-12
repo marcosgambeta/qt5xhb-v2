@@ -2158,6 +2158,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {
   auto sender = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("encrypted()");
@@ -2167,9 +2169,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSslSocket::encrypted, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSslSocket::encrypted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2184,31 +2185,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2217,6 +2205,8 @@ void encryptedBytesWritten( qint64 written )
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
   auto sender = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2227,9 +2217,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSslSocket::encryptedBytesWritten, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSslSocket::encryptedBytesWritten,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2246,31 +2235,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2279,6 +2255,8 @@ void modeChanged( QSslSocket::SslMode mode )
 HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 {
   auto sender = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2289,9 +2267,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSslSocket::modeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSslSocket::modeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QSslSocket::SslMode arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2308,31 +2285,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2341,6 +2305,8 @@ void peerVerifyError( const QSslError & error )
 HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
   auto sender = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2351,9 +2317,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSslSocket::peerVerifyError, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSslSocket::peerVerifyError,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSslError & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2370,31 +2335,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2405,6 +2357,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto sender = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)");
@@ -2414,9 +2368,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSslSocket::preSharedKeyAuthenticationRequired, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSslSocket::preSharedKeyAuthenticationRequired,
                                                               [sender, indexOfCodeBlock]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2433,31 +2386,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -2470,6 +2410,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 {
   auto sender = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
+  bool result = false;
+
   if( sender != nullptr )
   {
     int indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
@@ -2479,9 +2421,8 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors),
                                                               [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2520,31 +2461,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
