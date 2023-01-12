@@ -206,6 +206,8 @@ void productRegistered( QInAppProduct * product )
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
   auto sender = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -216,9 +218,8 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QInAppStore::productRegistered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QInAppStore::productRegistered,
                                                               [sender, indexOfCodeBlock]
                                                               (QInAppProduct * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -235,31 +236,18 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -268,6 +256,8 @@ void productUnknown( QInAppProduct::ProductType productType, const QString & ide
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
   auto sender = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -278,9 +268,8 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QInAppStore::productUnknown, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QInAppStore::productUnknown,
                                                               [sender, indexOfCodeBlock]
                                                               (QInAppProduct::ProductType arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -299,31 +288,18 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -332,6 +308,8 @@ void transactionReady( QInAppTransaction * transaction )
 HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
   auto sender = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -342,9 +320,8 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QInAppStore::transactionReady, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QInAppStore::transactionReady,
                                                               [sender, indexOfCodeBlock]
                                                               (QInAppTransaction * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -361,31 +338,18 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
