@@ -557,6 +557,8 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -567,9 +569,8 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QQuickWidget::statusChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QQuickWidget::statusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QQuickWidget::Status arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -586,31 +587,18 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
@@ -623,6 +611,8 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -633,9 +623,8 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QQuickWidget::sceneGraphError, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QQuickWidget::sceneGraphError,
                                                               [sender, indexOfCodeBlock]
                                                               (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -654,31 +643,18 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 #else
   hb_retl(false);
 #endif
