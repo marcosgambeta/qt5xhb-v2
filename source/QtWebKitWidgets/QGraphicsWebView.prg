@@ -1043,6 +1043,8 @@ void iconChanged()
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1053,9 +1055,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::iconChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::iconChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1070,31 +1071,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1103,6 +1091,8 @@ void linkClicked( const QUrl & url )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1113,9 +1103,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::linkClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::linkClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1132,31 +1121,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1165,6 +1141,8 @@ void loadFinished( bool ok )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1175,9 +1153,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::loadFinished, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::loadFinished,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1194,31 +1171,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1227,6 +1191,8 @@ void loadProgress( int progress )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1237,9 +1203,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::loadProgress, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::loadProgress,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1256,31 +1221,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1289,6 +1241,8 @@ void loadStarted()
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1299,9 +1253,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::loadStarted, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::loadStarted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1316,31 +1269,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1349,6 +1289,8 @@ void statusBarMessage( const QString & text )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1359,9 +1301,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::statusBarMessage, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::statusBarMessage,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1378,31 +1319,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1411,6 +1339,8 @@ void titleChanged( const QString & title )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1421,9 +1351,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::titleChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::titleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1440,31 +1369,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1473,6 +1389,8 @@ void urlChanged( const QUrl & url )
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
 {
   auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1483,9 +1401,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QGraphicsWebView::urlChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QGraphicsWebView::urlChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1502,31 +1419,18 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

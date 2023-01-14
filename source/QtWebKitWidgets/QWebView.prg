@@ -991,6 +991,8 @@ void iconChanged()
 HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1001,9 +1003,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::iconChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::iconChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1018,31 +1019,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1051,6 +1039,8 @@ void linkClicked( const QUrl & url )
 HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1061,9 +1051,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::linkClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::linkClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1080,31 +1069,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1113,6 +1089,8 @@ void loadFinished( bool ok )
 HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1123,9 +1101,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::loadFinished, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::loadFinished,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1142,31 +1119,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1175,6 +1139,8 @@ void loadProgress( int progress )
 HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1185,9 +1151,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::loadProgress, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::loadProgress,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1204,31 +1169,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1237,6 +1189,8 @@ void loadStarted()
 HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1247,9 +1201,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::loadStarted, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::loadStarted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1264,31 +1217,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1297,6 +1237,8 @@ void selectionChanged()
 HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1307,9 +1249,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::selectionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::selectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1324,31 +1265,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1357,6 +1285,8 @@ void statusBarMessage( const QString & text )
 HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1367,9 +1297,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::statusBarMessage, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::statusBarMessage,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1386,31 +1315,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1419,6 +1335,8 @@ void titleChanged( const QString & title )
 HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1429,9 +1347,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::titleChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::titleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1448,31 +1365,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1481,6 +1385,8 @@ void urlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
   auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1491,9 +1397,8 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QWebView::urlChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QWebView::urlChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1510,31 +1415,18 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
