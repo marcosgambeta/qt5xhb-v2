@@ -326,7 +326,7 @@ void error( QAxScript * script, int code, const QString & description, int sourc
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
 {
-  auto sender = (QAxScriptManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

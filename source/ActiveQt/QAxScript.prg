@@ -262,7 +262,7 @@ void entered()
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
-  auto sender = (QAxScript *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -310,7 +310,7 @@ void error( int code, const QString & description, int sourcePosition, const QSt
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
-  auto sender = (QAxScript *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -366,7 +366,7 @@ void finished()
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
-  auto sender = (QAxScript *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -414,7 +414,7 @@ void finished( const QVariant & result )
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
-  auto sender = (QAxScript *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -464,7 +464,7 @@ void finished( int code, const QString & source, const QString & description, co
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
-  auto sender = (QAxScript *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -520,7 +520,7 @@ void stateChanged( int state )
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
-  auto sender = (QAxScript *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
