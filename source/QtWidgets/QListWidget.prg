@@ -850,6 +850,8 @@ void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -860,9 +862,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::currentItemChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::currentItemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1, QListWidgetItem * arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -881,31 +882,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -914,6 +902,8 @@ void currentRowChanged( int currentRow )
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -924,9 +914,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::currentRowChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::currentRowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -943,31 +932,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -976,6 +952,8 @@ void currentTextChanged( const QString & currentText )
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -986,9 +964,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::currentTextChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::currentTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1005,31 +982,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1038,6 +1002,8 @@ void itemActivated( QListWidgetItem * item )
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1048,9 +1014,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemActivated, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemActivated,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1067,31 +1032,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1100,6 +1052,8 @@ void itemChanged( QListWidgetItem * item )
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1110,9 +1064,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1129,31 +1082,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1162,6 +1102,8 @@ void itemClicked( QListWidgetItem * item )
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1172,9 +1114,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1191,31 +1132,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1224,6 +1152,8 @@ void itemDoubleClicked( QListWidgetItem * item )
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1234,9 +1164,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemDoubleClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemDoubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1253,31 +1182,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1286,6 +1202,8 @@ void itemEntered( QListWidgetItem * item )
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1296,9 +1214,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemEntered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1315,31 +1232,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1348,6 +1252,8 @@ void itemPressed( QListWidgetItem * item )
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1358,9 +1264,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemPressed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemPressed,
                                                               [sender, indexOfCodeBlock]
                                                               (QListWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1377,31 +1282,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1410,6 +1302,8 @@ void itemSelectionChanged()
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
   auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1420,9 +1314,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QListWidget::itemSelectionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QListWidget::itemSelectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1437,31 +1330,18 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

@@ -1969,6 +1969,8 @@ void activated( const QModelIndex & index )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1979,7 +1981,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QAbstractItemView::activated,
                                                               [sender, indexOfCodeBlock]
@@ -1998,29 +1999,18 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -2029,6 +2019,8 @@ void clicked( const QModelIndex & index )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2039,7 +2031,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QAbstractItemView::clicked,
                                                               [sender, indexOfCodeBlock]
@@ -2058,29 +2049,18 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -2089,6 +2069,8 @@ void doubleClicked( const QModelIndex & index )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2099,9 +2081,8 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAbstractItemView::doubleClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAbstractItemView::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2118,29 +2099,18 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -2149,6 +2119,8 @@ void entered( const QModelIndex & index )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2159,9 +2131,8 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAbstractItemView::entered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAbstractItemView::entered,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2178,29 +2149,18 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -2209,6 +2169,8 @@ void pressed( const QModelIndex & index )
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2219,9 +2181,8 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAbstractItemView::pressed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAbstractItemView::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2238,29 +2199,18 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -2269,6 +2219,8 @@ void viewportEntered()
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2279,9 +2231,8 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QAbstractItemView::viewportEntered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QAbstractItemView::viewportEntered,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2296,29 +2247,18 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

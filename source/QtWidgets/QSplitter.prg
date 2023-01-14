@@ -709,6 +709,8 @@ void splitterMoved( int pos, int index )
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
   auto sender = (QSplitter *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -719,9 +721,8 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QSplitter::splitterMoved, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QSplitter::splitterMoved,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -740,31 +741,18 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

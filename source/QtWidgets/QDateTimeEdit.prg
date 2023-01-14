@@ -1393,6 +1393,8 @@ void dateChanged( const QDate & date )
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
   auto sender = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1403,9 +1405,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeEdit::dateChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeEdit::dateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QDate & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1422,31 +1423,18 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1455,6 +1443,8 @@ void dateTimeChanged( const QDateTime & datetime )
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
   auto sender = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1465,9 +1455,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeEdit::dateTimeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeEdit::dateTimeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QDateTime & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1484,31 +1473,18 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1517,6 +1493,8 @@ void timeChanged( const QTime & time )
 HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
   auto sender = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1527,9 +1505,8 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QDateTimeEdit::timeChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QDateTimeEdit::timeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QTime & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1546,31 +1523,18 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

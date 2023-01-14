@@ -1067,6 +1067,8 @@ void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1077,9 +1079,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::currentItemChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::currentItemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, QTreeWidgetItem * arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1098,31 +1099,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1131,6 +1119,8 @@ void itemActivated( QTreeWidgetItem * item, int column )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1141,9 +1131,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemActivated, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemActivated,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1162,31 +1151,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1195,6 +1171,8 @@ void itemChanged( QTreeWidgetItem * item, int column )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1205,9 +1183,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1226,31 +1203,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1259,6 +1223,8 @@ void itemClicked( QTreeWidgetItem * item, int column )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1269,9 +1235,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1290,31 +1255,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1323,6 +1275,8 @@ void itemCollapsed( QTreeWidgetItem * item )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1333,9 +1287,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemCollapsed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemCollapsed,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1352,31 +1305,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1385,6 +1325,8 @@ void itemDoubleClicked( QTreeWidgetItem * item, int column )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1395,9 +1337,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemDoubleClicked, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemDoubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1416,31 +1357,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1449,6 +1377,8 @@ void itemEntered( QTreeWidgetItem * item, int column )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1459,9 +1389,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemEntered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1480,31 +1409,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1513,6 +1429,8 @@ void itemExpanded( QTreeWidgetItem * item )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1523,9 +1441,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemExpanded, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemExpanded,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1542,31 +1459,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1575,6 +1479,8 @@ void itemPressed( QTreeWidgetItem * item, int column )
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1585,9 +1491,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemPressed, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemPressed,
                                                               [sender, indexOfCodeBlock]
                                                               (QTreeWidgetItem * arg1, int arg2) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1606,31 +1511,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1639,6 +1531,8 @@ void itemSelectionChanged()
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
   auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1649,9 +1543,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QTreeWidget::itemSelectionChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QTreeWidget::itemSelectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1666,31 +1559,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

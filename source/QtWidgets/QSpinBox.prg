@@ -508,6 +508,8 @@ void valueChanged( int value )
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
 {
   auto sender = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -518,9 +520,8 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<int>::of(&QSpinBox::valueChanged), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<int>::of(&QSpinBox::valueChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -537,31 +538,18 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -570,6 +558,8 @@ void valueChanged( const QString & text )
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
 {
   auto sender = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -580,9 +570,8 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<const QString &>::of(&QSpinBox::valueChanged), 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              QOverload<const QString &>::of(&QSpinBox::valueChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -599,31 +588,18 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

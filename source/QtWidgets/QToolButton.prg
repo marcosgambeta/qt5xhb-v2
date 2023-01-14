@@ -520,6 +520,8 @@ void triggered( QAction * action )
 HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
   auto sender = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -530,7 +532,6 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QToolButton::triggered,
                                                               [sender, indexOfCodeBlock]
@@ -549,29 +550,18 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

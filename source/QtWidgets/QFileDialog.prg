@@ -1795,6 +1795,8 @@ void currentChanged( const QString & path )
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1805,9 +1807,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::currentChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::currentChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1824,31 +1825,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1857,6 +1845,8 @@ void directoryEntered( const QString & directory )
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1867,9 +1857,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::directoryEntered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::directoryEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1886,31 +1875,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1919,6 +1895,8 @@ void fileSelected( const QString & file )
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1929,9 +1907,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::fileSelected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::fileSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1948,31 +1925,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -1981,6 +1945,8 @@ void filesSelected( const QStringList & selected )
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1991,9 +1957,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::filesSelected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::filesSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QStringList & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2016,31 +1981,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2049,6 +2001,8 @@ void filterSelected( const QString & filter )
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2059,9 +2013,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::filterSelected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::filterSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2078,31 +2031,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2111,6 +2051,8 @@ void urlSelected( const QUrl & url )
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2121,9 +2063,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::urlSelected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::urlSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2140,31 +2081,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2173,6 +2101,8 @@ void urlsSelected( const QList<QUrl> & urls )
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2183,9 +2113,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::urlsSelected, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::urlsSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QList<QUrl> & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2224,31 +2153,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2257,6 +2173,8 @@ void currentUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2267,9 +2185,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::currentUrlChanged, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::currentUrlChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2286,31 +2203,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -2319,6 +2223,8 @@ void directoryUrlEntered( const QUrl & directory )
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
   auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -2329,9 +2235,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QFileDialog::directoryUrlEntered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QFileDialog::directoryUrlEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2348,31 +2253,18 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

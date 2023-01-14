@@ -831,6 +831,8 @@ void clicked( bool checked = false )
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -841,7 +843,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QAbstractButton::clicked,
                                                               [sender, indexOfCodeBlock]
@@ -860,29 +861,18 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -891,6 +881,8 @@ void pressed()
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -901,7 +893,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QAbstractButton::pressed,
                                                               [sender, indexOfCodeBlock]
@@ -918,29 +909,18 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -949,6 +929,8 @@ void released()
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -959,7 +941,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QAbstractButton::released,
                                                               [sender, indexOfCodeBlock]
@@ -976,29 +957,18 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 /*
@@ -1007,6 +977,8 @@ void toggled( bool checked )
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -1017,7 +989,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
         QMetaObject::Connection connection = QObject::connect(sender,
                                                               &QAbstractButton::toggled,
                                                               [sender, indexOfCodeBlock]
@@ -1036,29 +1007,18 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
+      result = true;
     }
   }
-  else
-  {
-    hb_retl(false);
-  }
+
+  hb_retl(result);
 }
 
 #pragma ENDDUMP

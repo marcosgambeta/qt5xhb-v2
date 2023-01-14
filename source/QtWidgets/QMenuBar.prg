@@ -805,6 +805,8 @@ void hovered( QAction * action )
 HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 {
   auto sender = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -815,9 +817,8 @@ HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QMenuBar::hovered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QMenuBar::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -834,31 +835,18 @@ HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 /*
@@ -867,6 +855,8 @@ void triggered( QAction * action )
 HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 {
   auto sender = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+  bool result = false;
 
   if( sender != nullptr )
   {
@@ -877,9 +867,8 @@ HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-
-        QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              &QMenuBar::triggered, 
+        QMetaObject::Connection connection = QObject::connect(sender,
+                                                              &QMenuBar::triggered,
                                                               [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -896,31 +885,18 @@ HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
         });
 
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-
-        hb_retl(true);
-      }
-      else
-      {
-        hb_retl(false);
+        result = true;
       }
     }
     else if( hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
+      result = true;
+    }
+  }
 
-      hb_retl(true);
-    }
-    else
-    {
-      hb_retl(false);
-    }
-  }
-  else
-  {
-    hb_retl(false);
-  }
+  hb_retl(result);
 }
 
 #pragma ENDDUMP
