@@ -475,7 +475,7 @@ void newConnection()
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -527,7 +527,7 @@ void error( QBluetoothServer::Error error )
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -276,7 +276,7 @@ void finished( QBluetoothTransferReply * r )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothTransferReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothTransferReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -330,7 +330,7 @@ void transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothTransferReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothTransferReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

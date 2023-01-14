@@ -496,7 +496,7 @@ void serviceDiscovered( const QBluetoothServiceInfo & info )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothServiceDiscoveryAgent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -550,7 +550,7 @@ void finished()
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothServiceDiscoveryAgent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -602,7 +602,7 @@ void canceled()
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothServiceDiscoveryAgent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -654,7 +654,7 @@ void error( QBluetoothServiceDiscoveryAgent::Error error )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBluetoothServiceDiscoveryAgent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
