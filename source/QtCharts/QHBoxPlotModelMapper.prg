@@ -429,7 +429,7 @@ void columnCountChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -481,7 +481,7 @@ void firstBoxSetRowChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -533,7 +533,7 @@ void firstColumnChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -585,7 +585,7 @@ void lastBoxSetRowChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -637,7 +637,7 @@ void modelReplaced()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -689,7 +689,7 @@ void seriesReplaced()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

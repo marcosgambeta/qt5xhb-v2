@@ -1097,7 +1097,7 @@ void angleSpanChanged()
 HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1149,7 +1149,7 @@ void borderColorChanged()
 HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1201,7 +1201,7 @@ void borderWidthChanged()
 HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1253,7 +1253,7 @@ void brushChanged()
 HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1305,7 +1305,7 @@ void clicked()
 HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1357,7 +1357,7 @@ void colorChanged()
 HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1409,7 +1409,7 @@ void doubleClicked()
 HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1461,7 +1461,7 @@ void hovered( bool state )
 HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1515,7 +1515,7 @@ void labelBrushChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1567,7 +1567,7 @@ void labelChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1619,7 +1619,7 @@ void labelColorChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1671,7 +1671,7 @@ void labelFontChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1723,7 +1723,7 @@ void labelVisibleChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1775,7 +1775,7 @@ void penChanged()
 HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1827,7 +1827,7 @@ void percentageChanged()
 HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1879,7 +1879,7 @@ void pressed()
 HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1931,7 +1931,7 @@ void released()
 HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1983,7 +1983,7 @@ void startAngleChanged()
 HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2035,7 +2035,7 @@ void valueChanged()
 HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSlice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

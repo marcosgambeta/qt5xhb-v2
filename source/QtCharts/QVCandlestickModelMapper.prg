@@ -506,7 +506,7 @@ void closeRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -558,7 +558,7 @@ void firstSetColumnChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -610,7 +610,7 @@ void highRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -662,7 +662,7 @@ void lastSetColumnChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -714,7 +714,7 @@ void lowRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -766,7 +766,7 @@ void openRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -818,7 +818,7 @@ void timestampRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

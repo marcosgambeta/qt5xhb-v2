@@ -474,7 +474,7 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -528,7 +528,7 @@ void maxChanged( qreal max )
 HB_FUNC_STATIC( QVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -582,7 +582,7 @@ void minChanged( qreal min )
 HB_FUNC_STATIC( QVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -636,7 +636,7 @@ void minorTickCountChanged( int tickCount )
 HB_FUNC_STATIC( QVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -690,7 +690,7 @@ void rangeChanged( qreal min, qreal max )
 HB_FUNC_STATIC( QVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -746,7 +746,7 @@ void tickCountChanged( int tickCount )
 HB_FUNC_STATIC( QVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

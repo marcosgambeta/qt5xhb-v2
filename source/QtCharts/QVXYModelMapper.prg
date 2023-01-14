@@ -427,7 +427,7 @@ void firstRowChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -479,7 +479,7 @@ void modelReplaced()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -531,7 +531,7 @@ void rowCountChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -583,7 +583,7 @@ void seriesReplaced()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -635,7 +635,7 @@ void xColumnChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -687,7 +687,7 @@ void yColumnChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

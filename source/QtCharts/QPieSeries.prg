@@ -837,7 +837,7 @@ void added( QList<QPieSlice*> slices )
 HB_FUNC_STATIC( QPIESERIES_ONADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -913,7 +913,7 @@ void clicked( QPieSlice * slice )
 HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -967,7 +967,7 @@ void countChanged()
 HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1019,7 +1019,7 @@ void doubleClicked( QPieSlice * slice )
 HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1073,7 +1073,7 @@ void hovered( QPieSlice * slice, bool state )
 HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1129,7 +1129,7 @@ void pressed( QPieSlice * slice )
 HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1183,7 +1183,7 @@ void released( QPieSlice * slice )
 HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1237,7 +1237,7 @@ void removed( QList<QPieSlice*> slices )
 HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1313,7 +1313,7 @@ void sumChanged()
 HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPieSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

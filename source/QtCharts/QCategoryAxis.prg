@@ -412,7 +412,7 @@ void categoriesChanged()
 HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -464,7 +464,7 @@ void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

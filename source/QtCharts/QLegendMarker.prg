@@ -550,7 +550,7 @@ void brushChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -602,7 +602,7 @@ void clicked()
 HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -654,7 +654,7 @@ void fontChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -706,7 +706,7 @@ void hovered( bool status )
 HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -760,7 +760,7 @@ void labelBrushChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -812,7 +812,7 @@ void labelChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -864,7 +864,7 @@ void penChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -916,7 +916,7 @@ void shapeChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -968,7 +968,7 @@ void visibleChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

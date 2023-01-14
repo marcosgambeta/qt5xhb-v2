@@ -473,7 +473,7 @@ void baseChanged( qreal base )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -527,7 +527,7 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -581,7 +581,7 @@ void maxChanged( qreal max )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -635,7 +635,7 @@ void minChanged( qreal min )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -689,7 +689,7 @@ void minorTickCountChanged( int minorTickCount )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -743,7 +743,7 @@ void rangeChanged( qreal min, qreal max )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -799,7 +799,7 @@ void tickCountChanged( int tickCount )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLogValueAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

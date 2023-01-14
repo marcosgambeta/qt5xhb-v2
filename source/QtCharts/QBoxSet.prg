@@ -461,7 +461,7 @@ void brushChanged()
 HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -513,7 +513,7 @@ void cleared()
 HB_FUNC_STATIC( QBOXSET_ONCLEARED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -565,7 +565,7 @@ void clicked()
 HB_FUNC_STATIC( QBOXSET_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -617,7 +617,7 @@ void doubleClicked()
 HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -669,7 +669,7 @@ void hovered( bool status )
 HB_FUNC_STATIC( QBOXSET_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -723,7 +723,7 @@ void penChanged()
 HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -775,7 +775,7 @@ void pressed()
 HB_FUNC_STATIC( QBOXSET_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -827,7 +827,7 @@ void released()
 HB_FUNC_STATIC( QBOXSET_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -879,7 +879,7 @@ void valueChanged( int index )
 HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -933,7 +933,7 @@ void valuesChanged()
 HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBoxSet*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

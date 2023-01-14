@@ -533,7 +533,7 @@ void nameChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -585,7 +585,7 @@ void opacityChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -637,7 +637,7 @@ void useOpenGLChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -689,7 +689,7 @@ void visibleChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -545,7 +545,7 @@ void categoriesChanged()
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -597,7 +597,7 @@ void countChanged()
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -649,7 +649,7 @@ void maxChanged( const QString & max )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -703,7 +703,7 @@ void minChanged( const QString & min )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -757,7 +757,7 @@ void rangeChanged( const QString & min, const QString & max )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -1848,7 +1848,7 @@ void plotAreaChanged( const QRectF & plotArea )
 HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
