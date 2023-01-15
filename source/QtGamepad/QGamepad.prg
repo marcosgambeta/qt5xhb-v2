@@ -830,7 +830,7 @@ void axisLeftXChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -884,7 +884,7 @@ void axisLeftYChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -938,7 +938,7 @@ void axisRightXChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -992,7 +992,7 @@ void axisRightYChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1046,7 +1046,7 @@ void buttonAChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1100,7 +1100,7 @@ void buttonBChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1154,7 +1154,7 @@ void buttonCenterChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1208,7 +1208,7 @@ void buttonDownChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1262,7 +1262,7 @@ void buttonGuideChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1316,7 +1316,7 @@ void buttonL1Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1370,7 +1370,7 @@ void buttonL2Changed( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1424,7 +1424,7 @@ void buttonL3Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1478,7 +1478,7 @@ void buttonLeftChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1532,7 +1532,7 @@ void buttonR1Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1586,7 +1586,7 @@ void buttonR2Changed( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1640,7 +1640,7 @@ void buttonR3Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1694,7 +1694,7 @@ void buttonRightChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1748,7 +1748,7 @@ void buttonSelectChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1802,7 +1802,7 @@ void buttonStartChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1856,7 +1856,7 @@ void buttonUpChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1910,7 +1910,7 @@ void buttonXChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1964,7 +1964,7 @@ void buttonYChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2018,7 +2018,7 @@ void connectedChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2072,7 +2072,7 @@ void deviceIdChanged( int value )
 HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2126,7 +2126,7 @@ void nameChanged( QString value )
 HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGamepad*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
