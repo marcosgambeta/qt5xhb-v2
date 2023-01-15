@@ -759,7 +759,7 @@ void activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 {
-  auto sender = (QDesignerFormWindowManagerInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -809,7 +809,7 @@ void formWindowAdded( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 {
-  auto sender = (QDesignerFormWindowManagerInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -859,7 +859,7 @@ void formWindowRemoved( QDesignerFormWindowInterface * formWindow )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 {
-  auto sender = (QDesignerFormWindowManagerInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
