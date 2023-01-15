@@ -874,7 +874,7 @@ void geometryChanged( const QRect & geometry )
 */
 HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -924,7 +924,7 @@ void physicalSizeChanged( const QSizeF & size )
 */
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -974,7 +974,7 @@ void physicalDotsPerInchChanged( qreal dpi )
 */
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1024,7 +1024,7 @@ void logicalDotsPerInchChanged( qreal dpi )
 */
 HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1074,7 +1074,7 @@ void virtualGeometryChanged( const QRect & rect )
 */
 HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1124,7 +1124,7 @@ void primaryOrientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1174,7 +1174,7 @@ void orientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1224,7 +1224,7 @@ void refreshRateChanged( qreal refreshRate )
 */
 HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
-  auto sender = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

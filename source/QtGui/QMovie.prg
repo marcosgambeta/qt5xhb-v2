@@ -852,7 +852,7 @@ void error( QImageReader::ImageReaderError error )
 */
 HB_FUNC_STATIC( QMOVIE_ONERROR )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -902,7 +902,7 @@ void finished()
 */
 HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -950,7 +950,7 @@ void frameChanged( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1000,7 +1000,7 @@ void resized( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1050,7 +1050,7 @@ void started()
 */
 HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1098,7 +1098,7 @@ void stateChanged( QMovie::MovieState state )
 */
 HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1148,7 +1148,7 @@ void updated( const QRect & rect )
 */
 HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 {
-  auto sender = (QMovie *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMovie*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

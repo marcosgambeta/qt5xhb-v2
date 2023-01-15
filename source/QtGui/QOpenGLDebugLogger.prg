@@ -325,7 +325,7 @@ void messageLogged( const QOpenGLDebugMessage & debugMessage )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
 {
-  auto sender = (QOpenGLDebugLogger *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOpenGLDebugLogger*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

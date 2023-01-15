@@ -169,7 +169,7 @@ void regularExpressionChanged( const QRegularExpression & re )
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRegularExpressionValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

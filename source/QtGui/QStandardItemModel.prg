@@ -1554,7 +1554,7 @@ void itemChanged( QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
 {
-  auto sender = (QStandardItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QStandardItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

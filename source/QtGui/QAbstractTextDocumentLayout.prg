@@ -368,7 +368,7 @@ void documentSizeChanged( const QSizeF & newSize )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {
-  auto sender = (QAbstractTextDocumentLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -418,7 +418,7 @@ void pageCountChanged( int newPages )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 {
-  auto sender = (QAbstractTextDocumentLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -468,7 +468,7 @@ void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 {
-  auto sender = (QAbstractTextDocumentLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -518,7 +518,7 @@ void updateBlock( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 {
-  auto sender = (QAbstractTextDocumentLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

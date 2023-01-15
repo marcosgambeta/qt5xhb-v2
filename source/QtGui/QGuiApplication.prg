@@ -1208,7 +1208,7 @@ void applicationStateChanged( Qt::ApplicationState state )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1261,7 +1261,7 @@ void commitDataRequest( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1311,7 +1311,7 @@ void focusObjectChanged( QObject * focusObject )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1361,7 +1361,7 @@ void focusWindowChanged( QWindow * focusWindow )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1412,7 +1412,7 @@ void fontChanged( const QFont & font )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1465,7 +1465,7 @@ void fontDatabaseChanged()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1513,7 +1513,7 @@ void lastWindowClosed()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1562,7 +1562,7 @@ void layoutDirectionChanged( Qt::LayoutDirection direction )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1616,7 +1616,7 @@ void paletteChanged( const QPalette & palette )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1670,7 +1670,7 @@ void primaryScreenChanged( QScreen * screen )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1723,7 +1723,7 @@ void saveStateRequest( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1773,7 +1773,7 @@ void screenAdded( QScreen * screen )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 {
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1824,7 +1824,7 @@ void screenRemoved( QScreen * screen )
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

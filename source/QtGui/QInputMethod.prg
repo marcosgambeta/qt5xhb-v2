@@ -460,7 +460,7 @@ void animatingChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
-  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -508,7 +508,7 @@ void cursorRectangleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
-  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -556,7 +556,7 @@ void inputDirectionChanged( Qt::LayoutDirection newDirection )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
-  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -606,7 +606,7 @@ void keyboardRectangleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
-  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -654,7 +654,7 @@ void localeChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 {
-  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -702,7 +702,7 @@ void visibleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
-  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

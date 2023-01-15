@@ -2881,7 +2881,7 @@ void activeChanged()
 HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2932,7 +2932,7 @@ void contentOrientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2982,7 +2982,7 @@ void focusObjectChanged( QObject * object )
 */
 HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3032,7 +3032,7 @@ void heightChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3082,7 +3082,7 @@ void maximumHeightChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3132,7 +3132,7 @@ void maximumWidthChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3182,7 +3182,7 @@ void minimumHeightChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3232,7 +3232,7 @@ void minimumWidthChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3282,7 +3282,7 @@ void modalityChanged( Qt::WindowModality modality )
 */
 HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3333,7 +3333,7 @@ void opacityChanged( qreal opacity )
 HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3386,7 +3386,7 @@ void screenChanged( QScreen * screen )
 */
 HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3437,7 +3437,7 @@ void visibilityChanged( QWindow::Visibility visibility )
 HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3490,7 +3490,7 @@ void visibleChanged( bool arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3540,7 +3540,7 @@ void widthChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3590,7 +3590,7 @@ void windowStateChanged( Qt::WindowState windowState )
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3640,7 +3640,7 @@ void windowTitleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3690,7 +3690,7 @@ void xChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -3740,7 +3740,7 @@ void yChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 {
-  auto sender = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -343,7 +343,7 @@ void changed()
 */
 HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 {
-  auto sender = (QIntValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

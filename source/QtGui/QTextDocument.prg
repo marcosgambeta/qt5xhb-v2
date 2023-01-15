@@ -2012,7 +2012,7 @@ void contentsChange( int from, int charsRemoves, int charsAdded )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2066,7 +2066,7 @@ void contentsChanged()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2114,7 +2114,7 @@ void undoAvailable( bool b )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2164,7 +2164,7 @@ void redoAvailable( bool b )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2214,7 +2214,7 @@ void undoCommandAdded()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2262,7 +2262,7 @@ void modificationChanged( bool m )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2312,7 +2312,7 @@ void cursorPositionChanged( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2362,7 +2362,7 @@ void blockCountChanged( int newBlockCount )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2412,7 +2412,7 @@ void documentLayoutChanged()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 {
-  auto sender = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextDocument*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

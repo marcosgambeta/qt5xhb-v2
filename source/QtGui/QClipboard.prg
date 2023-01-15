@@ -438,7 +438,7 @@ void changed( QClipboard::Mode mode )
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
 {
-  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QClipboard*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -488,7 +488,7 @@ void dataChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
 {
-  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QClipboard*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -536,7 +536,7 @@ void findBufferChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
 {
-  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QClipboard*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -584,7 +584,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
 {
-  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QClipboard*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
