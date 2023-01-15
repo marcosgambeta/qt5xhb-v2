@@ -339,8 +339,8 @@ void accepted( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
-  auto sender = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QPrintDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

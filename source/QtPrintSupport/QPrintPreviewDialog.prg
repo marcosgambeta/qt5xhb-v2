@@ -210,7 +210,7 @@ void paintRequested( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
-  auto sender = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

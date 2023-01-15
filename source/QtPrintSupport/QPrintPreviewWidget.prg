@@ -710,8 +710,8 @@ void paintRequested( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
-  auto sender = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -760,7 +760,7 @@ void previewChanged()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
-  auto sender = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPrintPreviewWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
