@@ -712,7 +712,7 @@ void quit()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
-  auto sender = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -760,7 +760,7 @@ void warnings( const QList<QDeclarativeError> & warnings )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-  auto sender = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

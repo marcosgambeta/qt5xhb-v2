@@ -296,7 +296,7 @@ void valueChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
 {
-  auto sender = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativePropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

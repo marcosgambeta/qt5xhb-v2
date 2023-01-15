@@ -397,7 +397,7 @@ void sceneResized( QSize size )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 {
-  auto sender = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -447,7 +447,7 @@ void statusChanged( QDeclarativeView::Status status )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 {
-  auto sender = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -473,7 +473,7 @@ void valueChanged()
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
 {
-  auto sender = (QDeclarativeExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

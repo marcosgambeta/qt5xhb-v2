@@ -502,7 +502,7 @@ void progressChanged( qreal progress )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
-  auto sender = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -552,7 +552,7 @@ void statusChanged( QDeclarativeComponent::Status status )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 {
-  auto sender = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDeclarativeComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
