@@ -840,7 +840,7 @@ void aboutToClose()
 */
 HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 {
-  auto sender = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -888,7 +888,7 @@ void bytesWritten( qint64 bytes )
 */
 HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 {
-  auto sender = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -938,7 +938,7 @@ void readChannelFinished()
 */
 HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 {
-  auto sender = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -986,7 +986,7 @@ void readyRead()
 */
 HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 {
-  auto sender = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

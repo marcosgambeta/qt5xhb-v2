@@ -823,7 +823,7 @@ void finished()
 */
 HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
 {
-  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -871,7 +871,7 @@ void frameChanged( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
 {
-  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -921,7 +921,7 @@ void stateChanged( QTimeLine::State newState )
 */
 HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
 {
-  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -971,7 +971,7 @@ void valueChanged( qreal value )
 */
 HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
 {
-  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

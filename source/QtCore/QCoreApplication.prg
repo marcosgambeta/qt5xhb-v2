@@ -920,7 +920,7 @@ void aboutToQuit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
-  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -968,7 +968,7 @@ void applicationNameChanged()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED )
 {
-  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1016,7 +1016,7 @@ void applicationVersionChanged()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED )
 {
-  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1064,7 +1064,7 @@ void organizationDomainChanged()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED )
 {
-  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1112,7 +1112,7 @@ void organizationNameChanged()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED )
 {
-  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

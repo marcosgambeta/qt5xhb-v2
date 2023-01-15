@@ -131,7 +131,7 @@ void entered()
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {
-  auto sender = (QAbstractState *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -179,7 +179,7 @@ void exited()
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 {
-  auto sender = (QAbstractState *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -340,7 +340,7 @@ void valueChanged( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 {
-  auto sender = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVariantAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

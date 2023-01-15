@@ -370,7 +370,7 @@ void triggered()
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 {
-  auto sender = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

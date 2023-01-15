@@ -274,7 +274,7 @@ void started()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 {
-  auto sender = (QAnimationDriver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAnimationDriver*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -322,7 +322,7 @@ void stopped()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
 {
-  auto sender = (QAnimationDriver *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAnimationDriver*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

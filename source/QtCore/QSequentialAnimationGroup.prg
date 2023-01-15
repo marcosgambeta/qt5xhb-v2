@@ -197,7 +197,7 @@ void currentAnimationChanged( QAbstractAnimation * current )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {
-  auto sender = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

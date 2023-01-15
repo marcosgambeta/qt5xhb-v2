@@ -332,7 +332,7 @@ void timeout()
 */
 HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
 {
-  auto sender = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

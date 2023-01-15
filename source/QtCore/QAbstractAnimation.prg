@@ -521,7 +521,7 @@ void currentLoopChanged( int currentLoop )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
-  auto sender = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -571,7 +571,7 @@ void directionChanged( QAbstractAnimation::Direction newDirection )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
-  auto sender = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -621,7 +621,7 @@ void finished()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 {
-  auto sender = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -669,7 +669,7 @@ void stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
-  auto sender = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

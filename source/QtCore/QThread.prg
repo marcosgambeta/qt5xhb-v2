@@ -563,7 +563,7 @@ void finished()
 */
 HB_FUNC_STATIC( QTHREAD_ONFINISHED )
 {
-  auto sender = (QThread *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QThread*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -611,7 +611,7 @@ void started()
 */
 HB_FUNC_STATIC( QTHREAD_ONSTARTED )
 {
-  auto sender = (QThread *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QThread*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

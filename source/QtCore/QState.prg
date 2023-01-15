@@ -418,7 +418,7 @@ void finished()
 */
 HB_FUNC_STATIC( QSTATE_ONFINISHED )
 {
-  auto sender = (QState *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -466,7 +466,7 @@ void propertiesAssigned()
 */
 HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 {
-  auto sender = (QState *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -620,7 +620,7 @@ void started()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
 {
-  auto sender = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QStateMachine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -668,7 +668,7 @@ void stopped()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
 {
-  auto sender = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QStateMachine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

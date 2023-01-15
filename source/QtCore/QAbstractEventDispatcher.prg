@@ -583,7 +583,7 @@ void aboutToBlock()
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 {
-  auto sender = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -631,7 +631,7 @@ void awake()
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
 {
-  auto sender = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

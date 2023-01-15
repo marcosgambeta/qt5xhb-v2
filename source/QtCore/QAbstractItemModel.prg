@@ -935,7 +935,7 @@ void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -989,7 +989,7 @@ void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, i
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1047,7 +1047,7 @@ void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1101,7 +1101,7 @@ void columnsInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1155,7 +1155,7 @@ void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int source
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1213,7 +1213,7 @@ void columnsRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1267,7 +1267,7 @@ void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1319,7 +1319,7 @@ void headerDataChanged( Qt::Orientation orientation, int first, int last )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1373,7 +1373,7 @@ void layoutAboutToBeChanged()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1421,7 +1421,7 @@ void layoutChanged()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1469,7 +1469,7 @@ void modelAboutToBeReset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1517,7 +1517,7 @@ void modelReset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1565,7 +1565,7 @@ void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1619,7 +1619,7 @@ void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1677,7 +1677,7 @@ void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1731,7 +1731,7 @@ void rowsInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1785,7 +1785,7 @@ void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1843,7 +1843,7 @@ void rowsRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
-  auto sender = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

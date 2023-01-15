@@ -1483,7 +1483,7 @@ void error( QProcess::ProcessError error )
 */
 HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1533,7 +1533,7 @@ void finished( int exitCode, QProcess::ExitStatus exitStatus )
 */
 HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1585,7 +1585,7 @@ void readyReadStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1633,7 +1633,7 @@ void readyReadStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1681,7 +1681,7 @@ void started()
 */
 HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1729,7 +1729,7 @@ void stateChanged( QProcess::ProcessState newState )
 */
 HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1780,7 +1780,7 @@ void errorOccurred( QProcess::ProcessError error )
 HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -661,7 +661,7 @@ void selectionChanged( const QItemSelection & selected, const QItemSelection & d
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
-  auto sender = (QItemSelectionModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -713,7 +713,7 @@ void currentChanged( const QModelIndex & current, const QModelIndex & previous )
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
-  auto sender = (QItemSelectionModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -765,7 +765,7 @@ void currentRowChanged( const QModelIndex & current, const QModelIndex & previou
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
-  auto sender = (QItemSelectionModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -817,7 +817,7 @@ void currentColumnChanged( const QModelIndex & current, const QModelIndex & prev
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
-  auto sender = (QItemSelectionModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

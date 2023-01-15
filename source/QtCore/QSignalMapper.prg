@@ -300,7 +300,7 @@ void mapped( int arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 {
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -350,7 +350,7 @@ void mapped( const QString & arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 {
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -400,7 +400,7 @@ void mapped( QWidget * arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 {
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -450,7 +450,7 @@ void mapped( QObject * arg )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 {
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -501,7 +501,7 @@ void mappedInt( int i )
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -555,7 +555,7 @@ void mappedObject( QObject * object )
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDOBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -609,7 +609,7 @@ void mappedString( const QString & text )
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -663,7 +663,7 @@ void mappedWidget( QWidget * widget )
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDWIDGET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
