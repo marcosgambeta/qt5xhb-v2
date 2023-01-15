@@ -488,8 +488,8 @@ void positionUpdated( const QGeoPositionInfo & update )
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGeoPositionInfoSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -542,7 +542,7 @@ void updateTimeout()
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoPositionInfoSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -594,7 +594,7 @@ void error( QGeoPositionInfoSource::Error error )
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoPositionInfoSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

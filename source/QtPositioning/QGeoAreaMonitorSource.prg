@@ -463,8 +463,8 @@ void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & 
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -519,7 +519,7 @@ void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & u
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -575,7 +575,7 @@ void monitorExpired( const QGeoAreaMonitorInfo & monitor )
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -629,7 +629,7 @@ void error( QGeoAreaMonitorSource::Error error )
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
