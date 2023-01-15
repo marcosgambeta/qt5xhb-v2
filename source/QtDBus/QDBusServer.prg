@@ -179,7 +179,7 @@ void newConnection( const QDBusConnection & connection )
 */
 HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 {
-  auto sender = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -142,7 +142,7 @@ void finished( QDBusPendingCallWatcher * self )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 {
-  auto sender = (QDBusPendingCallWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDBusPendingCallWatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
