@@ -342,7 +342,7 @@ void indexingFinished()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
-  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -390,7 +390,7 @@ void indexingStarted()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
-  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -438,7 +438,7 @@ void searchingFinished( int hits )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
-  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -488,7 +488,7 @@ void searchingStarted()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
-  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -283,7 +283,7 @@ void contentsCreated()
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
-  auto sender = (QHelpContentModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -331,7 +331,7 @@ void contentsCreationStarted()
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
-  auto sender = (QHelpContentModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

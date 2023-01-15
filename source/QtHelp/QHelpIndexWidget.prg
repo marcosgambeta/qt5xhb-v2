@@ -127,7 +127,7 @@ void linkActivated( const QUrl & link, const QString & keyword )
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
 {
-  auto sender = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpIndexWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

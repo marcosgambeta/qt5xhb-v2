@@ -133,7 +133,7 @@ void indexCreated()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
-  auto sender = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -181,7 +181,7 @@ void indexCreationStarted()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
-  auto sender = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

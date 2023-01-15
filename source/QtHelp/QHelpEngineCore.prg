@@ -708,7 +708,7 @@ void currentFilterChanged( const QString & newFilter )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
-  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -758,7 +758,7 @@ void setupFinished()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
-  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -806,7 +806,7 @@ void setupStarted()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
-  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -854,7 +854,7 @@ void warning( const QString & msg )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
-  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

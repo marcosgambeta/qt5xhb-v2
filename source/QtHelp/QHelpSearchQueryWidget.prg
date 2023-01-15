@@ -142,7 +142,7 @@ void search()
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 {
-  auto sender = (QHelpSearchQueryWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHelpSearchQueryWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
