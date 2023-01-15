@@ -265,7 +265,7 @@ void finished( QGeoCodeReply * reply )
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoCodingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -319,7 +319,7 @@ void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorStri
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoCodingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

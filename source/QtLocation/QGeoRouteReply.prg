@@ -293,7 +293,7 @@ void finished()
 HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoRouteReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -345,7 +345,7 @@ void error( QGeoRouteReply::Error error, const QString & errorString = QString()
 HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGeoRouteReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

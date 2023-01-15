@@ -715,7 +715,7 @@ void finished( QPlaceReply * reply )
 HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -769,7 +769,7 @@ void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & error
 HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -827,7 +827,7 @@ void placeAdded( const QString & placeId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -881,7 +881,7 @@ void placeUpdated( const QString & placeId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -935,7 +935,7 @@ void placeRemoved( const QString & placeId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -989,7 +989,7 @@ void categoryAdded( const QPlaceCategory & category, const QString & parentId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1045,7 +1045,7 @@ void categoryUpdated( const QPlaceCategory & category, const QString & parentId 
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1101,7 +1101,7 @@ void categoryRemoved( const QString & categoryId, const QString & parentId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1157,7 +1157,7 @@ void dataChanged()
 HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlaceManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
