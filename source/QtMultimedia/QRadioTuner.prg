@@ -804,7 +804,7 @@ void stateChanged( QRadioTuner::State state )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -854,7 +854,7 @@ void bandChanged( QRadioTuner::Band band )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -904,7 +904,7 @@ void frequencyChanged( int frequency )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -954,7 +954,7 @@ void stereoStatusChanged( bool stereo )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1004,7 +1004,7 @@ void searchingChanged( bool searching )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1054,7 +1054,7 @@ void signalStrengthChanged( int signalStrength )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1104,7 +1104,7 @@ void volumeChanged( int volume )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1154,7 +1154,7 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1204,7 +1204,7 @@ void stationFound( int frequency, QString stationId )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1256,7 +1256,7 @@ void antennaConnectedChanged( bool connectionStatus )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1306,7 +1306,7 @@ void error( QRadioTuner::Error error )
 */
 HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
 {
-  auto sender = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioTuner*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

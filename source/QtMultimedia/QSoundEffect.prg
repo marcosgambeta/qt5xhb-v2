@@ -537,7 +537,7 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -585,7 +585,7 @@ void loopCountChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -633,7 +633,7 @@ void loopsRemainingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -681,7 +681,7 @@ void volumeChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -729,7 +729,7 @@ void mutedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -777,7 +777,7 @@ void loadedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -825,7 +825,7 @@ void playingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -873,7 +873,7 @@ void statusChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -921,7 +921,7 @@ void categoryChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
-  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -230,7 +230,7 @@ void devicesChanged()
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
 {
-  auto sender = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -278,7 +278,7 @@ void selectedDeviceChanged( int index )
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
 {
-  auto sender = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -328,7 +328,7 @@ void selectedDeviceChanged( const QString & name )
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
 {
-  auto sender = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

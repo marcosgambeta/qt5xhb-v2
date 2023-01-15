@@ -154,7 +154,7 @@ void flush()
 */
 HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
 {
-  auto sender = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVideoProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -202,7 +202,7 @@ void videoFrameProbed( const QVideoFrame & frame )
 */
 HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
 {
-  auto sender = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVideoProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

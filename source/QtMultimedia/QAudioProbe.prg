@@ -154,7 +154,7 @@ void audioBufferProbed( const QAudioBuffer & buffer )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 {
-  auto sender = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -204,7 +204,7 @@ void flush()
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
 {
-  auto sender = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

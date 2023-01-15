@@ -844,7 +844,7 @@ void apertureChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -894,7 +894,7 @@ void apertureRangeChanged()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -942,7 +942,7 @@ void exposureCompensationChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -992,7 +992,7 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1042,7 +1042,7 @@ void isoSensitivityChanged( int value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1092,7 +1092,7 @@ void shutterSpeedChanged( qreal speed )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1142,7 +1142,7 @@ void shutterSpeedRangeChanged()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 {
-  auto sender = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

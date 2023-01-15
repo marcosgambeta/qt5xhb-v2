@@ -661,7 +661,7 @@ void audioAvailableChanged( bool audio )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -711,7 +711,7 @@ void availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -761,7 +761,7 @@ void bufferStatusChanged( int progress )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -811,7 +811,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -861,7 +861,7 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -913,7 +913,7 @@ void mediaChanged( const QMediaContent & content )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -963,7 +963,7 @@ void mediaStatusChanged( QMediaPlayer::MediaStatus status )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1013,7 +1013,7 @@ void mutedChanged( bool mute )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1063,7 +1063,7 @@ void playbackRateChanged( qreal rate )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1113,7 +1113,7 @@ void positionChanged( qint64 position )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1163,7 +1163,7 @@ void seekableChanged( bool seekable )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1213,7 +1213,7 @@ void stateChanged( QMediaPlayer::State state )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1263,7 +1263,7 @@ void videoAvailableChanged( bool video )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1313,7 +1313,7 @@ void volumeChanged( int volume )
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
 {
-  auto sender = (QMediaPlayerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlayerControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

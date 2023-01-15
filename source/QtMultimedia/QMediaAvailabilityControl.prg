@@ -101,7 +101,7 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 {
-  auto sender = (QMediaAvailabilityControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaAvailabilityControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

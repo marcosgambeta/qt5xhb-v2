@@ -802,7 +802,7 @@ void currentIndexChanged( int position )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -852,7 +852,7 @@ void currentMediaChanged( const QMediaContent & content )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -902,7 +902,7 @@ void loadFailed()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -950,7 +950,7 @@ void loaded()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -998,7 +998,7 @@ void mediaAboutToBeInserted( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1050,7 +1050,7 @@ void mediaAboutToBeRemoved( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1102,7 +1102,7 @@ void mediaChanged( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1154,7 +1154,7 @@ void mediaInserted( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1206,7 +1206,7 @@ void mediaRemoved( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1258,7 +1258,7 @@ void playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 {
-  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaPlaylist*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

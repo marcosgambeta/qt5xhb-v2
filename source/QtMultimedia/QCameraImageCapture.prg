@@ -625,7 +625,7 @@ void bufferFormatChanged( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -675,7 +675,7 @@ void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destina
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -725,7 +725,7 @@ void error( int id, QCameraImageCapture::Error error, const QString & errorStrin
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -779,7 +779,7 @@ void imageAvailable( int id, const QVideoFrame & buffer )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -831,7 +831,7 @@ void imageCaptured( int id, const QImage & preview )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -883,7 +883,7 @@ void imageExposed( int id )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -933,7 +933,7 @@ void imageMetadataAvailable( int id, const QString & key, const QVariant & value
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -987,7 +987,7 @@ void imageSaved( int id, const QString & fileName )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1039,7 +1039,7 @@ void readyForCaptureChanged( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
 {
-  auto sender = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraImageCapture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

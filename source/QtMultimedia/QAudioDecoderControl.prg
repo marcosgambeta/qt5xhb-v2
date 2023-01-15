@@ -425,7 +425,7 @@ void bufferAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -475,7 +475,7 @@ void bufferReady()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERREADY )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -523,7 +523,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONDURATIONCHANGED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -573,7 +573,7 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONERROR )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -625,7 +625,7 @@ void finished()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFINISHED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -673,7 +673,7 @@ void formatChanged( const QAudioFormat & format )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFORMATCHANGED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -723,7 +723,7 @@ void positionChanged( qint64 position )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONPOSITIONCHANGED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -773,7 +773,7 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSOURCECHANGED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -821,7 +821,7 @@ void stateChanged( QAudioDecoder::State state )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSTATECHANGED )
 {
-  auto sender = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioDecoderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

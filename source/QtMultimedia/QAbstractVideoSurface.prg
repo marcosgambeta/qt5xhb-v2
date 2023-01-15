@@ -321,7 +321,7 @@ void activeChanged( bool active )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
 {
-  auto sender = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractVideoSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -371,7 +371,7 @@ void surfaceFormatChanged( const QVideoSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
 {
-  auto sender = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractVideoSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -421,7 +421,7 @@ void supportedFormatsChanged()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
 {
-  auto sender = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractVideoSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -469,7 +469,7 @@ void nativeResolutionChanged( const QSize & )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
 {
-  auto sender = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractVideoSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

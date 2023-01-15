@@ -178,7 +178,7 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {
-  auto sender = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

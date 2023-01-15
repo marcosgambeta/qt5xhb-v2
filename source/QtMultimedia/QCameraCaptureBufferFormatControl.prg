@@ -161,7 +161,7 @@ void bufferFormatChanged( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 {
-  auto sender = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraCaptureBufferFormatControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

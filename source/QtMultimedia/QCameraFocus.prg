@@ -469,7 +469,7 @@ void digitalZoomChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -519,7 +519,7 @@ void focusZonesChanged()
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 {
-  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -567,7 +567,7 @@ void maximumDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -617,7 +617,7 @@ void maximumOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -667,7 +667,7 @@ void opticalZoomChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

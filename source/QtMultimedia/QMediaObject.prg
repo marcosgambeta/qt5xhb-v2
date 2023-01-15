@@ -342,7 +342,7 @@ void availabilityChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 {
-  auto sender = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -392,7 +392,7 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
 {
-  auto sender = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -442,7 +442,7 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
 {
-  auto sender = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -492,7 +492,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
 {
-  auto sender = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -540,7 +540,7 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
 {
-  auto sender = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -592,7 +592,7 @@ void notifyIntervalChanged( int milliseconds )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
 {
-  auto sender = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

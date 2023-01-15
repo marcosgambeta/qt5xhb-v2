@@ -212,7 +212,7 @@ void activeOutputChanged( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
 {
-  auto sender = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioOutputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -262,7 +262,7 @@ void availableOutputsChanged()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
 {
-  auto sender = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioOutputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

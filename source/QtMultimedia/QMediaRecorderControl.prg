@@ -369,7 +369,7 @@ void actualLocationChanged( const QUrl & location )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -419,7 +419,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -469,7 +469,7 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONERROR )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -521,7 +521,7 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -571,7 +571,7 @@ void stateChanged( QMediaRecorder::State state )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -621,7 +621,7 @@ void statusChanged( QMediaRecorder::Status status )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -671,7 +671,7 @@ void volumeChanged( qreal gain )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
 {
-  auto sender = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

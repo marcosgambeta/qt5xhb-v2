@@ -137,7 +137,7 @@ void configurationChanged( const QNetworkConfiguration & configuration )
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 {
-  auto sender = (QMediaNetworkAccessControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaNetworkAccessControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

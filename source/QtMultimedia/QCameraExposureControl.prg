@@ -234,7 +234,7 @@ void actualValueChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 {
-  auto sender = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -284,7 +284,7 @@ void parameterRangeChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 {
-  auto sender = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -334,7 +334,7 @@ void requestedValueChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 {
-  auto sender = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraExposureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

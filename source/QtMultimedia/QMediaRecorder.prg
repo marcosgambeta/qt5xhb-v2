@@ -1148,7 +1148,7 @@ void actualLocationChanged( const QUrl & location )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1198,7 +1198,7 @@ void availabilityChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1248,7 +1248,7 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1298,7 +1298,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1348,7 +1348,7 @@ void error( QMediaRecorder::Error error )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1398,7 +1398,7 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1448,7 +1448,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1496,7 +1496,7 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1548,7 +1548,7 @@ void metaDataWritableChanged( bool writable )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1598,7 +1598,7 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1648,7 +1648,7 @@ void stateChanged( QMediaRecorder::State state )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1698,7 +1698,7 @@ void statusChanged( QMediaRecorder::Status status )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1748,7 +1748,7 @@ void volumeChanged( qreal volume )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
 {
-  auto sender = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

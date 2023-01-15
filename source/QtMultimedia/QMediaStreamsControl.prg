@@ -206,7 +206,7 @@ void activeStreamsChanged()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 {
-  auto sender = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaStreamsControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -254,7 +254,7 @@ void streamsChanged()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 {
-  auto sender = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMediaStreamsControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

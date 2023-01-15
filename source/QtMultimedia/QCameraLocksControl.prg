@@ -180,7 +180,7 @@ void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCam
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 {
-  auto sender = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCameraLocksControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

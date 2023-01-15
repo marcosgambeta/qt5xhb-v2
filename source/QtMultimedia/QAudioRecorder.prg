@@ -221,7 +221,7 @@ void audioInputChanged( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 {
-  auto sender = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -271,7 +271,7 @@ void availableAudioInputsChanged()
 */
 HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 {
-  auto sender = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioRecorder*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

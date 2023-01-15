@@ -378,7 +378,7 @@ void stationIdChanged( QString stationId )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -428,7 +428,7 @@ void programTypeChanged( QRadioData::ProgramType programType )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -478,7 +478,7 @@ void programTypeNameChanged( QString programTypeName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -528,7 +528,7 @@ void stationNameChanged( QString stationName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -578,7 +578,7 @@ void radioTextChanged( QString radioText )
 */
 HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -628,7 +628,7 @@ void alternativeFrequenciesEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -678,7 +678,7 @@ void error( QRadioData::Error error )
 */
 HB_FUNC_STATIC( QRADIODATA_ONERROR )
 {
-  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QRadioData*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -636,7 +636,7 @@ void notify()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 {
-  auto sender = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioOutput*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -684,7 +684,7 @@ void stateChanged( QAudio::State state )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 {
-  auto sender = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAudioOutput*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

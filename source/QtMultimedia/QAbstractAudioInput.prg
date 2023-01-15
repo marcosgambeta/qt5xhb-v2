@@ -584,7 +584,7 @@ void errorChanged( QAudio::Error error )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONERRORCHANGED )
 {
-  auto sender = (QAbstractAudioInput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAudioInput*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -634,7 +634,7 @@ void stateChanged( QAudio::State state )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONSTATECHANGED )
 {
-  auto sender = (QAbstractAudioInput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAudioInput*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -684,7 +684,7 @@ void notify()
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONNOTIFY )
 {
-  auto sender = (QAbstractAudioInput *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractAudioInput*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

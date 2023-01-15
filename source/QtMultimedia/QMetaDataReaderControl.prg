@@ -155,7 +155,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
 {
-  auto sender = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -203,7 +203,7 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
 {
-  auto sender = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -255,7 +255,7 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
-  auto sender = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

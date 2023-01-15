@@ -172,7 +172,7 @@ void activeChanged()
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto sender = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractVideoFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
