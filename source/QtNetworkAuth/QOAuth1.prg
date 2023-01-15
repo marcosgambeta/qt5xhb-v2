@@ -498,7 +498,7 @@ void clientSharedSecretChanged( const QString & credential )
 HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -552,7 +552,7 @@ void signatureMethodChanged( QOAuth1::SignatureMethod method )
 HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -606,7 +606,7 @@ void temporaryCredentialsUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -660,7 +660,7 @@ void tokenCredentialsUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -714,7 +714,7 @@ void tokenSecretChanged( const QString & token )
 HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

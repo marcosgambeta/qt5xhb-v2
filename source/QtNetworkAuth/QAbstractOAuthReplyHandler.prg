@@ -140,7 +140,7 @@ void callbackDataReceived( const QByteArray & data )
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -194,7 +194,7 @@ void replyDataReceived( const QByteArray & data )
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

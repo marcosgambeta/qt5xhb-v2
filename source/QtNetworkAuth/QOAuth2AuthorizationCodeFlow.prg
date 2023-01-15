@@ -263,7 +263,7 @@ void accessTokenUrlChanged( const QUrl & accessTokenUrl )
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QOAuth2AuthorizationCodeFlow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOAuth2AuthorizationCodeFlow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

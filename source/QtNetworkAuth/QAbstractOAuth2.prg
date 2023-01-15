@@ -425,7 +425,7 @@ void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -479,7 +479,7 @@ void error( const QString & error, const QString & errorDescription, const QUrl 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -537,7 +537,7 @@ void expirationAtChanged( const QDateTime & expiration )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -591,7 +591,7 @@ void responseTypeChanged( const QString & responseType )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -645,7 +645,7 @@ void scopeChanged( const QString & scope )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -699,7 +699,7 @@ void stateChanged( const QString & state )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -753,7 +753,7 @@ void userAgentChanged( const QString & userAgent )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
