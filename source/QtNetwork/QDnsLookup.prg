@@ -772,7 +772,7 @@ void finished()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 {
-  auto sender = (QDnsLookup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -820,7 +820,7 @@ void nameChanged( const QString & name )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 {
-  auto sender = (QDnsLookup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -870,7 +870,7 @@ void nameserverChanged( const QHostAddress & nameserver )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 {
-  auto sender = (QDnsLookup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -920,7 +920,7 @@ void typeChanged( QDnsLookup::Type type )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 {
-  auto sender = (QDnsLookup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

@@ -1024,7 +1024,7 @@ void connected()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 {
-  auto sender = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1072,7 +1072,7 @@ void disconnected()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
 {
-  auto sender = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1120,7 +1120,7 @@ void error( QAbstractSocket::SocketError socketError )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
 {
-  auto sender = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1170,7 +1170,7 @@ void hostFound()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
 {
-  auto sender = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1218,7 +1218,7 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 {
-  auto sender = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1270,7 +1270,7 @@ void stateChanged( QAbstractSocket::SocketState socketState )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
 {
-  auto sender = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

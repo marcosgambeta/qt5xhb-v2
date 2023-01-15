@@ -512,7 +512,7 @@ void newConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
 {
-  auto sender = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLocalServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

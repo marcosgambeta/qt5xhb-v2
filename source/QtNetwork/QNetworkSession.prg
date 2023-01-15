@@ -621,7 +621,7 @@ void closed()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -669,7 +669,7 @@ void error( QNetworkSession::SessionError error )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -719,7 +719,7 @@ void newConfigurationActivated()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -767,7 +767,7 @@ void opened()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -815,7 +815,7 @@ void preferredConfigurationChanged( const QNetworkConfiguration & config, bool i
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -867,7 +867,7 @@ void stateChanged( QNetworkSession::State state )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -917,7 +917,7 @@ void usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 {
-  auto sender = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

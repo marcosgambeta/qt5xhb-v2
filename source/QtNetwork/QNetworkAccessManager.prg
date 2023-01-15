@@ -1095,7 +1095,7 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 {
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1147,7 +1147,7 @@ void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticat
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 {
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1199,7 +1199,7 @@ void finished( QNetworkReply * reply )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
 {
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1250,7 +1250,7 @@ void encrypted( QNetworkReply * reply )
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1303,7 +1303,7 @@ void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
 {
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1378,7 +1378,7 @@ void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKey
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1433,7 +1433,7 @@ void networkSessionConnected()
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
 {
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1481,7 +1481,7 @@ void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility acces
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 {
-  auto sender = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkAccessManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

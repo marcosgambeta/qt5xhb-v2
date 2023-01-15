@@ -658,7 +658,7 @@ void downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 {
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -710,7 +710,7 @@ void error( QNetworkReply::NetworkError code )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 {
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -760,7 +760,7 @@ void finished()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 {
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -808,7 +808,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 {
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -856,7 +856,7 @@ void uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 {
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -909,7 +909,7 @@ void encrypted()
 HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -960,7 +960,7 @@ void sslErrors( const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 {
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1033,7 +1033,7 @@ void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authent
 HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1087,7 +1087,7 @@ void redirected( const QUrl & url )
 HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1141,7 +1141,7 @@ void redirectAllowed()
 HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

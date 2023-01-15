@@ -720,7 +720,7 @@ void connected()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 {
-  auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -768,7 +768,7 @@ void disconnected()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 {
-  auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -816,7 +816,7 @@ void error( QLocalSocket::LocalSocketError socketError )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 {
-  auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -866,7 +866,7 @@ void stateChanged( QLocalSocket::LocalSocketState socketState )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 {
-  auto sender = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

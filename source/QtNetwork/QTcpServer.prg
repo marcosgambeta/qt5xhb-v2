@@ -565,7 +565,7 @@ void acceptError( QAbstractSocket::SocketError socketError )
 */
 HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 {
-  auto sender = (QTcpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTcpServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -615,7 +615,7 @@ void newConnection()
 */
 HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 {
-  auto sender = (QTcpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTcpServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
