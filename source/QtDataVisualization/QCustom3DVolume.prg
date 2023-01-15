@@ -1164,7 +1164,7 @@ void alphaMultiplierChanged( float mult )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1218,7 +1218,7 @@ void colorTableChanged()
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1270,7 +1270,7 @@ void drawSliceFramesChanged( bool enabled )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1324,7 +1324,7 @@ void drawSlicesChanged( bool enabled )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1378,7 +1378,7 @@ void preserveOpacityChanged( bool enabled )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1432,7 +1432,7 @@ void sliceFrameColorChanged( const QColor & color )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1486,7 +1486,7 @@ void sliceFrameGapsChanged( const QVector3D & values )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1540,7 +1540,7 @@ void sliceFrameThicknessesChanged( const QVector3D & values )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1594,7 +1594,7 @@ void sliceFrameWidthsChanged( const QVector3D & values )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1648,7 +1648,7 @@ void sliceIndexXChanged( int value )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1702,7 +1702,7 @@ void sliceIndexYChanged( int value )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1756,7 +1756,7 @@ void sliceIndexZChanged( int value )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1810,7 +1810,7 @@ void textureDepthChanged( int value )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1864,7 +1864,7 @@ void textureFormatChanged( QImage::Format format )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1918,7 +1918,7 @@ void textureHeightChanged( int value )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1972,7 +1972,7 @@ void textureWidthChanged( int value )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2026,7 +2026,7 @@ void useHighDefShaderChanged( bool enabled )
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

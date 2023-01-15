@@ -160,7 +160,7 @@ void autoPositionChanged( bool autoPosition )
 HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DLight*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

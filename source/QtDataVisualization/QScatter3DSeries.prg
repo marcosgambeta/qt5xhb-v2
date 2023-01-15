@@ -310,7 +310,7 @@ void dataProxyChanged( QScatterDataProxy * proxy )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatter3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -364,7 +364,7 @@ void itemSizeChanged( float size )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatter3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -418,7 +418,7 @@ void selectedItemChanged( int index )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatter3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

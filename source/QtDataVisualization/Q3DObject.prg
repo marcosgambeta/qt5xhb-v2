@@ -222,7 +222,7 @@ void positionChanged( const QVector3D & position )
 HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

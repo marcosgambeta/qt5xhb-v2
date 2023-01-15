@@ -499,7 +499,7 @@ void heightMapChanged( const QImage & image )
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHeightMapSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -553,7 +553,7 @@ void heightMapFileChanged( const QString & filename )
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHeightMapSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -607,7 +607,7 @@ void minXValueChanged( float value )
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHeightMapSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -661,7 +661,7 @@ void maxXValueChanged( float value )
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHeightMapSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -715,7 +715,7 @@ void minZValueChanged( float value )
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHeightMapSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -769,7 +769,7 @@ void maxZValueChanged( float value )
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QHeightMapSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

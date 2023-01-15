@@ -514,7 +514,7 @@ void dataProxyChanged( QSurfaceDataProxy * proxy )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -568,7 +568,7 @@ void drawModeChanged( QSurface3DSeries::DrawFlags mode )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -622,7 +622,7 @@ void flatShadingEnabledChanged( bool enable )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -676,7 +676,7 @@ void flatShadingSupportedChanged( bool enable )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -730,7 +730,7 @@ void selectedPointChanged( const QPoint & position )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -784,7 +784,7 @@ void textureChanged( const QImage & image )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -838,7 +838,7 @@ void textureFileChanged( const QString & filename )
 HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

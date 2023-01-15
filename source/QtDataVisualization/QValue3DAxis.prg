@@ -390,7 +390,7 @@ void formatterChanged( QValue3DAxisFormatter * formatter )
 HB_FUNC_STATIC( QVALUE3DAXIS_ONFORMATTERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -444,7 +444,7 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QVALUE3DAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -498,7 +498,7 @@ void reversedChanged( bool enable )
 HB_FUNC_STATIC( QVALUE3DAXIS_ONREVERSEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -552,7 +552,7 @@ void segmentCountChanged( int count )
 HB_FUNC_STATIC( QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -606,7 +606,7 @@ void subSegmentCountChanged( int count )
 HB_FUNC_STATIC( QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

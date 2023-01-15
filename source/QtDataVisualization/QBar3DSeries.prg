@@ -313,7 +313,7 @@ void dataProxyChanged( QBarDataProxy * proxy )
 HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBar3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -367,7 +367,7 @@ void selectedBarChanged( const QPoint & position )
 HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBar3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -421,7 +421,7 @@ void meshAngleChanged( float angle )
 HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBar3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

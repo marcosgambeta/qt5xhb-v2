@@ -732,7 +732,7 @@ void activeCameraChanged( Q3DCamera * camera )
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -786,7 +786,7 @@ void activeLightChanged( Q3DLight * light )
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -840,7 +840,7 @@ void devicePixelRatioChanged( float pixelRatio )
 HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -894,7 +894,7 @@ void graphPositionQueryChanged( const QPoint & position )
 HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -948,7 +948,7 @@ void primarySubViewportChanged( const QRect & subViewport )
 HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1002,7 +1002,7 @@ void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1056,7 +1056,7 @@ void secondarySubViewportChanged( const QRect & subViewport )
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1110,7 +1110,7 @@ void selectionQueryPositionChanged( const QPoint & position )
 HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1164,7 +1164,7 @@ void slicingActiveChanged( bool isSlicingActive )
 HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1218,7 +1218,7 @@ void viewportChanged( const QRect & viewport )
 HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

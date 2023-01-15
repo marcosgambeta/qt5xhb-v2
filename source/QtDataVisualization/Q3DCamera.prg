@@ -676,7 +676,7 @@ void cameraPresetChanged( Q3DCamera::CameraPreset preset )
 HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -730,7 +730,7 @@ void maxZoomLevelChanged( float zoomLevel )
 HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -784,7 +784,7 @@ void minZoomLevelChanged( float zoomLevel )
 HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -838,7 +838,7 @@ void targetChanged( const QVector3D & target )
 HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -892,7 +892,7 @@ void wrapXRotationChanged( bool isEnabled )
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -946,7 +946,7 @@ void wrapYRotationChanged( bool isEnabled )
 HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1000,7 +1000,7 @@ void xRotationChanged( float rotation )
 HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1054,7 +1054,7 @@ void yRotationChanged( float rotation )
 HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1108,7 +1108,7 @@ void zoomLevelChanged( float zoomLevel )
 HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DCamera*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

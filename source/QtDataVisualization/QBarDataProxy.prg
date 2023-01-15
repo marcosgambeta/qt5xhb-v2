@@ -405,7 +405,7 @@ void arrayReset()
 HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -457,7 +457,7 @@ void columnLabelsChanged()
 HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -509,7 +509,7 @@ void itemChanged( int rowIndex, int columnIndex )
 HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -565,7 +565,7 @@ void rowCountChanged( int count )
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -619,7 +619,7 @@ void rowLabelsChanged()
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -671,7 +671,7 @@ void rowsAdded( int startIndex, int count )
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -727,7 +727,7 @@ void rowsChanged( int startIndex, int count )
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -783,7 +783,7 @@ void rowsInserted( int startIndex, int count )
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -839,7 +839,7 @@ void rowsRemoved( int startIndex, int count )
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -895,7 +895,7 @@ void seriesChanged( QBar3DSeries * series )
 HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QBarDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

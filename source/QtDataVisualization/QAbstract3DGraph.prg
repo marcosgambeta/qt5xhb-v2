@@ -1696,7 +1696,7 @@ void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1750,7 +1750,7 @@ void activeThemeChanged( Q3DTheme * theme )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1804,7 +1804,7 @@ void aspectRatioChanged( qreal ratio )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1858,7 +1858,7 @@ void currentFpsChanged( qreal fps )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1912,7 +1912,7 @@ void horizontalAspectRatioChanged( qreal ratio )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1966,7 +1966,7 @@ void localeChanged( const QLocale & locale )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2020,7 +2020,7 @@ void marginChanged( qreal margin )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2074,7 +2074,7 @@ void measureFpsChanged( bool enabled )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2128,7 +2128,7 @@ void optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2182,7 +2182,7 @@ void orthoProjectionChanged( bool enabled )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2236,7 +2236,7 @@ void polarChanged( bool enabled )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2290,7 +2290,7 @@ void queriedGraphPositionChanged( const QVector3D & data )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2344,7 +2344,7 @@ void radialLabelOffsetChanged( float offset )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2398,7 +2398,7 @@ void reflectionChanged( bool enabled )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2452,7 +2452,7 @@ void reflectivityChanged( qreal reflectivity )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2506,7 +2506,7 @@ void selectedElementChanged( QAbstract3DGraph::ElementType type )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2560,7 +2560,7 @@ void selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -2614,7 +2614,7 @@ void shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DGraph*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

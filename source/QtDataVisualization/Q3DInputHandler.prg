@@ -347,7 +347,7 @@ void rotationEnabledChanged( bool enable )
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -401,7 +401,7 @@ void selectionEnabledChanged( bool enable )
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -455,7 +455,7 @@ void zoomAtTargetEnabledChanged( bool enable )
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -509,7 +509,7 @@ void zoomEnabledChanged( bool enable )
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<Q3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

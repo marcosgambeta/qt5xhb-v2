@@ -278,7 +278,7 @@ void inputViewChanged( QAbstract3DInputHandler::InputView view )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -332,7 +332,7 @@ void positionChanged( const QPoint & position )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -386,7 +386,7 @@ void sceneChanged( Q3DScene * scene )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

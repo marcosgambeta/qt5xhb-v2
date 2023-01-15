@@ -326,7 +326,7 @@ void arrayReset()
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -378,7 +378,7 @@ void itemCountChanged( int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -432,7 +432,7 @@ void itemsAdded( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -488,7 +488,7 @@ void itemsChanged( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -544,7 +544,7 @@ void itemsInserted( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -600,7 +600,7 @@ void itemsRemoved( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -656,7 +656,7 @@ void seriesChanged( QScatter3DSeries * series )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

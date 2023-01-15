@@ -625,7 +625,7 @@ void titleChanged( const QString & newTitle )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -679,7 +679,7 @@ void labelsChanged()
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -731,7 +731,7 @@ void orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -785,7 +785,7 @@ void minChanged( float value )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -839,7 +839,7 @@ void maxChanged( float value )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -893,7 +893,7 @@ void rangeChanged( float min, float max )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -949,7 +949,7 @@ void autoAdjustRangeChanged( bool autoAdjust )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1003,7 +1003,7 @@ void labelAutoRotationChanged( float angle )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1057,7 +1057,7 @@ void titleVisibilityChanged( bool visible )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1111,7 +1111,7 @@ void titleFixedChanged( bool fixed )
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

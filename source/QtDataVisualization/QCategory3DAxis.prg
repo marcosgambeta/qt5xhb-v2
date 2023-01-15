@@ -160,7 +160,7 @@ void labelsChanged()
 HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCategory3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
