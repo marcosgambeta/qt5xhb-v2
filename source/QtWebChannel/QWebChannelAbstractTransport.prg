@@ -111,8 +111,8 @@ void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebChannelAbstractTransport*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

@@ -271,8 +271,8 @@ void blockUpdatesChanged( bool block )
 HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
