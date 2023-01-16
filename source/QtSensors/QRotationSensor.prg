@@ -184,8 +184,8 @@ void hasZChanged( bool hasZ )
 HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QRotationSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

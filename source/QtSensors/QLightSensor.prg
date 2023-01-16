@@ -184,8 +184,8 @@ void fieldOfViewChanged( qreal fieldOfView )
 HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QLightSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

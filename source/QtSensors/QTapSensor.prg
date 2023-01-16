@@ -184,8 +184,8 @@ void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTapSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

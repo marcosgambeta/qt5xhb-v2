@@ -248,8 +248,8 @@ void detected( const QString & s )
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSensorGestureRecognizer*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
