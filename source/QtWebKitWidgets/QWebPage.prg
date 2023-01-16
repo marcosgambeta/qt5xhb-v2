@@ -1351,8 +1351,8 @@ void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 default
 */
 HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1405,7 +1405,7 @@ void contentsChanged()
 */
 HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1453,7 +1453,7 @@ void databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1505,7 +1505,7 @@ void downloadRequested( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1555,7 +1555,7 @@ void featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feat
 */
 HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1607,7 +1607,7 @@ void featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1659,7 +1659,7 @@ void frameCreated( QWebFrame * frame )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1709,7 +1709,7 @@ void geometryChangeRequested( const QRect & geom )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1759,7 +1759,7 @@ void linkClicked( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1809,7 +1809,7 @@ void linkHovered( const QString & link, const QString & title, const QString & t
 */
 HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1863,7 +1863,7 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1913,7 +1913,7 @@ void loadProgress( int progress )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1963,7 +1963,7 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2011,7 +2011,7 @@ void menuBarVisibilityChangeRequested( bool visible )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2061,7 +2061,7 @@ void microFocusChanged()
 */
 HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2109,7 +2109,7 @@ void printRequested( QWebFrame * frame )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2159,7 +2159,7 @@ void repaintRequested( const QRect & dirtyRect )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2209,7 +2209,7 @@ void restoreFrameStateRequested( QWebFrame * frame )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2259,7 +2259,7 @@ void saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2311,7 +2311,7 @@ void scrollRequested( int dx, int dy, const QRect & rectToScroll )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2365,7 +2365,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2413,7 +2413,7 @@ void statusBarMessage( const QString & text )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2463,7 +2463,7 @@ void statusBarVisibilityChangeRequested( bool visible )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2513,7 +2513,7 @@ void toolBarVisibilityChangeRequested( bool visible )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2563,7 +2563,7 @@ void unsupportedContent( QNetworkReply * reply )
 */
 HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2613,7 +2613,7 @@ void viewportChangeRequested()
 */
 HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2661,7 +2661,7 @@ void windowCloseRequested()
 */
 HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 {
-  auto sender = (QWebPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebPage*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

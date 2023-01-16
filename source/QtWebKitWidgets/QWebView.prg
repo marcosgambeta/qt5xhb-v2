@@ -990,8 +990,8 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1038,7 +1038,7 @@ void linkClicked( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1088,7 +1088,7 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1138,7 +1138,7 @@ void loadProgress( int progress )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1188,7 +1188,7 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1236,7 +1236,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1284,7 +1284,7 @@ void statusBarMessage( const QString & text )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1334,7 +1334,7 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1384,7 +1384,7 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
-  auto sender = (QWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

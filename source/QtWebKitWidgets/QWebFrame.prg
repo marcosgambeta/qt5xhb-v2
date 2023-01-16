@@ -1301,8 +1301,8 @@ void contentsSizeChanged( const QSize & size )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1351,7 +1351,7 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1399,7 +1399,7 @@ void initialLayoutCompleted()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1447,7 +1447,7 @@ void javaScriptWindowObjectCleared()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1495,7 +1495,7 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1545,7 +1545,7 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1593,7 +1593,7 @@ void pageChanged()
 */
 HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1641,7 +1641,7 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1691,7 +1691,7 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
 {
-  auto sender = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

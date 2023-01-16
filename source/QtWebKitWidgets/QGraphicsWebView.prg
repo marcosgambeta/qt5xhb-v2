@@ -1042,8 +1042,8 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1090,7 +1090,7 @@ void linkClicked( const QUrl & url )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1140,7 +1140,7 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1190,7 +1190,7 @@ void loadProgress( int progress )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1240,7 +1240,7 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1288,7 +1288,7 @@ void statusBarMessage( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1338,7 +1338,7 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1388,7 +1388,7 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
 {
-  auto sender = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
