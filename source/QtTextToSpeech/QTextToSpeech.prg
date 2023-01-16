@@ -654,8 +654,8 @@ void localeChanged( const QLocale & locale )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -708,7 +708,7 @@ void pitchChanged( double pitch )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -762,7 +762,7 @@ void rateChanged( double rate )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -816,7 +816,7 @@ void stateChanged( QTextToSpeech::State state )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -870,7 +870,7 @@ void voiceChanged( const QVoice & voice )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -924,7 +924,7 @@ void volumeChanged( int volume )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -978,7 +978,7 @@ void volumeChanged( double volume )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

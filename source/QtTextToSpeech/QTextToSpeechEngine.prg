@@ -610,8 +610,8 @@ void stateChanged( QTextToSpeech::State state )
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTextToSpeechEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
