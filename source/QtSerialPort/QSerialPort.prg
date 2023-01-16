@@ -1198,8 +1198,8 @@ void baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
 HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1254,7 +1254,7 @@ void dataBitsChanged( QSerialPort::DataBits dataBits )
 HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1308,7 +1308,7 @@ void parityChanged( QSerialPort::Parity parity )
 HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1362,7 +1362,7 @@ void stopBitsChanged( QSerialPort::StopBits stopBits )
 HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1416,7 +1416,7 @@ void flowControlChanged( QSerialPort::FlowControl flow )
 HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1470,7 +1470,7 @@ void dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
 HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1524,7 +1524,7 @@ void dataTerminalReadyChanged( bool set )
 HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1578,7 +1578,7 @@ void requestToSendChanged( bool set )
 HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1632,7 +1632,7 @@ void error( QSerialPort::SerialPortError serialPortError )
 HB_FUNC_STATIC( QSERIALPORT_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1686,7 +1686,7 @@ void settingsRestoredOnCloseChanged( bool restore )
 HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSerialPort*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
