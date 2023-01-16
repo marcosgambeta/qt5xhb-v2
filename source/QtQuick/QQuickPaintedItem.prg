@@ -631,8 +631,8 @@ void contentsScaleChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
-  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQuickPaintedItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -679,7 +679,7 @@ void contentsSizeChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
-  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickPaintedItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -727,7 +727,7 @@ void fillColorChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
-  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickPaintedItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -775,7 +775,7 @@ void renderTargetChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
-  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickPaintedItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

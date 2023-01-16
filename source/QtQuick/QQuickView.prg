@@ -353,7 +353,7 @@ void statusChanged( QQuickView::Status status )
 */
 HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
 {
-  auto sender = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

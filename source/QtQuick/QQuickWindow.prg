@@ -747,7 +747,7 @@ void afterRendering()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -795,7 +795,7 @@ void beforeRendering()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -843,7 +843,7 @@ void beforeSynchronizing()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -891,7 +891,7 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -941,7 +941,7 @@ void frameSwapped()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -989,7 +989,7 @@ void sceneGraphInitialized()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1037,7 +1037,7 @@ void sceneGraphInvalidated()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
-  auto sender = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
