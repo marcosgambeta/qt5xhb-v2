@@ -410,8 +410,8 @@ void blurRadiusChanged( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 {
-  auto sender = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsDropShadowEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -460,7 +460,7 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 {
-  auto sender = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsDropShadowEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -510,7 +510,7 @@ void offsetChanged( const QPointF & offset )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 {
-  auto sender = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsDropShadowEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

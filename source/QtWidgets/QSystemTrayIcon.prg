@@ -463,8 +463,8 @@ void activated( QSystemTrayIcon::ActivationReason reason )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-  auto sender = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSystemTrayIcon*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -513,7 +513,7 @@ void messageClicked()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-  auto sender = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSystemTrayIcon*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

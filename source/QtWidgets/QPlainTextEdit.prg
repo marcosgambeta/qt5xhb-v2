@@ -1624,8 +1624,8 @@ void blockCountChanged( int newBlockCount )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1674,7 +1674,7 @@ void copyAvailable( bool yes )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1724,7 +1724,7 @@ void cursorPositionChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1772,7 +1772,7 @@ void modificationChanged( bool changed )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1822,7 +1822,7 @@ void redoAvailable( bool available )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1872,7 +1872,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1920,7 +1920,7 @@ void textChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1968,7 +1968,7 @@ void undoAvailable( bool available )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2018,7 +2018,7 @@ void updateRequest( const QRect & rect, int dy )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
 {
-  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QPlainTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

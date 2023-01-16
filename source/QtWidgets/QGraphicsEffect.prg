@@ -205,8 +205,8 @@ void enabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {
-  auto sender = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

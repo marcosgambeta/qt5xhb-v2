@@ -569,8 +569,8 @@ void accepted()
 */
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
-  auto sender = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -617,7 +617,7 @@ void finished( int result )
 */
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
-  auto sender = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -667,7 +667,7 @@ void rejected()
 */
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
-  auto sender = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

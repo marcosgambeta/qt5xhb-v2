@@ -421,8 +421,8 @@ void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
-  auto sender = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -471,7 +471,7 @@ void dockLocationChanged( Qt::DockWidgetArea area )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
-  auto sender = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -521,7 +521,7 @@ void featuresChanged( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
-  auto sender = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -571,7 +571,7 @@ void topLevelChanged( bool topLevel )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
-  auto sender = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -621,7 +621,7 @@ void visibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
-  auto sender = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

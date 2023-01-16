@@ -1260,8 +1260,8 @@ void cellActivated( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1312,7 +1312,7 @@ void cellChanged( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1364,7 +1364,7 @@ void cellClicked( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1416,7 +1416,7 @@ void cellDoubleClicked( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1468,7 +1468,7 @@ void cellEntered( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1520,7 +1520,7 @@ void cellPressed( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1572,7 +1572,7 @@ void currentCellChanged( int currentRow, int currentColumn, int previousRow, int
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1628,7 +1628,7 @@ void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1680,7 +1680,7 @@ void itemActivated( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1730,7 +1730,7 @@ void itemChanged( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1780,7 +1780,7 @@ void itemClicked( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1830,7 +1830,7 @@ void itemDoubleClicked( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1880,7 +1880,7 @@ void itemEntered( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1930,7 +1930,7 @@ void itemPressed( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1980,7 +1980,7 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  auto sender = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

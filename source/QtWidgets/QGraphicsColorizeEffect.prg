@@ -197,8 +197,8 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
-  auto sender = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -247,7 +247,7 @@ void strengthChanged( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
-  auto sender = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

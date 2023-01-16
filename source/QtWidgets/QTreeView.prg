@@ -1594,8 +1594,8 @@ void collapsed( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
-  auto sender = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTreeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1644,7 +1644,7 @@ void expanded( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
-  auto sender = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

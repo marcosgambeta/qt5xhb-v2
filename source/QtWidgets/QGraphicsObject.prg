@@ -4040,8 +4040,8 @@ void enabledChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -4088,7 +4088,7 @@ void opacityChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4136,7 +4136,7 @@ void parentChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4184,7 +4184,7 @@ void rotationChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4232,7 +4232,7 @@ void scaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4280,7 +4280,7 @@ void visibleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4328,7 +4328,7 @@ void xChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4376,7 +4376,7 @@ void yChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -4424,7 +4424,7 @@ void zChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
 {
-  auto sender = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

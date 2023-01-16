@@ -1176,7 +1176,7 @@ void aboutToHide()
 */
 HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
 {
-  auto sender = (QMenu *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1224,7 +1224,7 @@ void aboutToShow()
 */
 HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
 {
-  auto sender = (QMenu *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1272,7 +1272,7 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QMENU_ONHOVERED )
 {
-  auto sender = (QMenu *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1322,7 +1322,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 {
-  auto sender = (QMenu *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -350,8 +350,8 @@ void aboutToCompose()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -402,7 +402,7 @@ void frameSwapped()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -454,7 +454,7 @@ void aboutToResize()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -506,7 +506,7 @@ void resized()
 HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

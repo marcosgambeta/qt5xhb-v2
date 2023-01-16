@@ -453,8 +453,8 @@ void accepted()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
-  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -501,7 +501,7 @@ void clicked( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
-  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -551,7 +551,7 @@ void helpRequested()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
-  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -599,7 +599,7 @@ void rejected()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
-  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

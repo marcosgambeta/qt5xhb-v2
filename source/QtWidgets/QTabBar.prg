@@ -1458,8 +1458,8 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 {
-  auto sender = (QTabBar *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTabBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1508,7 +1508,7 @@ void tabCloseRequested( int index )
 */
 HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
 {
-  auto sender = (QTabBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTabBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1558,7 +1558,7 @@ void tabMoved( int from, int to )
 */
 HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
 {
-  auto sender = (QTabBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTabBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -388,8 +388,8 @@ void clicked( bool checked = false )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
-  auto sender = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGroupBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -438,7 +438,7 @@ void toggled( bool on )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
-  auto sender = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGroupBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

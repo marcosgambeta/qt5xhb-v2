@@ -1392,8 +1392,8 @@ void dateChanged( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
-  auto sender = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QDateTimeEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1442,7 +1442,7 @@ void dateTimeChanged( const QDateTime & datetime )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
-  auto sender = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDateTimeEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1492,7 +1492,7 @@ void timeChanged( const QTime & time )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
-  auto sender = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDateTimeEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

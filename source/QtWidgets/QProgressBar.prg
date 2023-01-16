@@ -690,8 +690,8 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
 {
-  auto sender = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QProgressBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

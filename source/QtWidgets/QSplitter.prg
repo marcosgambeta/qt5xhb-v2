@@ -708,8 +708,8 @@ void splitterMoved( int pos, int index )
 */
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
-  auto sender = (QSplitter *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

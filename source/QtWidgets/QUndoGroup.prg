@@ -487,8 +487,8 @@ void activeStackChanged( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -537,7 +537,7 @@ void canRedoChanged( bool canRedo )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -587,7 +587,7 @@ void canUndoChanged( bool canUndo )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -637,7 +637,7 @@ void cleanChanged( bool clean )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -687,7 +687,7 @@ void indexChanged( int idx )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -737,7 +737,7 @@ void redoTextChanged( const QString & redoText )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -787,7 +787,7 @@ void undoTextChanged( const QString & undoText )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
-  auto sender = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

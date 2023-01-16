@@ -804,8 +804,8 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 {
-  auto sender = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -854,7 +854,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 {
-  auto sender = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

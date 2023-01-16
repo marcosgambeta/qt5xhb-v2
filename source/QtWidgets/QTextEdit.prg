@@ -2269,8 +2269,8 @@ void copyAvailable( bool yes )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -2319,7 +2319,7 @@ void currentCharFormatChanged( const QTextCharFormat & f )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2369,7 +2369,7 @@ void cursorPositionChanged()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2417,7 +2417,7 @@ void redoAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2467,7 +2467,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2515,7 +2515,7 @@ void textChanged()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2563,7 +2563,7 @@ void undoAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
-  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

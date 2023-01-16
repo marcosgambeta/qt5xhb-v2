@@ -262,8 +262,8 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
 {
-  auto sender = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSplashScreen*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

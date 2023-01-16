@@ -1327,8 +1327,8 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
 {
-  auto sender = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTabWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1377,7 +1377,7 @@ void tabCloseRequested( int index )
 */
 HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
 {
-  auto sender = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTabWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1428,7 +1428,7 @@ void tabBarClicked( int index )
 HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTabWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1482,7 +1482,7 @@ void tabBarDoubleClicked( int index )
 HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTabWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

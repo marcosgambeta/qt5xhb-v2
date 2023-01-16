@@ -331,7 +331,7 @@ void originChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
 {
-  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -379,7 +379,7 @@ void scaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -427,7 +427,7 @@ void xScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -475,7 +475,7 @@ void yScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -523,7 +523,7 @@ void zScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

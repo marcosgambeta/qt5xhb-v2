@@ -379,8 +379,8 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 {
-  auto sender = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -429,7 +429,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
 {
-  auto sender = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

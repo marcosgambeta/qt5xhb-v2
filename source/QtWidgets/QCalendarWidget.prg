@@ -1150,8 +1150,8 @@ void activated( const QDate & date )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
-  auto sender = (QCalendarWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1200,7 +1200,7 @@ void clicked( const QDate & date )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
-  auto sender = (QCalendarWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1250,7 +1250,7 @@ void currentPageChanged( int year, int month )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
-  auto sender = (QCalendarWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1302,7 +1302,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
-  auto sender = (QCalendarWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

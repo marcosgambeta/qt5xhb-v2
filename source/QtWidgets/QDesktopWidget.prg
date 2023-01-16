@@ -315,8 +315,8 @@ void resized( int screen )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 {
-  auto sender = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -365,7 +365,7 @@ void screenCountChanged( int newCount )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 {
-  auto sender = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -415,7 +415,7 @@ void workAreaResized( int screen )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 {
-  auto sender = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

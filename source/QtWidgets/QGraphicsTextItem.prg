@@ -842,7 +842,7 @@ void linkActivated( const QString & link )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 {
-  auto sender = (QGraphicsTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -892,7 +892,7 @@ void linkHovered( const QString & link )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 {
-  auto sender = (QGraphicsTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

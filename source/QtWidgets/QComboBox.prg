@@ -1721,8 +1721,8 @@ void currentTextChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1771,7 +1771,7 @@ void editTextChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1822,7 +1822,7 @@ void textActivated( const QString & text )
 HB_FUNC_STATIC( QCOMBOBOX_ONTEXTACTIVATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1876,7 +1876,7 @@ void textHighlighted( const QString & text )
 HB_FUNC_STATIC( QCOMBOBOX_ONTEXTHIGHLIGHTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1929,7 +1929,7 @@ void activated( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1979,7 +1979,7 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2029,7 +2029,7 @@ void currentIndexChanged( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2079,7 +2079,7 @@ void currentIndexChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2129,7 +2129,7 @@ void highlighted( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2179,7 +2179,7 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
-  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -507,8 +507,8 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
 {
-  auto sender = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -557,7 +557,7 @@ void valueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
 {
-  auto sender = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

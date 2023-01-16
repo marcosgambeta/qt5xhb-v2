@@ -399,8 +399,8 @@ void buttonClicked( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 {
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -449,7 +449,7 @@ void buttonClicked( int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 {
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -499,7 +499,7 @@ void buttonPressed( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 {
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -549,7 +549,7 @@ void buttonPressed( int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 {
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -599,7 +599,7 @@ void buttonReleased( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 {
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -649,7 +649,7 @@ void buttonReleased( int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 {
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -700,7 +700,7 @@ void buttonToggled( QAbstractButton * button, bool checked )
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -756,7 +756,7 @@ void buttonToggled( int id, bool checked )
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -812,7 +812,7 @@ void idClicked( int id )
 HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -866,7 +866,7 @@ void idPressed( int id )
 HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -920,7 +920,7 @@ void idReleased( int id )
 HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -974,7 +974,7 @@ void idToggled( int id, bool checked )
 HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

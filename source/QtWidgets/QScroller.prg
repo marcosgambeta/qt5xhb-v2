@@ -643,8 +643,8 @@ void scrollerPropertiesChanged( const QScrollerProperties & newProperties )
 */
 HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
-  auto sender = (QScroller *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QScroller*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -693,7 +693,7 @@ void stateChanged( QScroller::State newState )
 */
 HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 {
-  auto sender = (QScroller *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QScroller*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

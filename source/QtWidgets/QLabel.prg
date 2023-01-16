@@ -1020,8 +1020,8 @@ void linkActivated( const QString & link )
 */
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {
-  auto sender = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1070,7 +1070,7 @@ void linkHovered( const QString & link )
 */
 HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
 {
-  auto sender = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

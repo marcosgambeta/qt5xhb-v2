@@ -1329,8 +1329,8 @@ void doubleValueChanged( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 {
-  auto sender = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1379,7 +1379,7 @@ void doubleValueSelected( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 {
-  auto sender = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1429,7 +1429,7 @@ void intValueChanged( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 {
-  auto sender = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1479,7 +1479,7 @@ void intValueSelected( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 {
-  auto sender = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1529,7 +1529,7 @@ void textValueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 {
-  auto sender = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1579,7 +1579,7 @@ void textValueSelected( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 {
-  auto sender = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

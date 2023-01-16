@@ -615,7 +615,7 @@ void valueChanged( double d )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
-  auto sender = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDoubleSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -665,7 +665,7 @@ void valueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
-  auto sender = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QDoubleSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 

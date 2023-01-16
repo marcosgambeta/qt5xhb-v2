@@ -517,8 +517,8 @@ void aboutToActivate()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
-  auto sender = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QMdiSubWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -565,7 +565,7 @@ void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
-  auto sender = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMdiSubWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -372,8 +372,8 @@ void currentFontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
 {
-  auto sender = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QFontDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -422,7 +422,7 @@ void fontSelected( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
 {
-  auto sender = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFontDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

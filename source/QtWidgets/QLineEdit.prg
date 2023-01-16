@@ -1855,8 +1855,8 @@ void cursorPositionChanged( int oldPos, int newPos )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1907,7 +1907,7 @@ void editingFinished()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
 {
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1956,7 +1956,7 @@ void inputRejected()
 HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2007,7 +2007,7 @@ void returnPressed()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
 {
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2055,7 +2055,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
 {
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2103,7 +2103,7 @@ void textChanged( const QString & text )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
 {
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2153,8 +2153,8 @@ void textEdited( const QString & text )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
 {
-  auto sender = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QLineEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

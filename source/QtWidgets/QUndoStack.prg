@@ -722,8 +722,8 @@ void canRedoChanged( bool canRedo )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
 {
-  auto sender = (QUndoStack *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -772,7 +772,7 @@ void canUndoChanged( bool canUndo )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
 {
-  auto sender = (QUndoStack *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -822,7 +822,7 @@ void cleanChanged( bool clean )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
 {
-  auto sender = (QUndoStack *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -872,7 +872,7 @@ void indexChanged( int idx )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
 {
-  auto sender = (QUndoStack *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -922,7 +922,7 @@ void redoTextChanged( const QString & redoText )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
 {
-  auto sender = (QUndoStack *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -972,7 +972,7 @@ void undoTextChanged( const QString & undoText )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
 {
-  auto sender = (QUndoStack *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

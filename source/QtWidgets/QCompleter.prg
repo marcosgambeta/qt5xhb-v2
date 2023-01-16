@@ -984,8 +984,8 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
-  auto sender = (QCompleter *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1034,7 +1034,7 @@ void activated( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
-  auto sender = (QCompleter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1084,7 +1084,7 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
-  auto sender = (QCompleter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1134,7 +1134,7 @@ void highlighted( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
-  auto sender = (QCompleter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

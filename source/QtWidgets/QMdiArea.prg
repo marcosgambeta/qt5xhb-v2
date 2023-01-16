@@ -958,8 +958,8 @@ void subWindowActivated( QMdiSubWindow * window )
 */
 HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 {
-  auto sender = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QMdiArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

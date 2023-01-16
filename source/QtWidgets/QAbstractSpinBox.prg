@@ -972,7 +972,7 @@ void editingFinished()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
-  auto sender = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

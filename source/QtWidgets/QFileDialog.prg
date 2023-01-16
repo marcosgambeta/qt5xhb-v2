@@ -1794,8 +1794,8 @@ void currentChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1844,7 +1844,7 @@ void directoryEntered( const QString & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1894,7 +1894,7 @@ void fileSelected( const QString & file )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1944,7 +1944,7 @@ void filesSelected( const QStringList & selected )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2000,7 +2000,7 @@ void filterSelected( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2050,7 +2050,7 @@ void urlSelected( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2100,7 +2100,7 @@ void urlsSelected( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2172,7 +2172,7 @@ void currentUrlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -2222,7 +2222,7 @@ void directoryUrlEntered( const QUrl & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
-  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

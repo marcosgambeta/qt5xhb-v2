@@ -367,8 +367,8 @@ void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QA
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
-  auto sender = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -419,7 +419,7 @@ void commitData( QWidget * editor )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
-  auto sender = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -469,7 +469,7 @@ void sizeHintChanged( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
-  auto sender = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

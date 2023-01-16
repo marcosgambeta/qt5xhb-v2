@@ -415,8 +415,8 @@ void activated()
 */
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
-  auto sender = (QShortcut *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QShortcut*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -463,7 +463,7 @@ void activatedAmbiguously()
 */
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
-  auto sender = (QShortcut *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QShortcut*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

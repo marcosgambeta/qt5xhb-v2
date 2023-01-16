@@ -776,8 +776,8 @@ void actionTriggered( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -826,7 +826,7 @@ void allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -876,7 +876,7 @@ void iconSizeChanged( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -926,7 +926,7 @@ void movableChanged( bool movable )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -976,7 +976,7 @@ void orientationChanged( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1026,7 +1026,7 @@ void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1076,7 +1076,7 @@ void topLevelChanged( bool topLevel )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1126,7 +1126,7 @@ void visibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
-  auto sender = (QToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -1066,8 +1066,8 @@ void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1118,7 +1118,7 @@ void itemActivated( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1170,7 +1170,7 @@ void itemChanged( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1222,7 +1222,7 @@ void itemClicked( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1274,7 +1274,7 @@ void itemCollapsed( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1324,7 +1324,7 @@ void itemDoubleClicked( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1376,7 +1376,7 @@ void itemEntered( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1428,7 +1428,7 @@ void itemExpanded( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1478,7 +1478,7 @@ void itemPressed( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1530,7 +1530,7 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  auto sender = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

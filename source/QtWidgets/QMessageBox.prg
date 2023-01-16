@@ -1273,8 +1273,8 @@ void buttonClicked( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
-  auto sender = (QMessageBox *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QMessageBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

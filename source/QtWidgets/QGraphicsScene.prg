@@ -1768,8 +1768,8 @@ void changed( const QList<QRectF> & region )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 {
-  auto sender = (QGraphicsScene *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1840,7 +1840,7 @@ void sceneRectChanged( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
-  auto sender = (QGraphicsScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1890,7 +1890,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
-  auto sender = (QGraphicsScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

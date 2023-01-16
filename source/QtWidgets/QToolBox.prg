@@ -579,8 +579,8 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
 {
-  auto sender = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

@@ -619,8 +619,8 @@ void overflow()
 */
 HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 {
-  auto sender = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

@@ -763,8 +763,8 @@ void actionTriggered( int action )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
-  auto sender = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -813,7 +813,7 @@ void rangeChanged( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
-  auto sender = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -865,7 +865,7 @@ void sliderMoved( int value )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
-  auto sender = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -915,7 +915,7 @@ void sliderPressed()
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
-  auto sender = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -963,7 +963,7 @@ void sliderReleased()
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
-  auto sender = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1011,7 +1011,7 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
-  auto sender = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

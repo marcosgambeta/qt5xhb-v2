@@ -1297,8 +1297,8 @@ void iconSizeChanged( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
-  auto sender = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1347,7 +1347,7 @@ void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
-  auto sender = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

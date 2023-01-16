@@ -619,8 +619,8 @@ void anchorClicked( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -669,8 +669,8 @@ void backwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -719,7 +719,7 @@ void forwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -769,7 +769,7 @@ void highlighted( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -819,7 +819,7 @@ void highlighted( const QString & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -869,7 +869,7 @@ void historyChanged()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -917,7 +917,7 @@ void sourceChanged( const QUrl & src )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
-  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

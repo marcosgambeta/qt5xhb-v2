@@ -201,8 +201,8 @@ void editingFinished()
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -253,7 +253,7 @@ void keySequenceChanged( const QKeySequence & keySequence )
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

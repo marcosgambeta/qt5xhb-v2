@@ -350,8 +350,8 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ONCURRENTCHANGED )
 {
-  auto sender = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QStackedWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -400,7 +400,7 @@ void widgetRemoved( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ONWIDGETREMOVED )
 {
-  auto sender = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QStackedWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

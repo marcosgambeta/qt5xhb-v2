@@ -1157,8 +1157,8 @@ void currentIdChanged( int id )
 */
 HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 {
-  auto sender = (QWizard *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWizard*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1207,7 +1207,7 @@ void customButtonClicked( int which )
 */
 HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
-  auto sender = (QWizard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWizard*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1257,7 +1257,7 @@ void helpRequested()
 */
 HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 {
-  auto sender = (QWizard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWizard*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1305,7 +1305,7 @@ void pageAdded( int id )
 */
 HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 {
-  auto sender = (QWizard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWizard*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1355,7 +1355,7 @@ void pageRemoved( int id )
 */
 HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 {
-  auto sender = (QWizard *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWizard*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -849,8 +849,8 @@ void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -901,7 +901,7 @@ void currentRowChanged( int currentRow )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -951,7 +951,7 @@ void currentTextChanged( const QString & currentText )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1001,7 +1001,7 @@ void itemActivated( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1051,7 +1051,7 @@ void itemChanged( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1101,8 +1101,8 @@ void itemClicked( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1151,7 +1151,7 @@ void itemDoubleClicked( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1201,7 +1201,7 @@ void itemEntered( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1251,7 +1251,7 @@ void itemPressed( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1301,8 +1301,8 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
-  auto sender = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

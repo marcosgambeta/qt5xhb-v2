@@ -290,8 +290,8 @@ void angleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
-  auto sender = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -338,7 +338,7 @@ void axisChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
-  auto sender = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -386,7 +386,7 @@ void originChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
-  auto sender = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
