@@ -516,7 +516,7 @@ void selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 {
-  auto sender = (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardAbstractInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -566,7 +566,7 @@ void selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type ty
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHANGED )
 {
-  auto sender = (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardAbstractInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -618,7 +618,7 @@ void selectionListsChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 {
-  auto sender = (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardAbstractInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

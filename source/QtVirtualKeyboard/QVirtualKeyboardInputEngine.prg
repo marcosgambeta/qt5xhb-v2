@@ -529,8 +529,8 @@ void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -585,7 +585,7 @@ void activeKeyChanged( Qt::Key key )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -635,7 +635,7 @@ void previousKeyChanged( Qt::Key key )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -685,7 +685,7 @@ void inputMethodChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -733,7 +733,7 @@ void inputMethodReset()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -781,7 +781,7 @@ void inputMethodUpdate()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -829,7 +829,7 @@ void inputModesChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -877,7 +877,7 @@ void inputModeChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -925,7 +925,7 @@ void patternRecognitionModesChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -973,7 +973,7 @@ void wordCandidateListModelChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1021,8 +1021,8 @@ void wordCandidateListVisibleHintChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

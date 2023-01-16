@@ -269,8 +269,8 @@ void countChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 {
-  auto sender = (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -317,7 +317,7 @@ void activeItemChanged( int index )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
 {
-  auto sender = (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -367,7 +367,7 @@ void itemSelected( int index )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
 {
-  auto sender = (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

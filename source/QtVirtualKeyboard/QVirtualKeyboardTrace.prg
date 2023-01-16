@@ -538,8 +538,8 @@ void traceIdChanged( int traceId )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 {
-  auto sender = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -588,7 +588,7 @@ void channelsChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 {
-  auto sender = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -636,7 +636,7 @@ void lengthChanged( int length )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 {
-  auto sender = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -686,7 +686,7 @@ void finalChanged( bool isFinal )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 {
-  auto sender = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -736,7 +736,7 @@ void canceledChanged( bool isCanceled )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 {
-  auto sender = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -786,7 +786,7 @@ void opacityChanged( qreal opacity )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
 {
-  auto sender = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
