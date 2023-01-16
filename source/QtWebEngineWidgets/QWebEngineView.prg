@@ -709,8 +709,8 @@ void loadStarted()
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -761,7 +761,7 @@ void loadProgress( int progress )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -815,7 +815,7 @@ void loadFinished( bool b )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -869,7 +869,7 @@ void titleChanged( const QString & title )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -923,7 +923,7 @@ void selectionChanged()
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -975,7 +975,7 @@ void urlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1029,7 +1029,7 @@ void iconUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
