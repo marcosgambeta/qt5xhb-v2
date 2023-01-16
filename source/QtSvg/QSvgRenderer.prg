@@ -520,8 +520,8 @@ void repaintNeeded()
 */
 HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
 {
-  auto sender = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
