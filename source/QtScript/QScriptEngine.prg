@@ -1085,8 +1085,8 @@ void signalHandlerException( const QScriptValue & exception )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
 {
-  auto sender = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QScriptEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
