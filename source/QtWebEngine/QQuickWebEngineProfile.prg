@@ -990,8 +990,8 @@ void cachePathChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1042,7 +1042,7 @@ void httpAcceptLanguageChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1094,7 +1094,7 @@ void httpCacheMaximumSizeChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1146,7 +1146,7 @@ void httpCacheTypeChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1198,7 +1198,7 @@ void httpUserAgentChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1250,7 +1250,7 @@ void offTheRecordChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1302,7 +1302,7 @@ void persistentCookiesPolicyChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1354,7 +1354,7 @@ void persistentStoragePathChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1406,7 +1406,7 @@ void spellCheckEnabledChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1458,7 +1458,7 @@ void spellCheckLanguagesChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1510,7 +1510,7 @@ void storageNameChanged()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto sender = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQuickWebEngineProfile*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
