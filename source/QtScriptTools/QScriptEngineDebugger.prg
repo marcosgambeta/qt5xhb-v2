@@ -362,8 +362,8 @@ void evaluationResumed()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 {
-  auto sender = (QScriptEngineDebugger *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QScriptEngineDebugger*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -410,8 +410,8 @@ void evaluationSuspended()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 {
-  auto sender = (QScriptEngineDebugger *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QScriptEngineDebugger*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
