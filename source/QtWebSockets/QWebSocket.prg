@@ -1087,8 +1087,8 @@ void aboutToClose()
 HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -1139,7 +1139,7 @@ void connected()
 HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1191,7 +1191,7 @@ void disconnected()
 HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   bool result = false;
 
@@ -1243,7 +1243,7 @@ void stateChanged( QAbstractSocket::SocketState state )
 HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1297,7 +1297,7 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1353,7 +1353,7 @@ void readChannelFinished()
 HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1405,7 +1405,7 @@ void textFrameReceived( const QString & frame, bool isLastFrame )
 HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1461,7 +1461,7 @@ void binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
 HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1517,7 +1517,7 @@ void textMessageReceived( const QString & message )
 HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1571,7 +1571,7 @@ void binaryMessageReceived( const QByteArray & message )
 HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1625,7 +1625,7 @@ void error( QAbstractSocket::SocketError error )
 HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1679,7 +1679,7 @@ void pong( quint64 elapsedTime, const QByteArray & payload )
 HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1735,7 +1735,7 @@ void bytesWritten( qint64 bytes )
 HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1789,7 +1789,7 @@ void sslErrors( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

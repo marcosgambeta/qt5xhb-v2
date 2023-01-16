@@ -760,8 +760,8 @@ void acceptError( QAbstractSocket::SocketError socketError )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -814,7 +814,7 @@ void serverError( QWebSocketProtocol::CloseCode closeCode )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -868,7 +868,7 @@ void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -922,7 +922,7 @@ void newConnection()
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -974,7 +974,7 @@ void peerVerifyError( const QSslError & error )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1028,7 +1028,7 @@ void sslErrors( const QList<QSslError> & errors )
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1104,7 +1104,7 @@ void closed()
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto sender = (QWebSocketServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
