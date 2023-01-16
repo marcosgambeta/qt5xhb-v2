@@ -614,8 +614,8 @@ void valueChanged( int value )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWinTaskbarProgress*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -668,7 +668,7 @@ void minimumChanged( int minimum )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWinTaskbarProgress*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -722,7 +722,7 @@ void maximumChanged( int maximum )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWinTaskbarProgress*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -776,7 +776,7 @@ void visibilityChanged( bool visible )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWinTaskbarProgress*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -830,7 +830,7 @@ void pausedChanged( bool paused )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QWinTaskbarProgress*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -884,8 +884,8 @@ void stoppedChanged( bool stopped )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QWinTaskbarProgress*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
