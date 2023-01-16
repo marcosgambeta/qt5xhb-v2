@@ -918,8 +918,8 @@ void beforeDelete( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
-  auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -968,7 +968,7 @@ void beforeInsert( QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
-  auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1018,7 +1018,7 @@ void beforeUpdate( int row, QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
-  auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -1070,7 +1070,7 @@ void primeInsert( int row, QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
-  auto sender = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

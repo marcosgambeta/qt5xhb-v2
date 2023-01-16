@@ -718,8 +718,8 @@ void notification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 {
-  auto sender = (QSqlDriver *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSqlDriver*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -768,8 +768,8 @@ void notification( const QString & name, QSqlDriver::NotificationSource source, 
 */
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 {
-  auto sender = (QSqlDriver *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QSqlDriver*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
