@@ -492,8 +492,8 @@ void progressChanged( qreal progress )
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {
-  auto sender = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -542,7 +542,7 @@ void statusChanged( QQmlComponent::Status status )
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
 {
-  auto sender = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

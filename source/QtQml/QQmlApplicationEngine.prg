@@ -245,8 +245,8 @@ void objectCreated( QObject * obj, const QUrl & url )
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

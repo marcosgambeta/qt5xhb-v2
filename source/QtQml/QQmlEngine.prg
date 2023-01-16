@@ -820,8 +820,8 @@ void quit()
 */
 HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
 {
-  auto sender = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQmlEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

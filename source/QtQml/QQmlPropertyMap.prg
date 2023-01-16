@@ -296,8 +296,8 @@ void valueChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
 {
-  auto sender = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

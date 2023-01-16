@@ -507,8 +507,8 @@ void valueChanged()
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 {
-  auto sender = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QQmlExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
