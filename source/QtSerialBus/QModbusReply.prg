@@ -284,8 +284,8 @@ void finished()
 HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -336,7 +336,7 @@ void errorOccurred( QModbusDevice::Error error )
 HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

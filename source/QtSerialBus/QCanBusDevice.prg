@@ -567,8 +567,8 @@ void errorOccurred( QCanBusDevice::CanBusError )
 HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCanBusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
@@ -621,7 +621,7 @@ void framesReceived()
 HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCanBusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -673,7 +673,7 @@ void framesWritten( qint64 framesCount )
 HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCanBusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 
@@ -727,7 +727,7 @@ void stateChanged( QCanBusDevice::CanBusDeviceState state )
 HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCanBusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
   bool result = false;
 

@@ -157,8 +157,8 @@ void timeoutChanged( int newTimeout )
 HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QModbusClient*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )

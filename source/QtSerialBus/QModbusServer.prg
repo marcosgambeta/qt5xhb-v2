@@ -162,8 +162,8 @@ void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
 HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
-  
+  auto sender = qobject_cast<QModbusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   bool result = false;
 
   if( sender != nullptr )
