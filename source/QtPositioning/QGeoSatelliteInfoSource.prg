@@ -403,14 +403,14 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
-              for( auto i = 0; i < arg1.count(); i++ )
+              for( const auto & item : arg1 )
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QGeoSatelliteInfo(arg1[i]));
+                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QGeoSatelliteInfo(item));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
@@ -478,14 +478,14 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
-              for( auto i = 0; i < arg1.count(); i++ )
+              for( const auto & item : arg1 )
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QGeoSatelliteInfo(arg1[i]));
+                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QGeoSatelliteInfo(item));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
