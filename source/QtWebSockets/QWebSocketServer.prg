@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -1060,13 +1060,13 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QSslError *) new QSslError ( arg1 [i] ) );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, new QSslError(arg1[i]));
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
-  
+
   bool result = false;
 
   if( sender != nullptr )
