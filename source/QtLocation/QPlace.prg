@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPLACE_SETCATEGORIES )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QPlaceCategory*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QPlaceCategory*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->setCategories( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QPLACE_SETCONTACTDETAILS )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QPlaceContactDetail*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << *static_cast<QPlaceContactDetail*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       obj->setContactDetails( PQSTRING(1), par2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

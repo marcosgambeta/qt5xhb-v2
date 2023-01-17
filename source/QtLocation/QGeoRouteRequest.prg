@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
     int nLen1 = hb_arrayLen(aList1);
     for (i1=0;i1<nLen1;i1++)
     {
-      par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) );
     }
     auto obj = new QGeoRouteRequest( par1 );
     Qt5xHb::returnNewObject( obj, true );
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETWAYPOINTS )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QGeoCoordinate*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QGeoCoordinate*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->setWaypoints( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETEXCLUDEAREAS )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QGeoRectangle*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QGeoRectangle*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->setExcludeAreas( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

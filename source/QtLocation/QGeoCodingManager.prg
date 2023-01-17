@@ -342,8 +342,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGER");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
-            PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
+            PHB_ITEM pArg3 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg3));
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
