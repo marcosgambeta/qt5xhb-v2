@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
     int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << static_cast<QAction*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      par1 << static_cast<QAction*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
     }
     QAction * ptr = QMenu::exec( par1, *PQPOINT(2), OPQACTION( 3, 0 ), OPQWIDGET( 4, 0 ) );
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -1323,7 +1323,7 @@ void triggered( QAction * action )
 HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 {
   auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
-  
+
   bool result = false;
 
   if( sender != nullptr )

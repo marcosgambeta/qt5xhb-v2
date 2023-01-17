@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QUrl*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QUrl*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->setSidebarUrls( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1816,7 +1816,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1916,7 +1916,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1969,8 +1969,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             for( auto i = 0; i < arg1.count(); i++ )
             {
-              PHB_ITEM pTempItem = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1 [i]) );
-              hb_arrayAddForward( pArg1, pTempItem );
+              PHB_ITEM pTempItem = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1[i]));
+              hb_arrayAddForward(pArg1, pTempItem);
               hb_itemRelease(pTempItem);
             }
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -2022,7 +2022,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2122,7 +2122,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QURL");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -2132,13 +2132,13 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QUrl *) new QUrl ( arg1 [i] ) );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, new QUrl(arg1[i]));
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -2223,7 +2223,7 @@ void directoryUrlEntered( const QUrl & directory )
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
-  
+
   bool result = false;
 
   if( sender != nullptr )
