@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QBarSet*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QBarSet*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->append( par1 ) );
     }
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -644,13 +644,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QBarSet *) arg1 [i] );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, arg1[i]);
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -720,13 +720,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QBarSet *) arg1 [i] );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, arg1[i]);
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
@@ -950,8 +950,8 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             PHB_ITEM pArg3 = Qt5xHb::Signals_return_qobject(arg3, "QBARSET");
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);

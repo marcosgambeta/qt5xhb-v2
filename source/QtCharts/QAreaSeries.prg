@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPOINTF");
-            PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
+            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
-            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1298,7 +1298,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1352,7 +1352,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
-            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

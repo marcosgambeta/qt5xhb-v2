@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QPieSlice*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QPieSlice*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->append( par1 ) );
     }
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QPIESERIES_SLICES )
     {
 #endif
       const QList<QPieSlice *> list = obj->slices();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -869,13 +869,13 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QPieSlice *) arg1 [i] );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, arg1[i]);
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
-            PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
+            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -1269,13 +1269,13 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QPieSlice *) arg1 [i] );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, arg1[i]);
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else

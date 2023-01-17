@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QCandlestickSet*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QCandlestickSet*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->append( par1 ) );
     }
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QCandlestickSet*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QCandlestickSet*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->remove( par1 ) );
     }
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -1162,13 +1162,13 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QCandlestickSet *) arg1 [i] );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, arg1[i]);
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET");
+            PHB_DYNS pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
@@ -1238,13 +1238,13 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
-                hb_itemCopy( pTempObject, hb_stackReturnItem() );
+                hb_itemCopy(pTempObject, hb_stackReturnItem());
                 PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr( pTempItem, (QCandlestickSet *) arg1 [i] );
-                hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-                hb_arrayAddForward( pArg1, pTempObject );
-                hb_itemRelease( pTempObject );
-                hb_itemRelease( pTempItem );
+                hb_itemPutPtr(pTempItem, arg1[i]);
+                hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                hb_arrayAddForward(pArg1, pTempObject);
+                hb_itemRelease(pTempObject);
+                hb_itemRelease(pTempItem);
               }
             }
             else
@@ -1620,7 +1620,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSERIES");
-            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
