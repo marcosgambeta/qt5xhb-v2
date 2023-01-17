@@ -1801,8 +1801,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr(pTempItem, new QRectF(arg1[i]));
+                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QRectF(arg1[i]));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
