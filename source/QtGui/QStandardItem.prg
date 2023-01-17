@@ -1631,7 +1631,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       obj->insertRow( PINT(1), par2 );
     }
@@ -1678,7 +1678,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       obj->insertColumn( PINT(1), par2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1709,7 +1709,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       obj->insertRows( PINT(1), par2 );
     }
@@ -1884,7 +1884,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->appendRow( par1 );
     }
@@ -1931,7 +1931,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->appendRows( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1964,7 +1964,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->appendColumn( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

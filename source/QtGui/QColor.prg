@@ -2436,7 +2436,7 @@ static QVariant toVariant( const QColor & )
 */
 void QColor_toVariant2()
 {
-  QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
   QVariant * variant = new QVariant();
   variant->setValue<QColor>( *color );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -2468,7 +2468,7 @@ HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
     QColor * color = new QColor( variant->value<QColor>() );
     Qt5xHb::createReturnClass( color, "QCOLOR", true);
   }

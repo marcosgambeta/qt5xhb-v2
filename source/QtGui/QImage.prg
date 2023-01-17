@@ -1777,7 +1777,7 @@ static QVariant toVariant( const QImage & )
 */
 void QImage_toVariant2()
 {
-  QImage * image = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QImage * image = (QImage *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
   QVariant * variant = new QVariant();
   variant->setValue<QImage>( *image );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -1809,7 +1809,7 @@ HB_FUNC_STATIC( QIMAGE_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
     QImage * image = new QImage( variant->value<QImage>() );
     Qt5xHb::createReturnClass( image, "QIMAGE", true);
   }

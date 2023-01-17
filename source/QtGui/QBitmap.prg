@@ -235,7 +235,7 @@ static QVariant toVariant( const QBitmap & )
 */
 void QBitmap_toVariant2()
 {
-  QBitmap * bitmap = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QBitmap * bitmap = (QBitmap *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
   QVariant * variant = new QVariant();
   variant->setValue<QBitmap>( *bitmap );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QBITMAP_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
     QBitmap * bitmap = new QBitmap( variant->value<QBitmap>() );
     Qt5xHb::createReturnClass( bitmap, "QBITMAP", true);
   }

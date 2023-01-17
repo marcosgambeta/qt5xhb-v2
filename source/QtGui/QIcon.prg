@@ -609,7 +609,7 @@ static QVariant toVariant( const QIcon & )
 */
 void QIcon_toVariant2()
 {
-  QIcon * icon = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QIcon * icon = (QIcon *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
   QVariant * variant = new QVariant();
   variant->setValue<QIcon>( *icon );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QICON_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
     QIcon * icon = new QIcon( variant->value<QIcon>() );
     Qt5xHb::createReturnClass( icon, "QICON", true);
   }

@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
     int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *static_cast<QPoint*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      par1 << *static_cast<QPoint*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
     }
     auto obj = new QPolygon( par1 );
     Qt5xHb::returnNewObject( obj, true );

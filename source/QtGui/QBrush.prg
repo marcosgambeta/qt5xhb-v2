@@ -607,7 +607,7 @@ static QVariant toVariant( const QBrush & )
 */
 void QBrush_toVariant2()
 {
-  QBrush * brush = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QBrush * brush = (QBrush *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
   QVariant * variant = new QVariant();
   variant->setValue<QBrush>( *brush );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QBRUSH_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0) );
     QBrush * brush = new QBrush( variant->value<QBrush>() );
     Qt5xHb::createReturnClass( brush, "QBRUSH", true);
   }
