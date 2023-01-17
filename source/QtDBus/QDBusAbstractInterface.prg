@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
       int nLen3 = hb_arrayLen( aList3 );
       for( auto i3 = 0; i3 < nLen3; i3++ )
       {
-        par3 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) ) );
+        par3 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0) ) );
       }
       auto ptr = new QDBusMessage( obj->callWithArgumentList( static_cast<QDBus::CallMode>( hb_parni(1) ), PQSTRING(2), par3 ) );
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->callWithCallback( PQSTRING(1), par2, PQOBJECT(3), PCONSTCHAR(4), PCONSTCHAR(5) ) );
     }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->callWithCallback( PQSTRING(1), par2, PQOBJECT(3), PCONSTCHAR(4) ) );
     }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       auto ptr = new QDBusPendingCall( obj->asyncCallWithArgumentList( PQSTRING(1), par2 ) );
       Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
