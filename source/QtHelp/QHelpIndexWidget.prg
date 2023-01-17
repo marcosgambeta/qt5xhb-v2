@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXWIDGET");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
-            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
