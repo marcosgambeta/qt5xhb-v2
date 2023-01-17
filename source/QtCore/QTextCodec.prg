@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
   {
 #endif
     const QList<QByteArray> list = QTextCodec::availableCodecs();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {

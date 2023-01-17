@@ -958,8 +958,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1012,10 +1012,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
-            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1070,8 +1070,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1124,8 +1124,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1178,10 +1178,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
-            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1236,8 +1236,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1341,9 +1341,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1588,8 +1588,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1642,10 +1642,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
-            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1700,8 +1700,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1754,8 +1754,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1808,10 +1808,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
-            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1866,8 +1866,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

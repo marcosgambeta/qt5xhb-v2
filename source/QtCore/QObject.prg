@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
     {
 #endif
       const QObjectList & list = obj->children();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
     {
 #endif
       const QList<QByteArray> list = obj->dynamicPropertyNames();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     if( obj != nullptr )
     {
       const QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     if( obj != nullptr )
     {
       const QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     if( obj != nullptr )
     {
       const QList<QObject *> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -2102,7 +2102,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
       if( pDynSym != nullptr )
       {
@@ -2124,7 +2124,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
       if( pDynSym != nullptr )
       {
@@ -2178,7 +2178,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
       if( pDynSym != nullptr )
       {
@@ -2282,7 +2282,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOBJECT");
-            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

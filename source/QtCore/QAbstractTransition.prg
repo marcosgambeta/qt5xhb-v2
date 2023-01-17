@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QAbstractState*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QAbstractState*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       obj->setTargetStates( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
