@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1455,7 +1455,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1563,7 +1563,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1671,7 +1671,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1725,7 +1725,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1779,7 +1779,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1833,7 +1833,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1887,7 +1887,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1941,7 +1941,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1995,7 +1995,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2049,7 +2049,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2103,7 +2103,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2157,7 +2157,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGAMEPADKEYNAVIGATION");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
