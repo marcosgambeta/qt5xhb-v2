@@ -332,10 +332,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
-            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
-            PHB_ITEM pArg4 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg4) );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
+            PHB_ITEM pArg4 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg4));
             hb_vmEvalBlockV(cb, 5, pSender, pArg1, pArg2, pArg3, pArg4);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -486,10 +486,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
-            PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
-            PHB_ITEM pArg4 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg4) );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            PHB_ITEM pArg3 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg3));
+            PHB_ITEM pArg4 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg4));
             hb_vmEvalBlockV(cb, 5, pSender, pArg1, pArg2, pArg3, pArg4);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAXSCRIPT");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
