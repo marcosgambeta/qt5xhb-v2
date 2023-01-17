@@ -1644,8 +1644,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr(pTempItem, new QColor(arg1[i]));
+                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QColor(arg1[i]));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
@@ -1720,8 +1719,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemNew(nullptr);
-                hb_itemPutPtr(pTempItem, new QLinearGradient(arg1[i]));
+                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QLinearGradient(arg1[i]));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
