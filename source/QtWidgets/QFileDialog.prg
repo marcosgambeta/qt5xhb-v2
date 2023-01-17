@@ -1967,9 +1967,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            for( const auto & item : arg1 )
             {
-              PHB_ITEM pTempItem = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1[i]));
+              PHB_ITEM pTempItem = hb_itemPutC(nullptr, QSTRINGTOSTRING(item));
               hb_arrayAddForward(pArg1, pTempItem);
               hb_itemRelease(pTempItem);
             }
@@ -2126,14 +2126,14 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
-              for( auto i = 0; i < arg1.count(); i++ )
+              for( const auto & item : arg1 )
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
                 PHB_ITEM pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QUrl(arg1[i]));
+                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QUrl(item));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
