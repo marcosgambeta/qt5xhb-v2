@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QMediaContent*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QMediaContent*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->addMedia( par1 ) );
     }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA )
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QMediaContent*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << *static_cast<QMediaContent*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
       }
       RBOOL( obj->insertMedia( PINT(1), par2 ) );
     }
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1020,8 +1020,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1072,8 +1072,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1124,8 +1124,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1176,8 +1176,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1228,8 +1228,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYLIST");
-            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
