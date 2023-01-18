@@ -136,7 +136,7 @@ void createReturnClass(const void * ptr, const char * classname, bool destroy)
 /*
   converte um objeto QList<int> em uma array do [x]Harbour
 */
-void convert_qlist_int_to_array(const QList<int> list)
+void convert_qlist_int_to_array(const QList<int> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -151,7 +151,7 @@ void convert_qlist_int_to_array(const QList<int> list)
 /*
   converte um objeto QList<qint8> em uma array do [x]Harbour
 */
-void convert_qlist_qint8_to_array(const QList<qint8> list)
+void convert_qlist_qint8_to_array(const QList<qint8> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -166,7 +166,7 @@ void convert_qlist_qint8_to_array(const QList<qint8> list)
 /*
   converte um objeto QList<qint16> em uma array do [x]Harbour
 */
-void convert_qlist_qint16_to_array(const QList<qint16> list)
+void convert_qlist_qint16_to_array(const QList<qint16> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -181,7 +181,7 @@ void convert_qlist_qint16_to_array(const QList<qint16> list)
 /*
   converte um objeto QList<qint32> em uma array do [x]Harbour
 */
-void convert_qlist_qint32_to_array(const QList<qint32> list)
+void convert_qlist_qint32_to_array(const QList<qint32> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -196,7 +196,7 @@ void convert_qlist_qint32_to_array(const QList<qint32> list)
 /*
   converte um objeto QList<qint64> em uma array do [x]Harbour
 */
-void convert_qlist_qint64_to_array(const QList<qint64> list)
+void convert_qlist_qint64_to_array(const QList<qint64> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -211,7 +211,7 @@ void convert_qlist_qint64_to_array(const QList<qint64> list)
 /*
   converte um objeto QList<quint8> em uma array do [x]Harbour
 */
-void convert_qlist_quint8_to_array(const QList<quint8> list)
+void convert_qlist_quint8_to_array(const QList<quint8> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -226,7 +226,7 @@ void convert_qlist_quint8_to_array(const QList<quint8> list)
 /*
   converte um objeto QList<quint16> em uma array do [x]Harbour
 */
-void convert_qlist_quint16_to_array(const QList<quint16> list)
+void convert_qlist_quint16_to_array(const QList<quint16> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -241,7 +241,7 @@ void convert_qlist_quint16_to_array(const QList<quint16> list)
 /*
   converte um objeto QList<quint32> em uma array do [x]Harbour
 */
-void convert_qlist_quint32_to_array(const QList<quint32> list)
+void convert_qlist_quint32_to_array(const QList<quint32> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -256,7 +256,7 @@ void convert_qlist_quint32_to_array(const QList<quint32> list)
 /*
   converte um objeto QList<quint64> em uma array do [x]Harbour
 */
-void convert_qlist_quint64_to_array(const QList<quint64> list)
+void convert_qlist_quint64_to_array(const QList<quint64> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -271,7 +271,7 @@ void convert_qlist_quint64_to_array(const QList<quint64> list)
 /*
   converte um objeto QList<qreal> em uma array do [x]Harbour
 */
-void convert_qlist_qreal_to_array(const QList<qreal> list)
+void convert_qlist_qreal_to_array(const QList<qreal> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -286,7 +286,7 @@ void convert_qlist_qreal_to_array(const QList<qreal> list)
 /*
   converte um objeto QList<double> em uma array do [x]Harbour
 */
-void convert_qlist_double_to_array(const QList<double> list)
+void convert_qlist_double_to_array(const QList<double> & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -301,7 +301,7 @@ void convert_qlist_double_to_array(const QList<double> list)
 /*
   converte um objeto QStringList (QList<QString>) em uma array do [x]Harbour
 */
-void convert_qstringlist_to_array(const QStringList list)
+void convert_qstringlist_to_array(const QStringList & list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
@@ -600,7 +600,7 @@ QVariantList convert_array_parameter_to_qvariantlist(int numpar)
 /*
   converte um objeto QVariantList/QList<QVariant> em uma array do [x]Harbour
 */
-void convert_qvariantlist_to_array(const QVariantList list)
+void convert_qvariantlist_to_array(const QVariantList & list)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
 
