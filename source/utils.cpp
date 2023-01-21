@@ -529,18 +529,11 @@ bool isClassDerivedFrom(const char * className1, const char * className2)
 
 /*
 */
-bool isObjectDerivedFrom(int numpar, const QString className)
+bool isObjectDerivedFrom(int numpar, const QString & className)
 {
   PHB_ITEM pItem = hb_param(numpar, HB_IT_OBJECT);
 
-  if( pItem != nullptr )
-  {
-    return hb_clsIsParent(hb_objGetClass(pItem), static_cast<const char*>(className.toUpper().toLatin1().data()));
-  }
-  else
-  {
-    return false;
-  }
+  return (pItem != nullptr) ? hb_clsIsParent(hb_objGetClass(pItem), className.toUpper().toLatin1().data()) : false;
 }
 
 /*
