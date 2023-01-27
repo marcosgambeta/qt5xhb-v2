@@ -4,7 +4,7 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/HAbstractListModelMoc.cpp             : $(QT5XHB_SRC_DIR)/QtCore/HAbstractListModel.h
+$(QT5XHB_OBJ_DIR)/HAbstractListModelMoc.cpp             : $(QT5XHB_SRC_DIR)/QtCore/HAbstractListModel.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/HAbstractListModelV2Moc.cpp           : $(QT5XHB_SRC_DIR)/QtCore/HAbstractListModelV2.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
