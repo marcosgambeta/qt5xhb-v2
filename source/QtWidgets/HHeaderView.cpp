@@ -6,7 +6,7 @@
 
 */
 
-#include "HHeaderView.h"
+#include "HHeaderView.hpp"
 
 HHeaderView::HHeaderView( Qt::Orientation orientation, QWidget *parent ) : QHeaderView( orientation, parent )
 {

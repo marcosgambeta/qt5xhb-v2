@@ -32,7 +32,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include "HHeaderView.h"
+#include "HHeaderView.hpp"
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
