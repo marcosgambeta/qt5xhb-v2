@@ -38,7 +38,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include "HAbstractListModelV2.h"
+#include "HAbstractListModelV2.hpp"
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
