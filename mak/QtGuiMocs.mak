@@ -4,5 +4,5 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/HCodeBlockValidatorMoc.cpp              : $(QT5XHB_SRC_DIR)/QtGui/HCodeBlockValidator.h
+$(QT5XHB_OBJ_DIR)/HCodeBlockValidatorMoc.cpp              : $(QT5XHB_SRC_DIR)/QtGui/HCodeBlockValidator.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
