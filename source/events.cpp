@@ -479,8 +479,8 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
   hb_retni( s_events->active() );
 }
 
-#include "hbvm.h"
-#include "hbinit.h"
+#include <hbvm.h>
+#include <hbinit.h>
 
 static void qt5xhb_events_init( void * cargo )
 {
@@ -508,5 +508,5 @@ HB_CALL_ON_STARTUP_END( _qt5xhb_events_init_ )
   #pragma startup _qt5xhb_events_init_
 #elif defined( HB_DATASEG_STARTUP )
   #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt5xhb_events_init_ )
-  #include "hbiniseg.h"
+  #include <hbiniseg.h>
 #endif
