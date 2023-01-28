@@ -9,15 +9,14 @@
 #ifndef QT5XHB_COMMON_H
 #define QT5XHB_COMMON_H
 
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbapierr.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#include "hbdate.h"
-
+#include <hbapi.h>
+#include <hbapiitm.h>
+#include <hbapierr.h>
+#include <hbvm.h>
+#include <hbstack.h>
+#include <hbdate.h>
 #ifndef __XHARBOUR__
-#include "hbapicls.h"
+#include <hbapicls.h>
 #endif
 
 #define ISOPTLOG(n) (HB_ISLOG(n)||HB_ISNIL(n))
