@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
-    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
   }
 

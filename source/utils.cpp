@@ -345,7 +345,7 @@ void storePointerAndFlag(void * pointer, bool flag)
 {
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr(nullptr, pointer);
-  hb_objSendMsg(self, "_pointer", 1, ptr);
+  hb_objSendMsg(self, "_POINTER", 1, ptr);
   hb_itemRelease(ptr);
   PHB_ITEM des = hb_itemPutL(nullptr, flag);
   hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
@@ -362,7 +362,7 @@ void returnNewObject(void * pointer, bool flag)
 {
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr(nullptr, pointer);
-  hb_objSendMsg(self, "_pointer", 1, ptr);
+  hb_objSendMsg(self, "_POINTER", 1, ptr);
   hb_itemRelease(ptr);
   PHB_ITEM des = hb_itemPutL(nullptr, flag);
   hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
