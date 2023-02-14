@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(nullptr, false);
-    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(nullptr, false);
-    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
   else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_SETSELFDESTRUCTION )
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
-    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
   else
