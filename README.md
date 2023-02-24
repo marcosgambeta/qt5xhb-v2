@@ -1,6 +1,6 @@
 # Qt5xHb v2
 
-Bindings libraries for Harbour/xHarbour and Qt Framework 5.
+Bindings libraries for Harbour++/Harbour/xHarbour and Qt Framework 5.
 
 ## Requisites
 
