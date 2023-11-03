@@ -553,11 +553,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
                                                               &QSoundEffect::sourceChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -601,11 +601,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
                                                               &QSoundEffect::loopCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -649,11 +649,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
                                                               &QSoundEffect::loopsRemainingChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -697,11 +697,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
                                                               &QSoundEffect::volumeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -745,11 +745,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
                                                               &QSoundEffect::mutedChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -793,11 +793,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
                                                               &QSoundEffect::loadedChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -841,11 +841,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
                                                               &QSoundEffect::playingChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -889,11 +889,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
                                                               &QSoundEffect::statusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -937,11 +937,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
                                                               &QSoundEffect::categoryChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSOUNDEFFECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

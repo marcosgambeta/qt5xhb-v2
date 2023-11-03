@@ -117,12 +117,12 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
                                                               &QMediaAvailabilityControl::availabilityChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QMultimedia::AvailabilityStatus arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAAVAILABILITYCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAAVAILABILITYCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

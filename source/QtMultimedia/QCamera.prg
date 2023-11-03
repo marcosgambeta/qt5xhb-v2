@@ -1026,12 +1026,12 @@ HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
                                                               &QCamera::captureModeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QCamera::CaptureModes arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1076,12 +1076,12 @@ HB_FUNC_STATIC( QCAMERA_ONERROR )
                                                               QOverload<QCamera::Error>::of(&QCamera::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QCamera::Error arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1126,11 +1126,11 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKFAILED )
                                                               &QCamera::lockFailed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1174,13 +1174,13 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
                                                               QOverload<QCamera::LockStatus,QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (QCamera::LockStatus arg1, QCamera::LockChangeReason arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1226,14 +1226,14 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
                                                               QOverload<QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (QCamera::LockType arg1, QCamera::LockStatus arg2, QCamera::LockChangeReason arg3) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
-            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, static_cast<int>(arg3));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
+            auto pArg3 = hb_itemPutNI(nullptr, static_cast<int>(arg3));
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1280,11 +1280,11 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKED )
                                                               &QCamera::locked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1328,12 +1328,12 @@ HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
                                                               &QCamera::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QCamera::State arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1378,12 +1378,12 @@ HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
                                                               &QCamera::statusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QCamera::Status arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

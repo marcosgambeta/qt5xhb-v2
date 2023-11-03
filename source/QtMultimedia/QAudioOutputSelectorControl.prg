@@ -228,12 +228,12 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
                                                               &QAudioOutputSelectorControl::activeOutputChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOOUTPUTSELECTORCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOOUTPUTSELECTORCONTROL");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -278,11 +278,11 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
                                                               &QAudioOutputSelectorControl::availableOutputsChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOOUTPUTSELECTORCONTROL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOOUTPUTSELECTORCONTROL");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

@@ -535,12 +535,12 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
                                                               &QAudioDecoder::bufferAvailableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -585,11 +585,11 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
                                                               &QAudioDecoder::bufferReady,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -633,12 +633,12 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
                                                               &QAudioDecoder::durationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -683,12 +683,12 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
                                                               QOverload<QAudioDecoder::Error>::of(&QAudioDecoder::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QAudioDecoder::Error arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -733,11 +733,11 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
                                                               &QAudioDecoder::finished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -781,12 +781,12 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
                                                               &QAudioDecoder::formatChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QAudioFormat & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOFORMAT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOFORMAT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -831,12 +831,12 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
                                                               &QAudioDecoder::positionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -881,11 +881,11 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
                                                               &QAudioDecoder::sourceChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -929,12 +929,12 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
                                                               &QAudioDecoder::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QAudioDecoder::State arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

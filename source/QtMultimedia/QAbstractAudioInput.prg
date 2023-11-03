@@ -600,12 +600,12 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONERRORCHANGED )
                                                               &QAbstractAudioInput::errorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QAudio::Error arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOINPUT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOINPUT");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -650,12 +650,12 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONSTATECHANGED )
                                                               &QAbstractAudioInput::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QAudio::State arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOINPUT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOINPUT");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -700,11 +700,11 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONNOTIFY )
                                                               &QAbstractAudioInput::notify,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOINPUT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOINPUT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

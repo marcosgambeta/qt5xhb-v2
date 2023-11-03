@@ -677,12 +677,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
                                                               &QMediaPlayerControl::audioAvailableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -727,12 +727,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
                                                               &QMediaPlayerControl::availablePlaybackRangesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QMediaTimeRange & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIATIMERANGE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIATIMERANGE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -777,12 +777,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
                                                               &QMediaPlayerControl::bufferStatusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -827,12 +827,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
                                                               &QMediaPlayerControl::durationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -877,13 +877,13 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
                                                               &QMediaPlayerControl::error,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, const QString & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -929,12 +929,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
                                                               &QMediaPlayerControl::mediaChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QMediaContent & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIACONTENT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIACONTENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -979,12 +979,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
                                                               &QMediaPlayerControl::mediaStatusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QMediaPlayer::MediaStatus arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1029,12 +1029,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
                                                               &QMediaPlayerControl::mutedChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1079,12 +1079,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
                                                               &QMediaPlayerControl::playbackRateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1129,12 +1129,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
                                                               &QMediaPlayerControl::positionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1179,12 +1179,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
                                                               &QMediaPlayerControl::seekableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1229,12 +1229,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
                                                               &QMediaPlayerControl::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QMediaPlayer::State arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1279,12 +1279,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
                                                               &QMediaPlayerControl::videoAvailableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1329,12 +1329,12 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
                                                               &QMediaPlayerControl::volumeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

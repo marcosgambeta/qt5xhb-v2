@@ -246,11 +246,11 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
                                                               &QVideoDeviceSelectorControl::devicesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIDEODEVICESELECTORCONTROL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIDEODEVICESELECTORCONTROL");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -294,12 +294,12 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
                                                               QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIDEODEVICESELECTORCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIDEODEVICESELECTORCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -344,12 +344,12 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
                                                               QOverload<const QString &>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIDEODEVICESELECTORCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIDEODEVICESELECTORCONTROL");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

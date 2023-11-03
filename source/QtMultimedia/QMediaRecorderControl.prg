@@ -385,12 +385,12 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
                                                               &QMediaRecorderControl::actualLocationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -435,12 +435,12 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
                                                               &QMediaRecorderControl::durationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -485,13 +485,13 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONERROR )
                                                               &QMediaRecorderControl::error,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, const QString & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -537,12 +537,12 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
                                                               &QMediaRecorderControl::mutedChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -587,12 +587,12 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
                                                               &QMediaRecorderControl::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QMediaRecorder::State arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -637,12 +637,12 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
                                                               &QMediaRecorderControl::statusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QMediaRecorder::Status arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -687,12 +687,12 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
                                                               &QMediaRecorderControl::volumeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIARECORDERCONTROL");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

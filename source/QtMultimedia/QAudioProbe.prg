@@ -170,12 +170,12 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
                                                               &QAudioProbe::audioBufferProbed,
                                                               [sender, indexOfCodeBlock]
                                                               (const QAudioBuffer & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOBUFFER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOBUFFER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -220,11 +220,11 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
                                                               &QAudioProbe::flush,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

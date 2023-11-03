@@ -358,12 +358,12 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
                                                               QOverload<bool>::of(&QMediaObject::availabilityChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -408,12 +408,12 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
                                                               QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaObject::availabilityChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (QMultimedia::AvailabilityStatus arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -458,12 +458,12 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
                                                               &QMediaObject::metaDataAvailableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -508,11 +508,11 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
                                                               QOverload<>::of(&QMediaObject::metaDataChanged),
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -556,13 +556,13 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
                                                               QOverload<const QString &,const QVariant &>::of(&QMediaObject::metaDataChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1, const QVariant & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -608,12 +608,12 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
                                                               &QMediaObject::notifyIntervalChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

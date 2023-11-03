@@ -188,11 +188,11 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
                                                               &QAbstractVideoFilter::activeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTVIDEOFILTER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTVIDEOFILTER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
