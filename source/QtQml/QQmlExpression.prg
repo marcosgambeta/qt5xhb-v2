@@ -523,11 +523,11 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
                                                               &QQmlExpression::valueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLEXPRESSION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLEXPRESSION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
