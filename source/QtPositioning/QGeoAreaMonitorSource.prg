@@ -479,13 +479,13 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
                                                               &QGeoAreaMonitorSource::areaEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -535,13 +535,13 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
                                                               &QGeoAreaMonitorSource::areaExited,
                                                               [sender, indexOfCodeBlock]
                                                               (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QGEOPOSITIONINFO");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -591,12 +591,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
                                                               &QGeoAreaMonitorSource::monitorExpired,
                                                               [sender, indexOfCodeBlock]
                                                               (const QGeoAreaMonitorInfo & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QGEOAREAMONITORINFO");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -645,12 +645,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
                                                               QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QGeoAreaMonitorSource::Error arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
