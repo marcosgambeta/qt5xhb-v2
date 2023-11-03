@@ -1570,12 +1570,12 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
                                                               &QStandardItemModel::itemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QStandardItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSTANDARDITEMMODEL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSTANDARDITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTANDARDITEMMODEL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSTANDARDITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

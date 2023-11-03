@@ -384,12 +384,12 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
                                                               &QAbstractTextDocumentLayout::documentSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSizeF & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZEF");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZEF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -434,12 +434,12 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
                                                               &QAbstractTextDocumentLayout::pageCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -484,12 +484,12 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
                                                               &QAbstractTextDocumentLayout::update,
                                                               [sender, indexOfCodeBlock]
                                                               (const QRectF & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -534,12 +534,12 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
                                                               &QAbstractTextDocumentLayout::updateBlock,
                                                               [sender, indexOfCodeBlock]
                                                               (const QTextBlock & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QTEXTBLOCK");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QTEXTBLOCK");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

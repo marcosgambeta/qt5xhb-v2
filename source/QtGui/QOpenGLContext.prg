@@ -570,11 +570,11 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
                                                               &QOpenGLContext::aboutToBeDestroyed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLCONTEXT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLCONTEXT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

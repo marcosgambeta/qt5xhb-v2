@@ -464,12 +464,12 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
                                                               &QDrag::actionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::DropAction arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDRAG");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDRAG");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -514,12 +514,12 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
                                                               &QDrag::targetChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDRAG");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDRAG");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

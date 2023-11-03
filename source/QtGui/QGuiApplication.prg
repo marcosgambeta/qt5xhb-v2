@@ -1224,12 +1224,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
                                                               &QGuiApplication::applicationStateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::ApplicationState arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1277,12 +1277,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
                                                               &QGuiApplication::commitDataRequest,
                                                               [sender, indexOfCodeBlock]
                                                               (QSessionManager & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(&arg1, "QSESSIONMANAGER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(&arg1, "QSESSIONMANAGER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1327,12 +1327,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
                                                               &QGuiApplication::focusObjectChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1377,12 +1377,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
                                                               &QGuiApplication::focusWindowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QWindow * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWINDOW");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWINDOW");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1428,12 +1428,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
                                                               &QGuiApplication::fontChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QFont & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QFONT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QFONT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1481,11 +1481,11 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
                                                               &QGuiApplication::fontDatabaseChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1529,11 +1529,11 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
                                                               &QGuiApplication::lastWindowClosed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1578,12 +1578,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
                                                               &QGuiApplication::layoutDirectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::LayoutDirection arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1632,12 +1632,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
                                                               &QGuiApplication::paletteChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QPalette & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPALETTE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPALETTE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1686,12 +1686,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
                                                               &QGuiApplication::primaryScreenChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1739,12 +1739,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
                                                               &QGuiApplication::saveStateRequest,
                                                               [sender, indexOfCodeBlock]
                                                               (QSessionManager & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(&arg1, "QSESSIONMANAGER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(&arg1, "QSESSIONMANAGER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1789,12 +1789,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
                                                               &QGuiApplication::screenAdded,
                                                               [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1840,12 +1840,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
                                                               &QGuiApplication::screenRemoved,
                                                               [sender, indexOfCodeBlock]
                                                               (QScreen * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

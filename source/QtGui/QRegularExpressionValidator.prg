@@ -185,12 +185,12 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
                                                               &QRegularExpressionValidator::regularExpressionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegularExpression & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QREGULAREXPRESSIONVALIDATOR");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGULAREXPRESSION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QREGULAREXPRESSIONVALIDATOR");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGULAREXPRESSION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
