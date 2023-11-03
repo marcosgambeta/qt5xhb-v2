@@ -545,15 +545,15 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
                                                               &QVirtualKeyboardInputEngine::virtualKeyClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::Key arg1, const QString & arg2, Qt::KeyboardModifiers arg3, bool arg4) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
-            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, static_cast<int>(arg3));
-            PHB_ITEM pArg4 = hb_itemPutL(nullptr, arg4);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pArg3 = hb_itemPutNI(nullptr, static_cast<int>(arg3));
+            auto pArg4 = hb_itemPutL(nullptr, arg4);
             hb_vmEvalBlockV(cb, 5, pSender, pArg1, pArg2, pArg3, pArg4);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -601,12 +601,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
                                                               &QVirtualKeyboardInputEngine::activeKeyChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -651,12 +651,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
                                                               &QVirtualKeyboardInputEngine::previousKeyChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::Key arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -701,11 +701,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
                                                               &QVirtualKeyboardInputEngine::inputMethodChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -749,11 +749,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
                                                               &QVirtualKeyboardInputEngine::inputMethodReset,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -797,11 +797,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
                                                               &QVirtualKeyboardInputEngine::inputMethodUpdate,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -845,11 +845,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
                                                               &QVirtualKeyboardInputEngine::inputModesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -893,11 +893,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
                                                               &QVirtualKeyboardInputEngine::inputModeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -941,11 +941,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
                                                               &QVirtualKeyboardInputEngine::patternRecognitionModesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -989,11 +989,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
                                                               &QVirtualKeyboardInputEngine::wordCandidateListModelChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1037,11 +1037,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGE
                                                               &QVirtualKeyboardInputEngine::wordCandidateListVisibleHintChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
