@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DELETE )
   {
     delete obj;
     obj = nullptr;
-    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    auto ptr = hb_itemPutPtr(nullptr, nullptr);
     hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
   }

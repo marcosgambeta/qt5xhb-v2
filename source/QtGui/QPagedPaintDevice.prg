@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_DELETE )
   {
     delete obj;
     obj = nullptr;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    auto self = hb_stackSelfItem();
+    auto ptr = hb_itemPutPtr(nullptr, nullptr);
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
   }
