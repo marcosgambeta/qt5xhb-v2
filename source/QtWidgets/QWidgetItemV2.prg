@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QWIDGETITEMV2_DELETE )
   {
     delete obj;
     obj = nullptr;
-    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    auto ptr = hb_itemPutPtr(nullptr, nullptr);
     hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
   }
