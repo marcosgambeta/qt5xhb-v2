@@ -572,12 +572,12 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
                                                               &QQuickWidget::statusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QQuickWidget::Status arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -626,13 +626,13 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
                                                               &QQuickWidget::sceneGraphError,
                                                               [sender, indexOfCodeBlock]
                                                               (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
