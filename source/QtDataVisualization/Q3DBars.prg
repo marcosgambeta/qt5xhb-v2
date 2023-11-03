@@ -916,12 +916,12 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
                                                               &Q3DBars::multiSeriesUniformChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -970,12 +970,12 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
                                                               &Q3DBars::barThicknessChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1024,12 +1024,12 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
                                                               &Q3DBars::barSpacingChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSizeF & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZEF");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZEF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1078,12 +1078,12 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
                                                               &Q3DBars::barSpacingRelativeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1132,12 +1132,12 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
                                                               &Q3DBars::rowAxisChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QCategory3DAxis * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QCATEGORY3DAXIS");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QCATEGORY3DAXIS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1186,12 +1186,12 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
                                                               &Q3DBars::columnAxisChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QCategory3DAxis * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QCATEGORY3DAXIS");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QCATEGORY3DAXIS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1240,12 +1240,12 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
                                                               &Q3DBars::valueAxisChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1294,12 +1294,12 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
                                                               &Q3DBars::primarySeriesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QBar3DSeries * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1348,12 +1348,12 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
                                                               &Q3DBars::selectedSeriesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QBar3DSeries * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1402,12 +1402,12 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
                                                               &Q3DBars::floorLevelChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

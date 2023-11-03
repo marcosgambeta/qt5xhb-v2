@@ -597,12 +597,12 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
                                                               &Q3DSurface::axisXChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -651,12 +651,12 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
                                                               &Q3DSurface::axisYChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -705,12 +705,12 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
                                                               &Q3DSurface::axisZChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QValue3DAxis * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -759,12 +759,12 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
                                                               &Q3DSurface::flipHorizontalGridChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -813,12 +813,12 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
                                                               &Q3DSurface::selectedSeriesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QSurface3DSeries * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSURFACE3DSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSURFACE3DSERIES");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
