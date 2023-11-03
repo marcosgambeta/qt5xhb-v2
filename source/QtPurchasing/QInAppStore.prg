@@ -221,12 +221,12 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
                                                               &QInAppStore::productRegistered,
                                                               [sender, indexOfCodeBlock]
                                                               (QInAppProduct * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINAPPSTORE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QINAPPPRODUCT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINAPPSTORE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QINAPPPRODUCT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -271,13 +271,13 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
                                                               &QInAppStore::productUnknown,
                                                               [sender, indexOfCodeBlock]
                                                               (QInAppProduct::ProductType arg1, const QString & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINAPPSTORE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINAPPSTORE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -323,12 +323,12 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
                                                               &QInAppStore::transactionReady,
                                                               [sender, indexOfCodeBlock]
                                                               (QInAppTransaction * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINAPPSTORE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QINAPPTRANSACTION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINAPPSTORE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QINAPPTRANSACTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
