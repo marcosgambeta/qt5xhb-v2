@@ -281,12 +281,12 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
                                                               &QGeoCodingManagerEngine::finished,
                                                               [sender, indexOfCodeBlock]
                                                               (QGeoCodeReply * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGERENGINE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGERENGINE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -335,14 +335,14 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
                                                               &QGeoCodingManagerEngine::error,
                                                               [sender, indexOfCodeBlock]
                                                               (QGeoCodeReply * arg1, QGeoCodeReply::Error arg2, QString arg3) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGERENGINE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
-            PHB_ITEM pArg3 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg3));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGERENGINE");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
+            auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
+            auto pArg3 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg3));
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

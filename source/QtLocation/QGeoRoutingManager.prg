@@ -484,12 +484,12 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONFINISHED )
                                                               &QGeoRoutingManager::finished,
                                                               [sender, indexOfCodeBlock]
                                                               (QGeoRouteReply * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -538,14 +538,14 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONERROR )
                                                               &QGeoRoutingManager::error,
                                                               [sender, indexOfCodeBlock]
                                                               (QGeoRouteReply * arg1, QGeoRouteReply::Error arg2, QString arg3) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
-            PHB_ITEM pArg3 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg3));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
+            auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
+            auto pArg3 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg3));
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
