@@ -245,7 +245,7 @@ bool Signals::connection( QObject * object, int indexOfSignal, int & indexOfCode
 
   if( !isSignalConnected( object, indexOfSignal ) )
   {
-    PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+    auto codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
     if( codeblock != nullptr )
     {
@@ -282,7 +282,7 @@ PHB_ITEM Signals::returnObject( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
-  PHB_ITEM pObject = hb_itemNew( nullptr );
+  auto pObject = hb_itemNew( nullptr );
 
   if( pDynSym != nullptr )
   {
@@ -290,7 +290,7 @@ PHB_ITEM Signals::returnObject( void * ptr, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( nullptr );
+    auto pItem = hb_itemNew( nullptr );
     hb_itemPutPtr( pItem, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
@@ -317,7 +317,7 @@ PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( nullptr );
+  auto pObject = hb_itemNew( nullptr );
 
   if( pDynSym != nullptr )
   {
@@ -325,7 +325,7 @@ PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( nullptr );
+    auto pItem = hb_itemNew( nullptr );
     hb_itemPutPtr( pItem, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
