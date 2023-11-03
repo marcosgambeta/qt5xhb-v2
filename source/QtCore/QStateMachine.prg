@@ -636,11 +636,11 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
                                                               &QStateMachine::started,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATEMACHINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATEMACHINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -684,11 +684,11 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
                                                               &QStateMachine::stopped,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATEMACHINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATEMACHINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

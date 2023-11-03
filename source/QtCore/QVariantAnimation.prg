@@ -356,12 +356,12 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
                                                               &QVariantAnimation::valueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QVariant & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QVARIANTANIMATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVARIANT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVARIANTANIMATION");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVARIANT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -316,12 +316,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
                                                               QOverload<int>::of(&QSignalMapper::mapped),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -366,12 +366,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
                                                               QOverload<const QString &>::of(&QSignalMapper::mapped),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -416,12 +416,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
                                                               QOverload<QWidget *>::of(&QSignalMapper::mapped),
                                                               [sender, indexOfCodeBlock]
                                                               (QWidget * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -466,12 +466,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
                                                               QOverload<QObject *>::of(&QSignalMapper::mapped),
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -517,12 +517,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDINT )
                                                               &QSignalMapper::mappedInt,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -571,12 +571,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDOBJECT )
                                                               &QSignalMapper::mappedObject,
                                                               [sender, indexOfCodeBlock]
                                                               (QObject * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -625,12 +625,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDSTRING )
                                                               &QSignalMapper::mappedString,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -679,12 +679,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDWIDGET )
                                                               &QSignalMapper::mappedWidget,
                                                               [sender, indexOfCodeBlock]
                                                               (QWidget * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSIGNALMAPPER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

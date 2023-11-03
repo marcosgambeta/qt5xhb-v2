@@ -579,11 +579,11 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
                                                               &QThread::finished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTHREAD");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTHREAD");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -627,11 +627,11 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
                                                               &QThread::started,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTHREAD");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTHREAD");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

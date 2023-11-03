@@ -677,13 +677,13 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
                                                               &QItemSelectionModel::selectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QItemSelection & arg1, const QItemSelection & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QITEMSELECTION");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QITEMSELECTION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QITEMSELECTION");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QITEMSELECTION");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -729,13 +729,13 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
                                                               &QItemSelectionModel::currentChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -781,13 +781,13 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
                                                               &QItemSelectionModel::currentRowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -833,13 +833,13 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
                                                               &QItemSelectionModel::currentColumnChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1, const QModelIndex & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
