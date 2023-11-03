@@ -433,12 +433,12 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
                                                               &QBluetoothLocalDevice::hostModeStateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QBluetoothLocalDevice::HostMode arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -487,13 +487,13 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
                                                               &QBluetoothLocalDevice::pairingFinished,
                                                               [sender, indexOfCodeBlock]
                                                               (const QBluetoothAddress & arg1, QBluetoothLocalDevice::Pairing arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHADDRESS");
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHADDRESS");
+            auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -543,13 +543,13 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
                                                               &QBluetoothLocalDevice::pairingDisplayPinCode,
                                                               [sender, indexOfCodeBlock]
                                                               (const QBluetoothAddress & arg1, QString arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHADDRESS");
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHADDRESS");
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -599,13 +599,13 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
                                                               &QBluetoothLocalDevice::pairingDisplayConfirmation,
                                                               [sender, indexOfCodeBlock]
                                                               (const QBluetoothAddress & arg1, QString arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHADDRESS");
-            PHB_ITEM pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBLUETOOTHADDRESS");
+            auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -655,12 +655,12 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONERROR )
                                                               &QBluetoothLocalDevice::error,
                                                               [sender, indexOfCodeBlock]
                                                               (QBluetoothLocalDevice::Error arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHLOCALDEVICE");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
