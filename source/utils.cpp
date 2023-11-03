@@ -29,9 +29,9 @@ void createReturnClass(void * ptr, const char * classname)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
@@ -55,9 +55,9 @@ void createReturnClass(const void * ptr, const char * classname)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, const_cast<void*>(ptr));
+    auto pItem = hb_itemPutPtr(nullptr, const_cast<void*>(ptr));
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
@@ -81,14 +81,14 @@ void createReturnClass(void * ptr, const char * classname, bool destroy)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
 
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
 
-    PHB_ITEM pDestroy = hb_itemPutL(nullptr, destroy);
+    auto pDestroy = hb_itemPutL(nullptr, destroy);
     hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
     hb_itemRelease(pDestroy);
 
@@ -113,14 +113,14 @@ void createReturnClass(const void * ptr, const char * classname, bool destroy)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
 
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, const_cast<void*>(ptr));
+    auto pItem = hb_itemPutPtr(nullptr, const_cast<void*>(ptr));
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
 
-    PHB_ITEM pDestroy = hb_itemPutL(nullptr, destroy);
+    auto pDestroy = hb_itemPutL(nullptr, destroy);
     hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
     hb_itemRelease(pDestroy);
 
@@ -138,10 +138,10 @@ void createReturnClass(const void * ptr, const char * classname, bool destroy)
 */
 void convert_qlist_int_to_array(const QList<int> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -153,10 +153,10 @@ void convert_qlist_int_to_array(const QList<int> & list)
 */
 void convert_qlist_qint8_to_array(const QList<qint8> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -168,10 +168,10 @@ void convert_qlist_qint8_to_array(const QList<qint8> & list)
 */
 void convert_qlist_qint16_to_array(const QList<qint16> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -183,10 +183,10 @@ void convert_qlist_qint16_to_array(const QList<qint16> & list)
 */
 void convert_qlist_qint32_to_array(const QList<qint32> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -198,10 +198,10 @@ void convert_qlist_qint32_to_array(const QList<qint32> & list)
 */
 void convert_qlist_qint64_to_array(const QList<qint64> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -213,10 +213,10 @@ void convert_qlist_qint64_to_array(const QList<qint64> & list)
 */
 void convert_qlist_quint8_to_array(const QList<quint8> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -228,10 +228,10 @@ void convert_qlist_quint8_to_array(const QList<quint8> & list)
 */
 void convert_qlist_quint16_to_array(const QList<quint16> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -243,10 +243,10 @@ void convert_qlist_quint16_to_array(const QList<quint16> & list)
 */
 void convert_qlist_quint32_to_array(const QList<quint32> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -258,10 +258,10 @@ void convert_qlist_quint32_to_array(const QList<quint32> & list)
 */
 void convert_qlist_quint64_to_array(const QList<quint64> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+    auto pItem = hb_itemPutNI(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -273,10 +273,10 @@ void convert_qlist_quint64_to_array(const QList<quint64> & list)
 */
 void convert_qlist_qreal_to_array(const QList<qreal> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutND(nullptr, item);
+    auto pItem = hb_itemPutND(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -288,10 +288,10 @@ void convert_qlist_qreal_to_array(const QList<qreal> & list)
 */
 void convert_qlist_double_to_array(const QList<double> & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutND(nullptr, item);
+    auto pItem = hb_itemPutND(nullptr, item);
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -303,10 +303,10 @@ void convert_qlist_double_to_array(const QList<double> & list)
 */
 void convert_qstringlist_to_array(const QStringList & list)
 {
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
   for( const auto & item : list )
   {
-    PHB_ITEM pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
+    auto pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
     hb_arrayAddForward(pArray, pItem);
     hb_itemRelease(pItem);
   }
@@ -343,11 +343,11 @@ QObject * getQObjectPointerFromSelfItem()
 */
 void storePointerAndFlag(void * pointer, bool flag)
 {
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr(nullptr, pointer);
+  auto self = hb_stackSelfItem();
+  auto ptr = hb_itemPutPtr(nullptr, pointer);
   hb_objSendMsg(self, "_POINTER", 1, ptr);
   hb_itemRelease(ptr);
-  PHB_ITEM des = hb_itemPutL(nullptr, flag);
+  auto des = hb_itemPutL(nullptr, flag);
   hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
   hb_itemRelease(des);
   hb_itemReturn(self);
@@ -360,11 +360,11 @@ void storePointerAndFlag(void * pointer, bool flag)
 */
 void returnNewObject(void * pointer, bool flag)
 {
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr(nullptr, pointer);
+  auto self = hb_stackSelfItem();
+  auto ptr = hb_itemPutPtr(nullptr, pointer);
   hb_objSendMsg(self, "_POINTER", 1, ptr);
   hb_itemRelease(ptr);
-  PHB_ITEM des = hb_itemPutL(nullptr, flag);
+  auto des = hb_itemPutL(nullptr, flag);
   hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
   hb_itemRelease(des);
   hb_itemReturn(self);
@@ -392,9 +392,9 @@ void createReturnQObjectClass(QObject * ptr, const char * classname)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
@@ -428,9 +428,9 @@ void createReturnQObjectClass(const QObject * ptr, const char * classname)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, const_cast<QObject*>(ptr));
+    auto pItem = hb_itemPutPtr(nullptr, const_cast<QObject*>(ptr));
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
@@ -464,9 +464,9 @@ void createReturnQWidgetClass(QWidget * ptr, const char * classname)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
@@ -500,9 +500,9 @@ void createReturnQWidgetClass(const QWidget * ptr, const char * classname)
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    PHB_ITEM pObject = hb_itemNew(nullptr);
+    auto pObject = hb_itemNew(nullptr);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, const_cast<QWidget*>(ptr));
+    auto pItem = hb_itemPutPtr(nullptr, const_cast<QWidget*>(ptr));
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
@@ -531,7 +531,7 @@ bool isClassDerivedFrom(const char * className1, const char * className2)
 */
 bool isObjectDerivedFrom(int numpar, const QString & className)
 {
-  PHB_ITEM pItem = hb_param(numpar, HB_IT_OBJECT);
+  auto pItem = hb_param(numpar, HB_IT_OBJECT);
 
   return (pItem != nullptr) ? hb_clsIsParent(hb_objGetClass(pItem), className.toUpper().toLatin1().data()) : false;
 }
@@ -543,7 +543,7 @@ QStringList convert_array_parameter_to_qstringlist(int numpar)
 {
   QStringList list;
 
-  PHB_ITEM pArray = hb_param(numpar, HB_IT_ARRAY);
+  auto pArray = hb_param(numpar, HB_IT_ARRAY);
 
   if( pArray != nullptr )
   {
@@ -576,7 +576,7 @@ QVariantList convert_array_parameter_to_qvariantlist(int numpar)
 {
   QVariantList list;
 
-  PHB_ITEM pArray = hb_param(numpar, HB_IT_ARRAY);
+  auto pArray = hb_param(numpar, HB_IT_ARRAY);
 
   if( pArray != nullptr )
   {
@@ -597,7 +597,7 @@ void convert_qvariantlist_to_array(const QVariantList & list)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
 
-  PHB_ITEM pArray = hb_itemArrayNew(0);
+  auto pArray = hb_itemArrayNew(0);
 
   if( pDynSym != nullptr )
   {
@@ -606,12 +606,12 @@ void convert_qvariantlist_to_array(const QVariantList & list)
       hb_vmPushDynSym(pDynSym);
       hb_vmPushNil();
       hb_vmDo(0);
-      PHB_ITEM pObject = hb_itemNew(nullptr);
+      auto pObject = hb_itemNew(nullptr);
       hb_itemCopy(pObject, hb_stackReturnItem());
-      PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QVariant(item));
+      auto pItem = hb_itemPutPtr(nullptr, new QVariant(item));
       hb_objSendMsg(pObject, "_POINTER", 1, pItem);
       hb_itemRelease(pItem);
-      PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+      auto pDestroy = hb_itemPutL(nullptr, true);
       hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
       hb_itemRelease(pDestroy);
       hb_arrayAddForward(pArray, pObject);
@@ -639,7 +639,7 @@ PHB_ITEM returnQModelIndexObject(void * ptr)
     pDynSym = hb_dynsymFindName("QMODELINDEX");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -647,7 +647,7 @@ PHB_ITEM returnQModelIndexObject(void * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -672,7 +672,7 @@ PHB_ITEM returnQVariantObject(void * ptr)
     pDynSym = hb_dynsymFindName("QVARIANT");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -680,7 +680,7 @@ PHB_ITEM returnQVariantObject(void * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -705,7 +705,7 @@ PHB_ITEM returnQPainterObject(void * ptr)
     pDynSym = hb_dynsymFindName("QPAINTER");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -713,7 +713,7 @@ PHB_ITEM returnQPainterObject(void * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -738,7 +738,7 @@ PHB_ITEM returnQStyleOptionViewItemObject(void * ptr)
     pDynSym = hb_dynsymFindName("QSTYLEOPTIONVIEWITEM");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -746,7 +746,7 @@ PHB_ITEM returnQStyleOptionViewItemObject(void * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -771,7 +771,7 @@ PHB_ITEM returnQLocaleObject(void * ptr)
     pDynSym = hb_dynsymFindName("QLOCALE");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -779,7 +779,7 @@ PHB_ITEM returnQLocaleObject(void * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -809,7 +809,7 @@ PHB_ITEM returnQWidgetObject(QWidget * ptr)
     pDynSym = hb_dynsymFindName("QWIDGET");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -817,7 +817,7 @@ PHB_ITEM returnQWidgetObject(QWidget * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -847,7 +847,7 @@ PHB_ITEM returnQObjectObject(QObject * ptr)
     pDynSym = hb_dynsymFindName("QOBJECT");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -855,7 +855,7 @@ PHB_ITEM returnQObjectObject(QObject * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
@@ -880,7 +880,7 @@ PHB_ITEM returnQRectObject(void * ptr)
     pDynSym = hb_dynsymFindName("QRECT");
   }
 
-  PHB_ITEM pObject = hb_itemNew(nullptr);
+  auto pObject = hb_itemNew(nullptr);
 
   if( pDynSym != nullptr )
   {
@@ -888,7 +888,7 @@ PHB_ITEM returnQRectObject(void * ptr)
     hb_vmPushNil();
     hb_vmDo(0);
     hb_itemCopy(pObject, hb_stackReturnItem());
-    PHB_ITEM pItem = hb_itemPutPtr(nullptr, ptr);
+    auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
   }
