@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QURLQUERY_DELETE )
   {
     delete obj;
     obj = nullptr;
-    PHB_ITEM ptr = hb_itemPutPtr(nullptr, nullptr);
+    auto ptr = hb_itemPutPtr(nullptr, nullptr);
     hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
   }
@@ -526,23 +526,23 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
 
 HB_FUNC_STATIC( QURLQUERY_NEWFROM )
 {
-  PHB_ITEM self = hb_stackSelfItem();
+  auto self = hb_stackSelfItem();
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL(nullptr, false);
+    auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
@@ -571,11 +571,11 @@ HB_FUNC_STATIC( QURLQUERY_SELFDESTRUCTION )
 
 HB_FUNC_STATIC( QURLQUERY_SETSELFDESTRUCTION )
 {
-  PHB_ITEM self = hb_stackSelfItem();
+  auto self = hb_stackSelfItem();
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL(nullptr, hb_parl(1));
+    auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
