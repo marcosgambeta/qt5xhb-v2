@@ -728,11 +728,11 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
                                                               &QDeclarativeEngine::quit,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -776,13 +776,13 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
                                                               &QDeclarativeEngine::warnings,
                                                               [sender, indexOfCodeBlock]
                                                               (const QList<QDeclarativeError> & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
             PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( const auto & item : arg1 )
