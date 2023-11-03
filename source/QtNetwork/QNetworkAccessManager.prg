@@ -1111,13 +1111,13 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
                                                               &QNetworkAccessManager::proxyAuthenticationRequired,
                                                               [sender, indexOfCodeBlock]
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKPROXY");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKPROXY");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1163,13 +1163,13 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
                                                               &QNetworkAccessManager::authenticationRequired,
                                                               [sender, indexOfCodeBlock]
                                                               (QNetworkReply * arg1, QAuthenticator * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1215,12 +1215,12 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
                                                               &QNetworkAccessManager::finished,
                                                               [sender, indexOfCodeBlock]
                                                               (QNetworkReply * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1266,12 +1266,12 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
                                                               &QNetworkAccessManager::encrypted,
                                                               [sender, indexOfCodeBlock]
                                                               (QNetworkReply * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1319,14 +1319,14 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
                                                               &QNetworkAccessManager::sslErrors,
                                                               [sender, indexOfCodeBlock]
                                                               (QNetworkReply * arg1, const QList<QSslError> & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
             PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
-            PHB_ITEM pArg2 = hb_itemArrayNew(0);
+            auto pArg2 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( const auto & item : arg2 )
@@ -1393,13 +1393,13 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
                                                               &QNetworkAccessManager::preSharedKeyAuthenticationRequired,
                                                               [sender, indexOfCodeBlock]
                                                               (QNetworkReply * arg1, QSslPreSharedKeyAuthenticator * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QSSLPRESHAREDKEYAUTHENTICATOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QSSLPRESHAREDKEYAUTHENTICATOR");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1448,11 +1448,11 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
                                                               &QNetworkAccessManager::networkSessionConnected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1496,12 +1496,12 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
                                                               &QNetworkAccessManager::networkAccessibleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QNetworkAccessManager::NetworkAccessibility arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

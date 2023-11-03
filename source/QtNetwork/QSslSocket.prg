@@ -2172,11 +2172,11 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
                                                               &QSslSocket::encrypted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -2220,12 +2220,12 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
                                                               &QSslSocket::encryptedBytesWritten,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2270,12 +2270,12 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
                                                               &QSslSocket::modeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QSslSocket::SslMode arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2320,12 +2320,12 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
                                                               &QSslSocket::peerVerifyError,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSslError & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSSLERROR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSSLERROR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2371,12 +2371,12 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
                                                               &QSslSocket::preSharedKeyAuthenticationRequired,
                                                               [sender, indexOfCodeBlock]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2424,13 +2424,13 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
                                                               QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors),
                                                               [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
             PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( const auto & item : arg1 )
