@@ -127,13 +127,13 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
                                                               &QWebChannelAbstractTransport::messageReceived,
                                                               [sender, indexOfCodeBlock]
                                                               (const QJsonObject & arg1, QWebChannelAbstractTransport * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBCHANNELABSTRACTTRANSPORT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QJSONOBJECT");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QWEBCHANNELABSTRACTTRANSPORT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBCHANNELABSTRACTTRANSPORT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QJSONOBJECT");
+            auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QWEBCHANNELABSTRACTTRANSPORT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
