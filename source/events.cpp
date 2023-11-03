@@ -156,8 +156,8 @@ bool Events::eventFilter( QObject *object, QEvent *event )
   }
 
   // executa bloco de código/função
-  PHB_ITEM pObject = returnQObject( object, "QOBJECT" );
-  PHB_ITEM pEvent = returnQEvent( event, "QEVENT" );
+  auto pObject = returnQObject( object, "QOBJECT" );
+  auto pEvent = returnQEvent( event, "QEVENT" );
 
   bool result = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(index), 2, pObject, pEvent ) );
 
@@ -388,7 +388,7 @@ PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( nullptr );
+  auto pObject = hb_itemNew( nullptr );
 
   if( pDynSym != nullptr )
   {
@@ -396,7 +396,7 @@ PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( nullptr, event );
+    auto pItem = hb_itemPutPtr( nullptr, event );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -426,7 +426,7 @@ PHB_ITEM Events::returnQObject( QObject * object, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( nullptr );
+  auto pObject = hb_itemNew( nullptr );
 
   if( pDynSym != nullptr )
   {
@@ -434,7 +434,7 @@ PHB_ITEM Events::returnQObject( QObject * object, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( nullptr, object );
+    auto pItem = hb_itemPutPtr( nullptr, object );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
