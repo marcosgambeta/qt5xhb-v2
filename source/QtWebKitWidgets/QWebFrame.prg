@@ -1318,12 +1318,12 @@ HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
                                                               &QWebFrame::contentsSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSize & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1368,11 +1368,11 @@ HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
                                                               &QWebFrame::iconChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1416,11 +1416,11 @@ HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
                                                               &QWebFrame::initialLayoutCompleted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1464,11 +1464,11 @@ HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
                                                               &QWebFrame::javaScriptWindowObjectCleared,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1512,12 +1512,12 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
                                                               &QWebFrame::loadFinished,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1562,11 +1562,11 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
                                                               &QWebFrame::loadStarted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1610,11 +1610,11 @@ HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
                                                               &QWebFrame::pageChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1658,12 +1658,12 @@ HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
                                                               &QWebFrame::titleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1708,12 +1708,12 @@ HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
                                                               &QWebFrame::urlChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
