@@ -228,12 +228,12 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
                                                               &QWebEngineCookieStore::cookieAdded,
                                                               [sender, indexOfCodeBlock]
                                                               (const QNetworkCookie & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINECOOKIESTORE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCOOKIE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINECOOKIESTORE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCOOKIE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -278,12 +278,12 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
                                                               &QWebEngineCookieStore::cookieRemoved,
                                                               [sender, indexOfCodeBlock]
                                                               (const QNetworkCookie & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINECOOKIESTORE");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCOOKIE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINECOOKIESTORE");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCOOKIE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
