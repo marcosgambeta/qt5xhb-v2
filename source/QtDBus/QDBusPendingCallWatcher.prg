@@ -158,12 +158,12 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
                                                               &QDBusPendingCallWatcher::finished,
                                                               [sender, indexOfCodeBlock]
                                                               (QDBusPendingCallWatcher * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSPENDINGCALLWATCHER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QDBUSPENDINGCALLWATCHER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSPENDINGCALLWATCHER");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QDBUSPENDINGCALLWATCHER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -195,12 +195,12 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
                                                               &QDBusServer::newConnection,
                                                               [sender, indexOfCodeBlock]
                                                               (const QDBusConnection & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDBUSCONNECTION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVER");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDBUSCONNECTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
