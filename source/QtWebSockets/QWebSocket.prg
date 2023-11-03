@@ -1103,11 +1103,11 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
                                                               &QWebSocket::aboutToClose,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1155,11 +1155,11 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
                                                               &QWebSocket::connected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1207,11 +1207,11 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
                                                               &QWebSocket::disconnected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1259,12 +1259,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
                                                               &QWebSocket::stateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketState arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1313,13 +1313,13 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
                                                               &QWebSocket::proxyAuthenticationRequired,
                                                               [sender, indexOfCodeBlock]
                                                               (const QNetworkProxy & arg1, QAuthenticator * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKPROXY");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKPROXY");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QAUTHENTICATOR");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1369,11 +1369,11 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
                                                               &QWebSocket::readChannelFinished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1421,13 +1421,13 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
                                                               &QWebSocket::textFrameReceived,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1, bool arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
-            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1477,13 +1477,13 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
                                                               &QWebSocket::binaryFrameReceived,
                                                               [sender, indexOfCodeBlock]
                                                               (const QByteArray & arg1, bool arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
-            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
+            auto pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1533,12 +1533,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
                                                               &QWebSocket::textMessageReceived,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1587,12 +1587,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
                                                               &QWebSocket::binaryMessageReceived,
                                                               [sender, indexOfCodeBlock]
                                                               (const QByteArray & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1641,12 +1641,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
                                                               QOverload<QAbstractSocket::SocketError>::of(&QWebSocket::error),
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractSocket::SocketError arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1695,13 +1695,13 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
                                                               &QWebSocket::pong,
                                                               [sender, indexOfCodeBlock]
                                                               (quint64 arg1, const QByteArray & arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QBYTEARRAY");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QBYTEARRAY");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1751,12 +1751,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
                                                               &QWebSocket::bytesWritten,
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1805,13 +1805,13 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
                                                               &QWebSocket::sslErrors,
                                                               [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
             PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( const auto & item : arg1 )
