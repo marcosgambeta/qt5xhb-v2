@@ -415,12 +415,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -465,12 +465,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
                                                               QOverload<int>::of(&QButtonGroup::buttonClicked),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -515,12 +515,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -565,12 +565,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
                                                               QOverload<int>::of(&QButtonGroup::buttonPressed),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -615,12 +615,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
                                                               QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -665,12 +665,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
                                                               QOverload<int>::of(&QButtonGroup::buttonReleased),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -716,13 +716,13 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
                                                               QOverload<QAbstractButton *,bool>::of(&QButtonGroup::buttonToggled),
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1, bool arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
-            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            auto pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -772,13 +772,13 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
                                                               QOverload<int,bool>::of(&QButtonGroup::buttonToggled),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, bool arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -828,12 +828,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
                                                               &QButtonGroup::idClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -882,12 +882,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
                                                               &QButtonGroup::idPressed,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -936,12 +936,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
                                                               &QButtonGroup::idReleased,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -990,13 +990,13 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
                                                               &QButtonGroup::idToggled,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, bool arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBUTTONGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -1313,12 +1313,12 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
                                                               &QMainWindow::iconSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSize & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMAINWINDOW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMAINWINDOW");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1363,12 +1363,12 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
                                                               &QMainWindow::toolButtonStyleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::ToolButtonStyle arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QMAINWINDOW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMAINWINDOW");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

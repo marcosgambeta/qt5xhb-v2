@@ -496,12 +496,12 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
                                                               &QColorDialog::colorSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -546,12 +546,12 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
                                                               &QColorDialog::currentColorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

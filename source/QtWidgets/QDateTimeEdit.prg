@@ -1408,12 +1408,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
                                                               &QDateTimeEdit::dateChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QDate & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1458,12 +1458,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
                                                               &QDateTimeEdit::dateTimeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QDateTime & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATETIME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATETIME");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1508,12 +1508,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
                                                               &QDateTimeEdit::timeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QTime & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QTIME");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDATETIMEEDIT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QTIME");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

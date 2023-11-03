@@ -631,12 +631,12 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
                                                               QOverload<double>::of(&QDoubleSpinBox::valueChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOUBLESPINBOX");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOUBLESPINBOX");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -681,12 +681,12 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
                                                               QOverload<const QString &>::of(&QDoubleSpinBox::valueChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOUBLESPINBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOUBLESPINBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

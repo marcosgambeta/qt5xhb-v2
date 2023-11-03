@@ -469,11 +469,11 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
                                                               &QDialogButtonBox::accepted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -517,12 +517,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
                                                               &QDialogButtonBox::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractButton * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTBUTTON");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -567,11 +567,11 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
                                                               &QDialogButtonBox::helpRequested,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -615,11 +615,11 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
                                                               &QDialogButtonBox::rejected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDIALOGBUTTONBOX");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

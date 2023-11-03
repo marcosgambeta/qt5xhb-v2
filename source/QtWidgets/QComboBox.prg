@@ -1737,12 +1737,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
                                                               &QComboBox::currentTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1787,12 +1787,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
                                                               &QComboBox::editTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1838,12 +1838,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTACTIVATED )
                                                               &QComboBox::textActivated,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1892,12 +1892,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTHIGHLIGHTED )
                                                               &QComboBox::textHighlighted,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1945,12 +1945,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
                                                               QOverload<int>::of(&QComboBox::activated),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1995,12 +1995,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
                                                               QOverload<const QString &>::of(&QComboBox::activated),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2045,12 +2045,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
                                                               QOverload<int>::of(&QComboBox::currentIndexChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2095,12 +2095,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
                                                               QOverload<const QString &>::of(&QComboBox::currentIndexChanged),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2145,12 +2145,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
                                                               QOverload<int>::of(&QComboBox::highlighted),
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2195,12 +2195,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
                                                               QOverload<const QString &>::of(&QComboBox::highlighted),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMBOBOX");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

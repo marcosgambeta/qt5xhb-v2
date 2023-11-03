@@ -1345,12 +1345,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
                                                               &QInputDialog::doubleValueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1395,12 +1395,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
                                                               &QInputDialog::doubleValueSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (double arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1445,12 +1445,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
                                                               &QInputDialog::intValueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1495,12 +1495,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
                                                               &QInputDialog::intValueSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1545,12 +1545,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
                                                               &QInputDialog::textValueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1595,12 +1595,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
                                                               &QInputDialog::textValueSelected,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QINPUTDIALOG");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

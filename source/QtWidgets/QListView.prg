@@ -1004,13 +1004,13 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
                                                               &QListView::indexesMoved,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndexList & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTVIEW");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTVIEW");
             PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( const auto & item : arg1 )

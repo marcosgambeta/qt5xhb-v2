@@ -395,12 +395,12 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
                                                               &QActionGroup::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QACTIONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QACTIONGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -445,12 +445,12 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
                                                               &QActionGroup::triggered,
                                                               [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QACTIONGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QACTIONGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

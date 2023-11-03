@@ -1654,13 +1654,13 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
                                                               &QApplication::focusChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QWidget * arg1, QWidget * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QAPPLICATION");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAPPLICATION");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
+            auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QWIDGET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

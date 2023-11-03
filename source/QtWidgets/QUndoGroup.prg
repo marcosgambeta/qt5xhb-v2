@@ -503,12 +503,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
                                                               &QUndoGroup::activeStackChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QUndoStack * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QUNDOSTACK");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QUNDOSTACK");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -553,12 +553,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
                                                               &QUndoGroup::canRedoChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -603,12 +603,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
                                                               &QUndoGroup::canUndoChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -653,12 +653,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
                                                               &QUndoGroup::cleanChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -703,12 +703,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
                                                               &QUndoGroup::indexChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -753,12 +753,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
                                                               &QUndoGroup::redoTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -803,12 +803,12 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
                                                               &QUndoGroup::undoTextChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QUNDOGROUP");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

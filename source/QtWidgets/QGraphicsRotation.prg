@@ -306,11 +306,11 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
                                                               &QGraphicsRotation::angleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -354,11 +354,11 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
                                                               &QGraphicsRotation::axisChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -402,11 +402,11 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
                                                               &QGraphicsRotation::originChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSROTATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

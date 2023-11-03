@@ -347,11 +347,11 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
                                                               &QGraphicsScale::originChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -395,11 +395,11 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
                                                               &QGraphicsScale::scaleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -443,11 +443,11 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
                                                               &QGraphicsScale::xScaleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -491,11 +491,11 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
                                                               &QGraphicsScale::yScaleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -539,11 +539,11 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
                                                               &QGraphicsScale::zScaleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCALE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

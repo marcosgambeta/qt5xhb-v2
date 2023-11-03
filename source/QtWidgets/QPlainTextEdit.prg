@@ -1640,12 +1640,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
                                                               &QPlainTextEdit::blockCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1690,12 +1690,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
                                                               &QPlainTextEdit::copyAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1740,11 +1740,11 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
                                                               &QPlainTextEdit::cursorPositionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1788,12 +1788,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
                                                               &QPlainTextEdit::modificationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1838,12 +1838,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
                                                               &QPlainTextEdit::redoAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1888,11 +1888,11 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
                                                               &QPlainTextEdit::selectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1936,11 +1936,11 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
                                                               &QPlainTextEdit::textChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1984,12 +1984,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
                                                               &QPlainTextEdit::undoAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2034,13 +2034,13 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
                                                               &QPlainTextEdit::updateRequest,
                                                               [sender, indexOfCodeBlock]
                                                               (const QRect & arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECT");
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLAINTEXTEDIT");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECT");
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -792,12 +792,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
                                                               &QToolBar::actionTriggered,
                                                               [sender, indexOfCodeBlock]
                                                               (QAction * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QACTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -842,12 +842,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
                                                               &QToolBar::allowedAreasChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::ToolBarAreas arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -892,12 +892,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
                                                               &QToolBar::iconSizeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QSize & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -942,12 +942,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
                                                               &QToolBar::movableChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -992,12 +992,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
                                                               &QToolBar::orientationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::Orientation arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1042,12 +1042,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
                                                               &QToolBar::toolButtonStyleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::ToolButtonStyle arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1092,12 +1092,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
                                                               &QToolBar::topLevelChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1142,12 +1142,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
                                                               &QToolBar::visibilityChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

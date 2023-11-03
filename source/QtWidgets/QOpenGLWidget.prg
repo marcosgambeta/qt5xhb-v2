@@ -366,11 +366,11 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
                                                               &QOpenGLWidget::aboutToCompose,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -418,11 +418,11 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
                                                               &QOpenGLWidget::frameSwapped,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -470,11 +470,11 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
                                                               &QOpenGLWidget::aboutToResize,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -522,11 +522,11 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
                                                               &QOpenGLWidget::resized,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

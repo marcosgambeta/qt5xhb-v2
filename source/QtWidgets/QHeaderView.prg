@@ -1800,11 +1800,11 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
                                                               &QHeaderView::geometriesChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1848,12 +1848,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
                                                               &QHeaderView::sectionClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1898,13 +1898,13 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
                                                               &QHeaderView::sectionCountChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1950,12 +1950,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
                                                               &QHeaderView::sectionDoubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2000,12 +2000,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
                                                               &QHeaderView::sectionEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2050,12 +2050,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
                                                               &QHeaderView::sectionHandleDoubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2100,14 +2100,14 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
                                                               &QHeaderView::sectionMoved,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
-            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2154,12 +2154,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
                                                               &QHeaderView::sectionPressed,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2204,14 +2204,14 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
                                                               &QHeaderView::sectionResized,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
-            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2258,13 +2258,13 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
                                                               &QHeaderView::sortIndicatorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, Qt::SortOrder arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, (int) arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, (int) arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

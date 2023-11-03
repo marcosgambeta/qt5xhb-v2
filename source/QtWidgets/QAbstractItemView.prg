@@ -1984,12 +1984,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
                                                               &QAbstractItemView::activated,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2034,12 +2034,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
                                                               &QAbstractItemView::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2084,12 +2084,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
                                                               &QAbstractItemView::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2134,12 +2134,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
                                                               &QAbstractItemView::entered,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2184,12 +2184,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
                                                               &QAbstractItemView::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2234,11 +2234,11 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
                                                               &QAbstractItemView::viewportEntered,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMVIEW");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

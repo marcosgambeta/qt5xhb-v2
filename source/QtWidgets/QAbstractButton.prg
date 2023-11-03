@@ -846,12 +846,12 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
                                                               &QAbstractButton::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -896,11 +896,11 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
                                                               &QAbstractButton::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -944,11 +944,11 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
                                                               &QAbstractButton::released,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -992,12 +992,12 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
                                                               &QAbstractButton::toggled,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBUTTON");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

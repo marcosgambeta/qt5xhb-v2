@@ -437,12 +437,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
                                                               &QDockWidget::allowedAreasChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::DockWidgetAreas arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -487,12 +487,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
                                                               &QDockWidget::dockLocationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (Qt::DockWidgetArea arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -537,12 +537,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
                                                               &QDockWidget::featuresChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QDockWidget::DockWidgetFeatures arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -587,12 +587,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
                                                               &QDockWidget::topLevelChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -637,12 +637,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
                                                               &QDockWidget::visibilityChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -1276,13 +1276,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
                                                               &QTableWidget::cellActivated,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1328,13 +1328,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
                                                               &QTableWidget::cellChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1380,13 +1380,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
                                                               &QTableWidget::cellClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1432,13 +1432,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
                                                               &QTableWidget::cellDoubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1484,13 +1484,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
                                                               &QTableWidget::cellEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1536,13 +1536,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
                                                               &QTableWidget::cellPressed,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1588,15 +1588,15 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
                                                               &QTableWidget::currentCellChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2, int arg3, int arg4) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
-            PHB_ITEM pArg3 = hb_itemPutNI(nullptr, arg3);
-            PHB_ITEM pArg4 = hb_itemPutNI(nullptr, arg4);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pArg3 = hb_itemPutNI(nullptr, arg3);
+            auto pArg4 = hb_itemPutNI(nullptr, arg4);
             hb_vmEvalBlockV(cb, 5, pSender, pArg1, pArg2, pArg3, pArg4);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1644,13 +1644,13 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
                                                               &QTableWidget::currentItemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1, QTableWidgetItem * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pArg2 = Qt5xHb::Signals_return_object( (void *) arg2, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1696,12 +1696,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
                                                               &QTableWidget::itemActivated,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1746,12 +1746,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
                                                               &QTableWidget::itemChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1796,12 +1796,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
                                                               &QTableWidget::itemClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1846,12 +1846,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
                                                               &QTableWidget::itemDoubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1896,12 +1896,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
                                                               &QTableWidget::itemEntered,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1946,12 +1946,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
                                                               &QTableWidget::itemPressed,
                                                               [sender, indexOfCodeBlock]
                                                               (QTableWidgetItem * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QTABLEWIDGETITEM");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1996,11 +1996,11 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
                                                               &QTableWidget::itemSelectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTABLEWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

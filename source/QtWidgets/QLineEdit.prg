@@ -1871,13 +1871,13 @@ HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
                                                               &QLineEdit::cursorPositionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1923,11 +1923,11 @@ HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
                                                               &QLineEdit::editingFinished,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1972,11 +1972,11 @@ HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
                                                               &QLineEdit::inputRejected,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -2023,11 +2023,11 @@ HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
                                                               &QLineEdit::returnPressed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -2071,11 +2071,11 @@ HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
                                                               &QLineEdit::selectionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -2119,12 +2119,12 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
                                                               &QLineEdit::textChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2169,12 +2169,12 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
                                                               &QLineEdit::textEdited,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLINEEDIT");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

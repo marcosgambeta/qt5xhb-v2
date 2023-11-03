@@ -498,12 +498,12 @@ HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
                                                               &QColumnView::updatePreviewWidget,
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLUMNVIEW");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLUMNVIEW");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

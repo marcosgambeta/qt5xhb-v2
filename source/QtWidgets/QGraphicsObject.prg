@@ -4056,11 +4056,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
                                                               &QGraphicsObject::enabledChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4104,11 +4104,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
                                                               &QGraphicsObject::opacityChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4152,11 +4152,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
                                                               &QGraphicsObject::parentChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4200,11 +4200,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
                                                               &QGraphicsObject::rotationChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4248,11 +4248,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
                                                               &QGraphicsObject::scaleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4296,11 +4296,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
                                                               &QGraphicsObject::visibleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4344,11 +4344,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
                                                               &QGraphicsObject::xChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4392,11 +4392,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
                                                               &QGraphicsObject::yChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -4440,11 +4440,11 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
                                                               &QGraphicsObject::zChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSOBJECT");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

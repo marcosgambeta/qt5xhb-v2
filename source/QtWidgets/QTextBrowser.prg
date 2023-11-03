@@ -635,12 +635,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
                                                               &QTextBrowser::anchorClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -685,12 +685,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
                                                               &QTextBrowser::backwardAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -735,12 +735,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
                                                               &QTextBrowser::forwardAvailable,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -785,12 +785,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
                                                               QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -835,12 +835,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
                                                               QOverload<const QString &>::of(&QTextBrowser::highlighted),
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -885,11 +885,11 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
                                                               &QTextBrowser::historyChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -933,12 +933,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
                                                               &QTextBrowser::sourceChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QUrl & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
