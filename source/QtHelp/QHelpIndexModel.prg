@@ -150,11 +150,11 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
                                                               &QHelpIndexModel::indexCreated,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXMODEL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXMODEL");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -198,11 +198,11 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
                                                               &QHelpIndexModel::indexCreationStarted,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXMODEL");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXMODEL");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
