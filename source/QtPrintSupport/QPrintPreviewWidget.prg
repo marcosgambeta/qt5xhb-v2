@@ -726,12 +726,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
                                                               &QPrintPreviewWidget::paintRequested,
                                                               [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWWIDGET");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWWIDGET");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -776,11 +776,11 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
                                                               &QPrintPreviewWidget::previewChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWWIDGET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

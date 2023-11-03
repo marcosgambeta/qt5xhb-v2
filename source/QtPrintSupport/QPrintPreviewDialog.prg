@@ -226,12 +226,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
                                                               &QPrintPreviewDialog::paintRequested,
                                                               [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWDIALOG");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWDIALOG");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QPRINTER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
