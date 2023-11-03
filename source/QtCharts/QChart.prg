@@ -1864,12 +1864,12 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
                                                               &QChart::plotAreaChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QRectF & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCHART");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCHART");
+            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

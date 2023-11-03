@@ -541,11 +541,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
                                                               &QCandlestickSet::brushChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -593,11 +593,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
                                                               &QCandlestickSet::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -645,11 +645,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
                                                               &QCandlestickSet::closeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -697,11 +697,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
                                                               &QCandlestickSet::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -749,11 +749,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
                                                               &QCandlestickSet::highChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -801,12 +801,12 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
                                                               &QCandlestickSet::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -855,11 +855,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
                                                               &QCandlestickSet::lowChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -907,11 +907,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
                                                               &QCandlestickSet::openChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -959,11 +959,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
                                                               &QCandlestickSet::penChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1011,11 +1011,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
                                                               &QCandlestickSet::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1063,11 +1063,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
                                                               &QCandlestickSet::released,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1115,11 +1115,11 @@ HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
                                                               &QCandlestickSet::timestampChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

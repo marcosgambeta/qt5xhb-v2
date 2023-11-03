@@ -1113,11 +1113,11 @@ HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
                                                               &QPieSlice::angleSpanChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1165,11 +1165,11 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
                                                               &QPieSlice::borderColorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1217,11 +1217,11 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
                                                               &QPieSlice::borderWidthChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1269,11 +1269,11 @@ HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
                                                               &QPieSlice::brushChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1321,11 +1321,11 @@ HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
                                                               &QPieSlice::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1373,11 +1373,11 @@ HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
                                                               &QPieSlice::colorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1425,11 +1425,11 @@ HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
                                                               &QPieSlice::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1477,12 +1477,12 @@ HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
                                                               &QPieSlice::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1531,11 +1531,11 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
                                                               &QPieSlice::labelBrushChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1583,11 +1583,11 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
                                                               &QPieSlice::labelChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1635,11 +1635,11 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
                                                               &QPieSlice::labelColorChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1687,11 +1687,11 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
                                                               &QPieSlice::labelFontChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1739,11 +1739,11 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
                                                               &QPieSlice::labelVisibleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1791,11 +1791,11 @@ HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
                                                               &QPieSlice::penChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1843,11 +1843,11 @@ HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
                                                               &QPieSlice::percentageChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1895,11 +1895,11 @@ HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
                                                               &QPieSlice::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1947,11 +1947,11 @@ HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
                                                               &QPieSlice::released,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1999,11 +1999,11 @@ HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
                                                               &QPieSlice::startAngleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -2051,11 +2051,11 @@ HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
                                                               &QPieSlice::valueChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESLICE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

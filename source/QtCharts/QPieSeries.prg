@@ -853,13 +853,13 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
                                                               &QPieSeries::added,
                                                               [sender, indexOfCodeBlock]
                                                               (QList<QPieSlice*> arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
             PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( auto item : arg1 )
@@ -928,12 +928,12 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
                                                               &QPieSeries::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -982,11 +982,11 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
                                                               &QPieSeries::countChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1034,12 +1034,12 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
                                                               &QPieSeries::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1088,13 +1088,13 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
                                                               &QPieSeries::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (QPieSlice * arg1, bool arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
-            PHB_ITEM pArg2 = hb_itemPutL(nullptr, arg2);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
+            auto pArg2 = hb_itemPutL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1144,12 +1144,12 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
                                                               &QPieSeries::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1198,12 +1198,12 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
                                                               &QPieSeries::released,
                                                               [sender, indexOfCodeBlock]
                                                               (QPieSlice * arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
-            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPIESLICE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1252,13 +1252,13 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
                                                               &QPieSeries::removed,
                                                               [sender, indexOfCodeBlock]
                                                               (QList<QPieSlice*> arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
             PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( auto item : arg1 )
@@ -1327,11 +1327,11 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
                                                               &QPieSeries::sumChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPIESERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

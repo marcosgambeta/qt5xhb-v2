@@ -566,11 +566,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
                                                               &QLegendMarker::brushChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -618,11 +618,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
                                                               &QLegendMarker::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -670,11 +670,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
                                                               &QLegendMarker::fontChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -722,12 +722,12 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
                                                               &QLegendMarker::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -776,11 +776,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
                                                               &QLegendMarker::labelBrushChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -828,11 +828,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
                                                               &QLegendMarker::labelChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -880,11 +880,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
                                                               &QLegendMarker::penChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -932,11 +932,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
                                                               &QLegendMarker::shapeChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -984,11 +984,11 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
                                                               &QLegendMarker::visibleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLEGENDMARKER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }

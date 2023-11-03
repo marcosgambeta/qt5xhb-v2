@@ -628,13 +628,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
                                                               &QAbstractBarSeries::barsetsAdded,
                                                               [sender, indexOfCodeBlock]
                                                               (QList<QBarSet *> arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
             PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( auto item : arg1 )
@@ -703,13 +703,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
                                                               &QAbstractBarSeries::barsetsRemoved,
                                                               [sender, indexOfCodeBlock]
                                                               (QList<QBarSet *> arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
             PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
-            PHB_ITEM pArg1 = hb_itemArrayNew(0);
+            auto pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
             {
               for( auto item : arg1 )
@@ -778,13 +778,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
                                                               &QAbstractBarSeries::clicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -834,11 +834,11 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
                                                               &QAbstractBarSeries::countChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -886,13 +886,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
                                                               &QAbstractBarSeries::doubleClicked,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -942,14 +942,14 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
                                                               &QAbstractBarSeries::hovered,
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1, int arg2, QBarSet * arg3) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutL(nullptr, arg1);
-            PHB_ITEM pArg2 = hb_itemPutNI(nullptr, arg2);
-            PHB_ITEM pArg3 = Qt5xHb::Signals_return_qobject(arg3, "QBARSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutL(nullptr, arg1);
+            auto pArg2 = hb_itemPutNI(nullptr, arg2);
+            auto pArg3 = Qt5xHb::Signals_return_qobject(arg3, "QBARSET");
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1000,12 +1000,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
                                                               &QAbstractBarSeries::labelsAngleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (qreal arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutND(nullptr, arg1);
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1054,12 +1054,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
                                                               &QAbstractBarSeries::labelsFormatChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1108,12 +1108,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
                                                               &QAbstractBarSeries::labelsPositionChanged,
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstractBarSeries::LabelsPosition arg1) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1162,11 +1162,11 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
                                                               &QAbstractBarSeries::labelsVisibleChanged,
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
           }
@@ -1214,13 +1214,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
                                                               &QAbstractBarSeries::pressed,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1270,13 +1270,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
                                                               &QAbstractBarSeries::released,
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, QBarSet * arg2) {
-          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+          auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_ITEM pArg1 = hb_itemPutNI(nullptr, arg1);
-            PHB_ITEM pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
+            auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
+            auto pArg1 = hb_itemPutNI(nullptr, arg1);
+            auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBARSET");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
