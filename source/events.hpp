@@ -28,15 +28,15 @@
 
 namespace Qt5xHb
 {
-  bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock );
-  bool Events_disconnect_event( QObject * object, int type );
-  void Events_disconnect_all_events( QObject * obj, bool children );
+  bool Events_connect_event(QObject * object, int type, PHB_ITEM codeblock);
+  bool Events_disconnect_event(QObject * object, int type);
+  void Events_disconnect_all_events(QObject * obj, bool children);
 }
 
 class Events: public QObject
 {
   public:
-  Events( QObject *parent = nullptr );
+  Events(QObject * parent = nullptr);
   ~Events();
 
   private:
@@ -47,16 +47,16 @@ class Events: public QObject
   QHash<QEvent::Type, QString> * m_events;
 
   protected:
-  bool eventFilter( QObject *obj, QEvent *event );
+  bool eventFilter(QObject * obj, QEvent * event);
 
   public:
-  bool connectEvent( QObject * object, int type, PHB_ITEM codeblock );
-  bool disconnectEvent( QObject * object, int type );
-  void disconnectAllEvents( QObject * obj, bool children );
+  bool connectEvent(QObject * object, int type, PHB_ITEM codeblock);
+  bool disconnectEvent(QObject * object, int type);
+  void disconnectAllEvents(QObject * obj, bool children);
   int size();
   int active();
-  PHB_ITEM returnQEvent( QEvent * ptr, const char * classname );
-  PHB_ITEM returnQObject( QObject * ptr, const char * classname );
+  PHB_ITEM returnQEvent(QEvent * ptr, const char * classname);
+  PHB_ITEM returnQObject(QObject * ptr, const char * classname);
 };
 
 #endif /* EVENTS_H */
