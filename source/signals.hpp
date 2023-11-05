@@ -29,23 +29,23 @@
 
 namespace Qt5xHb
 {
-  int Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock );
-  bool Signals_disconnect_signal( QObject * object, int signal );
-  bool Signals_is_signal_connected( QObject * object, int signal );
-  PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock );
-  void Signals_disconnect_all_signals( QObject * obj, bool children );
-  bool Signals_connection( QObject * s, int signal, int & indexOfCodeBlock );
-  bool Signals_disconnection( QObject * s, int signal );
-  PHB_ITEM Signals_return_object( void * ptr, const char * classname );
-  PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
-  bool Signals_store_connection( int index, QMetaObject::Connection connection );
-  QMetaObject::Connection Signals_get_connection( QObject * s, int signal );
+  int Signals_connect_signal(QObject * object, int signal, PHB_ITEM codeblock);
+  bool Signals_disconnect_signal(QObject * object, int signal);
+  bool Signals_is_signal_connected(QObject * object, int signal);
+  PHB_ITEM Signals_return_codeblock(int indexOfCodeBlock);
+  void Signals_disconnect_all_signals(QObject * obj, bool children);
+  bool Signals_connection(QObject * s, int signal, int & indexOfCodeBlock);
+  bool Signals_disconnection(QObject * s, int signal);
+  PHB_ITEM Signals_return_object(void * ptr, const char * classname);
+  PHB_ITEM Signals_return_qobject(QObject * ptr, const char * classname);
+  bool Signals_store_connection(int index, QMetaObject::Connection connection);
+  QMetaObject::Connection Signals_get_connection(QObject * s, int signal);
 }
 
 class Signals: public QObject
 {
   public:
-  Signals( QObject *parent = nullptr );
+  Signals(QObject * parent = nullptr);
   ~Signals();
 
   private:
@@ -56,17 +56,17 @@ class Signals: public QObject
   QMutex * m_mutex;
 
   public:
-  int connectSignal( QObject * object, int signal, PHB_ITEM codeblock );
-  bool disconnectSignal( QObject * object, int signal );
-  bool isSignalConnected( QObject * object, int signal );
-  PHB_ITEM returnCodeblock( int indexOfCodeBlock );
-  void disconnectAllSignals( QObject * obj, bool children );
-  bool connection( QObject * s, int signal, int & indexOfCodeBlock );
-  bool disconnection( QObject * s, int signal );
-  PHB_ITEM returnObject( void * ptr, const char * classname );
-  PHB_ITEM returnQObject( QObject * ptr, const char * classname );
-  bool storeConnection( int index, QMetaObject::Connection connection );
-  QMetaObject::Connection getConnection( QObject * s, int signal );
+  int connectSignal(QObject * object, int signal, PHB_ITEM codeblock);
+  bool disconnectSignal(QObject * object, int signal);
+  bool isSignalConnected(QObject * object, int signal);
+  PHB_ITEM returnCodeblock(int indexOfCodeBlock);
+  void disconnectAllSignals(QObject * obj, bool children);
+  bool connection(QObject * s, int signal, int & indexOfCodeBlock);
+  bool disconnection(QObject * s, int signal);
+  PHB_ITEM returnObject(void * ptr, const char * classname);
+  PHB_ITEM returnQObject(QObject * ptr, const char * classname);
+  bool storeConnection(int index, QMetaObject::Connection connection);
+  QMetaObject::Connection getConnection(QObject * s, int signal);
   int size();
   int active();
 };
