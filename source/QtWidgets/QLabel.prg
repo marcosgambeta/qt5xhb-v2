@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
+    auto pNum = hb_param(1, HB_IT_NUMERIC);
 
     if( pNum )
     {

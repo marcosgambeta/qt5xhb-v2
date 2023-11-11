@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
   if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QList<QGesture *> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    auto aList1 = hb_param( 1, HB_IT_ARRAY );
     int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 #endif
       const QList<QGesture *> list = obj->activeGestures();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -174,9 +174,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 #endif
       const QList<QGesture *> list = obj->canceledGestures();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -221,9 +221,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 #endif
       const QList<QGesture *> list = obj->gestures();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -293,9 +293,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
 #endif
       const QList<QUrl> list = obj->sidebarUrls();
       PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -1244,12 +1244,12 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QUrl(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QUrl(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
     {
 #endif
       QList<QUrl> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
 #endif
       const QList<QUrl> list = obj->selectedUrls();
       PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -1504,12 +1504,12 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QUrl(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QUrl(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1754,7 +1754,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 #endif
     const QList<QUrl> list = QFileDialog::getOpenFileUrls( OPQWIDGET( 1, nullptr ), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)), OPQSTRING( 4, QString() ), nullptr, HB_ISNIL(6) ? static_cast<QFileDialog::Options >( 0 ) : static_cast<QFileDialog::Options >( hb_parni(6) ), OPQSTRINGLIST( 7, QStringList() ) );
     PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1762,12 +1762,12 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QUrl(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QUrl(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1968,7 +1968,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
             auto pArg1 = hb_itemArrayNew(0);
             for( const auto & item : arg1 )
             {
-              PHB_ITEM pTempItem = hb_itemPutC(nullptr, QSTRINGTOSTRING(item));
+              auto pTempItem = hb_itemPutC(nullptr, QSTRINGTOSTRING(item));
               hb_arrayAddForward(pArg1, pTempItem);
               hb_itemRelease(pTempItem);
             }
@@ -2130,9 +2130,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
-                PHB_ITEM pTempObject = hb_itemNew(nullptr);
+                auto pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QUrl(item));
+                auto pTempItem = hb_itemPutPtr(nullptr, new QUrl(item));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);

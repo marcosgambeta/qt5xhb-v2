@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
 #endif
       const QList<QAction *> list = obj->actions();
       PHB_DYNS pDynSym = hb_dynsymFindName("QACTION");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -758,9 +758,9 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
     {
 #endif
       QList<QAction*> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -2233,7 +2233,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
     {
 #endif
       QList<QAction *> par2;
-      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+      auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {

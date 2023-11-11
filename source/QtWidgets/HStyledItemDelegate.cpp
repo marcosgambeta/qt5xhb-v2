@@ -99,9 +99,9 @@ void HStyledItemDelegate::paint( QPainter *painter, const QStyleOptionViewItem &
 {
   if( m_paintBlock != nullptr )
   {
-    PHB_ITEM pPainter = Qt5xHb::returnQPainterObject( (void *) painter );
-    PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    auto pPainter = Qt5xHb::returnQPainterObject( (void *) painter );
+    auto pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     hb_vmEvalBlockV( m_paintBlock, 3, pPainter, pOption, pIndex );
 
@@ -126,12 +126,12 @@ QSize HStyledItemDelegate::sizeHint( const QStyleOptionViewItem &option, const Q
 
   if( m_sizeHintBlock != nullptr )
   {
-    // PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
-    PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    // auto pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
+    auto pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
+    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_sizeHintBlock, 2, pOption, pIndex );
+    auto pRet = hb_vmEvalBlockV( m_sizeHintBlock, 2, pOption, pIndex );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QSIZE" ) )
     {
@@ -160,12 +160,12 @@ QString HStyledItemDelegate::displayText( const QVariant &value, const QLocale &
 
   if( m_displayTextBlock != nullptr )
   {
-    // PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
-    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( (void *) &value );
-    // PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
-    PHB_ITEM pLocale = Qt5xHb::returnQLocaleObject( (void *) &locale );
+    // auto pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    auto pValue = Qt5xHb::returnQVariantObject( (void *) &value );
+    // auto pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
+    auto pLocale = Qt5xHb::returnQLocaleObject( (void *) &locale );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_displayTextBlock, 2, pValue, pLocale );
+    auto pRet = hb_vmEvalBlockV( m_displayTextBlock, 2, pValue, pLocale );
 
     if( hb_itemType( pRet ) & HB_IT_STRING )
     {
@@ -190,14 +190,14 @@ QWidget * HStyledItemDelegate::createEditor( QWidget *parent, const QStyleOption
 
   if( m_createEditorBlock != nullptr )
   {
-    // PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
-    PHB_ITEM pParent = Qt5xHb::returnQWidgetObject( parent );
-    // PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
-    PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    // auto pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
+    auto pParent = Qt5xHb::returnQWidgetObject( parent );
+    // auto pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
+    auto pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
+    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_createEditorBlock, 3, pParent, pOption, pIndex );
+    auto pRet = hb_vmEvalBlockV( m_createEditorBlock, 3, pParent, pOption, pIndex );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QWIDGET" ) )
     {
@@ -225,8 +225,8 @@ void HStyledItemDelegate::setEditorData( QWidget *editor, const QModelIndex &ind
 {
   if( m_setEditorDataBlock != nullptr )
   {
-    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    auto pEditor = Qt5xHb::returnQWidgetObject( editor );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     hb_vmEvalBlockV( m_setEditorDataBlock, 2, pEditor, pIndex );
 
@@ -243,9 +243,9 @@ void HStyledItemDelegate::setModelData( QWidget *editor, QAbstractItemModel *mod
 {
   if( m_setModelDataBlock != nullptr )
   {
-    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    PHB_ITEM pModel = Qt5xHb::returnQObjectObject( model );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    auto pEditor = Qt5xHb::returnQWidgetObject( editor );
+    auto pModel = Qt5xHb::returnQObjectObject( model );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     hb_vmEvalBlockV( m_setModelDataBlock, 3, pEditor, pModel, pIndex );
 
@@ -263,9 +263,9 @@ void HStyledItemDelegate::updateEditorGeometry( QWidget *editor, const QStyleOpt
 {
   if( m_updateEditorGeometryBlock != nullptr )
   {
-    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    auto pEditor = Qt5xHb::returnQWidgetObject( editor );
+    auto pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     hb_vmEvalBlockV( m_updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
 
@@ -283,8 +283,8 @@ void HStyledItemDelegate::destroyEditor( QWidget *editor, const QModelIndex &ind
 {
   if( m_destroyEditorBlock != nullptr )
   {
-    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    auto pEditor = Qt5xHb::returnQWidgetObject( editor );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     hb_vmEvalBlockV( m_destroyEditorBlock, 2, pEditor, pIndex );
 

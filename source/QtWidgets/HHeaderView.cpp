@@ -26,9 +26,9 @@ void HHeaderView::paintSection( QPainter *painter, const QRect &rect, int logica
 {
   if( m_paintSectionBlock != nullptr )
   {
-    PHB_ITEM pPainter = Qt5xHb::returnQPainterObject( (void *) painter );
-    PHB_ITEM pRect = Qt5xHb::returnQRectObject( (void *) &rect );
-    PHB_ITEM pLogicalIndex = hb_itemPutNI( NULL, logicalIndex );
+    auto pPainter = Qt5xHb::returnQPainterObject( (void *) painter );
+    auto pRect = Qt5xHb::returnQRectObject( (void *) &rect );
+    auto pLogicalIndex = hb_itemPutNI( NULL, logicalIndex );
 
     hb_vmEvalBlockV( m_paintSectionBlock, 3, pPainter, pRect, pLogicalIndex );
 

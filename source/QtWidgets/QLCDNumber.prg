@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
+    auto pNum = hb_param(1, HB_IT_NUMERIC);
     if( pNum )
     {
       if( HB_IS_DOUBLE(pNum) )
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
     }
     else if( HB_ISNUM(1) )
     {
-      PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
+      auto pNum = hb_param(1, HB_IT_NUMERIC);
       if( pNum )
       {
         if( HB_IS_DOUBLE(pNum) )
