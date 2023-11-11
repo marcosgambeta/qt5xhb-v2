@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
     {
 #endif
       QList<QByteArray> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
 #endif
       const QList<QByteArray> list = obj->convertFromMime( PQSTRING(1), *PQVARIANT(2), PQSTRING(3) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -266,12 +266,12 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
