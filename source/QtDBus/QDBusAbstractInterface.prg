@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
     {
 #endif
       QList<QVariant> par3;
-      PHB_ITEM aList3 = hb_param( 3, HB_IT_ARRAY );
+      auto aList3 = hb_param( 3, HB_IT_ARRAY );
       int nLen3 = hb_arrayLen( aList3 );
       for( auto i3 = 0; i3 < nLen3; i3++ )
       {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
     if( obj != nullptr )
     {
       QList<QVariant> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
     if( obj != nullptr )
     {
       QList<QVariant> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
     {
 #endif
       QList<QVariant> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
