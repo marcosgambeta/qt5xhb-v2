@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
 #endif
       const QList<QSensorFilter *> list = obj->filters();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSENSORFILTER");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -716,9 +716,9 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
 #endif
     const QList<QByteArray> list = QSensor::sensorTypes();
     PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1192,12 +1192,12 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 #endif
     const QList<QByteArray> list = QSensor::sensorsForType( *PQBYTEARRAY(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1239,12 +1239,12 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
