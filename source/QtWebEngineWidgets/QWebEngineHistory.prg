@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
 #endif
       const QList<QWebEngineHistoryItem> list = obj->items();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -125,12 +125,12 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QWebEngineHistoryItem(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QWebEngineHistoryItem(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
 #endif
       const QList<QWebEngineHistoryItem> list = obj->backItems( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -177,12 +177,12 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QWebEngineHistoryItem(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QWebEngineHistoryItem(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
 #endif
       const QList<QWebEngineHistoryItem> list = obj->forwardItems( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -229,12 +229,12 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QWebEngineHistoryItem(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QWebEngineHistoryItem(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
