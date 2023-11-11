@@ -261,10 +261,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
     {
 #endif
       const QList<QAudioFormat::Endian> list = obj->supportedByteOrders();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -293,10 +293,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
     {
 #endif
       const QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }

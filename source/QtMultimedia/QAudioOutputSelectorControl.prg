@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
     {
 #endif
       const QList<QString> list = obj->availableOutputs();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
+        auto pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }

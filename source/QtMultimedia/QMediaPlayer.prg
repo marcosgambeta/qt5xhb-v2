@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
     {
 #endif
       QList<QNetworkConfiguration> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -1031,10 +1031,10 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDAUDIOROLES )
     {
 #endif
       const QList<QAudio::Role> list = obj->supportedAudioRoles();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }

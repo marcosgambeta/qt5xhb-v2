@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
     if( obj != nullptr )
     {
       QList<QMediaContent> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA )
     if( obj != nullptr )
     {
       QList<QMediaContent> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {

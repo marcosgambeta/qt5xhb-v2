@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
     {
 #endif
       const QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
+        auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
