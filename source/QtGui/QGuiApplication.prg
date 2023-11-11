@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
 #endif
     const QWindowList list = QGuiApplication::allWindows();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWINDOW");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto item : list )
@@ -244,9 +244,9 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+        auto pItem = hb_itemPutPtr(nullptr, item);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
 #endif
     const QList<QScreen *> list = QGuiApplication::screens();
     PHB_DYNS pDynSym = hb_dynsymFindName("QSCREEN");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto item : list )
@@ -717,9 +717,9 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+        auto pItem = hb_itemPutPtr(nullptr, item);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
 #endif
     const QWindowList list = QGuiApplication::topLevelWindows();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWINDOW");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( auto item : list )
@@ -946,9 +946,9 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+        auto pItem = hb_itemPutPtr(nullptr, item);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);

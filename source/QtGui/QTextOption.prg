@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
     {
 #endif
       QList<qreal> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       qreal temp1;
       for( auto i1 = 0; i1 < nLen1; i1++ )

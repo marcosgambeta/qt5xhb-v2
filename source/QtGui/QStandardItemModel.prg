@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDCOLUMN )
     {
 #endif
       QList<QStandardItem *> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
     if( obj != nullptr )
     {
       QList<QStandardItem *> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
 #endif
       const QList<QStandardItem *> list = obj->findItems( PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly ) : static_cast<Qt::MatchFlags >( hb_parni(2) ), OPINT( 3, 0 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -277,9 +277,9 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
     if( obj != nullptr )
     {
       QList<QStandardItem *> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
     if( obj != nullptr )
     {
       QList<QStandardItem *> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
 #endif
       const QList<QStandardItem *> list = obj->takeRow( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -1245,9 +1245,9 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1284,7 +1284,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
 #endif
       const QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -1292,9 +1292,9 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1480,7 +1480,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {

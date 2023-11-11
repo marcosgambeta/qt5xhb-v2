@@ -34,16 +34,16 @@ QValidator::State HCodeBlockValidator::validate( QString & input, int & pos ) co
   /*
     executa o codeblock de validação
   */
-  PHB_ITEM pInput = hb_itemPutC( NULL, input.toLatin1().data() );
-  PHB_ITEM pPos = hb_itemPutNI( NULL, pos );
-  PHB_ITEM pRet = hb_vmEvalBlockV( m_block, 2, pInput, pPos );
+  auto pInput = hb_itemPutC( NULL, input.toLatin1().data() );
+  auto pPos = hb_itemPutNI( NULL, pos );
+  auto pRet = hb_vmEvalBlockV( m_block, 2, pInput, pPos );
   hb_itemRelease( pInput );
   hb_itemRelease( pPos );
 
   /*
     processa o resultado armazenado em pRet {cString,nPos,nState}
   */
-  PHB_ITEM pTemp1 = hb_arrayGetItemPtr( pRet, 1 );
+  auto pTemp1 = hb_arrayGetItemPtr( pRet, 1 );
   char * str = hb_itemGetC( pTemp1 );
   #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
   input = QLatin1String( str );
@@ -51,9 +51,9 @@ QValidator::State HCodeBlockValidator::validate( QString & input, int & pos ) co
   input = str;
   #endif
   hb_itemFreeC(str);
-  PHB_ITEM pTemp2 = hb_arrayGetItemPtr(pRet,2);
+  auto pTemp2 = hb_arrayGetItemPtr(pRet,2);
   pos = hb_itemGetNI( pTemp2 );
-  PHB_ITEM pTemp3 = hb_arrayGetItemPtr(pRet,3);
+  auto pTemp3 = hb_arrayGetItemPtr(pRet,3);
   int state = hb_itemGetNI( pTemp3 );
   return (QValidator::State) state;
   hb_itemRelease( pTemp1 );

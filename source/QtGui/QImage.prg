@@ -365,10 +365,10 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
     {
 #endif
       const QVector<QRgb> list = obj->colorTable();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+        auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
     if( obj != nullptr )
     {
       QVector<QRgb> par2;
-      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY );
       int nLen2 = hb_arrayLen( aList2 );
       QRgb temp2;
       for( auto i2 = 0; i2 < nLen2; i2++ )
