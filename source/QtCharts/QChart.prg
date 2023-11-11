@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QCHART_SERIES )
 #endif
       const QList<QAbstractSeries *> list = obj->series();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -954,9 +954,9 @@ HB_FUNC_STATIC( QCHART_SERIES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QCHART_AXES )
 #endif
       const QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1) ), OPQABSTRACTSERIES( 2, nullptr ) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -1169,9 +1169,9 @@ HB_FUNC_STATIC( QCHART_AXES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

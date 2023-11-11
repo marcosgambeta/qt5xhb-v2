@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
     if( obj != nullptr )
     {
       QList<QBoxSet *> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 #endif
       const QList<QBoxSet *> list = obj->boxSets();
       PHB_DYNS pDynSym = hb_dynsymFindName("QBOXSET");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -518,9 +518,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -686,9 +686,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
-                PHB_ITEM pTempObject = hb_itemNew(nullptr);
+                auto pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, item);
+                auto pTempItem = hb_itemPutPtr(nullptr, item);
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
@@ -761,9 +761,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
-                PHB_ITEM pTempObject = hb_itemNew(nullptr);
+                auto pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, item);
+                auto pTempItem = hb_itemPutPtr(nullptr, item);
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
