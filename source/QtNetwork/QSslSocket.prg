@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATECHAIN )
     {
 #endif
       QList<QSslCertificate> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
 #endif
       const QList<QSslCertificate> list = obj->localCertificateChain();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -965,12 +965,12 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
 #endif
       const QList<QSslCertificate> list = obj->peerCertificateChain();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -1104,12 +1104,12 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1260,7 +1260,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 #endif
       const QList<QSslCipher> list = obj->ciphers();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -1268,12 +1268,12 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
     if( obj != nullptr )
     {
       QList<QSslCipher> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
   {
 #endif
     QList<QSslCipher> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    auto aList1 = hb_param( 1, HB_IT_ARRAY );
     int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
 #endif
     const QList<QSslCipher> list = QSslSocket::defaultCiphers();
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1387,12 +1387,12 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 #endif
     const QList<QSslCipher> list = QSslSocket::supportedCiphers();
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1432,12 +1432,12 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QSslCipher(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1483,7 +1483,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
     if( obj != nullptr )
     {
       QList<QSslCertificate> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
     {
 #endif
       QList<QSslCertificate> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -1575,7 +1575,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 #endif
       const QList<QSslCertificate> list = obj->caCertificates();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -1583,12 +1583,12 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1649,7 +1649,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
     */
 
     QList<QSslCertificate> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    auto aList1 = hb_param( 1, HB_IT_ARRAY );
     int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
@@ -1676,7 +1676,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
   {
 #endif
     QList<QSslCertificate> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    auto aList1 = hb_param( 1, HB_IT_ARRAY );
     int nLen1 = hb_arrayLen( aList1 );
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
@@ -1705,7 +1705,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
 #endif
     const QList<QSslCertificate> list = QSslSocket::defaultCaCertificates();
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1713,12 +1713,12 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
 #endif
     const QList<QSslCertificate> list = QSslSocket::systemCaCertificates();
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -1758,12 +1758,12 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QSslCertificate(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1919,7 +1919,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
 #endif
       const QList<QSslError> list = obj->sslErrors();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -1927,12 +1927,12 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QSslError(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QSslError(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -2065,7 +2065,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
     if( obj != nullptr )
     {
       QList<QSslError> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -2438,9 +2438,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
-                PHB_ITEM pTempObject = hb_itemNew(nullptr);
+                auto pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QSslError(item));
+                auto pTempItem = hb_itemPutPtr(nullptr, new QSslError(item));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);

@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 #endif
       const QList<QNetworkAddressEntry> list = obj->addressEntries();
       PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKADDRESSENTRY");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -139,12 +139,12 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkAddressEntry(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QNetworkAddressEntry(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 #endif
     const QList<QHostAddress> list = QNetworkInterface::allAddresses();
     PHB_DYNS pDynSym = hb_dynsymFindName("QHOSTADDRESS");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -329,12 +329,12 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QHostAddress(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QHostAddress(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 #endif
     const QList<QNetworkInterface> list = QNetworkInterface::allInterfaces();
     PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKINTERFACE");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -374,12 +374,12 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkInterface(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QNetworkInterface(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);

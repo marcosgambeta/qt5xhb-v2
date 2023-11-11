@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 #endif
       const QList<QNetworkProxy> list = obj->queryProxy( HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtr(1)) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKPROXY");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -107,12 +107,12 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkProxy(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QNetworkProxy(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 #endif
     const QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery( *PQNETWORKPROXYQUERY(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKPROXY");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -153,12 +153,12 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkProxy(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QNetworkProxy(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 #endif
     const QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery( HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtr(1)) );
     PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKPROXY");
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    auto pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( const auto & item : list )
@@ -240,12 +240,12 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew(nullptr);
+        auto pObject = hb_itemNew(nullptr);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QNetworkProxy(item));
+        auto pItem = hb_itemPutPtr(nullptr, new QNetworkProxy(item));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+        auto pDestroy = hb_itemPutL(nullptr, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
