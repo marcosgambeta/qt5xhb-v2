@@ -790,9 +790,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
                 hb_vmDo(0);
-                PHB_ITEM pTempObject = hb_itemNew(nullptr);
+                auto pTempObject = hb_itemNew(nullptr);
                 hb_itemCopy(pTempObject, hb_stackReturnItem());
-                PHB_ITEM pTempItem = hb_itemPutPtr(nullptr, new QDeclarativeError(item));
+                auto pTempItem = hb_itemPutPtr(nullptr, new QDeclarativeError(item));
                 hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                 hb_arrayAddForward(pArg1, pTempObject);
                 hb_itemRelease(pTempObject);
