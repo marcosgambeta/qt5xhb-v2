@@ -49,7 +49,7 @@ QAction * HUiLoader::createAction( QObject *parent, const QString &name )
 
   if( m_createActionBlock != nullptr )
   {
-    PHB_ITEM pAction = Qt5xHb::returnQObjectObject( action );
+    auto pAction = Qt5xHb::returnQObjectObject( action );
     hb_vmEvalBlockV( m_createActionBlock, 1, pAction );
     hb_itemRelease( pAction );
   }
@@ -63,7 +63,7 @@ QActionGroup * HUiLoader::createActionGroup( QObject *parent, const QString &nam
 
   if( m_createActionGroupBlock != nullptr )
   {
-    PHB_ITEM pActionGroup = Qt5xHb::returnQObjectObject( actionGroup );
+    auto pActionGroup = Qt5xHb::returnQObjectObject( actionGroup );
     hb_vmEvalBlockV( m_createActionGroupBlock, 1, pActionGroup );
     hb_itemRelease( pActionGroup );
   }
@@ -77,7 +77,7 @@ QLayout * HUiLoader::createLayout( const QString &className, QObject *parent, co
 
   if( m_createLayoutBlock != nullptr )
   {
-    PHB_ITEM pLayout = Qt5xHb::returnQObjectObject( layout );
+    auto pLayout = Qt5xHb::returnQObjectObject( layout );
     hb_vmEvalBlockV( m_createLayoutBlock, 1, pLayout );
     hb_itemRelease( pLayout );
   }
@@ -91,7 +91,7 @@ QWidget * HUiLoader::createWidget( const QString &className, QWidget *parent, co
 
   if( m_createWidgetBlock != nullptr )
   {
-    PHB_ITEM pWidget = Qt5xHb::returnQWidgetObject( widget );
+    auto pWidget = Qt5xHb::returnQWidgetObject( widget );
     hb_vmEvalBlockV( m_createWidgetBlock, 1, pWidget );
     hb_itemRelease( pWidget );
   }
