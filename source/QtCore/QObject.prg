@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
 #endif
       const QObjectList & list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -370,9 +370,9 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 #endif
       const QList<QByteArray> list = obj->dynamicPropertyNames();
       PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( const auto & item : list )
@@ -470,12 +470,12 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
+          auto pItem = hb_itemPutPtr(nullptr, new QByteArray(item));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(nullptr, true);
+          auto pDestroy = hb_itemPutL(nullptr, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     {
       const QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -592,9 +592,9 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     {
       const QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -628,9 +628,9 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     {
       const QList<QObject *> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -665,9 +665,9 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1238,7 +1238,7 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
 
   if( hb_pcount() == 1 && hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) )
   {
-    PHB_ITEM item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+    auto item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
     if( item )
     {
@@ -2107,7 +2107,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem() );
-        PHB_ITEM codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
+        auto codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
         hb_vmPush( codeblock );
         hb_vmSend(1);
       }
@@ -2140,7 +2140,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
     {
       int event = hb_parni(1);
 
-      PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+      auto item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
       if( item )
       {

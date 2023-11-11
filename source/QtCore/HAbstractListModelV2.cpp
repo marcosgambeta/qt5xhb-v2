@@ -134,10 +134,10 @@ QVariant HAbstractListModelV2::data( const QModelIndex & index, int role ) const
 
   if( m_dataBlock != nullptr )
   {
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( ( void * ) &index ); // TODO: C++ cast
-    PHB_ITEM pRole = hb_itemPutNI( nullptr, role );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( ( void * ) &index ); // TODO: C++ cast
+    auto pRole = hb_itemPutNI( nullptr, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_dataBlock, 2, pIndex, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_dataBlock, 2, pIndex, pRole ) );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
@@ -159,11 +159,11 @@ QVariant HAbstractListModelV2::headerData( int section, Qt::Orientation orientat
 
   if( m_headerDataBlock != nullptr )
   {
-    PHB_ITEM pSection = hb_itemPutNI( nullptr, section );
-    PHB_ITEM pOrientation = hb_itemPutNI( nullptr, static_cast< int >( orientation ) );
-    PHB_ITEM pRole = hb_itemPutNI( nullptr, role );
+    auto pSection = hb_itemPutNI( nullptr, section );
+    auto pOrientation = hb_itemPutNI( nullptr, static_cast< int >( orientation ) );
+    auto pRole = hb_itemPutNI( nullptr, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_headerDataBlock, 3, pSection, pOrientation, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_headerDataBlock, 3, pSection, pOrientation, pRole ) );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
@@ -186,9 +186,9 @@ Qt::ItemFlags HAbstractListModelV2::flags( const QModelIndex &index ) const
 
   if( m_flagsBlock != nullptr )
   {
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( ( void * ) &index ); // C++ cast
+    auto pIndex = Qt5xHb::returnQModelIndexObject( ( void * ) &index ); // C++ cast
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsBlock, 1, pIndex ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsBlock, 1, pIndex ) );
 
     if( hb_itemType( pRet ) & HB_IT_NUMERIC )
     {
@@ -208,11 +208,11 @@ bool HAbstractListModelV2::setData( const QModelIndex &index, const QVariant &va
 
   if( m_setDataBlock != nullptr )
   {
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( ( void * ) &index ); // TODO: C++ cast
-    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: C++ cast
-    PHB_ITEM pRole = hb_itemPutNI( nullptr, role );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( ( void * ) &index ); // TODO: C++ cast
+    auto pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: C++ cast
+    auto pRole = hb_itemPutNI( nullptr, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataBlock, 3, pIndex, pValue, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataBlock, 3, pIndex, pValue, pRole ) );
 
     if( hb_itemType( pRet ) & HB_IT_LOGICAL )
     {

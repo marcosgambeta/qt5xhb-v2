@@ -736,8 +736,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemDisplayCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemDisplayCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemDisplayCB, 1, pRow ) );
         switch( hb_itemType( pRet ) )
         {
           case HB_IT_STRING:
@@ -793,8 +793,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemDecorationCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemDecorationCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemDecorationCB, 1, pRow ) );
         switch( hb_itemType( pRet ) )
         {
           case HB_IT_OBJECT:
@@ -825,8 +825,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemEditCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemEditCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemEditCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_STRING )
         {
           data = hb_itemGetCPtr( pRet );
@@ -840,8 +840,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemToolTipCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemToolTipCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemToolTipCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_STRING )
         {
           #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -859,8 +859,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemStatusTipCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemStatusTipCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemStatusTipCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_STRING )
         {
           #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -878,8 +878,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemWhatsThisCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemWhatsThisCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemWhatsThisCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_STRING )
         {
           #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -897,8 +897,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemSizeHintCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemSizeHintCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemSizeHintCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_OBJECT )
         {
           void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -913,8 +913,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemFontCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemFontCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemFontCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_OBJECT )
         {
           void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -929,8 +929,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemTextAlignmentCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemTextAlignmentCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemTextAlignmentCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_NUMERIC )
         {
           data = hb_itemGetNI( pRet );
@@ -944,8 +944,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemBackgroundCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemBackgroundCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemBackgroundCB, 1, pRow ) );
         switch( hb_itemType( pRet ) )
         {
           case HB_IT_OBJECT:
@@ -976,8 +976,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemForegroundCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemForegroundCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemForegroundCB, 1, pRow ) );
         switch( hb_itemType( pRet ) )
         {
           case HB_IT_OBJECT:
@@ -1001,8 +1001,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemCheckStateCB != nullptr )
       {
-       PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-       PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemCheckStateCB, 1, pRow ) );
+       auto pRow = hb_itemPutNI( nullptr, index.row() );
+       auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemCheckStateCB, 1, pRow ) );
        if( hb_itemType( pRet ) & HB_IT_NUMERIC )
        {
          data = hb_itemGetNI( pRet );
@@ -1016,8 +1016,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemAccessibleTextCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemAccessibleTextCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemAccessibleTextCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_STRING )
         {
           #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -1035,8 +1035,8 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     {
       if( m_itemAccessibleDescriptionCB != nullptr )
       {
-        PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-        PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemAccessibleDescriptionCB, 1, pRow ) );
+        auto pRow = hb_itemPutNI( nullptr, index.row() );
+        auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemAccessibleDescriptionCB, 1, pRow ) );
         if( hb_itemType( pRet ) & HB_IT_STRING )
         {
           #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -1069,8 +1069,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderDisplayCB != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderDisplayCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderDisplayCB, 1, pCol ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_STRING:
@@ -1109,8 +1109,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderDecorationCB != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderDecorationCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderDecorationCB, 1, pCol ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_OBJECT:
@@ -1141,8 +1141,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderToolTipCB != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemToolTipCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemToolTipCB, 1, pCol ) );
             if( hb_itemType( pRet ) & HB_IT_STRING )
             {
               #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -1160,8 +1160,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderSizeHintCB != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderSizeHintCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderSizeHintCB, 1, pCol ) );
             if( hb_itemType( pRet ) & HB_IT_OBJECT )
             {
               void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -1176,8 +1176,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderFontCB != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderFontCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderFontCB, 1, pCol ) );
             if( hb_itemType( pRet ) & HB_IT_OBJECT )
             {
               void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -1192,8 +1192,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderTextAlignmentCB  != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderTextAlignmentCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderTextAlignmentCB, 1, pCol ) );
             if( hb_itemType( pRet ) & HB_IT_NUMERIC )
             {
               data = hb_itemGetNI( pRet );
@@ -1207,8 +1207,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderBackgroundCB  != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderBackgroundCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderBackgroundCB, 1, pCol ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_OBJECT:
@@ -1239,8 +1239,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_horizontalHeaderForegroundCB  != nullptr )
           {
-            PHB_ITEM pCol = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderForegroundCB, 1, pCol ) );
+            auto pCol = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderForegroundCB, 1, pCol ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_OBJECT:
@@ -1271,8 +1271,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderDisplayCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderDisplayCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderDisplayCB, 1, pRow ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_STRING:
@@ -1311,8 +1311,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderDecorationCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderDecorationCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderDecorationCB, 1, pRow ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_OBJECT:
@@ -1343,8 +1343,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderToolTipCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_itemToolTipCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_itemToolTipCB, 1, pRow ) );
             if( hb_itemType( pRet ) & HB_IT_STRING )
             {
               #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -1362,8 +1362,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderSizeHintCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderSizeHintCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_horizontalHeaderSizeHintCB, 1, pRow ) );
             if( hb_itemType( pRet ) & HB_IT_OBJECT )
             {
               void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -1378,8 +1378,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderFontCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderFontCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderFontCB, 1, pRow ) );
             if( hb_itemType( pRet ) & HB_IT_OBJECT )
             {
               void * ptr = hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -1394,8 +1394,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderTextAlignmentCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderTextAlignmentCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderTextAlignmentCB, 1, pRow ) );
             if( hb_itemType( pRet ) & HB_IT_NUMERIC )
             {
               data = hb_itemGetNI( pRet );
@@ -1409,8 +1409,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderBackgroundCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderBackgroundCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderBackgroundCB, 1, pRow ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_OBJECT:
@@ -1441,8 +1441,8 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
         {
           if( m_verticalHeaderForegroundCB != nullptr )
           {
-            PHB_ITEM pRow = hb_itemPutNI( nullptr, section );
-            PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderForegroundCB, 1, pRow ) );
+            auto pRow = hb_itemPutNI( nullptr, section );
+            auto pRet = hb_itemNew( hb_vmEvalBlockV( m_verticalHeaderForegroundCB, 1, pRow ) );
             switch( hb_itemType( pRet ) )
             {
               case HB_IT_OBJECT:
@@ -1491,9 +1491,9 @@ Qt::ItemFlags HAbstractListModel::flags( const QModelIndex &index ) const
 
   if( m_flagsCB != nullptr )
   {
-    PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
+    auto pRow = hb_itemPutNI( nullptr, index.row() );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsCB, 1, pRow ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsCB, 1, pRow ) );
 
     if( hb_itemType( pRet ) & HB_IT_NUMERIC )
     {
@@ -1513,11 +1513,11 @@ bool HAbstractListModel::setData( const QModelIndex &index, const QVariant &valu
 
   if( m_setDataCB != nullptr )
   {
-    PHB_ITEM pRow = hb_itemPutNI( nullptr, index.row() );
-    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: C++ cast
-    PHB_ITEM pRole = hb_itemPutNI( nullptr, role );
+    auto pRow = hb_itemPutNI( nullptr, index.row() );
+    auto pValue = Qt5xHb::returnQVariantObject( ( void * ) &value ); // TODO: C++ cast
+    auto pRole = hb_itemPutNI( nullptr, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataCB, 3, pRow, pValue, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataCB, 3, pRow, pValue, pRole ) );
 
     if( hb_itemType( pRet ) & HB_IT_LOGICAL )
     {

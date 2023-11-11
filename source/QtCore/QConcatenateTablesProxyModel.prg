@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY );
       int nLen1 = hb_arrayLen( aList1 );
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SOURCEMODELS )
 #endif
       const QList<QAbstractItemModel *> list = obj->sourceModels();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTITEMMODEL");
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( auto item : list )
@@ -577,9 +577,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SOURCEMODELS )
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew(nullptr);
+          auto pObject = hb_itemNew(nullptr);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(nullptr, item);
+          auto pItem = hb_itemPutPtr(nullptr, item);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

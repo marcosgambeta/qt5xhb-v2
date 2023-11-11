@@ -393,10 +393,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
     {
 #endif
       const QVector<int> list = obj->segments();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
-        PHB_ITEM pItem = hb_itemPutNI(nullptr, item);
+        auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }

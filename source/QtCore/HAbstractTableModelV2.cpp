@@ -176,11 +176,11 @@ QVariant HAbstractTableModelV2::data( const QModelIndex & index, int role ) cons
 
   if( m_dataBlock != nullptr )
   {
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
-    PHB_ITEM pRole = hb_itemPutNI( NULL, role );
+    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    auto pRole = hb_itemPutNI( NULL, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_dataBlock, 2, pIndex, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_dataBlock, 2, pIndex, pRole ) );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
@@ -206,11 +206,11 @@ QVariant HAbstractTableModelV2::headerData( int section, Qt::Orientation orienta
 
   if( m_headerDataBlock != nullptr )
   {
-    PHB_ITEM pSection = hb_itemPutNI( NULL, section );
-    PHB_ITEM pOrientation = hb_itemPutNI( NULL, (int) orientation );
-    PHB_ITEM pRole = hb_itemPutNI( NULL, role );
+    auto pSection = hb_itemPutNI( NULL, section );
+    auto pOrientation = hb_itemPutNI( NULL, (int) orientation );
+    auto pRole = hb_itemPutNI( NULL, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_headerDataBlock, 3, pSection, pOrientation, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_headerDataBlock, 3, pSection, pOrientation, pRole ) );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
@@ -237,10 +237,10 @@ Qt::ItemFlags HAbstractTableModelV2::flags( const QModelIndex &index ) const
 
   if( m_flagsBlock != nullptr )
   {
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsBlock, 1, pIndex ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_flagsBlock, 1, pIndex ) );
 
     if( hb_itemType( pRet ) & HB_IT_NUMERIC )
     {
@@ -264,13 +264,13 @@ bool HAbstractTableModelV2::setData( const QModelIndex &index, const QVariant &v
 
   if( m_setDataBlock != nullptr )
   {
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
-    // PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
-    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( (void *) &value );
-    PHB_ITEM pRole = hb_itemPutNI( NULL, role );
+    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    auto pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+    // auto pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    auto pValue = Qt5xHb::returnQVariantObject( (void *) &value );
+    auto pRole = hb_itemPutNI( NULL, role );
 
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataBlock, 3, pIndex, pValue, pRole ) );
+    auto pRet = hb_itemNew( hb_vmEvalBlockV( m_setDataBlock, 3, pIndex, pValue, pRole ) );
 
     if( hb_itemType( pRet ) & HB_IT_LOGICAL )
     {
