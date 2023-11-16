@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QMetaProperty();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

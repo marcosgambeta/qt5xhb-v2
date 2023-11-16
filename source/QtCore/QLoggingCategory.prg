@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     auto obj = new QLoggingCategory( PCONSTCHAR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

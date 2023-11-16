@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDIR_NEW )
     QDir( const QDir & dir )
     */
     auto obj = new QDir( *PQDIR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDIR_NEW )
     QDir( const QString & path = QString() )
     */
     auto obj = new QDir( OPQSTRING( 1, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDIR_NEW )
     QDir( const QString & path, const QString & nameFilter, QDir::SortFlags sort = QDir::SortFlags( QDir::Name | QDir::IgnoreCase ), QDir::Filters filters = QDir::AllEntries )
     */
     auto obj = new QDir( PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? static_cast<QDir::SortFlags >( QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) ) : static_cast<QDir::SortFlags >( hb_parni(3) ), HB_ISNIL(4) ? static_cast<QDir::Filters >( QDir::AllEntries ) : static_cast<QDir::Filters >( hb_parni(4) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

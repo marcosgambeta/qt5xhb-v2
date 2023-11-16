@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
     QRegExp()
     */
     auto obj = new QRegExp();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
     QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
     */
     auto obj = new QRegExp( PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast<Qt::CaseSensitivity >( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax >( QRegExp::RegExp ) : static_cast<QRegExp::PatternSyntax >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
     QRegExp( const QRegExp & rx )
     */
     auto obj = new QRegExp( *PQREGEXP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

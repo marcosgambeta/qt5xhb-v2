@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream()
     */
     auto obj = new QTextStream();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream( QIODevice * device )
     */
     auto obj = new QTextStream( PQIODEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
     */
     auto obj = new QTextStream( static_cast< FILE*>( hb_parptr(1) ), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
     */
     auto obj = new QTextStream( *PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadOnly ) : static_cast<QIODevice::OpenMode >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

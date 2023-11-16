@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
     QAtomicInt( int value = 0 )
     */
     auto obj = new QAtomicInt( OPINT( 1, 0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQATOMICINT(1) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
     QAtomicInt( const QAtomicInt & other )
     */
     auto obj = new QAtomicInt( *PQATOMICINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
     QMimeType()
     */
     auto obj = new QMimeType();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMIMETYPE(1) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
     QMimeType( const QMimeType & other )
     */
     auto obj = new QMimeType( *PQMIMETYPE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

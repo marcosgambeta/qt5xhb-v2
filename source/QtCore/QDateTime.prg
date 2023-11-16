@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime()
     */
     auto obj = new QDateTime();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDATE(1) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime( const QDate & date )
     */
     auto obj = new QDateTime( *PQDATE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
     */
     auto obj = new QDateTime( *PQDATE(1), *PQTIME(2), HB_ISNIL(3) ? static_cast<Qt::TimeSpec >( Qt::LocalTime ) : static_cast<Qt::TimeSpec >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime( const QDateTime & other )
     */
     auto obj = new QDateTime( *PQDATETIME(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

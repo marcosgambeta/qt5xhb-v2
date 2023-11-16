@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
     QJsonValueRef( QJsonArray * array, int idx )
     */
     auto obj = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQJSONOBJECT(1) && HB_ISNUM(2) )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
     QJsonValueRef( QJsonObject * object, int idx )
     */
     auto obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

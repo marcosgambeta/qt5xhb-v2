@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect()
     */
     auto obj = new QRect();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect( const QPoint & topLeft, const QPoint & bottomRight )
     */
     auto obj = new QRect( *PQPOINT(1), *PQPOINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect( const QPoint & topLeft, const QSize & size )
     */
     auto obj = new QRect( *PQPOINT(1), *PQSIZE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect( int x, int y, int width, int height )
     */
     auto obj = new QRect( PINT(1), PINT(2), PINT(3), PINT(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

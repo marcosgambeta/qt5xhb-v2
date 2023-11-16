@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
     QXmlStreamReader()
     */
     auto obj = new QXmlStreamReader();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
     QXmlStreamReader( QIODevice * device )
     */
     auto obj = new QXmlStreamReader( PQIODEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
     QXmlStreamReader( const QByteArray & data )
     */
     auto obj = new QXmlStreamReader( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
     QXmlStreamReader( const QString & data )
     */
     auto obj = new QXmlStreamReader( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

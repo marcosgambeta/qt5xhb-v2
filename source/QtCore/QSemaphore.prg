@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
   if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
   {
     auto obj = new QSemaphore( OPINT( 1, 0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

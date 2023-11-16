@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
   if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
   {
     auto obj = new QReadWriteLock( HB_ISNIL(1) ? static_cast<QReadWriteLock::RecursionMode >( QReadWriteLock::NonRecursive ) : static_cast<QReadWriteLock::RecursionMode >( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

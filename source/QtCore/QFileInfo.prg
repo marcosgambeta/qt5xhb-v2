@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     QFileInfo()
     */
     auto obj = new QFileInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     QFileInfo( const QString & file )
     */
     auto obj = new QFileInfo( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQFILE(1) )
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     QFileInfo( const QFile & file )
     */
     auto obj = new QFileInfo( *PQFILE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2) )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     QFileInfo( const QDir & dir, const QString & file )
     */
     auto obj = new QFileInfo( *PQDIR(1), PQSTRING(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQFILEINFO(1) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     QFileInfo( const QFileInfo & fileinfo )
     */
     auto obj = new QFileInfo( *PQFILEINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

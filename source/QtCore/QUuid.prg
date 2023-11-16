@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QUUID_NEW )
     QUuid()
     */
     auto obj = new QUuid();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QUUID_NEW )
     QUuid( const QByteArray & text )
     */
     auto obj = new QUuid( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

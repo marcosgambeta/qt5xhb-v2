@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
     QSignalTransition( QState * sourceState = nullptr )
     */
     auto obj = new QSignalTransition( OPQSTATE( 1, nullptr ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ( ISQSTATE(3) || HB_ISNIL(3) ) )
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
     QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = nullptr )
     */
     auto obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE( 3, nullptr ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

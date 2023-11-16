@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QTimeZone();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QTimeZone( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QTimeZone( PINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QTimeZone( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), HB_ISNIL(5) ? static_cast<QLocale::Country >( QLocale::AnyCountry ) : static_cast<QLocale::Country >( hb_parni(5) ), OPQSTRING( 6, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QTimeZone( *PQTIMEZONE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

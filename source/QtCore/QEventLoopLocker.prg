@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
     QEventLoopLocker()
     */
     auto obj = new QEventLoopLocker();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQEVENTLOOP(1) )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
     QEventLoopLocker( QEventLoop * loop )
     */
     auto obj = new QEventLoopLocker( PQEVENTLOOP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTHREAD(1) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
     QEventLoopLocker( QThread * thread )
     */
     auto obj = new QEventLoopLocker( PQTHREAD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

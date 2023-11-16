@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
     QXmlStreamEntityDeclaration()
     */
     auto obj = new QXmlStreamEntityDeclaration();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
     QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
     */
     auto obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

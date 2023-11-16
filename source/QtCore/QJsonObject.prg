@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
     QJsonObject()
     */
     auto obj = new QJsonObject();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
     QJsonObject( const QJsonObject & other )
     */
     auto obj = new QJsonObject( *PQJSONOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

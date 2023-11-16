@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
     QXmlStreamNotationDeclaration()
     */
     auto obj = new QXmlStreamNotationDeclaration();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1) )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
     QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
     */
     auto obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

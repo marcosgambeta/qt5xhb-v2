@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
     QDebug( QIODevice * device )
     */
     auto obj = new QDebug( PQIODEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
     QDebug( QtMsgType t )
     */
     auto obj = new QDebug( static_cast<QtMsgType>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDEBUG(1) )
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
     QDebug( const QDebug & o )
     */
     auto obj = new QDebug( *PQDEBUG(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

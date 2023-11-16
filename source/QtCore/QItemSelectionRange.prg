@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     QItemSelectionRange()
     */
     auto obj = new QItemSelectionRange();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     QItemSelectionRange( const QItemSelectionRange & other )
     */
     auto obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
     */
     auto obj = new QItemSelectionRange( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     QItemSelectionRange( const QModelIndex & index )
     */
     auto obj = new QItemSelectionRange( *PQMODELINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

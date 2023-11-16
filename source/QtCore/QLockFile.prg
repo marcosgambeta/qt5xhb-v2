@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QLOCKFILE_NEW )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     auto obj = new QLockFile( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

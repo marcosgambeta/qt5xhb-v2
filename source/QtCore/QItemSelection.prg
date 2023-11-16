@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
     QItemSelection()
     */
     auto obj = new QItemSelection();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
     QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
     */
     auto obj = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

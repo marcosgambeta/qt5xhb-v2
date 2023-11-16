@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
     QUrlQuery()
     */
     auto obj = new QUrlQuery();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
     QUrlQuery( const QUrl & url )
     */
     auto obj = new QUrlQuery( *PQURL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
     QUrlQuery( const QString & queryString )
     */
     auto obj = new QUrlQuery( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQURLQUERY(1) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
     QUrlQuery( const QUrlQuery & other )
     */
     auto obj = new QUrlQuery( *PQURLQUERY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

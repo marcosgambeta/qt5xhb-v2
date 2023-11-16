@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
     QProcessEnvironment()
     */
     auto obj = new QProcessEnvironment();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
     QProcessEnvironment( const QProcessEnvironment & other )
     */
     auto obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
     QTextEncoder( const QTextCodec * codec )
     */
     auto obj = new QTextEncoder( PQTEXTCODEC(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2) )
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
     QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
     */
     auto obj = new QTextEncoder( PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
     QPersistentModelIndex()
     */
     auto obj = new QPersistentModelIndex();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
     QPersistentModelIndex( const QModelIndex & index )
     */
     auto obj = new QPersistentModelIndex( *PQMODELINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
     QPersistentModelIndex( const QPersistentModelIndex & other )
     */
     auto obj = new QPersistentModelIndex( *PQPERSISTENTMODELINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

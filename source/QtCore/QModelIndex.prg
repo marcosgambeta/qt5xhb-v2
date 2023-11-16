@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
     QModelIndex()
     */
     auto obj = new QModelIndex();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
     QModelIndex( const QModelIndex & other )
     */
     auto obj = new QModelIndex( *PQMODELINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

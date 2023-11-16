@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
   if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( ISQLOCALE(2) || HB_ISNIL(2) ) )
   {
     auto obj = new QResource( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? QLocale() : *static_cast<QLocale*>(Qt5xHb::itemGetPtr(2)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

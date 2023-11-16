@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTIME_NEW )
     QTime()
     */
     auto obj = new QTime();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTIME_NEW )
     QTime( int h, int m, int s = 0, int ms = 0 )
     */
     auto obj = new QTime( PINT(1), PINT(2), OPINT( 3, 0 ), OPINT( 4, 0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

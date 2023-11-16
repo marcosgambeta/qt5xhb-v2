@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     QJsonDocument()
     */
     auto obj = new QJsonDocument();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     QJsonDocument( const QJsonObject & object )
     */
     auto obj = new QJsonDocument( *PQJSONOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQJSONARRAY(1) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     QJsonDocument( const QJsonArray & array )
     */
     auto obj = new QJsonDocument( *PQJSONARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQJSONDOCUMENT(1) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     QJsonDocument( const QJsonDocument & other )
     */
     auto obj = new QJsonDocument( *PQJSONDOCUMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

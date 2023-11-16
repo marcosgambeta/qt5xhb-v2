@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QJSONARRAY_NEW )
     QJsonArray()
     */
     auto obj = new QJsonArray();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQJSONARRAY(1) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QJSONARRAY_NEW )
     QJsonArray( const QJsonArray & other )
     */
     auto obj = new QJsonArray( *PQJSONARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

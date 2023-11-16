@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
     QByteArray()
     */
     auto obj = new QByteArray();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
     QByteArray( const char * str )
     */
     auto obj = new QByteArray( PCONSTCHAR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
     QByteArray( const char * data, int size )
     */
     auto obj = new QByteArray( PCONSTCHAR(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
     QByteArray( int size, char ch )
     */
     auto obj = new QByteArray( PINT(1), PCHAR(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
     QByteArray( const QByteArray & other )
     */
     auto obj = new QByteArray( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

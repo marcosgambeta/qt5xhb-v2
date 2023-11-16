@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QCollator( HB_ISNIL(1) ? QLocale() : *static_cast<QLocale*>(Qt5xHb::itemGetPtr(1)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QCollator( *PQCOLLATOR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDATE_NEW )
     QDate()
     */
     auto obj = new QDate();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDATE_NEW )
     QDate( int y, int m, int d )
     */
     auto obj = new QDate( PINT(1), PINT(2), PINT(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

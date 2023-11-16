@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
     QMessageLogger()
     */
     auto obj = new QMessageLogger();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
     QMessageLogger( const char * file, int line, const char * function )
     */
     auto obj = new QMessageLogger( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
     QMessageLogger( const char * file, int line, const char * function, const char * category )
     */
     auto obj = new QMessageLogger( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PCONSTCHAR(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

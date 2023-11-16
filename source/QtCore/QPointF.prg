@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
     QPointF()
     */
     auto obj = new QPointF();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
     QPointF( const QPoint & point )
     */
     auto obj = new QPointF( *PQPOINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
     QPointF( qreal xpos, qreal ypos )
     */
     auto obj = new QPointF( PQREAL(1), PQREAL(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

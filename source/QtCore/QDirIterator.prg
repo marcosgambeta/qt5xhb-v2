@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
     */
     auto obj = new QDirIterator( *PQDIR(1), HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
     */
     auto obj = new QDirIterator( PQSTRING(1), HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
     */
     auto obj = new QDirIterator( PQSTRING(1), static_cast<QDir::Filters>( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
     */
     auto obj = new QDirIterator( PQSTRING(1), PQSTRINGLIST(2), HB_ISNIL(3) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(3) ), HB_ISNIL(4) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >( hb_parni(4) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

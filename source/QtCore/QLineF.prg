@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF()
     */
     auto obj = new QLineF();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF( const QPointF & p1, const QPointF & p2 )
     */
     auto obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF( qreal x1, qreal y1, qreal x2, qreal y2 )
     */
     auto obj = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF( const QLine & line )
     */
     auto obj = new QLineF( *PQLINE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

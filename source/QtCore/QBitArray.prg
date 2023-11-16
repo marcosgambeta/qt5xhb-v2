@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
     QBitArray()
     */
     auto obj = new QBitArray();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ISOPTLOG(2) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
     QBitArray( int size, bool value = false )
     */
     auto obj = new QBitArray( PINT(1), OPBOOL( 2, false ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBITARRAY(1) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
     QBitArray( const QBitArray & other )
     */
     auto obj = new QBitArray( *PQBITARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
     QXmlStreamAttribute()
     */
     auto obj = new QXmlStreamAttribute();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
     QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
     */
     auto obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
     QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
     */
     auto obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTES(1) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
     QXmlStreamAttribute( const QXmlStreamAttribute & other )
     */
     auto obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

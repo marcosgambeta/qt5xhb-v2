@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
     QRegularExpression()
     */
     auto obj = new QRegularExpression();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
     QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options = QRegularExpression::NoPatternOption )
     */
     auto obj = new QRegularExpression( PQSTRING(1), HB_ISNIL(2) ? static_cast<QRegularExpression::PatternOptions >( QRegularExpression::NoPatternOption ) : static_cast<QRegularExpression::PatternOptions >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
     QRegularExpression( const QRegularExpression & re )
     */
     auto obj = new QRegularExpression( *PQREGULAREXPRESSION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

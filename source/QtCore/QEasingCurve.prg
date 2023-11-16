@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
     QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
     */
     auto obj = new QEasingCurve( HB_ISNIL(1) ? static_cast<QEasingCurve::Type >( QEasingCurve::Linear ) : static_cast<QEasingCurve::Type >( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
     QEasingCurve( const QEasingCurve & other )
     */
     auto obj = new QEasingCurve( *PQEASINGCURVE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
     QByteArrayMatcher()
     */
     auto obj = new QByteArrayMatcher();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
     QByteArrayMatcher( const QByteArray & pattern )
     */
     auto obj = new QByteArrayMatcher( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
     QByteArrayMatcher( const char * pattern, int length )
     */
     auto obj = new QByteArrayMatcher( PCONSTCHAR(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
     QByteArrayMatcher( const QByteArrayMatcher & other )
     */
     auto obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

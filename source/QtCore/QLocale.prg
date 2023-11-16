@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
     QLocale()
     */
     auto obj = new QLocale();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
     QLocale( const QString & name )
     */
     auto obj = new QLocale( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
     QLocale( QLocale::Language language, QLocale::Country country = QLocale::AnyCountry )
     */
     auto obj = new QLocale( static_cast<QLocale::Language>( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QLocale::Country >( QLocale::AnyCountry ) : static_cast<QLocale::Country >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
     QLocale( QLocale::Language language, QLocale::Script script, QLocale::Country country )
     */
     auto obj = new QLocale( static_cast<QLocale::Language>( hb_parni(1) ), static_cast<QLocale::Script>( hb_parni(2) ), static_cast<QLocale::Country>( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
     QLocale( const QLocale & other )
     */
     auto obj = new QLocale( *PQLOCALE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

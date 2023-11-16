@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
   if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
     auto obj = new QSystemSemaphore( PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QSystemSemaphore::AccessMode >( QSystemSemaphore::Open ) : static_cast<QSystemSemaphore::AccessMode >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
     QXmlStreamWriter()
     */
     auto obj = new QXmlStreamWriter();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
     QXmlStreamWriter( QIODevice * device )
     */
     auto obj = new QXmlStreamWriter( PQIODEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
     QXmlStreamWriter( QByteArray * array )
     */
     auto obj = new QXmlStreamWriter( PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

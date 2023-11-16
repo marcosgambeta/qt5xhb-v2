@@ -103,7 +103,7 @@ QChar()
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
   auto obj = new QChar();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -112,7 +112,7 @@ QChar( char ch )
 HB_FUNC_STATIC( QCHAR_NEW2 )
 {
   auto obj = new QChar( PCHAR(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -121,7 +121,7 @@ QChar( uchar ch )
 HB_FUNC_STATIC( QCHAR_NEW3 )
 {
   auto obj = new QChar( PUCHAR(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -130,7 +130,7 @@ QChar( QLatin1Char ch )
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
   auto obj = new QChar( *PQLATIN1CHAR(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -139,7 +139,7 @@ QChar( uchar cell, uchar row )
 HB_FUNC_STATIC( QCHAR_NEW5 )
 {
   auto obj = new QChar( PUCHAR(1), PUCHAR(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -148,7 +148,7 @@ QChar( ushort code )
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
   auto obj = new QChar( PUSHORT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -157,7 +157,7 @@ QChar( short code )
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
   auto obj = new QChar( PSHORT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -166,7 +166,7 @@ QChar( uint code )
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
   auto obj = new QChar( PUINT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -175,7 +175,7 @@ QChar( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   auto obj = new QChar( PINT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -184,7 +184,7 @@ QChar( QChar::SpecialCharacter ch )
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
   auto obj = new QChar( static_cast<QChar::SpecialCharacter>( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QCHAR_NEW )

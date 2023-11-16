@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_NEW )
   if( ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCH(1) )
   {
     auto obj = new QRegularExpressionMatch( *PQREGULAREXPRESSIONMATCH(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

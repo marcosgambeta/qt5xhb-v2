@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
     QDataStream()
     */
     auto obj = new QDataStream();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
     QDataStream( QIODevice * )
     */
     auto obj = new QDataStream( PQIODEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
     QDataStream( QByteArray *, QIODevice::OpenMode flags )
     */
     auto obj = new QDataStream( PQBYTEARRAY(1), static_cast<QIODevice::OpenMode>( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
     QDataStream( const QByteArray & )
     */
     auto obj = new QDataStream( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

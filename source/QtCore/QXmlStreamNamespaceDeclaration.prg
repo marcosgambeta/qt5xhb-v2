@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
     QXmlStreamNamespaceDeclaration()
     */
     auto obj = new QXmlStreamNamespaceDeclaration();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1) )
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
     QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
     */
     auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
     QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
     */
     auto obj = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

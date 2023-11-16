@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
     QPoint()
     */
     auto obj = new QPoint();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
     QPoint( int xpos, int ypos )
     */
     auto obj = new QPoint( PINT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
     QSize()
     */
     auto obj = new QSize();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
     QSize( int width, int height )
     */
     auto obj = new QSize( PINT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

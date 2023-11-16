@@ -82,7 +82,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber( PINT(1), PINT(2), PINT(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -93,7 +93,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber( PINT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -104,7 +104,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber( PINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -115,7 +115,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

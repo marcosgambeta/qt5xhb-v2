@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
     QCommandLineOption( const QString & name, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
     */
     auto obj = new QCommandLineOption( PQSTRING(1), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 4) && HB_ISARRAY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
     QCommandLineOption( const QStringList & names, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
     */
     auto obj = new QCommandLineOption( PQSTRINGLIST(1), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1) )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
     QCommandLineOption( const QCommandLineOption & other )
     */
     auto obj = new QCommandLineOption( *PQCOMMANDLINEOPTION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

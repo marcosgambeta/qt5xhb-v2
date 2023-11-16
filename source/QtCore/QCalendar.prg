@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCALENDAR_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QCalendar();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCALENDAR_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QCalendar( static_cast<QCalendar::System>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

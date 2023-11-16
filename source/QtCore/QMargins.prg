@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QMARGINS_NEW )
     QMargins()
     */
     auto obj = new QMargins();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMARGINS_NEW )
     QMargins( int left, int top, int right, int bottom )
     */
     auto obj = new QMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
   if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
   {
     auto obj = new QCollatorSortKey( *PQCOLLATORSORTKEY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

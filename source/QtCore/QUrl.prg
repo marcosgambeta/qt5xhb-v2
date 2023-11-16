@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QURL_NEW )
     QUrl()
     */
     auto obj = new QUrl();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QURL_NEW )
     QUrl( const QString & url )
     */
     auto obj = new QUrl( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QURL_NEW )
     QUrl( const QUrl & other )
     */
     auto obj = new QUrl( *PQURL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QURL_NEW )
     QUrl( const QString & url, QUrl::ParsingMode parsingMode )
     */
     auto obj = new QUrl( PQSTRING(1), static_cast<QUrl::ParsingMode>( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

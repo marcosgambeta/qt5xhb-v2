@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
     QSizeF()
     */
     auto obj = new QSizeF();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
     QSizeF( const QSize & sz )
     */
     auto obj = new QSizeF( *PQSIZE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
     QSizeF( qreal w, qreal h )
     */
     auto obj = new QSizeF( PQREAL(1), PQREAL(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
