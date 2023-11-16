@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
     QWebElement()
     */
     auto obj = new QWebElement();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
     QWebElement( const QWebElement & other )
     */
     auto obj = new QWebElement( *PQWEBELEMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
