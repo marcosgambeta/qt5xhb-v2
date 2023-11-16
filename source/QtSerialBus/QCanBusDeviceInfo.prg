@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
   if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
   {
     auto obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
     auto obj = new QCanBusFrame( HB_ISNIL(1) ? static_cast<QCanBusFrame::FrameType >( QCanBusFrame::DataFrame ) : static_cast<QCanBusFrame::FrameType >( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
     auto obj = new QCanBusFrame( PQUINT32(1), *PQBYTEARRAY(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
