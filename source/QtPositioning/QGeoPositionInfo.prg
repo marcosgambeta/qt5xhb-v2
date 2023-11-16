@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoPositionInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoPositionInfo( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoPositionInfo( *PQGEOPOSITIONINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

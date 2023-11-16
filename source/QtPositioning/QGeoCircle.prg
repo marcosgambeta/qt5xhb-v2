@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoCircle();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoCircle( *PQGEOCOORDINATE(1), OPQREAL( 2, -1.0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoCircle( *PQGEOCIRCLE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoCircle( *PQGEOSHAPE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
