@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     QVideoFrame()
     */
     auto obj = new QVideoFrame();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3)  )
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
     */
     auto obj = new QVideoFrame( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), static_cast<QVideoFrame::PixelFormat>( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
     */
     auto obj = new QVideoFrame( PINT(1), *PQSIZE(2), PINT(3), static_cast<QVideoFrame::PixelFormat>( hb_parni(4) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     QVideoFrame( const QImage & image )
     */
     auto obj = new QVideoFrame( *PQIMAGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     QVideoFrame( const QVideoFrame & other )
     */
     auto obj = new QVideoFrame( *PQVIDEOFRAME(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

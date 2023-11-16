@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
     QAudioFormat()
     */
     auto obj = new QAudioFormat();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
     QAudioFormat( const QAudioFormat & other )
     */
     auto obj = new QAudioFormat( *PQAUDIOFORMAT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

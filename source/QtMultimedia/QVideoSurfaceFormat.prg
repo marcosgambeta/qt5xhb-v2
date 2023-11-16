@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
     QVideoSurfaceFormat()
     */
     auto obj = new QVideoSurfaceFormat();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
     QVideoSurfaceFormat( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
     */
     auto obj = new QVideoSurfaceFormat( *PQSIZE(1), static_cast<QVideoFrame::PixelFormat>( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QAbstractVideoBuffer::HandleType >( QAbstractVideoBuffer::NoHandle ) : static_cast<QAbstractVideoBuffer::HandleType >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
     QVideoSurfaceFormat( const QVideoSurfaceFormat & other )
     */
     auto obj = new QVideoSurfaceFormat( *PQVIDEOSURFACEFORMAT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

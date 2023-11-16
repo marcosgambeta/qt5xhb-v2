@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
     QAudioDeviceInfo()
     */
     auto obj = new QAudioDeviceInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQAUDIODEVICEINFO(1) )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
     QAudioDeviceInfo( const QAudioDeviceInfo & other )
     */
     auto obj = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

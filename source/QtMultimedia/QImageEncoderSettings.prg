@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
     QImageEncoderSettings()
     */
     auto obj = new QImageEncoderSettings();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
     QImageEncoderSettings( const QImageEncoderSettings & other )
     */
     auto obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

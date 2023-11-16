@@ -71,7 +71,7 @@ QMediaServiceProviderHint( QCamera::Position position )
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
   auto obj = new QMediaServiceProviderHint( static_cast<QCamera::Position>( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -80,7 +80,7 @@ QMediaServiceProviderHint( QMediaServiceProviderHint::Features features )
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
   auto obj = new QMediaServiceProviderHint( static_cast<QMediaServiceProviderHint::Features>( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
     QMediaServiceProviderHint()
     */
     auto obj = new QMediaServiceProviderHint();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)  )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
     QMediaServiceProviderHint( const QString & mimeType, const QStringList & codecs )
     */
     auto obj = new QMediaServiceProviderHint( PQSTRING(1), PQSTRINGLIST(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
     QMediaServiceProviderHint( const QByteArray & device )
     */
     auto obj = new QMediaServiceProviderHint( *PQBYTEARRAY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
     QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
     */
     auto obj = new QMediaServiceProviderHint( *PQMEDIASERVICEPROVIDERHINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

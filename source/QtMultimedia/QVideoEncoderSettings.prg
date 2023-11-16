@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
     QVideoEncoderSettings()
     */
     auto obj = new QVideoEncoderSettings();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
     QVideoEncoderSettings( const QVideoEncoderSettings & other )
     */
     auto obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

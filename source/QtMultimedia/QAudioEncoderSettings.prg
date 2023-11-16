@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
     QAudioEncoderSettings()
     */
     auto obj = new QAudioEncoderSettings();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
     QAudioEncoderSettings( const QAudioEncoderSettings & other )
     */
     auto obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
     QMediaTimeInterval()
     */
     auto obj = new QMediaTimeInterval();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
     QMediaTimeInterval( qint64 start, qint64 end )
     */
     auto obj = new QMediaTimeInterval( PQINT64(1), PQINT64(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
     QMediaTimeInterval( const QMediaTimeInterval & other )
     */
     auto obj = new QMediaTimeInterval( *PQMEDIATIMEINTERVAL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

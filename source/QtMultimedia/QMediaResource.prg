@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     QMediaResource()
     */
     auto obj = new QMediaResource();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQURL(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     QMediaResource( const QUrl & url, const QString & mimeType = QString() )
     */
     auto obj = new QMediaResource( *PQURL(1), OPQSTRING( 2, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     QMediaResource( const QNetworkRequest & request, const QString & mimeType = QString() )
     */
     auto obj = new QMediaResource( *PQNETWORKREQUEST(1), OPQSTRING( 2, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMEDIARESOURCE(1) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     QMediaResource( const QMediaResource & other )
     */
     auto obj = new QMediaResource( *PQMEDIARESOURCE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent()
     */
     auto obj = new QMediaContent();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent( const QUrl & contentUrl )
     */
     auto obj = new QMediaContent( *PQURL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent( const QNetworkRequest & contentRequest )
     */
     auto obj = new QMediaContent( *PQNETWORKREQUEST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMEDIARESOURCE(1) )
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent( const QMediaResource & contentResource )
     */
     auto obj = new QMediaContent( *PQMEDIARESOURCE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
       par1 << *static_cast<QMediaResource*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
     }
     auto obj = new QMediaContent( par1 );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent( const QMediaContent & other )
     */
     auto obj = new QMediaContent( *PQMEDIACONTENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ( ISQURL(2) || HB_ISNIL(2) ) && ISOPTLOG(3) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent( QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false )
     */
     auto obj = new QMediaContent( PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)), OPBOOL( 3, false ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
