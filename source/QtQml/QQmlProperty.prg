@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty()
     */
     auto obj = new QQmlProperty();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( QObject * obj )
     */
     auto obj = new QQmlProperty( PQOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( QObject * obj, QQmlContext * ctxt )
     */
     auto obj = new QQmlProperty( PQOBJECT(1), PQQMLCONTEXT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLENGINE(2) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( QObject * obj, QQmlEngine * engine )
     */
     auto obj = new QQmlProperty( PQOBJECT(1), PQQMLENGINE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( QObject * obj, const QString & name )
     */
     auto obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
     */
     auto obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
     */
     auto obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQQMLPROPERTY(1) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     QQmlProperty( const QQmlProperty & other )
     */
     auto obj = new QQmlProperty( *PQQMLPROPERTY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

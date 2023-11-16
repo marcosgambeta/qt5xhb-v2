@@ -103,7 +103,7 @@ QJSValue( QJSValue::SpecialValue value = QJSValue::UndefinedValue )
 HB_FUNC_STATIC( QJSVALUE_NEW1 )
 {
   auto obj = new QJSValue( HB_ISNIL(1) ? static_cast<QJSValue::SpecialValue >( QJSValue::UndefinedValue ) : static_cast<QJSValue::SpecialValue >( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -112,7 +112,7 @@ QJSValue( int value )
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
 {
   auto obj = new QJSValue( PINT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -121,7 +121,7 @@ QJSValue( uint value )
 HB_FUNC_STATIC( QJSVALUE_NEW5 )
 {
   auto obj = new QJSValue( PUINT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -130,7 +130,7 @@ QJSValue( double value )
 HB_FUNC_STATIC( QJSVALUE_NEW6 )
 {
   auto obj = new QJSValue( PDOUBLE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -139,7 +139,7 @@ QJSValue( const QString & value )
 HB_FUNC_STATIC( QJSVALUE_NEW7 )
 {
   auto obj = new QJSValue( PQSTRING(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -148,7 +148,7 @@ QJSValue( const char * value )
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
   auto obj = new QJSValue( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QJSVALUE_NEW )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
     QJSValue( const QJSValue & other )
     */
     auto obj = new QJSValue( *PQJSVALUE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
     QJSValue( bool value )
     */
     auto obj = new QJSValue( PBOOL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
     QJSValue( const QLatin1String & value )
     */
     auto obj = new QJSValue( *PQLATIN1STRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

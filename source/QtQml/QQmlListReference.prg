@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
     QQmlListReference()
     */
     auto obj = new QQmlListReference();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ( ISQQMLENGINE(3) || HB_ISNIL(3) ) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
     QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = nullptr )
     */
     auto obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE( 3, nullptr ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

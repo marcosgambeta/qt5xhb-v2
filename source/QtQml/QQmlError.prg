@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
     QQmlError()
     */
     auto obj = new QQmlError();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQQMLERROR(1) )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
     QQmlError( const QQmlError & other )
     */
     auto obj = new QQmlError( *PQQMLERROR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

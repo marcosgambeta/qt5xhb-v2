@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
     QQmlScriptString()
     */
     auto obj = new QQmlScriptString();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
     QQmlScriptString( const QQmlScriptString & other )
     */
     auto obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
