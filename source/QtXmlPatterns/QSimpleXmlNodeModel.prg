@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
     {
 #endif
       const QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QXMLNAME");
+      auto pDynSym = hb_dynsymFindName("QXMLNAME");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -212,9 +212,9 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
     {
 #endif
       const QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QXMLNODEMODELINDEX");
+      auto pDynSym = hb_dynsymFindName("QXMLNODEMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
