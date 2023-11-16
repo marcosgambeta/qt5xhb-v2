@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
     QDBusArgument()
     */
     auto obj = new QDBusArgument();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDBUSARGUMENT(1) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
     QDBusArgument( const QDBusArgument & other )
     */
     auto obj = new QDBusArgument( *PQDBUSARGUMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

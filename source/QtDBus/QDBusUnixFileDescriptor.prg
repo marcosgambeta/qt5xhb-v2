@@ -70,7 +70,7 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
     QDBusUnixFileDescriptor()
     */
     auto obj = new QDBusUnixFileDescriptor();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -79,7 +79,7 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
     QDBusUnixFileDescriptor( int fileDescriptor )
     */
     auto obj = new QDBusUnixFileDescriptor( PINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1) )
@@ -88,7 +88,7 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
     QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
     */
     auto obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

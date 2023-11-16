@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     QDBusError()
     */
     auto obj = new QDBusError();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     QDBusError( const QDBusMessage & msg )
     */
     auto obj = new QDBusError( *PQDBUSMESSAGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     QDBusError( QDBusError::ErrorType error, const QString & message )
     */
     auto obj = new QDBusError( static_cast<QDBusError::ErrorType>( hb_parni(1) ), PQSTRING(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDBUSERROR(1) )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     QDBusError( const QDBusError & other )
     */
     auto obj = new QDBusError( *PQDBUSERROR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

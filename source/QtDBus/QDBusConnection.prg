@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
     QDBusConnection( const QString & name )
     */
     auto obj = new QDBusConnection( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDBUSCONNECTION(1) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
     QDBusConnection( const QDBusConnection & other )
     */
     auto obj = new QDBusConnection( *PQDBUSCONNECTION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

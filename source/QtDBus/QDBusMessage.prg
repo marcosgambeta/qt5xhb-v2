@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
     QDBusMessage()
     */
     auto obj = new QDBusMessage();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
     QDBusMessage( const QDBusMessage & other )
     */
     auto obj = new QDBusMessage( *PQDBUSMESSAGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
