@@ -363,9 +363,9 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
     {
 #endif
       const QList<QGeoCoordinate> list = obj->path();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGEOCOORDINATE");
+      auto pDynSym = hb_dynsymFindName("QGEOCOORDINATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

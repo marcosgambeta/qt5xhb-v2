@@ -221,9 +221,9 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
     {
 #endif
       const QList<QGeoRoute> list = obj->routes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGEOROUTE");
+      auto pDynSym = hb_dynsymFindName("QGEOROUTE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

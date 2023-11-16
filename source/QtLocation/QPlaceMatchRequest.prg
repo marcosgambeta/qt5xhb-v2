@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
     {
 #endif
       const QList<QPlace> list = obj->places();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QPLACE");
+      auto pDynSym = hb_dynsymFindName("QPLACE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

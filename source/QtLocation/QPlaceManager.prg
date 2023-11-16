@@ -502,9 +502,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
     {
 #endif
       const QList<QPlaceCategory> list = obj->childCategories( OPQSTRING( 1, QString() ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QPLACECATEGORY");
+      auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -554,9 +554,9 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
     {
 #endif
       const QList<QLocale> list = obj->locales();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
+      auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

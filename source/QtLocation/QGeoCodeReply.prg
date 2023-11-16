@@ -225,9 +225,9 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
     {
 #endif
       const QList<QGeoLocation> list = obj->locations();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGEOLOCATION");
+      auto pDynSym = hb_dynsymFindName("QGEOLOCATION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
