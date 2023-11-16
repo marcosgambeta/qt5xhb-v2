@@ -945,9 +945,9 @@ HB_FUNC_STATIC( QCHART_SERIES )
     {
 #endif
       const QList<QAbstractSeries *> list = obj->series();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
+      auto pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -1160,9 +1160,9 @@ HB_FUNC_STATIC( QCHART_AXES )
     {
 #endif
       const QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1) ), OPQABSTRACTSERIES( 2, nullptr ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
+      auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

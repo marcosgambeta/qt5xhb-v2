@@ -436,9 +436,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
     {
 #endif
       const QList<QAbstractAxis *> list = obj->attachedAxes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
+      auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

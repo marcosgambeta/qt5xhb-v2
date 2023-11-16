@@ -882,9 +882,9 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
     {
 #endif
       const QList<QPointF> list = obj->points();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
+      auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -934,9 +934,9 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
     {
 #endif
       const QVector<QPointF> list = obj->pointsVector();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
+      auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

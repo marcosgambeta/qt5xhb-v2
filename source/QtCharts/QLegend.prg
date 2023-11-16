@@ -899,9 +899,9 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
     {
 #endif
       const QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES( 1, nullptr ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QLEGENDMARKER");
+      auto pDynSym = hb_dynsymFindName("QLEGENDMARKER");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

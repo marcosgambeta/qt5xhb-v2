@@ -509,9 +509,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
     {
 #endif
       const QList<QBoxSet *> list = obj->boxSets();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBOXSET");
+      auto pDynSym = hb_dynsymFindName("QBOXSET");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -677,9 +677,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QBOXSET");
+            auto pDynSym = hb_dynsymFindName("QBOXSET");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( auto item : arg1 )
               {
@@ -752,9 +752,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QBOXSET");
+            auto pDynSym = hb_dynsymFindName("QBOXSET");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( auto item : arg1 )
               {

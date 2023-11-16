@@ -543,9 +543,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
     {
 #endif
       const QList<QBarSet *> list = obj->barSets();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
+      auto pDynSym = hb_dynsymFindName("QBARSET");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -633,9 +633,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
+            auto pDynSym = hb_dynsymFindName("QBARSET");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( auto item : arg1 )
               {
@@ -708,9 +708,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTBARSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
+            auto pDynSym = hb_dynsymFindName("QBARSET");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( auto item : arg1 )
               {

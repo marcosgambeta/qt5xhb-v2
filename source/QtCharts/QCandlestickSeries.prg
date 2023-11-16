@@ -907,9 +907,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
     {
 #endif
       const QList<QCandlestickSet *> list = obj->sets();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
+      auto pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -1151,9 +1151,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
+            auto pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( auto item : arg1 )
               {
@@ -1226,9 +1226,9 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKSERIES");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
+            auto pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( auto item : arg1 )
               {
