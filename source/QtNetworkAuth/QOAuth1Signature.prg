@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QOAuth1Signature( *PQOAUTH1SIGNATURE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
