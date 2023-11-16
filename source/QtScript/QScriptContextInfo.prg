@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
     QScriptContextInfo( const QScriptContext * context )
     */
     auto obj = new QScriptContextInfo( PQSCRIPTCONTEXT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSCRIPTCONTEXTINFO(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
     QScriptContextInfo( const QScriptContextInfo & other )
     */
     auto obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(0) )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
     QScriptContextInfo()
     */
     auto obj = new QScriptContextInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

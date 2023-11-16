@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
   if( ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1) )
   {
     auto obj = new QScriptSyntaxCheckResult( *PQSCRIPTSYNTAXCHECKRESULT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

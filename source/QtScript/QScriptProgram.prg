@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
     QScriptProgram()
     */
     auto obj = new QScriptProgram();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
     QScriptProgram( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
     */
     auto obj = new QScriptProgram( PQSTRING(1), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
     QScriptProgram( const QScriptProgram & other )
     */
     auto obj = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

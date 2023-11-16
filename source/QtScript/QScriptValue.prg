@@ -117,7 +117,7 @@ QScriptValue( QScriptValue::SpecialValue value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   auto obj = new QScriptValue( static_cast<QScriptValue::SpecialValue>( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -126,7 +126,7 @@ QScriptValue( int value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   auto obj = new QScriptValue( PINT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -135,7 +135,7 @@ QScriptValue( uint value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   auto obj = new QScriptValue( PUINT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -144,7 +144,7 @@ QScriptValue( const QString & value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
   auto obj = new QScriptValue( PQSTRING(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -153,7 +153,7 @@ QScriptValue( const QLatin1String & value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW9 )
 {
   auto obj = new QScriptValue( *PQLATIN1STRING(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -162,7 +162,7 @@ QScriptValue( const char * value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
   auto obj = new QScriptValue( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue()
     */
     auto obj = new QScriptValue();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue( const QScriptValue & other )
     */
     auto obj = new QScriptValue( *PQSCRIPTVALUE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue( bool value )
     */
     auto obj = new QScriptValue( PBOOL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
