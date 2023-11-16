@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
     QNetworkAddressEntry()
     */
     auto obj = new QNetworkAddressEntry();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
     QNetworkAddressEntry( const QNetworkAddressEntry & other )
     */
     auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

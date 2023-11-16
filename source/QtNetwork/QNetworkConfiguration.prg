@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
     QNetworkConfiguration()
     */
     auto obj = new QNetworkConfiguration();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
     QNetworkConfiguration( const QNetworkConfiguration & other )
     */
     auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
     QSslCertificate( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
     */
     auto obj = new QSslCertificate( PQIODEVICE(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat >( QSsl::Pem ) : static_cast<QSsl::EncodingFormat >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(0, 2) && ISOPTQBYTEARRAY(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
     QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
     */
     auto obj = new QSslCertificate( HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat >( QSsl::Pem ) : static_cast<QSsl::EncodingFormat >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
     QSslCertificate( const QSslCertificate & other )
     */
     auto obj = new QSslCertificate( *PQSSLCERTIFICATE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

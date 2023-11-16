@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
     QNetworkRequest( const QUrl & url = QUrl() )
     */
     auto obj = new QNetworkRequest( HB_ISNIL(1) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(1)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
     QNetworkRequest( const QNetworkRequest & other )
     */
     auto obj = new QNetworkRequest( *PQNETWORKREQUEST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

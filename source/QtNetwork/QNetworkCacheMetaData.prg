@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
     QNetworkCacheMetaData()
     */
     auto obj = new QNetworkCacheMetaData();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
     QNetworkCacheMetaData( const QNetworkCacheMetaData & other )
     */
     auto obj = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

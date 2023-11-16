@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
     QDnsHostAddressRecord()
     */
     auto obj = new QDnsHostAddressRecord();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
     QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
     */
     auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
     QHttpPart()
     */
     auto obj = new QHttpPart();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQHTTPPART(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
     QHttpPart( const QHttpPart & other )
     */
     auto obj = new QHttpPart( *PQHTTPPART(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

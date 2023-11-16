@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
     QSslError()
     */
     auto obj = new QSslError();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
     QSslError( QSslError::SslError error )
     */
     auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
     QSslError( QSslError::SslError error, const QSslCertificate & certificate )
     */
     auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni(1) ), *PQSSLCERTIFICATE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSSLERROR(1) )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
     QSslError( const QSslError & other )
     */
     auto obj = new QSslError( *PQSSLERROR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

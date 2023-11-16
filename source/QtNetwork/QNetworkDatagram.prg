@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
     auto obj = new QNetworkDatagram();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
     auto obj = new QNetworkDatagram( *PQBYTEARRAY(1), HB_ISNIL(2) ? QHostAddress() : *static_cast<QHostAddress*>(Qt5xHb::itemGetPtr(2)), OPQUINT16( 3, 0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
     auto obj = new QNetworkDatagram( *PQNETWORKDATAGRAM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

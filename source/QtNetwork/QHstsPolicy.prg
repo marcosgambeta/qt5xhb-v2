@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
     auto obj = new QHstsPolicy();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
     auto obj = new QHstsPolicy( *PQDATETIME(1), static_cast<QHstsPolicy::PolicyFlags>( hb_parni(2) ), PQSTRING(3), HB_ISNIL(4) ? static_cast<QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast<QUrl::ParsingMode >( hb_parni(4) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
     auto obj = new QHstsPolicy( *PQHSTSPOLICY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

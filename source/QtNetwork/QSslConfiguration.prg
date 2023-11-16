@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
     QSslConfiguration()
     */
     auto obj = new QSslConfiguration();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
     QSslConfiguration( const QSslConfiguration & other )
     */
     auto obj = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

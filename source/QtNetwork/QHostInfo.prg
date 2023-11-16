@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
     QHostInfo( int lookupId = -1 )
     */
     auto obj = new QHostInfo( OPINT( 1, -1 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQHOSTINFO(1) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
     QHostInfo( const QHostInfo & other )
     */
     auto obj = new QHostInfo( *PQHOSTINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

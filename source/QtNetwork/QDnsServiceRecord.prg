@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
     QDnsServiceRecord()
     */
     auto obj = new QDnsServiceRecord();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDNSSERVICERECORD(1) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
     QDnsServiceRecord( const QDnsServiceRecord & other )
     */
     auto obj = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

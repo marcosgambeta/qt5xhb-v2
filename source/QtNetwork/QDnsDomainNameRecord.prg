@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
     QDnsDomainNameRecord()
     */
     auto obj = new QDnsDomainNameRecord();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1) )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
     QDnsDomainNameRecord( const QDnsDomainNameRecord & other )
     */
     auto obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

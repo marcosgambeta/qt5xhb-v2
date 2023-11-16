@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
     QDnsMailExchangeRecord()
     */
     auto obj = new QDnsMailExchangeRecord();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDNSMAILEXCHANGERECORD(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
     QDnsMailExchangeRecord( const QDnsMailExchangeRecord & other )
     */
     auto obj = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

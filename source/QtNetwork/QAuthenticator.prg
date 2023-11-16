@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
     QAuthenticator()
     */
     auto obj = new QAuthenticator();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQAUTHENTICATOR(1) )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
     QAuthenticator( const QAuthenticator & other )
     */
     auto obj = new QAuthenticator( *PQAUTHENTICATOR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

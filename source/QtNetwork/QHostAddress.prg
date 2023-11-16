@@ -76,7 +76,7 @@ QHostAddress( quint32 ip4Addr )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
   auto obj = new QHostAddress( PQUINT32(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -85,7 +85,7 @@ QHostAddress( QHostAddress::SpecialAddress address )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW9 )
 {
   auto obj = new QHostAddress( static_cast<QHostAddress::SpecialAddress>( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QHOSTADDRESS_NEW )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     QHostAddress()
     */
     auto obj = new QHostAddress();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     QHostAddress( const QString & address )
     */
     auto obj = new QHostAddress( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     QHostAddress( const QHostAddress & copy )
     */
     auto obj = new QHostAddress( *PQHOSTADDRESS(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )

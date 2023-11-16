@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
     QNetworkInterface()
     */
     auto obj = new QNetworkInterface();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
     QNetworkInterface( const QNetworkInterface & other )
     */
     auto obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
