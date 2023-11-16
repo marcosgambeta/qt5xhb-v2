@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QAbstractFormBuilder();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
