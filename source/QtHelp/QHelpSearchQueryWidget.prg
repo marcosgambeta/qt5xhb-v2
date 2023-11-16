@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
     {
 #endif
       const QList<QHelpSearchQuery> list = obj->query();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
+      auto pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
