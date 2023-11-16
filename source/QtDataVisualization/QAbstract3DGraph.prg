@@ -1150,9 +1150,9 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
     {
 #endif
       const QList<QAbstract3DInputHandler *> list = obj->inputHandlers();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACT3DINPUTHANDLER");
+      auto pDynSym = hb_dynsymFindName("QABSTRACT3DINPUTHANDLER");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -1255,9 +1255,9 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
     {
 #endif
       const QList<Q3DTheme *> list = obj->themes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("Q3DTHEME");
+      auto pDynSym = hb_dynsymFindName("Q3DTHEME");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -1496,9 +1496,9 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
     {
 #endif
       const QList<QCustom3DItem *> list = obj->customItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QCUSTOM3DITEM");
+      auto pDynSym = hb_dynsymFindName("QCUSTOM3DITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

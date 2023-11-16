@@ -378,9 +378,9 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
     {
 #endif
       const QList<QScatter3DSeries *> list = obj->seriesList();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSCATTER3DSERIES");
+      auto pDynSym = hb_dynsymFindName("QSCATTER3DSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -483,9 +483,9 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
     {
 #endif
       const QList<QValue3DAxis *> list = obj->axes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
+      auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

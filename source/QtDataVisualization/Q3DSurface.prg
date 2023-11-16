@@ -435,9 +435,9 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
     {
 #endif
       const QList<QSurface3DSeries *> list = obj->seriesList();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSURFACE3DSERIES");
+      auto pDynSym = hb_dynsymFindName("QSURFACE3DSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -540,9 +540,9 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
     {
 #endif
       const QList<QValue3DAxis *> list = obj->axes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
+      auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
