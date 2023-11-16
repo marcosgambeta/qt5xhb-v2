@@ -396,9 +396,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
     {
 #endif
       const QVariantList list = obj->points( OPINT( 1, 0 ), OPINT( 2, -1 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
+      auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -496,9 +496,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
     {
 #endif
       const QVariantList list = obj->channelData( PQSTRING(1), OPINT( 2, 0 ), OPINT( 3, -1 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
+      auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
