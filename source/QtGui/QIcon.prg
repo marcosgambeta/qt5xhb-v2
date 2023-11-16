@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QICON_NEW )
     QIcon()
     */
     auto obj = new QIcon();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QICON_NEW )
     QIcon( const QPixmap & pixmap )
     */
     auto obj = new QIcon( *PQPIXMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQICON(1) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QICON_NEW )
     QIcon( const QIcon & other )
     */
     auto obj = new QIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QICON_NEW )
     QIcon( const QString & fileName )
     */
     auto obj = new QIcon( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

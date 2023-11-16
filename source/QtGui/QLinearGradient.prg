@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
     QLinearGradient()
     */
     auto obj = new QLinearGradient();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
     QLinearGradient( const QPointF & start, const QPointF & finalStop )
     */
     auto obj = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
     QLinearGradient( qreal x1, qreal y1, qreal x2, qreal y2 )
     */
     auto obj = new QLinearGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

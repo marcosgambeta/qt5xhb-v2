@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageSize();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageSize( static_cast<QPageSize::PageSizeId>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageSize( *PQSIZE(1), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? static_cast<QPageSize::SizeMatchPolicy >( QPageSize::FuzzyMatch ) : static_cast<QPageSize::SizeMatchPolicy >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageSize( *PQSIZEF(1), static_cast<QPageSize::Unit>( hb_parni(2) ), OPQSTRING( 3, QString() ), HB_ISNIL(4) ? static_cast<QPageSize::SizeMatchPolicy >( QPageSize::FuzzyMatch ) : static_cast<QPageSize::SizeMatchPolicy >( hb_parni(4) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageSize( *PQPAGESIZE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

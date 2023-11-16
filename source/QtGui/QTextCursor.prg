@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
     QTextCursor()
     */
     auto obj = new QTextCursor();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
     QTextCursor( QTextDocument * document )
     */
     auto obj = new QTextCursor( PQTEXTDOCUMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
     QTextCursor( QTextFrame * frame )
     */
     auto obj = new QTextCursor( PQTEXTFRAME(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
     QTextCursor( const QTextBlock & block )
     */
     auto obj = new QTextCursor( *PQTEXTBLOCK(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
     QTextCursor( const QTextCursor & cursor )
     */
     auto obj = new QTextCursor( *PQTEXTCURSOR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

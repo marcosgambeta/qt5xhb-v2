@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QOpenGLTexture( static_cast<QOpenGLTexture::Target>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QOpenGLTexture( *PQIMAGE(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::MipMapGeneration >( QOpenGLTexture::GenerateMipMaps ) : static_cast<QOpenGLTexture::MipMapGeneration >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
     QTextOption()
     */
     auto obj = new QTextOption();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
     QTextOption( Qt::Alignment alignment )
     */
     auto obj = new QTextOption( static_cast<Qt::Alignment>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTOPTION(1) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
     QTextOption( const QTextOption & o )
     */
     auto obj = new QTextOption( *PQTEXTOPTION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

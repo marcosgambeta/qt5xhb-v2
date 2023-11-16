@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
     QTextTableCell()
     */
     auto obj = new QTextTableCell();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTTABLECELL(1) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
     QTextTableCell( const QTextTableCell & o )
     */
     auto obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

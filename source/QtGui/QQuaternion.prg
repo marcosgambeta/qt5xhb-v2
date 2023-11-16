@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
     QQuaternion()
     */
     auto obj = new QQuaternion();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
     QQuaternion( float scalar, float xpos, float ypos, float zpos )
     */
     auto obj = new QQuaternion( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
     QQuaternion( float scalar, const QVector3D & vector )
     */
     auto obj = new QQuaternion( PFLOAT(1), *PQVECTOR3D(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
     QQuaternion( const QVector4D & vector )
     */
     auto obj = new QQuaternion( *PQVECTOR4D(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

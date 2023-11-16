@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform( Qt::Initialization )
     */
     auto obj = new QTransform( static_cast<Qt::Initialization>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(0) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform()
     */
     auto obj = new QTransform();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && ( HB_ISNUM(9) || HB_ISNIL(9) ) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform( qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0 )
     */
     auto obj = new QTransform( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), OPQREAL( 9, 1.0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform( qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy )
     */
     auto obj = new QTransform( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMATRIX(1) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform( const QMatrix & mtx )
     */
     auto obj = new QTransform( *PQMATRIX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTRANSFORM(1) )
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform( const QTransform & other )
     */
     auto obj = new QTransform( *PQTRANSFORM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D()
     */
     auto obj = new QVector4D();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( float xpos, float ypos, float zpos, float wpos )
     */
     auto obj = new QVector4D( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( const QPoint & point )
     */
     auto obj = new QVector4D( *PQPOINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( const QPointF & point )
     */
     auto obj = new QVector4D( *PQPOINTF(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQVECTOR2D(1) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( const QVector2D & vector )
     */
     auto obj = new QVector4D( *PQVECTOR2D(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && ISQVECTOR2D(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( const QVector2D & vector, float zpos, float wpos )
     */
     auto obj = new QVector4D( *PQVECTOR2D(1), PFLOAT(2), PFLOAT(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( const QVector3D & vector )
     */
     auto obj = new QVector4D( *PQVECTOR3D(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     QVector4D( const QVector3D & vector, float wpos )
     */
     auto obj = new QVector4D( *PQVECTOR3D(1), PFLOAT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     QMatrix( Qt::Initialization )
     */
     auto obj = new QMatrix( static_cast<Qt::Initialization>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(0) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     QMatrix()
     */
     auto obj = new QMatrix();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
     */
     auto obj = new QMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQMATRIX(1) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     QMatrix( const QMatrix & matrix )
     */
     auto obj = new QMatrix( *PQMATRIX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

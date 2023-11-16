@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
     QTextDocumentFragment()
     */
     auto obj = new QTextDocumentFragment();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
     QTextDocumentFragment( const QTextDocument * document )
     */
     auto obj = new QTextDocumentFragment( PQTEXTDOCUMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
     QTextDocumentFragment( const QTextCursor & range )
     */
     auto obj = new QTextDocumentFragment( *PQTEXTCURSOR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
     QTextDocumentFragment( const QTextDocumentFragment & rhs )
     */
     auto obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

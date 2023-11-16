@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage()
     */
     auto obj = new QImage();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage( const QSize & size, QImage::Format format )
     */
     auto obj = new QImage( *PQSIZE(1), static_cast<QImage::Format>( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage( int width, int height, QImage::Format format )
     */
     auto obj = new QImage( PINT(1), PINT(2), static_cast<QImage::Format>( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage( const QString & fileName, const char * format = nullptr )
     */
     auto obj = new QImage( PQSTRING(1), OPCONSTCHAR( 2, nullptr ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage( const QImage & image )
     */
     auto obj = new QImage( *PQIMAGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

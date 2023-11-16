@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPEN_NEW )
     QPen()
     */
     auto obj = new QPen();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPEN_NEW )
     QPen( Qt::PenStyle style )
     */
     auto obj = new QPen( static_cast<Qt::PenStyle>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ( ISQCOLOR(1)|| HB_ISCHAR(1) ) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QPEN_NEW )
     QPen( const QColor & color )
     */
     auto obj = new QPen( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QPEN_NEW )
     QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
     */
     auto obj = new QPen( *PQBRUSH(1), PQREAL(2), HB_ISNIL(3) ? static_cast<Qt::PenStyle >( Qt::SolidLine ) : static_cast<Qt::PenStyle >( hb_parni(3) ), HB_ISNIL(4) ? static_cast<Qt::PenCapStyle >( Qt::SquareCap ) : static_cast<Qt::PenCapStyle >( hb_parni(4) ), HB_ISNIL(5) ? static_cast<Qt::PenJoinStyle >( Qt::BevelJoin ) : static_cast<Qt::PenJoinStyle >( hb_parni(5) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPEN(1) )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QPEN_NEW )
     QPen( const QPen & pen )
     */
     auto obj = new QPen( *PQPEN(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

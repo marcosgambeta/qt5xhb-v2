@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
     QImageReader()
     */
     auto obj = new QImageReader();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
     QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
     */
     auto obj = new QImageReader( PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(2)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISOPTQBYTEARRAY(2) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
     QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
     */
     auto obj = new QImageReader( PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(2)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

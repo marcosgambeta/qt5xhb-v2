@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
     QFontInfo( const QFont & font )
     */
     auto obj = new QFontInfo( *PQFONT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQFONTINFO(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
     QFontInfo( const QFontInfo & fi )
     */
     auto obj = new QFontInfo( *PQFONTINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

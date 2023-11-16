@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
     QPictureIO()
     */
     auto obj = new QPictureIO();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2) )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
     QPictureIO( QIODevice * ioDevice, const char * format )
     */
     auto obj = new QPictureIO( PQIODEVICE(1), PCONSTCHAR(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
     QPictureIO( const QString & fileName, const char * format )
     */
     auto obj = new QPictureIO( PQSTRING(1), PCONSTCHAR(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

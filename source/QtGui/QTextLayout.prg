@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     QTextLayout()
     */
     auto obj = new QTextLayout();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     QTextLayout( const QString & text )
     */
     auto obj = new QTextLayout( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ( HB_ISOBJECT(3) || HB_ISNIL(3) ) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = nullptr )
     */
     auto obj = new QTextLayout( PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? nullptr : static_cast<QPaintDevice*>(Qt5xHb::itemGetPtr(3)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     QTextLayout( const QTextBlock & b )
     */
     auto obj = new QTextLayout( *PQTEXTBLOCK(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
     QBitmap()
     */
     auto obj = new QBitmap();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
     QBitmap( const QPixmap & pixmap )
     */
     auto obj = new QBitmap( *PQPIXMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
     QBitmap( int width, int height )
     */
     auto obj = new QBitmap( PINT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
     QBitmap( const QSize & size )
     */
     auto obj = new QBitmap( *PQSIZE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
     QBitmap( const QString & fileName, const char * format = nullptr )
     */
     auto obj = new QBitmap( PQSTRING(1), OPCONSTCHAR( 2, nullptr ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

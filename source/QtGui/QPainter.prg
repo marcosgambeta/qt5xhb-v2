@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
     QPainter()
     */
     auto obj = new QPainter();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) ) // TODO: implementar ISQPAINTDEVICE
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
     QPainter( QPaintDevice * device )
     */
     auto obj = new QPainter( PQPAINTDEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

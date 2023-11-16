@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
     QTextFragment()
     */
     auto obj = new QTextFragment();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTFRAGMENT(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
     QTextFragment( const QTextFragment & o )
     */
     auto obj = new QTextFragment( *PQTEXTFRAGMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

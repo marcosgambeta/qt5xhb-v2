@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2) )
   {
     auto obj = new QAccessibleValueChangeEvent( PQOBJECT(1), *PQVARIANT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

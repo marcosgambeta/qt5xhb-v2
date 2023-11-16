@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     QFont()
     */
     auto obj = new QFont();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 4) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ISOPTLOG(4) )
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
     */
     auto obj = new QFont( PQSTRING(1), OPINT( 2, -1 ), OPINT( 3, -1 ), OPBOOL( 4, false ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2) )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     QFont( const QFont & font, QPaintDevice * pd )
     */
     auto obj = new QFont( *PQFONT(1), PQPAINTDEVICE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQFONT(1) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     QFont( const QFont & font )
     */
     auto obj = new QFont( *PQFONT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

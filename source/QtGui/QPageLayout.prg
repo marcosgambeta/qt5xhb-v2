@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageLayout();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPageLayout( *PQPAGELAYOUT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

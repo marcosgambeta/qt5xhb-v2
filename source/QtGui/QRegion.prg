@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     QRegion()
     */
     auto obj = new QRegion();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     QRegion( int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle )
     */
     auto obj = new QRegion( PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? static_cast<QRegion::RegionType >( QRegion::Rectangle ) : static_cast<QRegion::RegionType >( hb_parni(5) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQRECT(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     QRegion( const QRect & r, QRegion::RegionType t = QRegion::Rectangle )
     */
     auto obj = new QRegion( *PQRECT(1), HB_ISNIL(2) ? static_cast<QRegion::RegionType >( QRegion::Rectangle ) : static_cast<QRegion::RegionType >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQPOLYGON(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     QRegion( const QPolygon & pa, Qt::FillRule fillRule = Qt::OddEvenFill )
     */
     auto obj = new QRegion( *PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQREGION(1) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     QRegion( const QRegion & region )
     */
     auto obj = new QRegion( *PQREGION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBITMAP(1) )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     QRegion( const QBitmap & bitmap )
     */
     auto obj = new QRegion( *PQBITMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

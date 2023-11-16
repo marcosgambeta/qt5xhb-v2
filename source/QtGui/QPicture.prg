@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
     QPicture( int formatVersion = -1 )
     */
     auto obj = new QPicture( OPINT( 1, -1 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPICTURE(1) )
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
     QPicture( const QPicture & pic )
     */
     auto obj = new QPicture( *PQPICTURE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

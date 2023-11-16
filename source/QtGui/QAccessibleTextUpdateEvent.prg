@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
   if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
   {
     auto obj = new QAccessibleTextUpdateEvent( PQOBJECT(1), PINT(2), PQSTRING(3), PQSTRING(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

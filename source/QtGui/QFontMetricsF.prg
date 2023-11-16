@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     QFontMetricsF( const QFont & font )
     */
     auto obj = new QFontMetricsF( *PQFONT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
     */
     auto obj = new QFontMetricsF( *PQFONT(1), PQPAINTDEVICE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQFONTMETRICS(1) )
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     QFontMetricsF( const QFontMetrics & fontMetrics )
     */
     auto obj = new QFontMetricsF( *PQFONTMETRICS(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQFONTMETRICSF(1) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     QFontMetricsF( const QFontMetricsF & fm )
     */
     auto obj = new QFontMetricsF( *PQFONTMETRICSF(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

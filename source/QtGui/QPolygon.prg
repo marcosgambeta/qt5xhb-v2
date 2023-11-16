@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
     QPolygon()
     */
     auto obj = new QPolygon();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
     QPolygon( int size )
     */
     auto obj = new QPolygon( PINT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
     QPolygon( const QPolygon & a )
     */
     auto obj = new QPolygon( *PQPOLYGON(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
       par1 << *static_cast<QPoint*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
     }
     auto obj = new QPolygon( par1 );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ISQRECT(1) && ISOPTLOG(2) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
     QPolygon( const QRect & r, bool closed = false )
     */
     auto obj = new QPolygon( *PQRECT(1), OPBOOL( 2, false ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

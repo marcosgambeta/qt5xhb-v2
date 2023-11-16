@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
     QOpenGLPaintDevice()
     */
     auto obj = new QOpenGLPaintDevice();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
     QOpenGLPaintDevice( const QSize & size )
     */
     auto obj = new QOpenGLPaintDevice( *PQSIZE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
     QOpenGLPaintDevice( int width, int height )
     */
     auto obj = new QOpenGLPaintDevice( PINT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

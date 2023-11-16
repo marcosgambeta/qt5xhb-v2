@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     QPalette()
     */
     auto obj = new QPalette();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ( ISQCOLOR(1)|| HB_ISCHAR(1) ) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     QPalette( const QColor & button )
     */
     auto obj = new QPalette( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     QPalette( Qt::GlobalColor button )
     */
     auto obj = new QPalette( static_cast<Qt::GlobalColor>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ( ISQCOLOR(1)|| HB_ISCHAR(1) ) && ( ISQCOLOR(2)|| HB_ISCHAR(2) ) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     QPalette( const QColor & button, const QColor & window )
     */
     auto obj = new QPalette( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
     */
     auto obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     QPalette( const QPalette & p )
     */
     auto obj = new QPalette( *PQPALETTE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

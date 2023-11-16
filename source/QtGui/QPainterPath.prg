@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
     QPainterPath()
     */
     auto obj = new QPainterPath();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
     QPainterPath( const QPointF & startPoint )
     */
     auto obj = new QPainterPath( *PQPOINTF(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
     QPainterPath( const QPainterPath & path )
     */
     auto obj = new QPainterPath( *PQPAINTERPATH(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

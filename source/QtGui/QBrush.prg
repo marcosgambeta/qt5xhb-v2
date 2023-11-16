@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush()
     */
     auto obj = new QBrush();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( Qt::BrushStyle style )
     */
     auto obj = new QBrush( static_cast<Qt::BrushStyle>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ( ISQCOLOR(1)|| HB_ISCHAR(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
     */
     auto obj = new QBrush( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ), HB_ISNIL(2) ? static_cast<Qt::BrushStyle >( Qt::SolidPattern ) : static_cast<Qt::BrushStyle >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
     */
     auto obj = new QBrush( static_cast<Qt::GlobalColor>( hb_parni(1) ), HB_ISNIL(2) ? static_cast<Qt::BrushStyle >( Qt::SolidPattern ) : static_cast<Qt::BrushStyle >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ( ISQCOLOR(1)|| HB_ISCHAR(1) ) && ISQPIXMAP(2) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QColor & color, const QPixmap & pixmap )
     */
     auto obj = new QBrush( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ), *PQPIXMAP(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( Qt::GlobalColor color, const QPixmap & pixmap )
     */
     auto obj = new QBrush( static_cast<Qt::GlobalColor>( hb_parni(1) ), *PQPIXMAP(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QPixmap & pixmap )
     */
     auto obj = new QBrush( *PQPIXMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QImage & image )
     */
     auto obj = new QBrush( *PQIMAGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QBrush & other )
     */
     auto obj = new QBrush( *PQBRUSH(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGRADIENT(1) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QGradient & gradient )
     */
     auto obj = new QBrush( *PQGRADIENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQCONICALGRADIENT(1) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QGradient & gradient )
     */
     auto obj = new QBrush( *PQGRADIENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QGradient & gradient )
     */
     auto obj = new QBrush( *PQGRADIENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQRADIALGRADIENT(1) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QGradient & gradient )
     */
     auto obj = new QBrush( *PQGRADIENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

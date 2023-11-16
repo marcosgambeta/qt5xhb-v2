@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
     QOpenGLDebugMessage()
     */
     auto obj = new QOpenGLDebugMessage();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
     QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
     */
     auto obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

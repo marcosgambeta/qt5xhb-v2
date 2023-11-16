@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     QRawFont()
     */
     auto obj = new QRawFont();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
     */
     auto obj = new QRawFont( PQSTRING(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
     */
     auto obj = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQRAWFONT(1) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     QRawFont( const QRawFont & other )
     */
     auto obj = new QRawFont( *PQRAWFONT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

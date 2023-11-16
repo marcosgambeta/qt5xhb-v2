@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
     QTextBlock()
     */
     auto obj = new QTextBlock();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
     QTextBlock( const QTextBlock & o )
     */
     auto obj = new QTextBlock( *PQTEXTBLOCK(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

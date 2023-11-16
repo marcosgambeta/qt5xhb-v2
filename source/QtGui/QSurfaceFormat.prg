@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
     QSurfaceFormat()
     */
     auto obj = new QSurfaceFormat();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
     QSurfaceFormat( QSurfaceFormat::FormatOptions options )
     */
     auto obj = new QSurfaceFormat( static_cast<QSurfaceFormat::FormatOptions>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
     QSurfaceFormat( const QSurfaceFormat & other )
     */
     auto obj = new QSurfaceFormat( *PQSURFACEFORMAT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

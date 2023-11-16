@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     QCursor()
     */
     auto obj = new QCursor();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     QCursor( Qt::CursorShape shape )
     */
     auto obj = new QCursor( static_cast<Qt::CursorShape>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     QCursor( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
     */
     auto obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT( 3, -1 ), OPINT( 4, -1 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 3) && ISQPIXMAP(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     QCursor( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
     */
     auto obj = new QCursor( *PQPIXMAP(1), OPINT( 2, -1 ), OPINT( 3, -1 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQCURSOR(1) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     QCursor( const QCursor & c )
     */
     auto obj = new QCursor( *PQCURSOR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
     QTextLength()
     */
     auto obj = new QTextLength();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
     QTextLength( QTextLength::Type type, qreal value )
     */
     auto obj = new QTextLength( static_cast<QTextLength::Type>( hb_parni(1) ), PQREAL(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

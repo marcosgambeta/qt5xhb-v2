@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
     QPixmap()
     */
     auto obj = new QPixmap();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
     QPixmap( int width, int height )
     */
     auto obj = new QPixmap( PINT(1), PINT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
     QPixmap( const QSize & size )
     */
     auto obj = new QPixmap( *PQSIZE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
     QPixmap( const QString & fileName, const char * format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor )
     */
     auto obj = new QPixmap( PQSTRING(1), OPCONSTCHAR( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(3) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
     QPixmap( const QPixmap & pixmap )
     */
     auto obj = new QPixmap( *PQPIXMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

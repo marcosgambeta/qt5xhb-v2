@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
     QGlyphRun()
     */
     auto obj = new QGlyphRun();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGLYPHRUN(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
     QGlyphRun( const QGlyphRun & other )
     */
     auto obj = new QGlyphRun( *PQGLYPHRUN(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

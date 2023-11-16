@@ -149,7 +149,7 @@ QColor( QRgb color )
 HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
   auto obj = new QColor( PQRGB(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -158,7 +158,7 @@ QColor( const char * name )
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
   auto obj = new QColor( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -167,7 +167,7 @@ QColor( Qt::GlobalColor color )
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
   auto obj = new QColor( static_cast<Qt::GlobalColor>( hb_parni(1) ) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QCOLOR_NEW )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
     QColor()
     */
     auto obj = new QColor();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
     QColor( int r, int g, int b, int a = 255 )
     */
     auto obj = new QColor( PINT(1), PINT(2), PINT(3), OPINT( 4, 255 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
     QColor( const QString & name )
     */
     auto obj = new QColor( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQCOLOR(1) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
     QColor( const QColor & color )
     */
     auto obj = new QColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

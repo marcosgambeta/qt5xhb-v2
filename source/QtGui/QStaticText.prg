@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
     QStaticText()
     */
     auto obj = new QStaticText();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
     QStaticText( const QString & text )
     */
     auto obj = new QStaticText( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTATICTEXT(1) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
     QStaticText( const QStaticText & other )
     */
     auto obj = new QStaticText( *PQSTATICTEXT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

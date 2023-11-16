@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QColorSpace();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QColorSpace( static_cast<QColorSpace::NamedColorSpace>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni(1) ), static_cast<QColorSpace::TransferFunction>( hb_parni(2) ), OPFLOAT( 3, 0.0f ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QColorSpace( static_cast<QColorSpace::Primaries>( hb_parni(1) ), PFLOAT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QColorSpace( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), static_cast<QColorSpace::TransferFunction>( hb_parni(5) ), OPFLOAT( 6, 0.0f ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = new QColorSpace( *PQCOLORSPACE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
     QPainterPathStroker()
     */
     auto obj = new QPainterPathStroker();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0) )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QPainterPathStroker( *PQPEN(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
