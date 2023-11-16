@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
   if( ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1) )
   {
     auto obj = new QWebEngineHistoryItem( *PQWEBENGINEHISTORYITEM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

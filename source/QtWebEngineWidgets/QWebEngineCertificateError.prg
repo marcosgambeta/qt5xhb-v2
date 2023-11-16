@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
   if( ISNUMPAR(4) && HB_ISNUM(1) && ISQURL(2) && HB_ISLOG(3) && HB_ISCHAR(4) )
   {
     auto obj = new QWebEngineCertificateError( PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
