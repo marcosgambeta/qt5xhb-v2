@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
   if( ISNUMPAR(1) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) )
   {
     auto obj = new QMacPasteboardMime( PCHAR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
