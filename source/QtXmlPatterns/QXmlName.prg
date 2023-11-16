@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
     QXmlName()
     */
     auto obj = new QXmlName();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
     QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
     */
     auto obj = new QXmlName( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

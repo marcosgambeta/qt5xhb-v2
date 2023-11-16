@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
     QXmlSchemaValidator()
     */
     auto obj = new QXmlSchemaValidator();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
     QXmlSchemaValidator( const QXmlSchema & schema )
     */
     auto obj = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

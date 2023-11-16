@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
     QXmlSchema()
     */
     auto obj = new QXmlSchema();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
     QXmlSchema( const QXmlSchema & other )
     */
     auto obj = new QXmlSchema( *PQXMLSCHEMA(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

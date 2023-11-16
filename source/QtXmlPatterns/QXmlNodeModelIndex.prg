@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
     QXmlNodeModelIndex()
     */
     auto obj = new QXmlNodeModelIndex();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
     QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
     */
     auto obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

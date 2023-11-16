@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
     QXmlItem()
     */
     auto obj = new QXmlItem();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLITEM(1) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
     QXmlItem( const QXmlItem & other )
     */
     auto obj = new QXmlItem( *PQXMLITEM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
     QXmlItem( const QXmlNodeModelIndex & node )
     */
     auto obj = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
     QXmlItem( const QVariant & atomicValue )
     */
     auto obj = new QXmlItem( *PQVARIANT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
