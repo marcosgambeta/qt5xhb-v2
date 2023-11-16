@@ -506,9 +506,9 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
     {
 #endif
       const QList<QWebFrame *> list = obj->childFrames();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QWEBFRAME");
+      auto pDynSym = hb_dynsymFindName("QWEBFRAME");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
