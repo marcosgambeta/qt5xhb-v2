@@ -374,9 +374,9 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ALLDEVICES )
   {
 #endif
     const QList<QBluetoothHostInfo> list = QBluetoothLocalDevice::allDevices();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QBLUETOOTHHOSTINFO");
+    auto pDynSym = hb_dynsymFindName("QBLUETOOTHHOSTINFO");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {

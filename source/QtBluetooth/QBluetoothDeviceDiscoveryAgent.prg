@@ -264,9 +264,9 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
     {
 #endif
       const QList<QBluetoothDeviceInfo> list = obj->discoveredDevices();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBLUETOOTHDEVICEINFO");
+      auto pDynSym = hb_dynsymFindName("QBLUETOOTHDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto & item : list )
         {
