@@ -253,7 +253,7 @@ bool Signals::disconnection(QObject * object, int indexOfSignal)
 
 PHB_ITEM Signals::returnObject(void * ptr, const char * classname)
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName(classname);
+  auto pDynSym = hb_dynsymFindName(classname);
 
   auto pObject = hb_itemNew(nullptr);
 
