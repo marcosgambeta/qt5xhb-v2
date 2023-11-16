@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QFileIconProvider();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
     QStyleOptionViewItem()
     */
     auto obj = new QStyleOptionViewItem();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONVIEWITEM(1) )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
     QStyleOptionViewItem( const QStyleOptionViewItem & other )
     */
     auto obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
     QStyleOptionGroupBox()
     */
     auto obj = new QStyleOptionGroupBox();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1) )
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
     QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
     */
     auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

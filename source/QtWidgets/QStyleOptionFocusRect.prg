@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
     QStyleOptionFocusRect()
     */
     auto obj = new QStyleOptionFocusRect();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1) )
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
     QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
     */
     auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

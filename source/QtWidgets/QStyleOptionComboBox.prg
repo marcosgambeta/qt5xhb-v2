@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
     QStyleOptionComboBox()
     */
     auto obj = new QStyleOptionComboBox();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMBOBOX(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
     QStyleOptionComboBox( const QStyleOptionComboBox & other )
     */
     auto obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
     QStylePainter()
     */
     auto obj = new QStylePainter();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
     QStylePainter( QWidget * w )
     */
     auto obj = new QStylePainter( PQWIDGET(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
     QStylePainter( QPaintDevice * pd, QWidget * w )
     */
     auto obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

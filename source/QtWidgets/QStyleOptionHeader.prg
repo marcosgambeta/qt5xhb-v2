@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
     QStyleOptionHeader()
     */
     auto obj = new QStyleOptionHeader();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
     QStyleOptionHeader( const QStyleOptionHeader & other )
     */
     auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

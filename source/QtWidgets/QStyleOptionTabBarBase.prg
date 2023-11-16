@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
     QStyleOptionTabBarBase()
     */
     auto obj = new QStyleOptionTabBarBase();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1) )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
     QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
     */
     auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

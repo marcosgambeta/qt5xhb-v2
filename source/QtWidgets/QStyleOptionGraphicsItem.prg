@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
     QStyleOptionGraphicsItem()
     */
     auto obj = new QStyleOptionGraphicsItem();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1) )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
     QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
     */
     auto obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
     QStyleOptionTitleBar()
     */
     auto obj = new QStyleOptionTitleBar();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1) )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
     QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
     */
     auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

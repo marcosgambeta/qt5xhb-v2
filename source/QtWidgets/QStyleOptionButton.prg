@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
     QStyleOptionButton()
     */
     auto obj = new QStyleOptionButton();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1) )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
     QStyleOptionButton( const QStyleOptionButton & other )
     */
     auto obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

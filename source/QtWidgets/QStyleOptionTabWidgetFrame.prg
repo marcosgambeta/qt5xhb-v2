@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
     QStyleOptionTabWidgetFrame()
     */
     auto obj = new QStyleOptionTabWidgetFrame();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABWIDGETFRAME(1) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
     QStyleOptionTabWidgetFrame( const QStyleOptionTabWidgetFrame & other )
     */
     auto obj = new QStyleOptionTabWidgetFrame( *PQSTYLEOPTIONTABWIDGETFRAME(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

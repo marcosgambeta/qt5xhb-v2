@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
     QStyleOptionSpinBox()
     */
     auto obj = new QStyleOptionSpinBox();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONSPINBOX(1) )
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
     QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
     */
     auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

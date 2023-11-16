@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
     QStyleOptionSlider()
     */
     auto obj = new QStyleOptionSlider();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONSLIDER(1) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
     QStyleOptionSlider( const QStyleOptionSlider & other )
     */
     auto obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
   if( ISNUMPAR(1) && ISQCOLORMAP(1) )
   {
     auto obj = new QColormap( *PQCOLORMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

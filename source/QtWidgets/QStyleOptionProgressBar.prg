@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
     QStyleOptionProgressBar()
     */
     auto obj = new QStyleOptionProgressBar();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
     QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
     */
     auto obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

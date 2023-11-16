@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_NEW )
     QStyleOptionToolBar()
     */
     auto obj = new QStyleOptionToolBar();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1) )
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_NEW )
     QStyleOptionToolBar( const QStyleOptionToolBar & other )
     */
     auto obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
