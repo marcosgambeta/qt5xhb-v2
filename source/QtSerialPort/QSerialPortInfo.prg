@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = new QSerialPortInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = new QSerialPortInfo( *PQSERIALPORT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = new QSerialPortInfo( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = new QSerialPortInfo( *PQSERIALPORTINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
