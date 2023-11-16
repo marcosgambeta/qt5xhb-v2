@@ -1235,9 +1235,9 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
     {
 #endif
       const QList<QUrl> list = obj->sidebarUrls();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
+      auto pDynSym = hb_dynsymFindName("QURL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1495,9 +1495,9 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
     {
 #endif
       const QList<QUrl> list = obj->selectedUrls();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
+      auto pDynSym = hb_dynsymFindName("QURL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1753,9 +1753,9 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
   {
 #endif
     const QList<QUrl> list = QFileDialog::getOpenFileUrls( OPQWIDGET( 1, nullptr ), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)), OPQSTRING( 4, QString() ), nullptr, HB_ISNIL(6) ? static_cast<QFileDialog::Options >( 0 ) : static_cast<QFileDialog::Options >( hb_parni(6) ), OPQSTRINGLIST( 7, QStringList() ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
+    auto pDynSym = hb_dynsymFindName("QURL");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -2121,9 +2121,9 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QFILEDIALOG");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
+            auto pDynSym = hb_dynsymFindName("QURL");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {

@@ -494,9 +494,9 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
   {
 #endif
     const QWidgetList list = QApplication::allWidgets();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
+    auto pDynSym = hb_dynsymFindName("QWIDGET");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( auto item : list )
       {
@@ -1533,9 +1533,9 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
   {
 #endif
     const QWidgetList list = QApplication::topLevelWidgets();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
+    auto pDynSym = hb_dynsymFindName("QWIDGET");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( auto item : list )
       {

@@ -1789,9 +1789,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSSCENE");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QRECTF");
+            auto pDynSym = hb_dynsymFindName("QRECTF");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {

@@ -185,9 +185,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
     {
 #endif
       const QList<QAbstractButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTBUTTON");
+      auto pDynSym = hb_dynsymFindName("QABSTRACTBUTTON");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

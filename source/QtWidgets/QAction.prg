@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
     {
 #endif
       const QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSWIDGET");
+      auto pDynSym = hb_dynsymFindName("QGRAPHICSWIDGET");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -357,9 +357,9 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
     {
 #endif
       const QList<QWidget *> list = obj->associatedWidgets();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
+      auto pDynSym = hb_dynsymFindName("QWIDGET");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -1331,9 +1331,9 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
     {
 #endif
       const QList<QKeySequence> list = obj->shortcuts();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
+      auto pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

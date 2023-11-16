@@ -491,9 +491,9 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
     {
 #endif
       const QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder >( QMdiArea::CreationOrder ) : static_cast<QMdiArea::WindowOrder >( hb_parni(1) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
+      auto pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

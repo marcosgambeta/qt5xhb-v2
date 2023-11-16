@@ -165,9 +165,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
     {
 #endif
       const QList<QGesture *> list = obj->activeGestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
+      auto pDynSym = hb_dynsymFindName("QGESTURE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -212,9 +212,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
     {
 #endif
       const QList<QGesture *> list = obj->canceledGestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
+      auto pDynSym = hb_dynsymFindName("QGESTURE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -284,9 +284,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
     {
 #endif
       const QList<QGesture *> list = obj->gestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
+      auto pDynSym = hb_dynsymFindName("QGESTURE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

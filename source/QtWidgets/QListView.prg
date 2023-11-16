@@ -1009,9 +1009,9 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLISTVIEW");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
+            auto pDynSym = hb_dynsymFindName("QMODELINDEX");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {
