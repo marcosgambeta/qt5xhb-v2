@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
     QDomProcessingInstruction()
     */
     auto obj = new QDomProcessingInstruction();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
     QDomProcessingInstruction( const QDomProcessingInstruction & x )
     */
     auto obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

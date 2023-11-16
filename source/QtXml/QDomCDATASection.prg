@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
     QDomCDATASection()
     */
     auto obj = new QDomCDATASection();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
     QDomCDATASection( const QDomCDATASection & x )
     */
     auto obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

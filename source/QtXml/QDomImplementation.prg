@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
     QDomImplementation()
     */
     auto obj = new QDomImplementation();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
     QDomImplementation( const QDomImplementation & x )
     */
     auto obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

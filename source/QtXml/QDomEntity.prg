@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
     QDomEntity()
     */
     auto obj = new QDomEntity();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMENTITY(1) )
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
     QDomEntity( const QDomEntity & x )
     */
     auto obj = new QDomEntity( *PQDOMENTITY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

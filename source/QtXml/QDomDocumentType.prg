@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     QDomDocumentType()
     */
     auto obj = new QDomDocumentType();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     QDomDocumentType( const QDomDocumentType & n )
     */
     auto obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

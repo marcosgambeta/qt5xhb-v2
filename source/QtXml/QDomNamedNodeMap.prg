@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
     QDomNamedNodeMap()
     */
     auto obj = new QDomNamedNodeMap();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
     QDomNamedNodeMap( const QDomNamedNodeMap & n )
     */
     auto obj = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

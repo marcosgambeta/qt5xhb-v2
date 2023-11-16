@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
     QXmlInputSource()
     */
     auto obj = new QXmlInputSource();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
     QXmlInputSource( QIODevice * dev )
     */
     auto obj = new QXmlInputSource( PQIODEVICE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

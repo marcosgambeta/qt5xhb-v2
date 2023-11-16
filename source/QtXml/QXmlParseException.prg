@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
     QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
     */
     auto obj = new QXmlParseException( OPQSTRING( 1, QString() ), OPINT( 2, -1 ), OPINT( 3, -1 ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
     QXmlParseException( const QXmlParseException & other )
     */
     auto obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

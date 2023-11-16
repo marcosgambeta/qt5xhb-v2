@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
     QDomElement()
     */
     auto obj = new QDomElement();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMELEMENT(1) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
     QDomElement( const QDomElement & x )
     */
     auto obj = new QDomElement( *PQDOMELEMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

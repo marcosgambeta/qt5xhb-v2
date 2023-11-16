@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument()
     */
     auto obj = new QDomDocument();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument( const QString & name )
     */
     auto obj = new QDomDocument( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument( const QDomDocumentType & doctype )
     */
     auto obj = new QDomDocument( *PQDOMDOCUMENTTYPE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENT(1) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument( const QDomDocument & x )
     */
     auto obj = new QDomDocument( *PQDOMDOCUMENT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

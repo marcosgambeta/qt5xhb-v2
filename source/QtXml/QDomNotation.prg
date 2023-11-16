@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
     QDomNotation()
     */
     auto obj = new QDomNotation();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
     QDomNotation( const QDomNotation & x )
     */
     auto obj = new QDomNotation( *PQDOMNOTATION(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

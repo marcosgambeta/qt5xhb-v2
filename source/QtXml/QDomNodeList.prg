@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
     QDomNodeList()
     */
     auto obj = new QDomNodeList();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDOMNODELIST(1) )
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
     QDomNodeList( const QDomNodeList & n )
     */
     auto obj = new QDomNodeList( *PQDOMNODELIST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
