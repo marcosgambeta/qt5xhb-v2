@@ -114,9 +114,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLELOCALES )
     {
 #endif
       const QVector<QLocale> list = obj->availableLocales();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
+      auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -166,9 +166,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLEVOICES )
     {
 #endif
       const QVector<QVoice> list = obj->availableVoices();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVOICE");
+      auto pDynSym = hb_dynsymFindName("QVOICE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
