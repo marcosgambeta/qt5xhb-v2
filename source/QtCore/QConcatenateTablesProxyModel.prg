@@ -568,9 +568,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SOURCEMODELS )
     {
 #endif
       const QList<QAbstractItemModel *> list = obj->sourceModels();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTITEMMODEL");
+      auto pDynSym = hb_dynsymFindName("QABSTRACTITEMMODEL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

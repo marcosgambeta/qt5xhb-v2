@@ -171,9 +171,9 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
     {
 #endif
       const QList<QMimeType> list = obj->mimeTypesForFileName( PQSTRING(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMIMETYPE");
+      auto pDynSym = hb_dynsymFindName("QMIMETYPE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -342,9 +342,9 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
     {
 #endif
       const QList<QMimeType> list = obj->allMimeTypes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMIMETYPE");
+      auto pDynSym = hb_dynsymFindName("QMIMETYPE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

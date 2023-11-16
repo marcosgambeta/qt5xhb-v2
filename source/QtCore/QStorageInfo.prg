@@ -556,9 +556,9 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
   {
 #endif
     const QList<QStorageInfo> list = QStorageInfo::mountedVolumes();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSTORAGEINFO");
+    auto pDynSym = hb_dynsymFindName("QSTORAGEINFO");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {

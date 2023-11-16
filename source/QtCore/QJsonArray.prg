@@ -645,9 +645,9 @@ HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
     {
 #endif
       const QVariantList list = obj->toVariantList();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
+      auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

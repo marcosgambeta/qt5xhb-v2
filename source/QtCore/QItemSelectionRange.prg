@@ -523,9 +523,9 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
     {
 #endif
       const QModelIndexList list = obj->indexes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
+      auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

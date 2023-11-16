@@ -379,9 +379,9 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
     {
 #endif
       const QList<QAbstractTransition *> list = obj->transitions();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTTRANSITION");
+      auto pDynSym = hb_dynsymFindName("QABSTRACTTRANSITION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

@@ -301,9 +301,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
     {
 #endif
       const QModelIndexList list = obj->selectedIndexes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
+      auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -351,9 +351,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
     {
 #endif
       const QModelIndexList list = obj->selectedRows( OPINT( 1, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
+      auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -401,9 +401,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
     {
 #endif
       const QModelIndexList list = obj->selectedColumns( OPINT( 1, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
+      auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

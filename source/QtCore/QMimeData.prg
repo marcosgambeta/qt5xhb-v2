@@ -629,9 +629,9 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
     {
 #endif
       const QList<QUrl> list = obj->urls();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
+      auto pDynSym = hb_dynsymFindName("QURL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
