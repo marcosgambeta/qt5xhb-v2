@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     QSqlQuery( QSqlResult * result )
     */
     auto obj = new QSqlQuery( PQSQLRESULT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( ISQSQLDATABASE(2) || HB_ISNIL(2) ) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
     */
     auto obj = new QSqlQuery( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtr(2)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSQLDATABASE(1) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     QSqlQuery( QSqlDatabase db )
     */
     auto obj = new QSqlQuery( *PQSQLDATABASE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSQLQUERY(1) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     QSqlQuery( const QSqlQuery & other )
     */
     auto obj = new QSqlQuery( *PQSQLQUERY(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

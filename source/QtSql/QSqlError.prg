@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
     QSqlError( const QString & driverText, const QString & databaseText, QSqlError::ErrorType type, int number )
     */
     auto obj = new QSqlError( PQSTRING(1), PQSTRING(2), static_cast<QSqlError::ErrorType>( hb_parni(3) ), PINT(4) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(0, 4) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QSqlError( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? static_cast<QSqlError::ErrorType >( QSqlError::NoError ) : static_cast<QSqlError::ErrorType >( hb_parni(3) ), OPQSTRING( 4, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
     QSqlError( const QSqlError & other )
     */
     auto obj = new QSqlError( *PQSQLERROR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

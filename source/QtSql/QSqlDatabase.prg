@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
     QSqlDatabase()
     */
     auto obj = new QSqlDatabase();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSQLDATABASE(1) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
     QSqlDatabase( const QSqlDatabase & other )
     */
     auto obj = new QSqlDatabase( *PQSQLDATABASE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
     QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
     */
     auto obj = new QSqlIndex( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSQLINDEX(1) )
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
     QSqlIndex( const QSqlIndex & other )
     */
     auto obj = new QSqlIndex( *PQSQLINDEX(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

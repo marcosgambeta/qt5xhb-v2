@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
     QSqlRelation()
     */
     auto obj = new QSqlRelation();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
     QSqlRelation( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
     */
     auto obj = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSQLRECORD_NEW )
     QSqlRecord()
     */
     auto obj = new QSqlRecord();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSQLRECORD(1) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSQLRECORD_NEW )
     QSqlRecord( const QSqlRecord & other )
     */
     auto obj = new QSqlRecord( *PQSQLRECORD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

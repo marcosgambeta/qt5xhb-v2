@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
     QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
     */
     auto obj = new QSqlField( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<QVariant::Type >( QVariant::Invalid ) : static_cast<QVariant::Type >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQSQLFIELD(1) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
     QSqlField( const QSqlField & other )
     */
     auto obj = new QSqlField( *PQSQLFIELD(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
