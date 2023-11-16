@@ -235,9 +235,9 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
   {
 #endif
     const QWindowList list = QGuiApplication::allWindows();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QWINDOW");
+    auto pDynSym = hb_dynsymFindName("QWINDOW");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( auto item : list )
       {
@@ -708,9 +708,9 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
   {
 #endif
     const QList<QScreen *> list = QGuiApplication::screens();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSCREEN");
+    auto pDynSym = hb_dynsymFindName("QSCREEN");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( auto item : list )
       {
@@ -937,9 +937,9 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
   {
 #endif
     const QWindowList list = QGuiApplication::topLevelWindows();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QWINDOW");
+    auto pDynSym = hb_dynsymFindName("QWINDOW");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( auto item : list )
       {

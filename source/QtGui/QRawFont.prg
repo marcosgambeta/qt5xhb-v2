@@ -353,9 +353,9 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
         par1 << temp1;
       }
       const QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
+      auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

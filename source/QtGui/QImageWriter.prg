@@ -586,9 +586,9 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
   {
 #endif
     const QList<QByteArray> list = QImageWriter::supportedImageFormats();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+    auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -632,9 +632,9 @@ HB_FUNC_STATIC( QIMAGEWRITER_IMAGEFORMATSFORMIMETYPE )
   {
 #endif
     const QList<QByteArray> list = QImageWriter::imageFormatsForMimeType( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+    auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {

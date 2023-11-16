@@ -2017,9 +2017,9 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
     {
 #endif
       const QList<QStandardItem *> list = obj->takeRow( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
+      auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
@@ -2064,9 +2064,9 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
     {
 #endif
       const QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
+      auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

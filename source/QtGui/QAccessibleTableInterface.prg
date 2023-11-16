@@ -322,9 +322,9 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
     {
 #endif
       const QList<QAccessibleInterface *> list = obj->selectedCells();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
+      auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
