@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
     QWebHitTestResult()
     */
     auto obj = new QWebHitTestResult();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQWEBHITTESTRESULT(1) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
     QWebHitTestResult( const QWebHitTestResult & other )
     */
     auto obj = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
