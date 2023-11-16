@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
     QWebEngineHttpRequest( const QUrl & url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get )
     */
     auto obj = new QWebEngineHttpRequest( HB_ISNIL(1) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<QWebEngineHttpRequest::Method >( QWebEngineHttpRequest::Get ) : static_cast<QWebEngineHttpRequest::Method >( hb_parni(2) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   elseif( ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
     QWebEngineHttpRequest( const QWebEngineHttpRequest & other )
     */
     auto obj = new QWebEngineHttpRequest( *PQWEBENGINEHTTPREQUEST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
