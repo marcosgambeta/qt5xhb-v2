@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
     QPrinterInfo()
     */
     auto obj = new QPrinterInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPRINTERINFO(1) )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
     QPrinterInfo( const QPrinterInfo & src )
     */
     auto obj = new QPrinterInfo( *PQPRINTERINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQPRINTER(1) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
     QPrinterInfo( const QPrinter & printer )
     */
     auto obj = new QPrinterInfo( *PQPRINTER(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
