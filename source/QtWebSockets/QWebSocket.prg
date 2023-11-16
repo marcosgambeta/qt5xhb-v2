@@ -1810,9 +1810,9 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKET");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
+            auto pDynSym = hb_dynsymFindName("QSSLERROR");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {
