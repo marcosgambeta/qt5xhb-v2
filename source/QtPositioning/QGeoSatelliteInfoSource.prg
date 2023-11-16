@@ -398,9 +398,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOSATELLITEINFOSOURCE");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
+            auto pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {
@@ -473,9 +473,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOSATELLITEINFOSOURCE");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
+            auto pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {
