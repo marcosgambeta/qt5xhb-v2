@@ -22,7 +22,7 @@ namespace Qt5xHb
 */
 void createReturnClass(void * ptr, const char * classname)
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName(classname);
+  auto pDynSym = hb_dynsymFindName(classname);
 
   if( pDynSym != nullptr ) {
     hb_vmPushDynSym(pDynSym);
@@ -45,7 +45,7 @@ void createReturnClass(void * ptr, const char * classname)
 */
 void createReturnClass(const void * ptr, const char * classname)
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName(classname);
+  auto pDynSym = hb_dynsymFindName(classname);
 
   if( pDynSym != nullptr ) {
     hb_vmPushDynSym(pDynSym);
@@ -68,7 +68,7 @@ void createReturnClass(const void * ptr, const char * classname)
 */
 void createReturnClass(void * ptr, const char * classname, bool destroy)
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName(classname);
+  auto pDynSym = hb_dynsymFindName(classname);
 
   if( pDynSym != nullptr ) {
     hb_vmPushDynSym(pDynSym);
@@ -94,7 +94,7 @@ void createReturnClass(void * ptr, const char * classname, bool destroy)
 */
 void createReturnClass(const void * ptr, const char * classname, bool destroy)
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName(classname);
+  auto pDynSym = hb_dynsymFindName(classname);
 
   if( pDynSym != nullptr ) {
     hb_vmPushDynSym(pDynSym);
@@ -541,7 +541,7 @@ QVariantList convert_array_parameter_to_qvariantlist(int numpar)
 */
 void convert_qvariantlist_to_array(const QVariantList & list)
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
+  auto pDynSym = hb_dynsymFindName("QVARIANT");
 
   auto pArray = hb_itemArrayNew(0);
 
