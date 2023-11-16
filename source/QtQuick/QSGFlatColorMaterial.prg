@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QSGFlatColorMaterial();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
