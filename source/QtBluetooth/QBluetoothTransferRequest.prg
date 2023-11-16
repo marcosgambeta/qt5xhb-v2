@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QBluetoothTransferRequest( HB_ISNIL(1) ? QBluetoothAddress() : *static_cast<QBluetoothAddress*>(Qt5xHb::itemGetPtr(1)) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QBluetoothTransferRequest( *PQBLUETOOTHTRANSFERREQUEST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

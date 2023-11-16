@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QBluetoothHostInfo();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QBluetoothHostInfo( *PQBLUETOOTHHOSTINFO(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
