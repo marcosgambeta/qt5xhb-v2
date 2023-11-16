@@ -263,9 +263,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
     {
 #endif
       const QList<QWinThumbnailToolButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QWINTHUMBNAILTOOLBUTTON");
+      auto pDynSym = hb_dynsymFindName("QWINTHUMBNAILTOOLBUTTON");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {

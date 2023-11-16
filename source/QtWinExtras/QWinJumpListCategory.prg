@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
     {
 #endif
       const QList<QWinJumpListItem *> list = obj->items();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QWINJUMPLISTITEM");
+      auto pDynSym = hb_dynsymFindName("QWINJUMPLISTITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
