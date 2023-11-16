@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
     {
 #endif
       const QList<QCanBusDeviceInfo> list = obj->availableDevices( nullptr );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
+      auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

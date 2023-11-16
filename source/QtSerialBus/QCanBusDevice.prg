@@ -524,9 +524,9 @@ HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
     {
 #endif
       const QVector<QCanBusFrame> list = obj->readAllFrames();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QCANBUSFRAME");
+      auto pDynSym = hb_dynsymFindName("QCANBUSFRAME");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
