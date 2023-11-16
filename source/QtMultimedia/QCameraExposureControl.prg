@@ -191,9 +191,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
 #endif
       bool par2;
       const QVariantList list = obj->supportedParameterRange( static_cast<QCameraExposureControl::ExposureParameter>( hb_parni(1) ), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
+      auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

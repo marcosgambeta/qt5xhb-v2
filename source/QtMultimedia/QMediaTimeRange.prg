@@ -284,9 +284,9 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
     {
 #endif
       const QList<QMediaTimeInterval> list = obj->intervals();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QMEDIATIMEINTERVAL");
+      auto pDynSym = hb_dynsymFindName("QMEDIATIMEINTERVAL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

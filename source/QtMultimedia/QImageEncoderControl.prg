@@ -138,9 +138,9 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
 #endif
       bool par2;
       const QList<QSize> list = obj->supportedResolutions( *PQIMAGEENCODERSETTINGS(1), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
+      auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

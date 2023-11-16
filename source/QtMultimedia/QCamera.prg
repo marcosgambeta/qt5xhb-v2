@@ -814,9 +814,9 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
     {
 #endif
       const QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
+      auto pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -866,9 +866,9 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
     {
 #endif
       const QList<QSize> list = obj->supportedViewfinderResolutions( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
+      auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -950,9 +950,9 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
   {
 #endif
     const QList<QByteArray> list = QCamera::availableDevices();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+    auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {

@@ -532,9 +532,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
 #endif
       bool par2;
       const QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1) ? QImageEncoderSettings() : *static_cast<QImageEncoderSettings*>(Qt5xHb::itemGetPtr(1)), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
+      auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

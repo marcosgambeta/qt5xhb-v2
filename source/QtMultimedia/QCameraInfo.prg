@@ -291,9 +291,9 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
   {
 #endif
     const QList<QCameraInfo> list = QCameraInfo::availableCameras( HB_ISNIL(1) ? static_cast<QCamera::Position >( QCamera::UnspecifiedPosition ) : static_cast<QCamera::Position >( hb_parni(1) ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAINFO");
+    auto pDynSym = hb_dynsymFindName("QCAMERAINFO");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {

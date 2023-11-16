@@ -234,9 +234,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
     {
 #endif
       const QCameraFocusZoneList list = obj->focusZones();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");
+      auto pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

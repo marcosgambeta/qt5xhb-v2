@@ -144,9 +144,9 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
 #endif
       bool par2;
       const QList<QSize> list = obj->supportedResolutions( *PQVIDEOENCODERSETTINGS(1), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
+      auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
