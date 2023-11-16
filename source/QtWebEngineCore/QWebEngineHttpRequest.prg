@@ -330,9 +330,9 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADERS )
     {
 #endif
       const QVector<QByteArray> list = obj->headers();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+      auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
