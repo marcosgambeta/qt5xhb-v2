@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QANDROIDBINDER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidBinder();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QANDROIDBINDER_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidBinder( *PQANDROIDJNIOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidParcel();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidParcel( *PQANDROIDJNIOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

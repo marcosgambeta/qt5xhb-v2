@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidIntent();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidIntent( PQSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1), PCONSTCHAR(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
