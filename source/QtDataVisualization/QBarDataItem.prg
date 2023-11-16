@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem( PFLOAT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem( *PQBARDATAITEM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

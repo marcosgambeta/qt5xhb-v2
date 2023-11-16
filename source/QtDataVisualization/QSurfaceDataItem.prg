@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QSurfaceDataItem();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QSurfaceDataItem( *PQVECTOR3D(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
