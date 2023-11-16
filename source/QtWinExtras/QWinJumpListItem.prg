@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     auto obj = new QWinJumpListItem( static_cast<QWinJumpListItem::Type>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

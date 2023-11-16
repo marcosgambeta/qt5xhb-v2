@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
   if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
   {
     auto obj = new QWinJumpListCategory( OPQSTRING( 1, QString() ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
