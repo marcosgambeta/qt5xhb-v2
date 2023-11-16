@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceAttribute();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceAttribute( *PQPLACEATTRIBUTE(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

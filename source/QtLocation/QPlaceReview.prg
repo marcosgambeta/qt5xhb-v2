@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QPlaceReview();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

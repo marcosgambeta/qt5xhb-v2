@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QPLACERATINGS_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceRatings();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPLACERATINGS_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceRatings( *PQPLACERATINGS(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QPlaceProposedSearchResult();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

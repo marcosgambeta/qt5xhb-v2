@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceSearchRequest();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceSearchRequest( *PQPLACESEARCHREQUEST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

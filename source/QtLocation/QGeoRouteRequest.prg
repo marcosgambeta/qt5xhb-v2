@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
       par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) );
     }
     auto obj = new QGeoRouteRequest( par1 );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
   }
   else if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOCOORDINATE(2) )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QGeoRouteRequest( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QGeoRouteRequest( *PQGEOROUTEREQUEST(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }

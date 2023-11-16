@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QPlaceResult();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
