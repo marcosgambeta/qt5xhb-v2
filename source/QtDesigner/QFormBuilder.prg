@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
     {
 #endif
       const QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QDESIGNERCUSTOMWIDGETINTERFACE");
+      auto pDynSym = hb_dynsymFindName("QDESIGNERCUSTOMWIDGETINTERFACE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
