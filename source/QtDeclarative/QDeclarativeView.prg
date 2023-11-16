@@ -155,9 +155,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
     {
 #endif
       const QList<QDeclarativeError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
+      auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

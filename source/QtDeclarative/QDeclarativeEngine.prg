@@ -781,9 +781,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
+            auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {
