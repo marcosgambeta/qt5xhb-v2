@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
     QDeclarativeScriptString()
     */
     auto obj = new QDeclarativeScriptString();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1) )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
     QDeclarativeScriptString( const QDeclarativeScriptString & other )
     */
     auto obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

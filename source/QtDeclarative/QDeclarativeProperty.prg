@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty()
     */
     auto obj = new QDeclarativeProperty();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
       if( ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1) )
       {
         auto obj = new QDeclarativeProperty( *PQDECLARATIVEPROPERTY(1) );
-        Qt5xHb::returnNewObject( obj, true );
+        Qt5xHb::returnNewObject(obj, true);
       }
       else
       {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty( QObject * obj )
     */
     auto obj = new QDeclarativeProperty( PQOBJECT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty( QObject * obj, QDeclarativeContext * ctxt )
     */
     auto obj = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty( QObject * obj, QDeclarativeEngine * engine )
     */
     auto obj = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty( QObject * obj, const QString & name )
     */
     auto obj = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
     */
     auto obj = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     QDeclarativeProperty( QObject * obj, const QString & name, QDeclarativeEngine * engine )
     */
     auto obj = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

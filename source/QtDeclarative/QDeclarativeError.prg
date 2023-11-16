@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
     QDeclarativeError()
     */
     auto obj = new QDeclarativeError();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVEERROR(1) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
     QDeclarativeError( const QDeclarativeError & other )
     */
     auto obj = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
