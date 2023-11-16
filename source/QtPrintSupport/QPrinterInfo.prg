@@ -245,9 +245,9 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
   {
 #endif
     const QList<QPrinterInfo> list = QPrinterInfo::availablePrinters();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QPRINTERINFO");
+    auto pDynSym = hb_dynsymFindName("QPRINTERINFO");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -439,9 +439,9 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
     {
 #endif
       const QList<QPageSize> list = obj->supportedPageSizes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QPAGESIZE");
+      auto pDynSym = hb_dynsymFindName("QPAGESIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
