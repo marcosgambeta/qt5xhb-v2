@@ -95,9 +95,9 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
     {
 #endif
       const QList<QSensorGestureRecognizer *> list = obj->createRecognizers();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSENSORGESTURERECOGNIZER");
+      auto pDynSym = hb_dynsymFindName("QSENSORGESTURERECOGNIZER");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( auto item : list )
         {
