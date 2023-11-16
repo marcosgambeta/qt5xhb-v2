@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
     */
     auto obj = new QGLFramebufferObject( *PQSIZE(1), OPGLENUM( 2, GL_TEXTURE_2D ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
     */
     auto obj = new QGLFramebufferObject( PINT(1), PINT(2), OPGLENUM( 3, GL_TEXTURE_2D ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(2) && ISQSIZE(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(2) )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( const QSize & size, const QGLFramebufferObjectFormat & format )
     */
     auto obj = new QGLFramebufferObject( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQGLFRAMEBUFFEROBJECTFORMAT(3) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( int width, int height, const QGLFramebufferObjectFormat & format )
     */
     auto obj = new QGLFramebufferObject( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
     auto obj = new QGLFramebufferObject( PINT(1), PINT(2), static_cast<QGLFramebufferObject::Attachment>( hb_parni(3) ), OPGLENUM( 4, GL_TEXTURE_2D ), OPGLENUM( 5, GL_RGBA8 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( const QSize & size, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
     auto obj = new QGLFramebufferObject( *PQSIZE(1), static_cast<QGLFramebufferObject::Attachment>( hb_parni(2) ), OPGLENUM( 3, GL_TEXTURE_2D ), OPGLENUM( 4, GL_RGBA8 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
     QGLColormap()
     */
     auto obj = new QGLColormap();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGLCOLORMAP(1) )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
     QGLColormap( const QGLColormap & map )
     */
     auto obj = new QGLColormap( *PQGLCOLORMAP(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

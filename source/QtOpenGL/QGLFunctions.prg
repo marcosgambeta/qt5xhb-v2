@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
     QGLFunctions()
     */
     auto obj = new QGLFunctions();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGLCONTEXT(1) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
     QGLFunctions( const QGLContext * context )
     */
     auto obj = new QGLFunctions( PQGLCONTEXT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
     QGLFormat()
     */
     auto obj = new QGLFormat();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
     QGLFormat( QGL::FormatOptions options, int plane = 0 )
     */
     auto obj = new QGLFormat( static_cast<QGL::FormatOptions>( hb_parni(1) ), OPINT( 2, 0 ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGLFORMAT(1) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
     QGLFormat( const QGLFormat & other )
     */
     auto obj = new QGLFormat( *PQGLFORMAT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

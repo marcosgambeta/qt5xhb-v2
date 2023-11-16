@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
     QGLBuffer()
     */
     auto obj = new QGLBuffer();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
     QGLBuffer( QGLBuffer::Type type )
     */
     auto obj = new QGLBuffer( static_cast<QGLBuffer::Type>( hb_parni(1) ) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGLBUFFER(1) )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
     QGLBuffer( const QGLBuffer & other )
     */
     auto obj = new QGLBuffer( *PQGLBUFFER(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
     QGLFramebufferObjectFormat()
     */
     auto obj = new QGLFramebufferObjectFormat();
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else if( ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1) )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
     QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
     */
     auto obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
-    Qt5xHb::returnNewObject( obj, true );
+    Qt5xHb::returnNewObject(obj, true);
 
   }
   else
