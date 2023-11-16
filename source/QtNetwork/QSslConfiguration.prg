@@ -360,9 +360,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATECHAIN )
     {
 #endif
       const QList<QSslCertificate> list = obj->localCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -522,9 +522,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
     {
 #endif
       const QList<QSslCertificate> list = obj->peerCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -674,9 +674,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
     {
 #endif
       const QList<QSslCipher> list = obj->ciphers();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
+      auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -754,9 +754,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SUPPORTEDCIPHERS )
   {
 #endif
     const QList<QSslCipher> list = QSslConfiguration::supportedCiphers();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
+    auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -804,9 +804,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
     {
 #endif
       const QList<QSslCertificate> list = obj->caCertificates();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -884,9 +884,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SYSTEMCACERTIFICATES )
   {
 #endif
     const QList<QSslCertificate> list = QSslConfiguration::systemCaCertificates();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+    auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -1239,9 +1239,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS )
     {
 #endif
       const QList<QByteArray> list = obj->allowedNextProtocols();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+      auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {

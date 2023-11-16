@@ -454,9 +454,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES )
     {
 #endif
       const QList<QByteArray> list = obj->subjectInfoAttributes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+      auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -504,9 +504,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFOATTRIBUTES )
     {
 #endif
       const QList<QByteArray> list = obj->issuerInfoAttributes();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+      auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -635,9 +635,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXTENSIONS )
     {
 #endif
       const QList<QSslCertificateExtension> list = obj->extensions();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATEEXTENSION");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATEEXTENSION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -755,9 +755,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
   {
 #endif
     const QList<QSslCertificate> list = QSslCertificate::fromPath( PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat >( QSsl::Pem ) : static_cast<QSsl::EncodingFormat >( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax >( QRegExp::FixedString ) : static_cast<QRegExp::PatternSyntax >( hb_parni(3) ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+    auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -800,9 +800,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
   {
 #endif
     const QList<QSslCertificate> list = QSslCertificate::fromDevice( PQIODEVICE(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat >( QSsl::Pem ) : static_cast<QSsl::EncodingFormat >( hb_parni(2) ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+    auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -845,9 +845,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
   {
 #endif
     const QList<QSslCertificate> list = QSslCertificate::fromData( *PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat >( QSsl::Pem ) : static_cast<QSsl::EncodingFormat >( hb_parni(2) ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+    auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -897,9 +897,9 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
       par1 << *static_cast<QSslCertificate*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
     }
     const QList<QSslError> list = QSslCertificate::verify( par1, OPQSTRING( 2, QString() ) );
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
+    auto pDynSym = hb_dynsymFindName("QSSLERROR");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {

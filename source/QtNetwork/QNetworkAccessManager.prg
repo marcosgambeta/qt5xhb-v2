@@ -637,9 +637,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS )
     {
 #endif
       const QVector<QHstsPolicy> list = obj->strictTransportSecurityHosts();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QHSTSPOLICY");
+      auto pDynSym = hb_dynsymFindName("QHSTSPOLICY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1325,9 +1325,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
+            auto pDynSym = hb_dynsymFindName("QSSLERROR");
             auto pArg2 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg2 )
               {

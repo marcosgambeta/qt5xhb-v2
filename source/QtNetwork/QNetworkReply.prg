@@ -441,9 +441,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
     {
 #endif
       const QList<QByteArray> list = obj->rawHeaderList();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
+      auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -981,9 +981,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
+            auto pDynSym = hb_dynsymFindName("QSSLERROR");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {

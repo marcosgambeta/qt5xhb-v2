@@ -956,9 +956,9 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
     {
 #endif
       const QList<QSslCertificate> list = obj->localCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1095,9 +1095,9 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
     {
 #endif
       const QList<QSslCertificate> list = obj->peerCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1259,9 +1259,9 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
     {
 #endif
       const QList<QSslCipher> list = obj->ciphers();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
+      auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1378,9 +1378,9 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
   {
 #endif
     const QList<QSslCipher> list = QSslSocket::defaultCiphers();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
+    auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -1423,9 +1423,9 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
   {
 #endif
     const QList<QSslCipher> list = QSslSocket::supportedCiphers();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCIPHER");
+    auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -1574,9 +1574,9 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
     {
 #endif
       const QList<QSslCertificate> list = obj->caCertificates();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+      auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -1704,9 +1704,9 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
   {
 #endif
     const QList<QSslCertificate> list = QSslSocket::defaultCaCertificates();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+    auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -1749,9 +1749,9 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
   {
 #endif
     const QList<QSslCertificate> list = QSslSocket::systemCaCertificates();
-    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
+    auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != nullptr )
     {
       for( const auto & item : list )
       {
@@ -1918,9 +1918,9 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
     {
 #endif
       const QList<QSslError> list = obj->sslErrors();
-      PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
+      auto pDynSym = hb_dynsymFindName("QSSLERROR");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         for( const auto & item : list )
         {
@@ -2429,9 +2429,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
-            PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
+            auto pDynSym = hb_dynsymFindName("QSSLERROR");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym )
+            if( pDynSym != nullptr )
             {
               for( const auto & item : arg1 )
               {
