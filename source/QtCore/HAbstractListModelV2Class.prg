@@ -47,13 +47,13 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 /*
-HAbstractListModelV2( QObject * parent = nullptr )
+HAbstractListModelV2(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
-    auto obj = new HAbstractListModelV2( OPQOBJECT( 1, nullptr ) );
+    auto obj = new HAbstractListModelV2(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_DELETE )
 }
 
 /*
-void setRowCountCB( PHB_ITEM block )
+void setRowCountCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETROWCOUNTCB )
 {
@@ -93,10 +93,10 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETROWCOUNTCB )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
     {
 #endif
-      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
+      obj->setRowCountCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETROWCOUNTCB )
 }
 
 /*
-void setDataCB( PHB_ITEM block )
+void setDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETDATACB )
 {
@@ -119,10 +119,10 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETDATACB )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
     {
 #endif
-      obj->setDataCB( PBLOCKORSYMBOL(1) );
+      obj->setDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETDATACB )
 }
 
 /*
-void setHeaderDataCB( PHB_ITEM block )
+void setHeaderDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETHEADERDATACB )
 {
@@ -145,10 +145,10 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETHEADERDATACB )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
     {
 #endif
-      obj->setHeaderDataCB( PBLOCKORSYMBOL(1) );
+      obj->setHeaderDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETHEADERDATACB )
 }
 
 /*
-void setFlagsCB( PHB_ITEM block )
+void setFlagsCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETFLAGSCB )
 {
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETFLAGSCB )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
     {
 #endif
-      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
+      obj->setFlagsCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETFLAGSCB )
 }
 
 /*
-void setSetDataCB( PHB_ITEM block )
+void setSetDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETSETDATACB )
 {
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETSETDATACB )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
     {
 #endif
-      obj->setSetDataCB( PBLOCKORSYMBOL(1)  );
+      obj->setSetDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,27 +214,27 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETSETDATACB )
 }
 
 /*
-int rowCount( const QModelIndex & parent = QModelIndex() ) const
+int rowCount(const QModelIndex & parent = QModelIndex()) const
 */
 
 /*
-int columnCount( const QModelIndex & parent = QModelIndex() ) const
+int columnCount(const QModelIndex & parent = QModelIndex()) const
 */
 
 /*
-QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
+QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const
 */
 
 /*
-QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 */
 
 /*
-Qt::ItemFlags flags( const QModelIndex &index ) const
+Qt::ItemFlags flags(const QModelIndex & index) const
 */
 
 /*
-bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
+bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 */
 
 /*
