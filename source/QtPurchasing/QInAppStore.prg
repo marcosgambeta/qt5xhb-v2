@@ -206,12 +206,12 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
   auto sender = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("productRegistered(QInAppProduct*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("productRegistered(QInAppProduct*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -256,12 +256,12 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
   auto sender = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("productUnknown(QInAppProduct::ProductType,QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("productUnknown(QInAppProduct::ProductType,QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -308,12 +308,12 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
   auto sender = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("transactionReady(QInAppTransaction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("transactionReady(QInAppTransaction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
