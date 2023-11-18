@@ -709,12 +709,12 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
   auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentFilterChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentFilterChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -759,12 +759,12 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
   auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("setupFinished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("setupFinished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -807,12 +807,12 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
   auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("setupStarted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("setupStarted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -855,12 +855,12 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
   auto sender = qobject_cast<QHelpEngineCore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("warning(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("warning(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

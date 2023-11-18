@@ -343,12 +343,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
   auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("indexingFinished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("indexingFinished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -391,12 +391,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
   auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("indexingStarted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("indexingStarted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -439,12 +439,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
   auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("searchingFinished(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("searchingFinished(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -489,12 +489,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
   auto sender = qobject_cast<QHelpSearchEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("searchingStarted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("searchingStarted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

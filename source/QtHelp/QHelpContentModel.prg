@@ -284,12 +284,12 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
   auto sender = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("contentsCreated()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("contentsCreated()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -332,12 +332,12 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
   auto sender = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("contentsCreationStarted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("contentsCreationStarted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

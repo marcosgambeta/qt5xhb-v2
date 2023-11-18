@@ -135,12 +135,12 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
   auto sender = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("indexCreated()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("indexCreated()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -183,12 +183,12 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
   auto sender = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("indexCreationStarted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("indexCreationStarted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
