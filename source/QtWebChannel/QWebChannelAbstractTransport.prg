@@ -112,12 +112,12 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebChannelAbstractTransport*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
