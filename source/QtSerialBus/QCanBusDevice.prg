@@ -569,12 +569,12 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QCanBusDevice::CanBusError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QCanBusDevice::CanBusError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -623,12 +623,12 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("framesReceived()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("framesReceived()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -675,12 +675,12 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("framesWritten(qint64)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("framesWritten(qint64)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -729,12 +729,12 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCanBusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QCanBusDevice::CanBusDeviceState)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QCanBusDevice::CanBusDeviceState)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

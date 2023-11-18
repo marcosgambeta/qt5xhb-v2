@@ -286,12 +286,12 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -338,12 +338,12 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QModbusDevice::Error)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QModbusDevice::Error)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
