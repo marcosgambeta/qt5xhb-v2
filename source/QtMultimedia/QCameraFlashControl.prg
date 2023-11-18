@@ -179,12 +179,12 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {
   auto sender = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("flashReady(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("flashReady(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
