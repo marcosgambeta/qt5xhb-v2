@@ -417,12 +417,12 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
 {
   auto sender = qobject_cast<QVideoWidgetControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("fullScreenChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("fullScreenChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -467,12 +467,12 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
 {
   auto sender = qobject_cast<QVideoWidgetControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("brightnessChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("brightnessChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -517,12 +517,12 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
 {
   auto sender = qobject_cast<QVideoWidgetControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("contrastChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("contrastChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -567,12 +567,12 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
 {
   auto sender = qobject_cast<QVideoWidgetControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("hueChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("hueChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -617,12 +617,12 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
 {
   auto sender = qobject_cast<QVideoWidgetControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("saturationChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("saturationChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

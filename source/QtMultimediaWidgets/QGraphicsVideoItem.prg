@@ -358,12 +358,12 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 {
   auto sender = qobject_cast<QGraphicsVideoItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("nativeSizeChanged(QSizeF)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("nativeSizeChanged(QSizeF)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
