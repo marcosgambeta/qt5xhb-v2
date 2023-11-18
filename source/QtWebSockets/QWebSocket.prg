@@ -1088,12 +1088,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToClose()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToClose()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1140,12 +1140,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1192,12 +1192,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("disconnected()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("disconnected()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1244,12 +1244,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAbstractSocket::SocketState)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAbstractSocket::SocketState)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1298,12 +1298,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1354,12 +1354,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("readChannelFinished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("readChannelFinished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1406,12 +1406,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textFrameReceived(QString,bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textFrameReceived(QString,bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1462,12 +1462,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("binaryFrameReceived(QByteArray,bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("binaryFrameReceived(QByteArray,bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1518,12 +1518,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textMessageReceived(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textMessageReceived(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1572,12 +1572,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("binaryMessageReceived(QByteArray)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("binaryMessageReceived(QByteArray)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1626,12 +1626,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QAbstractSocket::SocketError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QAbstractSocket::SocketError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1680,12 +1680,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("pong(quint64,QByteArray)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("pong(quint64,QByteArray)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1736,12 +1736,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1790,12 +1790,12 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

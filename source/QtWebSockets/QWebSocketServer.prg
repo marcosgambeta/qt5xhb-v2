@@ -761,12 +761,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("acceptError(QAbstractSocket::SocketError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("acceptError(QAbstractSocket::SocketError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -815,12 +815,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("serverError(QWebSocketProtocol::CloseCode)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("serverError(QWebSocketProtocol::CloseCode)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -869,12 +869,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("originAuthenticationRequired(QWebSocketCorsAuthenticator*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("originAuthenticationRequired(QWebSocketCorsAuthenticator*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -923,12 +923,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -975,12 +975,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("peerVerifyError(QSslError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("peerVerifyError(QSslError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1029,12 +1029,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1104,12 +1104,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QWebSocketServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("closed()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("closed()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
