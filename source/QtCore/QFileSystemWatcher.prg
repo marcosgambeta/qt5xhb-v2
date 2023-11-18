@@ -254,12 +254,12 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
 {
   auto sender = qobject_cast<QFileSystemWatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("directoryChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -304,12 +304,12 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
 {
   auto sender = qobject_cast<QFileSystemWatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("fileChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("fileChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

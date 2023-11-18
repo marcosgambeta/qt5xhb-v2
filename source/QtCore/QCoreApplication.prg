@@ -921,12 +921,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
   auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToQuit()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToQuit()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -969,12 +969,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED )
 {
   auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("applicationNameChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationNameChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1017,12 +1017,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED )
 {
   auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("applicationVersionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationVersionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1065,12 +1065,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED )
 {
   auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("organizationDomainChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("organizationDomainChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1113,12 +1113,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED )
 {
   auto sender = qobject_cast<QCoreApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("organizationNameChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("organizationNameChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

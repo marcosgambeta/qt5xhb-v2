@@ -936,12 +936,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeInserted(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeInserted(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -990,12 +990,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1048,12 +1048,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeRemoved(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeRemoved(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1102,12 +1102,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnsInserted(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsInserted(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1156,12 +1156,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnsMoved(QModelIndex,int,int,QModelIndex,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsMoved(QModelIndex,int,int,QModelIndex,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1214,12 +1214,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnsRemoved(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsRemoved(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1268,12 +1268,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("dataChanged(QModelIndex,QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("dataChanged(QModelIndex,QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1320,12 +1320,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("headerDataChanged(Qt::Orientation,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("headerDataChanged(Qt::Orientation,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1374,12 +1374,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("layoutAboutToBeChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("layoutAboutToBeChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1422,12 +1422,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("layoutChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("layoutChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1470,12 +1470,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("modelAboutToBeReset()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("modelAboutToBeReset()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1518,12 +1518,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("modelReset()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReset()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1566,12 +1566,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeInserted(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeInserted(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1620,12 +1620,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1678,12 +1678,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeRemoved(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeRemoved(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1732,12 +1732,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowsInserted(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsInserted(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1786,12 +1786,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowsMoved(QModelIndex,int,int,QModelIndex,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsMoved(QModelIndex,int,int,QModelIndex,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1844,12 +1844,12 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowsRemoved(QModelIndex,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsRemoved(QModelIndex,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -564,12 +564,12 @@ HB_FUNC_STATIC( QTHREAD_ONFINISHED )
 {
   auto sender = qobject_cast<QThread*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -612,12 +612,12 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
 {
   auto sender = qobject_cast<QThread*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("started()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("started()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

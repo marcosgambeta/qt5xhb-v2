@@ -662,12 +662,12 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged(QItemSelection,QItemSelection)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged(QItemSelection,QItemSelection)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -714,12 +714,12 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
   auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QModelIndex,QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QModelIndex,QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -766,12 +766,12 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
   auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentRowChanged(QModelIndex,QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentRowChanged(QModelIndex,QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -818,12 +818,12 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
   auto sender = qobject_cast<QItemSelectionModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentColumnChanged(QModelIndex,QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentColumnChanged(QModelIndex,QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

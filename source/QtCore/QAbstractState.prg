@@ -132,12 +132,12 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {
   auto sender = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("entered()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("entered()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -180,12 +180,12 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 {
   auto sender = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("exited()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("exited()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

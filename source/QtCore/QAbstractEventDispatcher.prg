@@ -584,12 +584,12 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 {
   auto sender = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToBlock()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToBlock()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -632,12 +632,12 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
 {
   auto sender = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("awake()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("awake()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

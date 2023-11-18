@@ -841,12 +841,12 @@ HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 {
   auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToClose()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToClose()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -889,12 +889,12 @@ HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 {
   auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -939,12 +939,12 @@ HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 {
   auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("readChannelFinished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("readChannelFinished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -987,12 +987,12 @@ HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 {
   auto sender = qobject_cast<QIODevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("readyRead()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("readyRead()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -522,12 +522,12 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
   auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentLoopChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentLoopChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -572,12 +572,12 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
   auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("directionChanged(QAbstractAnimation::Direction)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("directionChanged(QAbstractAnimation::Direction)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -622,12 +622,12 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 {
   auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -670,12 +670,12 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
   auto sender = qobject_cast<QAbstractAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

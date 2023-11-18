@@ -301,12 +301,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 {
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mapped(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -351,12 +351,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 {
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -401,12 +401,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 {
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QWidget*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QWidget*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -451,12 +451,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 {
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QObject*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QObject*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -502,12 +502,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedInt(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedInt(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -556,12 +556,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDOBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedObject(QObject*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedObject(QObject*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -610,12 +610,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedString(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedString(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -664,12 +664,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDWIDGET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QSignalMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedWidget(QWidget*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedWidget(QWidget*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

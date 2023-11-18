@@ -1484,12 +1484,12 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QProcess::ProcessError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QProcess::ProcessError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1534,12 +1534,12 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished(int,QProcess::ExitStatus)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(int,QProcess::ExitStatus)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1586,12 +1586,12 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("readyReadStandardError()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("readyReadStandardError()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1634,12 +1634,12 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("readyReadStandardOutput()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("readyReadStandardOutput()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1682,12 +1682,12 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("started()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("started()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1730,12 +1730,12 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QProcess::ProcessState)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QProcess::ProcessState)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1781,12 +1781,12 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto sender = qobject_cast<QProcess*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QProcess::ProcessError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QProcess::ProcessError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

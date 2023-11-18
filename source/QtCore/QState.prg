@@ -419,12 +419,12 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
 {
   auto sender = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -467,12 +467,12 @@ HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 {
   auto sender = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("propertiesAssigned()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("propertiesAssigned()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -824,12 +824,12 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -872,12 +872,12 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("frameChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("frameChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -922,12 +922,12 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTimeLine::State)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTimeLine::State)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -972,12 +972,12 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(qreal)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(qreal)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
