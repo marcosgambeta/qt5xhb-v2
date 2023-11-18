@@ -431,12 +431,12 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -483,12 +483,12 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("firstBoxSetRowChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("firstBoxSetRowChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -535,12 +535,12 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -587,12 +587,12 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("lastBoxSetRowChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("lastBoxSetRowChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -639,12 +639,12 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -691,12 +691,12 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QHBoxPlotModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

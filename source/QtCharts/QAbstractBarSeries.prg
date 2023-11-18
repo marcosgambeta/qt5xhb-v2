@@ -613,12 +613,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("barsetsAdded(QList<QBarSet*>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("barsetsAdded(QList<QBarSet*>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -688,12 +688,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("barsetsRemoved(QList<QBarSet*>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("barsetsRemoved(QList<QBarSet*>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -763,12 +763,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clicked(int,QBarSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(int,QBarSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -819,12 +819,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -871,12 +871,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(int,QBarSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(int,QBarSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -927,12 +927,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool,int,QBarSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool,int,QBarSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -985,12 +985,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("labelsAngleChanged(qreal)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsAngleChanged(qreal)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1039,12 +1039,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("labelsFormatChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsFormatChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1093,12 +1093,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("labelsPositionChanged(QAbstractBarSeries::LabelsPosition)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsPositionChanged(QAbstractBarSeries::LabelsPosition)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1147,12 +1147,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("labelsVisibleChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsVisibleChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1199,12 +1199,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("pressed(int,QBarSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(int,QBarSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1255,12 +1255,12 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractBarSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("released(int,QBarSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("released(int,QBarSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

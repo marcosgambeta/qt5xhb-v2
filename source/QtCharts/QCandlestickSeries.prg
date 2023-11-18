@@ -975,12 +975,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("bodyOutlineVisibilityChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("bodyOutlineVisibilityChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1027,12 +1027,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("bodyWidthChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("bodyWidthChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1079,12 +1079,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("brushChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("brushChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1131,12 +1131,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("candlestickSetsAdded(QList<QCandlestickSet*>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("candlestickSetsAdded(QList<QCandlestickSet*>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1206,12 +1206,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("candlestickSetsRemoved(QList<QCandlestickSet*>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("candlestickSetsRemoved(QList<QCandlestickSet*>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1281,12 +1281,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("capsVisibilityChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("capsVisibilityChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1333,12 +1333,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("capsWidthChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("capsWidthChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1385,12 +1385,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QCandlestickSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QCandlestickSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1439,12 +1439,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1491,12 +1491,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("decreasingColorChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("decreasingColorChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1543,12 +1543,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QCandlestickSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QCandlestickSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1597,12 +1597,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool,QCandlestickSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool,QCandlestickSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1653,12 +1653,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("increasingColorChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("increasingColorChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1705,12 +1705,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("maximumColumnWidthChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumColumnWidthChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1757,12 +1757,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("minimumColumnWidthChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("minimumColumnWidthChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1809,12 +1809,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("penChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("penChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1861,12 +1861,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QCandlestickSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QCandlestickSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1915,12 +1915,12 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("released(QCandlestickSet*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("released(QCandlestickSet*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

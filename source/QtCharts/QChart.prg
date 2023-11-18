@@ -1849,12 +1849,12 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("plotAreaChanged(QRectF)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("plotAreaChanged(QRectF)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

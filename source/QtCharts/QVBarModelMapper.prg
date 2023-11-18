@@ -429,12 +429,12 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("firstBarSetColumnChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("firstBarSetColumnChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -481,12 +481,12 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("firstRowChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("firstRowChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -533,12 +533,12 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("lastBarSetColumnChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("lastBarSetColumnChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -585,12 +585,12 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -637,12 +637,12 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rowCountChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rowCountChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -689,12 +689,12 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

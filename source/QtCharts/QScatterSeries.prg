@@ -449,12 +449,12 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QScatterSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -503,12 +503,12 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QScatterSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -557,12 +557,12 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QScatterSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("markerShapeChanged(QScatterSeries::MarkerShape)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("markerShapeChanged(QScatterSeries::MarkerShape)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -611,12 +611,12 @@ HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QScatterSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("markerSizeChanged(qreal)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("markerSizeChanged(qreal)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

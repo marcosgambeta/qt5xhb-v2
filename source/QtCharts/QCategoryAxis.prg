@@ -413,12 +413,12 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("categoriesChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("categoriesChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -465,12 +465,12 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
