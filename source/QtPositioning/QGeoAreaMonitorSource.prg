@@ -464,12 +464,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -520,12 +520,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -576,12 +576,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("monitorExpired(QGeoAreaMonitorInfo)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("monitorExpired(QGeoAreaMonitorInfo)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -630,12 +630,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QGeoAreaMonitorSource*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoAreaMonitorSource::Error)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoAreaMonitorSource::Error)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
