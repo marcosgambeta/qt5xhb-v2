@@ -495,12 +495,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clientIdentifierChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clientIdentifierChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -549,12 +549,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("tokenChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("tokenChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -603,12 +603,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QAbstractOAuth::Status)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QAbstractOAuth::Status)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -657,12 +657,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("authorizationUrlChanged(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("authorizationUrlChanged(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -711,12 +711,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("contentTypeChanged(QAbstractOAuth::ContentType)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("contentTypeChanged(QAbstractOAuth::ContentType)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -765,12 +765,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("requestFailed(QAbstractOAuth::Error)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("requestFailed(QAbstractOAuth::Error)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -819,12 +819,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("authorizeWithBrowser(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("authorizeWithBrowser(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -873,12 +873,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("granted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("granted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -925,12 +925,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished(QNetworkReply*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QNetworkReply*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -979,12 +979,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("replyDataReceived(QByteArray)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("replyDataReceived(QByteArray)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -426,12 +426,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clientIdentifierSharedKeyChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clientIdentifierSharedKeyChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -480,12 +480,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QString,QString,QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QString,QString,QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -538,12 +538,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("expirationAtChanged(QDateTime)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("expirationAtChanged(QDateTime)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -592,12 +592,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("responseTypeChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("responseTypeChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -646,12 +646,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("scopeChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("scopeChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -700,12 +700,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -754,12 +754,12 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("userAgentChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("userAgentChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

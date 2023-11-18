@@ -499,12 +499,12 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clientSharedSecretChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clientSharedSecretChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -553,12 +553,12 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("signatureMethodChanged(QOAuth1::SignatureMethod)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("signatureMethodChanged(QOAuth1::SignatureMethod)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -607,12 +607,12 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("temporaryCredentialsUrlChanged(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("temporaryCredentialsUrlChanged(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -661,12 +661,12 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("tokenCredentialsUrlChanged(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("tokenCredentialsUrlChanged(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -715,12 +715,12 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("tokenSecretChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("tokenSecretChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
