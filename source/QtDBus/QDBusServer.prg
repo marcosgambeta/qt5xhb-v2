@@ -180,12 +180,12 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 {
   auto sender = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("newConnection(QDBusConnection)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection(QDBusConnection)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
