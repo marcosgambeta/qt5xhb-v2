@@ -363,12 +363,12 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 {
   auto sender = qobject_cast<QScriptEngineDebugger*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("evaluationResumed()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("evaluationResumed()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -411,12 +411,12 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 {
   auto sender = qobject_cast<QScriptEngineDebugger*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("evaluationSuspended()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("evaluationSuspended()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
