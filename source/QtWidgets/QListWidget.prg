@@ -850,12 +850,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -902,12 +902,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentRowChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentRowChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -952,12 +952,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1002,12 +1002,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1052,12 +1052,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1102,12 +1102,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1152,12 +1152,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1202,12 +1202,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1252,12 +1252,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QListWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QListWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1302,12 +1302,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QListWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -973,12 +973,12 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
   auto sender = qobject_cast<QAbstractSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

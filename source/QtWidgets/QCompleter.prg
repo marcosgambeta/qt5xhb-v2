@@ -985,12 +985,12 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1035,12 +1035,12 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1085,12 +1085,12 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1135,12 +1135,12 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

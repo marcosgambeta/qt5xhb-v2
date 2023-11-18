@@ -518,12 +518,12 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
   auto sender = qobject_cast<QMdiSubWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToActivate()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToActivate()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -566,12 +566,12 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
   auto sender = qobject_cast<QMdiSubWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

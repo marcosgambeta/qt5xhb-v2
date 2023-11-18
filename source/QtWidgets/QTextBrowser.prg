@@ -620,12 +620,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("anchorClicked(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorClicked(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -670,12 +670,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("backwardAvailable(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("backwardAvailable(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -720,12 +720,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("forwardAvailable(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("forwardAvailable(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -770,12 +770,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -820,12 +820,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -870,12 +870,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("historyChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("historyChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -918,12 +918,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sourceChanged(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceChanged(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

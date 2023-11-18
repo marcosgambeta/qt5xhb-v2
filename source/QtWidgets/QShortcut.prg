@@ -416,12 +416,12 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
   auto sender = qobject_cast<QShortcut*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -464,12 +464,12 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
   auto sender = qobject_cast<QShortcut*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activatedAmbiguously()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activatedAmbiguously()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -481,12 +481,12 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 {
   auto sender = qobject_cast<QColorDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("colorSelected(QColor)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("colorSelected(QColor)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -531,12 +531,12 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 {
   auto sender = qobject_cast<QColorDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentColorChanged(QColor)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentColorChanged(QColor)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

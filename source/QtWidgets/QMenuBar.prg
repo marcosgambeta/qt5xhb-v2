@@ -805,12 +805,12 @@ HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 {
   auto sender = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QAction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QAction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -855,12 +855,12 @@ HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 {
   auto sender = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

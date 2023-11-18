@@ -1177,12 +1177,12 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
 {
   auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToHide()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToHide()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1225,12 +1225,12 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
 {
   auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToShow()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToShow()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1273,12 +1273,12 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
 {
   auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QAction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QAction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1323,12 +1323,12 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 {
   auto sender = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

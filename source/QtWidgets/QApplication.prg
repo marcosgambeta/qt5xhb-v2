@@ -1639,12 +1639,12 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 {
   auto sender = qobject_cast<QApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("focusChanged(QWidget*,QWidget*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("focusChanged(QWidget*,QWidget*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

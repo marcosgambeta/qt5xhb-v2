@@ -616,12 +616,12 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
   auto sender = qobject_cast<QDoubleSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(double)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(double)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -666,12 +666,12 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
   auto sender = qobject_cast<QDoubleSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

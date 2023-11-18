@@ -1330,12 +1330,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
 {
   auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueChanged(double)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueChanged(double)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1380,12 +1380,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
 {
   auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueSelected(double)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueSelected(double)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1430,12 +1430,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
 {
   auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("intValueChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("intValueChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1480,12 +1480,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
 {
   auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("intValueSelected(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("intValueSelected(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1530,12 +1530,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
 {
   auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textValueChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textValueChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1580,12 +1580,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 {
   auto sender = qobject_cast<QInputDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textValueSelected(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textValueSelected(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

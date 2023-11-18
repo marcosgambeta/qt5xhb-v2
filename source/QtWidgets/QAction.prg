@@ -1676,12 +1676,12 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
 {
   auto sender = qobject_cast<QAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("changed()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("changed()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1724,12 +1724,12 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
 {
   auto sender = qobject_cast<QAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("hovered()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1772,12 +1772,12 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
 {
   auto sender = qobject_cast<QAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("toggled(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("toggled(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1822,12 +1822,12 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 {
   auto sender = qobject_cast<QAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("triggered(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -400,12 +400,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(QAbstractButton*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(QAbstractButton*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -450,12 +450,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -500,12 +500,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonPressed(QAbstractButton*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonPressed(QAbstractButton*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -550,12 +550,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonPressed(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonPressed(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -600,12 +600,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonReleased(QAbstractButton*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonReleased(QAbstractButton*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -650,12 +650,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonReleased(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonReleased(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -701,12 +701,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(QAbstractButton*,bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(QAbstractButton*,bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -757,12 +757,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(int,bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(int,bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -813,12 +813,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("idClicked(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("idClicked(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -867,12 +867,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("idPressed(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("idPressed(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -921,12 +921,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("idReleased(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("idReleased(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -975,12 +975,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("idToggled(int,bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("idToggled(int,bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

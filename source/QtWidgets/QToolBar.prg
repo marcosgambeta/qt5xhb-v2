@@ -777,12 +777,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("actionTriggered(QAction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("actionTriggered(QAction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -827,12 +827,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::ToolBarAreas)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::ToolBarAreas)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -877,12 +877,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("iconSizeChanged(QSize)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("iconSizeChanged(QSize)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -927,12 +927,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("movableChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("movableChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -977,12 +977,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("orientationChanged(Qt::Orientation)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("orientationChanged(Qt::Orientation)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1027,12 +1027,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("toolButtonStyleChanged(Qt::ToolButtonStyle)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("toolButtonStyleChanged(Qt::ToolButtonStyle)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1077,12 +1077,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1127,12 +1127,12 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

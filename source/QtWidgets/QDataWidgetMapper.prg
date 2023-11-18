@@ -771,12 +771,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 {
   auto sender = qobject_cast<QDataWidgetMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

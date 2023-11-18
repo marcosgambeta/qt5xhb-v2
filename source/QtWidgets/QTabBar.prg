@@ -1459,12 +1459,12 @@ HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 {
   auto sender = qobject_cast<QTabBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1509,12 +1509,12 @@ HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
 {
   auto sender = qobject_cast<QTabBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("tabCloseRequested(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("tabCloseRequested(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1559,12 +1559,12 @@ HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
 {
   auto sender = qobject_cast<QTabBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("tabMoved(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("tabMoved(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

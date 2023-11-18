@@ -368,12 +368,12 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
   auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -420,12 +420,12 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
   auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("commitData(QWidget*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("commitData(QWidget*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -470,12 +470,12 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
   auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sizeHintChanged(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sizeHintChanged(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

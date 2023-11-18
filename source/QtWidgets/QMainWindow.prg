@@ -1298,12 +1298,12 @@ HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
   auto sender = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("iconSizeChanged(QSize)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("iconSizeChanged(QSize)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1348,12 +1348,12 @@ HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
   auto sender = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("toolButtonStyleChanged(Qt::ToolButtonStyle)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("toolButtonStyleChanged(Qt::ToolButtonStyle)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -1393,12 +1393,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
   auto sender = qobject_cast<QDateTimeEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("dateChanged(QDate)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("dateChanged(QDate)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1443,12 +1443,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
   auto sender = qobject_cast<QDateTimeEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("dateTimeChanged(QDateTime)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("dateTimeChanged(QDateTime)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1493,12 +1493,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
   auto sender = qobject_cast<QDateTimeEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("timeChanged(QTime)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("timeChanged(QTime)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

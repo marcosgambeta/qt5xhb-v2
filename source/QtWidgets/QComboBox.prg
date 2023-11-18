@@ -1722,12 +1722,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1772,12 +1772,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("editTextChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("editTextChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1823,12 +1823,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTACTIVATED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textActivated(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textActivated(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1877,12 +1877,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTHIGHLIGHTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textHighlighted(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textHighlighted(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1930,12 +1930,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1980,12 +1980,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2030,12 +2030,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2080,12 +2080,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2130,12 +2130,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2180,12 +2180,12 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
   auto sender = qobject_cast<QComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -1795,12 +1795,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1845,12 +1845,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("directoryEntered(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryEntered(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1895,12 +1895,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("fileSelected(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("fileSelected(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1945,12 +1945,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("filesSelected(QStringList)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("filesSelected(QStringList)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2001,12 +2001,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("filterSelected(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("filterSelected(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2051,12 +2051,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("urlSelected(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("urlSelected(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2101,12 +2101,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("urlsSelected(QList<QUrl>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("urlsSelected(QList<QUrl>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2172,12 +2172,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentUrlChanged(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentUrlChanged(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2222,12 +2222,12 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
   auto sender = qobject_cast<QFileDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("directoryUrlEntered(QUrl)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryUrlEntered(QUrl)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

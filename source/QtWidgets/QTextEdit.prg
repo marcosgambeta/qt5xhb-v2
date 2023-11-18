@@ -2270,12 +2270,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("copyAvailable(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("copyAvailable(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2320,12 +2320,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentCharFormatChanged(QTextCharFormat)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentCharFormatChanged(QTextCharFormat)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2370,12 +2370,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2418,12 +2418,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2468,12 +2468,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2516,12 +2516,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("textChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("textChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2564,12 +2564,12 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
   auto sender = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

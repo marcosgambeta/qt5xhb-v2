@@ -1067,12 +1067,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1119,12 +1119,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QTreeWidgetItem*,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QTreeWidgetItem*,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1171,12 +1171,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QTreeWidgetItem*,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QTreeWidgetItem*,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1223,12 +1223,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QTreeWidgetItem*,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QTreeWidgetItem*,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1275,12 +1275,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemCollapsed(QTreeWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemCollapsed(QTreeWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1325,12 +1325,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTreeWidgetItem*,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTreeWidgetItem*,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1377,12 +1377,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QTreeWidgetItem*,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QTreeWidgetItem*,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1429,12 +1429,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemExpanded(QTreeWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemExpanded(QTreeWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1479,12 +1479,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QTreeWidgetItem*,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QTreeWidgetItem*,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1531,12 +1531,12 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QTreeWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

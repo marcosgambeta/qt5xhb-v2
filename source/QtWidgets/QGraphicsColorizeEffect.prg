@@ -198,12 +198,12 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
   auto sender = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -248,12 +248,12 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
   auto sender = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("strengthChanged(qreal)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("strengthChanged(qreal)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

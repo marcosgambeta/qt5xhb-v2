@@ -989,12 +989,12 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 {
   auto sender = qobject_cast<QListView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("indexesMoved(QModelIndexList)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("indexesMoved(QModelIndexList)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

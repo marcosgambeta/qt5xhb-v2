@@ -223,12 +223,12 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
   auto sender = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -273,12 +273,12 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
   auto sender = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("blurRadiusChanged(qreal)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("blurRadiusChanged(qreal)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

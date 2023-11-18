@@ -422,12 +422,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::DockWidgetAreas)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::DockWidgetAreas)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -472,12 +472,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("dockLocationChanged(Qt::DockWidgetArea)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("dockLocationChanged(Qt::DockWidgetArea)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -522,12 +522,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("featuresChanged(QDockWidget::DockWidgetFeatures)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("featuresChanged(QDockWidget::DockWidgetFeatures)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -572,12 +572,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -622,12 +622,12 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

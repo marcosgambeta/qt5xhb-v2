@@ -570,12 +570,12 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
   auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("accepted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("accepted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -618,12 +618,12 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
   auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -668,12 +668,12 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
   auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rejected()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rejected()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

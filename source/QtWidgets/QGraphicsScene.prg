@@ -1769,12 +1769,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 {
   auto sender = qobject_cast<QGraphicsScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("changed(QList<QRectF>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("changed(QList<QRectF>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1840,12 +1840,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
   auto sender = qobject_cast<QGraphicsScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sceneRectChanged(QRectF)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sceneRectChanged(QRectF)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1890,12 +1890,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QGraphicsScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -1151,12 +1151,12 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
   auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(QDate)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QDate)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1201,12 +1201,12 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
   auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QDate)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QDate)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1251,12 +1251,12 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
   auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentPageChanged(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentPageChanged(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1303,12 +1303,12 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QCalendarWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

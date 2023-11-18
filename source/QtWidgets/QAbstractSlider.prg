@@ -764,12 +764,12 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
   auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("actionTriggered(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("actionTriggered(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -814,12 +814,12 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
   auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rangeChanged(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rangeChanged(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -866,12 +866,12 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
   auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sliderMoved(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sliderMoved(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -916,12 +916,12 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
   auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sliderPressed()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sliderPressed()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -964,12 +964,12 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
   auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sliderReleased()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sliderReleased()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1012,12 +1012,12 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
   auto sender = qobject_cast<QAbstractSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

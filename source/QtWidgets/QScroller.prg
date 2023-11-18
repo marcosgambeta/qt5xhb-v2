@@ -645,12 +645,12 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
   auto sender = qobject_cast<QScroller*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("scrollerPropertiesChanged(QScrollerProperties)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("scrollerPropertiesChanged(QScrollerProperties)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -695,12 +695,12 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 {
   auto sender = qobject_cast<QScroller*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QScroller::State)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QScroller::State)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

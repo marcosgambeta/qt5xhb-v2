@@ -373,12 +373,12 @@ HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
 {
   auto sender = qobject_cast<QFontDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentFontChanged(QFont)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentFontChanged(QFont)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -423,12 +423,12 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
 {
   auto sender = qobject_cast<QFontDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("fontSelected(QFont)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("fontSelected(QFont)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

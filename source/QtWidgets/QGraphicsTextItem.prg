@@ -843,12 +843,12 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 {
   auto sender = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("linkActivated(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("linkActivated(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -893,12 +893,12 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 {
   auto sender = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("linkHovered(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("linkHovered(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -454,12 +454,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
   auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("accepted()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("accepted()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -502,12 +502,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
   auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QAbstractButton*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QAbstractButton*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -552,12 +552,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
   auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("helpRequested()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("helpRequested()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -600,12 +600,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
   auto sender = qobject_cast<QDialogButtonBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rejected()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rejected()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

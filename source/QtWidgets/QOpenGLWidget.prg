@@ -351,12 +351,12 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToCompose()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToCompose()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -403,12 +403,12 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("frameSwapped()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("frameSwapped()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -455,12 +455,12 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("aboutToResize()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToResize()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -507,12 +507,12 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QOpenGLWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("resized()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("resized()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

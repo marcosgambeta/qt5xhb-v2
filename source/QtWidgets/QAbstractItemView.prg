@@ -1969,12 +1969,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2019,12 +2019,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2069,12 +2069,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2119,12 +2119,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("entered(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("entered(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2169,12 +2169,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QModelIndex)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QModelIndex)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2219,12 +2219,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
   auto sender = qobject_cast<QAbstractItemView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("viewportEntered()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("viewportEntered()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

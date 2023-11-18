@@ -202,12 +202,12 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -254,12 +254,12 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("keySequenceChanged(QKeySequence)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("keySequenceChanged(QKeySequence)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

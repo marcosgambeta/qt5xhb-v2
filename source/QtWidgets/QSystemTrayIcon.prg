@@ -464,12 +464,12 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
   auto sender = qobject_cast<QSystemTrayIcon*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activated(QSystemTrayIcon::ActivationReason)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QSystemTrayIcon::ActivationReason)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -514,12 +514,12 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
   auto sender = qobject_cast<QSystemTrayIcon*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("messageClicked()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("messageClicked()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -1251,12 +1251,12 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
   auto sender = qobject_cast<QFileSystemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("directoryLoaded(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryLoaded(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1301,12 +1301,12 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
   auto sender = qobject_cast<QFileSystemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("fileRenamed(QString,QString,QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("fileRenamed(QString,QString,QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1355,12 +1355,12 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
   auto sender = qobject_cast<QFileSystemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("rootPathChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("rootPathChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

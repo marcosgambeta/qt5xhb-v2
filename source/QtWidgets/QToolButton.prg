@@ -520,12 +520,12 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
   auto sender = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

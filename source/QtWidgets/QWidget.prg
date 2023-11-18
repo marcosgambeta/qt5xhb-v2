@@ -6739,12 +6739,12 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("windowTitleChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("windowTitleChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -6793,12 +6793,12 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("windowIconChanged(QIcon)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("windowIconChanged(QIcon)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -6846,12 +6846,12 @@ HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
   auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("windowIconTextChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("windowIconTextChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -6896,12 +6896,12 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
   auto sender = qobject_cast<QWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("customContextMenuRequested(QPoint)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("customContextMenuRequested(QPoint)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

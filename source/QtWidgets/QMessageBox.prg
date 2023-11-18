@@ -1274,12 +1274,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
   auto sender = qobject_cast<QMessageBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(QAbstractButton*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(QAbstractButton*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

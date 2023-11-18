@@ -1785,12 +1785,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("geometriesChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("geometriesChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1833,12 +1833,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionClicked(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionClicked(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1883,12 +1883,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionCountChanged(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionCountChanged(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1935,12 +1935,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionDoubleClicked(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionDoubleClicked(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1985,12 +1985,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionEntered(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionEntered(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2035,12 +2035,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionHandleDoubleClicked(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionHandleDoubleClicked(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2085,12 +2085,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionMoved(int,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionMoved(int,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2139,12 +2139,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionPressed(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionPressed(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2189,12 +2189,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sectionResized(int,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionResized(int,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -2243,12 +2243,12 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sortIndicatorChanged(int,Qt::SortOrder)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sortIndicatorChanged(int,Qt::SortOrder)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

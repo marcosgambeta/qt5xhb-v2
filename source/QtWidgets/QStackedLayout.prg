@@ -345,12 +345,12 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
 {
   auto sender = qobject_cast<QStackedLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -395,12 +395,12 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
 {
   auto sender = qobject_cast<QStackedLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("widgetRemoved(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("widgetRemoved(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

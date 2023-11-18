@@ -206,12 +206,12 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {
   auto sender = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("enabledChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("enabledChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

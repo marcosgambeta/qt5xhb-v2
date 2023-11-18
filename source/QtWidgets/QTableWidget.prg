@@ -1261,12 +1261,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cellActivated(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cellActivated(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1313,12 +1313,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cellChanged(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cellChanged(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1365,12 +1365,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cellClicked(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cellClicked(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1417,12 +1417,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cellDoubleClicked(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cellDoubleClicked(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1469,12 +1469,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cellEntered(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cellEntered(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1521,12 +1521,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cellPressed(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cellPressed(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1573,12 +1573,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentCellChanged(int,int,int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentCellChanged(int,int,int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1629,12 +1629,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1681,12 +1681,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1731,12 +1731,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1781,12 +1781,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1831,12 +1831,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1881,12 +1881,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1931,12 +1931,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QTableWidgetItem*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QTableWidgetItem*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1981,12 +1981,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
   auto sender = qobject_cast<QTableWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

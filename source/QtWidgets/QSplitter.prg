@@ -709,12 +709,12 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
   auto sender = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("splitterMoved(int,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("splitterMoved(int,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
