@@ -398,12 +398,12 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 {
   auto sender = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("sceneResized(QSize)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("sceneResized(QSize)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -448,12 +448,12 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 {
   auto sender = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QDeclarativeView::Status)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QDeclarativeView::Status)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

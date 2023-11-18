@@ -713,12 +713,12 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
   auto sender = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("quit()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("quit()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -761,12 +761,12 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
   auto sender = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("warnings(QList<QDeclarativeError>)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("warnings(QList<QDeclarativeError>)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
