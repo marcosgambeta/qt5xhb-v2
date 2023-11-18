@@ -358,12 +358,12 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 {
   auto sender = qobject_cast<QOffscreenSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("screenChanged(QScreen*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("screenChanged(QScreen*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

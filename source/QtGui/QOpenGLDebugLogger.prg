@@ -326,12 +326,12 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
 {
   auto sender = qobject_cast<QOpenGLDebugLogger*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("messageLogged(QOpenGLDebugMessage)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("messageLogged(QOpenGLDebugMessage)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

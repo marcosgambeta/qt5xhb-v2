@@ -344,12 +344,12 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 {
   auto sender = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("changed()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("changed()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
