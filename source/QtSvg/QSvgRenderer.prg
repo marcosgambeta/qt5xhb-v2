@@ -521,12 +521,12 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
 {
   auto sender = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("repaintNeeded()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("repaintNeeded()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
