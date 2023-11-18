@@ -1086,12 +1086,12 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
 {
   auto sender = qobject_cast<QScriptEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("signalHandlerException(QScriptValue)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("signalHandlerException(QScriptValue)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
