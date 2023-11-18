@@ -694,12 +694,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("preeditTextChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("preeditTextChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -742,12 +742,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodHintsChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodHintsChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -790,12 +790,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("surroundingTextChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("surroundingTextChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -838,12 +838,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectedTextChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedTextChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -886,12 +886,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("anchorPositionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorPositionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -934,12 +934,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -982,12 +982,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("anchorRectangleChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorRectangleChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1030,12 +1030,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectangleChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectangleChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1078,12 +1078,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("shiftActiveChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("shiftActiveChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1126,12 +1126,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("capsLockActiveChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("capsLockActiveChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1174,12 +1174,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("uppercaseChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("uppercaseChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1222,12 +1222,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("animatingChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("animatingChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1270,12 +1270,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1318,12 +1318,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionControlVisibleChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionControlVisibleChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1366,12 +1366,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANG
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("anchorRectIntersectsClipRectChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorRectIntersectsClipRectChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1414,12 +1414,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANG
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectIntersectsClipRectChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectIntersectsClipRectChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

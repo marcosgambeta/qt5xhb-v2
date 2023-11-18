@@ -539,12 +539,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("traceIdChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("traceIdChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -589,12 +589,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("channelsChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("channelsChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -637,12 +637,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("lengthChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("lengthChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -687,12 +687,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finalChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finalChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -737,12 +737,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("canceledChanged(bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("canceledChanged(bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -787,12 +787,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged(qreal)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged(qreal)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

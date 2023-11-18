@@ -530,12 +530,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -586,12 +586,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activeKeyChanged(Qt::Key)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activeKeyChanged(Qt::Key)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -636,12 +636,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("previousKeyChanged(Qt::Key)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("previousKeyChanged(Qt::Key)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -686,12 +686,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -734,12 +734,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodReset()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodReset()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -782,12 +782,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodUpdate()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("inputMethodUpdate()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -830,12 +830,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("inputModesChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("inputModesChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -878,12 +878,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("inputModeChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("inputModeChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -926,12 +926,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("patternRecognitionModesChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("patternRecognitionModesChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -974,12 +974,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("wordCandidateListModelChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("wordCandidateListModelChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1022,12 +1022,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGE
 {
   auto sender = qobject_cast<QVirtualKeyboardInputEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("wordCandidateListVisibleHintChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("wordCandidateListVisibleHintChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -270,12 +270,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -318,12 +318,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("activeItemChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("activeItemChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -368,12 +368,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
 {
   auto sender = qobject_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("itemSelected(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSelected(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

@@ -517,12 +517,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardAbstractInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -567,12 +567,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
 {
   auto sender = qobject_cast<QVirtualKeyboardAbstractInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -619,12 +619,12 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 {
   auto sender = qobject_cast<QVirtualKeyboardAbstractInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("selectionListsChanged()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionListsChanged()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
