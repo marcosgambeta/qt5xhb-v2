@@ -719,12 +719,12 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 {
   auto sender = qobject_cast<QSqlDriver*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("notification(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("notification(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -769,12 +769,12 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 {
   auto sender = qobject_cast<QSqlDriver*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("notification(QString,QSqlDriver::NotificationSource,QVariant)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("notification(QString,QSqlDriver::NotificationSource,QVariant)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

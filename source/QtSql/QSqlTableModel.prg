@@ -919,12 +919,12 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
   auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeDelete(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeDelete(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -969,12 +969,12 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
   auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeInsert(QSqlRecord)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeInsert(QSqlRecord)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1019,12 +1019,12 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
   auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("beforeUpdate(int,QSqlRecord)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeUpdate(int,QSqlRecord)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -1071,12 +1071,12 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
   auto sender = qobject_cast<QSqlTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("primeInsert(int,QSqlRecord)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("primeInsert(int,QSqlRecord)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
