@@ -340,12 +340,12 @@ HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
   auto sender = qobject_cast<QPrintDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("accepted(QPrinter*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("accepted(QPrinter*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

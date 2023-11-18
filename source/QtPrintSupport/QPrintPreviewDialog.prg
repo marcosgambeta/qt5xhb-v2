@@ -211,12 +211,12 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
   auto sender = qobject_cast<QPrintPreviewDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("paintRequested(QPrinter*)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("paintRequested(QPrinter*)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
