@@ -566,12 +566,12 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 {
   auto sender = qobject_cast<QTcpServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("acceptError(QAbstractSocket::SocketError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("acceptError(QAbstractSocket::SocketError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -616,12 +616,12 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 {
   auto sender = qobject_cast<QTcpServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

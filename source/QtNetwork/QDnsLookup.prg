@@ -773,12 +773,12 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -821,12 +821,12 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -871,12 +871,12 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("nameserverChanged(QHostAddress)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("nameserverChanged(QHostAddress)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -921,12 +921,12 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("typeChanged(QDnsLookup::Type)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("typeChanged(QDnsLookup::Type)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

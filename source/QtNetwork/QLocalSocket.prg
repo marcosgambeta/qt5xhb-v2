@@ -721,12 +721,12 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 {
   auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -769,12 +769,12 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 {
   auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("disconnected()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("disconnected()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -817,12 +817,12 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 {
   auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QLocalSocket::LocalSocketError)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QLocalSocket::LocalSocketError)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -867,12 +867,12 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 {
   auto sender = qobject_cast<QLocalSocket*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QLocalSocket::LocalSocketState)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QLocalSocket::LocalSocketState)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
