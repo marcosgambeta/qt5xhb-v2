@@ -263,12 +263,12 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
   auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("entered()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("entered()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -311,12 +311,12 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
   auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(int,QString,int,QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(int,QString,int,QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -367,12 +367,12 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
   auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -415,12 +415,12 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
   auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished(QVariant)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QVariant)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -465,12 +465,12 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
   auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("finished(int,QString,QString,QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(int,QString,QString,QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
@@ -521,12 +521,12 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
   auto sender = qobject_cast<QAxScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(int)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(int)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {

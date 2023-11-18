@@ -327,12 +327,12 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
 {
   auto sender = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  bool result = false;
+  auto result = false;
 
   if( sender != nullptr )
   {
-    int indexOfSignal = sender->metaObject()->indexOfSignal("error(QAxScript*,int,QString,int,QString)");
-    int indexOfCodeBlock = -1;
+    auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QAxScript*,int,QString,int,QString)");
+    auto indexOfCodeBlock = -1;
 
     if( hb_pcount() == 1 )
     {
