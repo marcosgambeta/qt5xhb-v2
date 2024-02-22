@@ -19,16 +19,16 @@ class HHeaderView : public QHeaderView
 {
   Q_OBJECT
 public:
-  HHeaderView( Qt::Orientation orientation, QWidget *parent = nullptr );
+  HHeaderView(Qt::Orientation orientation, QWidget *parent = nullptr);
   ~HHeaderView();
 
-  void paintSection( QPainter *painter, const QRect &rect, int logicalIndex ) const;
+  void paintSection(QPainter *painter, const QRect &rect, int logicalIndex) const;
 
 private:
   PHB_ITEM m_paintSectionBlock;
 
 public:
-  void setPaintSectionCB( PHB_ITEM block );
+  void setPaintSectionCB(PHB_ITEM block);
 };
 
 #endif /* HHEADERVIEW_H */

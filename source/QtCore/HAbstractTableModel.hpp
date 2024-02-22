@@ -27,7 +27,7 @@ class HAbstractTableModel : public QAbstractTableModel
   Q_OBJECT
 
 public:
-  HAbstractTableModel( QObject * parent = nullptr );
+  HAbstractTableModel(QObject *parent = nullptr);
   virtual ~HAbstractTableModel();
 
 private:
@@ -71,56 +71,56 @@ private:
   PHB_ITEM m_setDataCB;
 
 public:
-  void setRowCountCB( PHB_ITEM block );
-  void setColumnCountCB( PHB_ITEM block );
+  void setRowCountCB(PHB_ITEM block);
+  void setColumnCountCB(PHB_ITEM block);
 
-  void setCB( int role, PHB_ITEM block );
-  void setDisplayRoleCB( PHB_ITEM block );
-  void setDecorationRoleCB( PHB_ITEM block );
-  void setEditRoleCB( PHB_ITEM block );
-  void setToolTipRoleCB( PHB_ITEM block );
-  void setStatusTipRoleCB( PHB_ITEM block );
-  void setWhatsThisRoleCB( PHB_ITEM block );
-  void setSizeHintRoleCB( PHB_ITEM block );
-  void setFontRoleCB( PHB_ITEM block );
-  void setTextAlignmentRoleCB( PHB_ITEM block );
-  void setBackgroundRoleCB( PHB_ITEM block );
-  void setForegroundRoleCB( PHB_ITEM block );
-  void setCheckStateRoleCB( PHB_ITEM block );
-  void setAccessibleTextRoleCB( PHB_ITEM block );
-  void setAccessibleDescriptionRoleCB( PHB_ITEM block );
+  void setCB(int role, PHB_ITEM block);
+  void setDisplayRoleCB(PHB_ITEM block);
+  void setDecorationRoleCB(PHB_ITEM block);
+  void setEditRoleCB(PHB_ITEM block);
+  void setToolTipRoleCB(PHB_ITEM block);
+  void setStatusTipRoleCB(PHB_ITEM block);
+  void setWhatsThisRoleCB(PHB_ITEM block);
+  void setSizeHintRoleCB(PHB_ITEM block);
+  void setFontRoleCB(PHB_ITEM block);
+  void setTextAlignmentRoleCB(PHB_ITEM block);
+  void setBackgroundRoleCB(PHB_ITEM block);
+  void setForegroundRoleCB(PHB_ITEM block);
+  void setCheckStateRoleCB(PHB_ITEM block);
+  void setAccessibleTextRoleCB(PHB_ITEM block);
+  void setAccessibleDescriptionRoleCB(PHB_ITEM block);
 
-  void setHorizontalHeaderCB( int role, PHB_ITEM block );
-  void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderSizeHintRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderFontRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block );
-  void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block );
+  void setHorizontalHeaderCB(int role, PHB_ITEM block);
+  void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderToolTipRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderSizeHintRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderFontRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block);
+  void setHorizontalHeaderForegroundRoleCB(PHB_ITEM block);
 
-  void setVerticalHeaderCB( int role, PHB_ITEM block );
-  void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );
-  void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );
-  void setVerticalHeaderToolTipRoleCB( PHB_ITEM block );
-  void setVerticalHeaderSizeHintRoleCB( PHB_ITEM block );
-  void setVerticalHeaderFontRoleCB( PHB_ITEM block );
-  void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block );
-  void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block );
-  void setVerticalHeaderForegroundRoleCB( PHB_ITEM block );
+  void setVerticalHeaderCB(int role, PHB_ITEM block);
+  void setVerticalHeaderDisplayRoleCB(PHB_ITEM block);
+  void setVerticalHeaderDecorationRoleCB(PHB_ITEM block);
+  void setVerticalHeaderToolTipRoleCB(PHB_ITEM block);
+  void setVerticalHeaderSizeHintRoleCB(PHB_ITEM block);
+  void setVerticalHeaderFontRoleCB(PHB_ITEM block);
+  void setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block);
+  void setVerticalHeaderBackgroundRoleCB(PHB_ITEM block);
+  void setVerticalHeaderForegroundRoleCB(PHB_ITEM block);
 
-  void setFlagsCB( PHB_ITEM block );
-  void setSetDataCB( PHB_ITEM block );
+  void setFlagsCB(PHB_ITEM block);
+  void setSetDataCB(PHB_ITEM block);
 
-  QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const;
-  QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const;
-  int rowCount( const QModelIndex & parent = QModelIndex() ) const;
-  int columnCount( const QModelIndex & parent = QModelIndex() ) const;
+  QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+  QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+  int rowCount(const QModelIndex &parent = QModelIndex()) const;
+  int columnCount(const QModelIndex &parent = QModelIndex()) const;
   void reloadData();
-  //QModelIndex createIndex ( int row, int column );
-  Qt::ItemFlags flags( const QModelIndex &index ) const;
-  bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole );
+  // QModelIndex createIndex ( int row, int column );
+  Qt::ItemFlags flags(const QModelIndex &index) const;
+  bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
 #endif /* HABSTRACTTABLEMODEL_H */
