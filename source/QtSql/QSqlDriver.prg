@@ -730,10 +730,10 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &>::of(&QSqlDriver::notification),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &>::of(&QSqlDriver::notification),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -780,10 +780,10 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &,QSqlDriver::NotificationSource,const QVariant &>::of(&QSqlDriver::notification),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, QSqlDriver::NotificationSource arg2, const QVariant & arg3) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &,QSqlDriver::NotificationSource,const QVariant &>::of(&QSqlDriver::notification),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, QSqlDriver::NotificationSource arg2, const QVariant & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
