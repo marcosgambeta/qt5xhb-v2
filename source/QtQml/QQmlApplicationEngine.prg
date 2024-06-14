@@ -257,10 +257,10 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QQmlApplicationEngine::objectCreated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QObject * arg1, const QUrl & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QQmlApplicationEngine::objectCreated,
+                                           [sender, indexOfCodeBlock]
+                                           (QObject * arg1, const QUrl & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

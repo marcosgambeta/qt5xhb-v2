@@ -308,10 +308,10 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QQmlPropertyMap::valueChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QVariant & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QQmlPropertyMap::valueChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QVariant & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
