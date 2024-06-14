@@ -1210,10 +1210,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::baudRateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qint32 arg1, QSerialPort::Directions arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::baudRateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qint32 arg1, QSerialPort::Directions arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1266,10 +1266,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::dataBitsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSerialPort::DataBits arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::dataBitsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSerialPort::DataBits arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1320,10 +1320,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::parityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSerialPort::Parity arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::parityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSerialPort::Parity arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1374,10 +1374,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::stopBitsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSerialPort::StopBits arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::stopBitsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSerialPort::StopBits arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1428,10 +1428,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::flowControlChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSerialPort::FlowControl arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::flowControlChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSerialPort::FlowControl arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1482,10 +1482,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::dataErrorPolicyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSerialPort::DataErrorPolicy arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::dataErrorPolicyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSerialPort::DataErrorPolicy arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1536,10 +1536,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::dataTerminalReadyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::dataTerminalReadyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1590,10 +1590,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::requestToSendChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::requestToSendChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1644,10 +1644,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSerialPort::SerialPortError arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QSerialPort::SerialPortError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1698,10 +1698,10 @@ HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSerialPort::settingsRestoredOnCloseChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSerialPort::settingsRestoredOnCloseChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
