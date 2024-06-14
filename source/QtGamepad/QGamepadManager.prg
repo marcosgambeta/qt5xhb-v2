@@ -323,10 +323,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::connectedGamepadsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::connectedGamepadsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -375,10 +375,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::gamepadConnected,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::gamepadConnected,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -429,10 +429,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::gamepadDisconnected,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::gamepadDisconnected,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -483,10 +483,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::gamepadAxisEvent,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QGamepadManager::GamepadAxis arg2, double arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::gamepadAxisEvent,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QGamepadManager::GamepadAxis arg2, double arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -541,10 +541,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::gamepadButtonPressEvent,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QGamepadManager::GamepadButton arg2, double arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::gamepadButtonPressEvent,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QGamepadManager::GamepadButton arg2, double arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -599,10 +599,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::gamepadButtonReleaseEvent,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QGamepadManager::GamepadButton arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::gamepadButtonReleaseEvent,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QGamepadManager::GamepadButton arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -655,10 +655,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::buttonConfigured,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QGamepadManager::GamepadButton arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::buttonConfigured,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QGamepadManager::GamepadButton arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -711,10 +711,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::axisConfigured,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QGamepadManager::GamepadAxis arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::axisConfigured,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QGamepadManager::GamepadAxis arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -767,10 +767,10 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadManager::configurationCanceled,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadManager::configurationCanceled,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

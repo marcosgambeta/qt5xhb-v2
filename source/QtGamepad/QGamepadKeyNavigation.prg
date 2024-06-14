@@ -1176,10 +1176,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::activeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::activeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1230,10 +1230,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::gamepadChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGamepad * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::gamepadChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QGamepad * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1284,10 +1284,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::upKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::upKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1338,10 +1338,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::downKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::downKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1392,10 +1392,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::leftKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::leftKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1446,10 +1446,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::rightKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::rightKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1500,10 +1500,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonAKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonAKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1554,10 +1554,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonBKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonBKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1608,10 +1608,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonXKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonXKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1662,10 +1662,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonYKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonYKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1716,10 +1716,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonSelectKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonSelectKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1770,10 +1770,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonStartKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonStartKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1824,10 +1824,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonGuideKeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonGuideKeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1878,10 +1878,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonL1KeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonL1KeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1932,10 +1932,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonR1KeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonR1KeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1986,10 +1986,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonL2KeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonL2KeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2040,10 +2040,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonR2KeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonR2KeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2094,10 +2094,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonL3KeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonL3KeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2148,10 +2148,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGamepadKeyNavigation::buttonR3KeyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Key arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGamepadKeyNavigation::buttonR3KeyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Key arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
