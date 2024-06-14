@@ -772,10 +772,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::acceptError,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractSocket::SocketError arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::acceptError,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractSocket::SocketError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -826,10 +826,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::serverError,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebSocketProtocol::CloseCode arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::serverError,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebSocketProtocol::CloseCode arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -880,10 +880,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::originAuthenticationRequired,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebSocketCorsAuthenticator * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::originAuthenticationRequired,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebSocketCorsAuthenticator * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -934,10 +934,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::newConnection,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::newConnection,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -986,10 +986,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::peerVerifyError,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSslError & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::peerVerifyError,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSslError & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1040,10 +1040,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::sslErrors,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QSslError> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::sslErrors,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QSslError> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1115,10 +1115,10 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebSocketServer::closed,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebSocketServer::closed,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
