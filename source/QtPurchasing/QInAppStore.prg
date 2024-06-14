@@ -217,10 +217,10 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QInAppStore::productRegistered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QInAppProduct * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QInAppStore::productRegistered,
+                                           [sender, indexOfCodeBlock]
+                                           (QInAppProduct * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -267,10 +267,10 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QInAppStore::productUnknown,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QInAppProduct::ProductType arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QInAppStore::productUnknown,
+                                           [sender, indexOfCodeBlock]
+                                           (QInAppProduct::ProductType arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -319,10 +319,10 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QInAppStore::transactionReady,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QInAppTransaction * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QInAppStore::transactionReady,
+                                           [sender, indexOfCodeBlock]
+                                           (QInAppTransaction * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
