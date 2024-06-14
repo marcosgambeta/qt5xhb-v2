@@ -274,10 +274,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAxScript::entered,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAxScript::entered,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -322,10 +322,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAxScript::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QString & arg2, int arg3, const QString & arg4) {
+        auto connection = QObject::connect(sender,
+                                           &QAxScript::error,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QString & arg2, int arg3, const QString & arg4) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -378,10 +378,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<>::of(&QAxScript::finished),
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           QOverload<>::of(&QAxScript::finished),
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -426,10 +426,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QVariant &>::of(&QAxScript::finished),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVariant & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QVariant &>::of(&QAxScript::finished),
+                                           [sender, indexOfCodeBlock]
+                                           (const QVariant & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -476,10 +476,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QString & arg2, const QString & arg3, const QString & arg4) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int,const QString &,const QString &,const QString &>::of(&QAxScript::finished),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QString & arg2, const QString & arg3, const QString & arg4) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -532,10 +532,10 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAxScript::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAxScript::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

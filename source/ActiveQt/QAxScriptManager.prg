@@ -338,10 +338,10 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAxScriptManager::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAxScript * arg1, int arg2, const QString & arg3, int arg4, const QString & arg5) {
+        auto connection = QObject::connect(sender,
+                                           &QAxScriptManager::error,
+                                           [sender, indexOfCodeBlock]
+                                           (QAxScript * arg1, int arg2, const QString & arg3, int arg4, const QString & arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
