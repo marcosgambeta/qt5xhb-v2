@@ -224,10 +224,10 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebEngineCookieStore::cookieAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkCookie & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebEngineCookieStore::cookieAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkCookie & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -274,10 +274,10 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebEngineCookieStore::cookieRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkCookie & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebEngineCookieStore::cookieRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkCookie & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
