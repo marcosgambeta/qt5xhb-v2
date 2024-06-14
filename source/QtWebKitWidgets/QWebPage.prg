@@ -1363,10 +1363,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::applicationCacheQuotaExceeded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebSecurityOrigin * arg1, quint64 arg2, quint64 arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::applicationCacheQuotaExceeded,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebSecurityOrigin * arg1, quint64 arg2, quint64 arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1417,10 +1417,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::contentsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::contentsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1465,10 +1465,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::databaseQuotaExceeded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1, QString arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::databaseQuotaExceeded,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1, QString arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1517,10 +1517,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::downloadRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkRequest & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::downloadRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkRequest & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1567,10 +1567,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::featurePermissionRequestCanceled,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1, QWebPage::Feature arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::featurePermissionRequestCanceled,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1, QWebPage::Feature arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1619,10 +1619,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::featurePermissionRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1, QWebPage::Feature arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::featurePermissionRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1, QWebPage::Feature arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1671,10 +1671,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::frameCreated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::frameCreated,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1721,10 +1721,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::geometryChangeRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::geometryChangeRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1771,10 +1771,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::linkClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::linkClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1821,10 +1821,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::linkHovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QString & arg2, const QString & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::linkHovered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QString & arg2, const QString & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1875,10 +1875,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::loadFinished,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::loadFinished,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1925,10 +1925,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::loadProgress,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::loadProgress,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1975,10 +1975,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::loadStarted,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::loadStarted,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2023,10 +2023,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::menuBarVisibilityChangeRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::menuBarVisibilityChangeRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2073,10 +2073,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::microFocusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::microFocusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2121,10 +2121,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::printRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::printRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2171,10 +2171,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::repaintRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::repaintRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2221,10 +2221,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::restoreFrameStateRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::restoreFrameStateRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2271,10 +2271,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::saveFrameStateRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWebFrame * arg1, QWebHistoryItem * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::saveFrameStateRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (QWebFrame * arg1, QWebHistoryItem * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2323,10 +2323,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::scrollRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2, const QRect & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::scrollRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2, const QRect & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2377,10 +2377,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::selectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::selectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2425,10 +2425,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::statusBarMessage,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::statusBarMessage,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2475,10 +2475,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::statusBarVisibilityChangeRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::statusBarVisibilityChangeRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2525,10 +2525,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::toolBarVisibilityChangeRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::toolBarVisibilityChangeRequested,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2575,10 +2575,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::unsupportedContent,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::unsupportedContent,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2625,10 +2625,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::viewportChangeRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::viewportChangeRequested,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2673,10 +2673,10 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebPage::windowCloseRequested,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QWebPage::windowCloseRequested,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
