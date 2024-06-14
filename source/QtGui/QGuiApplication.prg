@@ -1220,10 +1220,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::applicationStateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::ApplicationState arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::applicationStateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::ApplicationState arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1273,10 +1273,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::commitDataRequest,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSessionManager & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::commitDataRequest,
+                                           [sender, indexOfCodeBlock]
+                                           (QSessionManager & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1323,10 +1323,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::focusObjectChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QObject * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::focusObjectChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QObject * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1373,10 +1373,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::focusWindowChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWindow * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::focusWindowChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QWindow * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1424,10 +1424,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::fontChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QFont & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::fontChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QFont & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1477,10 +1477,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::fontDatabaseChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::fontDatabaseChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1525,10 +1525,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::lastWindowClosed,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::lastWindowClosed,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1574,10 +1574,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::layoutDirectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::LayoutDirection arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::layoutDirectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::LayoutDirection arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1628,10 +1628,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::paletteChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPalette & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::paletteChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPalette & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1682,10 +1682,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::primaryScreenChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScreen * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::primaryScreenChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QScreen * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1735,10 +1735,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::saveStateRequest,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSessionManager & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::saveStateRequest,
+                                           [sender, indexOfCodeBlock]
+                                           (QSessionManager & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1785,10 +1785,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::screenAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScreen * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::screenAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (QScreen * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1836,10 +1836,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGuiApplication::screenRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScreen * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGuiApplication::screenRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (QScreen * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

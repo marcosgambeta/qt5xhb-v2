@@ -337,10 +337,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QOpenGLDebugLogger::messageLogged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QOpenGLDebugMessage & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QOpenGLDebugLogger::messageLogged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QOpenGLDebugMessage & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

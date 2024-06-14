@@ -886,10 +886,10 @@ HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::geometryChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::geometryChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -936,10 +936,10 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::physicalSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSizeF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::physicalSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSizeF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -986,10 +986,10 @@ HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::physicalDotsPerInchChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::physicalDotsPerInchChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1036,10 +1036,10 @@ HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::logicalDotsPerInchChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::logicalDotsPerInchChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1086,10 +1086,10 @@ HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::virtualGeometryChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::virtualGeometryChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1136,10 +1136,10 @@ HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::primaryOrientationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::ScreenOrientation arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::primaryOrientationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::ScreenOrientation arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1186,10 +1186,10 @@ HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::orientationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::ScreenOrientation arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::orientationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::ScreenOrientation arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1236,10 +1236,10 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScreen::refreshRateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScreen::refreshRateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

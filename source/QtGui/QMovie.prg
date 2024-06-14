@@ -864,10 +864,10 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QImageReader::ImageReaderError arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::error,
+                                           [sender, indexOfCodeBlock]
+                                           (QImageReader::ImageReaderError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -914,10 +914,10 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -962,10 +962,10 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::frameChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::frameChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1012,10 +1012,10 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::resized,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSize & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::resized,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSize & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1062,10 +1062,10 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::started,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::started,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1110,10 +1110,10 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QMovie::MovieState arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QMovie::MovieState arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1160,10 +1160,10 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMovie::updated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMovie::updated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

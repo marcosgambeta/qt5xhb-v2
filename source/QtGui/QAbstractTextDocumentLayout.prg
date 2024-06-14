@@ -380,10 +380,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractTextDocumentLayout::documentSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSizeF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractTextDocumentLayout::documentSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSizeF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -430,10 +430,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractTextDocumentLayout::pageCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractTextDocumentLayout::pageCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -480,10 +480,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractTextDocumentLayout::update,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRectF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractTextDocumentLayout::update,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRectF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -530,10 +530,10 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractTextDocumentLayout::updateBlock,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QTextBlock & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractTextDocumentLayout::updateBlock,
+                                           [sender, indexOfCodeBlock]
+                                           (const QTextBlock & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

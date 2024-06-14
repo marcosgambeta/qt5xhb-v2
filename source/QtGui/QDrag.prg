@@ -460,10 +460,10 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDrag::actionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::DropAction arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDrag::actionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::DropAction arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -510,10 +510,10 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDrag::targetChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QObject * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDrag::targetChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QObject * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
