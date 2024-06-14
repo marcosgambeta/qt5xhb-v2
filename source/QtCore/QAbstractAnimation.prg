@@ -533,10 +533,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAnimation::currentLoopChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAnimation::currentLoopChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -583,10 +583,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAnimation::directionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractAnimation::Direction arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAnimation::directionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractAnimation::Direction arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -633,10 +633,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAnimation::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAnimation::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -681,10 +681,10 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAnimation::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractAnimation::State arg1, QAbstractAnimation::State arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAnimation::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractAnimation::State arg1, QAbstractAnimation::State arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

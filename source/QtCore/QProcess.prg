@@ -1495,10 +1495,10 @@ HB_FUNC_STATIC( QPROCESS_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QProcess::ProcessError>::of(&QProcess::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QProcess::ProcessError arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QProcess::ProcessError>::of(&QProcess::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QProcess::ProcessError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1545,10 +1545,10 @@ HB_FUNC_STATIC( QPROCESS_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QProcess::ExitStatus arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QProcess::ExitStatus arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1597,10 +1597,10 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QProcess::readyReadStandardError,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QProcess::readyReadStandardError,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1645,10 +1645,10 @@ HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QProcess::readyReadStandardOutput,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QProcess::readyReadStandardOutput,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1693,10 +1693,10 @@ HB_FUNC_STATIC( QPROCESS_ONSTARTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QProcess::started,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QProcess::started,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1741,10 +1741,10 @@ HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QProcess::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QProcess::ProcessState arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QProcess::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QProcess::ProcessState arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1792,10 +1792,10 @@ HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QProcess::errorOccurred,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QProcess::ProcessError arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QProcess::errorOccurred,
+                                           [sender, indexOfCodeBlock]
+                                           (QProcess::ProcessError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

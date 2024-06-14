@@ -947,10 +947,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::columnsAboutToBeInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::columnsAboutToBeInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1001,10 +1001,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::columnsAboutToBeMoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::columnsAboutToBeMoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1059,10 +1059,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::columnsAboutToBeRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::columnsAboutToBeRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1113,10 +1113,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::columnsInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::columnsInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1167,10 +1167,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::columnsMoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::columnsMoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1225,10 +1225,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::columnsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::columnsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1279,10 +1279,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::dataChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::dataChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, const QModelIndex & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1331,10 +1331,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::headerDataChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Orientation arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::headerDataChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Orientation arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1385,10 +1385,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::layoutAboutToBeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::layoutAboutToBeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1433,10 +1433,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::layoutChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::layoutChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1481,10 +1481,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::modelAboutToBeReset,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::modelAboutToBeReset,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1529,10 +1529,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::modelReset,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::modelReset,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1577,10 +1577,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::rowsAboutToBeInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::rowsAboutToBeInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1631,10 +1631,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::rowsAboutToBeMoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::rowsAboutToBeMoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1689,10 +1689,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::rowsAboutToBeRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::rowsAboutToBeRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1743,10 +1743,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::rowsInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::rowsInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1797,10 +1797,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::rowsMoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::rowsMoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1855,10 +1855,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemModel::rowsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemModel::rowsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -673,10 +673,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemSelectionModel::selectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QItemSelection & arg1, const QItemSelection & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QItemSelectionModel::selectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QItemSelection & arg1, const QItemSelection & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -725,10 +725,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemSelectionModel::currentChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QItemSelectionModel::currentChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, const QModelIndex & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -777,10 +777,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemSelectionModel::currentRowChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QItemSelectionModel::currentRowChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, const QModelIndex & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -829,10 +829,10 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemSelectionModel::currentColumnChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1, const QModelIndex & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QItemSelectionModel::currentColumnChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1, const QModelIndex & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

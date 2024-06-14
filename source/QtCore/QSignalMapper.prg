@@ -312,10 +312,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int>::of(&QSignalMapper::mapped),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int>::of(&QSignalMapper::mapped),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -362,10 +362,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &>::of(&QSignalMapper::mapped),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &>::of(&QSignalMapper::mapped),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -412,10 +412,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QWidget *>::of(&QSignalMapper::mapped),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWidget * arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QWidget *>::of(&QSignalMapper::mapped),
+                                           [sender, indexOfCodeBlock]
+                                           (QWidget * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -462,10 +462,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QObject *>::of(&QSignalMapper::mapped),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QObject * arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QObject *>::of(&QSignalMapper::mapped),
+                                           [sender, indexOfCodeBlock]
+                                           (QObject * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -513,10 +513,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDINT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSignalMapper::mappedInt,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSignalMapper::mappedInt,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -567,10 +567,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDOBJECT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSignalMapper::mappedObject,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QObject * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSignalMapper::mappedObject,
+                                           [sender, indexOfCodeBlock]
+                                           (QObject * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -621,10 +621,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDSTRING )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSignalMapper::mappedString,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSignalMapper::mappedString,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -675,10 +675,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDWIDGET )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSignalMapper::mappedWidget,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWidget * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSignalMapper::mappedWidget,
+                                           [sender, indexOfCodeBlock]
+                                           (QWidget * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
