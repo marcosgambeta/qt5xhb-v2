@@ -409,10 +409,10 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDeclarativeView::sceneResized,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSize arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDeclarativeView::sceneResized,
+                                           [sender, indexOfCodeBlock]
+                                           (QSize arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -459,10 +459,10 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDeclarativeView::statusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QDeclarativeView::Status arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDeclarativeView::statusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QDeclarativeView::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

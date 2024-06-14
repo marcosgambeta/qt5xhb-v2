@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDeclarativeExpression::valueChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QDeclarativeExpression::valueChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
