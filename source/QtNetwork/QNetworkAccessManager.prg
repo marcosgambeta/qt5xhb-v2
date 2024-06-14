@@ -1107,10 +1107,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::proxyAuthenticationRequired,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkProxy & arg1, QAuthenticator * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::proxyAuthenticationRequired,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkProxy & arg1, QAuthenticator * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1159,10 +1159,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::authenticationRequired,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1, QAuthenticator * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::authenticationRequired,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1, QAuthenticator * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1211,10 +1211,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::finished,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1262,10 +1262,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::encrypted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::encrypted,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1315,10 +1315,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::sslErrors,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1, const QList<QSslError> & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::sslErrors,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1, const QList<QSslError> & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1389,10 +1389,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::preSharedKeyAuthenticationRequired,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1, QSslPreSharedKeyAuthenticator * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::preSharedKeyAuthenticationRequired,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1, QSslPreSharedKeyAuthenticator * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1444,10 +1444,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::networkSessionConnected,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::networkSessionConnected,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1492,10 +1492,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkAccessManager::networkAccessibleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkAccessManager::NetworkAccessibility arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkAccessManager::networkAccessibleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkAccessManager::NetworkAccessibility arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

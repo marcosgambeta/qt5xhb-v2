@@ -732,10 +732,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLocalSocket::connected,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QLocalSocket::connected,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -780,10 +780,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLocalSocket::disconnected,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QLocalSocket::disconnected,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -828,10 +828,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QLocalSocket::LocalSocketError arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QLocalSocket::LocalSocketError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -878,10 +878,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLocalSocket::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QLocalSocket::LocalSocketState arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLocalSocket::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QLocalSocket::LocalSocketState arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

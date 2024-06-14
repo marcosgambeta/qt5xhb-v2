@@ -290,10 +290,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkConfigurationManager::configurationAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkConfiguration & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkConfigurationManager::configurationAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkConfiguration & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -340,10 +340,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkConfigurationManager::configurationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkConfiguration & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkConfigurationManager::configurationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkConfiguration & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -390,10 +390,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkConfigurationManager::configurationRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QNetworkConfiguration & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkConfigurationManager::configurationRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QNetworkConfiguration & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -440,10 +440,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkConfigurationManager::onlineStateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkConfigurationManager::onlineStateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -490,10 +490,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QNetworkConfigurationManager::updateCompleted,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QNetworkConfigurationManager::updateCompleted,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

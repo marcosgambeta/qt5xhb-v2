@@ -784,10 +784,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDnsLookup::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QDnsLookup::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -832,10 +832,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDnsLookup::nameChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDnsLookup::nameChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -882,10 +882,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDnsLookup::nameserverChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QHostAddress & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDnsLookup::nameserverChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QHostAddress & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -932,10 +932,10 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDnsLookup::typeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QDnsLookup::Type arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDnsLookup::typeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QDnsLookup::Type arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

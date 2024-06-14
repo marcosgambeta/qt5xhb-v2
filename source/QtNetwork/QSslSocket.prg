@@ -2168,10 +2168,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSslSocket::encrypted,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSslSocket::encrypted,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2216,10 +2216,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSslSocket::encryptedBytesWritten,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qint64 arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSslSocket::encryptedBytesWritten,
+                                           [sender, indexOfCodeBlock]
+                                           (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2266,10 +2266,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSslSocket::modeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSslSocket::SslMode arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSslSocket::modeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSslSocket::SslMode arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2316,10 +2316,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSslSocket::peerVerifyError,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSslError & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSslSocket::peerVerifyError,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSslError & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2367,10 +2367,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSslSocket::preSharedKeyAuthenticationRequired,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSslPreSharedKeyAuthenticator * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSslSocket::preSharedKeyAuthenticationRequired,
+                                           [sender, indexOfCodeBlock]
+                                           (QSslPreSharedKeyAuthenticator * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2420,10 +2420,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QSslError> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors),
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QSslError> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
