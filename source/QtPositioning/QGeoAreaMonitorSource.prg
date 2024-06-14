@@ -475,10 +475,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoAreaMonitorSource::areaEntered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoAreaMonitorSource::areaEntered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -531,10 +531,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoAreaMonitorSource::areaExited,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoAreaMonitorSource::areaExited,
+                                           [sender, indexOfCodeBlock]
+                                           (const QGeoAreaMonitorInfo & arg1, const QGeoPositionInfo & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -587,10 +587,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoAreaMonitorSource::monitorExpired,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QGeoAreaMonitorInfo & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoAreaMonitorSource::monitorExpired,
+                                           [sender, indexOfCodeBlock]
+                                           (const QGeoAreaMonitorInfo & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -641,10 +641,10 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoAreaMonitorSource::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoAreaMonitorSource::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

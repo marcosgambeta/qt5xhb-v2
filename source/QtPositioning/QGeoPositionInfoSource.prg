@@ -500,10 +500,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoPositionInfoSource::positionUpdated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QGeoPositionInfo & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoPositionInfoSource::positionUpdated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QGeoPositionInfo & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -554,10 +554,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoPositionInfoSource::updateTimeout,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QGeoPositionInfoSource::updateTimeout,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -606,10 +606,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoPositionInfoSource::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoPositionInfoSource::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

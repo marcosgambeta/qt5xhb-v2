@@ -389,10 +389,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoSatelliteInfoSource::satellitesInViewUpdated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QGeoSatelliteInfo> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoSatelliteInfoSource::satellitesInViewUpdated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QGeoSatelliteInfo> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -464,10 +464,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoSatelliteInfoSource::satellitesInUseUpdated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QGeoSatelliteInfo> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoSatelliteInfoSource::satellitesInUseUpdated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QGeoSatelliteInfo> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -539,10 +539,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoSatelliteInfoSource::requestTimeout,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QGeoSatelliteInfoSource::requestTimeout,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -591,10 +591,10 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QGeoSatelliteInfoSource::Error>::of(&QGeoSatelliteInfoSource::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoSatelliteInfoSource::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QGeoSatelliteInfoSource::Error>::of(&QGeoSatelliteInfoSource::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoSatelliteInfoSource::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
