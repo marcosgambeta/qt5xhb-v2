@@ -1307,10 +1307,10 @@ HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::busyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::busyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1359,10 +1359,10 @@ HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::activeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::activeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1411,10 +1411,10 @@ HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::readingChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::readingChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1463,10 +1463,10 @@ HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::sensorError,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::sensorError,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1517,10 +1517,10 @@ HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::availableSensorsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::availableSensorsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1569,10 +1569,10 @@ HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::alwaysOnChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::alwaysOnChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1621,10 +1621,10 @@ HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::dataRateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::dataRateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1673,10 +1673,10 @@ HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::skipDuplicatesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::skipDuplicatesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1727,10 +1727,10 @@ HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::axesOrientationModeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSensor::AxesOrientationMode arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::axesOrientationModeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSensor::AxesOrientationMode arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1781,10 +1781,10 @@ HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::currentOrientationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::currentOrientationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1835,10 +1835,10 @@ HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::userOrientationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::userOrientationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1889,10 +1889,10 @@ HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::maxBufferSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::maxBufferSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1943,10 +1943,10 @@ HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::efficientBufferSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::efficientBufferSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1997,10 +1997,10 @@ HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensor::bufferSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSensor::bufferSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

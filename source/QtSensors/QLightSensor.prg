@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLightSensor::fieldOfViewChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLightSensor::fieldOfViewChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

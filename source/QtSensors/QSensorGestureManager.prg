@@ -216,10 +216,10 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSensorGestureManager::newSensorGestureAvailable,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSensorGestureManager::newSensorGestureAvailable,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
