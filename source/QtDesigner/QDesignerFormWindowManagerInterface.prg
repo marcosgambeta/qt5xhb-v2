@@ -771,10 +771,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDesignerFormWindowManagerInterface::activeFormWindowChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QDesignerFormWindowInterface * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDesignerFormWindowManagerInterface::activeFormWindowChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QDesignerFormWindowInterface * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -821,10 +821,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDesignerFormWindowManagerInterface::formWindowAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QDesignerFormWindowInterface * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDesignerFormWindowManagerInterface::formWindowAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (QDesignerFormWindowInterface * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -871,10 +871,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDesignerFormWindowManagerInterface::formWindowRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QDesignerFormWindowInterface * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDesignerFormWindowManagerInterface::formWindowRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (QDesignerFormWindowInterface * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
