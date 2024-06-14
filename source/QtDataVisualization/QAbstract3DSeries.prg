@@ -1045,10 +1045,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::baseColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::baseColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1099,10 +1099,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::baseGradientChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLinearGradient & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::baseGradientChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLinearGradient & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1153,10 +1153,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::colorStyleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Q3DTheme::ColorStyle arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::colorStyleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Q3DTheme::ColorStyle arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1207,10 +1207,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::itemLabelChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::itemLabelChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1261,10 +1261,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::itemLabelFormatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::itemLabelFormatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1315,10 +1315,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::itemLabelVisibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::itemLabelVisibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1369,10 +1369,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::meshChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DSeries::Mesh arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::meshChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DSeries::Mesh arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1423,10 +1423,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::meshRotationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QQuaternion & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::meshRotationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QQuaternion & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1477,10 +1477,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::meshSmoothChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::meshSmoothChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1531,10 +1531,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::multiHighlightColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::multiHighlightColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1585,10 +1585,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::multiHighlightGradientChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLinearGradient & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::multiHighlightGradientChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLinearGradient & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1639,10 +1639,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::nameChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::nameChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1693,10 +1693,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::singleHighlightColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::singleHighlightColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1747,10 +1747,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::singleHighlightGradientChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLinearGradient & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::singleHighlightGradientChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLinearGradient & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1801,10 +1801,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::userDefinedMeshChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::userDefinedMeshChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1855,10 +1855,10 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DSeries::visibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DSeries::visibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

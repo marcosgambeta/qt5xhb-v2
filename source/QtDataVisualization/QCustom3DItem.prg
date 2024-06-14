@@ -703,10 +703,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::meshFileChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::meshFileChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -757,10 +757,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::positionAbsoluteChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::positionAbsoluteChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -811,10 +811,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::positionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVector3D & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::positionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVector3D & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -865,10 +865,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::rotationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QQuaternion & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::rotationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QQuaternion & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -919,10 +919,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::scalingAbsoluteChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::scalingAbsoluteChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -973,10 +973,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::scalingChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVector3D & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::scalingChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVector3D & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1027,10 +1027,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::shadowCastingChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::shadowCastingChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1081,10 +1081,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::textureFileChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::textureFileChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1135,10 +1135,10 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DItem::visibleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DItem::visibleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

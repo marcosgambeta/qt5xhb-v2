@@ -1527,10 +1527,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::autoColumnCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::autoColumnCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1581,10 +1581,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::autoRowCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::autoRowCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1635,10 +1635,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::columnCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::columnCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1687,10 +1687,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::columnRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::columnRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1741,10 +1741,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::columnRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::columnRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1795,10 +1795,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::columnRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::columnRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1849,10 +1849,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::itemModelChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QAbstractItemModel * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::itemModelChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QAbstractItemModel * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1903,10 +1903,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::multiMatchBehaviorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QItemModelSurfaceDataProxy::MultiMatchBehavior arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::multiMatchBehaviorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QItemModelSurfaceDataProxy::MultiMatchBehavior arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1957,10 +1957,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::rowCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::rowCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2009,10 +2009,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::rowRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::rowRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2063,10 +2063,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::rowRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::rowRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2117,10 +2117,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::rowRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::rowRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2171,10 +2171,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::useModelCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::useModelCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2225,10 +2225,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::xPosRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::xPosRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2279,10 +2279,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::xPosRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::xPosRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2333,10 +2333,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::xPosRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::xPosRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2387,10 +2387,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::yPosRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::yPosRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2441,10 +2441,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::yPosRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::yPosRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2495,10 +2495,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::yPosRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::yPosRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2549,10 +2549,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::zPosRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::zPosRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2603,10 +2603,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::zPosRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::zPosRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2657,10 +2657,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelSurfaceDataProxy::zPosRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelSurfaceDataProxy::zPosRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -359,10 +359,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DInputHandler::rotationEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DInputHandler::rotationEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -413,10 +413,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DInputHandler::selectionEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DInputHandler::selectionEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -467,10 +467,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DInputHandler::zoomAtTargetEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DInputHandler::zoomAtTargetEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -521,10 +521,10 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DInputHandler::zoomEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DInputHandler::zoomEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -531,10 +531,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::backgroundColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::backgroundColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -585,10 +585,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::backgroundEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::backgroundEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -639,10 +639,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::borderEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::borderEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -693,10 +693,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::facingCameraChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::facingCameraChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -747,10 +747,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::fontChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QFont & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::fontChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QFont & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -801,10 +801,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::textChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::textChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -855,10 +855,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DLabel::textColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DLabel::textColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -511,10 +511,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHeightMapSurfaceDataProxy::heightMapChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QImage & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QHeightMapSurfaceDataProxy::heightMapChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QImage & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -565,10 +565,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHeightMapSurfaceDataProxy::heightMapFileChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QHeightMapSurfaceDataProxy::heightMapFileChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -619,10 +619,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHeightMapSurfaceDataProxy::minXValueChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QHeightMapSurfaceDataProxy::minXValueChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -673,10 +673,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHeightMapSurfaceDataProxy::maxXValueChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QHeightMapSurfaceDataProxy::maxXValueChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -727,10 +727,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHeightMapSurfaceDataProxy::minZValueChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QHeightMapSurfaceDataProxy::minZValueChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -781,10 +781,10 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHeightMapSurfaceDataProxy::maxZValueChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QHeightMapSurfaceDataProxy::maxZValueChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -323,10 +323,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::arrayReset,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::arrayReset,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -375,10 +375,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::columnCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::columnCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -429,10 +429,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::itemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::itemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::rowCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::rowCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -539,10 +539,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::rowsAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::rowsAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -595,10 +595,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::rowsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::rowsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -651,10 +651,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::rowsInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::rowsInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -707,10 +707,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::rowsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::rowsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -763,10 +763,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurfaceDataProxy::seriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSurface3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurfaceDataProxy::seriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSurface3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

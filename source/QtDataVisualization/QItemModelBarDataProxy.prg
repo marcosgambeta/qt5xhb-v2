@@ -1355,10 +1355,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::autoColumnCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::autoColumnCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1409,10 +1409,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::autoRowCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::autoRowCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1463,10 +1463,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::columnCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::columnCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1515,10 +1515,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::columnRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::columnRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1569,10 +1569,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::columnRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::columnRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1623,10 +1623,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::columnRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::columnRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1677,10 +1677,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::itemModelChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QAbstractItemModel * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::itemModelChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QAbstractItemModel * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1731,10 +1731,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::multiMatchBehaviorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QItemModelBarDataProxy::MultiMatchBehavior arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::multiMatchBehaviorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QItemModelBarDataProxy::MultiMatchBehavior arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1785,10 +1785,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rotationRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rotationRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1839,10 +1839,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rotationRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rotationRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1893,10 +1893,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rotationRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rotationRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1947,10 +1947,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rowCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rowCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1999,10 +1999,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rowRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rowRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2053,10 +2053,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rowRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rowRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2107,10 +2107,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::rowRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::rowRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2161,10 +2161,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::useModelCategoriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::useModelCategoriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2215,10 +2215,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::valueRoleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::valueRoleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2269,10 +2269,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::valueRolePatternChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRegExp & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::valueRolePatternChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRegExp & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2323,10 +2323,10 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QItemModelBarDataProxy::valueRoleReplaceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QItemModelBarDataProxy::valueRoleReplaceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

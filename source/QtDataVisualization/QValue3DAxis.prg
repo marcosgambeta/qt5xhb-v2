@@ -402,10 +402,10 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONFORMATTERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QValue3DAxis::formatterChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxisFormatter * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QValue3DAxis::formatterChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxisFormatter * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -456,10 +456,10 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONLABELFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QValue3DAxis::labelFormatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QValue3DAxis::labelFormatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -510,10 +510,10 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONREVERSEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QValue3DAxis::reversedChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QValue3DAxis::reversedChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -564,10 +564,10 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QValue3DAxis::segmentCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QValue3DAxis::segmentCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -618,10 +618,10 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QValue3DAxis::subSegmentCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QValue3DAxis::subSegmentCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

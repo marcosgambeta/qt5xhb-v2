@@ -637,10 +637,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::titleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::titleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -691,10 +691,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::labelsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::labelsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -743,10 +743,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::orientationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DAxis::AxisOrientation arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::orientationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DAxis::AxisOrientation arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -797,10 +797,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::minChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::minChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -851,10 +851,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::maxChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::maxChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -905,10 +905,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::rangeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1, float arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::rangeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1, float arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -961,10 +961,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::autoAdjustRangeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::autoAdjustRangeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1015,10 +1015,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::labelAutoRotationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::labelAutoRotationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1069,10 +1069,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::titleVisibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::titleVisibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1123,10 +1123,10 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DAxis::titleFixedChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DAxis::titleFixedChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -912,10 +912,10 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::multiSeriesUniformChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::multiSeriesUniformChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -966,10 +966,10 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::barThicknessChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::barThicknessChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1020,10 +1020,10 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::barSpacingChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSizeF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::barSpacingChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSizeF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1074,10 +1074,10 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::barSpacingRelativeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::barSpacingRelativeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1128,10 +1128,10 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::rowAxisChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCategory3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::rowAxisChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCategory3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1182,10 +1182,10 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::columnAxisChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCategory3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::columnAxisChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCategory3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1236,10 +1236,10 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::valueAxisChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::valueAxisChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1290,10 +1290,10 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::primarySeriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBar3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::primarySeriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QBar3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1344,10 +1344,10 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::selectedSeriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBar3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::selectedSeriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QBar3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1398,10 +1398,10 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DBars::floorLevelChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DBars::floorLevelChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

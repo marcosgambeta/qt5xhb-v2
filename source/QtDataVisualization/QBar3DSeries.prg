@@ -325,10 +325,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBar3DSeries::dataProxyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBarDataProxy * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBar3DSeries::dataProxyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QBarDataProxy * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -379,10 +379,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBar3DSeries::selectedBarChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPoint & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBar3DSeries::selectedBarChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPoint & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -433,10 +433,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBar3DSeries::meshAngleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBar3DSeries::meshAngleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

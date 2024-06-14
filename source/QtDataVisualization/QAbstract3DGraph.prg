@@ -1708,10 +1708,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::activeInputHandlerChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DInputHandler * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::activeInputHandlerChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DInputHandler * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1762,10 +1762,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::activeThemeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Q3DTheme * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::activeThemeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Q3DTheme * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1816,10 +1816,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::aspectRatioChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::aspectRatioChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1870,10 +1870,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::currentFpsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::currentFpsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1924,10 +1924,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::horizontalAspectRatioChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::horizontalAspectRatioChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1978,10 +1978,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::localeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLocale & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::localeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLocale & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2032,10 +2032,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::marginChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::marginChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2086,10 +2086,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::measureFpsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::measureFpsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2140,10 +2140,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::optimizationHintsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DGraph::OptimizationHints arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::optimizationHintsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DGraph::OptimizationHints arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2194,10 +2194,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::orthoProjectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::orthoProjectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2248,10 +2248,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::polarChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::polarChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2302,10 +2302,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::queriedGraphPositionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVector3D & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::queriedGraphPositionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVector3D & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2356,10 +2356,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::radialLabelOffsetChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::radialLabelOffsetChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2410,10 +2410,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::reflectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::reflectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2464,10 +2464,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::reflectivityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::reflectivityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2518,10 +2518,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::selectedElementChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DGraph::ElementType arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::selectedElementChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DGraph::ElementType arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2572,10 +2572,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::selectionModeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DGraph::SelectionFlags arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::selectionModeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DGraph::SelectionFlags arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2626,10 +2626,10 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstract3DGraph::shadowQualityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstract3DGraph::ShadowQuality arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstract3DGraph::shadowQualityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstract3DGraph::ShadowQuality arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

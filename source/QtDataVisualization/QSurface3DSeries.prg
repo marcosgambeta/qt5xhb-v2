@@ -526,10 +526,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::dataProxyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSurfaceDataProxy * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::dataProxyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSurfaceDataProxy * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -580,10 +580,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::drawModeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSurface3DSeries::DrawFlags arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::drawModeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSurface3DSeries::DrawFlags arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -634,10 +634,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::flatShadingEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::flatShadingEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -688,10 +688,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::flatShadingSupportedChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::flatShadingSupportedChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -742,10 +742,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::selectedPointChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPoint & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::selectedPointChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPoint & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -796,10 +796,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::textureChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QImage & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::textureChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QImage & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -850,10 +850,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QSurface3DSeries::textureFileChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QSurface3DSeries::textureFileChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

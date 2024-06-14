@@ -593,10 +593,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DSurface::axisXChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DSurface::axisXChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -647,10 +647,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DSurface::axisYChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DSurface::axisYChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -701,10 +701,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DSurface::axisZChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DSurface::axisZChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -755,10 +755,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DSurface::flipHorizontalGridChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DSurface::flipHorizontalGridChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -809,10 +809,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DSurface::selectedSeriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QSurface3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DSurface::selectedSeriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QSurface3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

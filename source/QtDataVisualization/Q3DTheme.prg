@@ -1461,10 +1461,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::ambientLightStrengthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::ambientLightStrengthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1515,10 +1515,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::backgroundColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::backgroundColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1569,10 +1569,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::backgroundEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::backgroundEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1623,10 +1623,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::baseColorsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QColor> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::baseColorsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QColor> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1698,10 +1698,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::baseGradientsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QLinearGradient> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::baseGradientsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QLinearGradient> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1773,10 +1773,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::colorStyleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Q3DTheme::ColorStyle arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::colorStyleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Q3DTheme::ColorStyle arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1827,10 +1827,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::fontChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QFont & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::fontChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QFont & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1881,10 +1881,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::gridEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::gridEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1935,10 +1935,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::gridLineColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::gridLineColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1989,10 +1989,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::highlightLightStrengthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::highlightLightStrengthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2043,10 +2043,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::labelBackgroundColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::labelBackgroundColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2097,10 +2097,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::labelBackgroundEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::labelBackgroundEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2151,10 +2151,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::labelBorderEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::labelBorderEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2205,10 +2205,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::labelTextColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::labelTextColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2259,10 +2259,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::lightColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::lightColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2313,10 +2313,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::lightStrengthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::lightStrengthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2367,10 +2367,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::multiHighlightColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::multiHighlightColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2421,10 +2421,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::multiHighlightGradientChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLinearGradient & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::multiHighlightGradientChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLinearGradient & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2475,10 +2475,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::singleHighlightColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::singleHighlightColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2529,10 +2529,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::singleHighlightGradientChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLinearGradient & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::singleHighlightGradientChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLinearGradient & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2583,10 +2583,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::typeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Q3DTheme::Theme arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::typeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Q3DTheme::Theme arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2637,10 +2637,10 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DTheme::windowColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DTheme::windowColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

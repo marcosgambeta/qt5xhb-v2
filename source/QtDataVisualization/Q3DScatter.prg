@@ -536,10 +536,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScatter::axisXChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScatter::axisXChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -590,10 +590,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScatter::axisYChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScatter::axisYChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -644,10 +644,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScatter::axisZChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QValue3DAxis * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScatter::axisZChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -698,10 +698,10 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScatter::selectedSeriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScatter3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScatter::selectedSeriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QScatter3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

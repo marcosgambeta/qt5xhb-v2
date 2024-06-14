@@ -1176,10 +1176,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::alphaMultiplierChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::alphaMultiplierChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1230,10 +1230,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::colorTableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::colorTableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1282,10 +1282,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::drawSliceFramesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::drawSliceFramesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1336,10 +1336,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::drawSlicesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::drawSlicesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1390,10 +1390,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::preserveOpacityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::preserveOpacityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1444,10 +1444,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceFrameColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceFrameColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1498,10 +1498,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceFrameGapsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVector3D & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceFrameGapsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVector3D & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1552,10 +1552,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceFrameThicknessesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVector3D & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceFrameThicknessesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVector3D & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1606,10 +1606,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceFrameWidthsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVector3D & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceFrameWidthsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVector3D & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1660,10 +1660,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceIndexXChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceIndexXChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1714,10 +1714,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceIndexYChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceIndexYChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1768,10 +1768,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::sliceIndexZChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::sliceIndexZChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1822,10 +1822,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::textureDepthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::textureDepthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1876,10 +1876,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::textureFormatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QImage::Format arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::textureFormatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QImage::Format arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1930,10 +1930,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::textureHeightChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::textureHeightChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1984,10 +1984,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::textureWidthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::textureWidthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2038,10 +2038,10 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCustom3DVolume::useHighDefShaderChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCustom3DVolume::useHighDefShaderChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

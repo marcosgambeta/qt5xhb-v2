@@ -338,10 +338,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::arrayReset,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::arrayReset,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -390,10 +390,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::itemCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::itemCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -444,10 +444,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::itemsAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::itemsAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -500,10 +500,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::itemsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::itemsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -556,10 +556,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::itemsInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::itemsInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -612,10 +612,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::itemsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::itemsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -668,10 +668,10 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatterDataProxy::seriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScatter3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScatterDataProxy::seriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QScatter3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

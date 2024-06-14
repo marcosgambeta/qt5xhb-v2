@@ -322,10 +322,10 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatter3DSeries::dataProxyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScatterDataProxy * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScatter3DSeries::dataProxyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QScatterDataProxy * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -376,10 +376,10 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatter3DSeries::itemSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScatter3DSeries::itemSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -430,10 +430,10 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScatter3DSeries::selectedItemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScatter3DSeries::selectedItemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

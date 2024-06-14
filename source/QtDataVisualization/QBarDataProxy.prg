@@ -417,10 +417,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::arrayReset,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::arrayReset,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -469,10 +469,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::columnLabelsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::columnLabelsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -521,10 +521,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::itemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::itemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -577,10 +577,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::rowCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::rowCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -631,10 +631,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::rowLabelsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::rowLabelsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -683,10 +683,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::rowsAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::rowsAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -739,10 +739,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::rowsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::rowsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -795,10 +795,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::rowsInserted,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::rowsInserted,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -851,10 +851,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::rowsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::rowsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -907,10 +907,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBarDataProxy::seriesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBar3DSeries * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBarDataProxy::seriesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QBar3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

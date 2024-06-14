@@ -744,10 +744,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::activeCameraChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Q3DCamera * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::activeCameraChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Q3DCamera * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -798,10 +798,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::activeLightChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Q3DLight * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::activeLightChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Q3DLight * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -852,10 +852,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::devicePixelRatioChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (float arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::devicePixelRatioChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -906,10 +906,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::graphPositionQueryChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPoint & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::graphPositionQueryChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPoint & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -960,10 +960,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::primarySubViewportChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::primarySubViewportChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1014,10 +1014,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::secondarySubviewOnTopChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::secondarySubviewOnTopChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1068,10 +1068,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::secondarySubViewportChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::secondarySubViewportChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1122,10 +1122,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::selectionQueryPositionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPoint & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::selectionQueryPositionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPoint & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1176,10 +1176,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::slicingActiveChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::slicingActiveChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1230,10 +1230,10 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &Q3DScene::viewportChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QRect & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &Q3DScene::viewportChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QRect & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
