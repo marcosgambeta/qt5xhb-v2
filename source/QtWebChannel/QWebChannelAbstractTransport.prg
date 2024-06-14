@@ -123,10 +123,10 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QWebChannelAbstractTransport::messageReceived,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QJsonObject & arg1, QWebChannelAbstractTransport * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QWebChannelAbstractTransport::messageReceived,
+                                           [sender, indexOfCodeBlock]
+                                           (const QJsonObject & arg1, QWebChannelAbstractTransport * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
