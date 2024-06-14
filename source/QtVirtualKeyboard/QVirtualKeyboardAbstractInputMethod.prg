@@ -528,10 +528,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QVirtualKeyboardAbstractInputMethod::selectionListChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QVirtualKeyboardSelectionListModel::Type arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QVirtualKeyboardAbstractInputMethod::selectionListChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QVirtualKeyboardSelectionListModel::Type arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -578,10 +578,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHA
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -630,10 +630,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QVirtualKeyboardAbstractInputMethod::selectionListsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QVirtualKeyboardAbstractInputMethod::selectionListsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
