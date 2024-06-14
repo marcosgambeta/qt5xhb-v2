@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QModbusServer::dataWritten,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QModbusServer::dataWritten,
+                                           [sender, indexOfCodeBlock]
+                                           (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

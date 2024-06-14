@@ -580,10 +580,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCanBusDevice::errorOccurred,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCanBusDevice::CanBusError arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCanBusDevice::errorOccurred,
+                                           [sender, indexOfCodeBlock]
+                                           (QCanBusDevice::CanBusError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -634,10 +634,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCanBusDevice::framesReceived,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCanBusDevice::framesReceived,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -686,10 +686,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCanBusDevice::framesWritten,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qint64 arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCanBusDevice::framesWritten,
+                                           [sender, indexOfCodeBlock]
+                                           (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -740,10 +740,10 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCanBusDevice::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCanBusDevice::CanBusDeviceState arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCanBusDevice::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCanBusDevice::CanBusDeviceState arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

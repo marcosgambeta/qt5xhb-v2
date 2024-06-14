@@ -297,10 +297,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QModbusReply::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QModbusReply::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QModbusReply::errorOccurred,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QModbusDevice::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QModbusReply::errorOccurred,
+                                           [sender, indexOfCodeBlock]
+                                           (QModbusDevice::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
