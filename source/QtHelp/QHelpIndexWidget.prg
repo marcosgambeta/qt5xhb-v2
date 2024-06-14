@@ -139,10 +139,10 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QHelpIndexWidget::linkActivated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QHelpIndexWidget::linkActivated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
