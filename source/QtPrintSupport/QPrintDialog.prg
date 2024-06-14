@@ -351,10 +351,10 @@ HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QPrinter *>::of(&QPrintDialog::accepted),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPrinter * arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QPrinter *>::of(&QPrintDialog::accepted),
+                                           [sender, indexOfCodeBlock]
+                                           (QPrinter * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
