@@ -849,10 +849,10 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::added,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QList<QPieSlice*> arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::added,
+                                           [sender, indexOfCodeBlock]
+                                           (QList<QPieSlice*> arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -924,10 +924,10 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPieSlice * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QPieSlice * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -978,10 +978,10 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::countChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::countChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1030,10 +1030,10 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::doubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPieSlice * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::doubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QPieSlice * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1084,10 +1084,10 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::hovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPieSlice * arg1, bool arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::hovered,
+                                           [sender, indexOfCodeBlock]
+                                           (QPieSlice * arg1, bool arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1140,10 +1140,10 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::pressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPieSlice * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::pressed,
+                                           [sender, indexOfCodeBlock]
+                                           (QPieSlice * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1194,10 +1194,10 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::released,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPieSlice * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::released,
+                                           [sender, indexOfCodeBlock]
+                                           (QPieSlice * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1248,10 +1248,10 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::removed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QList<QPieSlice*> arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::removed,
+                                           [sender, indexOfCodeBlock]
+                                           (QList<QPieSlice*> arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1323,10 +1323,10 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPieSeries::sumChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QPieSeries::sumChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

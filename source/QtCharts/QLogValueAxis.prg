@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::baseChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::baseChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -539,10 +539,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::labelFormatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::labelFormatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -593,10 +593,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::maxChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::maxChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -647,10 +647,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::minChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::minChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -701,10 +701,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::minorTickCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::minorTickCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -755,10 +755,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::rangeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1, qreal arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::rangeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1, qreal arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -811,10 +811,10 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLogValueAxis::tickCountChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLogValueAxis::tickCountChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

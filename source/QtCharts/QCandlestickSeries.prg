@@ -986,10 +986,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::bodyOutlineVisibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::bodyOutlineVisibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1038,10 +1038,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::bodyWidthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::bodyWidthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1090,10 +1090,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::brushChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::brushChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1142,10 +1142,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::candlestickSetsAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QCandlestickSet*> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::candlestickSetsAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QCandlestickSet*> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1217,10 +1217,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::candlestickSetsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QList<QCandlestickSet*> & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::candlestickSetsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QList<QCandlestickSet*> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1292,10 +1292,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::capsVisibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::capsVisibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1344,10 +1344,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::capsWidthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::capsWidthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1396,10 +1396,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCandlestickSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QCandlestickSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1450,10 +1450,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::countChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::countChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1502,10 +1502,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::decreasingColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::decreasingColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1554,10 +1554,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::doubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCandlestickSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::doubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QCandlestickSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1608,10 +1608,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::hovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1, QCandlestickSet * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::hovered,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1, QCandlestickSet * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1664,10 +1664,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::increasingColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::increasingColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1716,10 +1716,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::maximumColumnWidthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::maximumColumnWidthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1768,10 +1768,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::minimumColumnWidthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::minimumColumnWidthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1820,10 +1820,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::penChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::penChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1872,10 +1872,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::pressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCandlestickSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::pressed,
+                                           [sender, indexOfCodeBlock]
+                                           (QCandlestickSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1926,10 +1926,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCandlestickSeries::released,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCandlestickSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCandlestickSeries::released,
+                                           [sender, indexOfCodeBlock]
+                                           (QCandlestickSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

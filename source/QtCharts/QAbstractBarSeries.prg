@@ -624,10 +624,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::barsetsAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QList<QBarSet *> arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::barsetsAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (QList<QBarSet *> arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -699,10 +699,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::barsetsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QList<QBarSet *> arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::barsetsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (QList<QBarSet *> arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -774,10 +774,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QBarSet * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QBarSet * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -830,10 +830,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::countChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::countChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -882,10 +882,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::doubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QBarSet * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::doubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QBarSet * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -938,10 +938,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::hovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1, int arg2, QBarSet * arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::hovered,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1, int arg2, QBarSet * arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -996,10 +996,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::labelsAngleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::labelsAngleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1050,10 +1050,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::labelsFormatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::labelsFormatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1104,10 +1104,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::labelsPositionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractBarSeries::LabelsPosition arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::labelsPositionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractBarSeries::LabelsPosition arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1158,10 +1158,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::labelsVisibleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::labelsVisibleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1210,10 +1210,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::pressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QBarSet * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::pressed,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QBarSet * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1266,10 +1266,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractBarSeries::released,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, QBarSet * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractBarSeries::released,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, QBarSet * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

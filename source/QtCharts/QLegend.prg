@@ -952,10 +952,10 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::backgroundVisibleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::backgroundVisibleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1006,10 +1006,10 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::borderColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QColor arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::borderColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QColor arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1060,10 +1060,10 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::colorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QColor arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::colorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QColor arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1114,10 +1114,10 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::fontChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QFont arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::fontChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QFont arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1168,10 +1168,10 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::labelColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QColor arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::labelColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QColor arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1222,10 +1222,10 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::markerShapeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QLegend::MarkerShape arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::markerShapeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QLegend::MarkerShape arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1276,10 +1276,10 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::reverseMarkersChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::reverseMarkersChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1330,10 +1330,10 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QLegend::showToolTipsChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QLegend::showToolTipsChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

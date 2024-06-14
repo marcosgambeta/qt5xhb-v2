@@ -616,10 +616,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::boxOutlineVisibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::boxOutlineVisibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -668,10 +668,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::boxsetsAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QList<QBoxSet*> arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::boxsetsAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (QList<QBoxSet*> arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -743,10 +743,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::boxsetsRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QList<QBoxSet*> arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::boxsetsRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (QList<QBoxSet*> arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -818,10 +818,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::boxWidthChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::boxWidthChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -870,10 +870,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::brushChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::brushChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -922,10 +922,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBoxSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QBoxSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -976,10 +976,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::countChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::countChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1028,10 +1028,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::doubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBoxSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::doubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QBoxSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1082,10 +1082,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::hovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1, QBoxSet * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::hovered,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1, QBoxSet * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1138,10 +1138,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::penChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::penChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1190,10 +1190,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::pressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBoxSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::pressed,
+                                           [sender, indexOfCodeBlock]
+                                           (QBoxSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1244,10 +1244,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBoxPlotSeries::released,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBoxSet * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBoxPlotSeries::released,
+                                           [sender, indexOfCodeBlock]
+                                           (QBoxSet * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

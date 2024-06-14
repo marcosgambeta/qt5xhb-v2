@@ -854,10 +854,10 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::borderColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QColor arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::borderColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QColor arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -908,10 +908,10 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPointF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPointF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -962,10 +962,10 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::colorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QColor arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::colorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QColor arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1016,10 +1016,10 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::doubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPointF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::doubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPointF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1070,10 +1070,10 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::hovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPointF & arg1, bool arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::hovered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPointF & arg1, bool arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1126,10 +1126,10 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::pointLabelsClippingChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::pointLabelsClippingChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1180,10 +1180,10 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::pointLabelsColorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QColor & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::pointLabelsColorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QColor & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1234,10 +1234,10 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::pointLabelsFontChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QFont & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::pointLabelsFontChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QFont & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1288,10 +1288,10 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::pointLabelsFormatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::pointLabelsFormatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1342,10 +1342,10 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::pointLabelsVisibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::pointLabelsVisibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1396,10 +1396,10 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::pressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPointF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::pressed,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPointF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1450,10 +1450,10 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::released,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPointF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::released,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPointF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1504,10 +1504,10 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAreaSeries::selected,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAreaSeries::selected,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
