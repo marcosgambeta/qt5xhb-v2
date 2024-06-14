@@ -437,10 +437,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::bufferAvailableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::bufferAvailableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -487,10 +487,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERREADY )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::bufferReady,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::bufferReady,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -535,10 +535,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONDURATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::durationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qint64 arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::durationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -585,10 +585,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::error,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -637,10 +637,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -685,10 +685,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFORMATCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::formatChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QAudioFormat & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::formatChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QAudioFormat & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -735,10 +735,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONPOSITIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::positionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qint64 arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::positionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -785,10 +785,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSOURCECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::sourceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::sourceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -833,10 +833,10 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioDecoderControl::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAudioDecoder::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioDecoderControl::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAudioDecoder::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

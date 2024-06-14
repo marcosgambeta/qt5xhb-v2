@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraControl::captureModeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCamera::CaptureModes arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraControl::captureModeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCamera::CaptureModes arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraControl::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraControl::error,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -372,10 +372,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraControl::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCamera::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraControl::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCamera::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -422,10 +422,10 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraControl::statusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCamera::Status arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraControl::statusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCamera::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

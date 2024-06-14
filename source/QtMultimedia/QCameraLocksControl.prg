@@ -192,10 +192,10 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraLocksControl::lockStatusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCamera::LockType arg1, QCamera::LockStatus arg2, QCamera::LockChangeReason arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraLocksControl::lockStatusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCamera::LockType arg1, QCamera::LockStatus arg2, QCamera::LockChangeReason arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

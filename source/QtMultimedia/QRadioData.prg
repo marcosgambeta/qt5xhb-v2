@@ -390,10 +390,10 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QRadioData::stationIdChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QString arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QRadioData::stationIdChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -440,10 +440,10 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QRadioData::programTypeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QRadioData::ProgramType arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QRadioData::programTypeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QRadioData::ProgramType arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -490,10 +490,10 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QRadioData::programTypeNameChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QString arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QRadioData::programTypeNameChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -540,10 +540,10 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QRadioData::stationNameChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QString arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QRadioData::stationNameChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -590,10 +590,10 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QRadioData::radioTextChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QString arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QRadioData::radioTextChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -640,10 +640,10 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QRadioData::alternativeFrequenciesEnabledChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QRadioData::alternativeFrequenciesEnabledChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -690,10 +690,10 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QRadioData::Error>::of(&QRadioData::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QRadioData::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QRadioData::Error>::of(&QRadioData::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QRadioData::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -648,10 +648,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAudioOutput::errorChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAudio::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAudioOutput::errorChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAudio::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -698,10 +698,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAudioOutput::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAudio::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAudioOutput::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAudio::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -748,10 +748,10 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractAudioOutput::notify,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractAudioOutput::notify,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -351,10 +351,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraFocusControl::customFocusPointChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPointF & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraFocusControl::customFocusPointChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPointF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -401,10 +401,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraFocusControl::focusModeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCameraFocus::FocusModes arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraFocusControl::focusModeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCameraFocus::FocusModes arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -451,10 +451,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraFocusControl::focusPointModeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QCameraFocus::FocusPointMode arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraFocusControl::focusPointModeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QCameraFocus::FocusPointMode arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -501,10 +501,10 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraFocusControl::focusZonesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCameraFocusControl::focusZonesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

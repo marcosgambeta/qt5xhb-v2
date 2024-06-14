@@ -354,10 +354,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<bool>::of(&QMediaObject::availabilityChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<bool>::of(&QMediaObject::availabilityChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -404,10 +404,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaObject::availabilityChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QMultimedia::AvailabilityStatus arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaObject::availabilityChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (QMultimedia::AvailabilityStatus arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -454,10 +454,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaObject::metaDataAvailableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaObject::metaDataAvailableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -504,10 +504,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<>::of(&QMediaObject::metaDataChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           QOverload<>::of(&QMediaObject::metaDataChanged),
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -552,10 +552,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &,const QVariant &>::of(&QMediaObject::metaDataChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QVariant & arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &,const QVariant &>::of(&QMediaObject::metaDataChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QVariant & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -604,10 +604,10 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaObject::notifyIntervalChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaObject::notifyIntervalChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

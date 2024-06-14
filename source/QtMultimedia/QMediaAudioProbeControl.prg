@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaAudioProbeControl::audioBufferProbed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QAudioBuffer & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaAudioProbeControl::audioBufferProbed,
+                                           [sender, indexOfCodeBlock]
+                                           (const QAudioBuffer & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaAudioProbeControl::flush,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QMediaAudioProbeControl::flush,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

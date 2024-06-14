@@ -1160,10 +1160,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::actualLocationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::actualLocationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1210,10 +1210,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<bool>::of(&QMediaRecorder::availabilityChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<bool>::of(&QMediaRecorder::availabilityChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1260,10 +1260,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaRecorder::availabilityChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QMultimedia::AvailabilityStatus arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QMultimedia::AvailabilityStatus>::of(&QMediaRecorder::availabilityChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (QMultimedia::AvailabilityStatus arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1310,10 +1310,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::durationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qint64 arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::durationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1360,10 +1360,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QMediaRecorder::Error>::of(&QMediaRecorder::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QMediaRecorder::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QMediaRecorder::Error>::of(&QMediaRecorder::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QMediaRecorder::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1410,10 +1410,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::metaDataAvailableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::metaDataAvailableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1460,10 +1460,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<>::of(&QMediaRecorder::metaDataChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           QOverload<>::of(&QMediaRecorder::metaDataChanged),
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1508,10 +1508,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &,const QVariant &>::of(&QMediaRecorder::metaDataChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QVariant & arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &,const QVariant &>::of(&QMediaRecorder::metaDataChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QVariant & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1560,10 +1560,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::metaDataWritableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::metaDataWritableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1610,10 +1610,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::mutedChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::mutedChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1660,10 +1660,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QMediaRecorder::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QMediaRecorder::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1710,10 +1710,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::statusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QMediaRecorder::Status arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::statusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QMediaRecorder::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1760,10 +1760,10 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMediaRecorder::volumeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (qreal arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMediaRecorder::volumeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

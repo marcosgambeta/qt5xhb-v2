@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<>::of(&QMetaDataReaderControl::metaDataChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           QOverload<>::of(&QMetaDataReaderControl::metaDataChanged),
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -215,10 +215,10 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &,const QVariant &>::of(&QMetaDataReaderControl::metaDataChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QVariant & arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &,const QVariant &>::of(&QMetaDataReaderControl::metaDataChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QVariant & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -267,10 +267,10 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMetaDataReaderControl::metaDataAvailableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QMetaDataReaderControl::metaDataAvailableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

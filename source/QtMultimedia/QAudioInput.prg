@@ -596,10 +596,10 @@ HB_FUNC_STATIC( QAUDIOINPUT_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioInput::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAudio::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAudioInput::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAudio::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -646,10 +646,10 @@ HB_FUNC_STATIC( QAUDIOINPUT_ONNOTIFY )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAudioInput::notify,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAudioInput::notify,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

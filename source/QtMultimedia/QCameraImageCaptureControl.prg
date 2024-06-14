@@ -223,10 +223,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2, const QString & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::error,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2, const QString & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -277,10 +277,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::imageAvailable,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QVideoFrame & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::imageAvailable,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QVideoFrame & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -329,10 +329,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::imageCaptured,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QImage & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::imageCaptured,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QImage & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -381,10 +381,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::imageExposed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::imageExposed,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -431,10 +431,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::imageMetadataAvailable,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QString & arg2, const QVariant & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::imageMetadataAvailable,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QString & arg2, const QVariant & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::imageSaved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::imageSaved,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -537,10 +537,10 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCameraImageCaptureControl::readyForCaptureChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCameraImageCaptureControl::readyForCaptureChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
