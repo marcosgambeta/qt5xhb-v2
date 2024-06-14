@@ -376,10 +376,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothDeviceDiscoveryAgent::deviceDiscovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QBluetoothDeviceInfo & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothDeviceDiscoveryAgent::deviceDiscovered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QBluetoothDeviceInfo & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -430,10 +430,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothDeviceDiscoveryAgent::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothDeviceDiscoveryAgent::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -482,10 +482,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QBluetoothDeviceDiscoveryAgent::Error>::of(&QBluetoothDeviceDiscoveryAgent::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBluetoothDeviceDiscoveryAgent::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QBluetoothDeviceDiscoveryAgent::Error>::of(&QBluetoothDeviceDiscoveryAgent::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QBluetoothDeviceDiscoveryAgent::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -536,10 +536,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothDeviceDiscoveryAgent::canceled,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothDeviceDiscoveryAgent::canceled,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -589,10 +589,10 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothDeviceDiscoveryAgent::deviceUpdated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QBluetoothDeviceInfo & arg1, QBluetoothDeviceInfo::Fields arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothDeviceDiscoveryAgent::deviceUpdated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QBluetoothDeviceInfo & arg1, QBluetoothDeviceInfo::Fields arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

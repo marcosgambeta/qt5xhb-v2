@@ -708,10 +708,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothSocket::connected,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothSocket::connected,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -760,10 +760,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothSocket::disconnected,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothSocket::disconnected,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -812,10 +812,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBluetoothSocket::SocketError arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QBluetoothSocket::SocketError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -866,10 +866,10 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QBluetoothSocket::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QBluetoothSocket::SocketState arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QBluetoothSocket::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QBluetoothSocket::SocketState arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
