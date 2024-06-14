@@ -1980,10 +1980,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemView::activated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemView::activated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2030,10 +2030,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemView::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemView::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2080,10 +2080,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemView::doubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemView::doubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2130,10 +2130,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemView::entered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemView::entered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2180,10 +2180,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemView::pressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemView::pressed,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -2230,10 +2230,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemView::viewportEntered,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemView::viewportEntered,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

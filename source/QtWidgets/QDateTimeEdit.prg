@@ -1404,10 +1404,10 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDateTimeEdit::dateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QDate & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDateTimeEdit::dateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QDate & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1454,10 +1454,10 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDateTimeEdit::dateTimeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QDateTime & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDateTimeEdit::dateTimeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QDateTime & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1504,10 +1504,10 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDateTimeEdit::timeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QTime & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDateTimeEdit::timeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QTime & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

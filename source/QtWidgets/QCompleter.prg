@@ -996,10 +996,10 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &>::of(&QCompleter::activated),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &>::of(&QCompleter::activated),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1046,10 +1046,10 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QModelIndex &>::of(&QCompleter::activated),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QModelIndex &>::of(&QCompleter::activated),
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1096,10 +1096,10 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &>::of(&QCompleter::highlighted),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &>::of(&QCompleter::highlighted),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1146,10 +1146,10 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QModelIndex &>::of(&QCompleter::highlighted),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QModelIndex &>::of(&QCompleter::highlighted),
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -631,10 +631,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextBrowser::anchorClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextBrowser::anchorClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -681,10 +681,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextBrowser::backwardAvailable,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextBrowser::backwardAvailable,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -731,10 +731,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextBrowser::forwardAvailable,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextBrowser::forwardAvailable,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -781,10 +781,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -831,10 +831,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<const QString &>::of(&QTextBrowser::highlighted),
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<const QString &>::of(&QTextBrowser::highlighted),
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -881,10 +881,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextBrowser::historyChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QTextBrowser::historyChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -929,10 +929,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextBrowser::sourceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextBrowser::sourceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

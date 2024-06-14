@@ -656,10 +656,10 @@ HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScroller::scrollerPropertiesChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QScrollerProperties & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScroller::scrollerPropertiesChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QScrollerProperties & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -706,10 +706,10 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QScroller::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QScroller::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QScroller::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QScroller::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

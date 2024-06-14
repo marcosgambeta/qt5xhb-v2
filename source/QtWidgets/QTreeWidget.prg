@@ -1078,10 +1078,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::currentItemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, QTreeWidgetItem * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::currentItemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, QTreeWidgetItem * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1130,10 +1130,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemActivated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemActivated,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1182,10 +1182,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1234,10 +1234,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1286,10 +1286,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemCollapsed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemCollapsed,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1336,10 +1336,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemDoubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemDoubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1388,10 +1388,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemEntered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemEntered,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1440,10 +1440,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemExpanded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemExpanded,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1490,10 +1490,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemPressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTreeWidgetItem * arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemPressed,
+                                           [sender, indexOfCodeBlock]
+                                           (QTreeWidgetItem * arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1542,10 +1542,10 @@ HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTreeWidget::itemSelectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QTreeWidget::itemSelectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -411,10 +411,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractButton * arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractButton * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -461,10 +461,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int>::of(&QButtonGroup::buttonClicked),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int>::of(&QButtonGroup::buttonClicked),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -511,10 +511,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractButton * arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractButton * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -561,10 +561,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int>::of(&QButtonGroup::buttonPressed),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int>::of(&QButtonGroup::buttonPressed),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -611,10 +611,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractButton * arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractButton * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -661,10 +661,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int>::of(&QButtonGroup::buttonReleased),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int>::of(&QButtonGroup::buttonReleased),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -712,10 +712,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QAbstractButton *,bool>::of(&QButtonGroup::buttonToggled),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractButton * arg1, bool arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QAbstractButton *,bool>::of(&QButtonGroup::buttonToggled),
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractButton * arg1, bool arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -768,10 +768,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int,bool>::of(&QButtonGroup::buttonToggled),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, bool arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int,bool>::of(&QButtonGroup::buttonToggled),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, bool arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -824,10 +824,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QButtonGroup::idClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QButtonGroup::idClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -878,10 +878,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QButtonGroup::idPressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QButtonGroup::idPressed,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -932,10 +932,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QButtonGroup::idReleased,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QButtonGroup::idReleased,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -986,10 +986,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QButtonGroup::idToggled,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, bool arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QButtonGroup::idToggled,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, bool arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

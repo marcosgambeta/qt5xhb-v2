@@ -1162,10 +1162,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCalendarWidget::activated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QDate & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCalendarWidget::activated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QDate & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1212,10 +1212,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCalendarWidget::clicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QDate & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QCalendarWidget::clicked,
+                                           [sender, indexOfCodeBlock]
+                                           (const QDate & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1262,10 +1262,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCalendarWidget::currentPageChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QCalendarWidget::currentPageChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1314,10 +1314,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QCalendarWidget::selectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QCalendarWidget::selectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

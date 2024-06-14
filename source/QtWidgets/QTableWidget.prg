@@ -1272,10 +1272,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::cellActivated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::cellActivated,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1324,10 +1324,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::cellChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::cellChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1376,10 +1376,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::cellClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::cellClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1428,10 +1428,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::cellDoubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::cellDoubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1480,10 +1480,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::cellEntered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::cellEntered,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1532,10 +1532,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::cellPressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::cellPressed,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1584,10 +1584,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::currentCellChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1, int arg2, int arg3, int arg4) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::currentCellChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1, int arg2, int arg3, int arg4) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1640,10 +1640,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::currentItemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1, QTableWidgetItem * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::currentItemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1, QTableWidgetItem * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1692,10 +1692,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemActivated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemActivated,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1742,10 +1742,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1792,10 +1792,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1842,10 +1842,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemDoubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemDoubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1892,10 +1892,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemEntered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemEntered,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1942,10 +1942,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemPressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTableWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemPressed,
+                                           [sender, indexOfCodeBlock]
+                                           (QTableWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1992,10 +1992,10 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTableWidget::itemSelectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QTableWidget::itemSelectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

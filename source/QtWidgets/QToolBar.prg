@@ -788,10 +788,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::actionTriggered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAction * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::actionTriggered,
+                                           [sender, indexOfCodeBlock]
+                                           (QAction * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -838,10 +838,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::allowedAreasChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::ToolBarAreas arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::allowedAreasChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::ToolBarAreas arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -888,10 +888,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::iconSizeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QSize & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::iconSizeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QSize & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -938,10 +938,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::movableChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::movableChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -988,10 +988,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::orientationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::Orientation arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::orientationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::Orientation arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1038,10 +1038,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::toolButtonStyleChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::ToolButtonStyle arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::toolButtonStyleChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::ToolButtonStyle arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1088,10 +1088,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::topLevelChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::topLevelChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1138,10 +1138,10 @@ HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QToolBar::visibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QToolBar::visibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

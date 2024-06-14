@@ -1650,10 +1650,10 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QApplication::focusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWidget * arg1, QWidget * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QApplication::focusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QWidget * arg1, QWidget * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

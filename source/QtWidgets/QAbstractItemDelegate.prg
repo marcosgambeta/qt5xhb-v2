@@ -379,10 +379,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemDelegate::closeEditor,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWidget * arg1, QAbstractItemDelegate::EndEditHint arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemDelegate::closeEditor,
+                                           [sender, indexOfCodeBlock]
+                                           (QWidget * arg1, QAbstractItemDelegate::EndEditHint arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -431,10 +431,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemDelegate::commitData,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QWidget * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemDelegate::commitData,
+                                           [sender, indexOfCodeBlock]
+                                           (QWidget * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -481,10 +481,10 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractItemDelegate::sizeHintChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QModelIndex & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractItemDelegate::sizeHintChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

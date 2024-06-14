@@ -861,10 +861,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::currentItemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1, QListWidgetItem * arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::currentItemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1, QListWidgetItem * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -913,10 +913,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::currentRowChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::currentRowChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -963,10 +963,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::currentTextChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::currentTextChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1013,10 +1013,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemActivated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemActivated,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1063,10 +1063,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1113,10 +1113,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1163,10 +1163,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemDoubleClicked,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemDoubleClicked,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1213,10 +1213,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemEntered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemEntered,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1263,10 +1263,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemPressed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QListWidgetItem * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemPressed,
+                                           [sender, indexOfCodeBlock]
+                                           (QListWidgetItem * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1313,10 +1313,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QListWidget::itemSelectionChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QListWidget::itemSelectionChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

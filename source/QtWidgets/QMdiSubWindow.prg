@@ -529,10 +529,10 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMdiSubWindow::aboutToActivate,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QMdiSubWindow::aboutToActivate,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -577,10 +577,10 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QMdiSubWindow::windowStateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::WindowStates arg1, Qt::WindowStates arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QMdiSubWindow::windowStateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::WindowStates arg1, Qt::WindowStates arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

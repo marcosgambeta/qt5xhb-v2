@@ -433,10 +433,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDockWidget::allowedAreasChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::DockWidgetAreas arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDockWidget::allowedAreasChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::DockWidgetAreas arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -483,10 +483,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDockWidget::dockLocationChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (Qt::DockWidgetArea arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDockWidget::dockLocationChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (Qt::DockWidgetArea arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -533,10 +533,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDockWidget::featuresChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QDockWidget::DockWidgetFeatures arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDockWidget::featuresChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QDockWidget::DockWidgetFeatures arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -583,10 +583,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDockWidget::topLevelChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDockWidget::topLevelChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -633,10 +633,10 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDockWidget::visibilityChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (bool arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDockWidget::visibilityChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

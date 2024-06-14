@@ -391,10 +391,10 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QActionGroup::hovered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAction * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QActionGroup::hovered,
+                                           [sender, indexOfCodeBlock]
+                                           (QAction * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -441,10 +441,10 @@ HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QActionGroup::triggered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAction * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QActionGroup::triggered,
+                                           [sender, indexOfCodeBlock]
+                                           (QAction * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
