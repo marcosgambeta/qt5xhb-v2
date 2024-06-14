@@ -568,10 +568,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QQuickWidget::statusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QQuickWidget::Status arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QQuickWidget::statusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QQuickWidget::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -622,10 +622,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QQuickWidget::sceneGraphError,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QQuickWidget::sceneGraphError,
+                                           [sender, indexOfCodeBlock]
+                                           (QQuickWindow::SceneGraphError arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
