@@ -152,10 +152,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuthReplyHandler::callbackDataReceived,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QByteArray & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuthReplyHandler::callbackDataReceived,
+                                           [sender, indexOfCodeBlock]
+                                           (const QByteArray & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuthReplyHandler::replyDataReceived,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QByteArray & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuthReplyHandler::replyDataReceived,
+                                           [sender, indexOfCodeBlock]
+                                           (const QByteArray & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

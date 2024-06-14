@@ -506,10 +506,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::clientIdentifierChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::clientIdentifierChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -560,10 +560,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::tokenChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::tokenChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -614,10 +614,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::statusChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractOAuth::Status arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::statusChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractOAuth::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -668,10 +668,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::authorizationUrlChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::authorizationUrlChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -722,10 +722,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::contentTypeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QAbstractOAuth::ContentType arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::contentTypeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QAbstractOAuth::ContentType arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -776,10 +776,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::requestFailed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QAbstractOAuth::Error arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::requestFailed,
+                                           [sender, indexOfCodeBlock]
+                                           (const QAbstractOAuth::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -830,10 +830,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::authorizeWithBrowser,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QUrl & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::authorizeWithBrowser,
+                                           [sender, indexOfCodeBlock]
+                                           (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -884,10 +884,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::granted,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::granted,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -936,10 +936,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QNetworkReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::finished,
+                                           [sender, indexOfCodeBlock]
+                                           (QNetworkReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -990,10 +990,10 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QAbstractOAuth::replyDataReceived,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QByteArray & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QAbstractOAuth::replyDataReceived,
+                                           [sender, indexOfCodeBlock]
+                                           (const QByteArray & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
