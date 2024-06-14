@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceReply::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceReply::finished,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -301,10 +301,10 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error),
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPlaceReply::Error arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<QPlaceReply::Error,const QString &>::of(&QPlaceReply::error),
+                                           [sender, indexOfCodeBlock]
+                                           (QPlaceReply::Error arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

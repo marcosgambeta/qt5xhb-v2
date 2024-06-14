@@ -727,10 +727,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPlaceReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::finished,
+                                           [sender, indexOfCodeBlock]
+                                           (QPlaceReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -781,10 +781,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::error,
+                                           [sender, indexOfCodeBlock]
+                                           (QPlaceReply * arg1, QPlaceReply::Error arg2, const QString & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -839,10 +839,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::placeAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::placeAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -893,10 +893,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::placeUpdated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::placeUpdated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -947,10 +947,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::placeRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::placeRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1001,10 +1001,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::categoryAdded,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPlaceCategory & arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::categoryAdded,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPlaceCategory & arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1057,10 +1057,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::categoryUpdated,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QPlaceCategory & arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::categoryUpdated,
+                                           [sender, indexOfCodeBlock]
+                                           (const QPlaceCategory & arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1113,10 +1113,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::categoryRemoved,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QString & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::categoryRemoved,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -1169,10 +1169,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QPlaceManager::dataChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              () {
+        auto connection = QObject::connect(sender,
+                                           &QPlaceManager::dataChanged,
+                                           [sender, indexOfCodeBlock]
+                                           () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -277,10 +277,10 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoCodingManagerEngine::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoCodeReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoCodingManagerEngine::finished,
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoCodeReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -331,10 +331,10 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoCodingManagerEngine::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoCodeReply * arg1, QGeoCodeReply::Error arg2, QString arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoCodingManagerEngine::error,
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoCodeReply * arg1, QGeoCodeReply::Error arg2, QString arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -480,10 +480,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoRoutingManagerEngine::finished,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoRouteReply * arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoRoutingManagerEngine::finished,
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoRouteReply * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -534,10 +534,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QGeoRoutingManagerEngine::error,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QGeoRouteReply * arg1, QGeoRouteReply::Error arg2, QString arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QGeoRoutingManagerEngine::error,
+                                           [sender, indexOfCodeBlock]
+                                           (QGeoRouteReply * arg1, QGeoRouteReply::Error arg2, QString arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
