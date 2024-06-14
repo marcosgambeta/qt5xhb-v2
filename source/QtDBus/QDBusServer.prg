@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusServer::newConnection,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QDBusConnection & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusServer::newConnection,
+                                           [sender, indexOfCodeBlock]
+                                           (const QDBusConnection & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

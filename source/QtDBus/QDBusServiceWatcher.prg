@@ -326,10 +326,10 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusServiceWatcher::serviceRegistered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusServiceWatcher::serviceRegistered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -376,10 +376,10 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusServiceWatcher::serviceUnregistered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusServiceWatcher::serviceUnregistered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -426,10 +426,10 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusServiceWatcher::serviceOwnerChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QString & arg2, const QString & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusServiceWatcher::serviceOwnerChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QString & arg2, const QString & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )

@@ -68,10 +68,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusConnectionInterface::serviceRegistered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusConnectionInterface::serviceRegistered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusConnectionInterface::serviceUnregistered,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusConnectionInterface::serviceUnregistered,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -168,10 +168,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusConnectionInterface::serviceOwnerChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QString & arg1, const QString & arg2, const QString & arg3) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusConnectionInterface::serviceOwnerChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QString & arg1, const QString & arg2, const QString & arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QDBusConnectionInterface::callWithCallbackFailed,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QDBusError & arg1, const QDBusMessage & arg2) {
+        auto connection = QObject::connect(sender,
+                                           &QDBusConnectionInterface::callWithCallbackFailed,
+                                           [sender, indexOfCodeBlock]
+                                           (const QDBusError & arg1, const QDBusMessage & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
