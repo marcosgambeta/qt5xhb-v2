@@ -667,10 +667,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextToSpeech::localeChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QLocale & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextToSpeech::localeChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QLocale & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -721,10 +721,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextToSpeech::pitchChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (double arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextToSpeech::pitchChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -775,10 +775,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextToSpeech::rateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (double arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextToSpeech::rateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -829,10 +829,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextToSpeech::stateChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (QTextToSpeech::State arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextToSpeech::stateChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (QTextToSpeech::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -883,10 +883,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              &QTextToSpeech::voiceChanged,
-                                                              [sender, indexOfCodeBlock]
-                                                              (const QVoice & arg1) {
+        auto connection = QObject::connect(sender,
+                                           &QTextToSpeech::voiceChanged,
+                                           [sender, indexOfCodeBlock]
+                                           (const QVoice & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -937,10 +937,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<int>::of(&QTextToSpeech::volumeChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (int arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<int>::of(&QTextToSpeech::volumeChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
@@ -991,10 +991,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
-        QMetaObject::Connection connection = QObject::connect(sender,
-                                                              QOverload<double>::of(&QTextToSpeech::volumeChanged),
-                                                              [sender, indexOfCodeBlock]
-                                                              (double arg1) {
+        auto connection = QObject::connect(sender,
+                                           QOverload<double>::of(&QTextToSpeech::volumeChanged),
+                                           [sender, indexOfCodeBlock]
+                                           (double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
           if( cb != nullptr )
