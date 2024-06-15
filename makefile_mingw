@@ -46,7 +46,7 @@ CC = g++
 # CFLAGS
 CFLAGS =
 CFLAGS += -std=c++11
-CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -Wno-deprecated -DUNICODE
+CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -Wno-deprecated -Wno-deprecated-declarations -DUNICODE
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
