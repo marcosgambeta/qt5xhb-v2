@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<QByteArray> list = obj->headers();
+      auto list = obj->headers();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
