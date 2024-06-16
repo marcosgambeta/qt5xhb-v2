@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<quint16> list = obj->attributes();
+      auto list = obj->attributes();
       Qt5xHb::convert_qlist_quint16_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QBluetoothUuid> list = obj->serviceClassUuids();
+      auto list = obj->serviceClassUuids();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHUUID");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

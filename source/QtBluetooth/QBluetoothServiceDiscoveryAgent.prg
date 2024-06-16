@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QBluetoothServiceInfo> list = obj->discoveredServices();
+      auto list = obj->discoveredServices();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHSERVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QBluetoothUuid> list = obj->uuidFilter();
+      auto list = obj->uuidFilter();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHUUID");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

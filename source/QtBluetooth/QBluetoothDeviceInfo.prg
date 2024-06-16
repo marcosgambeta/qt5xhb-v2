@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MANUFACTURERIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<quint16> list = obj->manufacturerIds();
+      auto list = obj->manufacturerIds();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
