@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQVARIANT(2) && HB_ISCHAR(3) )
     {
 #endif
-      const QList<QByteArray> list = obj->convertFromMime( PQSTRING(1), *PQVARIANT(2), PQSTRING(3) );
+      auto list = obj->convertFromMime( PQSTRING(1), *PQVARIANT(2), PQSTRING(3) );
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
