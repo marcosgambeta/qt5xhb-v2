@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_CONFIGURATIONKEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<int> list = obj->configurationKeys();
+      auto list = obj->configurationKeys();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<QCanBusFrame> list = obj->readAllFrames();
+      auto list = obj->readAllFrames();
       auto pDynSym = hb_dynsymFindName("QCANBUSFRAME");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

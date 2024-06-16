@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      const QList<QCanBusDeviceInfo> list = obj->availableDevices( PQSTRING(1), nullptr );
+      auto list = obj->availableDevices( PQSTRING(1), nullptr );
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
