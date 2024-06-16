@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->inputModes();
+      auto list = obj->inputModes();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->patternRecognitionModes();
+      auto list = obj->patternRecognitionModes();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      const QList<QVirtualKeyboardInputEngine::InputMode> list = obj->inputModes( PQSTRING(1) );
+      auto list = obj->inputModes( PQSTRING(1) );
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QVirtualKeyboardSelectionListModel::Type> list = obj->selectionLists();
+      auto list = obj->selectionLists();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_PATTERNRECOGNITIONMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QVirtualKeyboardInputEngine::PatternRecognitionMode> list = obj->patternRecognitionModes();
+      auto list = obj->patternRecognitionModes();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
