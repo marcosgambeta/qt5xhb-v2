@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_STANDARDBAUDRATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<qint32> list = QSerialPortInfo::standardBaudRates();
+    auto list = QSerialPortInfo::standardBaudRates();
     Qt5xHb::convert_qlist_qint32_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSerialPortInfo> list = QSerialPortInfo::availablePorts();
+    auto list = QSerialPortInfo::availablePorts();
     auto pDynSym = hb_dynsymFindName("QSERIALPORTINFO");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
