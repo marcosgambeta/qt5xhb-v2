@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QWebSocketProtocol::Version> list = obj->supportedVersions();
+      auto list = obj->supportedVersions();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
