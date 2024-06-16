@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QString> list = obj->keys();
+      auto list = obj->keys();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
