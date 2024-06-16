@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QQmlError> list = obj->errors();
+      auto list = obj->errors();
       auto pDynSym = hb_dynsymFindName("QQMLERROR");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
