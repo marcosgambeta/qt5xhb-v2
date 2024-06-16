@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSensorFilter *> list = obj->filters();
+      auto list = obj->filters();
       auto pDynSym = hb_dynsymFindName("QSENSORFILTER");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QSensor::sensorTypes();
+    auto list = QSensor::sensorTypes();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    const QList<QByteArray> list = QSensor::sensorsForType( *PQBYTEARRAY(1) );
+    auto list = QSensor::sensorsForType( *PQBYTEARRAY(1) );
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
