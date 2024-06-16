@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QObject *> list = obj->rootObjects();
+      auto list = obj->rootObjects();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
