@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QString> list = obj->availableOutputs();
+      auto list = obj->availableOutputs();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

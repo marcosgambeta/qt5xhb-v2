@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
     if( ISBETWEEN(0, 1) && ( ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
+      auto list = obj->supportedViewfinderSettings( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
       auto pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
     if( ISBETWEEN(0, 1) && ( ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QList<QSize> list = obj->supportedViewfinderResolutions( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
+      auto list = obj->supportedViewfinderResolutions( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
     if( ISBETWEEN(0, 1) && ( ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QList<QVideoFrame::PixelFormat> list = obj->supportedViewfinderPixelFormats( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
+      auto list = obj->supportedViewfinderPixelFormats( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)) );
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QCamera::availableDevices();
+    auto list = QCamera::availableDevices();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

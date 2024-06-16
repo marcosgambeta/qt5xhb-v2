@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
+      auto list = obj->supportedBufferFormats();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      const QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1) ? QImageEncoderSettings() : *static_cast<QImageEncoderSettings*>(Qt5xHb::itemGetPtr(1)), &par2 );
+      auto list = obj->supportedResolutions( HB_ISNIL(1) ? QImageEncoderSettings() : *static_cast<QImageEncoderSettings*>(Qt5xHb::itemGetPtr(1)), &par2 );
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

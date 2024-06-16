@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings();
+      auto list = obj->supportedViewfinderSettings();
       auto pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

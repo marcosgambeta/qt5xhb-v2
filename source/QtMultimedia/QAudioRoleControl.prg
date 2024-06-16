@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAudio::Role> list = obj->supportedAudioRoles();
+      auto list = obj->supportedAudioRoles();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

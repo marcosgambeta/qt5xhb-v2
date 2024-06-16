@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_AVAILABLEDEVICES )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QByteArray> list = obj->availableDevices( static_cast<QAudio::Mode>( hb_parni(1) ) );
+      auto list = obj->availableDevices( static_cast<QAudio::Mode>( hb_parni(1) ) );
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

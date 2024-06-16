@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMediaResourceList list = obj->resources();
+      auto list = obj->resources();
       auto pDynSym = hb_dynsymFindName("QMEDIARESOURCE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

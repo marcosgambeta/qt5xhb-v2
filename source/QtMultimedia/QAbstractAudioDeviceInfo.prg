@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->supportedSampleRates();
+      auto list = obj->supportedSampleRates();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->supportedChannelCounts();
+      auto list = obj->supportedChannelCounts();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->supportedSampleSizes();
+      auto list = obj->supportedSampleSizes();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAudioFormat::Endian> list = obj->supportedByteOrders();
+      auto list = obj->supportedByteOrders();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes();
+      auto list = obj->supportedSampleTypes();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
     {
 #endif
       bool par1;
-      QList<qreal> list = obj->supportedApertures( &par1 );
+      auto list = obj->supportedApertures( &par1 );
       Qt5xHb::convert_qlist_qreal_to_array( list );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
     {
 #endif
       bool par1;
-      QList<int> list = obj->supportedIsoSensitivities( &par1 );
+      auto list = obj->supportedIsoSensitivities( &par1 );
       Qt5xHb::convert_qlist_int_to_array( list );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
     {
 #endif
       bool par1;
-      QList<qreal> list = obj->supportedShutterSpeeds( &par1 );
+      auto list = obj->supportedShutterSpeeds( &par1 );
       Qt5xHb::convert_qlist_qreal_to_array( list );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
