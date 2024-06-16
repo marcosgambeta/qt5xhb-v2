@@ -944,7 +944,7 @@ HB_FUNC_STATIC( QCHART_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAbstractSeries *> list = obj->series();
+      auto list = obj->series();
       auto pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QCHART_AXES )
     if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( ISQABSTRACTSERIES(2) || HB_ISNIL(2) ) )
     {
 #endif
-      const QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1) ), OPQABSTRACTSERIES( 2, nullptr ) );
+      auto list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1) ), OPQABSTRACTSERIES( 2, nullptr ) );
       auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

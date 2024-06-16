@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QPIESERIES_SLICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPieSlice *> list = obj->slices();
+      auto list = obj->slices();
       auto pDynSym = hb_dynsymFindName("QPIESLICE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

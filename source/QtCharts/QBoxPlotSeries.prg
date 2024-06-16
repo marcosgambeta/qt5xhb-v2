@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QBoxSet *> list = obj->boxSets();
+      auto list = obj->boxSets();
       auto pDynSym = hb_dynsymFindName("QBOXSET");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

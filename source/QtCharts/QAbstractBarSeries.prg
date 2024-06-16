@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QBarSet *> list = obj->barSets();
+      auto list = obj->barSets();
       auto pDynSym = hb_dynsymFindName("QBARSET");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

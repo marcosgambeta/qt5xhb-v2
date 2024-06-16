@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QCandlestickSet *> list = obj->sets();
+      auto list = obj->sets();
       auto pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

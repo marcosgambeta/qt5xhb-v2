@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
     if( ISBETWEEN(0, 1) && ( ISQABSTRACTSERIES(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES( 1, nullptr ) );
+      auto list = obj->markers( OPQABSTRACTSERIES( 1, nullptr ) );
       auto pDynSym = hb_dynsymFindName("QLEGENDMARKER");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
