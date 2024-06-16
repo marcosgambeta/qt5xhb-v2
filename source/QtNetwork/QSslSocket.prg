@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCertificate> list = obj->localCertificateChain();
+      auto list = obj->localCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCertificate> list = obj->peerCertificateChain();
+      auto list = obj->peerCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCipher> list = obj->ciphers();
+      auto list = obj->ciphers();
       auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSslCipher> list = QSslSocket::defaultCiphers();
+    auto list = QSslSocket::defaultCiphers();
     auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1422,7 +1422,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSslCipher> list = QSslSocket::supportedCiphers();
+    auto list = QSslSocket::supportedCiphers();
     auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1573,7 +1573,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCertificate> list = obj->caCertificates();
+      auto list = obj->caCertificates();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1703,7 +1703,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSslCertificate> list = QSslSocket::defaultCaCertificates();
+    auto list = QSslSocket::defaultCaCertificates();
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1748,7 +1748,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSslCertificate> list = QSslSocket::systemCaCertificates();
+    auto list = QSslSocket::systemCaCertificates();
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1917,7 +1917,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslError> list = obj->sslErrors();
+      auto list = obj->sslErrors();
       auto pDynSym = hb_dynsymFindName("QSSLERROR");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

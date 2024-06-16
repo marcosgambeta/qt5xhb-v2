@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QList<QNetworkConfiguration> list = obj->allConfigurations( HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags >( QNetworkConfiguration::StateFlags() ) : static_cast<QNetworkConfiguration::StateFlags >( hb_parni(1) ) );
+      auto list = obj->allConfigurations( HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags >( QNetworkConfiguration::StateFlags() ) : static_cast<QNetworkConfiguration::StateFlags >( hb_parni(1) ) );
       auto pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

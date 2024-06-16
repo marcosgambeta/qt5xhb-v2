@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->rawHeaderList();
+      auto list = obj->rawHeaderList();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

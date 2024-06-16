@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      const QList<QNetworkCookie> list = obj->cookiesForUrl( *PQURL(1) );
+      auto list = obj->cookiesForUrl( *PQURL(1) );
       auto pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

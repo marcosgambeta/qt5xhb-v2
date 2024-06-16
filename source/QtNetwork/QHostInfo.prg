@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QHostAddress> list = obj->addresses();
+      auto list = obj->addresses();
       auto pDynSym = hb_dynsymFindName("QHOSTADDRESS");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

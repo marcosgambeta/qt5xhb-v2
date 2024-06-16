@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCertificate> list = obj->localCertificateChain();
+      auto list = obj->localCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCertificate> list = obj->peerCertificateChain();
+      auto list = obj->peerCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCipher> list = obj->ciphers();
+      auto list = obj->ciphers();
       auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SUPPORTEDCIPHERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSslCipher> list = QSslConfiguration::supportedCiphers();
+    auto list = QSslConfiguration::supportedCiphers();
     auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSslCertificate> list = obj->caCertificates();
+      auto list = obj->caCertificates();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SYSTEMCACERTIFICATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QSslCertificate> list = QSslConfiguration::systemCaCertificates();
+    auto list = QSslConfiguration::systemCaCertificates();
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->allowedNextProtocols();
+      auto list = obj->allowedNextProtocols();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

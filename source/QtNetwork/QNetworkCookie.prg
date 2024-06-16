@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    const QList<QNetworkCookie> list = QNetworkCookie::parseCookies( *PQBYTEARRAY(1) );
+    auto list = QNetworkCookie::parseCookies( *PQBYTEARRAY(1) );
     auto pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

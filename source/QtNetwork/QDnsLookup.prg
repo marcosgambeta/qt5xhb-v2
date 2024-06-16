@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsDomainNameRecord> list = obj->canonicalNameRecords();
+      auto list = obj->canonicalNameRecords();
       auto pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsHostAddressRecord> list = obj->hostAddressRecords();
+      auto list = obj->hostAddressRecords();
       auto pDynSym = hb_dynsymFindName("QDNSHOSTADDRESSRECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsMailExchangeRecord> list = obj->mailExchangeRecords();
+      auto list = obj->mailExchangeRecords();
       auto pDynSym = hb_dynsymFindName("QDNSMAILEXCHANGERECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsDomainNameRecord> list = obj->nameServerRecords();
+      auto list = obj->nameServerRecords();
       auto pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsDomainNameRecord> list = obj->pointerRecords();
+      auto list = obj->pointerRecords();
       auto pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsServiceRecord> list = obj->serviceRecords();
+      auto list = obj->serviceRecords();
       auto pDynSym = hb_dynsymFindName("QDNSSERVICERECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDnsTextRecord> list = obj->textRecords();
+      auto list = obj->textRecords();
       auto pDynSym = hb_dynsymFindName("QDNSTEXTRECORD");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

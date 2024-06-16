@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->values();
+      auto list = obj->values();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

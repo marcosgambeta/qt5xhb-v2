@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<QHstsPolicy> list = obj->strictTransportSecurityHosts();
+      auto list = obj->strictTransportSecurityHosts();
       auto pDynSym = hb_dynsymFindName("QHSTSPOLICY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

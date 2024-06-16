@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QNetworkConfiguration> list = obj->children();
+      auto list = obj->children();
       auto pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
