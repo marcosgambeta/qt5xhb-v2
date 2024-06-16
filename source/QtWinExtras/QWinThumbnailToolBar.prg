@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QWinThumbnailToolButton *> list = obj->buttons();
+      auto list = obj->buttons();
       auto pDynSym = hb_dynsymFindName("QWINTHUMBNAILTOOLBUTTON");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
