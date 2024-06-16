@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPlaceSearchResult> list = obj->results();
+      auto list = obj->results();
       auto pDynSym = hb_dynsymFindName("QPLACESEARCHRESULT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

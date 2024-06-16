@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QGeoCoordinate> list = obj->path();
+      auto list = obj->path();
       auto pDynSym = hb_dynsymFindName("QGEOCOORDINATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

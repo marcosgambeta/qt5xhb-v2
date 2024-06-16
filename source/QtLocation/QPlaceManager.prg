@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
     if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QList<QPlaceCategory> list = obj->childCategories( OPQSTRING( 1, QString() ) );
+      auto list = obj->childCategories( OPQSTRING( 1, QString() ) );
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QLocale> list = obj->locales();
+      auto list = obj->locales();
       auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

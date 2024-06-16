@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPlaceCategory> list = obj->categories();
+      auto list = obj->categories();
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      const QList<QPlaceContactDetail> list = obj->contactDetails( PQSTRING(1) );
+      auto list = obj->contactDetails( PQSTRING(1) );
       auto pDynSym = hb_dynsymFindName("QPLACECONTACTDETAIL");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QGeoRoute> list = obj->routes();
+      auto list = obj->routes();
       auto pDynSym = hb_dynsymFindName("QGEOROUTE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
