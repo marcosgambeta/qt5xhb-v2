@@ -434,7 +434,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QSurface3DSeries *> list = obj->seriesList();
+      auto list = obj->seriesList();
       auto pDynSym = hb_dynsymFindName("QSURFACE3DSERIES");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QValue3DAxis *> list = obj->axes();
+      auto list = obj->axes();
       auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

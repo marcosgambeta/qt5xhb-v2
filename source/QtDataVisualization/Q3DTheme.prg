@@ -245,7 +245,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QColor> list = obj->baseColors();
+      auto list = obj->baseColors();
       auto pDynSym = hb_dynsymFindName("QCOLOR");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QLinearGradient> list = obj->baseGradients();
+      auto list = obj->baseGradients();
       auto pDynSym = hb_dynsymFindName("QLINEARGRADIENT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
