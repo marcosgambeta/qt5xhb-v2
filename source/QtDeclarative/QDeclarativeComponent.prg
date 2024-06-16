@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QDeclarativeError> list = obj->errors();
+      auto list = obj->errors();
       auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
