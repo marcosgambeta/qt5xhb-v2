@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QByteArray> list = obj->parameterNames( PINT(1) );
+      auto list = obj->parameterNames( PINT(1) );
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QByteArray> list = obj->parameterTypes( PINT(1) );
+      auto list = obj->parameterTypes( PINT(1) );
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

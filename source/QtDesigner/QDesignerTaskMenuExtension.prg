@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAction *> list = obj->taskActions();
+      auto list = obj->taskActions();
       auto pDynSym = hb_dynsymFindName("QACTION");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
