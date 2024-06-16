@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QHelpSearchQuery> list = obj->query();
+      auto list = obj->query();
       auto pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
