@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QWidgetList list = obj->scrollBarWidgets(static_cast<Qt::Alignment>(hb_parni(1)));
+      auto list = obj->scrollBarWidgets(static_cast<Qt::Alignment>(hb_parni(1)));
       auto pDynSym = hb_dynsymFindName("QWIDGET");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

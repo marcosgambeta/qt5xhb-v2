@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<int> list = obj->paintingRoles();
+      auto list = obj->paintingRoles();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

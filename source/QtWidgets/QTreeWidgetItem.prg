@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QTreeWidgetItem *> list = obj->takeChildren();
+      auto list = obj->takeChildren();
       auto pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

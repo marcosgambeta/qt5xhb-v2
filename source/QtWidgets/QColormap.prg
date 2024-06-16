@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<QColor> list = obj->colormap();
+      auto list = obj->colormap();
       auto pDynSym = hb_dynsymFindName("QCOLOR");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

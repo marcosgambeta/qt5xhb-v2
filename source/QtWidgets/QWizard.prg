@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->pageIds();
+      auto list = obj->pageIds();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->visitedPages();
+      auto list = obj->visitedPages();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

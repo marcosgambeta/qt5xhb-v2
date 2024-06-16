@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QUrl> list = obj->sidebarUrls();
+      auto list = obj->sidebarUrls();
       auto pDynSym = hb_dynsymFindName("QURL");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QUrl> list = obj->selectedUrls();
+      auto list = obj->selectedUrls();
       auto pDynSym = hb_dynsymFindName("QURL");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1752,7 +1752,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
   if( ISBETWEEN(0, 7) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( ISQURL(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) && ( HB_ISCHAR(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) && ( HB_ISARRAY(7) || HB_ISNIL(7) ) )
   {
 #endif
-    const QList<QUrl> list = QFileDialog::getOpenFileUrls( OPQWIDGET( 1, nullptr ), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)), OPQSTRING( 4, QString() ), nullptr, HB_ISNIL(6) ? static_cast<QFileDialog::Options >( 0 ) : static_cast<QFileDialog::Options >( hb_parni(6) ), OPQSTRINGLIST( 7, QStringList() ) );
+    auto list = QFileDialog::getOpenFileUrls( OPQWIDGET( 1, nullptr ), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)), OPQSTRING( 4, QString() ), nullptr, HB_ISNIL(6) ? static_cast<QFileDialog::Options >( 0 ) : static_cast<QFileDialog::Options >( hb_parni(6) ), OPQSTRINGLIST( 7, QStringList() ) );
     auto pDynSym = hb_dynsymFindName("QURL");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets();
+      auto list = obj->associatedGraphicsWidgets();
       auto pDynSym = hb_dynsymFindName("QGRAPHICSWIDGET");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QWidget *> list = obj->associatedWidgets();
+      auto list = obj->associatedWidgets();
       auto pDynSym = hb_dynsymFindName("QWIDGET");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QKeySequence> list = obj->shortcuts();
+      auto list = obj->shortcuts();
       auto pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

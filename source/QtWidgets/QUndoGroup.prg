@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QUndoStack *> list = obj->stacks();
+      auto list = obj->stacks();
       auto pDynSym = hb_dynsymFindName("QUNDOSTACK");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

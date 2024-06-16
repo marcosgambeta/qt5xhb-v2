@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QScroller *> list = QScroller::activeScrollers();
+    auto list = QScroller::activeScrollers();
     auto pDynSym = hb_dynsymFindName("QSCROLLER");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

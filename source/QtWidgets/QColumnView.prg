@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->columnWidths();
+      auto list = obj->columnWidths();
       Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

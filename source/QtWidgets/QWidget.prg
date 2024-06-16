@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAction *> list = obj->actions();
+      auto list = obj->actions();
       auto pDynSym = hb_dynsymFindName("QACTION");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
