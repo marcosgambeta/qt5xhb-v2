@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QWebElement> list = obj->toList();
+      auto list = obj->toList();
       auto pDynSym = hb_dynsymFindName("QWEBELEMENT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
