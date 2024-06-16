@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAbstractAnimation *> list = obj->animations();
+      auto list = obj->animations();
       auto pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAbstractState *> list = obj->targetStates();
+      auto list = obj->targetStates();
       auto pDynSym = hb_dynsymFindName("QABSTRACTSTATE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

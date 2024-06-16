@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QObjectList & list = obj->children();
+      auto list = obj->children();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->dynamicPropertyNames();
+      auto list = obj->dynamicPropertyNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
   
     if( obj != nullptr )
     {
-      const QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
+      auto list = obj->findChildren<QObject *>( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if( obj != nullptr )
     {
-      const QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
+      auto list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if( obj != nullptr )
     {
-      const QList<QObject *> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
+      auto list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

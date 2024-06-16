@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<int> list = obj->segments();
+      auto list = obj->segments();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

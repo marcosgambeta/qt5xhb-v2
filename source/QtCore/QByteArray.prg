@@ -2321,7 +2321,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
     if( ISNUMPAR(1) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) )
     {
 #endif
-      const QList<QByteArray> list = obj->split( PCHAR(1) );
+      auto list = obj->split( PCHAR(1) );
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

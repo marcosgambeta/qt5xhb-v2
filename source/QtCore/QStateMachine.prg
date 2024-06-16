@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAbstractAnimation *> list = obj->defaultAnimations();
+      auto list = obj->defaultAnimations();
       auto pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 
     if( obj != nullptr )
     {
-      const QFileInfoList list = obj->entryInfoList( PQSTRINGLIST(1), HB_ISNIL(2) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(3) ) );
+      auto list = obj->entryInfoList( PQSTRINGLIST(1), HB_ISNIL(2) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(3) ) );
       auto pDynSym = hb_dynsymFindName("QFILEINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 
     if( obj != nullptr )
     {
-      const QFileInfoList list = obj->entryInfoList( HB_ISNIL(1) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(2) ) );
+      auto list = obj->entryInfoList( HB_ISNIL(1) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QDir::SortFlags >( QDir::NoSort ) : static_cast<QDir::SortFlags >( hb_parni(2) ) );
       auto pDynSym = hb_dynsymFindName("QFILEINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QFileInfoList list = QDir::drives();
+    auto list = QDir::drives();
     auto pDynSym = hb_dynsymFindName("QFILEINFO");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QObjectList list = obj->staticInstances();
+      auto list = obj->staticInstances();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

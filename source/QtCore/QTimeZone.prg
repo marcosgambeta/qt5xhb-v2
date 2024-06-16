@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QTimeZone::availableTimeZoneIds();
+    auto list = QTimeZone::availableTimeZoneIds();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    const QList<QByteArray> list = QTimeZone::availableTimeZoneIds( static_cast<QLocale::Country>( hb_parni(1) ) );
+    auto list = QTimeZone::availableTimeZoneIds( static_cast<QLocale::Country>( hb_parni(1) ) );
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    const QList<QByteArray> list = QTimeZone::availableTimeZoneIds( PINT(1) );
+    auto list = QTimeZone::availableTimeZoneIds( PINT(1) );
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    const QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
+    auto list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    const QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), static_cast<QLocale::Country>( hb_parni(2) ) );
+    auto list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), static_cast<QLocale::Country>( hb_parni(2) ) );
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

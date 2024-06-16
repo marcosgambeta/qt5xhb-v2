@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->parameterTypes();
+      auto list = obj->parameterTypes();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->parameterNames();
+      auto list = obj->parameterNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

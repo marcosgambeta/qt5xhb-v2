@@ -1743,7 +1743,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<Qt::DayOfWeek> list = obj->weekdays();
+      auto list = obj->weekdays();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -1854,7 +1854,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
 #endif
-    const QList<QLocale> list = QLocale::matchingLocales( static_cast<QLocale::Language>( hb_parni(1) ), static_cast<QLocale::Script>( hb_parni(2) ), static_cast<QLocale::Country>( hb_parni(3) ) );
+    auto list = QLocale::matchingLocales( static_cast<QLocale::Language>( hb_parni(1) ), static_cast<QLocale::Script>( hb_parni(2) ), static_cast<QLocale::Country>( hb_parni(3) ) );
     auto pDynSym = hb_dynsymFindName("QLOCALE");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

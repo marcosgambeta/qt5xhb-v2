@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QModelIndexList list = obj->indexes();
+      auto list = obj->indexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

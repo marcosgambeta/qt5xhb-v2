@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QByteArray> list = obj->aliases();
+      auto list = obj->aliases();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QTextCodec::availableCodecs();
+    auto list = QTextCodec::availableCodecs();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<int> list = QTextCodec::availableMibs();
+    auto list = QTextCodec::availableMibs();
     Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
