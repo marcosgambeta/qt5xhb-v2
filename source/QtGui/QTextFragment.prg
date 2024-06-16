@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
     if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      const QList<QGlyphRun> list = obj->glyphRuns( OPINT( 1, -1 ), OPINT( 2, -1 ) );
+      auto list = obj->glyphRuns( OPINT( 1, -1 ), OPINT( 2, -1 ) );
       auto pDynSym = hb_dynsymFindName("QGLYPHRUN");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

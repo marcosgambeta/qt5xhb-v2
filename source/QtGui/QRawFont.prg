@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      const QVector<quint32> list = obj->glyphIndexesForString( PQSTRING(1) );
+      auto list = obj->glyphIndexesForString( PQSTRING(1) );
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
         temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
       }
-      const QVector<QPointF> list = obj->advancesForGlyphIndexes( par1 );
+      auto list = obj->advancesForGlyphIndexes( par1 );
       auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems();
+      auto list = obj->supportedWritingSystems();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

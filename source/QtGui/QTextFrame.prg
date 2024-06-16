@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QTextFrame *> list = obj->childFrames();
+      auto list = obj->childFrames();
       auto pDynSym = hb_dynsymFindName("QTEXTFRAME");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

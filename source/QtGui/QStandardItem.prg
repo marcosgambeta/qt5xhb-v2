@@ -2016,7 +2016,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QStandardItem *> list = obj->takeRow( PINT(1) );
+      auto list = obj->takeRow( PINT(1) );
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -2063,7 +2063,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
+      auto list = obj->takeColumn( PINT(1) );
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

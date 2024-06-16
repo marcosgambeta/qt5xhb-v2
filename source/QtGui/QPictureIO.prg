@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QPictureIO::inputFormats();
+    auto list = QPictureIO::inputFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QPictureIO::outputFormats();
+    auto list = QPictureIO::outputFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

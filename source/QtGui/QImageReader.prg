@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QByteArray> list = QImageReader::supportedImageFormats();
+    auto list = QImageReader::supportedImageFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMATSFORMIMETYPE )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    const QList<QByteArray> list = QImageReader::imageFormatsForMimeType( *PQBYTEARRAY(1) );
+    auto list = QImageReader::imageFormatsForMimeType( *PQBYTEARRAY(1) );
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

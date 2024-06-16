@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QAccessibleInterface *> list = obj->selectedCells();
+      auto list = obj->selectedCells();
       auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->selectedColumns();
+      auto list = obj->selectedColumns();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->selectedRows();
+      auto list = obj->selectedRows();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

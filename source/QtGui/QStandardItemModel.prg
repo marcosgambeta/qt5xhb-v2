@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
     if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      const QList<QStandardItem *> list = obj->findItems( PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly ) : static_cast<Qt::MatchFlags >( hb_parni(2) ), OPINT( 3, 0 ) );
+      auto list = obj->findItems( PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly ) : static_cast<Qt::MatchFlags >( hb_parni(2) ), OPINT( 3, 0 ) );
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QStandardItem *> list = obj->takeRow( PINT(1) );
+      auto list = obj->takeRow( PINT(1) );
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
+      auto list = obj->takeColumn( PINT(1) );
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

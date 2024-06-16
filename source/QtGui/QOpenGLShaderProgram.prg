@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QOpenGLShader *> list = obj->shaders();
+      auto list = obj->shaders();
       auto pDynSym = hb_dynsymFindName("QOPENGLSHADER");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QScreen *> list = obj->virtualSiblings();
+      auto list = obj->virtualSiblings();
       auto pDynSym = hb_dynsymFindName("QSCREEN");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

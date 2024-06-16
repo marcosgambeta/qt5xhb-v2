@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<qreal> list = obj->dashPattern();
+      auto list = obj->dashPattern();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

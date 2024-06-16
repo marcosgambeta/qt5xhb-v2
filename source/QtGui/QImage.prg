@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QVector<QRgb> list = obj->colorTable();
+      auto list = obj->colorTable();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

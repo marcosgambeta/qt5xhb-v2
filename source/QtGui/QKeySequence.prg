@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    const QList<QKeySequence> list = QKeySequence::keyBindings( static_cast<QKeySequence::StandardKey>( hb_parni(1) ) );
+    auto list = QKeySequence::keyBindings( static_cast<QKeySequence::StandardKey>( hb_parni(1) ) );
     auto pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )

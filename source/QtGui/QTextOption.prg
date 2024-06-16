@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<qreal> list = obj->tabArray();
+      auto list = obj->tabArray();
       Qt5xHb::convert_qlist_qreal_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

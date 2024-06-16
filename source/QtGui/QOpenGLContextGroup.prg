@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QOpenGLContext *> list = obj->shares();
+      auto list = obj->shares();
       auto pDynSym = hb_dynsymFindName("QOPENGLCONTEXT");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )

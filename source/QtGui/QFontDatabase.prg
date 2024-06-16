@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QList<int> list = obj->pointSizes( PQSTRING(1), OPQSTRING( 2, QString() ) );
+      auto list = obj->pointSizes( PQSTRING(1), OPQSTRING( 2, QString() ) );
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      QList<int> list = obj->smoothSizes( PQSTRING(1), PQSTRING(2) );
+      auto list = obj->smoothSizes( PQSTRING(1), PQSTRING(2) );
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<int> list = QFontDatabase::standardSizes();
+    auto list = QFontDatabase::standardSizes();
     Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
