@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 
     if( obj != nullptr )
     {
-      const QList<QGeoAreaMonitorInfo> list = obj->activeMonitors();
+      auto list = obj->activeMonitors();
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 
     if( obj != nullptr )
     {
-      const QList<QGeoAreaMonitorInfo> list = obj->activeMonitors( *PQGEOSHAPE(1) );
+      auto list = obj->activeMonitors( *PQGEOSHAPE(1) );
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
