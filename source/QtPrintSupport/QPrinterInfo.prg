@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPrinter::PaperSize> list = obj->supportedPaperSizes();
+      auto list = obj->supportedPaperSizes();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QList<QPrinterInfo> list = QPrinterInfo::availablePrinters();
+    auto list = QPrinterInfo::availablePrinters();
     auto pDynSym = hb_dynsymFindName("QPRINTERINFO");
     auto pArray = hb_itemArrayNew(0);
     if( pDynSym != nullptr )
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPageSize> list = obj->supportedPageSizes();
+      auto list = obj->supportedPageSizes();
       auto pDynSym = hb_dynsymFindName("QPAGESIZE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->supportedResolutions();
+      auto list = obj->supportedResolutions();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPrinter::DuplexMode> list = obj->supportedDuplexModes();
+      auto list = obj->supportedDuplexModes();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {

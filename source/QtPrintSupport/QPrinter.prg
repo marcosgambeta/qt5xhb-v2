@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QList<QPrinter::PaperSource> list = obj->supportedPaperSources();
+      auto list = obj->supportedPaperSources();
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->supportedResolutions();
+      auto list = obj->supportedResolutions();
       Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
