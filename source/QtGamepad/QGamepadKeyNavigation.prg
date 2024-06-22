@@ -118,9 +118,9 @@ QGamepadKeyNavigation( QObject * parent = nullptr )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGamepadKeyNavigation( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QGamepadKeyNavigation( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->active() );
+      RBOOL(obj->active());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setActive( PBOOL(1) );
+      obj->setActive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_GAMEPAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->gamepad();
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETGAMEPAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGAMEPAD(1) )
+    if (ISNUMPAR(1) && ISQGAMEPAD(1))
     {
 #endif
-      obj->setGamepad( PQGAMEPAD(1) );
+      obj->setGamepad(PQGAMEPAD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,10 +250,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_UPKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->upKey() );
+      RENUM(obj->upKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,10 +276,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETUPKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUpKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setUpKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,10 +304,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_DOWNKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->downKey() );
+      RENUM(obj->downKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,10 +330,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETDOWNKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDownKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setDownKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,10 +358,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_LEFTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->leftKey() );
+      RENUM(obj->leftKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,10 +384,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETLEFTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLeftKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setLeftKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,10 +412,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_RIGHTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->rightKey() );
+      RENUM(obj->rightKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,10 +438,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETRIGHTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRightKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setRightKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,10 +466,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONAKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonAKey() );
+      RENUM(obj->buttonAKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,10 +492,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONAKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonAKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonAKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,10 +520,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONBKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonBKey() );
+      RENUM(obj->buttonBKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,10 +546,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONBKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonBKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonBKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,10 +574,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONXKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonXKey() );
+      RENUM(obj->buttonXKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,10 +600,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONXKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonXKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonXKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,10 +628,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONYKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonYKey() );
+      RENUM(obj->buttonYKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,10 +654,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONYKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonYKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonYKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,10 +682,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONSELECTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonSelectKey() );
+      RENUM(obj->buttonSelectKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,10 +708,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSELECTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonSelectKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonSelectKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,10 +736,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONSTARTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonStartKey() );
+      RENUM(obj->buttonStartKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -762,10 +762,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSTARTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonStartKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonStartKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -790,10 +790,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONGUIDEKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonGuideKey() );
+      RENUM(obj->buttonGuideKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -816,10 +816,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONGUIDEKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonGuideKey( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonGuideKey( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -844,10 +844,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL1KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonL1Key() );
+      RENUM(obj->buttonL1Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,10 +870,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL1KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonL1Key( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonL1Key( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -898,10 +898,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR1KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonR1Key() );
+      RENUM(obj->buttonR1Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,10 +924,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR1KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonR1Key( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonR1Key( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -952,10 +952,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL2KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonL2Key() );
+      RENUM(obj->buttonL2Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -978,10 +978,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL2KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonL2Key( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonL2Key( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1006,10 +1006,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR2KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonR2Key() );
+      RENUM(obj->buttonR2Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1032,10 +1032,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR2KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonR2Key( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonR2Key( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1060,10 +1060,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL3KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonL3Key() );
+      RENUM(obj->buttonL3Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1086,10 +1086,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL3KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonL3Key( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonL3Key( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1114,10 +1114,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR3KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonR3Key() );
+      RENUM(obj->buttonR3Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1140,10 +1140,10 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR3KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonR3Key( static_cast<Qt::Key>( hb_parni(1) ) );
+      obj->setButtonR3Key( static_cast<Qt::Key>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gamepadChanged(QGamepad*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("upKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("downKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1388,7 +1388,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("leftKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rightKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1467,7 +1467,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonAKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1521,7 +1521,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonBKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1575,7 +1575,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1604,7 +1604,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonXKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1658,7 +1658,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonYKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1712,7 +1712,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonSelectKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1737,7 +1737,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1766,7 +1766,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonStartKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1791,7 +1791,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1820,7 +1820,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonGuideKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1845,7 +1845,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1874,7 +1874,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL1KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1928,7 +1928,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR1KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1953,7 +1953,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1982,7 +1982,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL2KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2007,7 +2007,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2036,7 +2036,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR2KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2061,7 +2061,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2090,7 +2090,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL3KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2115,7 +2115,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2144,7 +2144,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR3KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2169,7 +2169,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
