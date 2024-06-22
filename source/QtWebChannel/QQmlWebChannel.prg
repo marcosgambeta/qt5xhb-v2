@@ -60,9 +60,9 @@ QQmlWebChannel( QObject * parent = nullptr )
 HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QQmlWebChannel( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QQmlWebChannel( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -103,10 +103,10 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->connectTo( PQOBJECT(1) );
+      obj->connectTo(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->disconnectFrom( PQOBJECT(1) );
+      obj->disconnectFrom(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

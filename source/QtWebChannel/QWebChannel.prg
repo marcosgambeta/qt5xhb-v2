@@ -66,9 +66,9 @@ QWebChannel( QObject * parent = nullptr )
 HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWebChannel( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QWebChannel( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
     {
 #endif
-      obj->registerObject( PQSTRING(1), PQOBJECT(2) );
+      obj->registerObject(PQSTRING(1), PQOBJECT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->deregisterObject( PQOBJECT(1) );
+      obj->deregisterObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,10 +165,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->blockUpdates() );
+      RBOOL(obj->blockUpdates());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setBlockUpdates( PBOOL(1) );
+      obj->setBlockUpdates(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
+    if (ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1))
     {
 #endif
-      obj->connectTo( PQWEBCHANNELABSTRACTTRANSPORT(1) );
+      obj->connectTo(PQWEBCHANNELABSTRACTTRANSPORT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,10 +247,10 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
+    if (ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1))
     {
 #endif
-      obj->disconnectFrom( PQWEBCHANNELABSTRACTTRANSPORT(1) );
+      obj->disconnectFrom(PQWEBCHANNELABSTRACTTRANSPORT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("blockUpdatesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
