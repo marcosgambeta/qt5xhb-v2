@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->items();
@@ -164,10 +164,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto list = obj->backItems( PINT(1) );
+      auto list = obj->backItems(PINT(1));
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -216,10 +216,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto list = obj->forwardItems( PINT(1) );
+      auto list = obj->forwardItems(PINT(1));
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -268,10 +268,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canGoBack() );
+      RBOOL(obj->canGoBack());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canGoForward() );
+      RBOOL(obj->canGoForward());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->back();
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forward();
@@ -376,10 +376,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1) )
+    if (ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1))
     {
 #endif
-      obj->goToItem( *PQWEBENGINEHISTORYITEM(1) );
+      obj->goToItem( *PQWEBENGINEHISTORYITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,10 +404,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QWebEngineHistoryItem( obj->backItem() );
+      auto ptr = new QWebEngineHistoryItem(obj->backItem());
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -431,10 +431,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QWebEngineHistoryItem( obj->currentItem() );
+      auto ptr = new QWebEngineHistoryItem(obj->currentItem());
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -458,10 +458,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QWebEngineHistoryItem( obj->forwardItem() );
+      auto ptr = new QWebEngineHistoryItem(obj->forwardItem());
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QWebEngineHistoryItem( obj->itemAt( PINT(1) ) );
+      auto ptr = new QWebEngineHistoryItem(obj->itemAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -512,10 +512,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentItemIndex() );
+      RINT(obj->currentItemIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,10 +538,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -585,12 +585,12 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROM )
 
 HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QWEBENGINEHISTORY_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINEHISTORY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QWEBENGINEHISTORY_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINEHISTORY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWEBENGINEHISTORY_SELFDESTRUCTION )
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

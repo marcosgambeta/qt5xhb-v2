@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     auto ptr = QWebEngineSettings::globalSettings();
@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->fontFamily( static_cast<QWebEngineSettings::FontFamily>( hb_parni(1) ) ) );
+      RQSTRING(obj->fontFamily( static_cast<QWebEngineSettings::FontFamily>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,10 +128,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setFontFamily( static_cast<QWebEngineSettings::FontFamily>( hb_parni(1) ), PQSTRING(2) );
+      obj->setFontFamily( static_cast<QWebEngineSettings::FontFamily>( hb_parni(1)), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTFAMILY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetFontFamily( static_cast<QWebEngineSettings::FontFamily>( hb_parni(1) ) );
+      obj->resetFontFamily( static_cast<QWebEngineSettings::FontFamily>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fontSize( static_cast<QWebEngineSettings::FontSize>( hb_parni(1) ) ) );
+      RINT(obj->fontSize( static_cast<QWebEngineSettings::FontSize>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,10 +210,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setFontSize( static_cast<QWebEngineSettings::FontSize>( hb_parni(1) ), PINT(2) );
+      obj->setFontSize( static_cast<QWebEngineSettings::FontSize>( hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,10 +238,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetFontSize( static_cast<QWebEngineSettings::FontSize>( hb_parni(1) ) );
+      obj->resetFontSize( static_cast<QWebEngineSettings::FontSize>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,10 +266,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setAttribute( static_cast<QWebEngineSettings::WebAttribute>( hb_parni(1) ), PBOOL(2) );
+      obj->setAttribute( static_cast<QWebEngineSettings::WebAttribute>( hb_parni(1)), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->testAttribute( static_cast<QWebEngineSettings::WebAttribute>( hb_parni(1) ) ) );
+      RBOOL(obj->testAttribute( static_cast<QWebEngineSettings::WebAttribute>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETATTRIBUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetAttribute( static_cast<QWebEngineSettings::WebAttribute>( hb_parni(1) ) );
+      obj->resetAttribute( static_cast<QWebEngineSettings::WebAttribute>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,10 +348,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_DEFAULTTEXTENCODING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->defaultTextEncoding() );
+      RQSTRING(obj->defaultTextEncoding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,10 +374,10 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setDefaultTextEncoding( PQSTRING(1) );
+      obj->setDefaultTextEncoding(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -423,12 +423,12 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROM )
 
 HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QWEBENGINESETTINGS_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINESETTINGS_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWEBENGINESETTINGS_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QWEBENGINESETTINGS_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINESETTINGS_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWEBENGINESETTINGS_SELFDESTRUCTION )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

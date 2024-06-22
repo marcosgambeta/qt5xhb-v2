@@ -73,9 +73,9 @@ QWebEngineHistoryItem( const QWebEngineHistoryItem & other )
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1) )
+  if (ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1))
   {
-    auto obj = new QWebEngineHistoryItem( *PQWEBENGINEHISTORYITEM(1) );
+    auto obj = new QWebEngineHistoryItem( *PQWEBENGINEHISTORYITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->originalUrl() );
+      auto ptr = new QUrl(obj->originalUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->url() );
+      auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -168,10 +168,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,10 +194,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDateTime( obj->lastVisited() );
+      auto ptr = new QDateTime(obj->lastVisited());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,10 +221,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->iconUrl() );
+      auto ptr = new QUrl(obj->iconUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -248,10 +248,10 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -295,12 +295,12 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROM )
 
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QWEBENGINEHISTORYITEM_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINEHISTORYITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QWEBENGINEHISTORYITEM_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINEHISTORYITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_SELFDESTRUCTION )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
