@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->identifier() );
+      RQSTRING(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->productType() );
+      RENUM(obj->productType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->price() );
+      RQSTRING(obj->price());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->description() );
+      RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->purchase();
