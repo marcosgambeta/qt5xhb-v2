@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLRELATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSqlRelation()
@@ -70,12 +70,12 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     /*
     QSqlRelation( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
     */
-    auto obj = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    auto obj = new QSqlRelation(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -111,10 +111,10 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->displayColumn() );
+      RQSTRING(obj->displayColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->indexColumn() );
+      RQSTRING(obj->indexColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,10 +183,10 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->tableName() );
+      RQSTRING(obj->tableName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -229,12 +229,12 @@ HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
 
 HB_FUNC_STATIC( QSQLRELATION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSQLRELATION_NEWFROM );
+  HB_FUNC_EXEC(QSQLRELATION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSQLRELATION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSQLRELATION_NEWFROM );
+  HB_FUNC_EXEC(QSQLRELATION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSQLRELATION_SELFDESTRUCTION )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSQLRELATION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

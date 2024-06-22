@@ -55,21 +55,21 @@ RETURN
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
     */
-    auto obj = new QSqlIndex( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ) );
+    auto obj = new QSqlIndex( OPQSTRING(1, QString() ), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSQLINDEX(1) )
+  else if (ISNUMPAR(1) && ISQSQLINDEX(1))
   {
     /*
     QSqlIndex( const QSqlIndex & other )
     */
-    auto obj = new QSqlIndex( *PQSQLINDEX(1) );
+    auto obj = new QSqlIndex( *PQSQLINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
 
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {
-  if( ISNUMPAR(1) && ISQSQLFIELD(1) )
+  if (ISNUMPAR(1) && ISQSQLFIELD(1))
   {
     /*
     void append( const QSqlField & field )
@@ -106,13 +106,13 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 
     if (obj != nullptr)
     {
-      obj->append( *PQSQLFIELD(1) );
+      obj->append( *PQSQLFIELD(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2) )
+  else if (ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2))
   {
     /*
     void append( const QSqlField & field, bool desc )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 
     if (obj != nullptr)
     {
-      obj->append( *PQSQLFIELD(1), PBOOL(2) );
+      obj->append( *PQSQLFIELD(1), PBOOL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->cursorName() );
+      RQSTRING(obj->cursorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCursorName( PQSTRING(1) );
+      obj->setCursorName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,10 +193,10 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isDescending( PINT(1) ) );
+      RBOOL(obj->isDescending(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,10 +217,10 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setDescending( PINT(1), PBOOL(2) );
+      obj->setDescending(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,10 +243,10 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,10 +267,10 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
