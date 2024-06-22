@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothTransferManager * ptr = obj->manager();
+      auto ptr = obj->manager();
       Qt5xHb::createReturnQObjectClass(ptr, "QBLUETOOTHTRANSFERMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

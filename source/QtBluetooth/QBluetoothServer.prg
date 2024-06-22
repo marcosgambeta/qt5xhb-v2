@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothSocket * ptr = obj->nextPendingConnection();
+      auto ptr = obj->nextPendingConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QBLUETOOTHSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
