@@ -63,9 +63,9 @@ QBoxPlotLegendMarker( QBoxPlotSeries * series, QLegend * legend, QObject * paren
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(2, 3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QBoxPlotLegendMarker( PQBOXPLOTSERIES(1), PQLEGEND(2), OPQOBJECT( 3, nullptr ) );
+    auto obj = new QBoxPlotLegendMarker(PQBOXPLOTSERIES(1), PQLEGEND(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->series();
