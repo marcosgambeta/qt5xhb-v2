@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoPositionInfoSource * ptr = obj->positionInfoSource();
+      auto ptr = obj->positionInfoSource();
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource( PQOBJECT(1) );
+    auto ptr = QGeoAreaMonitorSource::createDefaultSource( PQOBJECT(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
 #endif
-    QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource( PQSTRING(1), PQOBJECT(2) );
+    auto ptr = QGeoAreaMonitorSource::createSource( PQSTRING(1), PQOBJECT(2) );
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

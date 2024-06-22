@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QGeoPositionInfoSource * ptr = obj->positionInfoSource( PQOBJECT(1) );
+      auto ptr = obj->positionInfoSource( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QGeoSatelliteInfoSource * ptr = obj->satelliteInfoSource( PQOBJECT(1) );
+      auto ptr = obj->satelliteInfoSource( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOSATELLITEINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QGeoAreaMonitorSource * ptr = obj->areaMonitor( PQOBJECT(1) );
+      auto ptr = obj->areaMonitor( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource( PQOBJECT(1) );
+    auto ptr = QGeoPositionInfoSource::createDefaultSource( PQOBJECT(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
 #endif
-    QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
+    auto ptr = QGeoPositionInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

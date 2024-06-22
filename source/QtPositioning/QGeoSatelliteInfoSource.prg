@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource( PQOBJECT(1) );
+    auto ptr = QGeoSatelliteInfoSource::createDefaultSource( PQOBJECT(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOSATELLITEINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATESOURCE )
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
 #endif
-    QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
+    auto ptr = QGeoSatelliteInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOSATELLITEINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
