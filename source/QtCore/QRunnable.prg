@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QRUNNABLE_DELETE )
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QRUNNABLE_RUN )
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )

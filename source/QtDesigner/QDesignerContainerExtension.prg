@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
 {
   auto obj = static_cast<QDesignerContainerExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

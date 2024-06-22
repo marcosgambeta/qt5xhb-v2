@@ -117,7 +117,7 @@ HB_FUNC_STATIC( Q3DSCENE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DCAMERA(1) )
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DLIGHT(1) )
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DScene*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )

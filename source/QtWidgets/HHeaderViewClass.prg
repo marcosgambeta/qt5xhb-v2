@@ -60,7 +60,7 @@ HB_FUNC_STATIC( HHEADERVIEW_DELETE )
 {
   auto obj = (HHeaderView *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( HHEADERVIEW_SETPAINTSECTIONCB )
 {
   auto obj = (HHeaderView *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )

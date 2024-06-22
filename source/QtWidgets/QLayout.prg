@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QLAYOUT_DELETE )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDITEM )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLAYOUTITEM(1) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QLAYOUT_ISENABLED )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLAYOUTITEM(1) )
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -434,7 +434,7 @@ void QLayout_setAlignment1()
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     RBOOL( obj->setAlignment( PQWIDGET(1), static_cast<Qt::Alignment>( hb_parni(2) ) ) );
   }
@@ -447,7 +447,7 @@ void QLayout_setAlignment2()
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1) ) );
   }
@@ -462,7 +462,7 @@ void QLayout_setAlignment3()
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     RBOOL( obj->setAlignment( PQLAYOUT(1), static_cast<Qt::Alignment>( hb_parni(2) ) ) );
   }
@@ -495,7 +495,7 @@ void QLayout_setContentsMargins1()
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     obj->setContentsMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
@@ -510,7 +510,7 @@ void QLayout_setContentsMargins2()
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     obj->setContentsMargins( *PQMARGINS(1) );
   }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QLAYOUT_SETENABLED )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QLAYOUT_SPACING )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QLAYOUT_UPDATE )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QLAYOUT_LAYOUT )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_DELETE )
 {
   auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
 {
   auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
 {
   auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
 {
   auto obj = static_cast<QScrollEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

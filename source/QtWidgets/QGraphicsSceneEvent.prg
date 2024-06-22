@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 {
   auto obj = static_cast<QGraphicsSceneEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
 {
   auto obj = static_cast<QGraphicsSceneEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

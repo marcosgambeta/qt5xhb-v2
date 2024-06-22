@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 {
   auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
     */
     auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addObject( PQAXBASE(1) );
     }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
     */
     auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addObject( PQOBJECT(1) );
     }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
     */
     auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QVariant( obj->call( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(4)), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(5)), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(6)), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(7)), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(8)), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(9)) ) );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
     */
     auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QVariant( obj->call( PQSTRING(1), PQVARIANTLIST(2) ) );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 {
   auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
     */
     auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->load( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
     */
     auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->load( PQSTRING(1), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 {
   auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 {
   auto obj = qobject_cast<QAxScriptManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

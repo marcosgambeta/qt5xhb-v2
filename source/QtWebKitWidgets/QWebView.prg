@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QWEBVIEW_DELETE )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETURL )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDHTML )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWEBVIEW_HASSELECTION )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
     */
     auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->load( *PQURL(1) );
     }
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
     */
     auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >( hb_parni(2) ), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)) );
     }
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 #ifndef QT_NO_ACTION
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( ISQURL(3) || HB_ISNIL(3) ) )
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBPAGE(1) )
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QWEBVIEW_BACK )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QWEBVIEW_PRINT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPRINTER(1) )
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QWEBVIEW_STOP )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QWEBVIEW_INPUTMETHODQUERY )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QWEBVIEW_SIZEHINT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QWEBVIEW_EVENT )
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )

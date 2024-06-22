@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNORMALIZED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVERSIONNUMBER(1) )
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MAJORVERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MICROVERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MINORVERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NORMALIZED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTCOUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

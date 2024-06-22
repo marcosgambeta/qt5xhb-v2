@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_DELETE )
 {
   auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
 {
   auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
 {
   auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
 {
   auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
 {
   auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 {
   auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
     */
     auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->sendErrorReply( PQSTRING(1), OPQSTRING( 2, QString() ) );
     }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
     */
     auto obj = static_cast<QDBusContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni(1) ), OPQSTRING( 2, QString() ) );
     }

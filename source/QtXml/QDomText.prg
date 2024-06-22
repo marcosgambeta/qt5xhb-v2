@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDOMTEXT_DELETE )
 {
   auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
   auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
   auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_DELETE )
 {
   auto obj = static_cast<QAccessibleEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
 {
   auto obj = static_cast<QAccessibleEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 {
   auto obj = static_cast<QAccessibleEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
 {
   auto obj = static_cast<QAccessibleEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
   auto obj = static_cast<QAccessibleEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
 {
   auto obj = static_cast<QAccessibleEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

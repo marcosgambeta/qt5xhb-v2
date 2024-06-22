@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_POS )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GLOBALPOS )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
 {
   auto obj = static_cast<QNativeGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

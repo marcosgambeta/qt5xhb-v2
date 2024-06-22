@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 {
   auto obj = static_cast<QActionEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
   auto obj = static_cast<QActionEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
   auto obj = static_cast<QActionEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

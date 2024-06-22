@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2) )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) )
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIODEVICE(1) )

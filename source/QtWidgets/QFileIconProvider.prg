@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
 {
   auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
     */
     auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QIcon( obj->icon( static_cast<QFileIconProvider::IconType>( hb_parni(1) ) ) );
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
     */
     auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QIcon( obj->icon( *PQFILEINFO(1) ) );
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
 {
   auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFILEINFO(1) )

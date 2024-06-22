@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
   auto obj = static_cast<QKeySequence*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
   auto obj = static_cast<QKeySequence*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
   auto obj = static_cast<QKeySequence*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
   auto obj = static_cast<QKeySequence*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
   auto obj = static_cast<QKeySequence*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
   auto obj = qobject_cast<QIntValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DELETE )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CREATE )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DONECURRENT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_HASEXTENSION )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ISVALID )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_MAKECURRENT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACE(1) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETFORMAT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETSCREEN )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSCREEN(1) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETSHARECONTEXT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOPENGLCONTEXT(1) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SWAPBUFFERS )
 {
   auto obj = qobject_cast<QOpenGLContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACE(1) )

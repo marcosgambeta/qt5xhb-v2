@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
 {
   auto obj = static_cast<QSGOpacityNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
 {
   auto obj = static_cast<QSGOpacityNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
 {
   auto obj = static_cast<QSGOpacityNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

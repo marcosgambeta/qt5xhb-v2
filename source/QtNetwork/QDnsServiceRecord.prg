@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_DELETE )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDNSSERVICERECORD(1) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
 {
   auto obj = static_cast<QDnsServiceRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

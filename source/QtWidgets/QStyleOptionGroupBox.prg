@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 {
   auto obj = static_cast<QStyleOptionGroupBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DELETE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
     */
     auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addDockWidget( static_cast<Qt::DockWidgetArea>( hb_parni(1) ), PQDOCKWIDGET(2) );
     }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
     */
     auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addDockWidget( static_cast<Qt::DockWidgetArea>( hb_parni(1) ), PQDOCKWIDGET(2), static_cast<Qt::Orientation>( hb_parni(3) ) );
     }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
     */
     auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addToolBar( static_cast<Qt::ToolBarArea>( hb_parni(1) ), PQTOOLBAR(2) );
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
     */
     auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addToolBar( PQTOOLBAR(1) );
     }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
     */
     auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addToolBar( PQSTRING(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR");
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CORNER )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQTOOLBAR(1) && ISQTOOLBAR(2) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTOOLBAR(1) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTOOLBAR(1) )
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTOOLBAR(1) )
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMENUBAR(1) )
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSTATUSBAR(1) )
@@ -944,7 +944,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3) )
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) )
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTOOLBAR(1) )
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTOOLBAR(1) )
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
 {
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1272,7 +1272,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QMainWindow*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

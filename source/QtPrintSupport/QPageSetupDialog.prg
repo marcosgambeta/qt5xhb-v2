@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

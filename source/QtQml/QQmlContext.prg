@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_DELETE )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ISVALID )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_NAMEFOROBJECT )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
 {
   auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
     */
     auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setContextProperty( PQSTRING(1), PQOBJECT(2) );
     }
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
     */
     auto obj = qobject_cast<QQmlContext*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setContextProperty( PQSTRING(1), *PQVARIANT(2) );
     }

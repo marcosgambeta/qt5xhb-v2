@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QHOSTINFO_DELETE )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QHOSTINFO_SWAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQHOSTINFO(1) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 {
   auto obj = static_cast<QHostInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( HUILOADER_DELETE )
 {
   auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
 {
   auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
 {
   auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
 {
   auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEWIDGETCB )
 {
   auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )

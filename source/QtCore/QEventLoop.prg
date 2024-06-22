@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 {
   auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
   auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
   auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
   auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
     */
     auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->processEvents( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >( hb_parni(1) ) ) );
     }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
     */
     auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->processEvents( static_cast<QEventLoop::ProcessEventsFlags>( hb_parni(1) ), PINT(2) );
     }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
   auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
   auto obj = qobject_cast<QEventLoop*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

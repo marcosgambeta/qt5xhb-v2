@@ -110,7 +110,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DELETE )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDESTROYEDITORCB )
 {
   auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) )

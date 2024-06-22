@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {
   auto obj = static_cast<QWebHistoryItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

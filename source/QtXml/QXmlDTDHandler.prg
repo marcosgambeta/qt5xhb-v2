@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )

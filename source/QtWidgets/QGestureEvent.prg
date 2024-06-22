@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->accept();
     }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->accept( PQGESTURE(1) );
     }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->accept( static_cast<Qt::GestureType>( hb_parni(1) ) );
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->ignore();
     }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->ignore( PQGESTURE(1) );
     }
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->ignore( static_cast<Qt::GestureType>( hb_parni(1) ) );
     }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->isAccepted() );
     }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->isAccepted( PQGESTURE(1) ) );
     }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->isAccepted( static_cast<Qt::GestureType>( hb_parni(1) ) ) );
     }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setAccepted( PBOOL(1) );
     }
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setAccepted( PQGESTURE(1), PBOOL(2) );
     }
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setAccepted( static_cast<Qt::GestureType>( hb_parni(1) ), PBOOL(2) );
     }
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

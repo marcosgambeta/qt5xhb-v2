@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR )
 {
   auto obj = static_cast<QStyleOptionDockWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISLOG(1) )
     {

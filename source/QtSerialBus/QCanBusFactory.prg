@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QCANBUSFACTORY_CREATEDEVICE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = static_cast<QCanBusFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) )

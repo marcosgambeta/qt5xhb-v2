@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QREADLOCKER_DELETE )
 {
   auto obj = static_cast<QReadLocker*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
 {
   auto obj = static_cast<QReadLocker*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QREADLOCKER_RELOCK )
 {
   auto obj = static_cast<QReadLocker*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
 {
   auto obj = static_cast<QReadLocker*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

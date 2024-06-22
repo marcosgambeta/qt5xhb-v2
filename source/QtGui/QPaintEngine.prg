@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DELETE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTDEVICE(1) )
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
     */
     auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->drawEllipse( *PQRECTF(1) );
     }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
     */
     auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->drawEllipse( *PQRECT(1) );
     }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQRECTF(3) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQPOINTF(1) && ISQTEXTITEM(2) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQPOINTF(3) )
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QPAINTENGINE_END )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QPAINTENGINE_TYPE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
 {
   auto obj = static_cast<QPaintEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTENGINESTATE(1) )

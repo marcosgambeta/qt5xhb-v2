@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QCOLORSPACE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SWAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLORSPACE(1) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCOLORSPACE_PRIMARIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCOLORSPACE_TRANSFERFUNCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QCOLORSPACE_GAMMA )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETTRANSFERFUNCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setPrimaries( static_cast<QColorSpace::Primaries>( hb_parni(1) ) );
     }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
     auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setPrimaries( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4) );
     }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QCOLORSPACE_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QCOLORSPACE_ICCPROFILE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = static_cast<QColorSpace*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQUNDOGROUP(1) )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQUNDOSTACK(1) )

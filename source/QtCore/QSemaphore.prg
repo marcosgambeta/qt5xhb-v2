@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 {
   auto obj = static_cast<QSemaphore*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 {
   auto obj = static_cast<QSemaphore*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
     */
     auto obj = static_cast<QSemaphore*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
     }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
     */
     auto obj = static_cast<QSemaphore*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 {
   auto obj = static_cast<QSemaphore*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 {
   auto obj = static_cast<QSemaphore*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

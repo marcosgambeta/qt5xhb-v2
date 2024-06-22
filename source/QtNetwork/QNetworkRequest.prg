@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_DELETE )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SWAP )
 {
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_MAXIMUMREDIRECTSALLOWED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETMAXIMUMREDIRECTSALLOWED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QNetworkRequest*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

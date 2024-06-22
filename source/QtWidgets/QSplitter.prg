@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSPLITTER_DELETE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSPLITTER_REFRESH )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 {
   auto obj = qobject_cast<QSplitter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

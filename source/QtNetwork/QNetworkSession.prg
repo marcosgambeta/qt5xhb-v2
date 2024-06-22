@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_STATE )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_USAGEPOLICIES )
 {
   auto obj = qobject_cast<QNetworkSession*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
   auto obj = static_cast<QItemEditorFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
 {
   auto obj = static_cast<QItemEditorFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 {
   auto obj = static_cast<QItemEditorFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
 {
   auto obj = static_cast<QItemEditorFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQITEMEDITORCREATORBASE(2) )

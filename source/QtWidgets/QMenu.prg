@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMENU_DELETE )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMENU_ACTIONAT )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addAction( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3), HB_ISNIL(4) ? 0 : *static_cast<QKeySequence*>(Qt5xHb::itemGetPtr(4)) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4), HB_ISNIL(5) ? 0 : *static_cast<QKeySequence*>(Qt5xHb::itemGetPtr(5)) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addAction( PQACTION(1) );
     }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addMenu( PQMENU(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addMenu( PQSTRING(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addMenu( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QMENU_CLEAR )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->exec();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
     */
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->exec( *PQPOINT(1), OPQACTION( 2, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QMENU_ICON )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QMENU_SETICON )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QMENU_INSERTMENU )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQACTION(1) && ISQMENU(2) )
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQACTION(1) )
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QMENU_ISEMPTY )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QMENU_MENUACTION )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && ISQPOINT(1) && ( ISQACTION(2) || HB_ISNIL(2) ) )
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QMENU_TITLE )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QMENU_SETTITLE )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QMENU_SIZEHINT )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QMENU_WCEMENU )
 #ifdef Q_OS_WINCE
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QMENU_ADDSECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addSection( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QMENU_ADDSECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->addSection( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QMENU_INSERTSECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->insertSection( PQACTION(1), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QMENU_INSERTSECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->insertSection( PQACTION(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(2)) : QIcon( hb_parc(2) ), PQSTRING(3) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QMENU_SETNOREPLAYFOR )
 {
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QMENU_SETASDOCKMENU )
 #ifdef Q_OS_OSX
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QMENU_TOOLTIPSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QMENU_SETTOOLTIPSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QMENU_TONSMENU )
 #ifdef Q_OS_OSX
   auto obj = qobject_cast<QMenu*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

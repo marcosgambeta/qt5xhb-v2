@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLREADER_DELETE )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLINPUTSOURCE(1) )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLCONTENTHANDLER(1) )
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLDTDHANDLER(1) )
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLDECLHANDLER(1) )
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLENTITYRESOLVER(1) )
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLERRORHANDLER(1) )
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLLEXICALHANDLER(1) )
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
 {
   auto obj = static_cast<QXmlReader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2) )

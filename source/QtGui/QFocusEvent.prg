@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

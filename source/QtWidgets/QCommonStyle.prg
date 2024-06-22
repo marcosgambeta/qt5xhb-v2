@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 {
   auto obj = qobject_cast<QCommonStyle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

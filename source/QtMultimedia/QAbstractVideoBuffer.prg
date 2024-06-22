@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
   auto obj = static_cast<QAbstractVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
   auto obj = static_cast<QAbstractVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
   auto obj = static_cast<QAbstractVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
   auto obj = static_cast<QAbstractVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
   auto obj = static_cast<QAbstractVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_RELEASE )
 {
   auto obj = static_cast<QAbstractVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

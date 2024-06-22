@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addRow( PQWIDGET(1), PQWIDGET(2) );
     }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addRow( PQWIDGET(1), PQLAYOUT(2) );
     }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addRow( PQSTRING(1), PQWIDGET(2) );
     }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addRow( PQSTRING(1), PQLAYOUT(2) );
     }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addRow( PQWIDGET(1) );
     }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->addRow( PQLAYOUT(1) );
     }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->insertRow( PINT(1), PQWIDGET(2), PQWIDGET(3) );
     }
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->insertRow( PINT(1), PQWIDGET(2), PQLAYOUT(3) );
     }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->insertRow( PINT(1), PQSTRING(2), PQWIDGET(3) );
     }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->insertRow( PINT(1), PQSTRING(2), PQLAYOUT(3) );
     }
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->insertRow( PINT(1), PQWIDGET(2) );
     }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->insertRow( PINT(1), PQLAYOUT(2) );
     }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->itemAt( PINT(1), static_cast<QFormLayout::ItemRole>( hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->itemAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->labelForField( PQWIDGET(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     */
     auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->labelForField( PQLAYOUT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQLAYOUTITEM(3) )
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQLAYOUT(3) )
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3) )
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLAYOUTITEM(1) )
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECT(1) )
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
 {
   auto obj = qobject_cast<QFormLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

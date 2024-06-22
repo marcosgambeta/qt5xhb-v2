@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_DELETE )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_OID )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NAME )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_VALUE )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISCRITICAL )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISSUPPORTED )
 {
   auto obj = static_cast<QSslCertificateExtension*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

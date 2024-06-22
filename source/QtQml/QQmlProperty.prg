@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
     */
     auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->connectNotifySignal( PQOBJECT(1), PCONSTCHAR(2) ) );
     }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
     */
     auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->connectNotifySignal( PQOBJECT(1), PINT(2) ) );
     }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_HASNOTIFYSIGNAL )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_INDEX )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISDESIGNABLE )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISPROPERTY )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISRESETTABLE )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISSIGNALPROPERTY )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISVALID )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISWRITABLE )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_METHOD )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NAME )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEEDSNOTIFYSIGNAL )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_OBJECT )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTY )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
     */
     auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QVariant( obj->read() );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_RESET )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
 {
   auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
     */
     auto obj = static_cast<QQmlProperty*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->write( *PQVARIANT(1) ) );
     }

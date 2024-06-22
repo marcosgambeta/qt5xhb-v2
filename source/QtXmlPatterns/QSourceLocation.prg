@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

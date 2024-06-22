@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
     */
     auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setEntry( PINT(1), PQRGB(2) );
     }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
     */
     auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setEntry( PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2) ) );
     }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {
   auto obj = static_cast<QGLColormap*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

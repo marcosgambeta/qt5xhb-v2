@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {
   auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
   auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
   auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
   auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
 {
   auto obj = static_cast<QAccessibleObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )

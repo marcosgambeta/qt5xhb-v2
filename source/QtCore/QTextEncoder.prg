@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 {
   auto obj = static_cast<QTextEncoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
     */
     auto obj = static_cast<QTextEncoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QByteArray( obj->fromUnicode( PQSTRING(1) ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
     */
     auto obj = static_cast<QTextEncoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QByteArray( obj->fromUnicode( PQCHAR(1), PINT(2) ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTEXTENCODER_HASFAILURE )
 {
   auto obj = static_cast<QTextEncoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

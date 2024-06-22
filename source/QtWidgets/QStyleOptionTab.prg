@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SHAPE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSHAPE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_TEXT )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETTEXT )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICON )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ROW )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETROW )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_POSITION )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETPOSITION )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SELECTEDPOSITION )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSELECTEDPOSITION )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_CORNERWIDGETS )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETCORNERWIDGETS )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICONSIZE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICONSIZE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_DOCUMENTMODE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETDOCUMENTMODE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_LEFTBUTTONSIZE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETLEFTBUTTONSIZE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_RIGHTBUTTONSIZE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETRIGHTBUTTONSIZE )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_FEATURES )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETFEATURES )
 {
   auto obj = static_cast<QStyleOptionTab*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QQUATERNION_DELETE )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QQUATERNION_ISNULL )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QQUATERNION_ISIDENTITY )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
     */
     auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setVector( *PQVECTOR3D(1) );
     }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
     */
     auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setVector( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
     }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QQUATERNION_X )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QQUATERNION_Y )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QQUATERNION_Z )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QQUATERNION_SCALAR )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QQUATERNION_SETX )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QQUATERNION_SETY )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QQUATERNION_SETZ )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QQUATERNION_SETSCALAR )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QQUATERNION_LENGTH )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QQUATERNION_LENGTHSQUARED )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZE )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

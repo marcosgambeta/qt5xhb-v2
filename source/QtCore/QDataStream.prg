@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDATASTREAM_DELETE )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDATASTREAM_UNSETDEVICE )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
 {
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QDATASTREAM_ABORTTRANSACTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QDATASTREAM_COMMITTRANSACTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QDATASTREAM_ROLLBACKTRANSACTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QDATASTREAM_STARTTRANSACTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QDataStream*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_DELETE )
 {
   auto obj = static_cast<QSGMaterialShader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
 {
   auto obj = static_cast<QSGMaterialShader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
 {
   auto obj = static_cast<QSGMaterialShader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
 {
   auto obj = static_cast<QSGMaterialShader*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

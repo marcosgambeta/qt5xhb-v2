@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QBRUSH_DELETE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
     */
     auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
     }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
     */
     auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setColor( static_cast<Qt::GlobalColor>( hb_parni(1) ) );
     }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMATRIX(1) )
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPIXMAP(1) )
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIMAGE(1) )
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTRANSFORM(1) )
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QBRUSH_STYLE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -593,7 +593,7 @@ void QBrush_toVariant1()
 {
   auto obj = static_cast<QBrush*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     QVariant * variant = new QVariant();
     variant->setValue<QBrush>( *obj );

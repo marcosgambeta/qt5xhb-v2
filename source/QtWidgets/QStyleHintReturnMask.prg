@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_DELETE )
 {
   auto obj = static_cast<QStyleHintReturnMask*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;

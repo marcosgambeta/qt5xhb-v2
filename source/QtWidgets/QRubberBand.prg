@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
   auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->move( PINT(1), PINT(2) );
     }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->move( *PQPOINT(1) );
     }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->resize( PINT(1), PINT(2) );
     }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->resize( *PQSIZE(1) );
     }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setGeometry( *PQRECT(1) );
     }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setGeometry( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
   auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

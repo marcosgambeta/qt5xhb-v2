@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

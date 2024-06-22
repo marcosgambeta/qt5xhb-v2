@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
 {
   auto obj = qobject_cast<QGraphicsScale*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMATRIX4X4(1) )

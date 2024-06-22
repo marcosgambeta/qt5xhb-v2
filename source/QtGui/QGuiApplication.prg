@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )
 {
   auto obj = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
   auto obj = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ISSAVINGSESSION )
 {
   auto obj = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPFILENAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPFILENAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QGuiApplication*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

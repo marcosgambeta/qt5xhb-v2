@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
     */
     auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->begin( PQWIDGET(1) ) );
     }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
     */
     auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RBOOL( obj->begin( PQPAINTDEVICE(1), PQWIDGET(2) ) );
     }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(5, 6) && ISQRECT(1) && HB_ISNUM(2) && ISQPALETTE(3) && HB_ISLOG(4) && HB_ISCHAR(5) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

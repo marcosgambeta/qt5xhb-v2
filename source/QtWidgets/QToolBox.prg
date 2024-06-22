@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
     */
     auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RINT( obj->addItem( PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(2)) : QIcon( hb_parc(2) ), PQSTRING(3) ) );
     }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
     */
     auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RINT( obj->addItem( PQWIDGET(1), PQSTRING(2) ) );
     }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
     */
     auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RINT( obj->insertItem( PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(3)) : QIcon( hb_parc(3) ), PQSTRING(4) ) );
     }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
     */
     auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       RINT( obj->insertItem( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
     }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQICON(2) || HB_ISCHAR(2) ) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {
   auto obj = qobject_cast<QToolBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )

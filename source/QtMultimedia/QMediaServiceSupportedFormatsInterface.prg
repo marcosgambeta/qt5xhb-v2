@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE )
 {
   auto obj = static_cast<QMediaServiceSupportedFormatsInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT )
 {
   auto obj = static_cast<QMediaServiceSupportedFormatsInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_SUPPORTEDMIMETYPES )
 {
   auto obj = static_cast<QMediaServiceSupportedFormatsInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = static_cast<QCompressedHelpInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_SWAP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = static_cast<QCompressedHelpInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NAMESPACENAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = static_cast<QCompressedHelpInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_COMPONENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = static_cast<QCompressedHelpInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_VERSION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = static_cast<QCompressedHelpInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

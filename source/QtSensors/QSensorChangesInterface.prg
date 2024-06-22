@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSENSORCHANGESINTERFACE_SENSORSCHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QSensorChangesInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

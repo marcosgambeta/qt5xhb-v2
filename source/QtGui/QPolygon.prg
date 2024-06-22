@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPOLYGON_DELETE )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPOLYGON_SWAP )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOLYGON(1) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->translate( PINT(1), PINT(2) );
     }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->translate( *PQPOINT(1) );
     }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QPolygon( obj->translated( PINT(1), PINT(2) ) );
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QPolygon( obj->translated( *PQPOINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       int par2;
       int par3;
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QPoint( obj->point( PINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setPoint( PINT(1), PINT(2), PINT(3) );
     }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setPoint( PINT(1), *PQPOINT(2) );
     }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQPOLYGON(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2) )
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QPOLYGON_UNITED )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOLYGON(1) )
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOLYGON(1) )
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOLYGON(1) )

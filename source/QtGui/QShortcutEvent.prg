@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 {
   auto obj = static_cast<QShortcutEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 {
   auto obj = static_cast<QShortcutEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
 {
   auto obj = static_cast<QShortcutEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
 {
   auto obj = static_cast<QShortcutEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

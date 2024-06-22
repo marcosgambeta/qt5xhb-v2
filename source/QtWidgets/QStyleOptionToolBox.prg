@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION )
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {

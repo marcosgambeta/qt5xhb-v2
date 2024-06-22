@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 {
   auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 {
   auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
     */
     auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setFinalStop( *PQPOINTF(1) );
     }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
     */
     auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setFinalStop( PQREAL(1), PQREAL(2) );
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
     */
     auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setStart( *PQPOINTF(1) );
     }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
     */
     auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setStart( PQREAL(1), PQREAL(2) );
     }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
 {
   auto obj = static_cast<QLinearGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DELETE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     */
     auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     */
     auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->createStandardContextMenu( *PQPOINT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
     */
     auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
     */
     auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = new QRect( obj->cursorRect() );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QTEXTEDIT_PRINT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPRINTER(1) )
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTCHARFORMAT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1191,7 +1191,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1243,7 +1243,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCURSOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1295,7 +1295,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1566,7 +1566,7 @@ HB_FUNC_STATIC( QTEXTEDIT_APPEND )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1592,7 +1592,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1618,7 +1618,7 @@ HB_FUNC_STATIC( QTEXTEDIT_COPY )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CUT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1696,7 +1696,7 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1722,7 +1722,7 @@ HB_FUNC_STATIC( QTEXTEDIT_PASTE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1748,7 +1748,7 @@ HB_FUNC_STATIC( QTEXTEDIT_REDO )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1774,7 +1774,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1800,7 +1800,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SELECTALL )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1826,7 +1826,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1852,7 +1852,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1904,7 +1904,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1930,7 +1930,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1956,7 +1956,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1982,7 +1982,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -2008,7 +2008,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -2034,7 +2034,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -2060,7 +2060,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -2086,7 +2086,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
@@ -2112,7 +2112,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
@@ -2138,7 +2138,7 @@ HB_FUNC_STATIC( QTEXTEDIT_UNDO )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2164,7 +2164,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -2190,7 +2190,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
 {
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
@@ -2217,7 +2217,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETMARKDOWN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -2245,7 +2245,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOMARKDOWN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
   auto obj = qobject_cast<QTextEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )

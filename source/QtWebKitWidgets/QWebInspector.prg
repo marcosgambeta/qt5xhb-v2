@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
   auto obj = qobject_cast<QWebInspector*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
   auto obj = qobject_cast<QWebInspector*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
   auto obj = qobject_cast<QWebInspector*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBPAGE(1) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
   auto obj = qobject_cast<QWebInspector*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
   auto obj = qobject_cast<QWebInspector*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

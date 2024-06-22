@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_DELETE )
 {
   auto obj = static_cast<QDnsHostAddressRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     delete obj;
     obj = nullptr;
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 {
   auto obj = static_cast<QDnsHostAddressRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {
   auto obj = static_cast<QDnsHostAddressRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
 {
   auto obj = static_cast<QDnsHostAddressRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
 {
   auto obj = static_cast<QDnsHostAddressRecord*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

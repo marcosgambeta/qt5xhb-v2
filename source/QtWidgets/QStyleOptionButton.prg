@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETTEXT )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICON )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(0) )
     {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICONSIZE )
 {
   auto obj = static_cast<QStyleOptionButton*>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {

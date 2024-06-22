@@ -63,7 +63,7 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 {
   auto obj = (HCodeBlockValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

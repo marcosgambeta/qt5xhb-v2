@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_DELETE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1, 2) && ISQMEDIACONTENT(1) && ( ISQIODEVICE(2) || HB_ISNIL(2) ) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYLIST )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQMEDIAPLAYLIST(1) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_DURATION )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_POSITION )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETPOSITION )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_VOLUME )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVOLUME )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISMUTED )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETMUTED )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_BUFFERSTATUS )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISAUDIOAVAILABLE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISVIDEOAVAILABLE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISSEEKABLE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYBACKRATE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTATUS )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_AUDIOROLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETAUDIOROLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ERRORSTRING )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ERROR )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
     */
     auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setVideoOutput( PQVIDEOWIDGET(1) );
     }
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
     */
     auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setVideoOutput( PQGRAPHICSVIDEOITEM(1) );
     }
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
     */
     auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->setVideoOutput( PQABSTRACTVIDEOSURFACE(1) );
     }
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_AVAILABILITY )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PAUSE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAY )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYBACKRATE )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STOP )
 {
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDAUDIOROLES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QMediaPlayer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

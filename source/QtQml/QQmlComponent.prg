@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_DELETE )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQQMLCONTEXT(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
     */
     auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       auto ptr = obj->create( OPQQMLCONTEXT( 1, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
     */
     auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->create( *PQQMLINCUBATOR(1), OPQQMLCONTEXT( 2, nullptr ), OPQQMLCONTEXT( 3, nullptr ) );
     }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISERROR )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISLOADING )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISNULL )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISREADY )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_PROGRESS )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_STATUS )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
     */
     auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->loadUrl( *PQURL(1) );
     }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
     */
     auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != nullptr )
+    if (obj != nullptr)
     {
       obj->loadUrl( *PQURL(1), static_cast<QQmlComponent::CompilationMode>( hb_parni(2) ) );
     }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
 {
   auto obj = qobject_cast<QQmlComponent*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != nullptr )
+  if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
