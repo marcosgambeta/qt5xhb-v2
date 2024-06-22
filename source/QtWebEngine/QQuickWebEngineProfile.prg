@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineCookieStore * ptr = obj->cookieStore();
+      auto ptr = obj->cookieStore();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINECOOKIESTORE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      const QWebEngineUrlSchemeHandler * ptr = obj->urlSchemeHandler( *PQBYTEARRAY(1) );
+      auto ptr = obj->urlSchemeHandler( *PQBYTEARRAY(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEURLSCHEMEHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QQuickWebEngineProfile * ptr = QQuickWebEngineProfile::defaultProfile();
+    auto ptr = QQuickWebEngineProfile::defaultProfile();
     Qt5xHb::createReturnQObjectClass(ptr, "QQUICKWEBENGINEPROFILE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
