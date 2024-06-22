@@ -65,9 +65,9 @@ QJSValueIterator( const QJSValue & object )
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 {
-  if( ISNUMPAR(1) && ISQJSVALUE(1) )
+  if (ISNUMPAR(1) && ISQJSVALUE(1))
   {
-    auto obj = new QJSValueIterator( *PQJSVALUE(1) );
+    auto obj = new QJSValueIterator( *PQJSVALUE(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasNext() );
+      RBOOL(obj->hasNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,10 +150,10 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->next() );
+      RBOOL(obj->next());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QJSValue( obj->value() );
+      auto ptr = new QJSValue(obj->value());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -221,12 +221,12 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEWFROM )
 
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QJSVALUEITERATOR_NEWFROM );
+  HB_FUNC_EXEC(QJSVALUEITERATOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QJSVALUEITERATOR_NEWFROM );
+  HB_FUNC_EXEC(QJSVALUEITERATOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QJSVALUEITERATOR_SELFDESTRUCTION )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -77,10 +77,10 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQQMLENGINE(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQQMLENGINE(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->initializeEngine( PQQMLENGINE(1), PCONSTCHAR(2) );
+      obj->initializeEngine(PQQMLENGINE(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,10 +103,10 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->registerTypes( PCONSTCHAR(1) );
+      obj->registerTypes(PCONSTCHAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

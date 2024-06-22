@@ -82,7 +82,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QQmlProperty()
@@ -91,66 +91,66 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQOBJECT(1) )
+  else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
     QQmlProperty( QObject * obj )
     */
-    auto obj = new QQmlProperty( PQOBJECT(1) );
+    auto obj = new QQmlProperty(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2))
   {
     /*
     QQmlProperty( QObject * obj, QQmlContext * ctxt )
     */
-    auto obj = new QQmlProperty( PQOBJECT(1), PQQMLCONTEXT(2) );
+    auto obj = new QQmlProperty(PQOBJECT(1), PQQMLCONTEXT(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLENGINE(2) )
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLENGINE(2))
   {
     /*
     QQmlProperty( QObject * obj, QQmlEngine * engine )
     */
-    auto obj = new QQmlProperty( PQOBJECT(1), PQQMLENGINE(2) );
+    auto obj = new QQmlProperty(PQOBJECT(1), PQQMLENGINE(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
     QQmlProperty( QObject * obj, const QString & name )
     */
-    auto obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2) );
+    auto obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3) )
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
   {
     /*
     QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
     */
-    auto obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
+    auto obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3) )
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
   {
     /*
     QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
     */
-    auto obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
+    auto obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQQMLPROPERTY(1) )
+  else if (ISNUMPAR(1) && ISQQMLPROPERTY(1))
   {
     /*
     QQmlProperty( const QQmlProperty & other )
     */
-    auto obj = new QQmlProperty( *PQQMLPROPERTY(1) );
+    auto obj = new QQmlProperty( *PQQMLPROPERTY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
 
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
     bool connectNotifySignal( QObject * dest, const char * slot ) const
@@ -187,11 +187,11 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->connectNotifySignal( PQOBJECT(1), PCONSTCHAR(2) ) );
+      RBOOL(obj->connectNotifySignal(PQOBJECT(1), PCONSTCHAR(2)));
     }
 
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
     /*
     bool connectNotifySignal( QObject * dest, int method ) const
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->connectNotifySignal( PQOBJECT(1), PINT(2) ) );
+      RBOOL(obj->connectNotifySignal(PQOBJECT(1), PINT(2)));
     }
 
   }
@@ -220,10 +220,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_HASNOTIFYSIGNAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasNotifySignal() );
+      RBOOL(obj->hasNotifySignal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,10 +244,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_INDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->index() );
+      RINT(obj->index());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,10 +268,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISDESIGNABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDesignable() );
+      RBOOL(obj->isDesignable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,10 +292,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISPROPERTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isProperty() );
+      RBOOL(obj->isProperty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,10 +316,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISRESETTABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isResettable() );
+      RBOOL(obj->isResettable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,10 +340,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISSIGNALPROPERTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSignalProperty() );
+      RBOOL(obj->isSignalProperty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,10 +364,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,10 +388,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISWRITABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isWritable() );
+      RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,10 +412,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_METHOD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QMetaMethod( obj->method() );
+      auto ptr = new QMetaMethod(obj->method());
       Qt5xHb::createReturnClass(ptr, "QMETAMETHOD", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -437,10 +437,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,10 +461,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEEDSNOTIFYSIGNAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->needsNotifySignal() );
+      RBOOL(obj->needsNotifySignal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_OBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->object();
@@ -510,10 +510,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QMetaProperty( obj->property() );
+      auto ptr = new QMetaProperty(obj->property());
       Qt5xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -535,10 +535,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->propertyType() );
+      RINT(obj->propertyType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,10 +559,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->propertyTypeCategory() );
+      RENUM(obj->propertyTypeCategory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -583,10 +583,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>( obj->propertyTypeName() ) );
+      hb_retc( static_cast< const char*>(obj->propertyTypeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
 
 HB_FUNC_STATIC( QQMLPROPERTY_READ )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QVariant read() const
@@ -608,38 +608,38 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
 
     if (obj != nullptr)
     {
-      auto ptr = new QVariant( obj->read() );
+      auto ptr = new QVariant(obj->read());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
 
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
     static QVariant read( QObject * object, const QString & name )
     */
 
-    auto ptr = new QVariant( QQmlProperty::read( PQOBJECT(1), PQSTRING(2) ) );
+    auto ptr = new QVariant( QQmlProperty::read(PQOBJECT(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3) )
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
   {
     /*
     static QVariant read( QObject * object, const QString & name, QQmlContext * ctxt )
     */
 
-    auto ptr = new QVariant( QQmlProperty::read( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) ) );
+    auto ptr = new QVariant( QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3) )
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
   {
     /*
     static QVariant read( QObject * object, const QString & name, QQmlEngine * engine )
     */
 
-    auto ptr = new QVariant( QQmlProperty::read( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) ) );
+    auto ptr = new QVariant( QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 
   }
@@ -659,10 +659,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->reset() );
+      RBOOL(obj->reset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -683,10 +683,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
 
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 {
-  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
     bool write( const QVariant & value ) const
@@ -708,35 +708,35 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->write( *PQVARIANT(1) ) );
+      RBOOL(obj->write( *PQVARIANT(1)));
     }
 
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) )
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
   {
     /*
     static bool write( QObject * object, const QString & name, const QVariant & value )
     */
 
-    RBOOL( QQmlProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
+    RBOOL( QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3)));
 
   }
-  else if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4) )
+  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4))
   {
     /*
     static bool write( QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt )
     */
 
-    RBOOL( QQmlProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4) ) );
+    RBOOL( QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4)));
 
   }
-  else if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4) )
+  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4))
   {
     /*
     static bool write( QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine )
     */
 
-    RBOOL( QQmlProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4) ) );
+    RBOOL( QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4)));
 
   }
   else
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -777,12 +777,12 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROM )
 
 HB_FUNC_STATIC( QQMLPROPERTY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QQMLPROPERTY_NEWFROM );
+  HB_FUNC_EXEC(QQMLPROPERTY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QQMLPROPERTY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QQMLPROPERTY_NEWFROM );
+  HB_FUNC_EXEC(QQMLPROPERTY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QQMLPROPERTY_SELFDESTRUCTION )
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

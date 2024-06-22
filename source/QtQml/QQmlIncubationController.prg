@@ -67,7 +67,7 @@ QQmlIncubationController()
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QQmlIncubationController();
     Qt5xHb::returnNewObject(obj, true);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->engine();
@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->incubateFor( PINT(1) );
+      obj->incubateFor(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,12 +155,12 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISLOG(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       bool par1;
-      obj->incubateWhile( &par1, OPINT( 2, 0 ) );
-      hb_storl( par1, 1 );
+      obj->incubateWhile( &par1, OPINT( 2, 0));
+      hb_storl( par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,10 +183,10 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->incubatingObjectCount() );
+      RINT(obj->incubatingObjectCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -229,12 +229,12 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEWFROM )
 
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QQMLINCUBATIONCONTROLLER_NEWFROM );
+  HB_FUNC_EXEC(QQMLINCUBATIONCONTROLLER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QQMLINCUBATIONCONTROLLER_NEWFROM );
+  HB_FUNC_EXEC(QQMLINCUBATIONCONTROLLER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_SELFDESTRUCTION )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
