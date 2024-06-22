@@ -89,10 +89,10 @@ HB_FUNC_STATIC( QMODBUSCLIENT_TIMEOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->timeout() );
+      RINT(obj->timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QMODBUSCLIENT_NUMBEROFRETRIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->numberOfRetries() );
+      RINT(obj->numberOfRetries());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("timeoutChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

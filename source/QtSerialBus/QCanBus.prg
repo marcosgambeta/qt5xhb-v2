@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCANBUS_INSTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     auto ptr = QCanBus::instance();
@@ -89,10 +89,10 @@ HB_FUNC_STATIC( QCANBUS_PLUGINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->plugins() );
+      RQSTRINGLIST(obj->plugins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      auto list = obj->availableDevices( PQSTRING(1), nullptr );
+      auto list = obj->availableDevices(PQSTRING(1), nullptr);
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), nullptr );
+      auto ptr = obj->createDevice(PQSTRING(1), PQSTRING(2), nullptr);
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

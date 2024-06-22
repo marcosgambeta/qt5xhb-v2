@@ -72,9 +72,9 @@ QCanBusDeviceInfo( const QCanBusDeviceInfo & other )
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
+  if (ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1))
   {
-    auto obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1) );
+    auto obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
+    if (ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1))
     {
 #endif
-      obj->swap( *PQCANBUSDEVICEINFO(1) );
+      obj->swap( *PQCANBUSDEVICEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,10 +170,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_HASFLEXIBLEDATARATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasFlexibleDataRate() );
+      RBOOL(obj->hasFlexibleDataRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_ISVIRTUAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVirtual() );
+      RBOOL(obj->isVirtual());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_CHANNEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->channel() );
+      RINT(obj->channel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,10 +248,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_DESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->description() );
+      RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,10 +274,10 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_SERIALNUMBER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->serialNumber() );
+      RQSTRING(obj->serialNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -69,9 +69,9 @@ QModbusReply( QModbusReply::ReplyType type, int serverAddress, QObject * parent 
 HB_FUNC_STATIC( QMODBUSREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QModbusReply( static_cast<QModbusReply::ReplyType>( hb_parni(1) ), PINT(2), OPQOBJECT( 3, nullptr ) );
+    auto obj = new QModbusReply( static_cast<QModbusReply::ReplyType>( hb_parni(1)), PINT(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -92,10 +92,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_SERVERADDRESS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->serverAddress() );
+      RINT(obj->serverAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ISFINISHED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,10 +170,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_RESULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QModbusDataUnit( obj->result() );
+      auto ptr = new QModbusDataUnit(obj->result());
       Qt5xHb::createReturnClass(ptr, "QMODBUSDATAUNIT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_RAWRESULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QModbusResponse( obj->rawResult() );
+      auto ptr = new QModbusResponse(obj->rawResult());
       Qt5xHb::createReturnClass(ptr, "QMODBUSRESPONSE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,10 +224,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,10 +250,10 @@ HB_FUNC_STATIC( QMODBUSREPLY_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QModbusDevice::Error)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

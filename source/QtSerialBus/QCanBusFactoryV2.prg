@@ -63,10 +63,10 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_CREATEDEVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = obj->createDevice( PQSTRING(1), nullptr );
+      auto ptr = obj->createDevice(PQSTRING(1), nullptr);
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -90,10 +90,10 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      auto list = obj->availableDevices( nullptr );
+      auto list = obj->availableDevices( nullptr);
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
