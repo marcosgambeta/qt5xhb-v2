@@ -53,9 +53,9 @@ QWebEngineUrlRequestInterceptor( QObject * p = nullptr )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWebEngineUrlRequestInterceptor( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QWebEngineUrlRequestInterceptor( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEURLREQUESTINFO(1) )
+    if (ISNUMPAR(1) && ISQWEBENGINEURLREQUESTINFO(1))
     {
 #endif
-      obj->interceptRequest( *PQWEBENGINEURLREQUESTINFO(1) );
+      obj->interceptRequest( *PQWEBENGINEURLREQUESTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -86,10 +86,10 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQNETWORKCOOKIE(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQNETWORKCOOKIE(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setCookie( *PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)) );
+      obj->setCookie( *PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQNETWORKCOOKIE(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQNETWORKCOOKIE(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->deleteCookie( *PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)) );
+      obj->deleteCookie( *PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->deleteSessionCookies();
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETEALLCOOKIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->deleteAllCookies();
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_LOADALLCOOKIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->loadAllCookies();
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cookieAdded(QNetworkCookie)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cookieRemoved(QNetworkCookie)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

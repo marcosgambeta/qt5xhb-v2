@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_RESOURCETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->resourceType() );
+      RENUM(obj->resourceType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -98,10 +98,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->navigationType() );
+      RENUM(obj->navigationType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REQUESTURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->requestUrl() );
+      auto ptr = new QUrl(obj->requestUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -147,10 +147,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_FIRSTPARTYURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->firstPartyUrl() );
+      auto ptr = new QUrl(obj->firstPartyUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REQUESTMETHOD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QByteArray( obj->requestMethod() );
+      auto ptr = new QByteArray(obj->requestMethod());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_CHANGED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->changed() );
+      RBOOL(obj->changed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,10 +221,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_BLOCK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->block( PBOOL(1) );
+      obj->block(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,10 +247,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REDIRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->redirect( *PQURL(1) );
+      obj->redirect( *PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,10 +273,10 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_SETHTTPHEADER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
     {
 #endif
-      obj->setHttpHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+      obj->setHttpHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
