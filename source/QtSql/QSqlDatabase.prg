@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlDriver * ptr = obj->driver();
+      auto ptr = obj->driver();
       Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

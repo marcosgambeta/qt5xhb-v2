@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlResult * ptr = obj->createResult();
+      auto ptr = obj->createResult();
       Qt5xHb::createReturnClass(ptr, "QSQLRESULT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

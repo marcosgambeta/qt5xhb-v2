@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSqlDriver * ptr = obj->driver();
+      auto ptr = obj->driver();
       Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSqlResult * ptr = obj->result();
+      auto ptr = obj->result();
       Qt5xHb::createReturnClass(ptr, "QSQLRESULT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
