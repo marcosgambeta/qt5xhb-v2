@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlDTDHandler * ptr = obj->DTDHandler();
+      auto ptr = obj->DTDHandler();
       Qt5xHb::createReturnClass(ptr, "QXMLDTDHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlContentHandler * ptr = obj->contentHandler();
+      auto ptr = obj->contentHandler();
       Qt5xHb::createReturnClass(ptr, "QXMLCONTENTHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlDeclHandler * ptr = obj->declHandler();
+      auto ptr = obj->declHandler();
       Qt5xHb::createReturnClass(ptr, "QXMLDECLHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlEntityResolver * ptr = obj->entityResolver();
+      auto ptr = obj->entityResolver();
       Qt5xHb::createReturnClass(ptr, "QXMLENTITYRESOLVER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlErrorHandler * ptr = obj->errorHandler();
+      auto ptr = obj->errorHandler();
       Qt5xHb::createReturnClass(ptr, "QXMLERRORHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlLexicalHandler * ptr = obj->lexicalHandler();
+      auto ptr = obj->lexicalHandler();
       Qt5xHb::createReturnClass(ptr, "QXMLLEXICALHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
