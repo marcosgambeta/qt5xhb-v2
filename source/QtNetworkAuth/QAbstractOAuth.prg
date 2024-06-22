@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractOAuthReplyHandler * ptr = obj->replyHandler();
+      auto ptr = obj->replyHandler();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTOAUTHREPLYHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
