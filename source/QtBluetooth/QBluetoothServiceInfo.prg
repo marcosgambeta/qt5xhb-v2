@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS )
       auto list = obj->serviceClassUuids();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHUUID");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
