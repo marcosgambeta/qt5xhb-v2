@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QRADIOTUNER_RADIODATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRadioData * ptr = obj->radioData();
+      auto ptr = obj->radioData();
       Qt5xHb::createReturnQObjectClass(ptr, "QRADIODATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

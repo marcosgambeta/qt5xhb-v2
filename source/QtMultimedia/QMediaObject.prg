@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaService * ptr = obj->service();
+      auto ptr = obj->service();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIASERVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

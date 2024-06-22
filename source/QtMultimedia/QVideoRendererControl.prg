@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractVideoSurface * ptr = obj->surface();
+      auto ptr = obj->surface();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTVIDEOSURFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

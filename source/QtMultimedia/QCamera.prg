@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QCAMERA_EXPOSURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCameraExposure * ptr = obj->exposure();
+      auto ptr = obj->exposure();
       Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAEXPOSURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QCAMERA_FOCUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCameraFocus * ptr = obj->focus();
+      auto ptr = obj->focus();
       Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAFOCUS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCameraImageProcessing * ptr = obj->imageProcessing();
+      auto ptr = obj->imageProcessing();
       Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAIMAGEPROCESSING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

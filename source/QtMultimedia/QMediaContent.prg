@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaPlaylist * ptr = obj->playlist();
+      auto ptr = obj->playlist();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAPLAYLIST");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaPlaylist * ptr = obj->playlist();
+      auto ptr = obj->playlist();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAPLAYLIST");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QIODevice * ptr = obj->mediaStream();
+      auto ptr = obj->mediaStream();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

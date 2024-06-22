@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVideoFilterRunnable * ptr = obj->createFilterRunnable();
+      auto ptr = obj->createFilterRunnable();
       Qt5xHb::createReturnClass(ptr, "QVIDEOFILTERRUNNABLE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

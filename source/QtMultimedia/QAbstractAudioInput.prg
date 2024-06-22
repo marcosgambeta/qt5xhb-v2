@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START )
 
     if( obj != nullptr )
     {
-      QIODevice * ptr = obj->start();
+      auto ptr = obj->start();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
 
