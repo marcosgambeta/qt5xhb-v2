@@ -74,9 +74,9 @@ QMacPasteboardMime( char )
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) )
+  if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1)))
   {
-    auto obj = new QMacPasteboardMime( PCHAR(1) );
+    auto obj = new QMacPasteboardMime(PCHAR(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTORNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->convertorName() );
+      RQSTRING(obj->convertorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL( obj->canConvert( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL(obj->canConvert(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->mimeFor( PQSTRING(1) ) );
+      RQSTRING(obj->mimeFor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,10 +193,10 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->flavorFor( PQSTRING(1) ) );
+      RQSTRING(obj->flavorFor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,17 +219,17 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3))
     {
 #endif
       QList<QByteArray> par2;
-      auto aList2 = hb_param( 2, HB_IT_ARRAY );
-      int nLen2 = hb_arrayLen( aList2 );
+      auto aList2 = hb_param( 2, HB_IT_ARRAY);
+      int nLen2 = hb_arrayLen( aList2);
       for( auto i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QByteArray*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0) ) );
+        par2 << *static_cast<QByteArray*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0)));
       }
-      auto ptr = new QVariant( obj->convertToMime( PQSTRING(1), par2, PQSTRING(3) ) );
+      auto ptr = new QVariant(obj->convertToMime(PQSTRING(1), par2, PQSTRING(3)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -253,10 +253,10 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQVARIANT(2) && HB_ISCHAR(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQVARIANT(2) && HB_ISCHAR(3))
     {
 #endif
-      auto list = obj->convertFromMime( PQSTRING(1), *PQVARIANT(2), PQSTRING(3) );
+      auto list = obj->convertFromMime(PQSTRING(1), *PQVARIANT(2), PQSTRING(3));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -305,10 +305,10 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMIMEDATA(1) )
+    if (ISNUMPAR(1) && ISQMIMEDATA(1))
     {
 #endif
-      RINT( obj->count( PQMIMEDATA(1) ) );
+      RINT(obj->count(PQMIMEDATA(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -352,12 +352,12 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEWFROM )
 
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QMACPASTEBOARDMIME_NEWFROM );
+  HB_FUNC_EXEC(QMACPASTEBOARDMIME_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QMACPASTEBOARDMIME_NEWFROM );
+  HB_FUNC_EXEC(QMACPASTEBOARDMIME_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_SELFDESTRUCTION )
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
