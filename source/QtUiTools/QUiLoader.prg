@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QAction * ptr = obj->createAction( OPQOBJECT( 1, nullptr ), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createAction( OPQOBJECT( 1, nullptr ), OPQSTRING( 2, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QActionGroup * ptr = obj->createActionGroup( OPQOBJECT( 1, nullptr ), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createActionGroup( OPQOBJECT( 1, nullptr ), OPQSTRING( 2, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT( 2, nullptr ), OPQSTRING( 3, QString() ) );
+      auto ptr = obj->createLayout( PQSTRING(1), OPQOBJECT( 2, nullptr ), OPQSTRING( 3, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET( 2, nullptr ), OPQSTRING( 3, QString() ) );
+      auto ptr = obj->createWidget( PQSTRING(1), OPQWIDGET( 2, nullptr ), OPQSTRING( 3, QString() ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
     if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET( 2, nullptr ) );
+      auto ptr = obj->load( PQIODEVICE(1), OPQWIDGET( 2, nullptr ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
