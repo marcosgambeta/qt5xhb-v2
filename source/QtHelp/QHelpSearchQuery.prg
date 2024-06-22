@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QHelpSearchQuery()
@@ -66,12 +66,12 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
   {
     /*
     QHelpSearchQuery( QHelpSearchQuery::FieldName field, const QStringList & wordList )
     */
-    auto obj = new QHelpSearchQuery( static_cast<QHelpSearchQuery::FieldName>( hb_parni(1) ), PQSTRINGLIST(2) );
+    auto obj = new QHelpSearchQuery( static_cast<QHelpSearchQuery::FieldName>( hb_parni(1)), PQSTRINGLIST(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -129,12 +129,12 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROM )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QHELPSEARCHQUERY_NEWFROM );
+  HB_FUNC_EXEC(QHELPSEARCHQUERY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QHELPSEARCHQUERY_NEWFROM );
+  HB_FUNC_EXEC(QHELPSEARCHQUERY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_SELFDESTRUCTION )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QCompressedHelpInfo()
@@ -80,13 +80,13 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1) )
+  else if (ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1))
   {
     /*
     QCompressedHelpInfo( const QCompressedHelpInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-    auto obj = new QCompressedHelpInfo( *PQCOMPRESSEDHELPINFO(1) );
+    auto obj = new QCompressedHelpInfo( *PQCOMPRESSEDHELPINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1) )
+    if (ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1))
     {
 #endif
-      obj->swap( *PQCOMPRESSEDHELPINFO(1) );
+      obj->swap( *PQCOMPRESSEDHELPINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,10 +157,10 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NAMESPACENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->namespaceName() );
+      RQSTRING(obj->namespaceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,10 +183,10 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_COMPONENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->component() );
+      RQSTRING(obj->component());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,10 +209,10 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_VERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVersionNumber( obj->version() );
+      auto ptr = new QVersionNumber(obj->version());
       Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -232,10 +232,10 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_FROMCOMPRESSEDHELPFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QCompressedHelpInfo( QCompressedHelpInfo::fromCompressedHelpFile( PQSTRING(1) ) );
+    auto ptr = new QCompressedHelpInfo( QCompressedHelpInfo::fromCompressedHelpFile(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QCOMPRESSEDHELPINFO", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -279,12 +279,12 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEWFROM )
 
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QCOMPRESSEDHELPINFO_NEWFROM );
+  HB_FUNC_EXEC(QCOMPRESSEDHELPINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QCOMPRESSEDHELPINFO_NEWFROM );
+  HB_FUNC_EXEC(QCOMPRESSEDHELPINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_SELFDESTRUCTION )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

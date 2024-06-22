@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->activateCurrentItem();
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->filterIndices( PQSTRING(1), OPQSTRING( 2, QString() ) );
+      obj->filterIndices(PQSTRING(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("linkActivated(QUrl,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
