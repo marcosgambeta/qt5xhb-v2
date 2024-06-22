@@ -67,7 +67,7 @@ using namespace QtDataVisualization;
 
 HB_FUNC_STATIC( QBARDATAITEM_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QBarDataItem()
@@ -78,35 +78,35 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QBarDataItem( float value )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QBarDataItem( PFLOAT(1) );
+    auto obj = new QBarDataItem(PFLOAT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QBarDataItem( float value, float angle )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
+    auto obj = new QBarDataItem(PFLOAT(1), PFLOAT(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQBARDATAITEM(1) )
+  else if (ISNUMPAR(1) && ISQBARDATAITEM(1))
   {
     /*
     QBarDataItem( const QBarDataItem & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QBarDataItem( *PQBARDATAITEM(1) );
+    auto obj = new QBarDataItem( *PQBARDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PFLOAT(1) );
+      obj->setValue(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,10 +177,10 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->value() );
+      RFLOAT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,10 +203,10 @@ HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRotation( PFLOAT(1) );
+      obj->setRotation(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,10 +231,10 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->rotation() );
+      RFLOAT(obj->rotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -278,12 +278,12 @@ HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
 
 HB_FUNC_STATIC( QBARDATAITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QBARDATAITEM_NEWFROM );
+  HB_FUNC_EXEC(QBARDATAITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QBARDATAITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QBARDATAITEM_NEWFROM );
+  HB_FUNC_EXEC(QBARDATAITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QBARDATAITEM_SELFDESTRUCTION )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

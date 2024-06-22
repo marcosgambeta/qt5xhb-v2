@@ -83,9 +83,9 @@ Q3DSurface( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr 
 HB_FUNC_STATIC( Q3DSURFACE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0, 2) && ( ISQSURFACEFORMAT(1) || HB_ISNIL(1) ) && ( ISQWINDOW(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 2) && (ISQSURFACEFORMAT(1) || HB_ISNIL(1)) && (ISQWINDOW(2) || HB_ISNIL(2)))
   {
-    auto obj = new Q3DSurface( HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat*>(Qt5xHb::itemGetPtr(1)), OPQWINDOW( 2, nullptr ) );
+    auto obj = new Q3DSurface( HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat*>(Qt5xHb::itemGetPtr(1)), OPQWINDOW( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->axisX();
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
     {
 #endif
-      obj->setAxisX( PQVALUE3DAXIS(1) );
+      obj->setAxisX(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->axisY();
@@ -211,10 +211,10 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
     {
 #endif
-      obj->setAxisY( PQVALUE3DAXIS(1) );
+      obj->setAxisY(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->axisZ();
@@ -266,10 +266,10 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
     {
 #endif
-      obj->setAxisZ( PQVALUE3DAXIS(1) );
+      obj->setAxisZ(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->selectedSeries();
@@ -321,10 +321,10 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->flipHorizontalGrid() );
+      RBOOL(obj->flipHorizontalGrid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,10 +347,10 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFlipHorizontalGrid( PBOOL(1) );
+      obj->setFlipHorizontalGrid(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,10 +375,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
+    if (ISNUMPAR(1) && ISQSURFACE3DSERIES(1))
     {
 #endif
-      obj->addSeries( PQSURFACE3DSERIES(1) );
+      obj->addSeries(PQSURFACE3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,10 +403,10 @@ HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
+    if (ISNUMPAR(1) && ISQSURFACE3DSERIES(1))
     {
 #endif
-      obj->removeSeries( PQSURFACE3DSERIES(1) );
+      obj->removeSeries(PQSURFACE3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->seriesList();
@@ -480,10 +480,10 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
     {
 #endif
-      obj->addAxis( PQVALUE3DAXIS(1) );
+      obj->addAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,10 +508,10 @@ HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
     {
 #endif
-      obj->releaseAxis( PQVALUE3DAXIS(1) );
+      obj->releaseAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->axes();
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisXChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisYChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisZChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flipHorizontalGridChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QSurface3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

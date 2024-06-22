@@ -60,9 +60,9 @@ QValue3DAxisFormatter( QObject * parent = nullptr )
 HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QValue3DAxisFormatter( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QValue3DAxisFormatter( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
