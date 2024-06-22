@@ -57,21 +57,21 @@ RETURN
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QSvgWidget( QWidget * parent = nullptr )
     */
-    auto obj = new QSvgWidget( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QSvgWidget( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QSvgWidget( const QString & file, QWidget * parent = nullptr )
     */
-    auto obj = new QSvgWidget( PQSTRING(1), OPQWIDGET( 2, nullptr ) );
+    auto obj = new QSvgWidget(PQSTRING(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->renderer();
@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     void load( const QString & file )
@@ -160,13 +160,13 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( PQSTRING(1) );
+      obj->load(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
     void load( const QByteArray & contents )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQBYTEARRAY(1) );
+      obj->load( *PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
