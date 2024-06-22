@@ -50,14 +50,14 @@ HUiLoader( QObject *parent = nullptr )
 */
 HB_FUNC_STATIC( HUILOADER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)))
   {
-    auto obj = new HUiLoader( OPQOBJECT(1,nullptr) );
+    auto obj = new HUiLoader( OPQOBJECT(1,nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -99,7 +99,7 @@ QWidget * createWidget( const QString &className, QWidget *parent = nullptr, con
 */
 
 /*
-void setCreateActionCB ( PHB_ITEM block )
+void setCreateActionCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
 {
@@ -108,15 +108,15 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateActionCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateActionCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
 }
 
 /*
-void setCreateActionGroupCB ( PHB_ITEM block )
+void setCreateActionGroupCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
 {
@@ -134,15 +134,15 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateActionGroupCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateActionGroupCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
 }
 
 /*
-void setCreateLayoutCB ( PHB_ITEM block )
+void setCreateLayoutCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
 {
@@ -160,15 +160,15 @@ HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateLayoutCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateLayoutCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
 }
 
 /*
-void setCreateWidgetCB ( PHB_ITEM block )
+void setCreateWidgetCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HUILOADER_SETCREATEWIDGETCB )
 {
@@ -186,15 +186,15 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEWIDGETCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateWidgetCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateWidgetCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
