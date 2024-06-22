@@ -58,21 +58,21 @@ RETURN
 
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QDBusServer( const QString & address, QObject * parent = nullptr )
     */
-    auto obj = new QDBusServer( PQSTRING(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QDBusServer(PQSTRING(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QDBusServer( QObject * parent = nullptr )
     */
-    auto obj = new QDBusServer( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QDBusServer( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isConnected() );
+      RBOOL(obj->isConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDBusError( obj->lastError() );
+      auto ptr = new QDBusError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->address() );
+      RQSTRING(obj->address());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection(QDBusConnection)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

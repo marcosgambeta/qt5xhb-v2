@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDBusArgument()
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDBUSARGUMENT(1) )
+  else if (ISNUMPAR(1) && ISQDBUSARGUMENT(1))
   {
     /*
     QDBusArgument( const QDBusArgument & other )
     */
-    auto obj = new QDBusArgument( *PQDBUSARGUMENT(1) );
+    auto obj = new QDBusArgument( *PQDBUSARGUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINSTRUCTURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->beginStructure();
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endStructure();
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
 
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void beginArray( int elementMetaTypeId )
@@ -174,13 +174,13 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 
     if (obj != nullptr)
     {
-      obj->beginArray( PINT(1) );
+      obj->beginArray(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     void beginArray() const
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endArray();
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
 
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void beginMap( int keyMetaTypeId, int valueMetaTypeId )
@@ -238,13 +238,13 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 
     if (obj != nullptr)
     {
-      obj->beginMap( PINT(1), PINT(2) );
+      obj->beginMap(PINT(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     void beginMap() const
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endMap();
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAPENTRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->beginMapEntry();
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endMapEntry();
@@ -353,10 +353,10 @@ HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->appendVariant( *PQVARIANT(1) );
+      obj->appendVariant( *PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,10 +379,10 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentSignature() );
+      RQSTRING(obj->currentSignature());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,10 +403,10 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->currentType() );
+      RENUM(obj->currentType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,10 +427,10 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->atEnd() );
+      RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,10 +451,10 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVariant( obj->asVariant() );
+      auto ptr = new QVariant(obj->asVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -498,12 +498,12 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROM )
 
 HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDBUSARGUMENT_NEWFROM );
+  HB_FUNC_EXEC(QDBUSARGUMENT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDBUSARGUMENT_NEWFROM );
+  HB_FUNC_EXEC(QDBUSARGUMENT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDBUSARGUMENT_SELFDESTRUCTION )
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

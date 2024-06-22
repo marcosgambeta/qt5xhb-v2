@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDBusError()
@@ -71,30 +71,30 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
+  else if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
   {
     /*
     QDBusError( const QDBusMessage & msg )
     */
-    auto obj = new QDBusError( *PQDBUSMESSAGE(1) );
+    auto obj = new QDBusError( *PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
     QDBusError( QDBusError::ErrorType error, const QString & message )
     */
-    auto obj = new QDBusError( static_cast<QDBusError::ErrorType>( hb_parni(1) ), PQSTRING(2) );
+    auto obj = new QDBusError( static_cast<QDBusError::ErrorType>( hb_parni(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDBUSERROR(1) )
+  else if (ISNUMPAR(1) && ISQDBUSERROR(1))
   {
     /*
     QDBusError( const QDBusError & other )
     */
-    auto obj = new QDBusError( *PQDBUSERROR(1) );
+    auto obj = new QDBusError( *PQDBUSERROR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QDBUSERROR_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,10 +154,10 @@ HB_FUNC_STATIC( QDBUSERROR_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,10 +178,10 @@ HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->message() );
+      RQSTRING(obj->message());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,10 +202,10 @@ HB_FUNC_STATIC( QDBUSERROR_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ static QString errorString( QDBusError::ErrorType error )
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QDBusError::errorString( static_cast<QDBusError::ErrorType>( hb_parni(1) ) ) );
+    RQSTRING( QDBusError::errorString( static_cast<QDBusError::ErrorType>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -267,12 +267,12 @@ HB_FUNC_STATIC( QDBUSERROR_NEWFROM )
 
 HB_FUNC_STATIC( QDBUSERROR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDBUSERROR_NEWFROM );
+  HB_FUNC_EXEC(QDBUSERROR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDBUSERROR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDBUSERROR_NEWFROM );
+  HB_FUNC_EXEC(QDBUSERROR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDBUSERROR_SELFDESTRUCTION )
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDBUSERROR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

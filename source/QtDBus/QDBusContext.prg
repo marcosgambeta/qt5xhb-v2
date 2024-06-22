@@ -70,7 +70,7 @@ QDBusContext()
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QDBusContext();
     Qt5xHb::returnNewObject(obj, true);
@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->calledFromDBus() );
+      RBOOL(obj->calledFromDBus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDBusConnection( obj->connection() );
+      auto ptr = new QDBusConnection(obj->connection());
       Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->message();
@@ -181,10 +181,10 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDelayedReply() );
+      RBOOL(obj->isDelayedReply());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,10 +205,10 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDelayedReply( PBOOL(1) );
+      obj->setDelayedReply(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     void sendErrorReply( const QString & name, const QString & msg = QString() ) const
@@ -232,13 +232,13 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 
     if (obj != nullptr)
     {
-      obj->sendErrorReply( PQSTRING(1), OPQSTRING( 2, QString() ) );
+      obj->sendErrorReply(PQSTRING(1), OPQSTRING(2, QString()));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 
     if (obj != nullptr)
     {
-      obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni(1) ), OPQSTRING( 2, QString() ) );
+      obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni(1)), OPQSTRING(2, QString()));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -291,12 +291,12 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROM )
 
 HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDBUSCONTEXT_NEWFROM );
+  HB_FUNC_EXEC(QDBUSCONTEXT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDBUSCONTEXT_NEWFROM );
+  HB_FUNC_EXEC(QDBUSCONTEXT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SELFDESTRUCTION )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
