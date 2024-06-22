@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomDocumentType()
@@ -65,12 +65,12 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
+  else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1))
   {
     /*
     QDomDocumentType( const QDomDocumentType & n )
     */
-    auto obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
+    auto obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDomNamedNodeMap( obj->entities() );
+      auto ptr = new QDomNamedNodeMap(obj->entities());
       Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->internalSubset() );
+      RQSTRING(obj->internalSubset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,10 +155,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,10 +179,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,10 +203,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDomNamedNodeMap( obj->notations() );
+      auto ptr = new QDomNamedNodeMap(obj->notations());
       Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -228,10 +228,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->publicId() );
+      RQSTRING(obj->publicId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,10 +252,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->systemId() );
+      RQSTRING(obj->systemId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

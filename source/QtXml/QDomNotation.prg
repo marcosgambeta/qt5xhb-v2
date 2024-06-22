@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomNotation()
@@ -60,12 +60,12 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
+  else if (ISNUMPAR(1) && ISQDOMNOTATION(1))
   {
     /*
     QDomNotation( const QDomNotation & x )
     */
-    auto obj = new QDomNotation( *PQDOMNOTATION(1) );
+    auto obj = new QDomNotation( *PQDOMNOTATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->publicId() );
+      RQSTRING(obj->publicId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->systemId() );
+      RQSTRING(obj->systemId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomComment()
@@ -58,12 +58,12 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDOMCOMMENT(1) )
+  else if (ISNUMPAR(1) && ISQDOMCOMMENT(1))
   {
     /*
     QDomComment( const QDomComment & x )
     */
-    auto obj = new QDomComment( *PQDOMCOMMENT(1) );
+    auto obj = new QDomComment( *PQDOMCOMMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

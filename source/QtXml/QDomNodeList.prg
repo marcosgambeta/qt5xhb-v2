@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomNodeList()
@@ -73,12 +73,12 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDOMNODELIST(1) )
+  else if (ISNUMPAR(1) && ISQDOMNODELIST(1))
   {
     /*
     QDomNodeList( const QDomNodeList & n )
     */
-    auto obj = new QDomNodeList( *PQDOMNODELIST(1) );
+    auto obj = new QDomNodeList( *PQDOMNODELIST(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QDomNode( obj->at( PINT(1) ) );
+      auto ptr = new QDomNode(obj->at(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -139,10 +139,10 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,10 +163,10 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,10 +187,10 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QDomNode( obj->item( PINT(1) ) );
+      auto ptr = new QDomNode(obj->item(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -212,10 +212,10 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RUINT( obj->length() );
+      RUINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,10 +236,10 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->size() );
+      RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -282,12 +282,12 @@ HB_FUNC_STATIC( QDOMNODELIST_NEWFROM )
 
 HB_FUNC_STATIC( QDOMNODELIST_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDOMNODELIST_NEWFROM );
+  HB_FUNC_EXEC(QDOMNODELIST_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDOMNODELIST_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDOMNODELIST_NEWFROM );
+  HB_FUNC_EXEC(QDOMNODELIST_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDOMNODELIST_SELFDESTRUCTION )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

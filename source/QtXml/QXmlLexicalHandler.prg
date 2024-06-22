@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->comment( PQSTRING(1) ) );
+      RBOOL(obj->comment(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->endCDATA() );
+      RBOOL(obj->endCDATA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,10 +136,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->endDTD() );
+      RBOOL(obj->endDTD());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,10 +160,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->endEntity( PQSTRING(1) ) );
+      RBOOL(obj->endEntity(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,10 +208,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->startCDATA() );
+      RBOOL(obj->startCDATA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,10 +232,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
 #endif
-      RBOOL( obj->startDTD( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL(obj->startDTD(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,10 +256,10 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->startEntity( PQSTRING(1) ) );
+      RBOOL(obj->startEntity(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -302,12 +302,12 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_NEWFROM )
 
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QXMLLEXICALHANDLER_NEWFROM );
+  HB_FUNC_EXEC(QXMLLEXICALHANDLER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QXMLLEXICALHANDLER_NEWFROM );
+  HB_FUNC_EXEC(QXMLLEXICALHANDLER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_SELFDESTRUCTION )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

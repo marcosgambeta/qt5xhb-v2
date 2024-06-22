@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomText()
@@ -59,12 +59,12 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
+  else if (ISNUMPAR(1) && ISQDOMTEXT(1))
   {
     /*
     QDomText( const QDomText & x )
     */
-    auto obj = new QDomText( *PQDOMTEXT(1) );
+    auto obj = new QDomText( *PQDOMTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QDomText( obj->splitText( PINT(1) ) );
+      auto ptr = new QDomText(obj->splitText(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomCDATASection()
@@ -58,12 +58,12 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
+  else if (ISNUMPAR(1) && ISQDOMCDATASECTION(1))
   {
     /*
     QDomCDATASection( const QDomCDATASection & x )
     */
-    auto obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+    auto obj = new QDomCDATASection( *PQDOMCDATASECTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

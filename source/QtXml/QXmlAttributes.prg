@@ -70,7 +70,7 @@ QXmlAttributes()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QXmlAttributes();
     Qt5xHb::returnNewObject(obj, true);
@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
     {
 #endif
-      obj->append( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) );
+      obj->append(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     int index( const QString & qName ) const
@@ -184,11 +184,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if (obj != nullptr)
     {
-      RINT( obj->index( PQSTRING(1) ) );
+      RINT(obj->index(PQSTRING(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
+  else if (ISNUMPAR(1) && ISQLATIN1STRING(1))
   {
     /*
     int index( const QLatin1String & qName ) const
@@ -197,11 +197,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if (obj != nullptr)
     {
-      RINT( obj->index( *PQLATIN1STRING(1) ) );
+      RINT(obj->index( *PQLATIN1STRING(1)));
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     int index( const QString & uri, const QString & localPart ) const
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if (obj != nullptr)
     {
-      RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
+      RINT(obj->index(PQSTRING(1), PQSTRING(2)));
     }
 
   }
@@ -230,10 +230,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->length() );
+      RINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,10 +254,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->localName( PINT(1) ) );
+      RQSTRING(obj->localName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,10 +278,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->qName( PINT(1) ) );
+      RQSTRING(obj->qName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QString type( int index ) const
@@ -303,11 +303,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->type( PINT(1) ) );
+      RQSTRING(obj->type(PINT(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QString type( const QString & qName ) const
@@ -316,11 +316,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->type( PQSTRING(1) ) );
+      RQSTRING(obj->type(PQSTRING(1)));
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     QString type( const QString & uri, const QString & localName ) const
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
+      RQSTRING(obj->type(PQSTRING(1), PQSTRING(2)));
     }
 
   }
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->uri( PINT(1) ) );
+      RQSTRING(obj->uri(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QString value( int index ) const
@@ -374,11 +374,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->value( PINT(1) ) );
+      RQSTRING(obj->value(PINT(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QString value( const QString & qName ) const
@@ -387,11 +387,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->value( PQSTRING(1) ) );
+      RQSTRING(obj->value(PQSTRING(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
+  else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
     QString value( const QLatin1String & qName ) const
@@ -400,11 +400,11 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->value( *PQLATIN1STRING(1) ) );
+      RQSTRING(obj->value( *PQLATIN1STRING(1)));
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     QString value( const QString & uri, const QString & localName ) const
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
+      RQSTRING(obj->value(PQSTRING(1), PQSTRING(2)));
     }
 
   }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -455,12 +455,12 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROM )
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QXMLATTRIBUTES_NEWFROM );
+  HB_FUNC_EXEC(QXMLATTRIBUTES_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QXMLATTRIBUTES_NEWFROM );
+  HB_FUNC_EXEC(QXMLATTRIBUTES_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_SELFDESTRUCTION )
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
