@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebSocket * ptr = obj->nextPendingConnection();
+      auto ptr = obj->nextPendingConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

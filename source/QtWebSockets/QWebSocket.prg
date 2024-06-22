@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMaskGenerator * ptr = obj->maskGenerator();
+      auto ptr = obj->maskGenerator();
       Qt5xHb::createReturnQObjectClass(ptr, "QMASKGENERATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
