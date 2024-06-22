@@ -83,9 +83,9 @@ QWinTaskbarProgress( QObject * parent = nullptr )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWinTaskbarProgress( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QWinTaskbarProgress( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,10 +152,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,10 +234,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,10 +260,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,10 +288,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVisible() );
+      RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,10 +314,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,10 +342,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISPAUSED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isPaused() );
+      RBOOL(obj->isPaused());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,10 +368,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETPAUSED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setPaused( PBOOL(1) );
+      obj->setPaused(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,10 +396,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISSTOPPED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isStopped() );
+      RBOOL(obj->isStopped());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,10 +422,10 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SHOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->show();
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_HIDE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->hide();
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_PAUSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->pause();
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_RESUME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->resume();
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_STOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minimumChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pausedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stoppedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

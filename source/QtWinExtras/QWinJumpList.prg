@@ -67,9 +67,9 @@ QWinJumpList( QObject * parent = nullptr )
 HB_FUNC_STATIC( QWINJUMPLIST_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWinJumpList( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QWinJumpList( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QWINJUMPLIST_IDENTIFIER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->identifier() );
+      RQSTRING(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,10 +136,10 @@ HB_FUNC_STATIC( QWINJUMPLIST_SETIDENTIFIER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setIdentifier( PQSTRING(1) );
+      obj->setIdentifier(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_RECENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->recent();
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_FREQUENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->frequent();
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_TASKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->tasks();
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->categories();
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
 
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 {
-  if( ISNUMPAR(1) && ISQWINJUMPLISTCATEGORY(1) )
+  if (ISNUMPAR(1) && ISQWINJUMPLISTCATEGORY(1))
   {
     /*
     void addCategory( QWinJumpListCategory * category )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 
     if (obj != nullptr)
     {
-      obj->addCategory( PQWINJUMPLISTCATEGORY(1) );
+      obj->addCategory(PQWINJUMPLISTCATEGORY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();

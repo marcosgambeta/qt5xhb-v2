@@ -80,9 +80,9 @@ QWinJumpListItem( QWinJumpListItem::Type type )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    auto obj = new QWinJumpListItem( static_cast<QWinJumpListItem::Type>( hb_parni(1) ) );
+    auto obj = new QWinJumpListItem( static_cast<QWinJumpListItem::Type>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -121,10 +121,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,10 +147,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<QWinJumpListItem::Type>( hb_parni(1) ) );
+      obj->setType( static_cast<QWinJumpListItem::Type>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->filePath() );
+      RQSTRING(obj->filePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,10 +201,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETFILEPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFilePath( PQSTRING(1) );
+      obj->setFilePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,10 +229,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->workingDirectory() );
+      RQSTRING(obj->workingDirectory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,10 +255,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETWORKINGDIRECTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setWorkingDirectory( PQSTRING(1) );
+      obj->setWorkingDirectory(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,10 +283,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QIcon( obj->icon() );
+      auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,10 +310,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,10 +338,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,10 +364,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,10 +392,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->description() );
+      RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,10 +418,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setDescription( PQSTRING(1) );
+      obj->setDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,10 +446,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->arguments() );
+      RQSTRINGLIST(obj->arguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,10 +472,10 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETARGUMENTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setArguments( PQSTRINGLIST(1) );
+      obj->setArguments(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -521,12 +521,12 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROM )
 
 HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QWINJUMPLISTITEM_NEWFROM );
+  HB_FUNC_EXEC(QWINJUMPLISTITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QWINJUMPLISTITEM_NEWFROM );
+  HB_FUNC_EXEC(QWINJUMPLISTITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SELFDESTRUCTION )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

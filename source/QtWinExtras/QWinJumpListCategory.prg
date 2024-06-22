@@ -79,9 +79,9 @@ QWinJumpListCategory( const QString & title = QString() )
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWinJumpListCategory( OPQSTRING( 1, QString() ) );
+    auto obj = new QWinJumpListCategory( OPQSTRING(1, QString()));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -120,10 +120,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,10 +146,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVisible() );
+      RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,10 +226,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,10 +254,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,10 +280,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->items();
@@ -355,10 +355,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWINJUMPLISTITEM(1) )
+    if (ISNUMPAR(1) && ISQWINJUMPLISTITEM(1))
     {
 #endif
-      obj->addItem( PQWINJUMPLISTITEM(1) );
+      obj->addItem(PQWINJUMPLISTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,10 +383,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = obj->addDestination( PQSTRING(1) );
+      auto ptr = obj->addDestination(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {
-  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISOPTARRAY(3) )
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISOPTARRAY(3))
   {
     /*
     QWinJumpListItem * addLink( const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
@@ -411,13 +411,13 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addLink( PQSTRING(1), PQSTRING(2), OPQSTRINGLIST( 3, QStringList() ) );
+      auto ptr = obj->addLink(PQSTRING(1), PQSTRING(2), OPQSTRINGLIST( 3, QStringList()));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
 
   }
-  else if( ISBETWEEN(3, 4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISOPTARRAY(4) )
+  else if (ISBETWEEN(3, 4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISOPTARRAY(4))
   {
     /*
     QWinJumpListItem * addLink( const QIcon & icon, const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addLink( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST( 4, QStringList() ) );
+      auto ptr = obj->addLink( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST( 4, QStringList()));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->addSeparator();
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -526,12 +526,12 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROM )
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QWINJUMPLISTCATEGORY_NEWFROM );
+  HB_FUNC_EXEC(QWINJUMPLISTCATEGORY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QWINJUMPLISTCATEGORY_NEWFROM );
+  HB_FUNC_EXEC(QWINJUMPLISTCATEGORY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SELFDESTRUCTION )
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
