@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPrintEngine * ptr = obj->printEngine();
+      auto ptr = obj->printEngine();
       Qt5xHb::createReturnClass(ptr, "QPRINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintEngine * ptr = obj->paintEngine();
+      auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
