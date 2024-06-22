@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGeoShape()
@@ -76,13 +76,13 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
+  else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
     QGeoShape( const QGeoShape & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoShape( *PQGEOSHAPE(1) );
+    auto obj = new QGeoShape( *PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QGEOSHAPE_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
+    if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RBOOL( obj->contains( *PQGEOCOORDINATE(1) ) );
+      RBOOL(obj->contains( *PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -247,12 +247,12 @@ HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
 
 HB_FUNC_STATIC( QGEOSHAPE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QGEOSHAPE_NEWFROM );
+  HB_FUNC_EXEC(QGEOSHAPE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGEOSHAPE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QGEOSHAPE_NEWFROM );
+  HB_FUNC_EXEC(QGEOSHAPE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGEOSHAPE_SELFDESTRUCTION )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGEOSHAPE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
