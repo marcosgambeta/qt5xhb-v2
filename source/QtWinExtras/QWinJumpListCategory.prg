@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QWinJumpListItem * ptr = obj->addDestination( PQSTRING(1) );
+      auto ptr = obj->addDestination( PQSTRING(1) );
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 
     if( obj != nullptr )
     {
-      QWinJumpListItem * ptr = obj->addLink( PQSTRING(1), PQSTRING(2), OPQSTRINGLIST( 3, QStringList() ) );
+      auto ptr = obj->addLink( PQSTRING(1), PQSTRING(2), OPQSTRINGLIST( 3, QStringList() ) );
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 
     if( obj != nullptr )
     {
-      QWinJumpListItem * ptr = obj->addLink( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST( 4, QStringList() ) );
+      auto ptr = obj->addLink( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST( 4, QStringList() ) );
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWinJumpListItem * ptr = obj->addSeparator();
+      auto ptr = obj->addSeparator();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

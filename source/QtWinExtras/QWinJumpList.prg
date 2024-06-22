@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_RECENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWinJumpListCategory * ptr = obj->recent();
+      auto ptr = obj->recent();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTCATEGORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_FREQUENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWinJumpListCategory * ptr = obj->frequent();
+      auto ptr = obj->frequent();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTCATEGORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_TASKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWinJumpListCategory * ptr = obj->tasks();
+      auto ptr = obj->tasks();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTCATEGORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
