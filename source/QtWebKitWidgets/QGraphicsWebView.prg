@@ -107,9 +107,9 @@ QGraphicsWebView( QGraphicsItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSITEM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsWebView( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)) );
+    auto obj = new QGraphicsWebView( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,10 +173,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QIcon( obj->icon() );
+      auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -198,10 +198,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->zoomFactor() );
+      RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setZoomFactor( PQREAL(1) );
+      obj->setZoomFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,10 +248,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->url() );
+      auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -273,10 +273,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl( *PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,10 +299,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isModified() );
+      RBOOL(obj->isModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,10 +323,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->resizesToContents() );
+      RBOOL(obj->resizesToContents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,10 +347,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setResizesToContents( PBOOL(1) );
+      obj->setResizesToContents(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,10 +373,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTiledBackingStoreFrozen() );
+      RBOOL(obj->isTiledBackingStoreFrozen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,10 +397,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTiledBackingStoreFrozen( PBOOL(1) );
+      obj->setTiledBackingStoreFrozen(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,10 +423,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RENDERHINTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->renderHints() );
+      RENUM(obj->renderHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,10 +447,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRenderHints( static_cast<QPainter::RenderHints>( hb_parni(1) ) );
+      obj->setRenderHints( static_cast<QPainter::RenderHints>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,10 +473,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags >( 0 ) : static_cast<QWebPage::FindFlags >( hb_parni(2) ) ) );
+      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags >( 0 ) : static_cast<QWebPage::FindFlags >( hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->history();
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 {
-  if( ISNUMPAR(1) && ISQURL(1) )
+  if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
     void load( const QUrl & url )
@@ -523,13 +523,13 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQURL(1) );
+      obj->load( *PQURL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ISOPTQBYTEARRAY(3) )
+  else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && ISOPTQBYTEARRAY(3))
   {
     /*
     void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >( hb_parni(2) ), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)) );
+      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >( hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->page();
@@ -585,10 +585,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->pageAction( static_cast<QWebPage::WebAction>( hb_parni(1) ) );
+      auto ptr = obj->pageAction( static_cast<QWebPage::WebAction>( hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -610,10 +610,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( ISQURL(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)) );
+      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,10 +636,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setHtml( PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)) );
+      obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,10 +662,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBPAGE(1) )
+    if (ISNUMPAR(1) && ISQWEBPAGE(1))
     {
 #endif
-      obj->setPage( PQWEBPAGE(1) );
+      obj->setPage(PQWEBPAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->settings();
@@ -713,10 +713,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerPageAction( static_cast<QWebPage::WebAction>( hb_parni(1) ), OPBOOL( 2, false ) );
+      obj->triggerPageAction( static_cast<QWebPage::WebAction>( hb_parni(1)), OPBOOL( 2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->back();
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forward();
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reload();
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -843,10 +843,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry( *PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_UPDATEGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->updateGeometry();
@@ -895,10 +895,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, nullptr ) );
+      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -921,10 +921,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ITEMCHANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      auto ptr = new QVariant( obj->itemChange( static_cast<QGraphicsItem::GraphicsItemChange>( hb_parni(1) ), *PQVARIANT(2) ) );
+      auto ptr = new QVariant(obj->itemChange( static_cast<QGraphicsItem::GraphicsItemChange>( hb_parni(1)), *PQVARIANT(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -946,10 +946,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_EVENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -970,10 +970,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZEF(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZEF(2))
     {
 #endif
-      auto ptr = new QSizeF( obj->sizeHint( static_cast<Qt::SizeHint>( hb_parni(1) ), *PQSIZEF(2) ) );
+      auto ptr = new QSizeF(obj->sizeHint( static_cast<Qt::SizeHint>( hb_parni(1)), *PQSIZEF(2)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -995,10 +995,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_INPUTMETHODQUERY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant( obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1) ) ) );
+      auto ptr = new QVariant(obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1020,10 +1020,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setRenderHint( static_cast<QPainter::RenderHint>( hb_parni(1) ), OPBOOL( 2, true ) );
+      obj->setRenderHint( static_cast<QPainter::RenderHint>( hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("iconChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("linkClicked(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1123,7 +1123,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("loadFinished(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("loadProgress(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("loadStarted()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("statusBarMessage(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("urlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
