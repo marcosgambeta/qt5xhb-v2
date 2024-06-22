@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_VIDEOWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->videoWidget();
@@ -120,10 +120,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ASPECTRATIOMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->aspectRatioMode() );
+      RENUM(obj->aspectRatioMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETASPECTRATIOMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAspectRatioMode( static_cast<Qt::AspectRatioMode>( hb_parni(1) ) );
+      obj->setAspectRatioMode( static_cast<Qt::AspectRatioMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,10 +170,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ISFULLSCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFullScreen() );
+      RBOOL(obj->isFullScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,10 +194,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETFULLSCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFullScreen( PBOOL(1) );
+      obj->setFullScreen(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,10 +220,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_BRIGHTNESS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->brightness() );
+      RINT(obj->brightness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,10 +244,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETBRIGHTNESS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBrightness( PINT(1) );
+      obj->setBrightness(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_CONTRAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->contrast() );
+      RINT(obj->contrast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETCONTRAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContrast( PINT(1) );
+      obj->setContrast(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_HUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hue() );
+      RINT(obj->hue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,10 +344,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETHUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHue( PINT(1) );
+      obj->setHue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,10 +370,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SATURATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->saturation() );
+      RINT(obj->saturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,10 +394,10 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETSATURATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSaturation( PINT(1) );
+      obj->setSaturation(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fullScreenChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("brightnessChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("contrastChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("saturationChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

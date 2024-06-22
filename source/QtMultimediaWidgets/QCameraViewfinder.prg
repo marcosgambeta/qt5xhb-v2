@@ -55,9 +55,9 @@ QCameraViewfinder( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QCameraViewfinder( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QCameraViewfinder( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_MEDIAOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->mediaObject();
