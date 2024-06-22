@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QSSLERROR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSslError()
@@ -71,30 +71,30 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QSslError( QSslError::SslError error )
     */
-    auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni(1) ) );
+    auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2))
   {
     /*
     QSslError( QSslError::SslError error, const QSslCertificate & certificate )
     */
-    auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni(1) ), *PQSSLCERTIFICATE(2) );
+    auto obj = new QSslError( static_cast<QSslError::SslError>( hb_parni(1)), *PQSSLCERTIFICATE(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSSLERROR(1) )
+  else if (ISNUMPAR(1) && ISQSSLERROR(1))
   {
     /*
     QSslError( const QSslError & other )
     */
-    auto obj = new QSslError( *PQSSLERROR(1) );
+    auto obj = new QSslError( *PQSSLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -133,10 +133,10 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSslCertificate( obj->certificate() );
+      auto ptr = new QSslCertificate(obj->certificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,10 +182,10 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QSSLERROR_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSSLERROR(1) )
+    if (ISNUMPAR(1) && ISQSSLERROR(1))
     {
 #endif
-      obj->swap( *PQSSLERROR(1) );
+      obj->swap( *PQSSLERROR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -254,12 +254,12 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
 
 HB_FUNC_STATIC( QSSLERROR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSSLERROR_NEWFROM );
+  HB_FUNC_EXEC(QSSLERROR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSSLERROR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSSLERROR_NEWFROM );
+  HB_FUNC_EXEC(QSSLERROR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSSLERROR_SELFDESTRUCTION )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSSLERROR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

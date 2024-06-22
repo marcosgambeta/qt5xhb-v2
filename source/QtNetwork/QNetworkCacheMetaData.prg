@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QNetworkCacheMetaData()
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
+  else if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
   {
     /*
     QNetworkCacheMetaData( const QNetworkCacheMetaData & other )
     */
-    auto obj = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1) );
+    auto obj = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
+    if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
     {
 #endif
-      obj->swap( *PQNETWORKCACHEMETADATA(1) );
+      obj->swap( *PQNETWORKCACHEMETADATA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,10 +150,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->url() );
+      auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl( *PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,10 +231,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDateTime( obj->lastModified() );
+      auto ptr = new QDateTime(obj->lastModified());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,10 +256,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setLastModified( *PQDATETIME(1) );
+      obj->setLastModified( *PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,10 +282,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDateTime( obj->expirationDate() );
+      auto ptr = new QDateTime(obj->expirationDate());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -307,10 +307,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setExpirationDate( *PQDATETIME(1) );
+      obj->setExpirationDate( *PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,10 +333,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->saveToDisk() );
+      RBOOL(obj->saveToDisk());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,10 +357,10 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSaveToDisk( PBOOL(1) );
+      obj->setSaveToDisk(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -412,12 +412,12 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QNETWORKCACHEMETADATA_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKCACHEMETADATA_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QNETWORKCACHEMETADATA_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKCACHEMETADATA_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SELFDESTRUCTION )
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

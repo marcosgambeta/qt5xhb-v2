@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSslCertificateExtension()
@@ -73,12 +73,12 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
+  else if (ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1))
   {
     /*
     QSslCertificateExtension( const QSslCertificateExtension & other )
     */
-    auto obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
+    auto obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
+    if (ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1))
     {
 #endif
-      obj->swap( *PQSSLCERTIFICATEEXTENSION(1) );
+      obj->swap( *PQSSLCERTIFICATEEXTENSION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_OID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->oid() );
+      RQSTRING(obj->oid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVariant( obj->value() );
+      auto ptr = new QVariant(obj->value());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -216,10 +216,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISCRITICAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCritical() );
+      RBOOL(obj->isCritical());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISSUPPORTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSupported() );
+      RBOOL(obj->isSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -286,12 +286,12 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROM )
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSSLCERTIFICATEEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QSSLCERTIFICATEEXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSSLCERTIFICATEEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QSSLCERTIFICATEEXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SELFDESTRUCTION )
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

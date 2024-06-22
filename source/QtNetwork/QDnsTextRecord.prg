@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDnsTextRecord()
@@ -71,12 +71,12 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDNSTEXTRECORD(1) )
+  else if (ISNUMPAR(1) && ISQDNSTEXTRECORD(1))
   {
     /*
     QDnsTextRecord( const QDnsTextRecord & other )
     */
-    auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1) );
+    auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,10 +139,10 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDNSTEXTRECORD(1) )
+    if (ISNUMPAR(1) && ISQDNSTEXTRECORD(1))
     {
 #endif
-      obj->swap( *PQDNSTEXTRECORD(1) );
+      obj->swap( *PQDNSTEXTRECORD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,10 +165,10 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_TIMETOLIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT32( obj->timeToLive() );
+      RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->values();
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -261,12 +261,12 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROM )
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDNSTEXTRECORD_NEWFROM );
+  HB_FUNC_EXEC(QDNSTEXTRECORD_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDNSTEXTRECORD_NEWFROM );
+  HB_FUNC_EXEC(QDNSTEXTRECORD_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_SELFDESTRUCTION )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

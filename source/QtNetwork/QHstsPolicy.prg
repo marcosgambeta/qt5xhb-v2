@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QHstsPolicy()
@@ -83,24 +83,24 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 #endif
 
   }
-  else if( ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     QHstsPolicy( const QDateTime & expiry, QHstsPolicy::PolicyFlags flags, const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-    auto obj = new QHstsPolicy( *PQDATETIME(1), static_cast<QHstsPolicy::PolicyFlags>( hb_parni(2) ), PQSTRING(3), HB_ISNIL(4) ? static_cast<QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast<QUrl::ParsingMode >( hb_parni(4) ) );
+    auto obj = new QHstsPolicy( *PQDATETIME(1), static_cast<QHstsPolicy::PolicyFlags>( hb_parni(2)), PQSTRING(3), HB_ISNIL(4) ? static_cast<QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast<QUrl::ParsingMode >( hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQHSTSPOLICY(1) )
+  else if (ISNUMPAR(1) && ISQHSTSPOLICY(1))
   {
     /*
     QHstsPolicy( const QHstsPolicy & rhs )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-    auto obj = new QHstsPolicy( *PQHSTSPOLICY(1) );
+    auto obj = new QHstsPolicy( *PQHSTSPOLICY(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHSTSPOLICY(1) )
+    if (ISNUMPAR(1) && ISQHSTSPOLICY(1))
     {
 #endif
-      obj->swap( *PQHSTSPOLICY(1) );
+      obj->swap( *PQHSTSPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setHost( PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast<QUrl::ParsingMode >( hb_parni(2) ) );
+      obj->setHost(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ParsingMode >( QUrl::DecodedMode ) : static_cast<QUrl::ParsingMode >( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_HOST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING( obj->host( HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::FullyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >( hb_parni(1) ) ) );
+      RQSTRING(obj->host( HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::FullyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,10 +225,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETEXPIRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setExpiry( *PQDATETIME(1) );
+      obj->setExpiry( *PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,10 +253,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_EXPIRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDateTime( obj->expiry() );
+      auto ptr = new QDateTime(obj->expiry());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -280,10 +280,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETINCLUDESSUBDOMAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setIncludesSubDomains( PBOOL(1) );
+      obj->setIncludesSubDomains(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,10 +308,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_INCLUDESSUBDOMAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->includesSubDomains() );
+      RBOOL(obj->includesSubDomains());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,10 +334,10 @@ HB_FUNC_STATIC( QHSTSPOLICY_ISEXPIRED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isExpired() );
+      RBOOL(obj->isExpired());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -381,12 +381,12 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEWFROM )
 
 HB_FUNC_STATIC( QHSTSPOLICY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QHSTSPOLICY_NEWFROM );
+  HB_FUNC_EXEC(QHSTSPOLICY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QHSTSPOLICY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QHSTSPOLICY_NEWFROM );
+  HB_FUNC_EXEC(QHSTSPOLICY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QHSTSPOLICY_SELFDESTRUCTION )
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

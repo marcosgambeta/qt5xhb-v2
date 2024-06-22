@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDnsHostAddressRecord()
@@ -73,12 +73,12 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
+  else if (ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1))
   {
     /*
     QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
     */
-    auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
+    auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
+    if (ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1))
     {
 #endif
-      obj->swap( *PQDNSHOSTADDRESSRECORD(1) );
+      obj->swap( *PQDNSHOSTADDRESSRECORD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT32( obj->timeToLive() );
+      RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QHostAddress( obj->value() );
+      auto ptr = new QHostAddress(obj->value());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -238,12 +238,12 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROM )
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDNSHOSTADDRESSRECORD_NEWFROM );
+  HB_FUNC_EXEC(QDNSHOSTADDRESSRECORD_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDNSHOSTADDRESSRECORD_NEWFROM );
+  HB_FUNC_EXEC(QDNSHOSTADDRESSRECORD_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SELFDESTRUCTION )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

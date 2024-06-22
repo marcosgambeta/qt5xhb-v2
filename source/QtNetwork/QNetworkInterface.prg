@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QNetworkInterface()
@@ -82,12 +82,12 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
+  else if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
   {
     /*
     QNetworkInterface( const QNetworkInterface & other )
     */
-    auto obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
+    auto obj = new QNetworkInterface( *PQNETWORKINTERFACE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->addressEntries();
@@ -176,10 +176,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->hardwareAddress() );
+      RQSTRING(obj->hardwareAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,10 +224,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->humanReadableName() );
+      RQSTRING(obj->humanReadableName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,10 +248,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->index() );
+      RINT(obj->index());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,10 +272,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,10 +296,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ static QList<QHostAddress> allAddresses()
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     auto list = QNetworkInterface::allAddresses();
@@ -361,7 +361,7 @@ static QList<QNetworkInterface> allInterfaces()
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     auto list = QNetworkInterface::allInterfaces();
@@ -406,10 +406,10 @@ static QNetworkInterface interfaceFromIndex( int index )
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex( PINT(1) ) );
+    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex(PINT(1)));
     Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -426,10 +426,10 @@ static QNetworkInterface interfaceFromName( const QString & name )
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName( PQSTRING(1) ) );
+    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -447,10 +447,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEINDEXFROMNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RINT( QNetworkInterface::interfaceIndexFromName( PQSTRING(1) ) );
+    RINT( QNetworkInterface::interfaceIndexFromName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -468,10 +468,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACENAMEFROMINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QNetworkInterface::interfaceNameFromIndex( PINT(1) ) );
+    RQSTRING( QNetworkInterface::interfaceNameFromIndex(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -492,10 +492,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
     {
 #endif
-      obj->swap( *PQNETWORKINTERFACE(1) );
+      obj->swap( *PQNETWORKINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -540,12 +540,12 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QNETWORKINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QNETWORKINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_SELFDESTRUCTION )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

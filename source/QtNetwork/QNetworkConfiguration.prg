@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QNetworkConfiguration()
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
+  else if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
   {
     /*
     QNetworkConfiguration( const QNetworkConfiguration & other )
     */
-    auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
+    auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->bearerType() );
+      RENUM(obj->bearerType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->bearerTypeFamily() );
+      RENUM(obj->bearerTypeFamily());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->bearerTypeName() );
+      RQSTRING(obj->bearerTypeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->children();
@@ -248,10 +248,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->identifier() );
+      RQSTRING(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,10 +272,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isRoamingAvailable() );
+      RBOOL(obj->isRoamingAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,10 +296,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,10 +344,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->purpose() );
+      RENUM(obj->purpose());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,10 +368,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,10 +392,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,10 +416,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
+    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
     {
 #endif
-      obj->swap( *PQNETWORKCONFIGURATION(1) );
+      obj->swap( *PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,10 +443,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CONNECTTIMEOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->connectTimeout() );
+      RINT(obj->connectTimeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,10 +469,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETCONNECTTIMEOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setConnectTimeout( PINT(1) ) );
+      RBOOL(obj->setConnectTimeout(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -516,12 +516,12 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROM )
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QNETWORKCONFIGURATION_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKCONFIGURATION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QNETWORKCONFIGURATION_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKCONFIGURATION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SELFDESTRUCTION )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

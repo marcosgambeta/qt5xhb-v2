@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QNetworkAddressEntry()
@@ -76,12 +76,12 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
+  else if (ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1))
   {
     /*
     QNetworkAddressEntry( const QNetworkAddressEntry & other )
     */
-    auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
+    auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -120,10 +120,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QHostAddress( obj->broadcast() );
+      auto ptr = new QHostAddress(obj->broadcast());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,10 +145,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QHostAddress( obj->ip() );
+      auto ptr = new QHostAddress(obj->ip());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,10 +170,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QHostAddress( obj->netmask() );
+      auto ptr = new QHostAddress(obj->netmask());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -195,10 +195,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->prefixLength() );
+      RINT(obj->prefixLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
+    if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setBroadcast( *PQHOSTADDRESS(1) );
+      obj->setBroadcast( *PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,10 +245,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
+    if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setIp( *PQHOSTADDRESS(1) );
+      obj->setIp( *PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,10 +271,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
+    if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setNetmask( *PQHOSTADDRESS(1) );
+      obj->setNetmask( *PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,10 +297,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPrefixLength( PINT(1) );
+      obj->setPrefixLength(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,10 +323,10 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
+    if (ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1))
     {
 #endif
-      obj->swap( *PQNETWORKADDRESSENTRY(1) );
+      obj->swap( *PQNETWORKADDRESSENTRY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -371,12 +371,12 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROM )
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QNETWORKADDRESSENTRY_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKADDRESSENTRY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QNETWORKADDRESSENTRY_NEWFROM );
+  HB_FUNC_EXEC(QNETWORKADDRESSENTRY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SELFDESTRUCTION )
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

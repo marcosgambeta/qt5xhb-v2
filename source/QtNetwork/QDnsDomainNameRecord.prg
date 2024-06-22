@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDnsDomainNameRecord()
@@ -70,12 +70,12 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1) )
+  else if (ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1))
   {
     /*
     QDnsDomainNameRecord( const QDnsDomainNameRecord & other )
     */
-    auto obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
+    auto obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,10 +138,10 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1) )
+    if (ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1))
     {
 #endif
-      obj->swap( *PQDNSDOMAINNAMERECORD(1) );
+      obj->swap( *PQDNSDOMAINNAMERECORD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,10 +164,10 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_TIMETOLIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT32( obj->timeToLive() );
+      RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,10 +188,10 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->value() );
+      RQSTRING(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -234,12 +234,12 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEWFROM )
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDNSDOMAINNAMERECORD_NEWFROM );
+  HB_FUNC_EXEC(QDNSDOMAINNAMERECORD_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDNSDOMAINNAMERECORD_NEWFROM );
+  HB_FUNC_EXEC(QDNSDOMAINNAMERECORD_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SELFDESTRUCTION )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
