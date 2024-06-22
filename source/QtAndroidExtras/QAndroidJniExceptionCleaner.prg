@@ -66,9 +66,9 @@ QAndroidJniExceptionCleaner( QAndroidJniExceptionCleaner::OutputMode outputMode 
 HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QAndroidJniExceptionCleaner( HB_ISNIL(1) ? static_cast<QAndroidJniExceptionCleaner::OutputMode >( QAndroidJniExceptionCleaner::OutputMode::Silent ) : static_cast<QAndroidJniExceptionCleaner::OutputMode >( hb_parni(1) ) );
+    auto obj = new QAndroidJniExceptionCleaner( HB_ISNIL(1) ? static_cast<QAndroidJniExceptionCleaner::OutputMode >( QAndroidJniExceptionCleaner::OutputMode::Silent ) : static_cast<QAndroidJniExceptionCleaner::OutputMode >( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_CLEAN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clean();
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -159,12 +159,12 @@ HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROM )
 
 HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROM );
+  HB_FUNC_EXEC(QANDROIDJNIEXCEPTIONCLEANER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QANDROIDJNIEXCEPTIONCLEANER_NEWFROM );
+  HB_FUNC_EXEC(QANDROIDJNIEXCEPTIONCLEANER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_SELFDESTRUCTION )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

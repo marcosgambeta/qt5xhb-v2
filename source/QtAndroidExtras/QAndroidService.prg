@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QANDROIDSERVICE_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  auto obj = new QAndroidService( argc, argv );
+  auto obj = new QAndroidService( argc, argv);
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QANDROIDSERVICE_ONBIND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQANDROIDINTENT(1) )
+    if (ISNUMPAR(1) && ISQANDROIDINTENT(1))
     {
 #endif
-      auto ptr = obj->onBind( *PQANDROIDINTENT(1) );
+      auto ptr = obj->onBind( *PQANDROIDINTENT(1));
       Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
