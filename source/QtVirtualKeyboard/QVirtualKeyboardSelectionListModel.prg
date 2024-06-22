@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardAbstractInputMethod * ptr = obj->dataSource();
+      auto ptr = obj->dataSource();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

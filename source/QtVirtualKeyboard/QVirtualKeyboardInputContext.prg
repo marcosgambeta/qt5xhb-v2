@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardInputEngine * ptr = obj->inputEngine();
+      auto ptr = obj->inputEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

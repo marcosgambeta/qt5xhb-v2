@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardAbstractInputMethod * ptr = obj->inputMethod();
+      auto ptr = obj->inputMethod();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardSelectionListModel * ptr = obj->wordCandidateListModel();
+      auto ptr = obj->wordCandidateListModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardInputContext * ptr = obj->inputContext();
+      auto ptr = obj->inputContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

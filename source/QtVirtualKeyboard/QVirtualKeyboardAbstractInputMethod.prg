@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardInputContext * ptr = obj->inputContext();
+      auto ptr = obj->inputContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardInputEngine * ptr = obj->inputEngine();
+      auto ptr = obj->inputEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
