@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_CREATEDEVICE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) )
     {
 #endif
-      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), nullptr );
+      auto ptr = obj->createDevice( PQSTRING(1), nullptr );
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

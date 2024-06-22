@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCANBUS_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QCanBus * ptr = QCanBus::instance();
+    auto ptr = QCanBus::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QCANBUS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
     if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), nullptr );
+      auto ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), nullptr );
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
