@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBoxPlotSeries * ptr = obj->series();
+      auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QBOXPLOTSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

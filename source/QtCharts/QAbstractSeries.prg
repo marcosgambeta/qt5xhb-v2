@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChart * ptr = obj->chart();
+      auto ptr = obj->chart();
       Qt5xHb::createReturnQObjectClass(ptr, "QCHART");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

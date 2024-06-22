@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCandlestickSeries * ptr = obj->series();
+      auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QCANDLESTICKSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineSeries * ptr = obj->upperSeries();
+      auto ptr = obj->upperSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QLINESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineSeries * ptr = obj->lowerSeries();
+      auto ptr = obj->lowerSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QLINESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

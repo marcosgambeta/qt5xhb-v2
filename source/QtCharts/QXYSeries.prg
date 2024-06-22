@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QXYSERIES_AT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QPointF * ptr = &obj->at( PINT(1) );
+      auto ptr = &obj->at( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
 
     if( obj != nullptr )
     {
-      QPieSlice * ptr = obj->append( PQSTRING(1), PQREAL(2) );
+      auto ptr = obj->append( PQSTRING(1), PQREAL(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QPIESLICE");
     }
 #endif

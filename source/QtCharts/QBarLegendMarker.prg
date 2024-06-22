@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractBarSeries * ptr = obj->series();
+      auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTBARSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_BARSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBarSet * ptr = obj->barset();
+      auto ptr = obj->barset();
       Qt5xHb::createReturnQObjectClass(ptr, "QBARSET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

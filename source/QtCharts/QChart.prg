@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QCHART_AXISX )
     if( ISBETWEEN(0, 1) && ( ISQABSTRACTSERIES(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QAbstractAxis * ptr = obj->axisX( OPQABSTRACTSERIES( 1, nullptr ) );
+      auto ptr = obj->axisX( OPQABSTRACTSERIES( 1, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QCHART_AXISY )
     if( ISBETWEEN(0, 1) && ( ISQABSTRACTSERIES(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QAbstractAxis * ptr = obj->axisY( OPQABSTRACTSERIES( 1, nullptr ) );
+      auto ptr = obj->axisY( OPQABSTRACTSERIES( 1, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1664,7 +1664,7 @@ HB_FUNC_STATIC( QCHART_LEGEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLegend * ptr = obj->legend();
+      auto ptr = obj->legend();
       Qt5xHb::createReturnQObjectClass(ptr, "QLEGEND");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

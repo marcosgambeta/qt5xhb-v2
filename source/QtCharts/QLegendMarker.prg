@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractSeries * ptr = obj->series();
+      auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
