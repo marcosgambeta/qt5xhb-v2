@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSctpSocket * ptr = obj->nextPendingDatagramConnection();
+      auto ptr = obj->nextPendingDatagramConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCTPSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

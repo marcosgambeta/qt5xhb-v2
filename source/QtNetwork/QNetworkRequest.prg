@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->originatingObject();
+      auto ptr = obj->originatingObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

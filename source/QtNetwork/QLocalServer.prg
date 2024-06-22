@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocalSocket * ptr = obj->nextPendingConnection();
+      auto ptr = obj->nextPendingConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QLOCALSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

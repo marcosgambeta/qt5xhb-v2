@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QIODevice * ptr = obj->data( *PQURL(1) );
+      auto ptr = obj->data( *PQURL(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
     if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
     {
 #endif
-      QIODevice * ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1) );
+      auto ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
