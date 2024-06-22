@@ -65,9 +65,9 @@ QDeclarativeImageProvider( QDeclarativeImageProvider::ImageType type )
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    auto obj = new QDeclarativeImageProvider( static_cast<QDeclarativeImageProvider::ImageType>( hb_parni(1) ) );
+    auto obj = new QDeclarativeImageProvider( static_cast<QDeclarativeImageProvider::ImageType>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->imageType() );
+      RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
 #endif
-      auto ptr = new QImage( obj->requestImage( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      auto ptr = new QImage(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
 #endif
-      auto ptr = new QPixmap( obj->requestPixmap( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      auto ptr = new QPixmap(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -198,12 +198,12 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROM )
 
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDECLARATIVEIMAGEPROVIDER_NEWFROM );
+  HB_FUNC_EXEC(QDECLARATIVEIMAGEPROVIDER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDECLARATIVEIMAGEPROVIDER_NEWFROM );
+  HB_FUNC_EXEC(QDECLARATIVEIMAGEPROVIDER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_SELFDESTRUCTION )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

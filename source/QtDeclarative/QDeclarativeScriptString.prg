@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDeclarativeScriptString()
@@ -75,12 +75,12 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1) )
+  else if (ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1))
   {
     /*
     QDeclarativeScriptString( const QDeclarativeScriptString & other )
     */
-    auto obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
+    auto obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->context();
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->scopeObject();
@@ -150,10 +150,10 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->script() );
+      RQSTRING(obj->script());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
+    if (ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1))
     {
 #endif
-      obj->setContext( PQDECLARATIVECONTEXT(1) );
+      obj->setContext(PQDECLARATIVECONTEXT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setScopeObject( PQOBJECT(1) );
+      obj->setScopeObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,10 +226,10 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setScript( PQSTRING(1) );
+      obj->setScript(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -274,12 +274,12 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROM )
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEWFROM );
+  HB_FUNC_EXEC(QDECLARATIVESCRIPTSTRING_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDECLARATIVESCRIPTSTRING_NEWFROM );
+  HB_FUNC_EXEC(QDECLARATIVESCRIPTSTRING_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SELFDESTRUCTION )
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -74,9 +74,9 @@ QDeclarativeItem( QDeclarativeItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQDECLARATIVEITEM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQDECLARATIVEITEM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QDeclarativeItem( OPQDECLARATIVEITEM( 1, nullptr ) );
+    auto obj = new QDeclarativeItem( OPQDECLARATIVEITEM( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->baselineOffset() );
+      RQREAL(obj->baselineOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = obj->childAt( PQREAL(1), PQREAL(2) );
+      auto ptr = obj->childAt(PQREAL(1), PQREAL(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->childrenRect() );
+      auto ptr = new QRectF(obj->childrenRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -187,10 +187,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->clip() );
+      RBOOL(obj->clip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forceActiveFocus();
@@ -237,10 +237,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->implicitHeight() );
+      RQREAL(obj->implicitHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,10 +261,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->implicitWidth() );
+      RQREAL(obj->implicitWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,10 +285,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->keepMouseGrab() );
+      RBOOL(obj->keepMouseGrab());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,10 +309,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QScriptValue( obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
+      auto ptr = new QScriptValue(obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -334,10 +334,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QScriptValue( obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
+      auto ptr = new QScriptValue(obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->parentItem();
@@ -384,10 +384,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBaselineOffset( PQREAL(1) );
+      obj->setBaselineOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,10 +410,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setClip( PBOOL(1) );
+      obj->setClip(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,10 +436,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setKeepMouseGrab( PBOOL(1) );
+      obj->setKeepMouseGrab(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,10 +462,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDECLARATIVEITEM(1) )
+    if (ISNUMPAR(1) && ISQDECLARATIVEITEM(1))
     {
 #endif
-      obj->setParentItem( PQDECLARATIVEITEM(1) );
+      obj->setParentItem(PQDECLARATIVEITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,10 +488,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSmooth( PBOOL(1) );
+      obj->setSmooth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,10 +514,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTransformOrigin( static_cast<QDeclarativeItem::TransformOrigin>( hb_parni(1) ) );
+      obj->setTransformOrigin( static_cast<QDeclarativeItem::TransformOrigin>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,10 +540,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->smooth() );
+      RBOOL(obj->smooth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,10 +564,10 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->transformOrigin() );
+      RENUM(obj->transformOrigin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

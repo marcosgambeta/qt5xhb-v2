@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDeclarativeExpression()
@@ -83,12 +83,12 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ( ISQOBJECT(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
     QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
     */
-    auto obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT( 4, nullptr ) );
+    auto obj = new QDeclarativeExpression(PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearError();
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->context();
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->engine();
@@ -202,10 +202,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDeclarativeError( obj->error() );
+      auto ptr = new QDeclarativeError(obj->error());
       Qt5xHb::createReturnClass(ptr, "QDECLARATIVEERROR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,13 +227,13 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      auto ptr = new QVariant( obj->evaluate( &par1 ) );
+      auto ptr = new QVariant(obj->evaluate( &par1));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
-      hb_storl( par1, 1 );
+      hb_storl( par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,10 +254,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->expression() );
+      RQSTRING(obj->expression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,10 +278,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasError() );
+      RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,10 +302,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineNumber() );
+      RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,10 +326,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->notifyOnValueChanged() );
+      RBOOL(obj->notifyOnValueChanged());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->scopeObject();
@@ -375,10 +375,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setExpression( PQSTRING(1) );
+      obj->setExpression(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,10 +401,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setNotifyOnValueChanged( PBOOL(1) );
+      obj->setNotifyOnValueChanged(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,10 +427,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setSourceLocation( PQSTRING(1), PINT(2) );
+      obj->setSourceLocation(PQSTRING(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,10 +453,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->sourceFile() );
+      RQSTRING(obj->sourceFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
