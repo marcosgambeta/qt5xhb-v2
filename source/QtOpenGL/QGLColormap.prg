@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGLColormap()
@@ -74,12 +74,12 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQGLCOLORMAP(1) )
+  else if (ISNUMPAR(1) && ISQGLCOLORMAP(1))
   {
     /*
     QGLColormap( const QGLColormap & map )
     */
-    auto obj = new QGLColormap( *PQGLCOLORMAP(1) );
+    auto obj = new QGLColormap( *PQGLCOLORMAP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QColor( obj->entryColor( PINT(1) ) );
+      auto ptr = new QColor(obj->entryColor(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -140,10 +140,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQRGB( obj->entryRgb( PINT(1) ) );
+      RQRGB(obj->entryRgb(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,10 +164,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->find( PQRGB(1) ) );
+      RINT(obj->find(PQRGB(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,10 +188,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->findNearest( PQRGB(1) ) );
+      RINT(obj->findNearest(PQRGB(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,10 +212,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ void setEntries ( int count, const QRgb * colors, int base = 0 )
 
 HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setEntry( int idx, QRgb color )
@@ -241,13 +241,13 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 
     if (obj != nullptr)
     {
-      obj->setEntry( PINT(1), PQRGB(2) );
+      obj->setEntry(PINT(1), PQRGB(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQCOLOR(2)|| HB_ISCHAR(2) ) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)|| HB_ISCHAR(2)))
   {
     /*
     void setEntry( int idx, const QColor & color )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 
     if (obj != nullptr)
     {
-      obj->setEntry( PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2) ) );
+      obj->setEntry(PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -278,10 +278,10 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->size() );
+      RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -324,12 +324,12 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEWFROM )
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QGLCOLORMAP_NEWFROM );
+  HB_FUNC_EXEC(QGLCOLORMAP_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QGLCOLORMAP_NEWFROM );
+  HB_FUNC_EXEC(QGLCOLORMAP_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGLCOLORMAP_SELFDESTRUCTION )
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
