@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QGYROSCOPEFILTER_FILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGYROSCOPEREADING(1) )
+    if (ISNUMPAR(1) && ISQGYROSCOPEREADING(1))
     {
 #endif
-      RBOOL( obj->filter( PQGYROSCOPEREADING(1) ) );
+      RBOOL(obj->filter(PQGYROSCOPEREADING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

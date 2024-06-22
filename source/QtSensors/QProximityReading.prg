@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QPROXIMITYREADING_CLOSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->close() );
+      RBOOL(obj->close());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QPROXIMITYREADING_SETCLOSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setClose( PBOOL(1) );
+      obj->setClose(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

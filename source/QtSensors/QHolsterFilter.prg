@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QHOLSTERFILTER_FILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOLSTERREADING(1) )
+    if (ISNUMPAR(1) && ISQHOLSTERREADING(1))
     {
 #endif
-      RBOOL( obj->filter( PQHOLSTERREADING(1) ) );
+      RBOOL(obj->filter(PQHOLSTERREADING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

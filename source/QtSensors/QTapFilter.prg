@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QTAPFILTER_FILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTAPREADING(1) )
+    if (ISNUMPAR(1) && ISQTAPREADING(1))
     {
 #endif
-      RBOOL( obj->filter( PQTAPREADING(1) ) );
+      RBOOL(obj->filter(PQTAPREADING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -79,10 +79,10 @@ HB_FUNC_STATIC( QCOMPASSFILTER_FILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOMPASSREADING(1) )
+    if (ISNUMPAR(1) && ISQCOMPASSREADING(1))
     {
 #endif
-      RBOOL( obj->filter( PQCOMPASSREADING(1) ) );
+      RBOOL(obj->filter(PQCOMPASSREADING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

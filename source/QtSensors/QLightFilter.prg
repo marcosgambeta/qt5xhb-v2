@@ -76,10 +76,10 @@ HB_FUNC_STATIC( QLIGHTFILTER_FILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLIGHTREADING(1) )
+    if (ISNUMPAR(1) && ISQLIGHTREADING(1))
     {
 #endif
-      RBOOL( obj->filter( PQLIGHTREADING(1) ) );
+      RBOOL(obj->filter(PQLIGHTREADING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
