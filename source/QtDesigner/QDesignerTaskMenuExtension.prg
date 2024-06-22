@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->preferredEditAction();
+      auto ptr = obj->preferredEditAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

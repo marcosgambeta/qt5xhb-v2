@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerActionEditorInterface * ptr = obj->actionEditor();
+      auto ptr = obj->actionEditor();
       Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERACTIONEDITORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QExtensionManager * ptr = obj->extensionManager();
+      auto ptr = obj->extensionManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QEXTENSIONMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager();
+      auto ptr = obj->formWindowManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerObjectInspectorInterface * ptr = obj->objectInspector();
+      auto ptr = obj->objectInspector();
       Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerPropertyEditorInterface * ptr = obj->propertyEditor();
+      auto ptr = obj->propertyEditor();
       Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERPROPERTYEDITORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->topLevel();
+      auto ptr = obj->topLevel();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerWidgetBoxInterface * ptr = obj->widgetBox();
+      auto ptr = obj->widgetBox();
       Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERWIDGETBOXINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
