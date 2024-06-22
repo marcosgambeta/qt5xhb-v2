@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
+      auto ptr = obj->registeredProduct( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QInAppProduct * ptr = obj->product();
+      auto ptr = obj->product();
       Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
