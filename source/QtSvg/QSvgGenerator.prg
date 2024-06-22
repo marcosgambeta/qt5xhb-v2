@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->outputDevice();
+      auto ptr = obj->outputDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

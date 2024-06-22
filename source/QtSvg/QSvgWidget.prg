@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSvgRenderer * ptr = obj->renderer();
+      auto ptr = obj->renderer();
       Qt5xHb::createReturnQObjectClass(ptr, "QSVGRENDERER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
