@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAction * ptr = obj->action( static_cast<QWebPage::WebAction>( hb_parni(1) ) );
+      auto ptr = obj->action( static_cast<QWebPage::WebAction>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->createStandardContextMenu();
+      auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebFrame * ptr = obj->currentFrame();
+      auto ptr = obj->currentFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QWebFrame * ptr = obj->frameAt( *PQPOINT(1) );
+      auto ptr = obj->frameAt( *PQPOINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QWEBPAGE_HISTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebHistory * ptr = obj->history();
+      auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBHISTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebFrame * ptr = obj->mainFrame();
+      auto ptr = obj->mainFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebPluginFactory * ptr = obj->pluginFactory();
+      auto ptr = obj->pluginFactory();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBPLUGINFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebSettings * ptr = obj->settings();
+      auto ptr = obj->settings();
       Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoStack * ptr = obj->undoStack();
+      auto ptr = obj->undoStack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->view();
+      auto ptr = obj->view();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
