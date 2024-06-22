@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QInputMethodEvent()
@@ -62,12 +62,12 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
+  else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1))
   {
     /*
     QInputMethodEvent( const QInputMethodEvent & other )
     */
-    auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
+    auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -103,10 +103,10 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->commitString() );
+      RQSTRING(obj->commitString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->preeditString() );
+      RQSTRING(obj->preeditString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->replacementLength() );
+      RINT(obj->replacementLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->replacementStart() );
+      RINT(obj->replacementStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setCommitString( PQSTRING(1), OPINT( 2, 0 ), OPINT( 3, 0 ) );
+      obj->setCommitString(PQSTRING(1), OPINT( 2, 0 ), OPINT( 3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

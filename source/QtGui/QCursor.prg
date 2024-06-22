@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC( QCURSOR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QCursor()
@@ -79,39 +79,39 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QCursor( Qt::CursorShape shape )
     */
-    auto obj = new QCursor( static_cast<Qt::CursorShape>( hb_parni(1) ) );
+    auto obj = new QCursor( static_cast<Qt::CursorShape>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     QCursor( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
     */
-    auto obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT( 3, -1 ), OPINT( 4, -1 ) );
+    auto obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT( 3, -1 ), OPINT( 4, -1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(1, 3) && ISQPIXMAP(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QCursor( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
     */
-    auto obj = new QCursor( *PQPIXMAP(1), OPINT( 2, -1 ), OPINT( 3, -1 ) );
+    auto obj = new QCursor( *PQPIXMAP(1), OPINT( 2, -1 ), OPINT( 3, -1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQCURSOR(1) )
+  else if (ISNUMPAR(1) && ISQCURSOR(1))
   {
     /*
     QCursor( const QCursor & c )
     */
-    auto obj = new QCursor( *PQCURSOR(1) );
+    auto obj = new QCursor( *PQCURSOR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->bitmap();
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->hotSpot() );
+      auto ptr = new QPoint(obj->hotSpot());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QCURSOR_MASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->mask();
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPixmap( obj->pixmap() );
+      auto ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -247,10 +247,10 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShape( static_cast<Qt::CursorShape>( hb_parni(1) ) );
+      obj->setShape( static_cast<Qt::CursorShape>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,10 +273,10 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->shape() );
+      RENUM(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,10 +293,10 @@ static QPoint pos()
 HB_FUNC_STATIC( QCURSOR_POS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QPoint( QCursor::pos() );
+    auto ptr = new QPoint( QCursor::pos());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -309,24 +309,24 @@ HB_FUNC_STATIC( QCURSOR_POS )
 
 HB_FUNC_STATIC( QCURSOR_SETPOS )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     static void setPos( int x, int y )
     */
 
-    QCursor::setPos( PINT(1), PINT(2) );
+    QCursor::setPos(PINT(1), PINT(2));
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     static void setPos( const QPoint & p )
     */
 
-    QCursor::setPos( *PQPOINT(1) );
+    QCursor::setPos( *PQPOINT(1));
 
     hb_itemReturn(hb_stackSelfItem());
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QCURSOR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QCURSOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -369,12 +369,12 @@ HB_FUNC_STATIC( QCURSOR_NEWFROM )
 
 HB_FUNC_STATIC( QCURSOR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QCURSOR_NEWFROM );
+  HB_FUNC_EXEC(QCURSOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCURSOR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QCURSOR_NEWFROM );
+  HB_FUNC_EXEC(QCURSOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCURSOR_SELFDESTRUCTION )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QCURSOR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

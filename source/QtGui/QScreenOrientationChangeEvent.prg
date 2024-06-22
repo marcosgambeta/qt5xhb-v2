@@ -56,9 +56,9 @@ QScreenOrientationChangeEvent( QScreen * screen, Qt::ScreenOrientation orientati
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISQSCREEN(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && ISQSCREEN(1) && HB_ISNUM(2))
   {
-    auto obj = new QScreenOrientationChangeEvent( PQSCREEN(1), static_cast<Qt::ScreenOrientation>( hb_parni(2) ) );
+    auto obj = new QScreenOrientationChangeEvent(PQSCREEN(1), static_cast<Qt::ScreenOrientation>( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->screen();
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

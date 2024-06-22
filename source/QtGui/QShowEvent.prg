@@ -51,7 +51,7 @@ QShowEvent()
 */
 HB_FUNC_STATIC( QSHOWEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QShowEvent();
     Qt5xHb::returnNewObject(obj, false);

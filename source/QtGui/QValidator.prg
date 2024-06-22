@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       QString par1 = hb_parc(1);
-      obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
+      obj->fixup( par1);
+      hb_storc( QSTRINGTOSTRING( par1), 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLocale( obj->locale() );
+      auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,10 +133,10 @@ HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,14 +159,14 @@ HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
-      hb_storni( par2, 2 );
+      RENUM(obj->validate( par1, par2));
+      hb_storc( QSTRINGTOSTRING( par1), 1);
+      hb_storni( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

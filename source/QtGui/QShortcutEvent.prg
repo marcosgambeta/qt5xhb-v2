@@ -55,9 +55,9 @@ QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
-  if( ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && ( HB_ISLOG(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && (HB_ISLOG(3) || HB_ISNIL(3)))
   {
-    auto obj = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL( 3, false ) );
+    auto obj = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL( 3, false));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->key();
@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->shortcutId() );
+      RINT(obj->shortcutId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAmbiguous() );
+      RBOOL(obj->isAmbiguous());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

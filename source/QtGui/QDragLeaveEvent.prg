@@ -51,7 +51,7 @@ QDragLeaveEvent()
 */
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QDragLeaveEvent();
     Qt5xHb::returnNewObject(obj, false);

@@ -94,14 +94,14 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       int par2;
       int par3;
-      obj->selection( PINT(1), &par2, &par3 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
+      obj->selection(PINT(1), &par2, &par3);
+      hb_storni( par2, 2);
+      hb_storni( par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTIONCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectionCount() );
+      RINT(obj->selectionCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ADDSELECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->addSelection( PINT(1), PINT(2) );
+      obj->addSelection(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_REMOVESELECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeSelection( PINT(1) );
+      obj->removeSelection(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETSELECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setSelection( PINT(1), PINT(2), PINT(3) );
+      obj->setSelection(PINT(1), PINT(2), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,10 +226,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CURSORPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->cursorPosition() );
+      RINT(obj->cursorPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,10 +250,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETCURSORPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCursorPosition( PINT(1) );
+      obj->setCursorPosition(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,10 +276,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RQSTRING( obj->text( PINT(1), PINT(2) ) );
+      RQSTRING(obj->text(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,10 +300,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->characterCount() );
+      RINT(obj->characterCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,10 +324,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QRect( obj->characterRect( PINT(1) ) );
+      auto ptr = new QRect(obj->characterRect(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_OFFSETATPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RINT( obj->offsetAtPoint( *PQPOINT(1) ) );
+      RINT(obj->offsetAtPoint( *PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,10 +373,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SCROLLTOSUBSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->scrollToSubstring( PINT(1), PINT(2) );
+      obj->scrollToSubstring(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,14 +399,14 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       int par2;
       int par3;
-      RQSTRING( obj->attributes( PINT(1), &par2, &par3 ) );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
+      RQSTRING(obj->attributes(PINT(1), &par2, &par3));
+      hb_storni( par2, 2);
+      hb_storni( par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -449,12 +449,12 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_NEWFROM )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QACCESSIBLETEXTINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLETEXTINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QACCESSIBLETEXTINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLETEXTINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELFDESTRUCTION )
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

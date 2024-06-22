@@ -37,25 +37,25 @@ RETURN
 
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)))
   {
     /*
     explicit HCodeBlockValidator( QObject *parent = nullptr )
     */
-    auto obj = new HCodeBlockValidator( OPQOBJECT(1,nullptr) );
+    auto obj = new HCodeBlockValidator( OPQOBJECT(1,nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)))
   {
     /*
-    HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = nullptr )
+    HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent = nullptr )
     */
-    auto obj = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr) );
+    auto obj = new HCodeBlockValidator(PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 

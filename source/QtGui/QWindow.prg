@@ -184,21 +184,21 @@ RETURN
 
 HB_FUNC_STATIC( QWINDOW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSCREEN(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQSCREEN(1) || HB_ISNIL(1)))
   {
     /*
     QWindow( QScreen * screen = nullptr )
     */
-    auto obj = new QWindow( OPQSCREEN( 1, nullptr ) );
+    auto obj = new QWindow( OPQSCREEN( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQWINDOW(1) )
+  else if (ISNUMPAR(1) && ISQWINDOW(1))
   {
     /*
     QWindow( QWindow * parent )
     */
-    auto obj = new QWindow( PQWINDOW(1) );
+    auto obj = new QWindow(PQWINDOW(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QWINDOW_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,10 +263,10 @@ HB_FUNC_STATIC( QWINDOW_SETTITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,10 +289,10 @@ HB_FUNC_STATIC( QWINDOW_MODALITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modality() );
+      RENUM(obj->modality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,10 +313,10 @@ HB_FUNC_STATIC( QWINDOW_SETMODALITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModality( static_cast<Qt::WindowModality>( hb_parni(1) ) );
+      obj->setModality( static_cast<Qt::WindowModality>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,10 +339,10 @@ HB_FUNC_STATIC( QWINDOW_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,10 +363,10 @@ HB_FUNC_STATIC( QWINDOW_SETFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<Qt::WindowFlags>( hb_parni(1) ) );
+      obj->setFlags( static_cast<Qt::WindowFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,10 +389,10 @@ HB_FUNC_STATIC( QWINDOW_X )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->x() );
+      RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,10 +413,10 @@ HB_FUNC_STATIC( QWINDOW_SETX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setX( PINT(1) );
+      obj->setX(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,10 +439,10 @@ HB_FUNC_STATIC( QWINDOW_Y )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->y() );
+      RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,10 +463,10 @@ HB_FUNC_STATIC( QWINDOW_SETY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setY( PINT(1) );
+      obj->setY(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,10 +489,10 @@ HB_FUNC_STATIC( QWINDOW_WIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->width() );
+      RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,10 +513,10 @@ HB_FUNC_STATIC( QWINDOW_SETWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidth( PINT(1) );
+      obj->setWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,10 +539,10 @@ HB_FUNC_STATIC( QWINDOW_HEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->height() );
+      RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,10 +563,10 @@ HB_FUNC_STATIC( QWINDOW_SETHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHeight( PINT(1) );
+      obj->setHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,10 +589,10 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumWidth() );
+      RINT(obj->minimumWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,10 +613,10 @@ HB_FUNC_STATIC( QWINDOW_SETMINIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumWidth( PINT(1) );
+      obj->setMinimumWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,10 +639,10 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumHeight() );
+      RINT(obj->minimumHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -663,10 +663,10 @@ HB_FUNC_STATIC( QWINDOW_SETMINIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumHeight( PINT(1) );
+      obj->setMinimumHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,10 +689,10 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumWidth() );
+      RINT(obj->maximumWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,10 +713,10 @@ HB_FUNC_STATIC( QWINDOW_SETMAXIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumWidth( PINT(1) );
+      obj->setMaximumWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -739,10 +739,10 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumHeight() );
+      RINT(obj->maximumHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -763,10 +763,10 @@ HB_FUNC_STATIC( QWINDOW_SETMAXIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumHeight( PINT(1) );
+      obj->setMaximumHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -789,10 +789,10 @@ HB_FUNC_STATIC( QWINDOW_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVisible() );
+      RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -813,10 +813,10 @@ HB_FUNC_STATIC( QWINDOW_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -840,10 +840,10 @@ HB_FUNC_STATIC( QWINDOW_ISACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -866,10 +866,10 @@ HB_FUNC_STATIC( QWINDOW_VISIBILITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->visibility() );
+      RENUM(obj->visibility());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -892,10 +892,10 @@ HB_FUNC_STATIC( QWINDOW_SETVISIBILITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVisibility( static_cast<QWindow::Visibility>( hb_parni(1) ) );
+      obj->setVisibility( static_cast<QWindow::Visibility>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -919,10 +919,10 @@ HB_FUNC_STATIC( QWINDOW_CONTENTORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->contentOrientation() );
+      RENUM(obj->contentOrientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -943,10 +943,10 @@ HB_FUNC_STATIC( QWINDOW_REPORTCONTENTORIENTATIONCHANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->reportContentOrientationChange( static_cast<Qt::ScreenOrientation>( hb_parni(1) ) );
+      obj->reportContentOrientationChange( static_cast<Qt::ScreenOrientation>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -970,10 +970,10 @@ HB_FUNC_STATIC( QWINDOW_OPACITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->opacity() );
+      RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -996,10 +996,10 @@ HB_FUNC_STATIC( QWINDOW_SETOPACITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOpacity( PQREAL(1) );
+      obj->setOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,10 +1023,10 @@ HB_FUNC_STATIC( QWINDOW_BASESIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->baseSize() );
+      auto ptr = new QSize(obj->baseSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QWINDOW_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->create();
@@ -1075,10 +1075,10 @@ HB_FUNC_STATIC( QWINDOW_CURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QCursor( obj->cursor() );
+      auto ptr = new QCursor(obj->cursor());
       Qt5xHb::createReturnClass(ptr, "QCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QWINDOW_DESTROY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->focusObject();
@@ -1152,10 +1152,10 @@ HB_FUNC_STATIC( QWINDOW_FRAMEGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRect( obj->frameGeometry() );
+      auto ptr = new QRect(obj->frameGeometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1177,10 +1177,10 @@ HB_FUNC_STATIC( QWINDOW_FRAMEMARGINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QMargins( obj->frameMargins() );
+      auto ptr = new QMargins(obj->frameMargins());
       Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1202,10 +1202,10 @@ HB_FUNC_STATIC( QWINDOW_GEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRect( obj->geometry() );
+      auto ptr = new QRect(obj->geometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1227,10 +1227,10 @@ HB_FUNC_STATIC( QWINDOW_ISANCESTOROF )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWINDOW(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQWINDOW(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL( obj->isAncestorOf( PQWINDOW(1), HB_ISNIL(2) ? static_cast<QWindow::AncestorMode >( QWindow::IncludeTransients ) : static_cast<QWindow::AncestorMode >( hb_parni(2) ) ) );
+      RBOOL(obj->isAncestorOf(PQWINDOW(1), HB_ISNIL(2) ? static_cast<QWindow::AncestorMode >( QWindow::IncludeTransients ) : static_cast<QWindow::AncestorMode >( hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1251,10 +1251,10 @@ HB_FUNC_STATIC( QWINDOW_ISEXPOSED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isExposed() );
+      RBOOL(obj->isExposed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1275,10 +1275,10 @@ HB_FUNC_STATIC( QWINDOW_ISMODAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isModal() );
+      RBOOL(obj->isModal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1299,10 +1299,10 @@ HB_FUNC_STATIC( QWINDOW_ISTOPLEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTopLevel() );
+      RBOOL(obj->isTopLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1323,10 +1323,10 @@ HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = new QPoint( obj->mapFromGlobal( *PQPOINT(1) ) );
+      auto ptr = new QPoint(obj->mapFromGlobal( *PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1348,10 +1348,10 @@ HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = new QPoint( obj->mapToGlobal( *PQPOINT(1) ) );
+      auto ptr = new QPoint(obj->mapToGlobal( *PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1373,10 +1373,10 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->maximumSize() );
+      auto ptr = new QSize(obj->maximumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1398,10 +1398,10 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSize() );
+      auto ptr = new QSize(obj->minimumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
 
 HB_FUNC_STATIC( QWINDOW_PARENT )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QWindow * parent( QWindow::AncestorMode mode ) const
@@ -1425,13 +1425,13 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->parent( static_cast<QWindow::AncestorMode>( hb_parni(1) ) );
+      auto ptr = obj->parent( static_cast<QWindow::AncestorMode>( hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
     }
 #endif
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     QWindow * parent() const
@@ -1461,10 +1461,10 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->requestedFormat() );
+      auto ptr = new QSurfaceFormat(obj->requestedFormat());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1478,7 +1478,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
 
 HB_FUNC_STATIC( QWINDOW_RESIZE )
 {
-  if( ISNUMPAR(1) && ISQSIZE(1) )
+  if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
     void resize( const QSize & newSize )
@@ -1487,13 +1487,13 @@ HB_FUNC_STATIC( QWINDOW_RESIZE )
 
     if (obj != nullptr)
     {
-      obj->resize( *PQSIZE(1) );
+      obj->resize( *PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void resize( int w, int h )
@@ -1502,7 +1502,7 @@ HB_FUNC_STATIC( QWINDOW_RESIZE )
 
     if (obj != nullptr)
     {
-      obj->resize( PINT(1), PINT(2) );
+      obj->resize(PINT(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1524,7 +1524,7 @@ HB_FUNC_STATIC( QWINDOW_SCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->screen();
@@ -1549,10 +1549,10 @@ HB_FUNC_STATIC( QWINDOW_SETBASESIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setBaseSize( *PQSIZE(1) );
+      obj->setBaseSize( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1576,10 +1576,10 @@ HB_FUNC_STATIC( QWINDOW_SETCURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCURSOR(1) )
+    if (ISNUMPAR(1) && ISQCURSOR(1))
     {
 #endif
-      obj->setCursor( *PQCURSOR(1) );
+      obj->setCursor( *PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1603,10 +1603,10 @@ HB_FUNC_STATIC( QWINDOW_SETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1) );
+      obj->setFormat( *PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1621,7 +1621,7 @@ HB_FUNC_STATIC( QWINDOW_SETFORMAT )
 
 HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void setGeometry( int posx, int posy, int w, int h )
@@ -1630,13 +1630,13 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 
     if (obj != nullptr)
     {
-      obj->setGeometry( PINT(1), PINT(2), PINT(3), PINT(4) );
+      obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQRECT(1) )
+  else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
     void setGeometry( const QRect & rect )
@@ -1645,7 +1645,7 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 
     if (obj != nullptr)
     {
-      obj->setGeometry( *PQRECT(1) );
+      obj->setGeometry( *PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1667,10 +1667,10 @@ HB_FUNC_STATIC( QWINDOW_SETKEYBOARDGRABENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      RBOOL( obj->setKeyboardGrabEnabled( PBOOL(1) ) );
+      RBOOL(obj->setKeyboardGrabEnabled(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1691,10 +1691,10 @@ HB_FUNC_STATIC( QWINDOW_SETMAXIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setMaximumSize( *PQSIZE(1) );
+      obj->setMaximumSize( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1717,10 +1717,10 @@ HB_FUNC_STATIC( QWINDOW_SETMINIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setMinimumSize( *PQSIZE(1) );
+      obj->setMinimumSize( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1743,10 +1743,10 @@ HB_FUNC_STATIC( QWINDOW_SETMOUSEGRABENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      RBOOL( obj->setMouseGrabEnabled( PBOOL(1) ) );
+      RBOOL(obj->setMouseGrabEnabled(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1767,10 +1767,10 @@ HB_FUNC_STATIC( QWINDOW_SETPARENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWINDOW(1) )
+    if (ISNUMPAR(1) && ISQWINDOW(1))
     {
 #endif
-      obj->setParent( PQWINDOW(1) );
+      obj->setParent(PQWINDOW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1793,10 +1793,10 @@ HB_FUNC_STATIC( QWINDOW_SETSCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCREEN(1) )
+    if (ISNUMPAR(1) && ISQSCREEN(1))
     {
 #endif
-      obj->setScreen( PQSCREEN(1) );
+      obj->setScreen(PQSCREEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1819,10 +1819,10 @@ HB_FUNC_STATIC( QWINDOW_SETSIZEINCREMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setSizeIncrement( *PQSIZE(1) );
+      obj->setSizeIncrement( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1845,10 +1845,10 @@ HB_FUNC_STATIC( QWINDOW_SETSURFACETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSurfaceType( static_cast<QSurface::SurfaceType>( hb_parni(1) ) );
+      obj->setSurfaceType( static_cast<QSurface::SurfaceType>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1871,10 +1871,10 @@ HB_FUNC_STATIC( QWINDOW_SETTRANSIENTPARENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWINDOW(1) )
+    if (ISNUMPAR(1) && ISQWINDOW(1))
     {
 #endif
-      obj->setTransientParent( PQWINDOW(1) );
+      obj->setTransientParent(PQWINDOW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1897,10 +1897,10 @@ HB_FUNC_STATIC( QWINDOW_SIZEINCREMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeIncrement() );
+      auto ptr = new QSize(obj->sizeIncrement());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1922,7 +1922,7 @@ HB_FUNC_STATIC( QWINDOW_TRANSIENTPARENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->transientParent();
@@ -1948,7 +1948,7 @@ HB_FUNC_STATIC( QWINDOW_UNSETCURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unsetCursor();
@@ -1975,10 +1975,10 @@ HB_FUNC_STATIC( QWINDOW_WINDOWSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->windowState() );
+      RENUM(obj->windowState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1999,10 +1999,10 @@ HB_FUNC_STATIC( QWINDOW_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->format() );
+      auto ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2024,10 +2024,10 @@ HB_FUNC_STATIC( QWINDOW_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->size() );
+      auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2049,10 +2049,10 @@ HB_FUNC_STATIC( QWINDOW_SURFACETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->surfaceType() );
+      RENUM(obj->surfaceType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2073,10 +2073,10 @@ HB_FUNC_STATIC( QWINDOW_CLOSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->close() );
+      RBOOL(obj->close());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2097,7 +2097,7 @@ HB_FUNC_STATIC( QWINDOW_HIDE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->hide();
@@ -2123,7 +2123,7 @@ HB_FUNC_STATIC( QWINDOW_LOWER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->lower();
@@ -2149,7 +2149,7 @@ HB_FUNC_STATIC( QWINDOW_RAISE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->raise();
@@ -2175,7 +2175,7 @@ HB_FUNC_STATIC( QWINDOW_SHOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->show();
@@ -2201,7 +2201,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWFULLSCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showFullScreen();
@@ -2227,7 +2227,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWMAXIMIZED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showMaximized();
@@ -2253,7 +2253,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWMINIMIZED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showMinimized();
@@ -2279,7 +2279,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWNORMAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showNormal();
@@ -2305,10 +2305,10 @@ HB_FUNC_STATIC( QWINDOW_POSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->position() );
+      auto ptr = new QPoint(obj->position());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2322,7 +2322,7 @@ HB_FUNC_STATIC( QWINDOW_POSITION )
 
 HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     void setPosition( const QPoint & pt )
@@ -2331,13 +2331,13 @@ HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 
     if (obj != nullptr)
     {
-      obj->setPosition( *PQPOINT(1) );
+      obj->setPosition( *PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setPosition( int posx, int posy )
@@ -2346,7 +2346,7 @@ HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 
     if (obj != nullptr)
     {
-      obj->setPosition( PINT(1), PINT(2) );
+      obj->setPosition(PINT(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2369,7 +2369,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTUPDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->requestUpdate();
@@ -2396,10 +2396,10 @@ HB_FUNC_STATIC( QWINDOW_WINID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( reinterpret_cast< void*>( obj->winId() ) );
+      hb_retptr( reinterpret_cast< void*>(obj->winId()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2421,10 +2421,10 @@ HB_FUNC_STATIC( QWINDOW_SETFLAG )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFlag( static_cast<Qt::WindowType>( hb_parni(1) ), OPBOOL( 2, true ) );
+      obj->setFlag( static_cast<Qt::WindowType>( hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2448,10 +2448,10 @@ HB_FUNC_STATIC( QWINDOW_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2472,10 +2472,10 @@ HB_FUNC_STATIC( QWINDOW_SETMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGION(1) )
+    if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
-      obj->setMask( *PQREGION(1) );
+      obj->setMask( *PQREGION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2498,10 +2498,10 @@ HB_FUNC_STATIC( QWINDOW_MASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRegion( obj->mask() );
+      auto ptr = new QRegion(obj->mask());
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2523,10 +2523,10 @@ HB_FUNC_STATIC( QWINDOW_DEVICEPIXELRATIO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->devicePixelRatio() );
+      RQREAL(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2548,10 +2548,10 @@ HB_FUNC_STATIC( QWINDOW_WINDOWSTATES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->windowStates() );
+      RENUM(obj->windowStates());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2573,10 +2573,10 @@ HB_FUNC_STATIC( QWINDOW_SETWINDOWSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWindowState( static_cast<Qt::WindowState>( hb_parni(1) ) );
+      obj->setWindowState( static_cast<Qt::WindowState>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2600,10 +2600,10 @@ HB_FUNC_STATIC( QWINDOW_SETWINDOWSTATES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWindowStates( static_cast<Qt::WindowStates>( hb_parni(1) ) );
+      obj->setWindowStates( static_cast<Qt::WindowStates>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2627,10 +2627,10 @@ HB_FUNC_STATIC( QWINDOW_FRAMEPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->framePosition() );
+      auto ptr = new QPoint(obj->framePosition());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2652,10 +2652,10 @@ HB_FUNC_STATIC( QWINDOW_SETFRAMEPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setFramePosition( *PQPOINT(1) );
+      obj->setFramePosition( *PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2678,10 +2678,10 @@ HB_FUNC_STATIC( QWINDOW_SETFILEPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFilePath( PQSTRING(1) );
+      obj->setFilePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2704,10 +2704,10 @@ HB_FUNC_STATIC( QWINDOW_FILEPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->filePath() );
+      RQSTRING(obj->filePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2728,10 +2728,10 @@ HB_FUNC_STATIC( QWINDOW_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2754,10 +2754,10 @@ HB_FUNC_STATIC( QWINDOW_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QIcon( obj->icon() );
+      auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2779,7 +2779,7 @@ HB_FUNC_STATIC( QWINDOW_ACCESSIBLEROOT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->accessibleRoot();
@@ -2800,10 +2800,10 @@ static QWindow * fromWinId( WId id )
 HB_FUNC_STATIC( QWINDOW_FROMWINID )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISPOINTER(1) )
+  if (ISNUMPAR(1) && HB_ISPOINTER(1))
   {
 #endif
-    auto ptr = QWindow::fromWinId( (WId) hb_parptr(1) );
+    auto ptr = QWindow::fromWinId( (WId) hb_parptr(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2830,7 +2830,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTACTIVATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->requestActivate();
@@ -2857,10 +2857,10 @@ HB_FUNC_STATIC( QWINDOW_ALERT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->alert( PINT(1) );
+      obj->alert(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2889,7 +2889,7 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2912,7 +2912,7 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2940,7 +2940,7 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("contentOrientationChanged(Qt::ScreenOrientation)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2965,7 +2965,7 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2990,7 +2990,7 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusObjectChanged(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3015,7 +3015,7 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3040,7 +3040,7 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("heightChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3065,7 +3065,7 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3090,7 +3090,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumHeightChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3115,7 +3115,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3140,7 +3140,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumWidthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3165,7 +3165,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3190,7 +3190,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minimumHeightChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3215,7 +3215,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3240,7 +3240,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minimumWidthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3265,7 +3265,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3290,7 +3290,7 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modalityChanged(Qt::WindowModality)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3315,7 +3315,7 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3341,7 +3341,7 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3366,7 +3366,7 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3394,7 +3394,7 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenChanged(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3419,7 +3419,7 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3445,7 +3445,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(QWindow::Visibility)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3470,7 +3470,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3498,7 +3498,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3523,7 +3523,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3548,7 +3548,7 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("widthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3573,7 +3573,7 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3598,7 +3598,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("windowStateChanged(Qt::WindowState)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3623,7 +3623,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3648,7 +3648,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("windowTitleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3673,7 +3673,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3698,7 +3698,7 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3723,7 +3723,7 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -3748,7 +3748,7 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -3773,7 +3773,7 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

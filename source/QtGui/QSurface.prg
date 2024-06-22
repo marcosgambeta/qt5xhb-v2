@@ -86,10 +86,10 @@ HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->surfaceClass() );
+      RENUM(obj->surfaceClass());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->format() );
+      auto ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->surfaceType() );
+      RENUM(obj->surfaceType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QSURFACE_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->size() );
+      auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSURFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSURFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -206,12 +206,12 @@ HB_FUNC_STATIC( QSURFACE_NEWFROM )
 
 HB_FUNC_STATIC( QSURFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSURFACE_NEWFROM );
+  HB_FUNC_EXEC(QSURFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSURFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSURFACE_NEWFROM );
+  HB_FUNC_EXEC(QSURFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSURFACE_SELFDESTRUCTION )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSURFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

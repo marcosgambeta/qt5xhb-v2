@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && HB_ISNUM(2) && ISQTEXTFORMAT(3) )
+    if (ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && HB_ISNUM(2) && ISQTEXTFORMAT(3))
     {
 #endif
-      auto ptr = new QSizeF( obj->intrinsicSize( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
+      auto ptr = new QSizeF(obj->intrinsicSize(PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQPAINTER(1) && ISQRECTF(2) && ISQTEXTDOCUMENT(3) && HB_ISNUM(4) && ISQTEXTFORMAT(5) )
+    if (ISNUMPAR(5) && ISQPAINTER(1) && ISQRECTF(2) && ISQTEXTDOCUMENT(3) && HB_ISNUM(4) && ISQTEXTFORMAT(5))
     {
 #endif
-      obj->drawObject( PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5) );
+      obj->drawObject(PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -156,12 +156,12 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROM )
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QTEXTOBJECTINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QTEXTOBJECTINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QTEXTOBJECTINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QTEXTOBJECTINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_SELFDESTRUCTION )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

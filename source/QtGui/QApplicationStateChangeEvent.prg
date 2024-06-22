@@ -51,9 +51,9 @@ QApplicationStateChangeEvent( Qt::ApplicationState state )
 */
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    auto obj = new QApplicationStateChangeEvent( static_cast<Qt::ApplicationState>( hb_parni(1) ) );
+    auto obj = new QApplicationStateChangeEvent( static_cast<Qt::ApplicationState>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,10 +72,10 @@ HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->applicationState() );
+      RENUM(obj->applicationState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

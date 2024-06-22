@@ -54,21 +54,21 @@ RETURN
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QRegExpValidator( QObject * parent = nullptr )
     */
-    auto obj = new QRegExpValidator( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QRegExpValidator( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && ISQREGEXP(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQREGEXP(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QRegExpValidator( const QRegExp & rx, QObject * parent = nullptr )
     */
-    auto obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->regExp();
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRegExp( *PQREGEXP(1) );
+      obj->setRegExp( *PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,14 +157,14 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
-      hb_storni( par2, 2 );
+      RENUM(obj->validate( par1, par2));
+      hb_storc( QSTRINGTOSTRING( par1), 1);
+      hb_storni( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -63,30 +63,30 @@ RETURN
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
-  if( ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
+  if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
     QWheelEvent( const QPointF & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
-    auto obj = new QWheelEvent( *PQPOINTF(1), PINT(2), static_cast<Qt::MouseButtons>( hb_parni(3) ), static_cast<Qt::KeyboardModifiers>( hb_parni(4) ), HB_ISNIL(5) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(5) ) );
+    auto obj = new QWheelEvent( *PQPOINTF(1), PINT(2), static_cast<Qt::MouseButtons>( hb_parni(3)), static_cast<Qt::KeyboardModifiers>( hb_parni(4)), HB_ISNIL(5) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
+  else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
     QWheelEvent( const QPointF & pos, const QPointF & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
-    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), static_cast<Qt::MouseButtons>( hb_parni(4) ), static_cast<Qt::KeyboardModifiers>( hb_parni(5) ), HB_ISNIL(6) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(6) ) );
+    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), static_cast<Qt::MouseButtons>( hb_parni(4)), static_cast<Qt::KeyboardModifiers>( hb_parni(5)), HB_ISNIL(6) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) )
+  else if (ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8))
   {
     /*
     QWheelEvent( const QPointF & pos, const QPointF & globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), static_cast<Qt::Orientation>( hb_parni(6) ), static_cast<Qt::MouseButtons>( hb_parni(7) ), static_cast<Qt::KeyboardModifiers>( hb_parni(8) ) );
+    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), static_cast<Qt::Orientation>( hb_parni(6)), static_cast<Qt::MouseButtons>( hb_parni(7)), static_cast<Qt::KeyboardModifiers>( hb_parni(8)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QWHEELEVENT_PIXELDELTA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->pixelDelta() );
+      auto ptr = new QPoint(obj->pixelDelta());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -147,10 +147,10 @@ HB_FUNC_STATIC( QWHEELEVENT_ANGLEDELTA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->angleDelta() );
+      auto ptr = new QPoint(obj->angleDelta());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->delta() );
+      RINT(obj->delta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,10 +220,10 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->pos() );
+      auto ptr = new QPoint(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,10 +245,10 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->globalPos() );
+      auto ptr = new QPoint(obj->globalPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QWHEELEVENT_X )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->x() );
+      RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QWHEELEVENT_Y )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->y() );
+      RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,10 +318,10 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalX() );
+      RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,10 +342,10 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalY() );
+      RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POSF )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->posF();
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->globalPosF();
@@ -416,10 +416,10 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttons() );
+      RENUM(obj->buttons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

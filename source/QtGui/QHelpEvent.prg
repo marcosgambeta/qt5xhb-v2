@@ -58,9 +58,9 @@ QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
 */
 HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
   {
-    auto obj = new QHelpEvent( static_cast<QEvent::Type>( hb_parni(1) ), *PQPOINT(2), *PQPOINT(3) );
+    auto obj = new QHelpEvent( static_cast<QEvent::Type>( hb_parni(1)), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->globalPos();
@@ -120,10 +120,10 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalX() );
+      RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalY() );
+      RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->pos();
@@ -193,10 +193,10 @@ HB_FUNC_STATIC( QHELPEVENT_X )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->x() );
+      RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,10 +217,10 @@ HB_FUNC_STATIC( QHELPEVENT_Y )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->y() );
+      RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

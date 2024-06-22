@@ -55,9 +55,9 @@ QScrollEvent( const QPointF & contentPos, const QPointF & overshoot, QScrollEven
 */
 HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3))
   {
-    auto obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), static_cast<QScrollEvent::ScrollState>( hb_parni(3) ) );
+    auto obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), static_cast<QScrollEvent::ScrollState>( hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -92,10 +92,10 @@ HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->contentPos() );
+      auto ptr = new QPointF(obj->contentPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->overshootDistance() );
+      auto ptr = new QPointF(obj->overshootDistance());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->scrollState() );
+      RENUM(obj->scrollState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

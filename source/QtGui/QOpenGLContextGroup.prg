@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->shares();
@@ -121,7 +121,7 @@ static QOpenGLContextGroup * currentContextGroup()
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     auto ptr = QOpenGLContextGroup::currentContextGroup();

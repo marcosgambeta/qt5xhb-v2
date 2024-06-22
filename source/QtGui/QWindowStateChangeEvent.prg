@@ -53,9 +53,9 @@ QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride = false )
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
   {
-    auto obj = new QWindowStateChangeEvent( static_cast<Qt::WindowStates>( hb_parni(1) ), OPBOOL( 2, false ) );
+    auto obj = new QWindowStateChangeEvent( static_cast<Qt::WindowStates>( hb_parni(1)), OPBOOL( 2, false));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -90,10 +90,10 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->oldState() );
+      RENUM(obj->oldState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isOverride() );
+      RBOOL(obj->isOverride());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

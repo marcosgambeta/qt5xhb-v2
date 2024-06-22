@@ -77,10 +77,10 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->file() );
+      RQSTRING(obj->file());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->openFile( *PQFILE(1), static_cast<QIODevice::OpenMode>( hb_parni(2) ) ) );
+      RBOOL(obj->openFile( *PQFILE(1), static_cast<QIODevice::OpenMode>( hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->url() );
+      auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPainterPathStroker()
@@ -82,14 +82,14 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0) )
-  else if( ISNUMPAR(1) && ISQPEN(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  else if (ISNUMPAR(1) && ISQPEN(1))
   {
     /*
     QPainterPathStroker( const QPen & pen )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QPainterPathStroker( *PQPEN(1) );
+    auto obj = new QPainterPathStroker( *PQPEN(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->capStyle() );
+      RENUM(obj->capStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
+    if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
-      auto ptr = new QPainterPath( obj->createStroke( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath(obj->createStroke( *PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -176,10 +176,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->curveThreshold() );
+      RQREAL(obj->curveThreshold());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->dashOffset() );
+      RQREAL(obj->dashOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->dashPattern();
@@ -256,10 +256,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->joinStyle() );
+      RENUM(obj->joinStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,10 +280,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->miterLimit() );
+      RQREAL(obj->miterLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,10 +304,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCapStyle( static_cast<Qt::PenCapStyle>( hb_parni(1) ) );
+      obj->setCapStyle( static_cast<Qt::PenCapStyle>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,10 +330,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurveThreshold( PQREAL(1) );
+      obj->setCurveThreshold(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,10 +356,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDashOffset( PQREAL(1) );
+      obj->setDashOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setDashPattern( Qt::PenStyle style )
@@ -383,13 +383,13 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 
     if (obj != nullptr)
     {
-      obj->setDashPattern( static_cast<Qt::PenStyle>( hb_parni(1) ) );
+      obj->setDashPattern( static_cast<Qt::PenStyle>( hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     void setDashPattern( const QVector<qreal> & dashPattern )
@@ -399,15 +399,15 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
     if (obj != nullptr)
     {
       QVector<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen( aList1);
       qreal temp1;
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setDashPattern( par1 );
+      obj->setDashPattern( par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -429,10 +429,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setJoinStyle( static_cast<Qt::PenJoinStyle>( hb_parni(1) ) );
+      obj->setJoinStyle( static_cast<Qt::PenJoinStyle>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,10 +455,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMiterLimit( PQREAL(1) );
+      obj->setMiterLimit(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,10 +481,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidth( PQREAL(1) );
+      obj->setWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,10 +507,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->width() );
+      RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -553,12 +553,12 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEWFROM )
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QPAINTERPATHSTROKER_NEWFROM );
+  HB_FUNC_EXEC(QPAINTERPATHSTROKER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QPAINTERPATHSTROKER_NEWFROM );
+  HB_FUNC_EXEC(QPAINTERPATHSTROKER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SELFDESTRUCTION )
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

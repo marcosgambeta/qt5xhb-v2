@@ -56,9 +56,9 @@ QActionEvent( int type, QAction * action, QAction * before = nullptr )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
-  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && ( ISQACTION(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3)))
   {
-    auto obj = new QActionEvent( PINT(1), PQACTION(2), OPQACTION( 3, nullptr ) );
+    auto obj = new QActionEvent(PINT(1), PQACTION(2), OPQACTION( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->action();
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->before();

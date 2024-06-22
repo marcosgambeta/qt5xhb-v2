@@ -77,10 +77,10 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->create( OPQSTRING( 1, QString() ) );
+      auto ptr = obj->create( OPQSTRING(1, QString()));
       Qt5xHb::createReturnClass(ptr, "QICONENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

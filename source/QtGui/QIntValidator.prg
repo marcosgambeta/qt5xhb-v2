@@ -62,21 +62,21 @@ RETURN
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QIntValidator( QObject * parent = nullptr )
     */
-    auto obj = new QIntValidator( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QIntValidator( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
     QIntValidator( int minimum, int maximum, QObject * parent = nullptr )
     */
-    auto obj = new QIntValidator( PINT(1), PINT(2), OPQOBJECT( 3, nullptr ) );
+    auto obj = new QIntValidator(PINT(1), PINT(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bottom() );
+      RINT(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,12 +138,12 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       QString par1 = hb_parc(1);
-      obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
+      obj->fixup( par1);
+      hb_storc( QSTRINGTOSTRING( par1), 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,10 +166,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLocale( obj->locale() );
+      auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBottom( PINT(1) );
+      obj->setBottom(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,10 +217,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,10 +243,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,10 +269,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTop( PINT(1) );
+      obj->setTop(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,10 +295,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->top() );
+      RINT(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,14 +319,14 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
-      hb_storni( par2, 2 );
+      RENUM(obj->validate( par1, par2));
+      hb_storc( QSTRINGTOSTRING( par1), 1);
+      hb_storni( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("changed()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

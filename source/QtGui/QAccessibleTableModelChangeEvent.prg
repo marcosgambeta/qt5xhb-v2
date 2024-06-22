@@ -61,9 +61,9 @@ QAccessibleTableModelChangeEvent( QObject * obj, QAccessibleTableModelChangeEven
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
-    auto obj = new QAccessibleTableModelChangeEvent( PQOBJECT(1), static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>( hb_parni(2) ) );
+    auto obj = new QAccessibleTableModelChangeEvent(PQOBJECT(1), static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -98,10 +98,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModelChangeType( static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>( hb_parni(1) ) );
+      obj->setModelChangeType( static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modelChangeType() );
+      RENUM(obj->modelChangeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstRow( PINT(1) );
+      obj->setFirstRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstColumn( PINT(1) );
+      obj->setFirstColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLastRow( PINT(1) );
+      obj->setLastRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,10 +226,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLastColumn( PINT(1) );
+      obj->setLastColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,10 +252,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstRow() );
+      RINT(obj->firstRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,10 +276,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstColumn() );
+      RINT(obj->firstColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,10 +300,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lastRow() );
+      RINT(obj->lastRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,10 +324,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lastColumn() );
+      RINT(obj->lastColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

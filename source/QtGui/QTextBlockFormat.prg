@@ -75,7 +75,7 @@ QTextBlockFormat()
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QTextBlockFormat();
     Qt5xHb::returnNewObject(obj, true);
@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,10 +136,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1) ) );
+      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTopMargin( PQREAL(1) );
+      obj->setTopMargin(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,10 +212,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->topMargin() );
+      RQREAL(obj->topMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,10 +236,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBottomMargin( PQREAL(1) );
+      obj->setBottomMargin(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,10 +262,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->bottomMargin() );
+      RQREAL(obj->bottomMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,10 +286,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLeftMargin( PQREAL(1) );
+      obj->setLeftMargin(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,10 +312,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->leftMargin() );
+      RQREAL(obj->leftMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,10 +336,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRightMargin( PQREAL(1) );
+      obj->setRightMargin(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,10 +362,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->rightMargin() );
+      RQREAL(obj->rightMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,10 +386,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextIndent( PQREAL(1) );
+      obj->setTextIndent(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,10 +412,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->textIndent() );
+      RQREAL(obj->textIndent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,10 +436,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setIndent( PINT(1) );
+      obj->setIndent(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,10 +462,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->indent() );
+      RINT(obj->indent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,10 +486,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setLineHeight( PQREAL(1), PINT(2) );
+      obj->setLineHeight(PQREAL(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
@@ -513,11 +513,11 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 
     if (obj != nullptr)
     {
-      RQREAL( obj->lineHeight( PQREAL(1), PQREAL(2) ) );
+      RQREAL(obj->lineHeight(PQREAL(1), PQREAL(2)));
     }
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     qreal lineHeight() const
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 
     if (obj != nullptr)
     {
-      RQREAL( obj->lineHeight() );
+      RQREAL(obj->lineHeight());
     }
 
   }
@@ -546,10 +546,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineHeightType() );
+      RINT(obj->lineHeightType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,10 +570,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setNonBreakableLines( PBOOL(1) );
+      obj->setNonBreakableLines(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,10 +596,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->nonBreakableLines() );
+      RBOOL(obj->nonBreakableLines());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -620,10 +620,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageBreakPolicy( static_cast<QTextBlockFormat::PageBreakFlags>( hb_parni(1) ) );
+      obj->setPageBreakPolicy( static_cast<QTextBlockFormat::PageBreakFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -646,10 +646,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->pageBreakPolicy() );
+      RENUM(obj->pageBreakPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,10 +671,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_HEADINGLEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->headingLevel() );
+      RINT(obj->headingLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,10 +697,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETHEADINGLEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHeadingLevel( PINT(1) );
+      obj->setHeadingLevel(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

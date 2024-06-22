@@ -54,9 +54,9 @@ QResizeEvent( const QSize & size, const QSize & oldSize )
 */
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
+  if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2))
   {
-    auto obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
+    auto obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->size();
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->oldSize();

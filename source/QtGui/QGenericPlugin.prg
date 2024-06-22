@@ -77,10 +77,10 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      auto ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      auto ptr = obj->create(PQSTRING(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

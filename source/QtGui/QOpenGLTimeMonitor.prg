@@ -68,9 +68,9 @@ QOpenGLTimeMonitor(QObject *parent = nullptr)
 HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 {
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QOpenGLTimeMonitor( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QOpenGLTimeMonitor( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SAMPLECOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->sampleCount() );
+      RINT(obj->sampleCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SETSAMPLECOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSampleCount( PINT(1) );
+      obj->setSampleCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->create() );
+      RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DESTROY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -230,10 +230,10 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISCREATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCreated() );
+      RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,10 +262,10 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RECORDSAMPLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->recordSample() );
+      RINT(obj->recordSample());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,10 +290,10 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISRESULTAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isResultAvailable() );
+      RBOOL(obj->isResultAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();

@@ -70,9 +70,9 @@ QOffscreenSurface( QScreen * screen = nullptr )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSCREEN(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQSCREEN(1) || HB_ISNIL(1)))
   {
-    auto obj = new QOffscreenSurface( OPQSCREEN( 1, nullptr ) );
+    auto obj = new QOffscreenSurface( OPQSCREEN( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SURFACETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->surfaceType() );
+      RENUM(obj->surfaceType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->create();
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_DESTROY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -185,10 +185,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,10 +209,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1) );
+      obj->setFormat( *PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,10 +235,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->format() );
+      auto ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -260,10 +260,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_REQUESTEDFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->requestedFormat() );
+      auto ptr = new QSurfaceFormat(obj->requestedFormat());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -285,10 +285,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->size() );
+      auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->screen();
@@ -335,10 +335,10 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCREEN(1) )
+    if (ISNUMPAR(1) && ISQSCREEN(1))
     {
 #endif
-      obj->setScreen( PQSCREEN(1) );
+      obj->setScreen(PQSCREEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenChanged(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

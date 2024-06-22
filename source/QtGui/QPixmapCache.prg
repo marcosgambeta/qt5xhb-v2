@@ -88,10 +88,10 @@ static int cacheLimit()
 HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RINT( QPixmapCache::cacheLimit() );
+    RINT( QPixmapCache::cacheLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -107,10 +107,10 @@ static void setCacheLimit( int )
 HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QPixmapCache::setCacheLimit( PINT(1) );
+    QPixmapCache::setCacheLimit(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -128,10 +128,10 @@ static QPixmap * find( const QString & key )
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = QPixmapCache::find( PQSTRING(1) );
+    auto ptr = QPixmapCache::find(PQSTRING(1));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -148,10 +148,10 @@ static bool find( const QString & key, QPixmap & pixmap )
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQPIXMAP(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPIXMAP(2))
   {
 #endif
-    RBOOL( QPixmapCache::find( PQSTRING(1), *PQPIXMAP(2) ) );
+    RBOOL( QPixmapCache::find(PQSTRING(1), *PQPIXMAP(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -167,10 +167,10 @@ static bool find( const QString & key, QPixmap * pixmap )
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQPIXMAP(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPIXMAP(2))
   {
 #endif
-    RBOOL( QPixmapCache::find( PQSTRING(1), PQPIXMAP(2) ) );
+    RBOOL( QPixmapCache::find(PQSTRING(1), PQPIXMAP(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -190,10 +190,10 @@ static bool insert( const QString & key, const QPixmap & pixmap )
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQPIXMAP(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPIXMAP(2))
   {
 #endif
-    RBOOL( QPixmapCache::insert( PQSTRING(1), *PQPIXMAP(2) ) );
+    RBOOL( QPixmapCache::insert(PQSTRING(1), *PQPIXMAP(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -218,10 +218,10 @@ static void remove( const QString & key )
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QPixmapCache::remove( PQSTRING(1) );
+    QPixmapCache::remove(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -248,7 +248,7 @@ static void clear()
 HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QPixmapCache::clear();
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -295,12 +295,12 @@ HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROM )
 
 HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QPIXMAPCACHE_NEWFROM );
+  HB_FUNC_EXEC(QPIXMAPCACHE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPIXMAPCACHE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QPIXMAPCACHE_NEWFROM );
+  HB_FUNC_EXEC(QPIXMAPCACHE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPIXMAPCACHE_SELFDESTRUCTION )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

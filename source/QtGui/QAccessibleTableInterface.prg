@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = obj->cellAt( PINT(1), PINT(2) );
+      auto ptr = obj->cellAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->caption();
@@ -150,10 +150,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->columnDescription( PINT(1) ) );
+      RQSTRING(obj->columnDescription(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columnCount() );
+      RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,10 +198,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowCount() );
+      RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedCellCount() );
+      RINT(obj->selectedCellCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,10 +246,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedColumnCount() );
+      RINT(obj->selectedColumnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedRowCount() );
+      RINT(obj->selectedRowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->rowDescription( PINT(1) ) );
+      RQSTRING(obj->rowDescription(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->selectedCells();
@@ -365,11 +365,11 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->selectedColumns();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array( list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,11 +390,11 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->selectedRows();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array( list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->summary();
@@ -440,10 +440,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isColumnSelected( PINT(1) ) );
+      RBOOL(obj->isColumnSelected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,10 +464,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isRowSelected( PINT(1) ) );
+      RBOOL(obj->isRowSelected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,10 +488,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->selectRow( PINT(1) ) );
+      RBOOL(obj->selectRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,10 +512,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->selectColumn( PINT(1) ) );
+      RBOOL(obj->selectColumn(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,10 +536,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->unselectRow( PINT(1) ) );
+      RBOOL(obj->unselectRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,10 +560,10 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->unselectColumn( PINT(1) ) );
+      RBOOL(obj->unselectColumn(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -606,12 +606,12 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROM )
 
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QACCESSIBLETABLEINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLETABLEINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QACCESSIBLETABLEINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLETABLEINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELFDESTRUCTION )
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

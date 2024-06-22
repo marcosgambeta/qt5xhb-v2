@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QOpenGLDebugMessage()
@@ -74,12 +74,12 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
+  else if (ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1))
   {
     /*
     QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
     */
-    auto obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
+    auto obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
+    if (ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1))
     {
 #endif
-      obj->swap( *PQOPENGLDEBUGMESSAGE(1) );
+      obj->swap( *PQOPENGLDEBUGMESSAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->source() );
+      RENUM(obj->source());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,10 +165,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,10 +189,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->severity() );
+      RENUM(obj->severity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,10 +213,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->id() );
+      RGLUINT(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,10 +237,10 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->message() );
+      RQSTRING(obj->message());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,10 +257,10 @@ static QOpenGLDebugMessage createApplicationMessage( const QString & text, GLuin
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 4) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    auto ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage( PQSTRING(1), OPGLUINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Severity >( QOpenGLDebugMessage::NotificationSeverity ) : static_cast<QOpenGLDebugMessage::Severity >( hb_parni(3) ), HB_ISNIL(4) ? static_cast<QOpenGLDebugMessage::Type >( QOpenGLDebugMessage::OtherType ) : static_cast<QOpenGLDebugMessage::Type >( hb_parni(4) ) ) );
+    auto ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage(PQSTRING(1), OPGLUINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Severity >( QOpenGLDebugMessage::NotificationSeverity ) : static_cast<QOpenGLDebugMessage::Severity >( hb_parni(3)), HB_ISNIL(4) ? static_cast<QOpenGLDebugMessage::Type >( QOpenGLDebugMessage::OtherType ) : static_cast<QOpenGLDebugMessage::Type >( hb_parni(4))));
     Qt5xHb::createReturnClass(ptr, "QOPENGLDEBUGMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -277,10 +277,10 @@ static QOpenGLDebugMessage createThirdPartyMessage( const QString & text, GLuint
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 4) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    auto ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage( PQSTRING(1), OPGLUINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Severity >( QOpenGLDebugMessage::NotificationSeverity ) : static_cast<QOpenGLDebugMessage::Severity >( hb_parni(3) ), HB_ISNIL(4) ? static_cast<QOpenGLDebugMessage::Type >( QOpenGLDebugMessage::OtherType ) : static_cast<QOpenGLDebugMessage::Type >( hb_parni(4) ) ) );
+    auto ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage(PQSTRING(1), OPGLUINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Severity >( QOpenGLDebugMessage::NotificationSeverity ) : static_cast<QOpenGLDebugMessage::Severity >( hb_parni(3)), HB_ISNIL(4) ? static_cast<QOpenGLDebugMessage::Type >( QOpenGLDebugMessage::OtherType ) : static_cast<QOpenGLDebugMessage::Type >( hb_parni(4))));
     Qt5xHb::createReturnClass(ptr, "QOPENGLDEBUGMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -323,12 +323,12 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEWFROM )
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QOPENGLDEBUGMESSAGE_NEWFROM );
+  HB_FUNC_EXEC(QOPENGLDEBUGMESSAGE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QOPENGLDEBUGMESSAGE_NEWFROM );
+  HB_FUNC_EXEC(QOPENGLDEBUGMESSAGE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SELFDESTRUCTION )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

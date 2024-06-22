@@ -82,10 +82,10 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
     {
 #endif
-      obj->setRootObject( PQACCESSIBLEINTERFACE(1) );
+      obj->setRootObject(PQACCESSIBLEINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACCESSIBLEEVENT(1) )
+    if (ISNUMPAR(1) && ISQACCESSIBLEEVENT(1))
     {
 #endif
-      obj->notifyAccessibilityUpdate( PQACCESSIBLEEVENT(1) );
+      obj->notifyAccessibilityUpdate(PQACCESSIBLEEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -156,12 +156,12 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QACCESSIBLEBRIDGE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEBRIDGE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QACCESSIBLEBRIDGE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEBRIDGE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SELFDESTRUCTION )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

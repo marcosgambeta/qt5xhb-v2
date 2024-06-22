@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->cursorRectangle() );
+      auto ptr = new QRectF(obj->cursorRectangle());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->inputDirection() );
+      RENUM(obj->inputDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QTransform( obj->inputItemTransform() );
+      auto ptr = new QTransform(obj->inputItemTransform());
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAnimating() );
+      RBOOL(obj->isAnimating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,10 +183,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVisible() );
+      RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,10 +207,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->keyboardRectangle() );
+      auto ptr = new QRectF(obj->keyboardRectangle());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -232,10 +232,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLocale( obj->locale() );
+      auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -257,10 +257,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTRANSFORM(1) )
+    if (ISNUMPAR(1) && ISQTRANSFORM(1))
     {
 #endif
-      obj->setInputItemTransform( *PQTRANSFORM(1) );
+      obj->setInputItemTransform( *PQTRANSFORM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,10 +283,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->commit();
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->hide();
@@ -361,10 +361,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->invokeAction( static_cast<QInputMethod::Action>( hb_parni(1) ), PINT(2) );
+      obj->invokeAction( static_cast<QInputMethod::Action>( hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->show();
@@ -439,10 +439,10 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->update( static_cast<Qt::InputMethodQueries>( hb_parni(1) ) );
+      obj->update( static_cast<Qt::InputMethodQueries>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("animatingChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectangleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("inputDirectionChanged(Qt::LayoutDirection)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("keyboardRectangleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

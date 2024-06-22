@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->actionNames() );
+      RQSTRINGLIST(obj->actionNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->localizedActionName( PQSTRING(1) ) );
+      RQSTRING(obj->localizedActionName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,10 +139,10 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->localizedActionDescription( PQSTRING(1) ) );
+      RQSTRING(obj->localizedActionDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,10 +163,10 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->doAction( PQSTRING(1) );
+      obj->doAction(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,10 +189,10 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRINGLIST( obj->keyBindingsForAction( PQSTRING(1) ) );
+      RQSTRINGLIST(obj->keyBindingsForAction(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,10 +209,10 @@ static const QString & pressAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::pressAction() );
+    RQSTRING( QAccessibleActionInterface::pressAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -228,10 +228,10 @@ static const QString & increaseAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::increaseAction() );
+    RQSTRING( QAccessibleActionInterface::increaseAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -247,10 +247,10 @@ static const QString & decreaseAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::decreaseAction() );
+    RQSTRING( QAccessibleActionInterface::decreaseAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -266,10 +266,10 @@ static const QString & showMenuAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::showMenuAction() );
+    RQSTRING( QAccessibleActionInterface::showMenuAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -285,10 +285,10 @@ static const QString & setFocusAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::setFocusAction() );
+    RQSTRING( QAccessibleActionInterface::setFocusAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -304,10 +304,10 @@ static const QString & toggleAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::toggleAction() );
+    RQSTRING( QAccessibleActionInterface::toggleAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -349,12 +349,12 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_NEWFROM )
 
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QACCESSIBLEACTIONINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEACTIONINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QACCESSIBLEACTIONINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEACTIONINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SELFDESTRUCTION )
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

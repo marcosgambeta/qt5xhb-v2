@@ -51,7 +51,7 @@ QCloseEvent()
 */
 HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QCloseEvent();
     Qt5xHb::returnNewObject(obj, false);

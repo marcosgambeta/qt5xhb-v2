@@ -127,24 +127,24 @@ RETURN
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QOpenGLTexture( QOpenGLTexture::Target target )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QOpenGLTexture( static_cast<QOpenGLTexture::Target>( hb_parni(1) ) );
+    auto obj = new QOpenGLTexture( static_cast<QOpenGLTexture::Target>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISBETWEEN(1, 2) && ISQIMAGE(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QOpenGLTexture( const QImage & image, QOpenGLTexture::MipMapGeneration genMipMaps = QOpenGLTexture::GenerateMipMaps )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QOpenGLTexture( *PQIMAGE(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::MipMapGeneration >( QOpenGLTexture::GenerateMipMaps ) : static_cast<QOpenGLTexture::MipMapGeneration >( hb_parni(2) ) );
+    auto obj = new QOpenGLTexture( *PQIMAGE(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::MipMapGeneration >( QOpenGLTexture::GenerateMipMaps ) : static_cast<QOpenGLTexture::MipMapGeneration >( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->create() );
+      RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DESTROY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -238,10 +238,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISCREATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCreated() );
+      RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,10 +264,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_TEXTUREID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->textureId() );
+      RGLUINT(obj->textureId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_TEXTUREID )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     void bind()
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 #endif
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     void bind( uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 
     if (obj != nullptr)
     {
-      obj->bind( PUINT(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::TextureUnitReset >( QOpenGLTexture::DontResetTextureUnit ) : static_cast<QOpenGLTexture::TextureUnitReset >( hb_parni(2) ) );
+      obj->bind(PUINT(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::TextureUnitReset >( QOpenGLTexture::DontResetTextureUnit ) : static_cast<QOpenGLTexture::TextureUnitReset >( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     void release()
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 #endif
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     void release( uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 
     if (obj != nullptr)
     {
-      obj->release( PUINT(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::TextureUnitReset >( QOpenGLTexture::DontResetTextureUnit ) : static_cast<QOpenGLTexture::TextureUnitReset >( hb_parni(2) ) );
+      obj->release(PUINT(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::TextureUnitReset >( QOpenGLTexture::DontResetTextureUnit ) : static_cast<QOpenGLTexture::TextureUnitReset >( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     bool isBound() const
@@ -375,12 +375,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->isBound() );
+      RBOOL(obj->isBound());
     }
 #endif
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     bool isBound( uint unit )
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->isBound( PUINT(1) ) );
+      RBOOL(obj->isBound(PUINT(1)));
     }
 #endif
 
@@ -412,10 +412,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFormat( static_cast<QOpenGLTexture::TextureFormat>( hb_parni(1) ) );
+      obj->setFormat( static_cast<QOpenGLTexture::TextureFormat>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,10 +440,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->format() );
+      RENUM(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,10 +466,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setSize( PINT(1), OPINT( 2, 1 ), OPINT( 3, 1 ) );
+      obj->setSize(PINT(1), OPINT( 2, 1 ), OPINT( 3, 1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,10 +494,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->width() );
+      RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,10 +520,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_HEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->height() );
+      RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,10 +546,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->depth() );
+      RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,10 +572,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMipLevels( PINT(1) );
+      obj->setMipLevels(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,10 +600,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPLEVELS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->mipLevels() );
+      RINT(obj->mipLevels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -626,10 +626,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMMIPLEVELS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumMipLevels() );
+      RINT(obj->maximumMipLevels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,10 +652,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETLAYERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLayers( PINT(1) );
+      obj->setLayers(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,10 +680,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LAYERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->layers() );
+      RINT(obj->layers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,10 +706,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FACES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->faces() );
+      RINT(obj->faces());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ALLOCATESTORAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->allocateStorage();
@@ -760,10 +760,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISSTORAGEALLOCATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isStorageAllocated() );
+      RBOOL(obj->isStorageAllocated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -786,10 +786,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_CREATETEXTUREVIEW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
+    if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
     {
 #endif
-      auto ptr = obj->createTextureView( static_cast<QOpenGLTexture::Target>( hb_parni(1) ), static_cast<QOpenGLTexture::TextureFormat>( hb_parni(2) ), PINT(3), PINT(4), PINT(5), PINT(6) );
+      auto ptr = obj->createTextureView( static_cast<QOpenGLTexture::Target>( hb_parni(1)), static_cast<QOpenGLTexture::TextureFormat>( hb_parni(2)), PINT(3), PINT(4), PINT(5), PINT(6));
       Qt5xHb::createReturnClass(ptr, "QOPENGLTEXTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -813,10 +813,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISTEXTUREVIEW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTextureView() );
+      RBOOL(obj->isTextureView());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -839,10 +839,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPBASELEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMipBaseLevel( PINT(1) );
+      obj->setMipBaseLevel(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -867,10 +867,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPBASELEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->mipBaseLevel() );
+      RINT(obj->mipBaseLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -893,10 +893,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPMAXLEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMipMaxLevel( PINT(1) );
+      obj->setMipMaxLevel(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -921,10 +921,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPMAXLEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->mipMaxLevel() );
+      RINT(obj->mipMaxLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -947,10 +947,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setMipLevelRange( PINT(1), PINT(2) );
+      obj->setMipLevelRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -975,10 +975,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoMipMapGenerationEnabled( PBOOL(1) );
+      obj->setAutoMipMapGenerationEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1003,10 +1003,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAutoMipMapGenerationEnabled() );
+      RBOOL(obj->isAutoMipMapGenerationEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     void generateMipMaps()
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 #endif
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ISOPTLOG(2) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISOPTLOG(2))
   {
     /*
     void generateMipMaps( int baseLevel, bool resetBaseLevel = true )
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 
     if (obj != nullptr)
     {
-      obj->generateMipMaps( PINT(1), OPBOOL( 2, true ) );
+      obj->generateMipMaps(PINT(1), OPBOOL( 2, true));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setSwizzleMask( QOpenGLTexture::SwizzleComponent component, QOpenGLTexture::SwizzleValue value )
@@ -1072,14 +1072,14 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 
     if (obj != nullptr)
     {
-      obj->setSwizzleMask( static_cast<QOpenGLTexture::SwizzleComponent>( hb_parni(1) ), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(2) ) );
+      obj->setSwizzleMask( static_cast<QOpenGLTexture::SwizzleComponent>( hb_parni(1)), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
 
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void setSwizzleMask( QOpenGLTexture::SwizzleValue r, QOpenGLTexture::SwizzleValue g, QOpenGLTexture::SwizzleValue b, QOpenGLTexture::SwizzleValue a )
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 
     if (obj != nullptr)
     {
-      obj->setSwizzleMask( static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(1) ), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(2) ), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(3) ), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(4) ) );
+      obj->setSwizzleMask( static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(1)), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(2)), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(3)), static_cast<QOpenGLTexture::SwizzleValue>( hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1113,10 +1113,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SWIZZLEMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->swizzleMask( static_cast<QOpenGLTexture::SwizzleComponent>( hb_parni(1) ) ) );
+      RENUM(obj->swizzleMask( static_cast<QOpenGLTexture::SwizzleComponent>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1139,10 +1139,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDEPTHSTENCILMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDepthStencilMode( static_cast<QOpenGLTexture::DepthStencilMode>( hb_parni(1) ) );
+      obj->setDepthStencilMode( static_cast<QOpenGLTexture::DepthStencilMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1167,10 +1167,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTHSTENCILMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->depthStencilMode() );
+      RENUM(obj->depthStencilMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1193,10 +1193,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIFICATIONFILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinificationFilter( static_cast<QOpenGLTexture::Filter>( hb_parni(1) ) );
+      obj->setMinificationFilter( static_cast<QOpenGLTexture::Filter>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1221,10 +1221,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIFICATIONFILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->minificationFilter() );
+      RENUM(obj->minificationFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1247,10 +1247,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAGNIFICATIONFILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMagnificationFilter( static_cast<QOpenGLTexture::Filter>( hb_parni(1) ) );
+      obj->setMagnificationFilter( static_cast<QOpenGLTexture::Filter>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1275,10 +1275,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAGNIFICATIONFILTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->magnificationFilter() );
+      RENUM(obj->magnificationFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1301,10 +1301,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINMAGFILTERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setMinMagFilters( static_cast<QOpenGLTexture::Filter>( hb_parni(1) ), static_cast<QOpenGLTexture::Filter>( hb_parni(2) ) );
+      obj->setMinMagFilters( static_cast<QOpenGLTexture::Filter>( hb_parni(1)), static_cast<QOpenGLTexture::Filter>( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1329,10 +1329,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMANISOTROPY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumAnisotropy( PFLOAT(1) );
+      obj->setMaximumAnisotropy(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1357,10 +1357,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMANISOTROPY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->maximumAnisotropy() );
+      RFLOAT(obj->maximumAnisotropy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMANISOTROPY )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setWrapMode( QOpenGLTexture::WrapMode mode )
@@ -1384,14 +1384,14 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 
     if (obj != nullptr)
     {
-      obj->setWrapMode( static_cast<QOpenGLTexture::WrapMode>( hb_parni(1) ) );
+      obj->setWrapMode( static_cast<QOpenGLTexture::WrapMode>( hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setWrapMode( QOpenGLTexture::CoordinateDirection direction, QOpenGLTexture::WrapMode mode )
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 
     if (obj != nullptr)
     {
-      obj->setWrapMode( static_cast<QOpenGLTexture::CoordinateDirection>( hb_parni(1) ), static_cast<QOpenGLTexture::WrapMode>( hb_parni(2) ) );
+      obj->setWrapMode( static_cast<QOpenGLTexture::CoordinateDirection>( hb_parni(1)), static_cast<QOpenGLTexture::WrapMode>( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1425,10 +1425,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WRAPMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->wrapMode( static_cast<QOpenGLTexture::CoordinateDirection>( hb_parni(1) ) ) );
+      RENUM(obj->wrapMode( static_cast<QOpenGLTexture::CoordinateDirection>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1451,10 +1451,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR1 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setBorderColor( *PQCOLOR(1) );
+      obj->setBorderColor( *PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1479,10 +1479,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR2 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->setBorderColor( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+      obj->setBorderColor(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1507,10 +1507,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR3 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->setBorderColor( PINT(1), PINT(2), PINT(3), PINT(4) );
+      obj->setBorderColor(PINT(1), PINT(2), PINT(3), PINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1535,10 +1535,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR4 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->setBorderColor( PUINT(1), PUINT(2), PUINT(3), PUINT(4) );
+      obj->setBorderColor(PUINT(1), PUINT(2), PUINT(3), PUINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1554,21 +1554,21 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR4 )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR )
 {
-  if( ISNUMPAR(1) && ISQCOLOR(1) )
+  if (ISNUMPAR(1) && ISQCOLOR(1))
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETBORDERCOLOR1 );
+    HB_FUNC_EXEC(QOPENGLTEXTURE_SETBORDERCOLOR1);
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETBORDERCOLOR2 );
+    HB_FUNC_EXEC(QOPENGLTEXTURE_SETBORDERCOLOR2);
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETBORDERCOLOR3 );
+    HB_FUNC_EXEC(QOPENGLTEXTURE_SETBORDERCOLOR3);
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETBORDERCOLOR4 );
+    HB_FUNC_EXEC(QOPENGLTEXTURE_SETBORDERCOLOR4);
   }
   else
   {
@@ -1587,10 +1587,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR1 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QColor( obj->borderColor() );
+      auto ptr = new QColor(obj->borderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1614,12 +1614,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR2 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       float par1;
-      obj->borderColor( &par1 );
-      hb_stornd( par1, 1 );
+      obj->borderColor( &par1);
+      hb_stornd( par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1644,12 +1644,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR3 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       int par1;
-      obj->borderColor( &par1 );
-      hb_storni( par1, 1 );
+      obj->borderColor( &par1);
+      hb_storni( par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1674,12 +1674,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR4 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       unsigned int par1;
-      obj->borderColor( &par1 );
-      hb_storni( par1, 1 );
+      obj->borderColor( &par1);
+      hb_storni( par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1695,13 +1695,13 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR4 )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR1 );
+    HB_FUNC_EXEC(QOPENGLTEXTURE_BORDERCOLOR1);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BORDERCOLOR3 );
+    HB_FUNC_EXEC(QOPENGLTEXTURE_BORDERCOLOR3);
   }
   else
   {
@@ -1720,10 +1720,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumLevelOfDetail( PFLOAT(1) );
+      obj->setMinimumLevelOfDetail(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1748,10 +1748,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->minimumLevelOfDetail() );
+      RFLOAT(obj->minimumLevelOfDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1774,10 +1774,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumLevelOfDetail( PFLOAT(1) );
+      obj->setMaximumLevelOfDetail(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1802,10 +1802,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->maximumLevelOfDetail() );
+      RFLOAT(obj->maximumLevelOfDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1828,10 +1828,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setLevelOfDetailRange( PFLOAT(1), PFLOAT(2) );
+      obj->setLevelOfDetailRange(PFLOAT(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1856,10 +1856,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILBIAS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLevelofDetailBias( PFLOAT(1) );
+      obj->setLevelofDetailBias(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1884,10 +1884,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LEVELOFDETAILBIAS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->levelofDetailBias() );
+      RFLOAT(obj->levelofDetailBias());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1901,25 +1901,25 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LEVELOFDETAILBIAS )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     static GLuint boundTextureId( QOpenGLTexture::BindingTarget target )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    RGLUINT( QOpenGLTexture::boundTextureId( static_cast<QOpenGLTexture::BindingTarget>( hb_parni(1) ) ) );
+    RGLUINT( QOpenGLTexture::boundTextureId( static_cast<QOpenGLTexture::BindingTarget>( hb_parni(1))));
 #endif
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     static GLuint boundTextureId( uint unit, QOpenGLTexture::BindingTarget target )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    RGLUINT( QOpenGLTexture::boundTextureId( PUINT(1), static_cast<QOpenGLTexture::BindingTarget>( hb_parni(2) ) ) );
+    RGLUINT( QOpenGLTexture::boundTextureId(PUINT(1), static_cast<QOpenGLTexture::BindingTarget>( hb_parni(2))));
 #endif
 
   }
@@ -1936,10 +1936,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_HASFEATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RBOOL( QOpenGLTexture::hasFeature( static_cast<QOpenGLTexture::Feature>( hb_parni(1) ) ) );
+    RBOOL( QOpenGLTexture::hasFeature( static_cast<QOpenGLTexture::Feature>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1954,7 +1954,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1963,7 +1963,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1982,12 +1982,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEWFROM )
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QOPENGLTEXTURE_NEWFROM );
+  HB_FUNC_EXEC(QOPENGLTEXTURE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QOPENGLTEXTURE_NEWFROM );
+  HB_FUNC_EXEC(QOPENGLTEXTURE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SELFDESTRUCTION )
@@ -1999,7 +1999,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -59,24 +59,24 @@ RETURN
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QRegularExpressionValidator( QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QRegularExpressionValidator( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QRegularExpressionValidator( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
   }
-  else if( ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRegularExpression( obj->regularExpression() );
+      auto ptr = new QRegularExpression(obj->regularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,10 +145,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
+    if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
     {
 #endif
-      obj->setRegularExpression( *PQREGULAREXPRESSION(1) );
+      obj->setRegularExpression( *PQREGULAREXPRESSION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("regularExpressionChanged(QRegularExpression)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

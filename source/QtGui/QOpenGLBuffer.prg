@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QOpenGLBuffer()
@@ -72,21 +72,21 @@ HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QOpenGLBuffer( QOpenGLBuffer::Type type )
     */
-    auto obj = new QOpenGLBuffer( static_cast<QOpenGLBuffer::Type>( hb_parni(1) ) );
+    auto obj = new QOpenGLBuffer( static_cast<QOpenGLBuffer::Type>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQOPENGLBUFFER(1) )
+  else if (ISNUMPAR(1) && ISQOPENGLBUFFER(1))
   {
     /*
     QOpenGLBuffer( const QOpenGLBuffer & other )
     */
-    auto obj = new QOpenGLBuffer( *PQOPENGLBUFFER(1) );
+    auto obj = new QOpenGLBuffer( *PQOPENGLBUFFER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DELETE )
 
 HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 {
-  if( ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     /*
     void allocate( const void * data, int count )
@@ -123,13 +123,13 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 
     if (obj != nullptr)
     {
-      obj->allocate( static_cast< const void*>( hb_parptr(1) ), PINT(2) );
+      obj->allocate( static_cast< const void*>( hb_parptr(1)), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void allocate( int count )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 
     if (obj != nullptr)
     {
-      obj->allocate( PINT(1) );
+      obj->allocate(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -160,10 +160,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_BIND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->bind() );
+      RBOOL(obj->bind());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_BUFFERID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->bufferId() );
+      RGLUINT(obj->bufferId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,10 +208,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->create() );
+      RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DESTROY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -258,10 +258,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ISCREATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCreated() );
+      RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,10 +282,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retptr( static_cast< void*>( obj->map( static_cast<QOpenGLBuffer::Access>( hb_parni(1) ) ) ) );
+      hb_retptr( static_cast< void*>(obj->map( static_cast<QOpenGLBuffer::Access>( hb_parni(1)))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,10 +306,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
     {
 #endif
-      RBOOL( obj->read( PINT(1), static_cast< void*>( hb_parptr(2) ), PINT(3) ) );
+      RBOOL(obj->read(PINT(1), static_cast< void*>( hb_parptr(2)), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
 
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     void release()
@@ -337,13 +337,13 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     static void release( QOpenGLBuffer::Type type )
     */
 
-    QOpenGLBuffer::release( static_cast<QOpenGLBuffer::Type>( hb_parni(1) ) );
+    QOpenGLBuffer::release( static_cast<QOpenGLBuffer::Type>( hb_parni(1)));
 
     hb_itemReturn(hb_stackSelfItem());
 
@@ -364,10 +364,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUsagePattern( static_cast<QOpenGLBuffer::UsagePattern>( hb_parni(1) ) );
+      obj->setUsagePattern( static_cast<QOpenGLBuffer::UsagePattern>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,10 +390,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->size() );
+      RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,10 +414,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,10 +438,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_UNMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->unmap() );
+      RBOOL(obj->unmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,10 +462,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_USAGEPATTERN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->usagePattern() );
+      RENUM(obj->usagePattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,10 +486,10 @@ HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
     {
 #endif
-      obj->write( PINT(1), static_cast< const void*>( hb_parptr(2) ), PINT(3) );
+      obj->write(PINT(1), static_cast< const void*>( hb_parptr(2)), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

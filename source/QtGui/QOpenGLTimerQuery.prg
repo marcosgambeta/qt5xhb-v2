@@ -68,9 +68,9 @@ QOpenGLTimerQuery(QObject *parent = nullptr)
 HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 {
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QOpenGLTimerQuery( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QOpenGLTimerQuery( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->create() );
+      RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCreated() );
+      RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->objectId() );
+      RGLUINT(obj->objectId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->begin();
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->end();
@@ -288,10 +288,10 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT64( obj->waitForTimestamp() );
+      RGLUINT64(obj->waitForTimestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->recordTimestamp();
@@ -346,10 +346,10 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isResultAvailable() );
+      RBOOL(obj->isResultAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,10 +374,10 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT64( obj->waitForResult() );
+      RGLUINT64(obj->waitForResult());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

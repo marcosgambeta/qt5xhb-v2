@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument(PQTEXTDOCUMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->document();
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->rehighlight();
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->rehighlightBlock( *PQTEXTBLOCK(1) );
+      obj->rehighlightBlock( *PQTEXTBLOCK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

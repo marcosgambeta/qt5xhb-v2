@@ -72,10 +72,10 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modifiers() );
+      RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->newPage() );
+      RBOOL(obj->newPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->pageSize() );
+      RENUM(obj->pageSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageSize( static_cast<QPagedPaintDevice::PageSize>( hb_parni(1) ) );
+      obj->setPageSize( static_cast<QPagedPaintDevice::PageSize>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSizeF( obj->pageSizeMM() );
+      auto ptr = new QSizeF(obj->pageSizeMM());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZEF(1) )
+    if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setPageSizeMM( *PQSIZEF(1) );
+      obj->setPageSizeMM( *PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,10 +211,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPageLayout( obj->pageLayout() );
+      auto ptr = new QPageLayout(obj->pageLayout());
       Qt5xHb::createReturnClass(ptr, "QPAGELAYOUT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -238,10 +238,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAGELAYOUT(1) )
+    if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
     {
 #endif
-      RBOOL( obj->setPageLayout( *PQPAGELAYOUT(1) ) );
+      RBOOL(obj->setPageLayout( *PQPAGELAYOUT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,10 +264,10 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setPageOrientation( static_cast<QPageLayout::Orientation>( hb_parni(1) ) ) );
+      RBOOL(obj->setPageOrientation( static_cast<QPageLayout::Orientation>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 {
-  if( ISNUMPAR(1) && ISQMARGINSF(1) )
+  if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
     bool setPageMargins( const QMarginsF & margins )
@@ -291,12 +291,12 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->setPageMargins( *PQMARGINSF(1) ) );
+      RBOOL(obj->setPageMargins( *PQMARGINSF(1)));
     }
 #endif
 
   }
-  else if( ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
   {
     /*
     bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->setPageMargins( *PQMARGINSF(1), static_cast<QPageLayout::Unit>( hb_parni(2) ) ) );
+      RBOOL(obj->setPageMargins( *PQMARGINSF(1), static_cast<QPageLayout::Unit>( hb_parni(2))));
     }
 #endif
 

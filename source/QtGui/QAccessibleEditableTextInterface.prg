@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->deleteText( PINT(1), PINT(2) );
+      obj->deleteText(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->insertText( PINT(1), PQSTRING(2) );
+      obj->insertText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
     {
 #endif
-      obj->replaceText( PINT(1), PINT(2), PQSTRING(3) );
+      obj->replaceText(PINT(1), PINT(2), PQSTRING(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -183,12 +183,12 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM )
 
 HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEEDITABLETEXTINTERFACE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_SELFDESTRUCTION )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

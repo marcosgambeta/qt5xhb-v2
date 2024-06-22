@@ -54,9 +54,9 @@ QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QFocusEvent( static_cast<QEvent::Type>( hb_parni(1) ), HB_ISNIL(2) ? static_cast<Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast<Qt::FocusReason >( hb_parni(2) ) );
+    auto obj = new QFocusEvent( static_cast<QEvent::Type>( hb_parni(1)), HB_ISNIL(2) ? static_cast<Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast<Qt::FocusReason >( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->gotFocus() );
+      RBOOL(obj->gotFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->lostFocus() );
+      RBOOL(obj->lostFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,10 +139,10 @@ HB_FUNC_STATIC( QFOCUSEVENT_REASON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->reason() );
+      RENUM(obj->reason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

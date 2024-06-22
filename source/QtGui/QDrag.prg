@@ -77,9 +77,9 @@ QDrag( QObject * dragSource )
 */
 HB_FUNC_STATIC( QDRAG_NEW )
 {
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    auto obj = new QDrag( PQOBJECT(1) );
+    auto obj = new QDrag(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->defaultAction() );
+      RENUM(obj->defaultAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,10 +140,10 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QPixmap( obj->dragCursor( static_cast<Qt::DropAction>( hb_parni(1) ) ) );
+      auto ptr = new QPixmap(obj->dragCursor( static_cast<Qt::DropAction>( hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
@@ -166,11 +166,11 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 
     if (obj != nullptr)
     {
-      RENUM( obj->exec( HB_ISNIL(1) ? static_cast<Qt::DropActions >( Qt::MoveAction ) : static_cast<Qt::DropActions >( hb_parni(1) ) ) );
+      RENUM(obj->exec( HB_ISNIL(1) ? static_cast<Qt::DropActions >( Qt::MoveAction ) : static_cast<Qt::DropActions >( hb_parni(1))));
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 
     if (obj != nullptr)
     {
-      RENUM( obj->exec( static_cast<Qt::DropActions>( hb_parni(1) ), static_cast<Qt::DropAction>( hb_parni(2) ) ) );
+      RENUM(obj->exec( static_cast<Qt::DropActions>( hb_parni(1)), static_cast<Qt::DropAction>( hb_parni(2))));
     }
 
   }
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->hotSpot() );
+      auto ptr = new QPoint(obj->hotSpot());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->mimeData();
@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPixmap( obj->pixmap() );
+      auto ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -274,10 +274,10 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPIXMAP(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQPIXMAP(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setDragCursor( *PQPIXMAP(1), static_cast<Qt::DropAction>( hb_parni(2) ) );
+      obj->setDragCursor( *PQPIXMAP(1), static_cast<Qt::DropAction>( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,10 +300,10 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setHotSpot( *PQPOINT(1) );
+      obj->setHotSpot( *PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,10 +326,10 @@ HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMIMEDATA(1) )
+    if (ISNUMPAR(1) && ISQMIMEDATA(1))
     {
 #endif
-      obj->setMimeData( PQMIMEDATA(1) );
+      obj->setMimeData(PQMIMEDATA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,10 +352,10 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIXMAP(1) )
+    if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1) );
+      obj->setPixmap( *PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->source();
@@ -403,10 +403,10 @@ HB_FUNC_STATIC( QDRAG_SUPPORTEDACTIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedActions() );
+      RENUM(obj->supportedActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->target();
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("actionChanged(Qt::DropAction)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("targetChanged(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

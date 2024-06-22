@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QTextTableCell()
@@ -82,12 +82,12 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQTEXTTABLECELL(1) )
+  else if (ISNUMPAR(1) && ISQTEXTTABLECELL(1))
   {
     /*
     QTextTableCell( const QTextTableCell & o )
     */
-    auto obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
+    auto obj = new QTextTableCell( *PQTEXTTABLECELL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -123,10 +123,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQTEXTCHARFORMAT(1) );
+      obj->setFormat( *PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QTextCharFormat( obj->format() );
+      auto ptr = new QTextCharFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->row() );
+      RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,10 +198,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->column() );
+      RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowSpan() );
+      RINT(obj->rowSpan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,10 +246,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columnSpan() );
+      RINT(obj->columnSpan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QTextCursor( obj->firstCursorPosition() );
+      auto ptr = new QTextCursor(obj->firstCursorPosition());
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,10 +319,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QTextCursor( obj->lastCursorPosition() );
+      auto ptr = new QTextCursor(obj->lastCursorPosition());
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -344,10 +344,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstPosition() );
+      RINT(obj->firstPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,10 +368,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lastPosition() );
+      RINT(obj->lastPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,10 +392,10 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->tableCellFormatIndex() );
+      RINT(obj->tableCellFormatIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -438,12 +438,12 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROM )
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QTEXTTABLECELL_NEWFROM );
+  HB_FUNC_EXEC(QTEXTTABLECELL_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QTEXTTABLECELL_NEWFROM );
+  HB_FUNC_EXEC(QTEXTTABLECELL_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTEXTTABLECELL_SELFDESTRUCTION )
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

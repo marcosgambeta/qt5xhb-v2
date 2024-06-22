@@ -78,10 +78,10 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3))
     {
 #endif
-      RBOOL( obj->loadPicture( PQSTRING(1), PQSTRING(2), PQPICTURE(3) ) );
+      RBOOL(obj->loadPicture(PQSTRING(1), PQSTRING(2), PQPICTURE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQPICTURE(3))
     {
 #endif
-      RBOOL( obj->savePicture( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
+      RBOOL(obj->savePicture(PQSTRING(1), PQSTRING(2), *PQPICTURE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->installIOHandler( PQSTRING(1) ) );
+      RBOOL(obj->installIOHandler(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

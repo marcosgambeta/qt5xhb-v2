@@ -94,7 +94,7 @@ RETURN
 
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QRawFont()
@@ -103,30 +103,30 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
     */
-    auto obj = new QRawFont( PQSTRING(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3) ) );
+    auto obj = new QRawFont(PQSTRING(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
     */
-    auto obj = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3) ) );
+    auto obj = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQRAWFONT(1) )
+  else if (ISNUMPAR(1) && ISQRAWFONT(1))
   {
     /*
     QRawFont( const QRawFont & other )
     */
-    auto obj = new QRawFont( *PQRAWFONT(1) );
+    auto obj = new QRawFont( *PQRAWFONT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QRAWFONT_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRAWFONT(1) )
+    if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
 #endif
-      obj->swap( *PQRAWFONT(1) );
+      obj->swap( *PQRAWFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,10 +212,10 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->familyName() );
+      RQSTRING(obj->familyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,10 +236,10 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->styleName() );
+      RQSTRING(obj->styleName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,10 +260,10 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->style() );
+      RENUM(obj->style());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,10 +284,10 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->weight() );
+      RINT(obj->weight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,10 +308,10 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto list = obj->glyphIndexesForString( PQSTRING(1) );
+      auto list = obj->glyphIndexesForString(PQSTRING(1));
       auto pArray = hb_itemArrayNew(0);
       for( const auto & item : list )
       {
@@ -340,19 +340,19 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QVector<quint32> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen( aList1);
       quint32 temp1;
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
       }
-      auto list = obj->advancesForGlyphIndexes( par1 );
+      auto list = obj->advancesForGlyphIndexes( par1);
       auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -402,10 +402,10 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQTRANSFORM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQTRANSFORM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QImage( obj->alphaMapForGlyph( PQUINT32(1), HB_ISNIL(2) ? static_cast<QRawFont::AntialiasingType >( QRawFont::SubPixelAntialiasing ) : static_cast<QRawFont::AntialiasingType >( hb_parni(2) ), HB_ISNIL(3) ? QTransform() : *static_cast<QTransform*>(Qt5xHb::itemGetPtr(3)) ) );
+      auto ptr = new QImage(obj->alphaMapForGlyph(PQUINT32(1), HB_ISNIL(2) ? static_cast<QRawFont::AntialiasingType >( QRawFont::SubPixelAntialiasing ) : static_cast<QRawFont::AntialiasingType >( hb_parni(2)), HB_ISNIL(3) ? QTransform() : *static_cast<QTransform*>(Qt5xHb::itemGetPtr(3))));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -427,10 +427,10 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QPainterPath( obj->pathForGlyph( PQUINT32(1) ) );
+      auto ptr = new QPainterPath(obj->pathForGlyph(PQUINT32(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -452,10 +452,10 @@ HB_FUNC_STATIC( QRAWFONT_BOUNDINGRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect( PQUINT32(1) ) );
+      auto ptr = new QRectF(obj->boundingRect(PQUINT32(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -477,10 +477,10 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPixelSize( PQREAL(1) );
+      obj->setPixelSize(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,10 +503,10 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->pixelSize() );
+      RQREAL(obj->pixelSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -527,10 +527,10 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->hintingPreference() );
+      RENUM(obj->hintingPreference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,10 +551,10 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->ascent() );
+      RQREAL(obj->ascent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,10 +575,10 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->descent() );
+      RQREAL(obj->descent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -599,10 +599,10 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->leading() );
+      RQREAL(obj->leading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,10 +623,10 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->xHeight() );
+      RQREAL(obj->xHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -647,10 +647,10 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->averageCharWidth() );
+      RQREAL(obj->averageCharWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,10 +671,10 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->maxCharWidth() );
+      RQREAL(obj->maxCharWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -695,10 +695,10 @@ HB_FUNC_STATIC( QRAWFONT_LINETHICKNESS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->lineThickness() );
+      RQREAL(obj->lineThickness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,10 +719,10 @@ HB_FUNC_STATIC( QRAWFONT_UNDERLINEPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->underlinePosition() );
+      RQREAL(obj->underlinePosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -743,10 +743,10 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->unitsPerEm() );
+      RQREAL(obj->unitsPerEm());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -767,10 +767,10 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->loadFromFile( PQSTRING(1), PQREAL(2), static_cast<QFont::HintingPreference>( hb_parni(3) ) );
+      obj->loadFromFile(PQSTRING(1), PQREAL(2), static_cast<QFont::HintingPreference>( hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -793,10 +793,10 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->loadFromData( *PQBYTEARRAY(1), PQREAL(2), static_cast<QFont::HintingPreference>( hb_parni(3) ) );
+      obj->loadFromData( *PQBYTEARRAY(1), PQREAL(2), static_cast<QFont::HintingPreference>( hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
 
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {
-  if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     bool supportsCharacter( uint ucs4 ) const
@@ -820,11 +820,11 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->supportsCharacter( PUINT(1) ) );
+      RBOOL(obj->supportsCharacter(PUINT(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && ISQCHAR(1) )
+  else if (ISNUMPAR(1) && ISQCHAR(1))
   {
     /*
     bool supportsCharacter( QChar character ) const
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->supportsCharacter( *PQCHAR(1) ) );
+      RBOOL(obj->supportsCharacter( *PQCHAR(1)));
     }
 
   }
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->supportedWritingSystems();
@@ -885,10 +885,10 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = new QByteArray( obj->fontTable( PCONSTCHAR(1) ) );
+      auto ptr = new QByteArray(obj->fontTable(PCONSTCHAR(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -906,10 +906,10 @@ static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writi
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && ISQFONT(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && ISQFONT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
-    auto ptr = new QRawFont( QRawFont::fromFont( *PQFONT(1), HB_ISNIL(2) ? static_cast<QFontDatabase::WritingSystem >( QFontDatabase::Any ) : static_cast<QFontDatabase::WritingSystem >( hb_parni(2) ) ) );
+    auto ptr = new QRawFont( QRawFont::fromFont( *PQFONT(1), HB_ISNIL(2) ? static_cast<QFontDatabase::WritingSystem >( QFontDatabase::Any ) : static_cast<QFontDatabase::WritingSystem >( hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QRAWFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QRAWFONT_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QRAWFONT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -952,12 +952,12 @@ HB_FUNC_STATIC( QRAWFONT_NEWFROM )
 
 HB_FUNC_STATIC( QRAWFONT_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QRAWFONT_NEWFROM );
+  HB_FUNC_EXEC(QRAWFONT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QRAWFONT_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QRAWFONT_NEWFROM );
+  HB_FUNC_EXEC(QRAWFONT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QRAWFONT_SELFDESTRUCTION )
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QRAWFONT_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

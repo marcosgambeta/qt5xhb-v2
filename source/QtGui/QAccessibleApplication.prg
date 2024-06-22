@@ -62,7 +62,7 @@ QAccessibleApplication()
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QAccessibleApplication();
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_WINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->window();
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILDCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->childCount() );
+      RINT(obj->childCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_INDEXOFCHILD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
     {
 #endif
-      RINT( obj->indexOfChild( PQACCESSIBLEINTERFACE(1) ) );
+      RINT(obj->indexOfChild(PQACCESSIBLEINTERFACE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->focusChild();
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->parent();
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->child( PINT(1) );
+      auto ptr = obj->child(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,10 +231,10 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->text( static_cast<QAccessible::Text>( hb_parni(1) ) ) );
+      RQSTRING(obj->text( static_cast<QAccessible::Text>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,10 +255,10 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_ROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->role() );
+      RENUM(obj->role());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
