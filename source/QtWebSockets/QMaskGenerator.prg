@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QMASKGENERATOR_SEED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->seed() );
+      RBOOL(obj->seed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QMASKGENERATOR_NEXTMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT32( obj->nextMask() );
+      RQUINT32(obj->nextMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
