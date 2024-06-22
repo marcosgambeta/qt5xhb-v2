@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEnginePage * ptr = obj->page();
+      auto ptr = obj->page();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineHistory * ptr = obj->history();
+      auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAction * ptr = obj->pageAction( static_cast<QWebEnginePage::WebAction>( hb_parni(1) ) );
+      auto ptr = obj->pageAction( static_cast<QWebEnginePage::WebAction>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineHistory * ptr = obj->history();
+      auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->view();
+      auto ptr = obj->view();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAction * ptr = obj->action( static_cast<QWebEnginePage::WebAction>( hb_parni(1) ) );
+      auto ptr = obj->action( static_cast<QWebEnginePage::WebAction>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->createStandardContextMenu();
+      auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineSettings * ptr = obj->settings();
+      auto ptr = obj->settings();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINESETTINGS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

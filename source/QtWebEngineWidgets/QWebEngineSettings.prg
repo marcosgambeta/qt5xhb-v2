@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWebEngineSettings * ptr = QWebEngineSettings::globalSettings();
+    auto ptr = QWebEngineSettings::globalSettings();
     Qt5xHb::createReturnClass(ptr, "QWEBENGINESETTINGS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
