@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
 #endif
-      QQuickTextureFactory * ptr = obj->requestTexture( PQSTRING(1), PQSIZE(2), *PQSIZE(3) );
+      auto ptr = obj->requestTexture( PQSTRING(1), PQSIZE(2), *PQSIZE(3) );
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

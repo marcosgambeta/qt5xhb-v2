@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSGTEXTURE_REMOVEDFROMATLAS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGTexture * ptr = obj->removedFromAtlas();
+      auto ptr = obj->removedFromAtlas();
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

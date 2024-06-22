@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterialShader * ptr = obj->createShader();
+      auto ptr = obj->createShader();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALSHADER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSGMATERIAL_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterialType * ptr = obj->type();
+      auto ptr = obj->type();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALTYPE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

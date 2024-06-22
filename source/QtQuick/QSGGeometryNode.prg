@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterial * ptr = obj->material();
+      auto ptr = obj->material();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIAL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterial * ptr = obj->opaqueMaterial();
+      auto ptr = obj->opaqueMaterial();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIAL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

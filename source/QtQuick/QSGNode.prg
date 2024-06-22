@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QSGNode * ptr = obj->childAtIndex( PINT(1) );
+      auto ptr = obj->childAtIndex( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QSGNODE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->firstChild();
+      auto ptr = obj->firstChild();
       Qt5xHb::createReturnClass(ptr, "QSGNODE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSGNODE_LASTCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->lastChild();
+      auto ptr = obj->lastChild();
       Qt5xHb::createReturnClass(ptr, "QSGNODE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSGNODE_NEXTSIBLING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->nextSibling();
+      auto ptr = obj->nextSibling();
       Qt5xHb::createReturnClass(ptr, "QSGNODE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QSGNODE_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QSGNODE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QSGNODE_PREVIOUSSIBLING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->previousSibling();
+      auto ptr = obj->previousSibling();
       Qt5xHb::createReturnClass(ptr, "QSGNODE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlEngine * ptr = obj->engine();
+      auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->rootContext();
+      auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuickItem * ptr = obj->rootObject();
+      auto ptr = obj->rootObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

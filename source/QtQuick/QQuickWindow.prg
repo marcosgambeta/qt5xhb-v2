@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ACTIVEFOCUSITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuickItem * ptr = obj->activeFocusItem();
+      auto ptr = obj->activeFocusItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CONTENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuickItem * ptr = obj->contentItem();
+      auto ptr = obj->contentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
     if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSIZE(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QSGTexture * ptr = obj->createTextureFromId( PUINT(1), *PQSIZE(2), HB_ISNIL(3) ? static_cast<QQuickWindow::CreateTextureOptions >( QQuickWindow::CreateTextureOption( 0 ) ) : static_cast<QQuickWindow::CreateTextureOptions >( hb_parni(3) ) );
+      auto ptr = obj->createTextureFromId( PUINT(1), *PQSIZE(2), HB_ISNIL(3) ? static_cast<QQuickWindow::CreateTextureOptions >( QQuickWindow::CreateTextureOption( 0 ) ) : static_cast<QQuickWindow::CreateTextureOptions >( hb_parni(3) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      QSGTexture * ptr = obj->createTextureFromImage( *PQIMAGE(1) );
+      auto ptr = obj->createTextureFromImage( *PQIMAGE(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_INCUBATIONCONTROLLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlIncubationController * ptr = obj->incubationController();
+      auto ptr = obj->incubationController();
       Qt5xHb::createReturnClass(ptr, "QQMLINCUBATIONCONTROLLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_MOUSEGRABBERITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuickItem * ptr = obj->mouseGrabberItem();
+      auto ptr = obj->mouseGrabberItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_OPENGLCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->openglContext();
+      auto ptr = obj->openglContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLFramebufferObject * ptr = obj->renderTarget();
+      auto ptr = obj->renderTarget();
       Qt5xHb::createReturnClass(ptr, "QOPENGLFRAMEBUFFEROBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ACCESSIBLEROOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->accessibleRoot();
+      auto ptr = obj->accessibleRoot();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
