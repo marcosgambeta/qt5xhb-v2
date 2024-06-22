@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractState * ptr = obj->defaultState();
+      auto ptr = obj->defaultState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

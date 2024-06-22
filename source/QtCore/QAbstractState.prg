@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStateMachine * ptr = obj->machine();
+      auto ptr = obj->machine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QState * ptr = obj->parentState();
+      auto ptr = obj->parentState();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

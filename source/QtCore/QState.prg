@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 
     if( obj != nullptr )
     {
-      QSignalTransition * ptr = obj->addTransition( PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3) );
+      auto ptr = obj->addTransition( PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3) );
       Qt5xHb::createReturnClass(ptr, "QSIGNALTRANSITION", false);
     }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 
     if( obj != nullptr )
     {
-      QAbstractTransition * ptr = obj->addTransition( PQABSTRACTSTATE(1) );
+      auto ptr = obj->addTransition( PQABSTRACTSTATE(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTRANSITION");
     }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractState * ptr = obj->errorState();
+      auto ptr = obj->errorState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractState * ptr = obj->initialState();
+      auto ptr = obj->initialState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

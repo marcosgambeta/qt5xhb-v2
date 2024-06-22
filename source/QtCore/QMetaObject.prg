@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->superClass();
+      auto ptr = obj->superClass();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

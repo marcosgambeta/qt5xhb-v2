@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device();
+      auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlStreamEntityResolver * ptr = obj->entityResolver();
+      auto ptr = obj->entityResolver();
       Qt5xHb::createReturnClass(ptr, "QXMLSTREAMENTITYRESOLVER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

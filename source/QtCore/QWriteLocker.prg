@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QReadWriteLock * ptr = obj->readWriteLock();
+      auto ptr = obj->readWriteLock();
       Qt5xHb::createReturnClass(ptr, "QREADWRITELOCK", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

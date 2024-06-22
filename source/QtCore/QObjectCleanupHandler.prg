@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QObject * ptr = obj->add( PQOBJECT(1) );
+      auto ptr = obj->add( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

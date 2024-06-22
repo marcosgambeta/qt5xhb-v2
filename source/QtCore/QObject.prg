@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
     if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QObject * ptr = obj->findChild<QObject *>( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
+      auto ptr = obj->findChild<QObject *>( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->metaObject();
+      auto ptr = obj->metaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QThread * ptr = obj->thread();
+      auto ptr = obj->thread();
       Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

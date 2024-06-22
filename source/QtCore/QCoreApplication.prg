@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QCoreApplication * ptr = QCoreApplication::instance();
+    auto ptr = QCoreApplication::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QCOREAPPLICATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

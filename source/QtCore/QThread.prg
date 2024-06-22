@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractEventDispatcher * ptr = obj->eventDispatcher();
+      auto ptr = obj->eventDispatcher();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
   if( ISNUMPAR(0) )
   {
 #endif
-    QThread * ptr = QThread::currentThread();
+    auto ptr = QThread::currentThread();
     Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

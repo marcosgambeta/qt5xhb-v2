@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->targetObject();
+      auto ptr = obj->targetObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

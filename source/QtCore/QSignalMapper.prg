@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 
     if( obj != nullptr )
     {
-      QObject * ptr = obj->mapping( PINT(1) );
+      auto ptr = obj->mapping( PINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 
     if( obj != nullptr )
     {
-      QObject * ptr = obj->mapping( PQSTRING(1) );
+      auto ptr = obj->mapping( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 
     if( obj != nullptr )
     {
-      QObject * ptr = obj->mapping( PQWIDGET(1) );
+      auto ptr = obj->mapping( PQWIDGET(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 
     if( obj != nullptr )
     {
-      QObject * ptr = obj->mapping( PQOBJECT(1) );
+      auto ptr = obj->mapping( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
 

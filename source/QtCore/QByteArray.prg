@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      QByteArray * ptr = &obj->append( *PQBYTEARRAY(1) );
+      auto ptr = &obj->append( *PQBYTEARRAY(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = &obj->append( PQSTRING(1) );
+      auto ptr = &obj->append( PQSTRING(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = &obj->append( PCONSTCHAR(1) );
+      auto ptr = &obj->append( PCONSTCHAR(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      QByteArray * ptr = &obj->append( PCONSTCHAR(1), PINT(2) );
+      auto ptr = &obj->append( PCONSTCHAR(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
     if( ISNUMPAR(1) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) )
     {
 #endif
-      QByteArray * ptr = &obj->append( PCHAR(1) );
+      auto ptr = &obj->append( PCHAR(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND6 )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISCHAR(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->append( PINT(1), PCHAR(2) );
+      auto ptr = &obj->append( PINT(1), PCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
     if( ISBETWEEN(1, 2) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->fill( PCHAR(1), OPINT( 2, -1 ) );
+      auto ptr = &obj->fill( PCHAR(1), OPINT( 2, -1 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      QByteArray * ptr = &obj->insert( PINT(1), *PQBYTEARRAY(2) );
+      auto ptr = &obj->insert( PINT(1), *PQBYTEARRAY(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->insert( PINT(1), PQSTRING(2) );
+      auto ptr = &obj->insert( PINT(1), PQSTRING(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->insert( PINT(1), PCONSTCHAR(2) );
+      auto ptr = &obj->insert( PINT(1), PCONSTCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
-      QByteArray * ptr = &obj->insert( PINT(1), PCONSTCHAR(2), PINT(3) );
+      auto ptr = &obj->insert( PINT(1), PCONSTCHAR(2), PINT(3) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISCHAR(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->insert( PINT(1), PCHAR(2) );
+      auto ptr = &obj->insert( PINT(1), PCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 
     if( obj != nullptr )
     {
-      QByteArray * ptr = &obj->prepend( *PQBYTEARRAY(1) );
+      auto ptr = &obj->prepend( *PQBYTEARRAY(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
 
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 
     if( obj != nullptr )
     {
-      QByteArray * ptr = &obj->prepend( PCONSTCHAR(1) );
+      auto ptr = &obj->prepend( PCONSTCHAR(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
 
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 
     if( obj != nullptr )
     {
-      QByteArray * ptr = &obj->prepend( PCONSTCHAR(1), PINT(2) );
+      auto ptr = &obj->prepend( PCONSTCHAR(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
 
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 
     if( obj != nullptr )
     {
-      QByteArray * ptr = &obj->prepend( PCHAR(1) );
+      auto ptr = &obj->prepend( PCHAR(1) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
 
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QByteArray * ptr = &obj->remove( PINT(1), PINT(2) );
+      auto ptr = &obj->remove( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBYTEARRAY(3) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PINT(1), PINT(2), *PQBYTEARRAY(3) );
+      auto ptr = &obj->replace( PINT(1), PINT(2), *PQBYTEARRAY(3) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PINT(1), PINT(2), PCONSTCHAR(3) );
+      auto ptr = &obj->replace( PINT(1), PINT(2), PCONSTCHAR(3) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
     if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PINT(1), PINT(2), PCONSTCHAR(3), PINT(4) );
+      auto ptr = &obj->replace( PINT(1), PINT(2), PCONSTCHAR(3), PINT(4) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1594,7 +1594,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+      auto ptr = &obj->replace( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1619,7 +1619,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCONSTCHAR(1), *PQBYTEARRAY(2) );
+      auto ptr = &obj->replace( PCONSTCHAR(1), *PQBYTEARRAY(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PINT(4) );
+      auto ptr = &obj->replace( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PINT(4) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( *PQBYTEARRAY(1), PCONSTCHAR(2) );
+      auto ptr = &obj->replace( *PQBYTEARRAY(1), PCONSTCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1694,7 +1694,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PQSTRING(1), *PQBYTEARRAY(2) );
+      auto ptr = &obj->replace( PQSTRING(1), *PQBYTEARRAY(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1719,7 +1719,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PQSTRING(1), PCONSTCHAR(2) );
+      auto ptr = &obj->replace( PQSTRING(1), PCONSTCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1744,7 +1744,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCONSTCHAR(1), PCONSTCHAR(2) );
+      auto ptr = &obj->replace( PCONSTCHAR(1), PCONSTCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1769,7 +1769,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
     if( ISNUMPAR(2) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) && ISQBYTEARRAY(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCHAR(1), *PQBYTEARRAY(2) );
+      auto ptr = &obj->replace( PCHAR(1), *PQBYTEARRAY(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1794,7 +1794,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
     if( ISNUMPAR(2) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCHAR(1), PQSTRING(2) );
+      auto ptr = &obj->replace( PCHAR(1), PQSTRING(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1819,7 +1819,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
     if( ISNUMPAR(2) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCHAR(1), PCONSTCHAR(2) );
+      auto ptr = &obj->replace( PCHAR(1), PCONSTCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1844,7 +1844,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
     if( ISNUMPAR(2) && ( HB_ISNUM(1) || HB_ISCHAR(1) ) && ( HB_ISNUM(2) || HB_ISCHAR(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->replace( PCHAR(1), PCHAR(2) );
+      auto ptr = &obj->replace( PCHAR(1), PCHAR(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2035,7 +2035,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PINT(1), OPINT( 2, 10 ) );
+      auto ptr = &obj->setNum( PINT(1), OPINT( 2, 10 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2060,7 +2060,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PUINT(1), OPINT( 2, 10 ) );
+      auto ptr = &obj->setNum( PUINT(1), OPINT( 2, 10 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2085,7 +2085,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PSHORT(1), OPINT( 2, 10 ) );
+      auto ptr = &obj->setNum( PSHORT(1), OPINT( 2, 10 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2110,7 +2110,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PUSHORT(1), OPINT( 2, 10 ) );
+      auto ptr = &obj->setNum( PUSHORT(1), OPINT( 2, 10 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2135,7 +2135,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PQLONGLONG(1), OPINT( 2, 10 ) );
+      auto ptr = &obj->setNum( PQLONGLONG(1), OPINT( 2, 10 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2160,7 +2160,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PQULONGLONG(1), OPINT( 2, 10 ) );
+      auto ptr = &obj->setNum( PQULONGLONG(1), OPINT( 2, 10 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2185,7 +2185,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
     if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PDOUBLE(1), OPCHAR( 2, 'g' ), OPINT( 3, 6 ) );
+      auto ptr = &obj->setNum( PDOUBLE(1), OPCHAR( 2, 'g' ), OPINT( 3, 6 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2210,7 +2210,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
     if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QByteArray * ptr = &obj->setNum( PFLOAT(1), OPCHAR( 2, 'g' ), OPINT( 3, 6 ) );
+      auto ptr = &obj->setNum( PFLOAT(1), OPCHAR( 2, 'g' ), OPINT( 3, 6 ) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2247,7 +2247,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      QByteArray * ptr = &obj->setRawData( PCONSTCHAR(1), PUINT(2) );
+      auto ptr = &obj->setRawData( PCONSTCHAR(1), PUINT(2) );
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

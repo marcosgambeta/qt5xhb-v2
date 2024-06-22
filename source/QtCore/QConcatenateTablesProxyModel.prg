@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MIMEDATA )
       {
         par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
-      QMimeData * ptr = obj->mimeData( par1 );
+      auto ptr = obj->mimeData( par1 );
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

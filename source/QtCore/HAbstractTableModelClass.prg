@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_RELOADDATA )
 //   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0) );
 //   if( obj )
 //   {
-//     QModelIndex * ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2) ) );
+//     auto ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2) ) );
 //     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX");  }
 // }
 

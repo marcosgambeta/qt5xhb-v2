@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPersistentModelIndex * ptr = &obj->topLeft();
+      auto ptr = &obj->topLeft();
       Qt5xHb::createReturnClass(ptr, "QPERSISTENTMODELINDEX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPersistentModelIndex * ptr = &obj->bottomRight();
+      auto ptr = &obj->bottomRight();
       Qt5xHb::createReturnClass(ptr, "QPERSISTENTMODELINDEX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractItemModel * ptr = obj->model();
+      auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

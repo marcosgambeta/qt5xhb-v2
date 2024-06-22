@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
   if( ISBETWEEN(0, 1) && ( ISQTHREAD(1) || HB_ISNIL(1) ) )
   {
 #endif
-    QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance( OPQTHREAD( 1, nullptr ) );
+    auto ptr = QAbstractEventDispatcher::instance( OPQTHREAD( 1, nullptr ) );
     Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

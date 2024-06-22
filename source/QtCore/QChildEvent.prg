@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->child();
+      auto ptr = obj->child();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = &obj->buffer();
+      auto ptr = &obj->buffer();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QByteArray * ptr = &obj->buffer();
+      auto ptr = &obj->buffer();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QByteArray * ptr = &obj->data();
+      auto ptr = &obj->data();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

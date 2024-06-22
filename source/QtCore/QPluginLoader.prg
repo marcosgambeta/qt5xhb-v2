@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->instance();
+      auto ptr = obj->instance();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

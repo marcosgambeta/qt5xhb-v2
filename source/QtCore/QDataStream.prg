@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device();
+      auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      QDataStream * ptr = &obj->writeBytes( PCONSTCHAR(1), PUINT(2) );
+      auto ptr = &obj->writeBytes( PCONSTCHAR(1), PUINT(2) );
       Qt5xHb::createReturnClass(ptr, "QDATASTREAM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

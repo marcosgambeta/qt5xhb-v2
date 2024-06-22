@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->space();
+      auto ptr = &obj->space();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->nospace();
+      auto ptr = &obj->nospace();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->maybeSpace();
+      auto ptr = &obj->maybeSpace();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBEQUOTE )
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISCHAR(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QDebug * ptr = &obj->maybeQuote( OPCHAR( 1, '"' ) );
+      auto ptr = &obj->maybeQuote( OPCHAR( 1, '"' ) );
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDEBUG_NOQUOTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->noquote();
+      auto ptr = &obj->noquote();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QDEBUG_QUOTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->quote();
+      auto ptr = &obj->quote();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDEBUG_RESETFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->resetFormat();
+      auto ptr = &obj->resetFormat();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QDEBUG_VERBOSITY )
 
     if( obj != nullptr )
     {
-      QDebug * ptr = &obj->verbosity( PINT(1) );
+      auto ptr = &obj->verbosity( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
     }
 #endif

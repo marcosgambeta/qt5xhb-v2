@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAnimationGroup * ptr = obj->group();
+      auto ptr = obj->group();
       Qt5xHb::createReturnQObjectClass(ptr, "QANIMATIONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

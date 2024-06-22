@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStateMachine * ptr = obj->machine();
+      auto ptr = obj->machine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QState * ptr = obj->sourceState();
+      auto ptr = obj->sourceState();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractState * ptr = obj->targetState();
+      auto ptr = obj->targetState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

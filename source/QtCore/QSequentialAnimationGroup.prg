@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPauseAnimation * ptr = obj->addPause( PINT(1) );
+      auto ptr = obj->addPause( PINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractAnimation * ptr = obj->currentAnimation();
+      auto ptr = obj->currentAnimation();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QPauseAnimation * ptr = obj->insertPause( PINT(1), PINT(2) );
+      auto ptr = obj->insertPause( PINT(1), PINT(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

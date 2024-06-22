@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCodec * ptr = obj->iniCodec();
+      auto ptr = obj->iniCodec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
