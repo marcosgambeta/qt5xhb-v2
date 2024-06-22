@@ -70,9 +70,9 @@ QAxScript( const QString & name, QAxScriptManager * manager )
 */
 HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPTMANAGER(2))
   {
-    auto obj = new QAxScript( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
+    auto obj = new QAxScript(PQSTRING(1), PQAXSCRIPTMANAGER(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 
 HB_FUNC_STATIC( QAXSCRIPT_CALL )
 {
-  if( ISBETWEEN(1, 9) && HB_ISCHAR(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) && ( ISQVARIANT(3) || HB_ISNIL(3) ) && ( ISQVARIANT(4) || HB_ISNIL(4) ) && ( ISQVARIANT(5) || HB_ISNIL(5) ) && ( ISQVARIANT(6) || HB_ISNIL(6) ) && ( ISQVARIANT(7) || HB_ISNIL(7) ) && ( ISQVARIANT(8) || HB_ISNIL(8) ) && ( ISQVARIANT(9) || HB_ISNIL(9) ) )
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) && (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) && (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
   {
     /*
     QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
@@ -110,12 +110,12 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
 
     if (obj != nullptr)
     {
-      auto ptr = new QVariant( obj->call( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(4)), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(5)), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(6)), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(7)), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(8)), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(9)) ) );
+      auto ptr = new QVariant(obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(4)), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(5)), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(6)), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(7)), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(8)), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(9))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
     QVariant call( const QString & function, QList<QVariant> & arguments )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
 
     if (obj != nullptr)
     {
-      auto ptr = new QVariant( obj->call( PQSTRING(1), PQVARIANTLIST(2) ) );
+      auto ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
 
@@ -145,10 +145,10 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRINGLIST( obj->functions( HB_ISNIL(1) ? static_cast<QAxScript::FunctionFlags >( QAxScript::FunctionNames ) : static_cast<QAxScript::FunctionFlags >( hb_parni(1) ) ) );
+      RQSTRINGLIST(obj->functions( HB_ISNIL(1) ? static_cast<QAxScript::FunctionFlags >( QAxScript::FunctionNames ) : static_cast<QAxScript::FunctionFlags >( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,10 +169,10 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL( obj->load( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString() )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,10 +193,10 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->scriptCode() );
+      RQSTRING(obj->scriptCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->scriptEngine();
@@ -242,10 +242,10 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->scriptName() );
+      RQSTRING(obj->scriptName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("entered()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(int,QString,int,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QVariant)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(int,QString,QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
