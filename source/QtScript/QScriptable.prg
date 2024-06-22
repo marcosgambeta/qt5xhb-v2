@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptContext * ptr = obj->context();
+      auto ptr = obj->context();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptEngine * ptr = obj->engine();
+      auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

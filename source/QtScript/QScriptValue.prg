@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptEngine * ptr = obj->engine();
+      auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptClass * ptr = obj->scriptClass();
+      auto ptr = obj->scriptClass();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCLASS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->toQMetaObject();
+      auto ptr = obj->toQMetaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->toQObject();
+      auto ptr = obj->toQObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

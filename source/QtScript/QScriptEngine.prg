@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptEngineAgent * ptr = obj->agent();
+      auto ptr = obj->agent();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTENGINEAGENT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptContext * ptr = obj->currentContext();
+      auto ptr = obj->currentContext();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptContext * ptr = obj->pushContext();
+      auto ptr = obj->pushContext();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
