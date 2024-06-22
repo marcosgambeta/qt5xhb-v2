@@ -90,10 +90,10 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->audioRole() );
+      RENUM(obj->audioRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAudioRole( static_cast<QAudio::Role>( hb_parni(1) ) );
+      obj->setAudioRole( static_cast<QAudio::Role>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->supportedAudioRoles();
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("audioRoleChanged(QAudio::Role)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

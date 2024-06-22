@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NATIVERESOLUTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->nativeResolution() );
+      auto ptr = new QSize(obj->nativeResolution());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,10 +173,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
     {
 #endif
-      RBOOL( obj->isFormatSupported( *PQVIDEOSURFACEFORMAT(1) ) );
+      RBOOL(obj->isFormatSupported( *PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
     {
 #endif
-      auto ptr = new QVideoSurfaceFormat( obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1) ) );
+      auto ptr = new QVideoSurfaceFormat(obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1)));
       Qt5xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
+    if (ISNUMPAR(1) && ISQVIDEOFRAME(1))
     {
 #endif
-      RBOOL( obj->present( *PQVIDEOFRAME(1) ) );
+      RBOOL(obj->present( *PQVIDEOFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,10 +246,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
     {
 #endif
-      RBOOL( obj->start( *PQVIDEOSURFACEFORMAT(1) ) );
+      RBOOL(obj->start( *PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -296,10 +296,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVideoSurfaceFormat( obj->surfaceFormat() );
+      auto ptr = new QVideoSurfaceFormat(obj->surfaceFormat());
       Qt5xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("surfaceFormatChanged(QVideoSurfaceFormat)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("supportedFormatsChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nativeResolutionChanged(QSize)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

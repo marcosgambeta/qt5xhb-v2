@@ -89,10 +89,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISWRITABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isWritable() );
+      RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isMetaDataAvailable() );
+      RBOOL(obj->isMetaDataAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_METADATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      auto ptr = new QVariant(obj->metaData(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_SETMETADATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setMetaData( PQSTRING(1), *PQVARIANT(2) );
+      obj->setMetaData(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,10 +188,10 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->availableMetaData() );
+      RQSTRINGLIST(obj->availableMetaData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("metaDataChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("metaDataChanged(QString,QVariant)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("writableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("metaDataAvailableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

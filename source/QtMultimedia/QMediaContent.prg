@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QMediaContent()
@@ -78,64 +78,64 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQURL(1) )
+  else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
     QMediaContent( const QUrl & contentUrl )
     */
-    auto obj = new QMediaContent( *PQURL(1) );
+    auto obj = new QMediaContent( *PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
+  else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
   {
     /*
     QMediaContent( const QNetworkRequest & contentRequest )
     */
-    auto obj = new QMediaContent( *PQNETWORKREQUEST(1) );
+    auto obj = new QMediaContent( *PQNETWORKREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQMEDIARESOURCE(1) )
+  else if (ISNUMPAR(1) && ISQMEDIARESOURCE(1))
   {
     /*
     QMediaContent( const QMediaResource & contentResource )
     */
-    auto obj = new QMediaContent( *PQMEDIARESOURCE(1) );
+    auto obj = new QMediaContent( *PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     QMediaContent( const QMediaResourceList & resources )
     */
     QMediaResourceList par1;
-    auto aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
+    auto aList1 = hb_param( 1, HB_IT_ARRAY);
+    int nLen1 = hb_arrayLen( aList1);
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *static_cast<QMediaResource*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
+      par1 << *static_cast<QMediaResource*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
     }
-    auto obj = new QMediaContent( par1 );
+    auto obj = new QMediaContent( par1);
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
+  else if (ISNUMPAR(1) && ISQMEDIACONTENT(1))
   {
     /*
     QMediaContent( const QMediaContent & other )
     */
-    auto obj = new QMediaContent( *PQMEDIACONTENT(1) );
+    auto obj = new QMediaContent( *PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ( ISQURL(2) || HB_ISNIL(2) ) && ISOPTLOG(3) )
+  else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2) || HB_ISNIL(2)) && ISOPTLOG(3))
   {
     /*
     QMediaContent( QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false )
     */
-    auto obj = new QMediaContent( PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)), OPBOOL( 3, false ) );
+    auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)), OPBOOL( 3, false));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QNetworkRequest( obj->canonicalRequest() );
+      auto ptr = new QNetworkRequest(obj->canonicalRequest());
       Qt5xHb::createReturnClass(ptr, "QNETWORKREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QMediaResource( obj->canonicalResource() );
+      auto ptr = new QMediaResource(obj->canonicalResource());
       Qt5xHb::createReturnClass(ptr, "QMEDIARESOURCE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,10 +224,10 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->canonicalUrl() );
+      auto ptr = new QUrl(obj->canonicalUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->playlist();
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->resources();
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -370,12 +370,12 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEWFROM )
 
 HB_FUNC_STATIC( QMEDIACONTENT_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QMEDIACONTENT_NEWFROM );
+  HB_FUNC_EXEC(QMEDIACONTENT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMEDIACONTENT_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QMEDIACONTENT_NEWFROM );
+  HB_FUNC_EXEC(QMEDIACONTENT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMEDIACONTENT_SELFDESTRUCTION )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

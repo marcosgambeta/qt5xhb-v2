@@ -60,9 +60,9 @@ QSound( const QString & filename, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QSound( PQSTRING(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QSound(PQSTRING(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loops() );
+      RINT(obj->loops());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loopsRemaining() );
+      RINT(obj->loopsRemaining());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,10 +150,10 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLoops( PINT(1) );
+      obj->setLoops(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,10 +176,10 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,10 +200,10 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSOUND_STOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSOUND_STOP )
 
 HB_FUNC_STATIC( QSOUND_PLAY )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     void play()
@@ -257,13 +257,13 @@ HB_FUNC_STATIC( QSOUND_PLAY )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     static void play( const QString & filename )
     */
 
-    QSound::play( PQSTRING(1) );
+    QSound::play(PQSTRING(1));
 
     hb_itemReturn(hb_stackSelfItem());
 

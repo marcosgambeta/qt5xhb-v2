@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1))
     {
 #endif
-      obj->setSurface( PQABSTRACTVIDEOSURFACE(1) );
+      obj->setSurface(PQABSTRACTVIDEOSURFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->surface();

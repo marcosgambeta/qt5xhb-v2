@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->supportedImageCodecs() );
+      RQSTRINGLIST(obj->supportedImageCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->imageCodecDescription( PQSTRING(1) ) );
+      RQSTRING(obj->imageCodecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,11 +133,11 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQIMAGEENCODERSETTINGS(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQIMAGEENCODERSETTINGS(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
       bool par2;
-      auto list = obj->supportedResolutions( *PQIMAGEENCODERSETTINGS(1), &par2 );
+      auto list = obj->supportedResolutions( *PQIMAGEENCODERSETTINGS(1), &par2);
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
-      hb_storl( par2, 2 );
+      hb_storl( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,10 +185,10 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QImageEncoderSettings( obj->imageSettings() );
+      auto ptr = new QImageEncoderSettings(obj->imageSettings());
       Qt5xHb::createReturnClass(ptr, "QIMAGEENCODERSETTINGS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -210,10 +210,10 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
+    if (ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1))
     {
 #endif
-      obj->setImageSettings( *PQIMAGEENCODERSETTINGS(1) );
+      obj->setImageSettings( *PQIMAGEENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

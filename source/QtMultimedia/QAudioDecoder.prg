@@ -82,9 +82,9 @@ QAudioDecoder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIODECODER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QAudioDecoder( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QAudioDecoder( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEFILENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->sourceFilename() );
+      RQSTRING(obj->sourceFilename());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setSourceFilename( PQSTRING(1) );
+      obj->setSourceFilename(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QAUDIODECODER_STATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,10 +198,10 @@ HB_FUNC_STATIC( QAUDIODECODER_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QAUDIODECODER_BUFFERAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->bufferAvailable() );
+      RBOOL(obj->bufferAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,10 +246,10 @@ HB_FUNC_STATIC( QAUDIODECODER_AUDIOFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QAudioFormat( obj->audioFormat() );
+      auto ptr = new QAudioFormat(obj->audioFormat());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -271,10 +271,10 @@ HB_FUNC_STATIC( QAUDIODECODER_SETAUDIOFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
 #endif
-      obj->setAudioFormat( *PQAUDIOFORMAT(1) );
+      obj->setAudioFormat( *PQAUDIOFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,10 +297,10 @@ HB_FUNC_STATIC( QAUDIODECODER_DURATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->duration() );
+      RQINT64(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,10 +321,10 @@ HB_FUNC_STATIC( QAUDIODECODER_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,10 +345,10 @@ HB_FUNC_STATIC( QAUDIODECODER_POSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->position() );
+      RQINT64(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,10 +369,10 @@ HB_FUNC_STATIC( QAUDIODECODER_READ )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QAudioBuffer( obj->read() );
+      auto ptr = new QAudioBuffer(obj->read());
       Qt5xHb::createReturnClass(ptr, "QAUDIOBUFFER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEDEVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->sourceDevice();
@@ -419,10 +419,10 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEDEVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
 #endif
-      obj->setSourceDevice( PQIODEVICE(1) );
+      obj->setSourceDevice(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QAUDIODECODER_START )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->start();
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QAUDIODECODER_STOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -493,10 +493,10 @@ static QMultimedia::SupportEstimate hasSupport( const QString & mimeType, const 
 HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISARRAY(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2)))
   {
 #endif
-    RENUM( QAudioDecoder::hasSupport( PQSTRING(1), OPQSTRINGLIST( 2, QStringList() ) ) );
+    RENUM( QAudioDecoder::hasSupport(PQSTRING(1), OPQSTRINGLIST( 2, QStringList() )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bufferAvailableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bufferReady()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("durationChanged(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QAudioDecoder::Error)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formatChanged(QAudioFormat)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("positionChanged(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
           if( cb != nullptr )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIODECODER");
-            auto pArg1 = hb_itemPutNLL( nullptr, arg1 );
+            auto pArg1 = hb_itemPutNLL( nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAudioDecoder::State)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

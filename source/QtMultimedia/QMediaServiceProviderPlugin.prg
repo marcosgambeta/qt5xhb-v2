@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = obj->create( PQSTRING(1) );
+      auto ptr = obj->create(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIASERVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_RELEASE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMEDIASERVICE(1) )
+    if (ISNUMPAR(1) && ISQMEDIASERVICE(1))
     {
 #endif
-      obj->release( PQMEDIASERVICE(1) );
+      obj->release(PQMEDIASERVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

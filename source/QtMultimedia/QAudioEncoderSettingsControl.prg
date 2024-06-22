@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QAudioEncoderSettings( obj->audioSettings() );
+      auto ptr = new QAudioEncoderSettings(obj->audioSettings());
       Qt5xHb::createReturnClass(ptr, "QAUDIOENCODERSETTINGS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->codecDescription( PQSTRING(1) ) );
+      RQSTRING(obj->codecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,10 +133,10 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
+    if (ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1))
     {
 #endif
-      obj->setAudioSettings( *PQAUDIOENCODERSETTINGS(1) );
+      obj->setAudioSettings( *PQAUDIOENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->supportedAudioCodecs() );
+      RQSTRINGLIST(obj->supportedAudioCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,13 +183,13 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQAUDIOENCODERSETTINGS(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQAUDIOENCODERSETTINGS(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
       bool par2;
-      auto list = obj->supportedSampleRates( *PQAUDIOENCODERSETTINGS(1), &par2 );
-      Qt5xHb::convert_qlist_int_to_array( list );
-      hb_storl( par2, 2 );
+      auto list = obj->supportedSampleRates( *PQAUDIOENCODERSETTINGS(1), &par2);
+      Qt5xHb::convert_qlist_int_to_array( list);
+      hb_storl( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

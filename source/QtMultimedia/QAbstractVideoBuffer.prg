@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVariant( obj->handle() );
+      auto ptr = new QVariant(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -120,10 +120,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->handleType() );
+      RENUM(obj->handleType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->mapMode() );
+      RENUM(obj->mapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unmap();
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_RELEASE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->release();
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -242,12 +242,12 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROM )
 
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QABSTRACTVIDEOBUFFER_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTVIDEOBUFFER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QABSTRACTVIDEOBUFFER_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTVIDEOBUFFER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_SELFDESTRUCTION )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

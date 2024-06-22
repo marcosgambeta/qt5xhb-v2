@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("audioBufferProbed(QAudioBuffer)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flush()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

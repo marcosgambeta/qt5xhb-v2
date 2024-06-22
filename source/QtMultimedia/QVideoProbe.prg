@@ -58,9 +58,9 @@ QVideoProbe( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QVideoProbe( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QVideoProbe( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 
 HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 {
-  if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
+  if (ISNUMPAR(1) && ISQMEDIAOBJECT(1))
   {
     /*
     bool setSource( QMediaObject * source )
@@ -125,11 +125,11 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
+      RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
+  else if (ISNUMPAR(1) && ISQMEDIARECORDER(1))
   {
     /*
     bool setSource( QMediaRecorder * source )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
+      RBOOL(obj->setSource(PQMEDIARECORDER(1)));
     }
 
   }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flush()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("videoFrameProbed(QVideoFrame)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
