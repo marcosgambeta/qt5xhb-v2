@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionAdjustSize();
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionBreakLayout();
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionCopy();
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionCut();
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionDelete();
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionFormLayout();
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionGridLayout();
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionHorizontalLayout();
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionLower();
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionPaste();
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionRaise();
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionRedo();
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionSelectAll();
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionSimplifyLayout();
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionSplitHorizontal();
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionSplitVertical();
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionUndo();
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionVerticalLayout();
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->activeFormWindow();
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->core();
@@ -611,10 +611,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->createFormWindow( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+      auto ptr = obj->createFormWindow( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
       Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -636,10 +636,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->formWindow( PINT(1) );
+      auto ptr = obj->formWindow(PINT(1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -661,10 +661,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->formWindowCount() );
+      RINT(obj->formWindowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -685,10 +685,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->addFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->addFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,10 +711,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->removeFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->removeFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,10 +737,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->setActiveFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setActiveFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeFormWindowChanged(QDesignerFormWindowInterface*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formWindowAdded(QDesignerFormWindowInterface*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formWindowRemoved(QDesignerFormWindowInterface*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

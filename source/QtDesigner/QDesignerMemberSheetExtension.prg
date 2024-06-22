@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,10 +119,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->declaredInClass( PINT(1) ) );
+      RQSTRING(obj->declaredInClass(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->indexOf( PQSTRING(1) ) );
+      RINT(obj->indexOf(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->inheritedFromWidget( PINT(1) ) );
+      RBOOL(obj->inheritedFromWidget(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isSignal( PINT(1) ) );
+      RBOOL(obj->isSignal(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,10 +215,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isSlot( PINT(1) ) );
+      RBOOL(obj->isSlot(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isVisible( PINT(1) ) );
+      RBOOL(obj->isVisible(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,10 +263,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->memberGroup( PINT(1) ) );
+      RQSTRING(obj->memberGroup(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,10 +287,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->memberName( PINT(1) ) );
+      RQSTRING(obj->memberName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,10 +311,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto list = obj->parameterNames( PINT(1) );
+      auto list = obj->parameterNames(PINT(1));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -361,10 +361,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto list = obj->parameterTypes( PINT(1) );
+      auto list = obj->parameterTypes(PINT(1));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -411,10 +411,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setMemberGroup( PINT(1), PQSTRING(2) );
+      obj->setMemberGroup(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,10 +437,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setVisible( PINT(1), PBOOL(2) );
+      obj->setVisible(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,10 +463,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->signature( PINT(1) ) );
+      RQSTRING(obj->signature(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -509,12 +509,12 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERMEMBERSHEETEXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERMEMBERSHEETEXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SELFDESTRUCTION )
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

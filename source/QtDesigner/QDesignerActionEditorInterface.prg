@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->core();
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACTION(1) )
+    if (ISNUMPAR(1) && ISQACTION(1))
     {
 #endif
-      obj->manageAction( PQACTION(1) );
+      obj->manageAction(PQACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->core();
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentPropertyName() );
+      RQSTRING(obj->currentPropertyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,10 +138,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadOnly() );
+      RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->object();
@@ -187,10 +187,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setObject( PQOBJECT(1) );
+      obj->setObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,10 +213,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && ( HB_ISLOG(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && (HB_ISLOG(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setPropertyValue( PQSTRING(1), *PQVARIANT(2), OPBOOL( 3, true ) );
+      obj->setPropertyValue(PQSTRING(1), *PQVARIANT(2), OPBOOL( 3, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("propertyChanged(QString,QVariant)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

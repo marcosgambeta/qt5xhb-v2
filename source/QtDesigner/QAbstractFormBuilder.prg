@@ -66,7 +66,7 @@ QAbstractFormBuilder()
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QAbstractFormBuilder();
     Qt5xHb::returnNewObject(obj, true);
@@ -103,10 +103,10 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->load( PQIODEVICE(1), OPQWIDGET( 2, nullptr ) );
+      auto ptr = obj->load(PQIODEVICE(1), OPQWIDGET( 2, nullptr));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -128,10 +128,10 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2) )
+    if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2))
     {
 #endif
-      obj->save( PQIODEVICE(1), PQWIDGET(2) );
+      obj->save(PQIODEVICE(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,10 +154,10 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDIR(1) )
+    if (ISNUMPAR(1) && ISQDIR(1))
     {
 #endif
-      obj->setWorkingDirectory( *PQDIR(1) );
+      obj->setWorkingDirectory( *PQDIR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDir( obj->workingDirectory() );
+      auto ptr = new QDir(obj->workingDirectory());
       Qt5xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -227,12 +227,12 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEWFROM )
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QABSTRACTFORMBUILDER_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTFORMBUILDER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QABSTRACTFORMBUILDER_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTFORMBUILDER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SELFDESTRUCTION )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -78,9 +78,9 @@ QDesignerFormEditorInterface( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QDesignerFormEditorInterface( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QDesignerFormEditorInterface( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionEditor();
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->extensionManager();
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->formWindowManager();
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->objectInspector();
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->propertyEditor();
@@ -242,10 +242,10 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERACTIONEDITORINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERACTIONEDITORINTERFACE(1))
     {
 #endif
-      obj->setActionEditor( PQDESIGNERACTIONEDITORINTERFACE(1) );
+      obj->setActionEditor(PQDESIGNERACTIONEDITORINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,10 +268,10 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNEROBJECTINSPECTORINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNEROBJECTINSPECTORINTERFACE(1))
     {
 #endif
-      obj->setObjectInspector( PQDESIGNEROBJECTINSPECTORINTERFACE(1) );
+      obj->setObjectInspector(PQDESIGNEROBJECTINSPECTORINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERPROPERTYEDITORINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERPROPERTYEDITORINTERFACE(1))
     {
 #endif
-      obj->setPropertyEditor( PQDESIGNERPROPERTYEDITORINTERFACE(1) );
+      obj->setPropertyEditor(PQDESIGNERPROPERTYEDITORINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERWIDGETBOXINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERWIDGETBOXINTERFACE(1))
     {
 #endif
-      obj->setWidgetBox( PQDESIGNERWIDGETBOXINTERFACE(1) );
+      obj->setWidgetBox(PQDESIGNERWIDGETBOXINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->topLevel();
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->widgetBox();

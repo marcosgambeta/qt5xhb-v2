@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->preferredEditAction();
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->taskActions();
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -179,12 +179,12 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDESIGNERTASKMENUEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERTASKMENUEXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDESIGNERTASKMENUEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERTASKMENUEXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SELFDESTRUCTION )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

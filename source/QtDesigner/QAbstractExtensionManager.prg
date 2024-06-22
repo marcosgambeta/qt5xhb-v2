@@ -84,10 +84,10 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
 #endif
-      auto ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      auto ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+      obj->registerExtensions(PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+      obj->unregisterExtensions(PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -183,12 +183,12 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QABSTRACTEXTENSIONMANAGER_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTEXTENSIONMANAGER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QABSTRACTEXTENSIONMANAGER_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTEXTENSIONMANAGER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SELFDESTRUCTION )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

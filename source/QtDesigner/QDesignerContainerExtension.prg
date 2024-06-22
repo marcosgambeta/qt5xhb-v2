@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->addWidget( PQWIDGET(1) );
+      obj->addWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,10 +114,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,10 +138,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentIndex() );
+      RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2))
     {
 #endif
-      obj->insertWidget( PINT(1), PQWIDGET(2) );
+      obj->insertWidget(PINT(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,10 +188,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->remove( PINT(1) );
+      obj->remove(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,10 +214,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->widget( PINT(1) );
+      auto ptr = obj->widget(PINT(1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -287,12 +287,12 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROM )
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDESIGNERCONTAINEREXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERCONTAINEREXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDESIGNERCONTAINEREXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERCONTAINEREXTENSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SELFDESTRUCTION )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
