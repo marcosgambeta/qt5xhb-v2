@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->namePool();
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QUrl(obj->baseUri( *PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,10 +133,10 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      auto ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME(1) ) );
+      auto ptr = new QXmlNodeModelIndex(obj->elementById( *PQXMLNAME(1)));
       Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1) );
+      auto list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1));
       auto pDynSym = hb_dynsymFindName("QXMLNAME");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -208,10 +208,10 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      auto list = obj->nodesByIdref( *PQXMLNAME(1) );
+      auto list = obj->nodesByIdref( *PQXMLNAME(1));
       auto pDynSym = hb_dynsymFindName("QXMLNODEMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -258,10 +258,10 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      RQSTRING( obj->stringValue( *PQXMLNODEMODELINDEX(1) ) );
+      RQSTRING(obj->stringValue( *PQXMLNODEMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

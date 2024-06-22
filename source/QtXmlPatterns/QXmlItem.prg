@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLITEM_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QXmlItem()
@@ -75,30 +75,30 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQXMLITEM(1) )
+  else if (ISNUMPAR(1) && ISQXMLITEM(1))
   {
     /*
     QXmlItem( const QXmlItem & other )
     */
-    auto obj = new QXmlItem( *PQXMLITEM(1) );
+    auto obj = new QXmlItem( *PQXMLITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
     /*
     QXmlItem( const QXmlNodeModelIndex & node )
     */
-    auto obj = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
+    auto obj = new QXmlItem( *PQXMLNODEMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQVARIANT(1) )
+  else if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
     QXmlItem( const QVariant & atomicValue )
     */
-    auto obj = new QXmlItem( *PQVARIANT(1) );
+    auto obj = new QXmlItem( *PQVARIANT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAtomicValue() );
+      RBOOL(obj->isAtomicValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNode() );
+      RBOOL(obj->isNode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,10 +182,10 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVariant( obj->toAtomicValue() );
+      auto ptr = new QVariant(obj->toAtomicValue());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,10 +231,10 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex() );
+      auto ptr = new QXmlNodeModelIndex(obj->toNodeModelIndex());
       Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -278,12 +278,12 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
 
 HB_FUNC_STATIC( QXMLITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QXMLITEM_NEWFROM );
+  HB_FUNC_EXEC(QXMLITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QXMLITEM_NEWFROM );
+  HB_FUNC_EXEC(QXMLITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLITEM_SELFDESTRUCTION )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QXMLITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
