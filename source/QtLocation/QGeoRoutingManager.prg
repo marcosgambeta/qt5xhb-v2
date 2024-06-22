@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_CALCULATEROUTE )
     if( ISNUMPAR(1) && ISQGEOROUTEREQUEST(1) )
     {
 #endif
-      QGeoRouteReply * ptr = obj->calculateRoute( *PQGEOROUTEREQUEST(1) );
+      auto ptr = obj->calculateRoute( *PQGEOROUTEREQUEST(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_UPDATEROUTE )
     if( ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2) )
     {
 #endif
-      QGeoRouteReply * ptr = obj->updateRoute( *PQGEOROUTE(1), *PQGEOCOORDINATE(2) );
+      auto ptr = obj->updateRoute( *PQGEOROUTE(1), *PQGEOCOORDINATE(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

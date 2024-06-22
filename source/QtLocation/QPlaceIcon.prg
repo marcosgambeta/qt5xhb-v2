@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPLACEICON_MANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceManager * ptr = obj->manager();
+      auto ptr = obj->manager();
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

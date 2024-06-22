@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 
     if( obj != nullptr )
     {
-      QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
+      auto ptr = obj->geocode( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 
     if( obj != nullptr )
     {
-      QGeoCodeReply * ptr = obj->geocode( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
+      auto ptr = obj->geocode( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
     if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOSHAPE(2) )
     {
 #endif
-      QGeoCodeReply * ptr = obj->reverseGeocode( *PQGEOCOORDINATE(1), *PQGEOSHAPE(2) );
+      auto ptr = obj->reverseGeocode( *PQGEOCOORDINATE(1), *PQGEOSHAPE(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
