@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAxScriptEngine * ptr = obj->scriptEngine();
+      auto ptr = obj->scriptEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

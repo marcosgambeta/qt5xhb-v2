@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QObject * ptr = obj->createObject( PQSTRING(1) );
+      auto ptr = obj->createObject( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      const QMetaObject * ptr = obj->metaObject( PQSTRING(1) );
+      auto ptr = obj->metaObject( PQSTRING(1) );
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

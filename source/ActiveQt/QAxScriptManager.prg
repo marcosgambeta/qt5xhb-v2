@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 
     if( obj != nullptr )
     {
-      QAxScript * ptr = obj->load( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+      auto ptr = obj->load( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 
     if( obj != nullptr )
     {
-      QAxScript * ptr = obj->load( PQSTRING(1), PQSTRING(2) );
+      auto ptr = obj->load( PQSTRING(1), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QAxScript * ptr = obj->script( PQSTRING(1) );
+      auto ptr = obj->script( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
