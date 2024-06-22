@@ -431,14 +431,14 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QVXYModelMapper::firstRowChanged,
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -483,14 +483,14 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QVXYModelMapper::modelReplaced,
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -535,14 +535,14 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowCountChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QVXYModelMapper::rowCountChanged,
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -587,14 +587,14 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QVXYModelMapper::seriesReplaced,
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -639,14 +639,14 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xColumnChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QVXYModelMapper::xColumnChanged,
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -691,14 +691,14 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yColumnChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QVXYModelMapper::yColumnChanged,
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

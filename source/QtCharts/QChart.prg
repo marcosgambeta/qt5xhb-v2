@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QCHART_SERIES )
       auto list = obj->series();
       auto pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QCHART_AXES )
       auto list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(1)), OPQABSTRACTSERIES( 2, nullptr));
       auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -1851,14 +1851,14 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("plotAreaChanged(QRectF)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QChart::plotAreaChanged,
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
                                            (const QRectF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCHART");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
@@ -1881,7 +1881,7 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

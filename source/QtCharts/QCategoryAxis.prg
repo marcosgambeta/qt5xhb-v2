@@ -415,14 +415,14 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoriesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCategoryAxis::categoriesChanged,
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCATEGORYAXIS");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -467,14 +467,14 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCategoryAxis::labelsPositionChanged,
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
                                            (QCategoryAxis::AxisLabelsPosition arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCATEGORYAXIS");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
