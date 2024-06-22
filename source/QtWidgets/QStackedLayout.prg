@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStackedLayout()
@@ -72,21 +72,21 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     QStackedLayout( QWidget * parent )
     */
-    auto obj = new QStackedLayout( PQWIDGET(1) );
+    auto obj = new QStackedLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQLAYOUT(1) )
+  else if (ISNUMPAR(1) && ISQLAYOUT(1))
   {
     /*
     QStackedLayout( QLayout * parentLayout )
     */
-    auto obj = new QStackedLayout( PQLAYOUT(1) );
+    auto obj = new QStackedLayout(PQLAYOUT(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      RINT( obj->addWidget( PQWIDGET(1) ) );
+      RINT(obj->addWidget(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentIndex() );
+      RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->currentWidget();
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2))
     {
 #endif
-      RINT( obj->insertWidget( PINT(1), PQWIDGET(2) ) );
+      RINT(obj->insertWidget(PINT(1), PQWIDGET(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,10 +221,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStackingMode( static_cast<QStackedLayout::StackingMode>( hb_parni(1) ) );
+      obj->setStackingMode( static_cast<QStackedLayout::StackingMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,10 +247,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->stackingMode() );
+      RENUM(obj->stackingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,10 +271,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->widget( PINT(1) );
+      auto ptr = obj->widget(PINT(1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -296,10 +296,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,10 +322,10 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->setCurrentWidget( PQWIDGET(1) );
+      obj->setCurrentWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("widgetRemoved(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -103,39 +103,39 @@ RETURN
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQLISTWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 1) && (ISQLISTWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QListWidgetItem( QListWidget * parent = nullptr, int type = QListWidgetItem::Type )
     */
-    auto obj = new QListWidgetItem( OPQLISTWIDGET( 1, nullptr ), OPINT( 2, QListWidgetItem::Type ) );
+    auto obj = new QListWidgetItem( OPQLISTWIDGET( 1, nullptr ), OPINT( 2, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQLISTWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QListWidgetItem( const QString & text, QListWidget * parent = nullptr, int type = QListWidgetItem::Type )
     */
-    auto obj = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET( 2, nullptr ), OPINT( 3, QListWidgetItem::Type ) );
+    auto obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET( 2, nullptr ), OPINT( 3, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 4) && ( ISQICON(1)|| HB_ISCHAR(1) ) && HB_ISCHAR(2) && ( ISQLISTWIDGET(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(2, 4) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQLISTWIDGET(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = nullptr, int type = QListWidgetItem::Type )
     */
-    auto obj = new QListWidgetItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), OPQLISTWIDGET( 3, nullptr ), OPINT( 4, QListWidgetItem::Type ) );
+    auto obj = new QListWidgetItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2), OPQLISTWIDGET( 3, nullptr ), OPINT( 4, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+  else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
     QListWidgetItem( const QListWidgetItem & other )
     */
-    auto obj = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
+    auto obj = new QListWidgetItem( *PQLISTWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBrush( obj->background() );
+      auto ptr = new QBrush(obj->background());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1) );
+      obj->setBackground( *PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->checkState() );
+      RENUM(obj->checkState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,10 +246,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETCHECKSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCheckState( static_cast<Qt::CheckState>( hb_parni(1) ) );
+      obj->setCheckState( static_cast<Qt::CheckState>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->clone();
@@ -297,10 +297,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant( obj->data( PINT(1) ) );
+      auto ptr = new QVariant(obj->data(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -322,10 +322,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setData( PINT(1), *PQVARIANT(2) );
+      obj->setData(PINT(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,10 +348,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,10 +372,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<Qt::ItemFlags>( hb_parni(1) ) );
+      obj->setFlags( static_cast<Qt::ItemFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,10 +398,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QFont( obj->font() );
+      auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -423,10 +423,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETFONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont( *PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,10 +449,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBrush( obj->foreground() );
+      auto ptr = new QBrush(obj->foreground());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -474,10 +474,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETFOREGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setForeground( *PQBRUSH(1) );
+      obj->setForeground( *PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,10 +500,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QIcon( obj->icon() );
+      auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -525,10 +525,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,10 +551,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isHidden() );
+      RBOOL(obj->isHidden());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,10 +575,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setHidden( PBOOL(1) );
+      obj->setHidden(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,10 +601,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSelected() );
+      RBOOL(obj->isSelected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -625,10 +625,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSelected( PBOOL(1) );
+      obj->setSelected(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->listWidget();
@@ -676,10 +676,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_READ )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->read( *PQDATASTREAM(1) );
+      obj->read( *PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,10 +702,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -727,10 +727,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setSizeHint( *PQSIZE(1) );
+      obj->setSizeHint( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -753,10 +753,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->statusTip() );
+      RQSTRING(obj->statusTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -777,10 +777,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setStatusTip( PQSTRING(1) );
+      obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -803,10 +803,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,10 +827,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -853,10 +853,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->textAlignment() );
+      RINT(obj->textAlignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -877,10 +877,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextAlignment( PINT(1) );
+      obj->setTextAlignment(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,10 +903,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toolTip() );
+      RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -927,10 +927,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setToolTip( PQSTRING(1) );
+      obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -953,10 +953,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->type() );
+      RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -977,10 +977,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->whatsThis() );
+      RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1001,10 +1001,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setWhatsThis( PQSTRING(1) );
+      obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1027,10 +1027,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_WRITE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->write( *PQDATASTREAM(1) );
+      obj->write( *PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1053,10 +1053,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QColor( obj->backgroundColor() );
+      auto ptr = new QColor(obj->backgroundColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1078,10 +1078,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUNDCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
+      obj->setBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1104,10 +1104,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QColor( obj->textColor() );
+      auto ptr = new QColor(obj->textColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1129,10 +1129,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
+      obj->setTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1177,12 +1177,12 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROM )
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QLISTWIDGETITEM_NEWFROM );
+  HB_FUNC_EXEC(QLISTWIDGETITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QLISTWIDGETITEM_NEWFROM );
+  HB_FUNC_EXEC(QLISTWIDGETITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_SELFDESTRUCTION )
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     const QRect availableGeometry( int screen = -1 ) const
@@ -89,12 +89,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect( obj->availableGeometry( OPINT( 1, -1 ) ) );
+      auto ptr = new QRect(obj->availableGeometry( OPINT( 1, -1 )));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     const QRect availableGeometry( const QWidget * widget ) const
@@ -103,12 +103,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
+      auto ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     const QRect availableGeometry( const QPoint & p ) const
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
+      auto ptr = new QRect(obj->availableGeometry( *PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -138,10 +138,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVirtualDesktop() );
+      RBOOL(obj->isVirtualDesktop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->primaryScreen() );
+      RINT(obj->primaryScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->screen( OPINT( 1, -1 ) );
+      auto ptr = obj->screen( OPINT( 1, -1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,10 +211,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->screenCount() );
+      RINT(obj->screenCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     const QRect screenGeometry( int screen = -1 ) const
@@ -236,12 +236,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect( obj->screenGeometry( OPINT( 1, -1 ) ) );
+      auto ptr = new QRect(obj->screenGeometry( OPINT( 1, -1 )));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     const QRect screenGeometry( const QWidget * widget ) const
@@ -250,12 +250,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
+      auto ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     const QRect screenGeometry( const QPoint & p ) const
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
+      auto ptr = new QRect(obj->screenGeometry( *PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     int screenNumber( const QWidget * widget = nullptr ) const
@@ -286,11 +286,11 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 
     if (obj != nullptr)
     {
-      RINT( obj->screenNumber( OPQWIDGET( 1, nullptr ) ) );
+      RINT(obj->screenNumber( OPQWIDGET( 1, nullptr )));
     }
 
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     int screenNumber( const QPoint & point ) const
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 
     if (obj != nullptr)
     {
-      RINT( obj->screenNumber( *PQPOINT(1) ) );
+      RINT(obj->screenNumber( *PQPOINT(1)));
     }
 
   }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("resized(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("workAreaResized(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

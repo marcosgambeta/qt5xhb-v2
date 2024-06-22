@@ -59,21 +59,21 @@ RETURN
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQPIXMAP(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 2) && (ISQPIXMAP(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
     */
-    auto obj = new QSplashScreen( HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+    auto obj = new QSplashScreen( HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 3) && ISQWIDGET(1) && ( ISQPIXMAP(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (ISQPIXMAP(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
     */
-    auto obj = new QSplashScreen( PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3) ) );
+    auto obj = new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -111,10 +111,10 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->finish( PQWIDGET(1) );
+      obj->finish(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPixmap( obj->pixmap() );
+      auto ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -162,10 +162,10 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIXMAP(1) )
+    if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1) );
+      obj->setPixmap( *PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->repaint();
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearMessage();
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQCOLOR(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQCOLOR(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->showMessage( PQSTRING(1), OPINT( 2, Qt::AlignLeft ), HB_ISNIL(3) ? Qt::black : *static_cast<QColor*>(Qt5xHb::itemGetPtr(3)) );
+      obj->showMessage(PQSTRING(1), OPINT( 2, Qt::AlignLeft ), HB_ISNIL(3) ? Qt::black : *static_cast<QColor*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("messageChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

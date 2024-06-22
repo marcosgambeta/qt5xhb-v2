@@ -72,9 +72,9 @@ QSpinBox( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSpinBox( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QSpinBox( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -111,10 +111,10 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->cleanText() );
+      RQSTRING(obj->cleanText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,10 +185,10 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,10 +209,10 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,10 +235,10 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->prefix() );
+      RQSTRING(obj->prefix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,10 +259,10 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPrefix( PQSTRING(1) );
+      obj->setPrefix(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,10 +285,10 @@ HB_FUNC_STATIC( QSPINBOX_SETRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,10 +311,10 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->singleStep() );
+      RINT(obj->singleStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,10 +335,10 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSingleStep( PINT(1) );
+      obj->setSingleStep(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,10 +361,10 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->suffix() );
+      RQSTRING(obj->suffix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,10 +385,10 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setSuffix( PQSTRING(1) );
+      obj->setSuffix(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,10 +411,10 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,10 +435,10 @@ HB_FUNC_STATIC( QSPINBOX_SETVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,10 +461,10 @@ HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->displayIntegerBase() );
+      RINT(obj->displayIntegerBase());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDisplayIntegerBase( PINT(1) );
+      obj->setDisplayIntegerBase(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

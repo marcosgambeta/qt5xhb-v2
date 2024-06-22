@@ -56,9 +56,9 @@ QSizeGrip( QWidget * parent )
 */
 HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    auto obj = new QSizeGrip( PQWIDGET(1) );
+    auto obj = new QSizeGrip(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,10 +121,10 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

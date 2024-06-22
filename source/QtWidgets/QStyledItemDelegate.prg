@@ -65,9 +65,9 @@ QStyledItemDelegate( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QStyledItemDelegate( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QStyledItemDelegate( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->paint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->paint(PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
+    if (ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
+      auto ptr = new QSize(obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -155,10 +155,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      auto ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      auto ptr = obj->createEditor(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETEDITORDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
+    if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2))
     {
 #endif
-      obj->setEditorData( PQWIDGET(1), *PQMODELINDEX(2) );
+      obj->setEditorData(PQWIDGET(1), *PQMODELINDEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETMODELDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->setModelData( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
+      obj->setModelData(PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,10 +232,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->updateEditorGeometry( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->updateEditorGeometry(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->itemEditorFactory();
@@ -283,10 +283,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
+    if (ISNUMPAR(1) && ISQITEMEDITORFACTORY(1))
     {
 #endif
-      obj->setItemEditorFactory( PQITEMEDITORFACTORY(1) );
+      obj->setItemEditorFactory(PQITEMEDITORFACTORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,10 +309,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVARIANT(1) && ISQLOCALE(2) )
+    if (ISNUMPAR(2) && ISQVARIANT(1) && ISQLOCALE(2))
     {
 #endif
-      RQSTRING( obj->displayText( *PQVARIANT(1), *PQLOCALE(2) ) );
+      RQSTRING(obj->displayText( *PQVARIANT(1), *PQLOCALE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

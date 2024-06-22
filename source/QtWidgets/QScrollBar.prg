@@ -53,21 +53,21 @@ RETURN
 
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QScrollBar( QWidget * parent = nullptr )
     */
-    auto obj = new QScrollBar( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QScrollBar( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QScrollBar( Qt::Orientation orientation, QWidget * parent = nullptr )
     */
-    auto obj = new QScrollBar( static_cast<Qt::Orientation>( hb_parni(1) ), OPQWIDGET( 2, nullptr ) );
+    auto obj = new QScrollBar( static_cast<Qt::Orientation>( hb_parni(1)), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionSizeGrip()
@@ -58,12 +58,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1))
   {
     /*
     QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
     */
-    auto obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+    auto obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -82,9 +82,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->corner );
+      RENUM(obj->corner);
     }
     else
     {
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->corner = static_cast<Qt::Corner>( hb_parni(1) );
+      obj->corner = static_cast<Qt::Corner>( hb_parni(1));
     }
     else
     {

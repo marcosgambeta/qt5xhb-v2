@@ -61,9 +61,9 @@ QGraphicsOpacityEffect( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsOpacityEffect( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QGraphicsOpacityEffect( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->opacity() );
+      RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBrush( obj->opacityMask() );
+      auto ptr = new QBrush(obj->opacityMask());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOpacity( PQREAL(1) );
+      obj->setOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setOpacityMask( *PQBRUSH(1) );
+      obj->setOpacityMask( *PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityMaskChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

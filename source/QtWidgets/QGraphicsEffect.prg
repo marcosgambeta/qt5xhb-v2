@@ -83,10 +83,10 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect() );
+      auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -108,10 +108,10 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      auto ptr = new QRectF(obj->boundingRectFor( *PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,10 +133,10 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEnabled() );
+      RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,10 +157,10 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->update();
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("enabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

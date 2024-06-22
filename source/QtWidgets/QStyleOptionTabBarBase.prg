@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionTabBarBase()
@@ -65,12 +65,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1))
   {
     /*
     QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
     */
-    auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
+    auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -89,9 +89,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->shape );
+      RENUM(obj->shape);
     }
     else
     {
@@ -106,9 +106,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape = static_cast<QTabBar::Shape>( hb_parni(1) );
+      obj->shape = static_cast<QTabBar::Shape>( hb_parni(1));
     }
     else
     {
@@ -128,9 +128,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      auto ptr = new QRect( obj->tabBarRect );
+      auto ptr = new QRect(obj->tabBarRect);
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETTABBARRECT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->tabBarRect = *PQRECT(1);
     }
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      auto ptr = new QRect( obj->selectedTabRect );
+      auto ptr = new QRect(obj->selectedTabRect);
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->selectedTabRect = *PQRECT(1);
     }
@@ -208,9 +208,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_DOCUMENTMODE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->documentMode );
+      RBOOL(obj->documentMode);
     }
     else
     {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETDOCUMENTMODE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->documentMode = PBOOL(1);
     }

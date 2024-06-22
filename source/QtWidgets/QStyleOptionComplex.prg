@@ -52,21 +52,21 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )
     */
-    auto obj = new QStyleOptionComplex( OPINT( 1, QStyleOptionComplex::Version ), OPINT( 2, QStyleOptionComplex::SO_Complex ) );
+    auto obj = new QStyleOptionComplex( OPINT( 1, QStyleOptionComplex::Version ), OPINT( 2, QStyleOptionComplex::SO_Complex));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1))
   {
     /*
     QStyleOptionComplex( const QStyleOptionComplex & other )
     */
-    auto obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
+    auto obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->subControls );
+      RENUM(obj->subControls);
     }
     else
     {
@@ -118,9 +118,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->subControls = static_cast<QStyle::SubControls>( hb_parni(1) );
+      obj->subControls = static_cast<QStyle::SubControls>( hb_parni(1));
     }
     else
     {
@@ -140,9 +140,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->activeSubControls );
+      RENUM(obj->activeSubControls);
     }
     else
     {
@@ -157,9 +157,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->activeSubControls = static_cast<QStyle::SubControls>( hb_parni(1) );
+      obj->activeSubControls = static_cast<QStyle::SubControls>( hb_parni(1));
     }
     else
     {

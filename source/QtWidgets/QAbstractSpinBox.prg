@@ -113,12 +113,12 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       QString par1 = hb_parc(1);
-      obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
+      obj->fixup( par1);
+      hb_storc( QSTRINGTOSTRING( par1), 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasAcceptableInput() );
+      RBOOL(obj->hasAcceptableInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->interpretText();
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAccelerated() );
+      RBOOL(obj->isAccelerated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,10 +215,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAccelerated( PBOOL(1) );
+      obj->setAccelerated(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,10 +241,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,10 +265,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1) ) );
+      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,10 +291,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttonSymbols() );
+      RENUM(obj->buttonSymbols());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,10 +315,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonSymbols( static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni(1) ) );
+      obj->setButtonSymbols( static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,10 +341,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->correctionMode() );
+      RENUM(obj->correctionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,10 +365,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCorrectionMode( static_cast<QAbstractSpinBox::CorrectionMode>( hb_parni(1) ) );
+      obj->setCorrectionMode( static_cast<QAbstractSpinBox::CorrectionMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,10 +391,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasFrame() );
+      RBOOL(obj->hasFrame());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,10 +415,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFrame( PBOOL(1) );
+      obj->setFrame(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,10 +441,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->keyboardTracking() );
+      RBOOL(obj->keyboardTracking());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,10 +465,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setKeyboardTracking( PBOOL(1) );
+      obj->setKeyboardTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,10 +491,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadOnly() );
+      RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,10 +515,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,10 +541,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->specialValueText() );
+      RQSTRING(obj->specialValueText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,10 +565,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setSpecialValueText( PQSTRING(1) );
+      obj->setSpecialValueText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,10 +591,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->wrapping() );
+      RBOOL(obj->wrapping());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,10 +615,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setWrapping( PBOOL(1) );
+      obj->setWrapping(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,10 +641,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->stepBy( PINT(1) );
+      obj->stepBy(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,10 +667,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,14 +691,14 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING( par1), 1 );
-      hb_storni( par2, 2 );
+      RENUM(obj->validate( par1, par2));
+      hb_storc( QSTRINGTOSTRING( par1), 1);
+      hb_storni( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,10 +719,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -743,10 +743,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant( obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1) ) ) );
+      auto ptr = new QVariant(obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -768,10 +768,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint() );
+      auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -793,10 +793,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->selectAll();
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stepDown();
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stepUp();
@@ -923,10 +923,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISGROUPSEPARATORSHOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isGroupSeparatorShown() );
+      RBOOL(obj->isGroupSeparatorShown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -949,10 +949,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setGroupSeparatorShown( PBOOL(1) );
+      obj->setGroupSeparatorShown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

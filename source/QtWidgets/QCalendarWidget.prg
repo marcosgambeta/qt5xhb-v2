@@ -103,9 +103,9 @@ QCalendarWidget( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QCalendarWidget( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QCalendarWidget( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->dateEditAcceptDelay() );
+      RINT(obj->dateEditAcceptDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,10 +166,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATE(1) )
+    if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      auto ptr = new QTextCharFormat( obj->dateTextFormat( *PQDATE(1) ) );
+      auto ptr = new QTextCharFormat(obj->dateTextFormat( *PQDATE(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->firstDayOfWeek() );
+      RENUM(obj->firstDayOfWeek());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,10 +215,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QTextCharFormat( obj->headerTextFormat() );
+      auto ptr = new QTextCharFormat(obj->headerTextFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->horizontalHeaderFormat() );
+      RENUM(obj->horizontalHeaderFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,10 +264,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDateEditEnabled() );
+      RBOOL(obj->isDateEditEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,10 +288,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isGridVisible() );
+      RBOOL(obj->isGridVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,10 +312,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNavigationBarVisible() );
+      RBOOL(obj->isNavigationBarVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,10 +336,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDate( obj->maximumDate() );
+      auto ptr = new QDate(obj->maximumDate());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -361,10 +361,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDate( obj->minimumDate() );
+      auto ptr = new QDate(obj->minimumDate());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -386,10 +386,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->monthShown() );
+      RINT(obj->monthShown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,10 +410,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QDate( obj->selectedDate() );
+      auto ptr = new QDate(obj->selectedDate());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -435,10 +435,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->selectionMode() );
+      RENUM(obj->selectionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,10 +459,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDateEditAcceptDelay( PINT(1) );
+      obj->setDateEditAcceptDelay(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,10 +485,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDateEditEnabled( PBOOL(1) );
+      obj->setDateEditEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,10 +511,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATETEXTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQDATE(1) && ISQTEXTCHARFORMAT(2) )
+    if (ISNUMPAR(2) && ISQDATE(1) && ISQTEXTCHARFORMAT(2))
     {
 #endif
-      obj->setDateTextFormat( *PQDATE(1), *PQTEXTCHARFORMAT(2) );
+      obj->setDateTextFormat( *PQDATE(1), *PQTEXTCHARFORMAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,10 +537,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstDayOfWeek( static_cast<Qt::DayOfWeek>( hb_parni(1) ) );
+      obj->setFirstDayOfWeek( static_cast<Qt::DayOfWeek>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,10 +563,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->setHeaderTextFormat( *PQTEXTCHARFORMAT(1) );
+      obj->setHeaderTextFormat( *PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,10 +589,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHorizontalHeaderFormat( static_cast<QCalendarWidget::HorizontalHeaderFormat>( hb_parni(1) ) );
+      obj->setHorizontalHeaderFormat( static_cast<QCalendarWidget::HorizontalHeaderFormat>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,10 +615,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMAXIMUMDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATE(1) )
+    if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setMaximumDate( *PQDATE(1) );
+      obj->setMaximumDate( *PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,10 +641,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMINIMUMDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATE(1) )
+    if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setMinimumDate( *PQDATE(1) );
+      obj->setMinimumDate( *PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,10 +667,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSelectionMode( static_cast<QCalendarWidget::SelectionMode>( hb_parni(1) ) );
+      obj->setSelectionMode( static_cast<QCalendarWidget::SelectionMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -693,10 +693,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVerticalHeaderFormat( static_cast<QCalendarWidget::VerticalHeaderFormat>( hb_parni(1) ) );
+      obj->setVerticalHeaderFormat( static_cast<QCalendarWidget::VerticalHeaderFormat>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,10 +719,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQTEXTCHARFORMAT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTEXTCHARFORMAT(2))
     {
 #endif
-      obj->setWeekdayTextFormat( static_cast<Qt::DayOfWeek>( hb_parni(1) ), *PQTEXTCHARFORMAT(2) );
+      obj->setWeekdayTextFormat( static_cast<Qt::DayOfWeek>( hb_parni(1)), *PQTEXTCHARFORMAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,10 +745,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->verticalHeaderFormat() );
+      RENUM(obj->verticalHeaderFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -769,10 +769,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QTextCharFormat( obj->weekdayTextFormat( static_cast<Qt::DayOfWeek>( hb_parni(1) ) ) );
+      auto ptr = new QTextCharFormat(obj->weekdayTextFormat( static_cast<Qt::DayOfWeek>( hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -794,10 +794,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->yearShown() );
+      RINT(obj->yearShown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,10 +818,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint() );
+      auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -843,10 +843,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -868,10 +868,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETCURRENTPAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setCurrentPage( PINT(1), PINT(2) );
+      obj->setCurrentPage(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -894,10 +894,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATERANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2) )
+    if (ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2))
     {
 #endif
-      obj->setDateRange( *PQDATE(1), *PQDATE(2) );
+      obj->setDateRange( *PQDATE(1), *PQDATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -920,10 +920,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETGRIDVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setGridVisible( PBOOL(1) );
+      obj->setGridVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -946,10 +946,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setNavigationBarVisible( PBOOL(1) );
+      obj->setNavigationBarVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -972,10 +972,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATE(1) )
+    if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setSelectedDate( *PQDATE(1) );
+      obj->setSelectedDate( *PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTMONTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showNextMonth();
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTYEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showNextYear();
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showPreviousMonth();
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showPreviousYear();
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWSELECTEDDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showSelectedDate();
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showToday();
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QDate)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QDate)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentPageChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1310,7 +1310,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

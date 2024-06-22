@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QCheckBox( QWidget * parent = nullptr )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QCheckBox( const QString & text, QWidget * parent = nullptr )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->checkState());
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isTristate());
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setCheckState(static_cast<Qt::CheckState>(hb_parni(1)));
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       obj->setTristate(OPBOOL(1, true));
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->sizeHint());
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

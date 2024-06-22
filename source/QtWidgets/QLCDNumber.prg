@@ -70,21 +70,21 @@ RETURN
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QLCDNumber( QWidget * parent = nullptr )
     */
-    auto obj = new QLCDNumber( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QLCDNumber( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QLCDNumber( uint numDigits, QWidget * parent = nullptr )
     */
-    auto obj = new QLCDNumber( PUINT(1), OPQWIDGET( 2, nullptr ) );
+    auto obj = new QLCDNumber(PUINT(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     auto pNum = hb_param(1, HB_IT_NUMERIC);
     if( pNum )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 
         if (obj != nullptr)
         {
-          RBOOL( obj->checkOverflow( PDOUBLE(1) ) );
+          RBOOL(obj->checkOverflow(PDOUBLE(1)));
         }
 
       }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 
         if (obj != nullptr)
         {
-          RBOOL( obj->checkOverflow( PINT(1) ) );
+          RBOOL(obj->checkOverflow(PINT(1)));
         }
 
       }
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->digitCount() );
+      RINT(obj->digitCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,10 +195,10 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->intValue() );
+      RINT(obj->intValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->mode() );
+      RENUM(obj->mode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,10 +243,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->segmentStyle() );
+      RENUM(obj->segmentStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,10 +267,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDigitCount( PINT(1) );
+      obj->setDigitCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,10 +293,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMode( static_cast<QLCDNumber::Mode>( hb_parni(1) ) );
+      obj->setMode( static_cast<QLCDNumber::Mode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,10 +319,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSegmentStyle( static_cast<QLCDNumber::SegmentStyle>( hb_parni(1) ) );
+      obj->setSegmentStyle( static_cast<QLCDNumber::SegmentStyle>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,10 +345,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->smallDecimalPoint() );
+      RBOOL(obj->smallDecimalPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,10 +369,10 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->value() );
+      RDOUBLE(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,10 +393,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -410,9 +410,9 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
-  if( ISNUMPAR(1) )
+  if (ISNUMPAR(1))
   {
-    if( HB_ISCHAR(1) )
+    if( HB_ISCHAR(1))
     {
       /*
       void display( const QString & s )
@@ -421,13 +421,13 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 
       if (obj != nullptr)
       {
-        obj->display( PQSTRING(1) );
+        obj->display(PQSTRING(1));
       }
 
       hb_itemReturn(hb_stackSelfItem());
 
     }
-    else if( HB_ISNUM(1) )
+    else if( HB_ISNUM(1))
     {
       auto pNum = hb_param(1, HB_IT_NUMERIC);
       if( pNum )
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 
           if (obj != nullptr)
           {
-            obj->display( PDOUBLE(1) );
+            obj->display(PDOUBLE(1));
           }
 
           hb_itemReturn(hb_stackSelfItem());
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 
           if (obj != nullptr)
           {
-            obj->display( PINT(1) );
+            obj->display(PINT(1));
           }
 
           hb_itemReturn(hb_stackSelfItem());
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setBinMode();
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setDecMode();
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setHexMode();
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setOctMode();
@@ -597,10 +597,10 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSmallDecimalPoint( PBOOL(1) );
+      obj->setSmallDecimalPoint(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("overflow()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

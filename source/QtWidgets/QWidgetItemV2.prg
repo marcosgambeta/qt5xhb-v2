@@ -56,9 +56,9 @@ QWidgetItemV2( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    auto obj = new QWidgetItemV2( PQWIDGET(1) );
+    auto obj = new QWidgetItemV2(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -93,10 +93,10 @@ HB_FUNC_STATIC( QWIDGETITEMV2_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QWIDGETITEMV2_MINIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSize() );
+      auto ptr = new QSize(obj->minimumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QWIDGETITEMV2_MAXIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->maximumSize() );
+      auto ptr = new QSize(obj->maximumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -168,10 +168,10 @@ HB_FUNC_STATIC( QWIDGETITEMV2_HEIGHTFORWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->heightForWidth( PINT(1) ) );
+      RINT(obj->heightForWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

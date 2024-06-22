@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->position() );
+      auto ptr = new QPointF(obj->position());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition( *PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,10 +127,10 @@ static void setTimeout( int msecs )
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QTapAndHoldGesture::setTimeout( PINT(1) );
+    QTapAndHoldGesture::setTimeout(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -148,10 +148,10 @@ static int timeout()
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RINT( QTapAndHoldGesture::timeout() );
+    RINT( QTapAndHoldGesture::timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

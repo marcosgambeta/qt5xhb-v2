@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionToolBar()
@@ -68,12 +68,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1))
   {
     /*
     QStyleOptionToolBar( const QStyleOptionToolBar & other )
     */
-    auto obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
+    auto obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -92,9 +92,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONOFLINE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->positionOfLine );
+      RENUM(obj->positionOfLine);
     }
     else
     {
@@ -109,9 +109,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->positionOfLine = static_cast<QStyleOptionToolBar::ToolBarPosition>( hb_parni(1) );
+      obj->positionOfLine = static_cast<QStyleOptionToolBar::ToolBarPosition>( hb_parni(1));
     }
     else
     {
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->positionWithinLine );
+      RENUM(obj->positionWithinLine);
     }
     else
     {
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->positionWithinLine = static_cast<QStyleOptionToolBar::ToolBarPosition>( hb_parni(1) );
+      obj->positionWithinLine = static_cast<QStyleOptionToolBar::ToolBarPosition>( hb_parni(1));
     }
     else
     {
@@ -170,9 +170,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_TOOLBARAREA )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->toolBarArea );
+      RENUM(obj->toolBarArea);
     }
     else
     {
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->toolBarArea = static_cast<Qt::ToolBarArea>( hb_parni(1) );
+      obj->toolBarArea = static_cast<Qt::ToolBarArea>( hb_parni(1));
     }
     else
     {
@@ -209,9 +209,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_FEATURES )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->features );
+      RENUM(obj->features);
     }
     else
     {
@@ -226,9 +226,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETFEATURES )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionToolBar::ToolBarFeatures>( hb_parni(1) );
+      obj->features = static_cast<QStyleOptionToolBar::ToolBarFeatures>( hb_parni(1));
     }
     else
     {
@@ -248,9 +248,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_LINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RINT( obj->lineWidth );
+      RINT(obj->lineWidth);
     }
     else
     {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETLINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
     }
@@ -287,9 +287,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RINT( obj->midLineWidth );
+      RINT(obj->midLineWidth);
     }
     else
     {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETMIDLINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
     }

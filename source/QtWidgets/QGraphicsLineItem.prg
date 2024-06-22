@@ -65,30 +65,30 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSITEM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
     QGraphicsLineItem( QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsLineItem( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)) );
+    auto obj = new QGraphicsLineItem( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(1, 2) && ISQLINEF(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
     QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsLineItem( *PQLINEF(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)) );
+    auto obj = new QGraphicsLineItem( *PQLINEF(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( ISQGRAPHICSITEM(5) || HB_ISNIL(5) ) )
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQGRAPHICSITEM(5) || HB_ISNIL(5)))
   {
     /*
     QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(5)) );
+    auto obj = new QGraphicsLineItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(5)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLineF( obj->line() );
+      auto ptr = new QLineF(obj->line());
       Qt5xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPen( obj->pen() );
+      auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {
-  if( ISNUMPAR(1) && ISQLINEF(1) )
+  if (ISNUMPAR(1) && ISQLINEF(1))
   {
     /*
     void setLine( const QLineF & line )
@@ -175,13 +175,13 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 
     if (obj != nullptr)
     {
-      obj->setLine( *PQLINEF(1) );
+      obj->setLine( *PQLINEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 
     if (obj != nullptr)
     {
-      obj->setLine( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->setLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -212,10 +212,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen( *PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,10 +238,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect() );
+      auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -263,10 +263,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL(obj->contains( *PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,10 +287,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,10 +311,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPainterPath( obj->opaqueArea() );
+      auto ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -336,10 +336,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, nullptr ) );
+      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,10 +362,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPainterPath( obj->shape() );
+      auto ptr = new QPainterPath(obj->shape());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -387,10 +387,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->type() );
+      RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionDockWidget()
@@ -66,12 +66,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1))
   {
     /*
     QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
     */
-    auto obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
+    auto obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -90,9 +90,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQSTRING( obj->title );
+      RQSTRING(obj->title);
     }
     else
     {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->title = PQSTRING(1);
     }
@@ -129,9 +129,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->closable );
+      RBOOL(obj->closable);
     }
     else
     {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->closable = PBOOL(1);
     }
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->movable );
+      RBOOL(obj->movable);
     }
     else
     {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->movable = PBOOL(1);
     }
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->floatable );
+      RBOOL(obj->floatable);
     }
     else
     {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->floatable = PBOOL(1);
     }
@@ -246,9 +246,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->verticalTitleBar );
+      RBOOL(obj->verticalTitleBar);
     }
     else
     {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->verticalTitleBar = PBOOL(1);
     }

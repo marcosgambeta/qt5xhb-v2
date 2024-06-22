@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->alternatingRowColors());
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAlternatingRowColors(PBOOL(1));
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RINT(obj->autoScrollMargin());
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setAutoScrollMargin(PINT(1));
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QModelIndex(obj->currentIndex());
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETCURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       obj->setCurrentIndex(*PQMODELINDEX(1));
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->defaultDropAction());
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDEFAULTDROPACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setDefaultDropAction(static_cast<Qt::DropAction>(hb_parni(1)));
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->dragDropMode());
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setDragDropMode(static_cast<QAbstractItemView::DragDropMode>(hb_parni(1)));
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->dragDropOverwriteMode());
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDragDropOverwriteMode(PBOOL(1));
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->dragEnabled());
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDragEnabled(PBOOL(1));
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->editTriggers());
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETEDITTRIGGERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setEditTriggers(static_cast<QAbstractItemView::EditTriggers>(hb_parni(1)));
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->hasAutoScroll());
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoScroll(PBOOL(1));
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->horizontalScrollMode());
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setHorizontalScrollMode(static_cast<QAbstractItemView::ScrollMode>(hb_parni(1)));
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->iconSize());
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETICONSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
       obj->setIconSize(*PQSIZE(1));
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       auto ptr = obj->indexWidget(*PQMODELINDEX(1));
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETINDEXWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQWIDGET(2) )
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQWIDGET(2))
     {
 #endif
       obj->setIndexWidget(*PQMODELINDEX(1), PQWIDGET(2));
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       obj->closePersistentEditor(*PQMODELINDEX(1));
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
       auto ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QAbstractItemDelegate * itemDelegate() const
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
     }
 
   }
-  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
     QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1))
     {
 #endif
       obj->setItemDelegate(PQABSTRACTITEMDELEGATE(1));
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       auto ptr = obj->itemDelegateForColumn(PINT(1));
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTITEMDELEGATE(2))
     {
 #endif
       obj->setItemDelegateForColumn(PINT(1), PQABSTRACTITEMDELEGATE(2));
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       auto ptr = obj->itemDelegateForRow(PINT(1));
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTITEMDELEGATE(2))
     {
 #endif
       obj->setItemDelegateForRow(PINT(1), PQABSTRACTITEMDELEGATE(2));
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->keyboardSearch(PQSTRING(1));
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->model();
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
       obj->setModel(PQABSTRACTITEMMODEL(1));
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       obj->openPersistentEditor(*PQMODELINDEX(1));
@@ -1156,7 +1156,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QModelIndex(obj->rootIndex());
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETROOTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       obj->setRootIndex(*PQMODELINDEX(1));
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible) : static_cast<QAbstractItemView::ScrollHint>(hb_parni(2)));
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->selectionBehavior());
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setSelectionBehavior(static_cast<QAbstractItemView::SelectionBehavior>(hb_parni(1)));
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->selectionMode());
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setSelectionMode(static_cast<QAbstractItemView::SelectionMode>(hb_parni(1)));
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->selectionModel();
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1) )
+    if (ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1))
     {
 #endif
       obj->setSelectionModel(PQITEMSELECTIONMODEL(1));
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->showDropIndicator());
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDropIndicatorShown(PBOOL(1));
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->tabKeyNavigation());
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTABKEYNAVIGATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setTabKeyNavigation(PBOOL(1));
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->textElideMode());
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTEXTELIDEMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setTextElideMode(static_cast<Qt::TextElideMode>(hb_parni(1)));
@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->verticalScrollMode());
@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setVerticalScrollMode(static_cast<QAbstractItemView::ScrollMode>(hb_parni(1)));
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RINT(obj->sizeHintForColumn(PINT(1)));
@@ -1608,7 +1608,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       auto ptr = new QSize(obj->sizeHintForIndex(*PQMODELINDEX(1)));
@@ -1633,7 +1633,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RINT(obj->sizeHintForRow(PINT(1)));
@@ -1657,7 +1657,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       auto ptr = new QRect(obj->visualRect(*PQMODELINDEX(1)));
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       auto ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
@@ -1707,7 +1707,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearSelection();
@@ -1733,7 +1733,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       obj->edit(*PQMODELINDEX(1));
@@ -1759,7 +1759,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -1785,7 +1785,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->scrollToBottom();
@@ -1811,7 +1811,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->scrollToTop();
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->selectAll();
@@ -1855,7 +1855,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void update( int x, int y, int w, int h )
@@ -1870,7 +1870,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQRECT(1) )
+  else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
     void update( const QRect & rect )
@@ -1885,7 +1885,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQREGION(1) )
+  else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
     void update( const QRegion & rgn )
@@ -1900,7 +1900,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     void update()
@@ -1915,7 +1915,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
     void update( const QModelIndex & index )
@@ -1946,7 +1946,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DOITEMSLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->doItemsLayout();
@@ -1976,7 +1976,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2001,7 +2001,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2026,7 +2026,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2051,7 +2051,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2076,7 +2076,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2101,7 +2101,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2126,7 +2126,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("entered(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2151,7 +2151,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2176,7 +2176,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2201,7 +2201,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2226,7 +2226,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("viewportEntered()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2249,7 +2249,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

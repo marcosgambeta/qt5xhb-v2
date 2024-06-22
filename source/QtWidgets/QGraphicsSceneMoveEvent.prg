@@ -54,7 +54,7 @@ QGraphicsSceneMoveEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QGraphicsSceneMoveEvent();
     Qt5xHb::returnNewObject(obj, false);
@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->newPos() );
+      auto ptr = new QPointF(obj->newPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->oldPos() );
+      auto ptr = new QPointF(obj->oldPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

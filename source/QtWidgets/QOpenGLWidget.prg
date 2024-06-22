@@ -76,9 +76,9 @@ QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
 {
 #ifndef QT_NO_OPENGL
-  if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QOpenGLWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+    auto obj = new QOpenGLWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->format() );
+      auto ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1) );
+      obj->setFormat( *PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,10 +181,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->makeCurrent();
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->doneCurrent();
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->context();
@@ -298,10 +298,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->defaultFramebufferObject() );
+      RGLUINT(obj->defaultFramebufferObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,10 +326,10 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QImage( obj->grabFramebuffer() );
+      auto ptr = new QImage(obj->grabFramebuffer());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToCompose()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("frameSwapped()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToResize()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("resized()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -88,9 +88,9 @@ QUndoStack( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QUndoStack( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QUndoStack( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->beginMacro( PQSTRING(1) );
+      obj->beginMacro(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,10 +153,10 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canRedo() );
+      RBOOL(obj->canRedo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,10 +177,10 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canUndo() );
+      RBOOL(obj->canUndo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,10 +201,10 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->cleanIndex() );
+      RINT(obj->cleanIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -251,10 +251,10 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->command( PINT(1) );
+      auto ptr = obj->command(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QUNDOCOMMAND", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -276,10 +276,10 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,10 +300,10 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQOBJECT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createRedoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -325,10 +325,10 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQOBJECT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createUndoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endMacro();
@@ -376,10 +376,10 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->index() );
+      RINT(obj->index());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,10 +400,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,10 +424,10 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isClean() );
+      RBOOL(obj->isClean());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,10 +448,10 @@ HB_FUNC_STATIC( QUNDOSTACK_PUSH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOCOMMAND(1) )
+    if (ISNUMPAR(1) && ISQUNDOCOMMAND(1))
     {
 #endif
-      obj->push( PQUNDOCOMMAND(1) );
+      obj->push(PQUNDOCOMMAND(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,10 +474,10 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->redoText() );
+      RQSTRING(obj->redoText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,10 +498,10 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUndoLimit( PINT(1) );
+      obj->setUndoLimit(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,10 +524,10 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->text( PINT(1) ) );
+      RQSTRING(obj->text(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,10 +548,10 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->undoLimit() );
+      RINT(obj->undoLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,10 +572,10 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->undoText() );
+      RQSTRING(obj->undoText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->redo();
@@ -622,10 +622,10 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setActive( OPBOOL( 1, true ) );
+      obj->setActive( OPBOOL( 1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setClean();
@@ -674,10 +674,10 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setIndex( PINT(1) );
+      obj->setIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->undo();
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("canRedoChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("canUndoChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cleanChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("indexChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("redoTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("undoTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

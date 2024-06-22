@@ -61,25 +61,25 @@ RETURN
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0) )
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QKeySequenceEdit( QWidget * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QKeySequenceEdit( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QKeySequenceEdit( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
   }
-  else if( ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET( 2, nullptr ) );
+    auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QKeySequence( obj->keySequence() );
+      auto ptr = new QKeySequence(obj->keySequence());
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
-      obj->setKeySequence( *PQKEYSEQUENCE(1) );
+      obj->setKeySequence( *PQKEYSEQUENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("keySequenceChanged(QKeySequence)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

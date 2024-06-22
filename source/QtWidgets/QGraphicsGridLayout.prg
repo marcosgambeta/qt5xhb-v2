@@ -96,9 +96,9 @@ QGraphicsGridLayout( QGraphicsLayoutItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsGridLayout( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem*>(Qt5xHb::itemGetPtr(1)) );
+    auto obj = new QGraphicsGridLayout( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_DELETE )
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
-  if( ISBETWEEN(5, 6) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
+  if (ISBETWEEN(5, 6) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
     void addItem( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -134,13 +134,13 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 
     if (obj != nullptr)
     {
-      obj->addItem( PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(6) ) );
+      obj->addItem(PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(6)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     void addItem( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 
     if (obj != nullptr)
     {
-      obj->addItem( PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(4) ) );
+      obj->addItem(PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
 #endif
-      RENUM( obj->alignment( PQGRAPHICSLAYOUTITEM(1) ) );
+      RENUM(obj->alignment(PQGRAPHICSLAYOUTITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,10 +195,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->columnAlignment( PINT(1) ) );
+      RENUM(obj->columnAlignment(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columnCount() );
+      RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,10 +243,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMAXIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->columnMaximumWidth( PINT(1) ) );
+      RQREAL(obj->columnMaximumWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,10 +267,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNMINIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->columnMinimumWidth( PINT(1) ) );
+      RQREAL(obj->columnMinimumWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,10 +291,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNPREFERREDWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->columnPreferredWidth( PINT(1) ) );
+      RQREAL(obj->columnPreferredWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,10 +315,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->columnSpacing( PINT(1) ) );
+      RQREAL(obj->columnSpacing(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,10 +339,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->columnStretchFactor( PINT(1) ) );
+      RINT(obj->columnStretchFactor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,10 +363,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->horizontalSpacing() );
+      RQREAL(obj->horizontalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QGraphicsLayoutItem * itemAt( int row, int column ) const
@@ -388,12 +388,12 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     virtual QGraphicsLayoutItem * itemAt( int index ) const
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( PINT(1) );
+      auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
 
@@ -423,10 +423,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
 #endif
-      obj->removeItem( PQGRAPHICSLAYOUTITEM(1) );
+      obj->removeItem(PQGRAPHICSLAYOUTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,10 +449,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->rowAlignment( PINT(1) ) );
+      RENUM(obj->rowAlignment(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,10 +473,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowCount() );
+      RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,10 +497,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMAXIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->rowMaximumHeight( PINT(1) ) );
+      RQREAL(obj->rowMaximumHeight(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,10 +521,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWMINIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->rowMinimumHeight( PINT(1) ) );
+      RQREAL(obj->rowMinimumHeight(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,10 +545,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWPREFERREDHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->rowPreferredHeight( PINT(1) ) );
+      RQREAL(obj->rowPreferredHeight(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,10 +569,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->rowSpacing( PINT(1) ) );
+      RQREAL(obj->rowSpacing(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -593,10 +593,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->rowStretchFactor( PINT(1) ) );
+      RINT(obj->rowStretchFactor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,10 +617,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAlignment( PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Alignment>( hb_parni(2) ) );
+      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Alignment>( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,10 +643,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnAlignment( PINT(1), static_cast<Qt::Alignment>( hb_parni(2) ) );
+      obj->setColumnAlignment(PINT(1), static_cast<Qt::Alignment>( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,10 +669,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnFixedWidth( PINT(1), PQREAL(2) );
+      obj->setColumnFixedWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -695,10 +695,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnMaximumWidth( PINT(1), PQREAL(2) );
+      obj->setColumnMaximumWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -721,10 +721,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnMinimumWidth( PINT(1), PQREAL(2) );
+      obj->setColumnMinimumWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -747,10 +747,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnPreferredWidth( PINT(1), PQREAL(2) );
+      obj->setColumnPreferredWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -773,10 +773,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnSpacing( PINT(1), PQREAL(2) );
+      obj->setColumnSpacing(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -799,10 +799,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setColumnStretchFactor( PINT(1), PINT(2) );
+      obj->setColumnStretchFactor(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,10 +825,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHorizontalSpacing( PQREAL(1) );
+      obj->setHorizontalSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -851,10 +851,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowAlignment( PINT(1), static_cast<Qt::Alignment>( hb_parni(2) ) );
+      obj->setRowAlignment(PINT(1), static_cast<Qt::Alignment>( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -877,10 +877,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowFixedHeight( PINT(1), PQREAL(2) );
+      obj->setRowFixedHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,10 +903,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowMaximumHeight( PINT(1), PQREAL(2) );
+      obj->setRowMaximumHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -929,10 +929,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowMinimumHeight( PINT(1), PQREAL(2) );
+      obj->setRowMinimumHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -955,10 +955,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowPreferredHeight( PINT(1), PQREAL(2) );
+      obj->setRowPreferredHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -981,10 +981,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowSpacing( PINT(1), PQREAL(2) );
+      obj->setRowSpacing(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1007,10 +1007,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSTRETCHFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRowStretchFactor( PINT(1), PINT(2) );
+      obj->setRowStretchFactor(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1033,10 +1033,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSpacing( PQREAL(1) );
+      obj->setSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1059,10 +1059,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVerticalSpacing( PQREAL(1) );
+      obj->setVerticalSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1085,10 +1085,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_VERTICALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->verticalSpacing() );
+      RQREAL(obj->verticalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1109,10 +1109,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_INVALIDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->invalidate();
@@ -1159,10 +1159,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_REMOVEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeAt( PINT(1) );
+      obj->removeAt(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1185,10 +1185,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry( *PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1211,10 +1211,10 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSIZEF(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QSizeF( obj->sizeHint( static_cast<Qt::SizeHint>( hb_parni(1) ), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2)) ) );
+      auto ptr = new QSizeF(obj->sizeHint( static_cast<Qt::SizeHint>( hb_parni(1)), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

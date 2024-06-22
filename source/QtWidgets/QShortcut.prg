@@ -67,21 +67,21 @@ RETURN
 
 HB_FUNC_STATIC( QSHORTCUT_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     QShortcut( QWidget * parent )
     */
-    auto obj = new QShortcut( PQWIDGET(1) );
+    auto obj = new QShortcut(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
+  else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
     QShortcut( const QKeySequence & key, QWidget * parent, const char * member = nullptr, const char * ambiguousMember = nullptr, Qt::ShortcutContext context = Qt::WindowShortcut )
     */
-    auto obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR( 3, nullptr ), OPCONSTCHAR( 4, nullptr ), HB_ISNIL(5) ? static_cast<Qt::ShortcutContext >( Qt::WindowShortcut ) : static_cast<Qt::ShortcutContext >( hb_parni(5) ) );
+    auto obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR( 3, nullptr ), OPCONSTCHAR( 4, nullptr ), HB_ISNIL(5) ? static_cast<Qt::ShortcutContext >( Qt::WindowShortcut ) : static_cast<Qt::ShortcutContext >( hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -119,10 +119,10 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoRepeat() );
+      RBOOL(obj->autoRepeat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->context() );
+      RENUM(obj->context());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->id() );
+      RINT(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEnabled() );
+      RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,10 +215,10 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QKeySequence( obj->key() );
+      auto ptr = new QKeySequence(obj->key());
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->parentWidget();
@@ -265,10 +265,10 @@ HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoRepeat( PBOOL(1) );
+      obj->setAutoRepeat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,10 +291,10 @@ HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContext( static_cast<Qt::ShortcutContext>( hb_parni(1) ) );
+      obj->setContext( static_cast<Qt::ShortcutContext>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,10 +317,10 @@ HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,10 +343,10 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
-      obj->setKey( *PQKEYSEQUENCE(1) );
+      obj->setKey( *PQKEYSEQUENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,10 +369,10 @@ HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setWhatsThis( PQSTRING(1) );
+      obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,10 +395,10 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->whatsThis() );
+      RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activatedAmbiguously()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

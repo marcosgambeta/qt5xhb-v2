@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QVBoxLayout()
@@ -59,12 +59,12 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     QVBoxLayout( QWidget * parent )
     */
-    auto obj = new QVBoxLayout( PQWIDGET(1) );
+    auto obj = new QVBoxLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }

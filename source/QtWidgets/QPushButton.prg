@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QPushButton( QWidget * parent = nullptr )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QPushButton( const QString & text, QWidget * parent = nullptr )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
     QPushButton( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && ISQPIXMAP(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQPIXMAP(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
     QPushButton( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->autoDefault());
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isDefault());
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isFlat());
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->menu();
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoDefault(PBOOL(1));
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDefault(PBOOL(1));
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setFlat(PBOOL(1));
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENU(1) )
+    if (ISNUMPAR(1) && ISQMENU(1))
     {
 #endif
       obj->setMenu(PQMENU(1));
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showMenu();
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->sizeHint());

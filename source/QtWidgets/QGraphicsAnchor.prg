@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni(1) ) );
+      obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSpacing( PQREAL(1) );
+      obj->setSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->sizePolicy() );
+      RENUM(obj->sizePolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->spacing() );
+      RQREAL(obj->spacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unsetSpacing();

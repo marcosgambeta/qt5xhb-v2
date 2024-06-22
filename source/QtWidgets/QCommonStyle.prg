@@ -53,7 +53,7 @@ QCommonStyle()
 */
 HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QCommonStyle();
     Qt5xHb::returnNewObject(obj, false);

@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionRubberBand()
@@ -60,12 +60,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1))
   {
     /*
     QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
     */
-    auto obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
+    auto obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -84,9 +84,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->shape );
+      RENUM(obj->shape);
     }
     else
     {
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape = static_cast<QRubberBand::Shape>( hb_parni(1) );
+      obj->shape = static_cast<QRubberBand::Shape>( hb_parni(1));
     }
     else
     {
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->opaque );
+      RBOOL(obj->opaque);
     }
     else
     {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->opaque = PBOOL(1);
     }

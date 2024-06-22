@@ -98,39 +98,39 @@ RETURN
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     QTableWidgetItem( int type = QTableWidgetItem::Type )
     */
-    auto obj = new QTableWidgetItem( OPINT( 1, QTableWidgetItem::Type ) );
+    auto obj = new QTableWidgetItem( OPINT( 1, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QTableWidgetItem( const QString & text, int type = QTableWidgetItem::Type )
     */
-    auto obj = new QTableWidgetItem( PQSTRING(1), OPINT( 2, QTableWidgetItem::Type ) );
+    auto obj = new QTableWidgetItem(PQSTRING(1), OPINT( 2, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && ( ISQICON(1)|| HB_ISCHAR(1) ) && HB_ISCHAR(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QTableWidgetItem( const QIcon & icon, const QString & text, int type = QTableWidgetItem::Type )
     */
-    auto obj = new QTableWidgetItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), OPINT( 3, QTableWidgetItem::Type ) );
+    auto obj = new QTableWidgetItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2), OPINT( 3, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+  else if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
   {
     /*
     QTableWidgetItem( const QTableWidgetItem & other )
     */
-    auto obj = new QTableWidgetItem( *PQTABLEWIDGETITEM(1) );
+    auto obj = new QTableWidgetItem( *PQTABLEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -166,10 +166,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_BACKGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBrush( obj->background() );
+      auto ptr = new QBrush(obj->background());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CHECKSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->checkState() );
+      RENUM(obj->checkState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CLONE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->clone();
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_COLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->column() );
+      RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,10 +264,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_DATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant( obj->data( PINT(1) ) );
+      auto ptr = new QVariant(obj->data(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -289,10 +289,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,10 +313,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QFont( obj->font() );
+      auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -338,10 +338,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FOREGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBrush( obj->foreground() );
+      auto ptr = new QBrush(obj->foreground());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -363,10 +363,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QIcon( obj->icon() );
+      auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -388,10 +388,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ISSELECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSelected() );
+      RBOOL(obj->isSelected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,10 +412,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_READ )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->read( *PQDATASTREAM(1) );
+      obj->read( *PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,10 +438,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->row() );
+      RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,10 +462,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETBACKGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1) );
+      obj->setBackground( *PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,10 +488,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETCHECKSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCheckState( static_cast<Qt::CheckState>( hb_parni(1) ) );
+      obj->setCheckState( static_cast<Qt::CheckState>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,10 +514,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setData( PINT(1), *PQVARIANT(2) );
+      obj->setData(PINT(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,10 +540,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<Qt::ItemFlags>( hb_parni(1) ) );
+      obj->setFlags( static_cast<Qt::ItemFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,10 +566,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont( *PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,10 +592,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFOREGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setForeground( *PQBRUSH(1) );
+      obj->setForeground( *PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,10 +618,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,10 +644,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSELECTED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSelected( PBOOL(1) );
+      obj->setSelected(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,10 +670,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setSizeHint( *PQSIZE(1) );
+      obj->setSizeHint( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -696,10 +696,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSTATUSTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setStatusTip( PQSTRING(1) );
+      obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -722,10 +722,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -748,10 +748,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTEXTALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextAlignment( PINT(1) );
+      obj->setTextAlignment(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -774,10 +774,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setToolTip( PQSTRING(1) );
+      obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -800,10 +800,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETWHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setWhatsThis( PQSTRING(1) );
+      obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,10 +826,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -851,10 +851,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_STATUSTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->statusTip() );
+      RQSTRING(obj->statusTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->tableWidget();
@@ -900,10 +900,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,10 +924,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXTALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->textAlignment() );
+      RINT(obj->textAlignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -948,10 +948,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toolTip() );
+      RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -972,10 +972,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->type() );
+      RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -996,10 +996,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_WHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->whatsThis() );
+      RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1020,10 +1020,10 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_WRITE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->write( *PQDATASTREAM(1) );
+      obj->write( *PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1068,12 +1068,12 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEWFROM )
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QTABLEWIDGETITEM_NEWFROM );
+  HB_FUNC_EXEC(QTABLEWIDGETITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QTABLEWIDGETITEM_NEWFROM );
+  HB_FUNC_EXEC(QTABLEWIDGETITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_SELFDESTRUCTION )
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

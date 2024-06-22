@@ -83,9 +83,9 @@ QTextBrowser( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QTextBrowser( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QTextBrowser( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->backwardHistoryCount() );
+      RINT(obj->backwardHistoryCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearHistory();
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->forwardHistoryCount() );
+      RINT(obj->forwardHistoryCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->historyTitle( PINT(1) ) );
+      RQSTRING(obj->historyTitle(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,10 +220,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QUrl( obj->historyUrl( PINT(1) ) );
+      auto ptr = new QUrl(obj->historyUrl(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,10 +245,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isBackwardAvailable() );
+      RBOOL(obj->isBackwardAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,10 +269,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isForwardAvailable() );
+      RBOOL(obj->isForwardAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,10 +293,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->openExternalLinks() );
+      RBOOL(obj->openExternalLinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,10 +317,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->openLinks() );
+      RBOOL(obj->openLinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,10 +341,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->searchPaths() );
+      RQSTRINGLIST(obj->searchPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,10 +365,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOpenExternalLinks( PBOOL(1) );
+      obj->setOpenExternalLinks(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,10 +391,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOpenLinks( PBOOL(1) );
+      obj->setOpenLinks(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,10 +417,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setSearchPaths( PQSTRINGLIST(1) );
+      obj->setSearchPaths(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,10 +443,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->source() );
+      auto ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -468,10 +468,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2))
     {
 #endif
-      auto ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
+      auto ptr = new QVariant(obj->loadResource(PINT(1), *PQURL(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->backward();
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forward();
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HOME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->home();
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reload();
@@ -597,10 +597,10 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1) );
+      obj->setSource( *PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorClicked(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("backwardAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("forwardAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("historyChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -93,9 +93,9 @@ QListWidget( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QLISTWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QListWidget( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QListWidget( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QLISTWIDGET_DELETE )
 
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     void addItem( const QString & label )
@@ -133,13 +133,13 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 
     if (obj != nullptr)
     {
-      obj->addItem( PQSTRING(1) );
+      obj->addItem(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+  else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
     void addItem( QListWidgetItem * item )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 
     if (obj != nullptr)
     {
-      obj->addItem( PQLISTWIDGETITEM(1) );
+      obj->addItem(PQLISTWIDGETITEM(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -170,10 +170,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->addItems( PQSTRINGLIST(1) );
+      obj->addItems(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      obj->closePersistentEditor( PQLISTWIDGETITEM(1) );
+      obj->closePersistentEditor(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QLISTWIDGET_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->currentItem();
@@ -271,10 +271,10 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentRow() );
+      RINT(obj->currentRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,10 +295,10 @@ HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      obj->editItem( PQLISTWIDGETITEM(1) );
+      obj->editItem(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
 
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQLISTWIDGETITEM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLISTWIDGETITEM(2))
   {
     /*
     void insertItem( int row, QListWidgetItem * item )
@@ -322,13 +322,13 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 
     if (obj != nullptr)
     {
-      obj->insertItem( PINT(1), PQLISTWIDGETITEM(2) );
+      obj->insertItem(PINT(1), PQLISTWIDGETITEM(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
     void insertItem( int row, const QString & label )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 
     if (obj != nullptr)
     {
-      obj->insertItem( PINT(1), PQSTRING(2) );
+      obj->insertItem(PINT(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -359,10 +359,10 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
     {
 #endif
-      obj->insertItems( PINT(1), PQSTRINGLIST(2) );
+      obj->insertItems(PINT(1), PQSTRINGLIST(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,10 +385,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSortingEnabled() );
+      RBOOL(obj->isSortingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,10 +409,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->item( PINT(1) );
+      auto ptr = obj->item(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
 
 HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     QListWidgetItem * itemAt( const QPoint & p ) const
@@ -435,12 +435,12 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( *PQPOINT(1) );
+      auto ptr = obj->itemAt( *PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QListWidgetItem * itemAt( int x, int y ) const
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
 
@@ -470,10 +470,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      auto ptr = obj->itemWidget( PQLISTWIDGETITEM(1) );
+      auto ptr = obj->itemWidget(PQLISTWIDGETITEM(1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -495,10 +495,10 @@ HB_FUNC_STATIC( QLISTWIDGET_OPENPERSISTENTEDITOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      obj->openPersistentEditor( PQLISTWIDGETITEM(1) );
+      obj->openPersistentEditor(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,10 +521,10 @@ HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      obj->removeItemWidget( PQLISTWIDGETITEM(1) );
+      obj->removeItemWidget(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,10 +547,10 @@ HB_FUNC_STATIC( QLISTWIDGET_ROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      RINT( obj->row( PQLISTWIDGETITEM(1) ) );
+      RINT(obj->row(PQLISTWIDGETITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ROW )
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 {
-  if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+  if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
     void setCurrentItem( QListWidgetItem * item )
@@ -572,13 +572,13 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 
     if (obj != nullptr)
     {
-      obj->setCurrentItem( PQLISTWIDGETITEM(1) );
+      obj->setCurrentItem(PQLISTWIDGETITEM(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2))
   {
     /*
     void setCurrentItem( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 
     if (obj != nullptr)
     {
-      obj->setCurrentItem( PQLISTWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2) ) );
+      obj->setCurrentItem(PQLISTWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setCurrentRow( int row )
@@ -610,13 +610,13 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 
     if (obj != nullptr)
     {
-      obj->setCurrentRow( PINT(1) );
+      obj->setCurrentRow(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setCurrentRow( int row, QItemSelectionModel::SelectionFlags command )
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 
     if (obj != nullptr)
     {
-      obj->setCurrentRow( PINT(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2) ) );
+      obj->setCurrentRow(PINT(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -647,10 +647,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && ISQWIDGET(2) )
+    if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && ISQWIDGET(2))
     {
 #endif
-      obj->setItemWidget( PQLISTWIDGETITEM(1), PQWIDGET(2) );
+      obj->setItemWidget(PQLISTWIDGETITEM(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,10 +673,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSortingEnabled( PBOOL(1) );
+      obj->setSortingEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,10 +699,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->sortItems( HB_ISNIL(1) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >( hb_parni(1) ) );
+      obj->sortItems( HB_ISNIL(1) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -725,10 +725,10 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->takeItem( PINT(1) );
+      auto ptr = obj->takeItem(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -750,10 +750,10 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
 #endif
-      auto ptr = new QRect( obj->visualItemRect( PQLISTWIDGETITEM(1) ) );
+      auto ptr = new QRect(obj->visualItemRect(PQLISTWIDGETITEM(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -775,10 +775,10 @@ HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDROPEVENT(1) )
+    if (ISNUMPAR(1) && ISQDROPEVENT(1))
     {
 #endif
-      obj->dropEvent( PQDROPEVENT(1) );
+      obj->dropEvent(PQDROPEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -827,10 +827,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQLISTWIDGETITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQLISTWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->scrollToItem( PQLISTWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >( hb_parni(2) ) );
+      obj->scrollToItem(PQLISTWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >( hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentRowChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemActivated(QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemClicked(QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemDoubleClicked(QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemEntered(QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemPressed(QListWidgetItem*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1284,7 +1284,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSelectionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

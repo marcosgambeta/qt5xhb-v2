@@ -65,9 +65,9 @@ QStatusBar( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QStatusBar( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QStatusBar( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addPermanentWidget( PQWIDGET(1), OPINT( 2, 0 ) );
+      obj->addPermanentWidget(PQWIDGET(1), OPINT( 2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addWidget( PQWIDGET(1), OPINT( 2, 0 ) );
+      obj->addWidget(PQWIDGET(1), OPINT( 2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentMessage() );
+      RQSTRING(obj->currentMessage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->insertPermanentWidget( PINT(1), PQWIDGET(2), OPINT( 3, 0 ) ) );
+      RINT(obj->insertPermanentWidget(PINT(1), PQWIDGET(2), OPINT( 3, 0 )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,10 +204,10 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->insertWidget( PINT(1), PQWIDGET(2), OPINT( 3, 0 ) ) );
+      RINT(obj->insertWidget(PINT(1), PQWIDGET(2), OPINT( 3, 0 )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,10 +228,10 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSizeGripEnabled() );
+      RBOOL(obj->isSizeGripEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,10 +252,10 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->removeWidget( PQWIDGET(1) );
+      obj->removeWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,10 +278,10 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSizeGripEnabled( PBOOL(1) );
+      obj->setSizeGripEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearMessage();
@@ -330,10 +330,10 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->showMessage( PQSTRING(1), OPINT( 2, 0 ) );
+      obj->showMessage(PQSTRING(1), OPINT( 2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("messageChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

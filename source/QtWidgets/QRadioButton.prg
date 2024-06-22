@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QRadioButton( QWidget * parent = nullptr )
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QRadioButton( const QString & text, QWidget * parent = nullptr )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->sizeHint());
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());

@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionHeader()
@@ -75,12 +75,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1))
   {
     /*
     QStyleOptionHeader( const QStyleOptionHeader & other )
     */
-    auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
+    auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SECTION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RINT( obj->section );
+      RINT(obj->section);
     }
     else
     {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSECTION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->section = PINT(1);
     }
@@ -138,9 +138,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQSTRING( obj->text );
+      RQSTRING(obj->text);
     }
     else
     {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
     }
@@ -177,9 +177,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXTALIGNMENT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->textAlignment );
+      RENUM(obj->textAlignment);
     }
     else
     {
@@ -194,9 +194,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXTALIGNMENT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1) );
+      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1));
     }
     else
     {
@@ -216,9 +216,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICON )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      auto ptr = new QIcon( obj->icon );
+      auto ptr = new QIcon(obj->icon);
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICON )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
     }
@@ -256,9 +256,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICONALIGNMENT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->iconAlignment );
+      RENUM(obj->iconAlignment);
     }
     else
     {
@@ -273,9 +273,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICONALIGNMENT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->iconAlignment = static_cast<Qt::Alignment>( hb_parni(1) );
+      obj->iconAlignment = static_cast<Qt::Alignment>( hb_parni(1));
     }
     else
     {
@@ -295,9 +295,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_POSITION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->position );
+      RENUM(obj->position);
     }
     else
     {
@@ -312,9 +312,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETPOSITION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->position = static_cast<QStyleOptionHeader::SectionPosition>( hb_parni(1) );
+      obj->position = static_cast<QStyleOptionHeader::SectionPosition>( hb_parni(1));
     }
     else
     {
@@ -334,9 +334,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SELECTEDPOSITION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->selectedPosition );
+      RENUM(obj->selectedPosition);
     }
     else
     {
@@ -351,9 +351,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSELECTEDPOSITION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->selectedPosition = static_cast<QStyleOptionHeader::SelectedPosition>( hb_parni(1) );
+      obj->selectedPosition = static_cast<QStyleOptionHeader::SelectedPosition>( hb_parni(1));
     }
     else
     {
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SORTINDICATOR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->sortIndicator );
+      RENUM(obj->sortIndicator);
     }
     else
     {
@@ -390,9 +390,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSORTINDICATOR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->sortIndicator = static_cast<QStyleOptionHeader::SortIndicator>( hb_parni(1) );
+      obj->sortIndicator = static_cast<QStyleOptionHeader::SortIndicator>( hb_parni(1));
     }
     else
     {
@@ -412,9 +412,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ORIENTATION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->orientation );
+      RENUM(obj->orientation);
     }
     else
     {
@@ -429,9 +429,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETORIENTATION )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->orientation = static_cast<Qt::Orientation>( hb_parni(1) );
+      obj->orientation = static_cast<Qt::Orientation>( hb_parni(1));
     }
     else
     {

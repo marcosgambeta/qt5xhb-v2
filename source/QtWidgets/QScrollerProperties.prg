@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QScrollerProperties()
@@ -71,12 +71,12 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1) )
+  else if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
   {
     /*
     QScrollerProperties( const QScrollerProperties & sp )
     */
-    auto obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
+    auto obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant( obj->scrollMetric( static_cast<QScrollerProperties::ScrollMetric>( hb_parni(1) ) ) );
+      auto ptr = new QVariant(obj->scrollMetric( static_cast<QScrollerProperties::ScrollMetric>( hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setScrollMetric( static_cast<QScrollerProperties::ScrollMetric>( hb_parni(1) ), *PQVARIANT(2) );
+      obj->setScrollMetric( static_cast<QScrollerProperties::ScrollMetric>( hb_parni(1)), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,10 +163,10 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1) )
+    if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
     {
 #endif
-      obj->setDefaultScrollerProperties( *PQSCROLLERPROPERTIES(1) );
+      obj->setDefaultScrollerProperties( *PQSCROLLERPROPERTIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unsetDefaultScrollerProperties();
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -237,12 +237,12 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROM )
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSCROLLERPROPERTIES_NEWFROM );
+  HB_FUNC_EXEC(QSCROLLERPROPERTIES_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSCROLLERPROPERTIES_NEWFROM );
+  HB_FUNC_EXEC(QSCROLLERPROPERTIES_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SELFDESTRUCTION )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -165,10 +165,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,10 +189,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,10 +215,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,10 +265,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,10 +289,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1) ) );
+      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,10 +315,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->pageStep() );
+      RINT(obj->pageStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,10 +339,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageStep( PINT(1) );
+      obj->setPageStep(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,10 +365,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->invertedAppearance() );
+      RBOOL(obj->invertedAppearance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,10 +389,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setInvertedAppearance( PBOOL(1) );
+      obj->setInvertedAppearance(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,10 +415,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->invertedControls() );
+      RBOOL(obj->invertedControls());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,10 +439,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setInvertedControls( PBOOL(1) );
+      obj->setInvertedControls(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,10 +465,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,10 +491,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSliderDown() );
+      RBOOL(obj->isSliderDown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,10 +515,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSliderDown( PBOOL(1) );
+      obj->setSliderDown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,10 +541,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->singleStep() );
+      RINT(obj->singleStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,10 +565,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSingleStep( PINT(1) );
+      obj->setSingleStep(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,10 +591,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->sliderPosition() );
+      RINT(obj->sliderPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,10 +615,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSliderPosition( PINT(1) );
+      obj->setSliderPosition(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,10 +641,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->triggerAction( static_cast<QAbstractSlider::SliderAction>( hb_parni(1) ) );
+      obj->triggerAction( static_cast<QAbstractSlider::SliderAction>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,10 +667,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,10 +691,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,10 +717,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasTracking() );
+      RBOOL(obj->hasTracking());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -741,10 +741,10 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTracking( PBOOL(1) );
+      obj->setTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("actionTriggered(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rangeChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliderMoved(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliderPressed()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliderReleased()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -150,7 +150,7 @@ QListView( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QLISTVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     auto obj = new QListView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RINT(obj->batchSize());
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearPropertyFlags();
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->flow());
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->gridSize());
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RBOOL(obj->isRowHidden(PINT(1)));
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isSelectionRectVisible());
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isWrapping());
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->layoutMode());
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RINT(obj->modelColumn());
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->movement());
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->resizeMode());
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setBatchSize(PINT(1));
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setFlow(static_cast<QListView::Flow>(hb_parni(1)));
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
       obj->setGridSize(*PQSIZE(1));
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setLayoutMode(static_cast<QListView::LayoutMode>(hb_parni(1)));
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setModelColumn(PINT(1));
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMovement(static_cast<QListView::Movement>(hb_parni(1)));
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setResizeMode(static_cast<QListView::ResizeMode>(hb_parni(1)));
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
       obj->setRowHidden(PINT(1), PBOOL(2));
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setSelectionRectVisible(PBOOL(1));
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setSpacing(PINT(1));
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setUniformItemSizes(PBOOL(1));
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setViewMode(static_cast<QListView::ViewMode>(hb_parni(1)));
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setWordWrap(PBOOL(1));
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setWrapping(PBOOL(1));
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RINT(obj->spacing());
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->uniformItemSizes());
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->viewMode());
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->wordWrap());
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
       auto ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QListView::ScrollHint>(QListView::EnsureVisible) : static_cast<QListView::ScrollHint>(hb_parni(2)));
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       auto ptr = new QRect(obj->visualRect(*PQMODELINDEX(1)));
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("indexesMoved(QModelIndexList)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

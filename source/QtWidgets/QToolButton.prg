@@ -96,7 +96,7 @@ QToolButton( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     auto obj = new QToolButton(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->arrowType());
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->autoRaise());
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->defaultAction();
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->menu();
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->popupMode());
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setArrowType(static_cast<Qt::ArrowType>(hb_parni(1)));
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoRaise(PBOOL(1));
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENU(1) )
+    if (ISNUMPAR(1) && ISQMENU(1))
     {
 #endif
       obj->setMenu(PQMENU(1));
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setPopupMode(static_cast<QToolButton::ToolButtonPopupMode>(hb_parni(1)));
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->toolButtonStyle());
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->sizeHint());
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACTION(1) )
+    if (ISNUMPAR(1) && ISQACTION(1))
     {
 #endif
       obj->setDefaultAction(PQACTION(1));
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setToolButtonStyle(static_cast<Qt::ToolButtonStyle>(hb_parni(1)));
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showMenu();
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -91,21 +91,21 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSITEM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
     QGraphicsTextItem( QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsTextItem( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)) );
+    auto obj = new QGraphicsTextItem( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2)&& HB_ISCHAR(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2)&& HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
     QGraphicsTextItem( const QString & text, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsTextItem( PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)) );
+    auto obj = new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->adjustSize();
@@ -169,10 +169,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QColor( obj->defaultTextColor() );
+      auto ptr = new QColor(obj->defaultTextColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->document();
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QFont( obj->font() );
+      auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -244,10 +244,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->openExternalLinks() );
+      RBOOL(obj->openExternalLinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,10 +268,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setDefaultTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
+      obj->setDefaultTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument(PQTEXTDOCUMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont( *PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,10 +346,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setHtml( PQSTRING(1) );
+      obj->setHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,10 +372,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOpenExternalLinks( PBOOL(1) );
+      obj->setOpenExternalLinks(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,10 +398,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPlainText( PQSTRING(1) );
+      obj->setPlainText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,10 +424,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTabChangesFocus( PBOOL(1) );
+      obj->setTabChangesFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,10 +450,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+    if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
 #endif
-      obj->setTextCursor( *PQTEXTCURSOR(1) );
+      obj->setTextCursor( *PQTEXTCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,10 +476,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextInteractionFlags( static_cast<Qt::TextInteractionFlags>( hb_parni(1) ) );
+      obj->setTextInteractionFlags( static_cast<Qt::TextInteractionFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,10 +502,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextWidth( PQREAL(1) );
+      obj->setTextWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,10 +528,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->tabChangesFocus() );
+      RBOOL(obj->tabChangesFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -552,10 +552,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QTextCursor( obj->textCursor() );
+      auto ptr = new QTextCursor(obj->textCursor());
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -577,10 +577,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->textInteractionFlags() );
+      RENUM(obj->textInteractionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,10 +601,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->textWidth() );
+      RQREAL(obj->textWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -625,10 +625,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toHtml() );
+      RQSTRING(obj->toHtml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,10 +649,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toPlainText() );
+      RQSTRING(obj->toPlainText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,10 +673,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect() );
+      auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -698,10 +698,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL(obj->contains( *PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -722,10 +722,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -746,10 +746,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPainterPath( obj->opaqueArea() );
+      auto ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -771,10 +771,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -797,10 +797,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPainterPath( obj->shape() );
+      auto ptr = new QPainterPath(obj->shape());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -822,10 +822,10 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->type() );
+      RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("linkActivated(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("linkHovered(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

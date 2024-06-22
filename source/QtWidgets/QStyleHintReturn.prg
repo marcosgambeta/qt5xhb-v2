@@ -60,9 +60,9 @@ QStyleHintReturn( int version = QStyleOption::Version, int type = QStyleHintRetu
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QStyleHintReturn( OPINT( 1, QStyleOption::Version ), OPINT( 2, QStyleHintReturn::SH_Default ) );
+    auto obj = new QStyleHintReturn( OPINT( 1, QStyleOption::Version ), OPINT( 2, QStyleHintReturn::SH_Default));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -119,12 +119,12 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEWFROM )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSTYLEHINTRETURN_NEWFROM );
+  HB_FUNC_EXEC(QSTYLEHINTRETURN_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSTYLEHINTRETURN_NEWFROM );
+  HB_FUNC_EXEC(QSTYLEHINTRETURN_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSTYLEHINTRETURN_SELFDESTRUCTION )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

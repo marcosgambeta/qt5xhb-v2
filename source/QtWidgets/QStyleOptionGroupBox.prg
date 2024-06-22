@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionGroupBox()
@@ -69,12 +69,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1))
   {
     /*
     QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
     */
-    auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
+    auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -93,9 +93,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->features );
+      RENUM(obj->features);
     }
     else
     {
@@ -110,9 +110,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>( hb_parni(1) );
+      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>( hb_parni(1));
     }
     else
     {
@@ -132,9 +132,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQSTRING( obj->text );
+      RQSTRING(obj->text);
     }
     else
     {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
     }
@@ -171,9 +171,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->textAlignment );
+      RENUM(obj->textAlignment);
     }
     else
     {
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1) );
+      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1));
     }
     else
     {
@@ -210,9 +210,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      auto ptr = new QColor( obj->textColor );
+      auto ptr = new QColor(obj->textColor);
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
       obj->textColor = *PQCOLOR(1);
     }
@@ -250,9 +250,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RINT( obj->lineWidth );
+      RINT(obj->lineWidth);
     }
     else
     {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
     }
@@ -289,9 +289,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RINT( obj->midLineWidth );
+      RINT(obj->midLineWidth);
     }
     else
     {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
     }

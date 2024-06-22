@@ -79,9 +79,9 @@ QProgressBar( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QProgressBar( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QProgressBar( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->format() );
+      RQSTRING(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,10 +166,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->invertedAppearance() );
+      RBOOL(obj->invertedAppearance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,10 +190,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTextVisible() );
+      RBOOL(obj->isTextVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,10 +214,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,10 +238,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,10 +262,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,10 +286,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1) ) );
+      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,10 +312,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFormat( PQSTRING(1) );
+      obj->setFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,10 +338,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setInvertedAppearance( PBOOL(1) );
+      obj->setInvertedAppearance(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,10 +364,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextDirection( static_cast<QProgressBar::Direction>( hb_parni(1) ) );
+      obj->setTextDirection( static_cast<QProgressBar::Direction>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,10 +390,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTextVisible( PBOOL(1) );
+      obj->setTextVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,10 +416,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,10 +440,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->textDirection() );
+      RENUM(obj->textDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,10 +464,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,10 +488,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint() );
+      auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -513,10 +513,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -564,10 +564,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,10 +590,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -616,10 +616,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1) ) );
+      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -642,10 +642,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -668,10 +668,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

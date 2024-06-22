@@ -58,7 +58,7 @@ explicit HStyledItemDelegate(QObject *parent = nullptr)
 */
 void HStyledItemDelegate_new1()
 {
-  auto obj = new HStyledItemDelegate( OPQOBJECT(1,nullptr) );
+  auto obj = new HStyledItemDelegate( OPQOBJECT(1,nullptr));
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -67,7 +67,7 @@ HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = nullptr)
 */
 void HStyledItemDelegate_new2()
 {
-  auto obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr) );
+  auto obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr));
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -76,7 +76,7 @@ HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent
 */
 void HStyledItemDelegate_new3()
 {
-  auto obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,nullptr) );
+  auto obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,nullptr));
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -88,21 +88,21 @@ void HStyledItemDelegate_new3()
 
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)))
   {
     HStyledItemDelegate_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)))
   {
     HStyledItemDelegate_new2();
   }
-  else if( ISBETWEEN(2,3) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2,3) && (ISQOBJECT(3)||HB_ISNIL(3)))
   {
     HStyledItemDelegate_new3();
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -141,15 +141,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->defaultPaint(PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -165,7 +165,7 @@ QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) con
 // }
 
 /*
-void setPaintCB ( PHB_ITEM block )
+void setPaintCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
 {
@@ -174,15 +174,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setPaintCB( PBLOCKORSYMBOL(1) );
+      obj->setPaintCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
 }
 
 /*
-void setSizeHintCB ( PHB_ITEM block )
+void setSizeHintCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
 {
@@ -200,15 +200,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setSizeHintCB( PBLOCKORSYMBOL(1) );
+      obj->setSizeHintCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
 }
 
 /*
-void setDisplayTextCB ( PHB_ITEM block )
+void setDisplayTextCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
 {
@@ -226,15 +226,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setDisplayTextCB( PBLOCKORSYMBOL(1) );
+      obj->setDisplayTextCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
 }
 
 /*
-void setCreateEditorCB ( PHB_ITEM block )
+void setCreateEditorCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
 {
@@ -252,15 +252,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateEditorCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateEditorCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
 }
 
 /*
-void setEditorDataCB ( PHB_ITEM block )
+void setEditorDataCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
 {
@@ -278,15 +278,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setEditorDataCB( PBLOCKORSYMBOL(1) );
+      obj->setEditorDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
 }
 
 /*
-void setModelDataCB ( PHB_ITEM block )
+void setModelDataCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
 {
@@ -304,15 +304,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setModelDataCB( PBLOCKORSYMBOL(1) );
+      obj->setModelDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
 }
 
 /*
-void setUpdateEditorGeometryCB ( PHB_ITEM block )
+void setUpdateEditorGeometryCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
 {
@@ -330,15 +330,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setUpdateEditorGeometryCB( PBLOCKORSYMBOL(1) );
+      obj->setUpdateEditorGeometryCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
 }
 
 /*
-void setDestroyEditorCB ( PHB_ITEM block )
+void setDestroyEditorCB (PHB_ITEM block )
 */
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDESTROYEDITORCB )
 {
@@ -356,15 +356,15 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDESTROYEDITORCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setDestroyEditorCB( PBLOCKORSYMBOL(1) );
+      obj->setDestroyEditorCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionSpinBox()
@@ -62,12 +62,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONSPINBOX(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSPINBOX(1))
   {
     /*
     QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
     */
-    auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
+    auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -86,9 +86,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->buttonSymbols );
+      RENUM(obj->buttonSymbols);
     }
     else
     {
@@ -103,9 +103,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni(1) );
+      obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni(1));
     }
     else
     {
@@ -125,9 +125,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->stepEnabled );
+      RENUM(obj->stepEnabled);
     }
     else
     {
@@ -142,9 +142,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>( hb_parni(1) );
+      obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>( hb_parni(1));
     }
     else
     {
@@ -164,9 +164,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->frame );
+      RBOOL(obj->frame);
     }
     else
     {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->frame = PBOOL(1);
     }

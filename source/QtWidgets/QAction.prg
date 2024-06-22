@@ -194,7 +194,7 @@ RETURN
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QAction( QObject * parent = nullptr )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QACTION_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QAction( const QString & text, QObject * parent = nullptr )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QACTION_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
     QAction( const QIcon & icon, const QString & text, QObject * parent = nullptr )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->actionGroup();
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->activate(static_cast<QAction::ActionEvent>(hb_parni(1)));
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->associatedGraphicsWidgets();
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->associatedWidgets();
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->autoRepeat());
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QACTION_DATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QVariant(obj->data());
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QACTION_FONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QFont(obj->font());
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QACTION_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QIcon(obj->icon());
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->iconText());
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isCheckable());
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isChecked());
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isEnabled());
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isIconVisibleInMenu());
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isSeparator());
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isVisible());
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QACTION_MENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->menu();
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->menuRole());
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->parentWidget();
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->priority());
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACTIONGROUP(1) )
+    if (ISNUMPAR(1) && ISQACTIONGROUP(1))
     {
 #endif
       obj->setActionGroup(PQACTIONGROUP(1));
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoRepeat(PBOOL(1));
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setCheckable(PBOOL(1));
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QACTION_SETDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
       obj->setData(*PQVARIANT(1));
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QACTION_SETFONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
       obj->setFont(*PQFONT(1));
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
       obj->setIcon(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QACTION_SETICONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setIconText(PQSTRING(1));
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setIconVisibleInMenu(PBOOL(1));
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QACTION_SETMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENU(1) )
+    if (ISNUMPAR(1) && ISQMENU(1))
     {
 #endif
       obj->setMenu(PQMENU(1));
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMenuRole(static_cast<QAction::MenuRole>(hb_parni(1)));
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setPriority(static_cast<QAction::Priority>(hb_parni(1)));
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QACTION_SETSEPARATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setSeparator(PBOOL(1));
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
       obj->setShortcut(*PQKEYSEQUENCE(1));
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setShortcutContext(static_cast<Qt::ShortcutContext>(hb_parni(1)));
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {
-  if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     void setShortcuts( const QList<QKeySequence> & shortcuts )
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setShortcuts( QKeySequence::StandardKey key )
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setStatusTip(PQSTRING(1));
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QACTION_SETTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setText(PQSTRING(1));
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QACTION_SETTOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setToolTip(PQSTRING(1));
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setWhatsThis(PQSTRING(1));
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QKeySequence(obj->shortcut());
@@ -1303,10 +1303,10 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->shortcutContext() );
+      RENUM(obj->shortcutContext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->shortcuts();
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
     {
 #endif
       RBOOL(obj->showStatusText(OPQWIDGET(1, nullptr)));
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->statusTip());
@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->text());
@@ -1449,7 +1449,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->toolTip());
@@ -1473,7 +1473,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->whatsThis());
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC( QACTION_HOVER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->hover();
@@ -1523,7 +1523,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setChecked(PBOOL(1));
@@ -1549,7 +1549,7 @@ HB_FUNC_STATIC( QACTION_SETDISABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDisabled(PBOOL(1));
@@ -1575,7 +1575,7 @@ HB_FUNC_STATIC( QACTION_SETENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setEnabled(PBOOL(1));
@@ -1601,7 +1601,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setVisible(PBOOL(1));
@@ -1627,7 +1627,7 @@ HB_FUNC_STATIC( QACTION_TOGGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toggle();
@@ -1653,7 +1653,7 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->trigger();
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("changed()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1731,7 +1731,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1754,7 +1754,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1779,7 +1779,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("toggled(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1804,7 +1804,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1829,7 +1829,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1854,7 +1854,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QCommandLinkButton( QWidget * parent = nullptr )
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QCommandLinkButton( const QString & text, QWidget * parent = nullptr )
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
     QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = nullptr )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->description());
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setDescription(PQSTRING(1));
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isFlat());
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setFlat(PBOOL(1));

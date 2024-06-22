@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionTitleBar()
@@ -65,12 +65,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1))
   {
     /*
     QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
     */
-    auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
+    auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -89,9 +89,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TEXT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQSTRING( obj->text );
+      RQSTRING(obj->text);
     }
     else
     {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTEXT )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
     }
@@ -128,9 +128,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_ICON )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      auto ptr = new QIcon( obj->icon );
+      auto ptr = new QIcon(obj->icon);
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETICON )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
     }
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARSTATE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RINT( obj->titleBarState );
+      RINT(obj->titleBarState);
     }
     else
     {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->titleBarState = PINT(1);
     }
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->titleBarFlags );
+      RENUM(obj->titleBarFlags);
     }
     else
     {
@@ -224,9 +224,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->titleBarFlags = static_cast<Qt::WindowFlags>( hb_parni(1) );
+      obj->titleBarFlags = static_cast<Qt::WindowFlags>( hb_parni(1));
     }
     else
     {

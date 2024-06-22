@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RQSTRING(obj->text());
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setText(PQSTRING(1));
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QIcon(obj->icon());
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
       obj->setIcon(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->iconSize());
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
       obj->setIconSize(*PQSIZE(1));
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QKeySequence(obj->shortcut());
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
       obj->setShortcut(*PQKEYSEQUENCE(1));
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isCheckable());
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setCheckable(PBOOL(1));
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isChecked());
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setChecked(PBOOL(1));
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->autoRepeat());
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoRepeat(PBOOL(1));
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->autoExclusive());
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoExclusive(PBOOL(1));
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RINT(obj->autoRepeatDelay());
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setAutoRepeatDelay(PINT(1));
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RINT(obj->autoRepeatInterval());
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setAutoRepeatInterval(PINT(1));
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RBOOL(obj->isDown());
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDown(PBOOL(1));
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->group();
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
       obj->animateClick(OPINT(1, 100));
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->click();
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toggle();
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("released()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("toggled(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -80,10 +80,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->lastPos() );
+      auto ptr = new QPointF(obj->lastPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->lastScenePos() );
+      auto ptr = new QPointF(obj->lastScenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->lastScreenPos() );
+      auto ptr = new QPoint(obj->lastScreenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -155,10 +155,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_MODIFIERS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modifiers() );
+      RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,10 +179,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_POS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->pos() );
+      auto ptr = new QPointF(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -204,10 +204,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCENEPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->scenePos() );
+      auto ptr = new QPointF(obj->scenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,10 +229,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCREENPOS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPoint( obj->screenPos() );
+      auto ptr = new QPoint(obj->screenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

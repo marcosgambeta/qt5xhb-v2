@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      auto ptr = obj->create( PQOBJECT(1) );
+      auto ptr = obj->create(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3) )
+    if (ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3))
     {
 #endif
-      RENUM( obj->recognize( PQGESTURE(1), PQOBJECT(2), PQEVENT(3) ) );
+      RENUM(obj->recognize(PQGESTURE(1), PQOBJECT(2), PQEVENT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,10 +137,10 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGESTURE(1) )
+    if (ISNUMPAR(1) && ISQGESTURE(1))
     {
 #endif
-      obj->reset( PQGESTURE(1) );
+      obj->reset(PQGESTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ static Qt::GestureType registerRecognizer( QGestureRecognizer * recognizer )
 HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQGESTURERECOGNIZER(1) )
+  if (ISNUMPAR(1) && ISQGESTURERECOGNIZER(1))
   {
 #endif
-    RENUM( QGestureRecognizer::registerRecognizer( PQGESTURERECOGNIZER(1) ) );
+    RENUM( QGestureRecognizer::registerRecognizer(PQGESTURERECOGNIZER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -178,10 +178,10 @@ static void unregisterRecognizer( Qt::GestureType type )
 HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QGestureRecognizer::unregisterRecognizer( static_cast<Qt::GestureType>( hb_parni(1) ) );
+    QGestureRecognizer::unregisterRecognizer( static_cast<Qt::GestureType>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -225,12 +225,12 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROM )
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QGESTURERECOGNIZER_NEWFROM );
+  HB_FUNC_EXEC(QGESTURERECOGNIZER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QGESTURERECOGNIZER_NEWFROM );
+  HB_FUNC_EXEC(QGESTURERECOGNIZER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_SELFDESTRUCTION )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

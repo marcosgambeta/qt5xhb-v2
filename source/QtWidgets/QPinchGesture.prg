@@ -98,10 +98,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->centerPoint() );
+      auto ptr = new QPointF(obj->centerPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -123,10 +123,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->changeFlags() );
+      RENUM(obj->changeFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,10 +147,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->lastCenterPoint() );
+      auto ptr = new QPointF(obj->lastCenterPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTROTATIONANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->lastRotationAngle() );
+      RQREAL(obj->lastRotationAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTSCALEFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->lastScaleFactor() );
+      RQREAL(obj->lastScaleFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,10 +220,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_ROTATIONANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->rotationAngle() );
+      RQREAL(obj->rotationAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,10 +244,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->scaleFactor() );
+      RQREAL(obj->scaleFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,10 +268,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setCenterPoint( *PQPOINTF(1) );
+      obj->setCenterPoint( *PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setChangeFlags( static_cast<QPinchGesture::ChangeFlags>( hb_parni(1) ) );
+      obj->setChangeFlags( static_cast<QPinchGesture::ChangeFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,10 +320,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setLastCenterPoint( *PQPOINTF(1) );
+      obj->setLastCenterPoint( *PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,10 +346,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLastRotationAngle( PQREAL(1) );
+      obj->setLastRotationAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,10 +372,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLastScaleFactor( PQREAL(1) );
+      obj->setLastScaleFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,10 +398,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRotationAngle( PQREAL(1) );
+      obj->setRotationAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,10 +424,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setScaleFactor( PQREAL(1) );
+      obj->setScaleFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,10 +450,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setStartCenterPoint( *PQPOINTF(1) );
+      obj->setStartCenterPoint( *PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,10 +476,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTotalChangeFlags( static_cast<QPinchGesture::ChangeFlags>( hb_parni(1) ) );
+      obj->setTotalChangeFlags( static_cast<QPinchGesture::ChangeFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,10 +502,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTotalRotationAngle( PQREAL(1) );
+      obj->setTotalRotationAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,10 +528,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTotalScaleFactor( PQREAL(1) );
+      obj->setTotalScaleFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -554,10 +554,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->startCenterPoint() );
+      auto ptr = new QPointF(obj->startCenterPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -579,10 +579,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->totalChangeFlags() );
+      RENUM(obj->totalChangeFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,10 +603,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALROTATIONANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->totalRotationAngle() );
+      RQREAL(obj->totalRotationAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,10 +627,10 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALSCALEFACTOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->totalScaleFactor() );
+      RQREAL(obj->totalScaleFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

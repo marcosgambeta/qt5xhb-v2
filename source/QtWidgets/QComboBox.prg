@@ -146,9 +146,9 @@ QComboBox( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QCOMBOBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QComboBox( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QComboBox( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DELETE )
 
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
   {
     /*
     void addItem( const QString & text, const QVariant & userData = QVariant() )
@@ -186,13 +186,13 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 
     if (obj != nullptr)
     {
-      obj->addItem( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)) );
+      obj->addItem(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISBETWEEN(2, 3) && ( ISQICON(1)|| HB_ISCHAR(1) ) && HB_ISCHAR(2) && ( ISQVARIANT(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3) || HB_ISNIL(3)))
   {
     /*
     void addItem( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 
     if (obj != nullptr)
     {
-      obj->addItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)) );
+      obj->addItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -223,10 +223,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->addItems( PQSTRINGLIST(1) );
+      obj->addItems(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->completer();
@@ -274,10 +274,10 @@ HB_FUNC_STATIC( QCOMBOBOX_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,10 +298,10 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentIndex() );
+      RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,10 +322,10 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentText() );
+      RQSTRING(obj->currentText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,10 +346,10 @@ HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->duplicatesEnabled() );
+      RBOOL(obj->duplicatesEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,10 +370,10 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && ISQVARIANT(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && ISQVARIANT(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->findData( *PQVARIANT(1), OPINT( 2, Qt::UserRole ), HB_ISNIL(3) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >( hb_parni(3) ) ) );
+      RINT(obj->findData( *PQVARIANT(1), OPINT( 2, Qt::UserRole ), HB_ISNIL(3) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >( hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,10 +394,10 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT( obj->findText( PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >( hb_parni(2) ) ) );
+      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >( hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,10 +418,10 @@ HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasFrame() );
+      RBOOL(obj->hasFrame());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->hidePopup();
@@ -468,10 +468,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->iconSize() );
+      auto ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
 
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {
-  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ( ISQVARIANT(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQVARIANT(3) || HB_ISNIL(3)))
   {
     /*
     void insertItem( int index, const QString & text, const QVariant & userData = QVariant() )
@@ -494,13 +494,13 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 
     if (obj != nullptr)
     {
-      obj->insertItem( PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)) );
+      obj->insertItem(PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ( ISQICON(2)|| HB_ISCHAR(2) ) && HB_ISCHAR(3) && ( ISQVARIANT(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2)|| HB_ISCHAR(2)) && HB_ISCHAR(3) && (ISQVARIANT(4) || HB_ISNIL(4)))
   {
     /*
     void insertItem( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 
     if (obj != nullptr)
     {
-      obj->insertItem( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(2)) : QIcon( hb_parc(2) ), PQSTRING(3), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(4)) );
+      obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(2)) : QIcon( hb_parc(2)), PQSTRING(3), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -531,10 +531,10 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
     {
 #endif
-      obj->insertItems( PINT(1), PQSTRINGLIST(2) );
+      obj->insertItems(PINT(1), PQSTRINGLIST(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,10 +557,10 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->insertPolicy() );
+      RENUM(obj->insertPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -581,10 +581,10 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->insertSeparator( PINT(1) );
+      obj->insertSeparator(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,10 +607,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEditable() );
+      RBOOL(obj->isEditable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,10 +631,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QVariant( obj->itemData( PINT(1), OPINT( 2, Qt::UserRole ) ) );
+      auto ptr = new QVariant(obj->itemData(PINT(1), OPINT( 2, Qt::UserRole )));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->itemDelegate();
@@ -681,10 +681,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QIcon( obj->itemIcon( PINT(1) ) );
+      auto ptr = new QIcon(obj->itemIcon(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -706,10 +706,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->itemText( PINT(1) ) );
+      RQSTRING(obj->itemText(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->lineEdit();
@@ -755,10 +755,10 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maxCount() );
+      RINT(obj->maxCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -779,10 +779,10 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maxVisibleItems() );
+      RINT(obj->maxVisibleItems());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -803,10 +803,10 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumContentsLength() );
+      RINT(obj->minimumContentsLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->model();
@@ -852,10 +852,10 @@ HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->modelColumn() );
+      RINT(obj->modelColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -876,10 +876,10 @@ HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeItem( PINT(1) );
+      obj->removeItem(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -902,10 +902,10 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QModelIndex( obj->rootModelIndex() );
+      auto ptr = new QModelIndex(obj->rootModelIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -927,10 +927,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCOMPLETER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOMPLETER(1) )
+    if (ISNUMPAR(1) && ISQCOMPLETER(1))
     {
 #endif
-      obj->setCompleter( PQCOMPLETER(1) );
+      obj->setCompleter(PQCOMPLETER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -953,10 +953,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETDUPLICATESENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDuplicatesEnabled( PBOOL(1) );
+      obj->setDuplicatesEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -979,10 +979,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setEditable( PBOOL(1) );
+      obj->setEditable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1005,10 +1005,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETFRAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFrame( PBOOL(1) );
+      obj->setFrame(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1031,10 +1031,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETICONSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setIconSize( *PQSIZE(1) );
+      obj->setIconSize( *PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1057,10 +1057,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInsertPolicy( static_cast<QComboBox::InsertPolicy>( hb_parni(1) ) );
+      obj->setInsertPolicy( static_cast<QComboBox::InsertPolicy>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1083,10 +1083,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setItemData( PINT(1), *PQVARIANT(2), OPINT( 3, Qt::UserRole ) );
+      obj->setItemData(PINT(1), *PQVARIANT(2), OPINT( 3, Qt::UserRole));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1109,10 +1109,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDELEGATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1))
     {
 #endif
-      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
+      obj->setItemDelegate(PQABSTRACTITEMDELEGATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1135,10 +1135,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQICON(2) || HB_ISCHAR(2) ) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)))
     {
 #endif
-      obj->setItemIcon( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(2)) : QIcon( hb_parc(2) ) );
+      obj->setItemIcon(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(2)) : QIcon( hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1161,10 +1161,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setItemText( PINT(1), PQSTRING(2) );
+      obj->setItemText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1187,10 +1187,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETLINEEDIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLINEEDIT(1) )
+    if (ISNUMPAR(1) && ISQLINEEDIT(1))
     {
 #endif
-      obj->setLineEdit( PQLINEEDIT(1) );
+      obj->setLineEdit(PQLINEEDIT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1213,10 +1213,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaxCount( PINT(1) );
+      obj->setMaxCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1239,10 +1239,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMAXVISIBLEITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaxVisibleItems( PINT(1) );
+      obj->setMaxVisibleItems(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1265,10 +1265,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMINIMUMCONTENTSLENGTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumContentsLength( PINT(1) );
+      obj->setMinimumContentsLength(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1291,10 +1291,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1317,10 +1317,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETMODELCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModelColumn( PINT(1) );
+      obj->setModelColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1343,10 +1343,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETROOTMODELINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setRootModelIndex( *PQMODELINDEX(1) );
+      obj->setRootModelIndex( *PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1369,10 +1369,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSizeAdjustPolicy( static_cast<QComboBox::SizeAdjustPolicy>( hb_parni(1) ) );
+      obj->setSizeAdjustPolicy( static_cast<QComboBox::SizeAdjustPolicy>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1395,10 +1395,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETVALIDATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVALIDATOR(1) )
+    if (ISNUMPAR(1) && ISQVALIDATOR(1))
     {
 #endif
-      obj->setValidator( PQVALIDATOR(1) );
+      obj->setValidator(PQVALIDATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1421,10 +1421,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETVIEW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMVIEW(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMVIEW(1))
     {
 #endif
-      obj->setView( PQABSTRACTITEMVIEW(1) );
+      obj->setView(PQABSTRACTITEMVIEW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1447,7 +1447,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showPopup();
@@ -1473,10 +1473,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->sizeAdjustPolicy() );
+      RENUM(obj->sizeAdjustPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->validator();
@@ -1522,7 +1522,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->view();
@@ -1547,10 +1547,10 @@ HB_FUNC_STATIC( QCOMBOBOX_EVENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1571,10 +1571,10 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint() );
+      auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1596,10 +1596,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1621,7 +1621,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAREDITTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearEditText();
@@ -1673,10 +1673,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1699,10 +1699,10 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setEditText( PQSTRING(1) );
+      obj->setEditText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1729,7 +1729,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1754,7 +1754,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1779,7 +1779,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("editTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1804,7 +1804,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1830,7 +1830,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textActivated(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1855,7 +1855,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1884,7 +1884,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTHIGHLIGHTED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textHighlighted(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1909,7 +1909,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONTEXTHIGHLIGHTED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1937,7 +1937,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1962,7 +1962,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1987,7 +1987,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2012,7 +2012,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2037,7 +2037,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2062,7 +2062,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2087,7 +2087,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2112,7 +2112,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2137,7 +2137,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2162,7 +2162,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2187,7 +2187,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -2212,7 +2212,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2227,32 +2227,32 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED )
 {
-  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED1 );
+  HB_FUNC_EXEC(QCOMBOBOX_ONACTIVATED1);
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATEDC )
 {
-  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED2 );
+  HB_FUNC_EXEC(QCOMBOBOX_ONACTIVATED2);
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
 {
-  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 );
+  HB_FUNC_EXEC(QCOMBOBOX_ONCURRENTINDEXCHANGED1);
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
 {
-  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 );
+  HB_FUNC_EXEC(QCOMBOBOX_ONCURRENTINDEXCHANGED2);
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED )
 {
-  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED1 );
+  HB_FUNC_EXEC(QCOMBOBOX_ONHIGHLIGHTED1);
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTEDC )
 {
-  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
+  HB_FUNC_EXEC(QCOMBOBOX_ONHIGHLIGHTED2);
 }
 
 #pragma ENDDUMP

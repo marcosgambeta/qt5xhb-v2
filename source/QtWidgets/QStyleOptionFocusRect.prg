@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionFocusRect()
@@ -59,12 +59,12 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1))
   {
     /*
     QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
     */
-    auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
+    auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -83,9 +83,9 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      auto ptr = new QColor( obj->backgroundColor );
+      auto ptr = new QColor(obj->backgroundColor);
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
     }
     else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
 
   if (obj != nullptr)
   {
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
       obj->backgroundColor = *PQCOLOR(1);
     }

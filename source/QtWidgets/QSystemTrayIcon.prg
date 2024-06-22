@@ -72,21 +72,21 @@ RETURN
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QSystemTrayIcon( QObject * parent = nullptr )
     */
-    auto obj = new QSystemTrayIcon( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QSystemTrayIcon( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && ( ISQICON(1)|| HB_ISCHAR(1) ) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && (ISQICON(1)|| HB_ISCHAR(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QSystemTrayIcon( const QIcon & icon, QObject * parent = nullptr )
     */
-    auto obj = new QSystemTrayIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QSystemTrayIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->contextMenu();
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRect( obj->geometry() );
+      auto ptr = new QRect(obj->geometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QIcon( obj->icon() );
+      auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVisible() );
+      RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,10 +223,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENU(1) )
+    if (ISNUMPAR(1) && ISQMENU(1))
     {
 #endif
-      obj->setContextMenu( PQMENU(1) );
+      obj->setContextMenu(PQMENU(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,10 +275,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setToolTip( PQSTRING(1) );
+      obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,10 +301,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->showMessage( PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? static_cast<QSystemTrayIcon::MessageIcon >( QSystemTrayIcon::Information ) : static_cast<QSystemTrayIcon::MessageIcon >( hb_parni(3) ), OPINT( 4, 10000 ) );
+      obj->showMessage(PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? static_cast<QSystemTrayIcon::MessageIcon >( QSystemTrayIcon::Information ) : static_cast<QSystemTrayIcon::MessageIcon >( hb_parni(3)), OPINT( 4, 10000));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,10 +327,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toolTip() );
+      RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->hide();
@@ -377,10 +377,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->show();
@@ -425,10 +425,10 @@ static bool isSystemTrayAvailable()
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QSystemTrayIcon::isSystemTrayAvailable() );
+    RBOOL( QSystemTrayIcon::isSystemTrayAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -444,10 +444,10 @@ static bool supportsMessages()
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QSystemTrayIcon::supportsMessages() );
+    RBOOL( QSystemTrayIcon::supportsMessages());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QSystemTrayIcon::ActivationReason)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("messageClicked()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -50,21 +50,21 @@ RETURN
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QTimeEdit( QWidget * parent = nullptr )
     */
-    auto obj = new QTimeEdit( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QTimeEdit( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && ISQTIME(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQTIME(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QTimeEdit( const QTime & time, QWidget * parent = nullptr )
     */
-    auto obj = new QTimeEdit( *PQTIME(1), OPQWIDGET( 2, nullptr ) );
+    auto obj = new QTimeEdit( *PQTIME(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }

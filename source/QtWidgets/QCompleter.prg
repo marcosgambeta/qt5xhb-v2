@@ -95,31 +95,31 @@ RETURN
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QCompleter( QObject * parent = nullptr )
     */
-    auto obj = new QCompleter( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QCompleter( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QCompleter( QAbstractItemModel * model, QObject * parent = nullptr )
     */
-    auto obj = new QCompleter( PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QCompleter(PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
 #ifndef QT_NO_STRINGLISTMODEL
-  else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QCompleter( const QStringList & list, QObject * parent = nullptr )
     */
-    auto obj = new QCompleter( PQSTRINGLIST(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QCompleter(PQSTRINGLIST(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -161,10 +161,10 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->caseSensitivity() );
+      RENUM(obj->caseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,10 +185,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->completionColumn() );
+      RINT(obj->completionColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,10 +209,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->completionCount() );
+      RINT(obj->completionCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,10 +233,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->completionMode() );
+      RENUM(obj->completionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->completionModel();
@@ -282,10 +282,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->completionPrefix() );
+      RQSTRING(obj->completionPrefix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,10 +306,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->completionRole() );
+      RINT(obj->completionRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,10 +330,10 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentCompletion() );
+      RQSTRING(obj->currentCompletion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,10 +354,10 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QModelIndex( obj->currentIndex() );
+      auto ptr = new QModelIndex(obj->currentIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -379,10 +379,10 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentRow() );
+      RINT(obj->currentRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,10 +403,10 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maxVisibleItems() );
+      RINT(obj->maxVisibleItems());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->model();
@@ -452,10 +452,10 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modelSorting() );
+      RENUM(obj->modelSorting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,10 +476,10 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RQSTRING( obj->pathFromIndex( *PQMODELINDEX(1) ) );
+      RQSTRING(obj->pathFromIndex( *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->popup();
@@ -525,10 +525,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaseSensitivity( static_cast<Qt::CaseSensitivity>( hb_parni(1) ) );
+      obj->setCaseSensitivity( static_cast<Qt::CaseSensitivity>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,10 +551,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCompletionColumn( PINT(1) );
+      obj->setCompletionColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,10 +577,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCompletionMode( static_cast<QCompleter::CompletionMode>( hb_parni(1) ) );
+      obj->setCompletionMode( static_cast<QCompleter::CompletionMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,10 +603,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCompletionRole( PINT(1) );
+      obj->setCompletionRole(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,10 +629,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setCurrentRow( PINT(1) ) );
+      RBOOL(obj->setCurrentRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,10 +653,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaxVisibleItems( PINT(1) );
+      obj->setMaxVisibleItems(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,10 +679,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -705,10 +705,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModelSorting( static_cast<QCompleter::ModelSorting>( hb_parni(1) ) );
+      obj->setModelSorting( static_cast<QCompleter::ModelSorting>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -731,10 +731,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMVIEW(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMVIEW(1))
     {
 #endif
-      obj->setPopup( PQABSTRACTITEMVIEW(1) );
+      obj->setPopup(PQABSTRACTITEMVIEW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -757,10 +757,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -783,10 +783,10 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRINGLIST( obj->splitPath( PQSTRING(1) ) );
+      RQSTRINGLIST(obj->splitPath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->widget();
@@ -832,10 +832,10 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->wrapAround() );
+      RBOOL(obj->wrapAround());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -856,10 +856,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQRECT(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->complete( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>(Qt5xHb::itemGetPtr(1)) );
+      obj->complete( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>(Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -882,10 +882,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCompletionPrefix( PQSTRING(1) );
+      obj->setCompletionPrefix(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -908,10 +908,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setWrapAround( PBOOL(1) );
+      obj->setWrapAround(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -935,10 +935,10 @@ HB_FUNC_STATIC( QCOMPLETER_SETFILTERMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFilterMode( static_cast<Qt::MatchFlags>( hb_parni(1) ) );
+      obj->setFilterMode( static_cast<Qt::MatchFlags>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -963,10 +963,10 @@ HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->filterMode() );
+      RENUM(obj->filterMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

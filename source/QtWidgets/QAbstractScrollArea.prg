@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
     {
 #endif
       obj->addScrollBarWidget(PQWIDGET(1), static_cast<Qt::Alignment>(hb_parni(2)));
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->horizontalScrollBarPolicy());
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setHorizontalScrollBarPolicy(static_cast<Qt::ScrollBarPolicy>(hb_parni(1)));
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->maximumViewportSize());
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       auto list = obj->scrollBarWidgets(static_cast<Qt::Alignment>(hb_parni(1)));
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->cornerWidget();
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
       obj->setCornerWidget(PQWIDGET(1));
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->horizontalScrollBar();
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCROLLBAR(1) )
+    if (ISNUMPAR(1) && ISQSCROLLBAR(1))
     {
 #endif
       obj->setHorizontalScrollBar(PQSCROLLBAR(1));
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
       obj->setViewport(PQWIDGET(1));
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->verticalScrollBar();
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCROLLBAR(1) )
+    if (ISNUMPAR(1) && ISQSCROLLBAR(1))
     {
 #endif
       obj->setVerticalScrollBar(PQSCROLLBAR(1));
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->verticalScrollBarPolicy());
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setVerticalScrollBarPolicy(static_cast<Qt::ScrollBarPolicy>(hb_parni(1)));
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->viewport();
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = new QSize(obj->sizeHint());
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETUPVIEWPORT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
       obj->setupViewport(PQWIDGET(1));
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       RENUM(obj->sizeAdjustPolicy());
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setSizeAdjustPolicy(static_cast<QAbstractScrollArea::SizeAdjustPolicy>(hb_parni(1)));

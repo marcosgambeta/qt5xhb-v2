@@ -71,9 +71,9 @@ QGraphicsDropShadowEffect( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsDropShadowEffect( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QGraphicsDropShadowEffect( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->blurRadius() );
+      RQREAL(obj->blurRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QColor( obj->color() );
+      auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPointF( obj->offset() );
+      auto ptr = new QPointF(obj->offset());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->xOffset() );
+      RQREAL(obj->xOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,10 +208,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->yOffset() );
+      RQREAL(obj->yOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,10 +232,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      auto ptr = new QRectF(obj->boundingRectFor( *PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -257,10 +257,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBlurRadius( PQREAL(1) );
+      obj->setBlurRadius(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,10 +283,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1) ) );
+      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
     void setOffset( const QPointF & ofs )
@@ -310,13 +310,13 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 
     if (obj != nullptr)
     {
-      obj->setOffset( *PQPOINTF(1) );
+      obj->setOffset( *PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setOffset( qreal dx, qreal dy )
@@ -325,13 +325,13 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 
     if (obj != nullptr)
     {
-      obj->setOffset( PQREAL(1), PQREAL(2) );
+      obj->setOffset(PQREAL(1), PQREAL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setOffset( qreal d )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 
     if (obj != nullptr)
     {
-      obj->setOffset( PQREAL(1) );
+      obj->setOffset(PQREAL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -362,10 +362,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setXOffset( PQREAL(1) );
+      obj->setXOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,10 +388,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setYOffset( PQREAL(1) );
+      obj->setYOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("blurRadiusChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("offsetChanged(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

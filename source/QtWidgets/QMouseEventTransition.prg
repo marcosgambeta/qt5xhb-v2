@@ -59,21 +59,21 @@ RETURN
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
     QMouseEventTransition( QState * sourceState = nullptr )
     */
-    auto obj = new QMouseEventTransition( OPQSTATE( 1, nullptr ) );
+    auto obj = new QMouseEventTransition( OPQSTATE( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( ISQSTATE(4) || HB_ISNIL(4) ) )
+  else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4)))
   {
     /*
     QMouseEventTransition( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = nullptr )
     */
-    auto obj = new QMouseEventTransition( PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2) ), static_cast<Qt::MouseButton>( hb_parni(3) ), OPQSTATE( 4, nullptr ) );
+    auto obj = new QMouseEventTransition(PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2)), static_cast<Qt::MouseButton>( hb_parni(3)), OPQSTATE( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -111,10 +111,10 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->button() );
+      RENUM(obj->button());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPainterPath( obj->hitTestPath() );
+      auto ptr = new QPainterPath(obj->hitTestPath());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -160,10 +160,10 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modifierMask() );
+      RENUM(obj->modifierMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButton( static_cast<Qt::MouseButton>( hb_parni(1) ) );
+      obj->setButton( static_cast<Qt::MouseButton>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,10 +210,10 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
+    if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
-      obj->setHitTestPath( *PQPAINTERPATH(1) );
+      obj->setHitTestPath( *PQPAINTERPATH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,10 +236,10 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModifierMask( static_cast<Qt::KeyboardModifiers>( hb_parni(1) ) );
+      obj->setModifierMask( static_cast<Qt::KeyboardModifiers>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

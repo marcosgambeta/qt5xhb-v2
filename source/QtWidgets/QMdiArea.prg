@@ -92,9 +92,9 @@ QMdiArea( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QMDIAREA_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QMdiArea( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QMdiArea( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->activationOrder() );
+      RENUM(obj->activationOrder());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->activeSubWindow();
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+      auto ptr = obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,10 +205,10 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBrush( obj->background() );
+      auto ptr = new QBrush(obj->background());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->currentSubWindow();
@@ -255,10 +255,10 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->documentMode() );
+      RBOOL(obj->documentMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,10 +279,10 @@ HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->removeSubWindow( PQWIDGET(1) );
+      obj->removeSubWindow(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,10 +305,10 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setActivationOrder( static_cast<QMdiArea::WindowOrder>( hb_parni(1) ) );
+      obj->setActivationOrder( static_cast<QMdiArea::WindowOrder>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,10 +331,10 @@ HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1) );
+      obj->setBackground( *PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,10 +357,10 @@ HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDocumentMode( PBOOL(1) );
+      obj->setDocumentMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,10 +383,10 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setOption( static_cast<QMdiArea::AreaOption>( hb_parni(1) ), OPBOOL( 2, true ) );
+      obj->setOption( static_cast<QMdiArea::AreaOption>( hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,10 +409,10 @@ HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTabPosition( static_cast<QTabWidget::TabPosition>( hb_parni(1) ) );
+      obj->setTabPosition( static_cast<QTabWidget::TabPosition>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,10 +435,10 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTabShape( static_cast<QTabWidget::TabShape>( hb_parni(1) ) );
+      obj->setTabShape( static_cast<QTabWidget::TabShape>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,10 +461,10 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setViewMode( static_cast<QMdiArea::ViewMode>( hb_parni(1) ) );
+      obj->setViewMode( static_cast<QMdiArea::ViewMode>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,10 +487,10 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto list = obj->subWindowList( HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder >( QMdiArea::CreationOrder ) : static_cast<QMdiArea::WindowOrder >( hb_parni(1) ) );
+      auto list = obj->subWindowList( HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder >( QMdiArea::CreationOrder ) : static_cast<QMdiArea::WindowOrder >( hb_parni(1)));
       auto pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -534,10 +534,10 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->tabPosition() );
+      RENUM(obj->tabPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -558,10 +558,10 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->tabShape() );
+      RENUM(obj->tabShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,10 +582,10 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->testOption( static_cast<QMdiArea::AreaOption>( hb_parni(1) ) ) );
+      RBOOL(obj->testOption( static_cast<QMdiArea::AreaOption>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -606,10 +606,10 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->viewMode() );
+      RENUM(obj->viewMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,10 +630,10 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint() );
+      auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -655,10 +655,10 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->activateNextSubWindow();
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->activatePreviousSubWindow();
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cascadeSubWindows();
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->closeActiveSubWindow();
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->closeAllSubWindows();
@@ -810,10 +810,10 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMDISUBWINDOW(1) )
+    if (ISNUMPAR(1) && ISQMDISUBWINDOW(1))
     {
 #endif
-      obj->setActiveSubWindow( PQMDISUBWINDOW(1) );
+      obj->setActiveSubWindow(PQMDISUBWINDOW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->tileSubWindows();
@@ -862,10 +862,10 @@ HB_FUNC_STATIC( QMDIAREA_TABSCLOSABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->tabsClosable() );
+      RBOOL(obj->tabsClosable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -886,10 +886,10 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSCLOSABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTabsClosable( PBOOL(1) );
+      obj->setTabsClosable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -912,10 +912,10 @@ HB_FUNC_STATIC( QMDIAREA_TABSMOVABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->tabsMovable() );
+      RBOOL(obj->tabsMovable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,10 +936,10 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSMOVABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTabsMovable( PBOOL(1) );
+      obj->setTabsMovable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("subWindowActivated(QMdiSubWindow*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

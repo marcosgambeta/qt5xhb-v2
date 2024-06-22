@@ -66,9 +66,9 @@ QScrollArea( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QScrollArea( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QScrollArea( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -105,10 +105,10 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->ensureVisible( PINT(1), PINT(2), OPINT( 3, 50 ), OPINT( 4, 50 ) );
+      obj->ensureVisible(PINT(1), PINT(2), OPINT( 3, 50 ), OPINT( 4, 50));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,10 +155,10 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->ensureWidgetVisible( PQWIDGET(1), OPINT( 2, 50 ), OPINT( 3, 50 ) );
+      obj->ensureWidgetVisible(PQWIDGET(1), OPINT( 2, 50 ), OPINT( 3, 50));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,10 +181,10 @@ HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1) ) );
+      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,10 +207,10 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,10 +233,10 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setWidgetResizable( PBOOL(1) );
+      obj->setWidgetResizable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->takeWidget();
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->widget();
@@ -309,10 +309,10 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->widgetResizable() );
+      RBOOL(obj->widgetResizable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,10 +333,10 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      RBOOL( obj->focusNextPrevChild( PBOOL(1) ) );
+      RBOOL(obj->focusNextPrevChild(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,10 +357,10 @@ HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint() );
+      auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

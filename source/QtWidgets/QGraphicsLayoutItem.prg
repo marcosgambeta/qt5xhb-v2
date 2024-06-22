@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->contentsRect() );
+      auto ptr = new QRectF(obj->contentsRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -140,10 +140,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSIZEF(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QSizeF( obj->effectiveSizeHint( static_cast<Qt::SizeHint>( hb_parni(1) ), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2)) ) );
+      auto ptr = new QSizeF(obj->effectiveSizeHint( static_cast<Qt::SizeHint>( hb_parni(1)), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -165,10 +165,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QRectF( obj->geometry() );
+      auto ptr = new QRectF(obj->geometry());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -190,18 +190,18 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
       qreal par1;
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getContentsMargins( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
+      obj->getContentsMargins( &par1, &par2, &par3, &par4);
+      hb_stornd( par1, 1);
+      hb_stornd( par2, 2);
+      hb_stornd( par3, 3);
+      hb_stornd( par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->graphicsItem();
@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLayout() );
+      RBOOL(obj->isLayout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,10 +273,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->maximumHeight() );
+      RQREAL(obj->maximumHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,10 +297,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSizeF( obj->maximumSize() );
+      auto ptr = new QSizeF(obj->maximumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -322,10 +322,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->maximumWidth() );
+      RQREAL(obj->maximumWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,10 +346,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->minimumHeight() );
+      RQREAL(obj->minimumHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,10 +370,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSizeF( obj->minimumSize() );
+      auto ptr = new QSizeF(obj->minimumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -395,10 +395,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->minimumWidth() );
+      RQREAL(obj->minimumWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,10 +419,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->ownedByLayout() );
+      RBOOL(obj->ownedByLayout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->parentLayoutItem();
@@ -468,10 +468,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->preferredHeight() );
+      RQREAL(obj->preferredHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,10 +492,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSizeF( obj->preferredSize() );
+      auto ptr = new QSizeF(obj->preferredSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -517,10 +517,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->preferredWidth() );
+      RQREAL(obj->preferredWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,10 +541,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry( *PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,10 +567,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumHeight( PQREAL(1) );
+      obj->setMaximumHeight(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
-  if( ISNUMPAR(1) && ISQSIZEF(1) )
+  if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
     void setMaximumSize( const QSizeF & size )
@@ -594,13 +594,13 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 
     if (obj != nullptr)
     {
-      obj->setMaximumSize( *PQSIZEF(1) );
+      obj->setMaximumSize( *PQSIZEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setMaximumSize( qreal w, qreal h )
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 
     if (obj != nullptr)
     {
-      obj->setMaximumSize( PQREAL(1), PQREAL(2) );
+      obj->setMaximumSize(PQREAL(1), PQREAL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -631,10 +631,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumWidth( PQREAL(1) );
+      obj->setMaximumWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -657,10 +657,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumHeight( PQREAL(1) );
+      obj->setMinimumHeight(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
-  if( ISNUMPAR(1) && ISQSIZEF(1) )
+  if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
     void setMinimumSize( const QSizeF & size )
@@ -684,13 +684,13 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 
     if (obj != nullptr)
     {
-      obj->setMinimumSize( *PQSIZEF(1) );
+      obj->setMinimumSize( *PQSIZEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setMinimumSize( qreal w, qreal h )
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 
     if (obj != nullptr)
     {
-      obj->setMinimumSize( PQREAL(1), PQREAL(2) );
+      obj->setMinimumSize(PQREAL(1), PQREAL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -721,10 +721,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumWidth( PQREAL(1) );
+      obj->setMinimumWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -747,10 +747,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
 #endif
-      obj->setParentLayoutItem( PQGRAPHICSLAYOUTITEM(1) );
+      obj->setParentLayoutItem(PQGRAPHICSLAYOUTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -773,10 +773,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPreferredHeight( PQREAL(1) );
+      obj->setPreferredHeight(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
-  if( ISNUMPAR(1) && ISQSIZEF(1) )
+  if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
     void setPreferredSize( const QSizeF & size )
@@ -800,13 +800,13 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 
     if (obj != nullptr)
     {
-      obj->setPreferredSize( *PQSIZEF(1) );
+      obj->setPreferredSize( *PQSIZEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setPreferredSize( qreal w, qreal h )
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 
     if (obj != nullptr)
     {
-      obj->setPreferredSize( PQREAL(1), PQREAL(2) );
+      obj->setPreferredSize(PQREAL(1), PQREAL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -837,10 +837,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPreferredWidth( PQREAL(1) );
+      obj->setPreferredWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {
-  if( ISNUMPAR(1) && ISQSIZEPOLICY(1) )
+  if (ISNUMPAR(1) && ISQSIZEPOLICY(1))
   {
     /*
     void setSizePolicy( const QSizePolicy & policy )
@@ -864,13 +864,13 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 
     if (obj != nullptr)
     {
-      obj->setSizePolicy( *PQSIZEPOLICY(1) );
+      obj->setSizePolicy( *PQSIZEPOLICY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
     void setSizePolicy( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 
     if (obj != nullptr)
     {
-      obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni(1) ), static_cast<QSizePolicy::Policy>( hb_parni(2) ), HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType >( QSizePolicy::DefaultType ) : static_cast<QSizePolicy::ControlType >( hb_parni(3) ) );
+      obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni(1)), static_cast<QSizePolicy::Policy>( hb_parni(2)), HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType >( QSizePolicy::DefaultType ) : static_cast<QSizePolicy::ControlType >( hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -901,10 +901,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSizePolicy( obj->sizePolicy() );
+      auto ptr = new QSizePolicy(obj->sizePolicy());
       Qt5xHb::createReturnClass(ptr, "QSIZEPOLICY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->updateGeometry();
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -974,12 +974,12 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_NEWFROM )
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_NEWFROM );
+  HB_FUNC_EXEC(QGRAPHICSLAYOUTITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QGRAPHICSLAYOUTITEM_NEWFROM );
+  HB_FUNC_EXEC(QGRAPHICSLAYOUTITEM_NEWFROM);
 }
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SELFDESTRUCTION )
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -88,9 +88,9 @@ QDataWidgetMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QDataWidgetMapper( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QDataWidgetMapper( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
-  if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
     void addMapping( QWidget * widget, int section )
@@ -128,13 +128,13 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 
     if (obj != nullptr)
     {
-      obj->addMapping( PQWIDGET(1), PINT(2) );
+      obj->addMapping(PQWIDGET(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3) )
+  else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3))
   {
     /*
     void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 
     if (obj != nullptr)
     {
-      obj->addMapping( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
+      obj->addMapping(PQWIDGET(1), PINT(2), *PQBYTEARRAY(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearMapping();
@@ -191,10 +191,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentIndex() );
+      RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->itemDelegate();
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      auto ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET(1) ) );
+      auto ptr = new QByteArray(obj->mappedPropertyName(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -265,10 +265,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      RINT( obj->mappedSection( PQWIDGET(1) ) );
+      RINT(obj->mappedSection(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,10 +289,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->mappedWidgetAt( PINT(1) );
+      auto ptr = obj->mappedWidgetAt(PINT(1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->model();
@@ -339,10 +339,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,10 +363,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->removeMapping( PQWIDGET(1) );
+      obj->removeMapping(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,10 +389,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QModelIndex( obj->rootIndex() );
+      auto ptr = new QModelIndex(obj->rootIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -414,10 +414,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1))
     {
 #endif
-      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
+      obj->setItemDelegate(PQABSTRACTITEMDELEGATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,10 +440,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,10 +466,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1) ) );
+      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,10 +492,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX(1) );
+      obj->setRootIndex( *PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,10 +518,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSubmitPolicy( static_cast<QDataWidgetMapper::SubmitPolicy>( hb_parni(1) ) );
+      obj->setSubmitPolicy( static_cast<QDataWidgetMapper::SubmitPolicy>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,10 +544,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->submitPolicy() );
+      RENUM(obj->submitPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->revert();
@@ -594,10 +594,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -620,10 +620,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setCurrentModelIndex( *PQMODELINDEX(1) );
+      obj->setCurrentModelIndex( *PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -646,10 +646,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->submit() );
+      RBOOL(obj->submit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toFirst();
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toLast();
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toNext();
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toPrevious();
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

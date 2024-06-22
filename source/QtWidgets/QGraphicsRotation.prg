@@ -65,9 +65,9 @@ QGraphicsRotation( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsRotation( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QGraphicsRotation( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->angle() );
+      RQREAL(obj->angle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,10 +128,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVector3D( obj->axis() );
+      auto ptr = new QVector3D(obj->axis());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -153,10 +153,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVector3D( obj->origin() );
+      auto ptr = new QVector3D(obj->origin());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -178,10 +178,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAngle( PQREAL(1) );
+      obj->setAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
-  if( ISNUMPAR(1) && HB_ISOBJECT(1) )
+  if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
     void setAxis( const QVector3D & axis )
@@ -205,13 +205,13 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 
     if (obj != nullptr)
     {
-      obj->setAxis( *PQVECTOR3D(1) );
+      obj->setAxis( *PQVECTOR3D(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setAxis( Qt::Axis axis )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 
     if (obj != nullptr)
     {
-      obj->setAxis( static_cast<Qt::Axis>( hb_parni(1) ) );
+      obj->setAxis( static_cast<Qt::Axis>( hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -242,10 +242,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+    if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setOrigin( *PQVECTOR3D(1) );
+      obj->setOrigin( *PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,10 +268,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
+    if (ISNUMPAR(1) && ISQMATRIX4X4(1))
     {
 #endif
-      obj->applyTo( PQMATRIX4X4(1) );
+      obj->applyTo(PQMATRIX4X4(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("angleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("originChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

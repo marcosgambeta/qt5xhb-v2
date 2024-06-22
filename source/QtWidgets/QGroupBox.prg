@@ -65,21 +65,21 @@ RETURN
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QGroupBox( QWidget * parent = nullptr )
     */
-    auto obj = new QGroupBox( OPQWIDGET( 1, nullptr ) );
+    auto obj = new QGroupBox( OPQWIDGET( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QGroupBox( const QString & title, QWidget * parent = nullptr )
     */
-    auto obj = new QGroupBox( PQSTRING(1), OPQWIDGET( 2, nullptr ) );
+    auto obj = new QGroupBox(PQSTRING(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCheckable() );
+      RBOOL(obj->isCheckable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,10 +165,10 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isChecked() );
+      RBOOL(obj->isChecked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,10 +189,10 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFlat() );
+      RBOOL(obj->isFlat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,10 +213,10 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( PINT(1) );
+      obj->setAlignment(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setCheckable( PBOOL(1) );
+      obj->setCheckable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,10 +265,10 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFlat( PBOOL(1) );
+      obj->setFlat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,10 +291,10 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,10 +317,10 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,10 +341,10 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint() );
+      auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,10 +366,10 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setChecked( PBOOL(1) );
+      obj->setChecked(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("toggled(bool)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

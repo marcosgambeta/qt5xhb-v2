@@ -67,9 +67,9 @@ QGraphicsAnchorLayout( QGraphicsLayoutItem * parent = nullptr )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsAnchorLayout( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem*>(Qt5xHb::itemGetPtr(1)) );
+    auto obj = new QGraphicsAnchorLayout( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4))
     {
 #endif
-      auto ptr = obj->addAnchor( PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::AnchorPoint>( hb_parni(2) ), PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::AnchorPoint>( hb_parni(4) ) );
+      auto ptr = obj->addAnchor(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::AnchorPoint>( hb_parni(2)), PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::AnchorPoint>( hb_parni(4)));
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSANCHOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->addAnchors( PQGRAPHICSLAYOUTITEM(1), PQGRAPHICSLAYOUTITEM(2), HB_ISNIL(3) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(3) ) );
+      obj->addAnchors(PQGRAPHICSLAYOUTITEM(1), PQGRAPHICSLAYOUTITEM(2), HB_ISNIL(3) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >( hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,10 +155,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->addCornerAnchors( PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Corner>( hb_parni(2) ), PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::Corner>( hb_parni(4) ) );
+      obj->addCornerAnchors(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Corner>( hb_parni(2)), PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::Corner>( hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,10 +181,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4) )
+    if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4))
     {
 #endif
-      auto ptr = obj->anchor( PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::AnchorPoint>( hb_parni(2) ), PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::AnchorPoint>( hb_parni(4) ) );
+      auto ptr = obj->anchor(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::AnchorPoint>( hb_parni(2)), PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::AnchorPoint>( hb_parni(4)));
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSANCHOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->horizontalSpacing() );
+      RQREAL(obj->horizontalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,10 +230,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHorizontalSpacing( PQREAL(1) );
+      obj->setHorizontalSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,10 +256,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSpacing( PQREAL(1) );
+      obj->setSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,10 +282,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVerticalSpacing( PQREAL(1) );
+      obj->setVerticalSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,10 +308,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->verticalSpacing() );
+      RQREAL(obj->verticalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,10 +332,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->invalidate();
@@ -382,10 +382,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->itemAt( PINT(1) );
+      auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -407,10 +407,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeAt( PINT(1) );
+      obj->removeAt(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,10 +433,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry( *PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
