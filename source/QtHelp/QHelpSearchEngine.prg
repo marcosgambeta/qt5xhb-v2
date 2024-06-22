@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpSearchQueryWidget * ptr = obj->queryWidget();
+      auto ptr = obj->queryWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QHELPSEARCHQUERYWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpSearchResultWidget * ptr = obj->resultWidget();
+      auto ptr = obj->resultWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QHELPSEARCHRESULTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

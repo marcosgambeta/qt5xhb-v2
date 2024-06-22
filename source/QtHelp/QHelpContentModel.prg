@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QHelpContentItem * ptr = obj->contentItemAt( *PQMODELINDEX(1) );
+      auto ptr = obj->contentItemAt( *PQMODELINDEX(1) );
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

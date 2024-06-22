@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QHelpContentItem * ptr = obj->child( PINT(1) );
+      auto ptr = obj->child( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpContentItem * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
