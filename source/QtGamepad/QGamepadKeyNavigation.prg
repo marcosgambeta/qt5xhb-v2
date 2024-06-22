@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_GAMEPAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGamepad * ptr = obj->gamepad();
+      auto ptr = obj->gamepad();
       Qt5xHb::createReturnQObjectClass(ptr, "QGAMEPAD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

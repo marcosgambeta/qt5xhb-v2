@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QGamepadManager * ptr = QGamepadManager::instance();
+    auto ptr = QGamepadManager::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QGAMEPADMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
