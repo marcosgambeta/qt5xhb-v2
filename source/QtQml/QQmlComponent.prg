@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
     if( ISNUMPAR(1) && ISQQMLCONTEXT(1) )
     {
 #endif
-      QObject * ptr = obj->beginCreate( PQQMLCONTEXT(1) );
+      auto ptr = obj->beginCreate( PQQMLCONTEXT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 
     if( obj != nullptr )
     {
-      QObject * ptr = obj->create( OPQQMLCONTEXT( 1, nullptr ) );
+      auto ptr = obj->create( OPQQMLCONTEXT( 1, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->creationContext();
+      auto ptr = obj->creationContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

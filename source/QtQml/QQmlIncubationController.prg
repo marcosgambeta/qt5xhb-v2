@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlEngine * ptr = obj->engine();
+      auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

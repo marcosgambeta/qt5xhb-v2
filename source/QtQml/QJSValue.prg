@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QJSVALUE_TOQOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->toQObject();
+      auto ptr = obj->toQObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QObject * ptr = obj->at( PINT(1) );
+      auto ptr = obj->at( PINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->listElementType();
+      auto ptr = obj->listElementType();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object();
+      auto ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QQmlImageProviderBase * ptr = obj->imageProvider( PQSTRING(1) );
+      auto ptr = obj->imageProvider( PQSTRING(1) );
       Qt5xHb::createReturnClass(ptr, "QQMLIMAGEPROVIDERBASE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QQMLENGINE_INCUBATIONCONTROLLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlIncubationController * ptr = obj->incubationController();
+      auto ptr = obj->incubationController();
       Qt5xHb::createReturnClass(ptr, "QQMLINCUBATIONCONTROLLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGERFACTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory();
+      auto ptr = obj->networkAccessManagerFactory();
       Qt5xHb::createReturnClass(ptr, "QQMLNETWORKACCESSMANAGERFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QQMLENGINE_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->rootContext();
+      auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QQmlContext * ptr = QQmlEngine::contextForObject( PQOBJECT(1) );
+    auto ptr = QQmlEngine::contextForObject( PQOBJECT(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
