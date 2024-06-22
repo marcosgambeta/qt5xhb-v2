@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ITEMMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->itemModel();
+      auto ptr = obj->itemModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

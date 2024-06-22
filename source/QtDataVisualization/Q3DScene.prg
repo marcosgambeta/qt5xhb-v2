@@ -446,7 +446,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DCamera * ptr = obj->activeCamera();
+      auto ptr = obj->activeCamera();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DCAMERA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DLight * ptr = obj->activeLight();
+      auto ptr = obj->activeLight();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DLIGHT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

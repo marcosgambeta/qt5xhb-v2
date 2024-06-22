@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstract3DInputHandler * ptr = obj->activeInputHandler();
+      auto ptr = obj->activeInputHandler();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACT3DINPUTHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DTheme * ptr = obj->activeTheme();
+      auto ptr = obj->activeTheme();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DTHEME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SCENE )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DScene * ptr = obj->scene();
+      auto ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstract3DAxis * ptr = obj->selectedAxis();
+      auto ptr = obj->selectedAxis();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACT3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCustom3DItem * ptr = obj->selectedCustomItem();
+      auto ptr = obj->selectedCustomItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QCUSTOM3DITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

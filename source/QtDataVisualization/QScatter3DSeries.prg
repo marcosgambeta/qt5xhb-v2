@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScatterDataProxy * ptr = obj->dataProxy();
+      auto ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTERDATAPROXY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

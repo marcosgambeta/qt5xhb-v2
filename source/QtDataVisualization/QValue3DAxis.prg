@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxisFormatter * ptr = obj->formatter();
+      auto ptr = obj->formatter();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXISFORMATTER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

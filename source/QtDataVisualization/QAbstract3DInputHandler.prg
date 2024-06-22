@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DScene * ptr = obj->scene();
+      auto ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

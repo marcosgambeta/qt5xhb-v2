@@ -368,7 +368,7 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCategory3DAxis * ptr = obj->rowAxis();
+      auto ptr = obj->rowAxis();
       Qt5xHb::createReturnQObjectClass(ptr, "QCATEGORY3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCategory3DAxis * ptr = obj->columnAxis();
+      auto ptr = obj->columnAxis();
       Qt5xHb::createReturnQObjectClass(ptr, "QCATEGORY3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->valueAxis();
+      auto ptr = obj->valueAxis();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBar3DSeries * ptr = obj->primarySeries();
+      auto ptr = obj->primarySeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBar3DSeries * ptr = obj->selectedSeries();
+      auto ptr = obj->selectedSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

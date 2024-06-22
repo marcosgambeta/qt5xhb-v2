@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurface3DSeries * ptr = obj->series();
+      auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QSURFACE3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 
     if( obj != nullptr )
     {
-      const QSurfaceDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
 #endif
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 
     if( obj != nullptr )
     {
-      const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+      auto ptr = obj->itemAt( *PQPOINT(1) );
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
 #endif

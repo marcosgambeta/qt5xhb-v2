@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceDataProxy * ptr = obj->dataProxy();
+      auto ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSURFACEDATAPROXY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

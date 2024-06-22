@@ -132,7 +132,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->axisX();
+      auto ptr = obj->axisX();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->axisY();
+      auto ptr = obj->axisY();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->axisZ();
+      auto ptr = obj->axisZ();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurface3DSeries * ptr = obj->selectedSeries();
+      auto ptr = obj->selectedSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QSURFACE3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

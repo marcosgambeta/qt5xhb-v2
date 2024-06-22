@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBar3DSeries * ptr = obj->series();
+      auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 
     if( obj != nullptr )
     {
-      const QBarDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
     }
 #endif
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 
     if( obj != nullptr )
     {
-      const QBarDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+      auto ptr = obj->itemAt( *PQPOINT(1) );
       Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
     }
 #endif

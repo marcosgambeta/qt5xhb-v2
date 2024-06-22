@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBarDataProxy * ptr = obj->dataProxy();
+      auto ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QBARDATAPROXY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
