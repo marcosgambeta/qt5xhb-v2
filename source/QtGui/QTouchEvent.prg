@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->window();
+      auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->target();
+      auto ptr = obj->target();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTouchDevice * ptr = obj->device();
+      auto ptr = obj->device();
       Qt5xHb::createReturnClass(ptr, "QTOUCHDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

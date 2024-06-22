@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->oldPos();
+      auto ptr = &obj->oldPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->pos();
+      auto ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

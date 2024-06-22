@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QColor * ptr = &obj->color();
+      auto ptr = &obj->color();
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QGradient * ptr = obj->gradient();
+      auto ptr = obj->gradient();
       Qt5xHb::createReturnClass(ptr, "QGRADIENT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMatrix * ptr = &obj->matrix();
+      auto ptr = &obj->matrix();
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

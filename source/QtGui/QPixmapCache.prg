@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    QPixmap * ptr = QPixmapCache::find( PQSTRING(1) );
+    auto ptr = QPixmapCache::find( PQSTRING(1) );
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

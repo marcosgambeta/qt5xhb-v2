@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLFunctions * ptr = obj->functions();
+      auto ptr = obj->functions();
       Qt5xHb::createReturnClass(ptr, "QOPENGLFUNCTIONS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScreen * ptr = obj->screen();
+      auto ptr = obj->screen();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->shareContext();
+      auto ptr = obj->shareContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContextGroup * ptr = obj->shareGroup();
+      auto ptr = obj->shareGroup();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXTGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurface * ptr = obj->surface();
+      auto ptr = obj->surface();
       Qt5xHb::createReturnClass(ptr, "QSURFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
   if( ISNUMPAR(0) )
   {
 #endif
-    QOpenGLContext * ptr = QOpenGLContext::currentContext();
+    auto ptr = QOpenGLContext::currentContext();
     Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

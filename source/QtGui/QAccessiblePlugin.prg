@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
+      auto ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

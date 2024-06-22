@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRegion * ptr = &obj->region();
+      auto ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

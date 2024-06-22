@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMimeData * ptr = obj->mimeData();
+      auto ptr = obj->mimeData();
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->source();
+      auto ptr = obj->source();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->target();
+      auto ptr = obj->target();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

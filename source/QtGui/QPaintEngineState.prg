@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainter * ptr = obj->painter();
+      auto ptr = obj->painter();
       Qt5xHb::createReturnClass(ptr, "QPAINTER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

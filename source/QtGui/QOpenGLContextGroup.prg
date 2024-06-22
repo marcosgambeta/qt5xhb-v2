@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
   if( ISNUMPAR(0) )
   {
 #endif
-    QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup();
+    auto ptr = QOpenGLContextGroup::currentContextGroup();
     Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXTGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

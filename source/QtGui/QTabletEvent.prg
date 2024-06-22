@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOSF )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->globalPosF();
+      auto ptr = &obj->globalPosF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POSF )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->posF();
+      auto ptr = &obj->posF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

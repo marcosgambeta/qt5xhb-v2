@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QKeySequence * ptr = &obj->key();
+      auto ptr = &obj->key();
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

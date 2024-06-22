@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRegExp * ptr = &obj->regExp();
+      auto ptr = &obj->regExp();
       Qt5xHb::createReturnClass(ptr, "QREGEXP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

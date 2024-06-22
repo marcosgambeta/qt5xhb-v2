@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRect * ptr = &obj->rect();
+      auto ptr = &obj->rect();
       Qt5xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRegion * ptr = &obj->region();
+      auto ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

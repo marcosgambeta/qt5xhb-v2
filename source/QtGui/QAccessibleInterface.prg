@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object();
+      auto ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->window();
+      auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_FOCUSCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->focusChild();
+      auto ptr = obj->focusChild();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->childAt( PINT(1), PINT(2) );
+      auto ptr = obj->childAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILD )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->child( PINT(1) );
+      auto ptr = obj->child( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXTINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleTextInterface * ptr = obj->textInterface();
+      auto ptr = obj->textInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLETEXTINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleEditableTextInterface * ptr = obj->editableTextInterface();
+      auto ptr = obj->editableTextInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEEDITABLETEXTINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VALUEINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleValueInterface * ptr = obj->valueInterface();
+      auto ptr = obj->valueInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEVALUEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleActionInterface * ptr = obj->actionInterface();
+      auto ptr = obj->actionInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEACTIONINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_IMAGEINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleImageInterface * ptr = obj->imageInterface();
+      auto ptr = obj->imageInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEIMAGEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLEINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleTableInterface * ptr = obj->tableInterface();
+      auto ptr = obj->tableInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLETABLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLECELLINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleTableCellInterface * ptr = obj->tableCellInterface();
+      auto ptr = obj->tableCellInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLETABLECELLINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

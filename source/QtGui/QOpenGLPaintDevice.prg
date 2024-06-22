@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintEngine * ptr = obj->paintEngine();
+      auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->context();
+      auto ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

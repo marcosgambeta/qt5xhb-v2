@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
     if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QIconEngine * ptr = obj->create( OPQSTRING( 1, QString() ) );
+      auto ptr = obj->create( OPQSTRING( 1, QString() ) );
       Qt5xHb::createReturnClass(ptr, "QICONENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

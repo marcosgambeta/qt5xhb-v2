@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QMATRIX_TRANSLATE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QMatrix * ptr = &obj->translate( PQREAL(1), PQREAL(2) );
+      auto ptr = &obj->translate( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QMATRIX_SCALE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QMatrix * ptr = &obj->scale( PQREAL(1), PQREAL(2) );
+      auto ptr = &obj->scale( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QMATRIX_SHEAR )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QMatrix * ptr = &obj->shear( PQREAL(1), PQREAL(2) );
+      auto ptr = &obj->shear( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QMATRIX_ROTATE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QMatrix * ptr = &obj->rotate( PQREAL(1) );
+      auto ptr = &obj->rotate( PQREAL(1) );
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

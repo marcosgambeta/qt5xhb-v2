@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextLayout * ptr = obj->layout();
+      auto ptr = obj->layout();
       Qt5xHb::createReturnClass(ptr, "QTEXTLAYOUT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QTextDocument * ptr = obj->document();
+      auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextList * ptr = obj->textList();
+      auto ptr = obj->textList();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlockUserData * ptr = obj->userData();
+      auto ptr = obj->userData();
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCKUSERDATA", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPICTUREIO_PICTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPicture * ptr = &obj->picture();
+      auto ptr = &obj->picture();
       Qt5xHb::createReturnClass(ptr, "QPICTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->ioDevice();
+      auto ptr = obj->ioDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device();
+      auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

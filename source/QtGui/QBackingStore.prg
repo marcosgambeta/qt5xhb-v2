@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_PAINTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintDevice * ptr = obj->paintDevice();
+      auto ptr = obj->paintDevice();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->window();
+      auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

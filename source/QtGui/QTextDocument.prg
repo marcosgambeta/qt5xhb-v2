@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
     if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QTextDocument * ptr = obj->clone( OPQOBJECT( 1, nullptr ) );
+      auto ptr = obj->clone( OPQOBJECT( 1, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractTextDocumentLayout * ptr = obj->documentLayout();
+      auto ptr = obj->documentLayout();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTEXTDOCUMENTLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextFrame * ptr = obj->frameAt( PINT(1) );
+      auto ptr = obj->frameAt( PINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextFrame * ptr = obj->rootFrame();
+      auto ptr = obj->rootFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextObject * ptr = obj->object( PINT(1) );
+      auto ptr = obj->object( PINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
     if( ISNUMPAR(1) && ISQTEXTFORMAT(1) )
     {
 #endif
-      QTextObject * ptr = obj->objectForFormat( *PQTEXTFORMAT(1) );
+      auto ptr = obj->objectForFormat( *PQTEXTFORMAT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

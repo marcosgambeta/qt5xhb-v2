@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSize * ptr = &obj->size();
+      auto ptr = &obj->size();
       Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSize * ptr = &obj->oldSize();
+      auto ptr = &obj->oldSize();
       Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

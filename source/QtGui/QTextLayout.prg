@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QTextOption * ptr = &obj->textOption();
+      auto ptr = &obj->textOption();
       Qt5xHb::createReturnClass(ptr, "QTEXTOPTION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->cellAt( PINT(1), PINT(2) );
+      auto ptr = obj->cellAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->caption();
+      auto ptr = obj->caption();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->summary();
+      auto ptr = obj->summary();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

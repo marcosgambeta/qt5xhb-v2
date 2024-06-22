@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 
     if( obj != nullptr )
     {
-      QTextList * ptr = obj->insertList( *PQTEXTLISTFORMAT(1) );
+      auto ptr = obj->insertList( *PQTEXTLISTFORMAT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
 
@@ -1295,7 +1295,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 
     if( obj != nullptr )
     {
-      QTextList * ptr = obj->insertList( static_cast<QTextListFormat::Style>( hb_parni(1) ) );
+      auto ptr = obj->insertList( static_cast<QTextListFormat::Style>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
 
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 
     if( obj != nullptr )
     {
-      QTextList * ptr = obj->createList( *PQTEXTLISTFORMAT(1) );
+      auto ptr = obj->createList( *PQTEXTLISTFORMAT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
 
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 
     if( obj != nullptr )
     {
-      QTextList * ptr = obj->createList( static_cast<QTextListFormat::Style>( hb_parni(1) ) );
+      auto ptr = obj->createList( static_cast<QTextListFormat::Style>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
 
@@ -1355,7 +1355,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextList * ptr = obj->currentList();
+      auto ptr = obj->currentList();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 
     if( obj != nullptr )
     {
-      QTextTable * ptr = obj->insertTable( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
+      auto ptr = obj->insertTable( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
     }
 
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 
     if( obj != nullptr )
     {
-      QTextTable * ptr = obj->insertTable( PINT(1), PINT(2) );
+      auto ptr = obj->insertTable( PINT(1), PINT(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
     }
 
@@ -1416,7 +1416,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextTable * ptr = obj->currentTable();
+      auto ptr = obj->currentTable();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1441,7 +1441,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
     if( ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1) )
     {
 #endif
-      QTextFrame * ptr = obj->insertFrame( *PQTEXTFRAMEFORMAT(1) );
+      auto ptr = obj->insertFrame( *PQTEXTFRAMEFORMAT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1466,7 +1466,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextFrame * ptr = obj->currentFrame();
+      auto ptr = obj->currentFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1761,7 +1761,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

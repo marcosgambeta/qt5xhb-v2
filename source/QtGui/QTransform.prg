@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QTransform * ptr = &obj->translate( PQREAL(1), PQREAL(2) );
+      auto ptr = &obj->translate( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QTRANSFORM_SCALE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QTransform * ptr = &obj->scale( PQREAL(1), PQREAL(2) );
+      auto ptr = &obj->scale( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QTRANSFORM_SHEAR )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QTransform * ptr = &obj->shear( PQREAL(1), PQREAL(2) );
+      auto ptr = &obj->shear( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QTransform * ptr = &obj->rotate( PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis >( Qt::ZAxis ) : static_cast<Qt::Axis >( hb_parni(2) ) );
+      auto ptr = &obj->rotate( PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis >( Qt::ZAxis ) : static_cast<Qt::Axis >( hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QTransform * ptr = &obj->rotateRadians( PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis >( Qt::ZAxis ) : static_cast<Qt::Axis >( hb_parni(2) ) );
+      auto ptr = &obj->rotateRadians( PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis >( Qt::ZAxis ) : static_cast<Qt::Axis >( hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMatrix * ptr = &obj->toAffine();
+      auto ptr = &obj->toAffine();
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

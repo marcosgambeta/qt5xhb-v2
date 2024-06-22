@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->alternateBase();
+      auto ptr = &obj->alternateBase();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPALETTE_BASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->base();
+      auto ptr = &obj->base();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->brightText();
+      auto ptr = &obj->brightText();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 
     if( obj != nullptr )
     {
-      const QBrush * ptr = &obj->brush( static_cast<QPalette::ColorGroup>( hb_parni(1) ), static_cast<QPalette::ColorRole>( hb_parni(2) ) );
+      auto ptr = &obj->brush( static_cast<QPalette::ColorGroup>( hb_parni(1) ), static_cast<QPalette::ColorRole>( hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
     }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 
     if( obj != nullptr )
     {
-      const QBrush * ptr = &obj->brush( static_cast<QPalette::ColorRole>( hb_parni(1) ) );
+      auto ptr = &obj->brush( static_cast<QPalette::ColorRole>( hb_parni(1) ) );
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
     }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->button();
+      auto ptr = &obj->button();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->buttonText();
+      auto ptr = &obj->buttonText();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 
     if( obj != nullptr )
     {
-      const QColor * ptr = &obj->color( static_cast<QPalette::ColorGroup>( hb_parni(1) ), static_cast<QPalette::ColorRole>( hb_parni(2) ) );
+      auto ptr = &obj->color( static_cast<QPalette::ColorGroup>( hb_parni(1) ), static_cast<QPalette::ColorRole>( hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
     }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 
     if( obj != nullptr )
     {
-      const QColor * ptr = &obj->color( static_cast<QPalette::ColorRole>( hb_parni(1) ) );
+      auto ptr = &obj->color( static_cast<QPalette::ColorRole>( hb_parni(1) ) );
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
     }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QPALETTE_DARK )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->dark();
+      auto ptr = &obj->dark();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->highlight();
+      auto ptr = &obj->highlight();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->highlightedText();
+      auto ptr = &obj->highlightedText();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QPALETTE_LIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->light();
+      auto ptr = &obj->light();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QPALETTE_LINK )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->link();
+      auto ptr = &obj->link();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QPALETTE_LINKVISITED )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->linkVisited();
+      auto ptr = &obj->linkVisited();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QPALETTE_MID )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->mid();
+      auto ptr = &obj->mid();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->midlight();
+      auto ptr = &obj->midlight();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QPALETTE_SHADOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->shadow();
+      auto ptr = &obj->shadow();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QPALETTE_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->text();
+      auto ptr = &obj->text();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->toolTipBase();
+      auto ptr = &obj->toolTipBase();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->toolTipText();
+      auto ptr = &obj->toolTipText();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->window();
+      auto ptr = &obj->window();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->windowText();
+      auto ptr = &obj->windowText();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QPALETTE_PLACEHOLDERTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->placeholderText();
+      auto ptr = &obj->placeholderText();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

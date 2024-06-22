@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBitmap * ptr = obj->bitmap();
+      auto ptr = obj->bitmap();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QCURSOR_MASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBitmap * ptr = obj->mask();
+      auto ptr = obj->mask();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

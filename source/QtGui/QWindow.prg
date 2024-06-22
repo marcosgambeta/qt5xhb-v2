@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->focusObject();
+      auto ptr = obj->focusObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
 
     if( obj != nullptr )
     {
-      QWindow * ptr = obj->parent( static_cast<QWindow::AncestorMode>( hb_parni(1) ) );
+      auto ptr = obj->parent( static_cast<QWindow::AncestorMode>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
     }
 #endif
@@ -1440,7 +1440,7 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
 
     if( obj != nullptr )
     {
-      QWindow * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
     }
 
@@ -1527,7 +1527,7 @@ HB_FUNC_STATIC( QWINDOW_SCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScreen * ptr = obj->screen();
+      auto ptr = obj->screen();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1925,7 +1925,7 @@ HB_FUNC_STATIC( QWINDOW_TRANSIENTPARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->transientParent();
+      auto ptr = obj->transientParent();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2782,7 +2782,7 @@ HB_FUNC_STATIC( QWINDOW_ACCESSIBLEROOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->accessibleRoot();
+      auto ptr = obj->accessibleRoot();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2803,7 +2803,7 @@ HB_FUNC_STATIC( QWINDOW_FROMWINID )
   if( ISNUMPAR(1) && HB_ISPOINTER(1) )
   {
 #endif
-    QWindow * ptr = QWindow::fromWinId( (WId) hb_parptr(1) );
+    auto ptr = QWindow::fromWinId( (WId) hb_parptr(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

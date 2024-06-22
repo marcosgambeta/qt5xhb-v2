@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStandardItem * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStandardItemModel * ptr = obj->model();
+      auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTANDARDITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1564,7 +1564,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QStandardItem * ptr = obj->child( PINT(1), OPINT( 2, 0 ) );
+      auto ptr = obj->child( PINT(1), OPINT( 2, 0 ) );
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1991,7 +1991,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
     if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QStandardItem * ptr = obj->takeChild( PINT(1), OPINT( 2, 0 ) );
+      auto ptr = obj->takeChild( PINT(1), OPINT( 2, 0 ) );
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2136,7 +2136,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStandardItem * ptr = obj->clone();
+      auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

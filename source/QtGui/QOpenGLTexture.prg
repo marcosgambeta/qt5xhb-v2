@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_CREATETEXTUREVIEW )
     if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
     {
 #endif
-      QOpenGLTexture * ptr = obj->createTextureView( static_cast<QOpenGLTexture::Target>( hb_parni(1) ), static_cast<QOpenGLTexture::TextureFormat>( hb_parni(2) ), PINT(3), PINT(4), PINT(5), PINT(6) );
+      auto ptr = obj->createTextureView( static_cast<QOpenGLTexture::Target>( hb_parni(1) ), static_cast<QOpenGLTexture::TextureFormat>( hb_parni(2) ), PINT(3), PINT(4), PINT(5), PINT(6) );
       Qt5xHb::createReturnClass(ptr, "QOPENGLTEXTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->background();
+      auto ptr = &obj->background();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBrush * ptr = &obj->brush();
+      auto ptr = &obj->brush();
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintDevice * ptr = obj->device();
+      auto ptr = obj->device();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QTransform * ptr = &obj->deviceTransform();
+      auto ptr = &obj->deviceTransform();
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2188,7 +2188,7 @@ HB_FUNC_STATIC( QPAINTER_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QFont * ptr = &obj->font();
+      auto ptr = &obj->font();
       Qt5xHb::createReturnClass(ptr, "QFONT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2359,7 +2359,7 @@ HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintEngine * ptr = obj->paintEngine();
+      auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2384,7 +2384,7 @@ HB_FUNC_STATIC( QPAINTER_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPen * ptr = &obj->pen();
+      auto ptr = &obj->pen();
       Qt5xHb::createReturnClass(ptr, "QPEN", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3302,7 +3302,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QTransform * ptr = &obj->transform();
+      auto ptr = &obj->transform();
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3478,7 +3478,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDTRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QTransform * ptr = &obj->worldTransform();
+      auto ptr = &obj->worldTransform();
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

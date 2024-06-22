@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->action();
+      auto ptr = obj->action();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->before();
+      auto ptr = obj->before();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

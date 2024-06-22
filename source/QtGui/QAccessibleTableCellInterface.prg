@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_TABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->table();
+      auto ptr = obj->table();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

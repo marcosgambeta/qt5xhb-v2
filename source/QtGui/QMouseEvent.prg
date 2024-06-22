@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->localPos();
+      auto ptr = &obj->localPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->screenPos();
+      auto ptr = &obj->screenPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->windowPos();
+      auto ptr = &obj->windowPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

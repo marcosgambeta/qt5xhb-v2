@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      const QMimeData * ptr = obj->mimeData( HB_ISNIL(1) ? static_cast<QClipboard::Mode >( QClipboard::Clipboard ) : static_cast<QClipboard::Mode >( hb_parni(1) ) );
+      auto ptr = obj->mimeData( HB_ISNIL(1) ? static_cast<QClipboard::Mode >( QClipboard::Clipboard ) : static_cast<QClipboard::Mode >( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

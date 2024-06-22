@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QICONENGINE_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIconEngine * ptr = obj->clone();
+      auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QICONENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

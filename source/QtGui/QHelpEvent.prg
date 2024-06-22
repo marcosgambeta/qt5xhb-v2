@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->globalPos();
+      auto ptr = &obj->globalPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->pos();
+      auto ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

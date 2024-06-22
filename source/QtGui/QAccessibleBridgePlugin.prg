@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QAccessibleBridge * ptr = obj->create( PQSTRING(1) );
+      auto ptr = obj->create( PQSTRING(1) );
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEBRIDGE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

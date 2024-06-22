@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScreen * ptr = obj->screen();
+      auto ptr = obj->screen();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

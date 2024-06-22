@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextFrame * ptr = obj->parentFrame();
+      auto ptr = obj->parentFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

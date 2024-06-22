@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextObjectInterface * ptr = obj->handlerForObject( PINT(1) );
+      auto ptr = obj->handlerForObject( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QTEXTOBJECTINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintDevice * ptr = obj->paintDevice();
+      auto ptr = obj->paintDevice();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
