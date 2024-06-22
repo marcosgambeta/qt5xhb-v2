@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileIconProvider * ptr = obj->iconProvider();
+      auto ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractProxyModel * ptr = obj->proxyModel();
+      auto ptr = obj->proxyModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTPROXYMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

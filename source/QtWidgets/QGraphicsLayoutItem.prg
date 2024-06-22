@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItem * ptr = obj->graphicsItem();
+      auto ptr = obj->graphicsItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsLayoutItem * ptr = obj->parentLayoutItem();
+      auto ptr = obj->parentLayoutItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

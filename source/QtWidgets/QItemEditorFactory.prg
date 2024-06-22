@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      QWidget * ptr = obj->createEditor( PINT(1), PQWIDGET(2) );
+      auto ptr = obj->createEditor( PINT(1), PQWIDGET(2) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory();
+    auto ptr = QItemEditorFactory::defaultFactory();
     Qt5xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

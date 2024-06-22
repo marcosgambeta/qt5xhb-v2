@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoGroup * ptr = obj->group();
+      auto ptr = obj->group();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoStack * ptr = obj->stack();
+      auto ptr = obj->stack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

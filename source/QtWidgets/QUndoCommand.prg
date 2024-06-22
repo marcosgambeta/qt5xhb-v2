@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QUndoCommand * ptr = obj->child( PINT(1) );
+      auto ptr = obj->child( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QUNDOCOMMAND", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

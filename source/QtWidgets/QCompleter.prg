@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->completionModel();
+      auto ptr = obj->completionModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model();
+      auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemView * ptr = obj->popup();
+      auto ptr = obj->popup();
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTITEMVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget();
+      auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

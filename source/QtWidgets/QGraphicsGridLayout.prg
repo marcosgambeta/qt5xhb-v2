@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 
     if( obj != nullptr )
     {
-      QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 
     if( obj != nullptr )
     {
-      QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
+      auto ptr = obj->itemAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
 

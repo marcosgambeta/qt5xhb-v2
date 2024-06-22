@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->previewWidget();
+      auto ptr = obj->previewWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

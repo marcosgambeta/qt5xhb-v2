@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
+      auto ptr = obj->itemAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

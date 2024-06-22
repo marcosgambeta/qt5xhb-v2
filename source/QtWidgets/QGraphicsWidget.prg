@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsWidget * ptr = obj->focusWidget();
+      auto ptr = obj->focusWidget();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsLayout * ptr = obj->layout();
+      auto ptr = obj->layout();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStyle * ptr = obj->style();
+      auto ptr = obj->style();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

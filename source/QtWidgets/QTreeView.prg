@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHeaderView * ptr = obj->header();
+      auto ptr = obj->header();
       Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

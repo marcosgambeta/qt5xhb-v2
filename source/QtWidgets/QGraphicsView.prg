@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 
     if( obj != nullptr )
     {
-      QGraphicsItem * ptr = obj->itemAt( *PQPOINT(1) );
+      auto ptr = obj->itemAt( *PQPOINT(1) );
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 
     if( obj != nullptr )
     {
-      QGraphicsItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
 
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsScene * ptr = obj->scene();
+      auto ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

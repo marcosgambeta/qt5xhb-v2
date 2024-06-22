@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_COMMONANCESTORITEM )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      QGraphicsItem * ptr = obj->commonAncestorItem( PQGRAPHICSITEM(1) );
+      auto ptr = obj->commonAncestorItem( PQGRAPHICSITEM(1) );
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_FOCUSITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItem * ptr = obj->focusItem();
+      auto ptr = obj->focusItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_FOCUSPROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItem * ptr = obj->focusProxy();
+      auto ptr = obj->focusProxy();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRAPHICSEFFECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsEffect * ptr = obj->graphicsEffect();
+      auto ptr = obj->graphicsEffect();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSEFFECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItemGroup * ptr = obj->group();
+      auto ptr = obj->group();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEMGROUP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2376,7 +2376,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_PANEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItem * ptr = obj->panel();
+      auto ptr = obj->panel();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2425,7 +2425,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_PARENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItem * ptr = obj->parentItem();
+      auto ptr = obj->parentItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2450,7 +2450,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_PARENTOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsObject * ptr = obj->parentObject();
+      auto ptr = obj->parentObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2475,7 +2475,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_PARENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsWidget * ptr = obj->parentWidget();
+      auto ptr = obj->parentWidget();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2625,7 +2625,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SCENE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsScene * ptr = obj->scene();
+      auto ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3661,7 +3661,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_TOGRAPHICSOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsObject * ptr = obj->toGraphicsObject();
+      auto ptr = obj->toGraphicsObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3710,7 +3710,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_TOPLEVELITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsItem * ptr = obj->topLevelItem();
+      auto ptr = obj->topLevelItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3735,7 +3735,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_TOPLEVELWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsWidget * ptr = obj->topLevelWidget();
+      auto ptr = obj->topLevelWidget();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3950,7 +3950,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsWidget * ptr = obj->window();
+      auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

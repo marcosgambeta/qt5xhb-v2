@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractButton * ptr = obj->button( PINT(1) );
+      auto ptr = obj->button( PINT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractButton * ptr = obj->checkedButton();
+      auto ptr = obj->checkedButton();
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

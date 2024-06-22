@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QActionGroup * ptr = obj->actionGroup();
+      auto ptr = obj->actionGroup();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QACTION_MENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->menu();
+      auto ptr = obj->menu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->parentWidget();
+      auto ptr = obj->parentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

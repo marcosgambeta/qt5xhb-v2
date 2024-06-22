@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QWidget * ptr = obj->indexWidget(*PQMODELINDEX(1));
+      auto ptr = obj->indexWidget(*PQMODELINDEX(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 
     if( obj != nullptr )
     {
-      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
 
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 
     if( obj != nullptr )
     {
-      QAbstractItemDelegate * ptr = obj->itemDelegate(*PQMODELINDEX(1));
+      auto ptr = obj->itemDelegate(*PQMODELINDEX(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
 
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegateForColumn(PINT(1));
+      auto ptr = obj->itemDelegateForColumn(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegateForRow(PINT(1));
+      auto ptr = obj->itemDelegateForRow(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model();
+      auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QItemSelectionModel * ptr = obj->selectionModel();
+      auto ptr = obj->selectionModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QITEMSELECTIONMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

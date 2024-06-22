@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 
     if( obj != nullptr )
     {
-      QToolBar * ptr = obj->addToolBar( PQSTRING(1) );
+      auto ptr = obj->addToolBar( PQSTRING(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR");
     }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->centralWidget();
+      auto ptr = obj->centralWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->createPopupMenu();
+      auto ptr = obj->createPopupMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenuBar * ptr = obj->menuBar();
+      auto ptr = obj->menuBar();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENUBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->menuWidget();
+      auto ptr = obj->menuWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStatusBar * ptr = obj->statusBar();
+      auto ptr = obj->statusBar();
       Qt5xHb::createReturnQWidgetClass( ptr, "QSTATUSBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->takeCentralWidget();
+      auto ptr = obj->takeCentralWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QItemEditorFactory * ptr = obj->itemEditorFactory();
+      auto ptr = obj->itemEditorFactory();
       Qt5xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

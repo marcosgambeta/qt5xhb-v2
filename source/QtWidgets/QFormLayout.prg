@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 
     if( obj != nullptr )
     {
-      QLayoutItem * ptr = obj->itemAt( PINT(1), static_cast<QFormLayout::ItemRole>( hb_parni(2) ) );
+      auto ptr = obj->itemAt( PINT(1), static_cast<QFormLayout::ItemRole>( hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 
     if( obj != nullptr )
     {
-      QLayoutItem * ptr = obj->itemAt( PINT(1) );
+      auto ptr = obj->itemAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 
     if( obj != nullptr )
     {
-      QWidget * ptr = obj->labelForField( PQWIDGET(1) );
+      auto ptr = obj->labelForField( PQWIDGET(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 
     if( obj != nullptr )
     {
-      QWidget * ptr = obj->labelForField( PQLAYOUT(1) );
+      auto ptr = obj->labelForField( PQLAYOUT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
 
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QLayoutItem * ptr = obj->takeAt( PINT(1) );
+      auto ptr = obj->takeAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

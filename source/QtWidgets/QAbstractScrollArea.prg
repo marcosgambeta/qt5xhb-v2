@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->cornerWidget();
+      auto ptr = obj->cornerWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScrollBar * ptr = obj->horizontalScrollBar();
+      auto ptr = obj->horizontalScrollBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSCROLLBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScrollBar * ptr = obj->verticalScrollBar();
+      auto ptr = obj->verticalScrollBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSCROLLBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->viewport();
+      auto ptr = obj->viewport();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

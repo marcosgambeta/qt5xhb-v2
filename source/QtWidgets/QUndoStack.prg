@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      const QUndoCommand * ptr = obj->command( PINT(1) );
+      auto ptr = obj->command( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QUNDOCOMMAND", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
     if( ISBETWEEN(1, 2) && ISQOBJECT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
     if( ISBETWEEN(1, 2) && ISQOBJECT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

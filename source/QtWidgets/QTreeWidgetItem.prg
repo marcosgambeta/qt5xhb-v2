@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILD )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->child( PINT(1) );
+      auto ptr = obj->child( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->clone();
+      auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->parent();
+      auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILD )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->takeChild( PINT(1) );
+      auto ptr = obj->takeChild( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1587,7 +1587,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTreeWidget * ptr = obj->treeWidget();
+      auto ptr = obj->treeWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QTREEWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

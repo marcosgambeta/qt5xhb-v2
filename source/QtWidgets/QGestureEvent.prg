@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QGesture * ptr = obj->gesture( static_cast<Qt::GestureType>( hb_parni(1) ) );
+      auto ptr = obj->gesture( static_cast<Qt::GestureType>( hb_parni(1) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget();
+      auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

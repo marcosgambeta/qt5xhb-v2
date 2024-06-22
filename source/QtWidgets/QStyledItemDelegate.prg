@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
     if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
     {
 #endif
-      QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      auto ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QItemEditorFactory * ptr = obj->itemEditorFactory();
+      auto ptr = obj->itemEditorFactory();
       Qt5xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

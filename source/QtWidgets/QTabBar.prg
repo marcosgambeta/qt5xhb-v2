@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QWidget * ptr = obj->tabButton( PINT(1), static_cast<QTabBar::ButtonPosition>( hb_parni(2) ) );
+      auto ptr = obj->tabButton( PINT(1), static_cast<QTabBar::ButtonPosition>( hb_parni(2) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

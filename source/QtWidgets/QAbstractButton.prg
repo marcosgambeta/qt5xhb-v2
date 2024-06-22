@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QButtonGroup * ptr = obj->group();
+      auto ptr = obj->group();
       Qt5xHb::createReturnQObjectClass(ptr, "QBUTTONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

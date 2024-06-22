@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractButton * ptr = obj->button( static_cast<QWizard::WizardButton>( hb_parni(1) ) );
+      auto ptr = obj->button( static_cast<QWizard::WizardButton>( hb_parni(1) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWizardPage * ptr = obj->currentPage();
+      auto ptr = obj->currentPage();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIZARDPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QWizardPage * ptr = obj->page( PINT(1) );
+      auto ptr = obj->page( PINT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIZARDPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->sideWidget();
+      auto ptr = obj->sideWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

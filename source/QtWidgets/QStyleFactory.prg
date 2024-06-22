@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    QStyle * ptr = QStyleFactory::create( PQSTRING(1) );
+    auto ptr = QStyleFactory::create( PQSTRING(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

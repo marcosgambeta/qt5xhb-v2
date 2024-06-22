@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->createStandardContextMenu();
+      auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

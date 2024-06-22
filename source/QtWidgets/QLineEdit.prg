@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCompleter * ptr = obj->completer();
+      auto ptr = obj->completer();
       Qt5xHb::createReturnQObjectClass(ptr, "QCOMPLETER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->createStandardContextMenu();
+      auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QValidator * ptr = obj->validator();
+      auto ptr = obj->validator();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALIDATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1788,7 +1788,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), static_cast<QLineEdit::ActionPosition>( hb_parni(2) ) );
+      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), static_cast<QLineEdit::ActionPosition>( hb_parni(2) ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 

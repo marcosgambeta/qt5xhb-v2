@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QWidget * ptr = obj->createWidget( PQWIDGET(1) );
+      auto ptr = obj->createWidget( PQWIDGET(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

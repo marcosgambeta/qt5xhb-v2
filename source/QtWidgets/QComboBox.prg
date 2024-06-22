@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCompleter * ptr = obj->completer();
+      auto ptr = obj->completer();
       Qt5xHb::createReturnQObjectClass(ptr, "QCOMPLETER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineEdit * ptr = obj->lineEdit();
+      auto ptr = obj->lineEdit();
       Qt5xHb::createReturnQWidgetClass( ptr, "QLINEEDIT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model();
+      auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QValidator * ptr = obj->validator();
+      auto ptr = obj->validator();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALIDATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1525,7 +1525,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemView * ptr = obj->view();
+      auto ptr = obj->view();
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTITEMVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
 #endif
-    QAction * ptr = QWhatsThis::createAction( OPQOBJECT( 1, nullptr ) );
+    auto ptr = QWhatsThis::createAction( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

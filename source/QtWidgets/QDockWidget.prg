@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->titleBarWidget();
+      auto ptr = obj->titleBarWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->toggleViewAction();
+      auto ptr = obj->toggleViewAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget();
+      auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

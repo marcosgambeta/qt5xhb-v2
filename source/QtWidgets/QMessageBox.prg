@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 
     if( obj != nullptr )
     {
-      QPushButton * ptr = obj->addButton( PQSTRING(1), static_cast<QMessageBox::ButtonRole>( hb_parni(2) ) );
+      auto ptr = obj->addButton( PQSTRING(1), static_cast<QMessageBox::ButtonRole>( hb_parni(2) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 
     if( obj != nullptr )
     {
-      QPushButton * ptr = obj->addButton( static_cast<QMessageBox::StandardButton>( hb_parni(1) ) );
+      auto ptr = obj->addButton( static_cast<QMessageBox::StandardButton>( hb_parni(1) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractButton * ptr = obj->button( static_cast<QMessageBox::StandardButton>( hb_parni(1) ) );
+      auto ptr = obj->button( static_cast<QMessageBox::StandardButton>( hb_parni(1) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractButton * ptr = obj->clickedButton();
+      auto ptr = obj->clickedButton();
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPushButton * ptr = obj->defaultButton();
+      auto ptr = obj->defaultButton();
       Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractButton * ptr = obj->escapeButton();
+      auto ptr = obj->escapeButton();
       Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCheckBox * ptr = obj->checkBox();
+      auto ptr = obj->checkBox();
       Qt5xHb::createReturnQWidgetClass( ptr, "QCHECKBOX");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

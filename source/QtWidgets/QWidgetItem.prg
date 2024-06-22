@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget();
+      auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

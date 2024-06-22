@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->actionAt( PINT(1), PINT(2) );
+      auto ptr = obj->actionAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->actionAt( *PQPOINT(1) );
+      auto ptr = obj->actionAt( *PQPOINT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( PQSTRING(1) );
+      auto ptr = obj->addAction( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
+      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+      auto ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
+      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->addSeparator();
+      auto ptr = obj->addSeparator();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QAction * ptr = obj->addWidget( PQWIDGET(1) );
+      auto ptr = obj->addWidget( PQWIDGET(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      QAction * ptr = obj->insertSeparator( PQACTION(1) );
+      auto ptr = obj->insertSeparator( PQACTION(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     if( ISNUMPAR(2) && ISQACTION(1) && ISQWIDGET(2) )
     {
 #endif
-      QAction * ptr = obj->insertWidget( PQACTION(1), PQWIDGET(2) );
+      auto ptr = obj->insertWidget( PQACTION(1), PQWIDGET(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->toggleViewAction();
+      auto ptr = obj->toggleViewAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      QWidget * ptr = obj->widgetForAction( PQACTION(1) );
+      auto ptr = obj->widgetForAction( PQACTION(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

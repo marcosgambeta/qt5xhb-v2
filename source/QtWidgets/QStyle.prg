@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSTYLE_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QStyle * ptr = obj->proxy();
+      auto ptr = obj->proxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

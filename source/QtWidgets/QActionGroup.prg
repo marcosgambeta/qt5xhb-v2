@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( PQACTION(1) );
+      auto ptr = obj->addAction( PQACTION(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( PQSTRING(1) );
+      auto ptr = obj->addAction( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 
     if( obj != nullptr )
     {
-      QAction * ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
+      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1) ), PQSTRING(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->checkedAction();
+      auto ptr = obj->checkedAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

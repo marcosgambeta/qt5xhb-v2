@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSpacerItem * ptr = obj->spacerItem();
+      auto ptr = obj->spacerItem();
       Qt5xHb::createReturnClass(ptr, "QSPACERITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
     if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QWidget * ptr = obj->cornerWidget( HB_ISNIL(1) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >( hb_parni(1) ) );
+      auto ptr = obj->cornerWidget( HB_ISNIL(1) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >( hb_parni(1) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->currentWidget();
+      auto ptr = obj->currentWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget( PINT(1) );
+      auto ptr = obj->widget( PINT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTabBar * ptr = obj->tabBar();
+      auto ptr = obj->tabBar();
       Qt5xHb::createReturnQWidgetClass( ptr, "QTABBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

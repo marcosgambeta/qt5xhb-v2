@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->context();
+      auto ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

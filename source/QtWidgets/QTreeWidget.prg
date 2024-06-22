@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->currentItem();
+      auto ptr = obj->currentItem();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->headerItem();
+      auto ptr = obj->headerItem();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->invisibleRootItem();
+      auto ptr = obj->invisibleRootItem();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->itemAbove( PQTREEWIDGETITEM(1) );
+      auto ptr = obj->itemAbove( PQTREEWIDGETITEM(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 
     if( obj != nullptr )
     {
-      QTreeWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
+      auto ptr = obj->itemAt( *PQPOINT(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
 
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 
     if( obj != nullptr )
     {
-      QTreeWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
 
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->itemBelow( PQTREEWIDGETITEM(1) );
+      auto ptr = obj->itemBelow( PQTREEWIDGETITEM(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
     if( ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && HB_ISNUM(2) )
     {
 #endif
-      QWidget * ptr = obj->itemWidget( PQTREEWIDGETITEM(1), PINT(2) );
+      auto ptr = obj->itemWidget( PQTREEWIDGETITEM(1), PINT(2) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->takeTopLevelItem( PINT(1) );
+      auto ptr = obj->takeTopLevelItem( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTreeWidgetItem * ptr = obj->topLevelItem( PINT(1) );
+      auto ptr = obj->topLevelItem( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

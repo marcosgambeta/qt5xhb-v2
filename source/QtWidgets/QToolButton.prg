@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->defaultAction();
+      auto ptr = obj->defaultAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->menu();
+      auto ptr = obj->menu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

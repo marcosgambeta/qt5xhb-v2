@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMdiSubWindow * ptr = obj->activeSubWindow();
+      auto ptr = obj->activeSubWindow();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
     if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
+      auto ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMdiSubWindow * ptr = obj->currentSubWindow();
+      auto ptr = obj->currentSubWindow();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

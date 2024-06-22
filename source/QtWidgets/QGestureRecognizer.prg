@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QGesture * ptr = obj->create( PQOBJECT(1) );
+      auto ptr = obj->create( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->defaultWidget();
+      auto ptr = obj->defaultWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QWidget * ptr = obj->requestWidget( PQWIDGET(1) );
+      auto ptr = obj->requestWidget( PQWIDGET(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QLayoutItem * ptr = obj->itemAtPosition( PINT(1), PINT(2) );
+      auto ptr = obj->itemAtPosition( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QLayoutItem * ptr = obj->itemAt( PINT(1) );
+      auto ptr = obj->itemAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QLayoutItem * ptr = obj->takeAt( PINT(1) );
+      auto ptr = obj->takeAt( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

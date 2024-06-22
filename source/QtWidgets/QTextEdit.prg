@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 
     if( obj != nullptr )
     {
-      QMenu * ptr = obj->createStandardContextMenu();
+      auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
     }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 
     if( obj != nullptr )
     {
-      QMenu * ptr = obj->createStandardContextMenu( *PQPOINT(1) );
+      auto ptr = obj->createStandardContextMenu( *PQPOINT(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
     }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

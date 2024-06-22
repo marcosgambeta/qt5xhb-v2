@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_WIDGET )
   {
     if( ISNUMPAR(0) )
     {
-      const QWidget * ptr = obj->widget;
+      auto ptr = obj->widget;
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
     else

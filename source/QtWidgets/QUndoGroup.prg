@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoStack * ptr = obj->activeStack();
+      auto ptr = obj->activeStack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
     if( ISBETWEEN(1, 2) && ISQOBJECT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
     if( ISBETWEEN(1, 2) && ISQOBJECT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
+      auto ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

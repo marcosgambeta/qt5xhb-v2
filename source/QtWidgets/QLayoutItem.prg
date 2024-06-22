@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLayout * ptr = obj->layout();
+      auto ptr = obj->layout();
       Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSpacerItem * ptr = obj->spacerItem();
+      auto ptr = obj->spacerItem();
       Qt5xHb::createReturnClass(ptr, "QSPACERITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget();
+      auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileIconProvider * ptr = obj->iconProvider();
+      auto ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
       {
         par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
       }
-      QMimeData * ptr = obj->mimeData( par1 );
+      auto ptr = obj->mimeData( par1 );
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

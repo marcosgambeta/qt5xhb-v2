@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QListWidgetItem * ptr = obj->clone();
+      auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QListWidget * ptr = obj->listWidget();
+      auto ptr = obj->listWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QLISTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

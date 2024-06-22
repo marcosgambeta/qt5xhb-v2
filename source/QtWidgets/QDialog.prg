@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->extension();
+      auto ptr = obj->extension();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

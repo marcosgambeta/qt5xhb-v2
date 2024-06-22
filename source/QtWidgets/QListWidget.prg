@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QListWidgetItem * ptr = obj->currentItem();
+      auto ptr = obj->currentItem();
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QListWidgetItem * ptr = obj->item( PINT(1) );
+      auto ptr = obj->item( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 
     if( obj != nullptr )
     {
-      QListWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
+      auto ptr = obj->itemAt( *PQPOINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 
     if( obj != nullptr )
     {
-      QListWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      auto ptr = obj->itemAt( PINT(1), PINT(2) );
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
 
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
     if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
     {
 #endif
-      QWidget * ptr = obj->itemWidget( PQLISTWIDGETITEM(1) );
+      auto ptr = obj->itemWidget( PQLISTWIDGETITEM(1) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QListWidgetItem * ptr = obj->takeItem( PINT(1) );
+      auto ptr = obj->takeItem( PINT(1) );
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

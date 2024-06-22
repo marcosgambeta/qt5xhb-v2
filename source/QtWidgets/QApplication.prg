@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWidget * ptr = QApplication::activeModalWidget();
+    auto ptr = QApplication::activeModalWidget();
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWidget * ptr = QApplication::activePopupWidget();
+    auto ptr = QApplication::activePopupWidget();
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWidget * ptr = QApplication::activeWindow();
+    auto ptr = QApplication::activeWindow();
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
   if( ISNUMPAR(0) )
   {
 #endif
-    QClipboard * ptr = QApplication::clipboard();
+    auto ptr = QApplication::clipboard();
     Qt5xHb::createReturnQObjectClass(ptr, "QCLIPBOARD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
   if( ISNUMPAR(0) )
   {
 #endif
-    QDesktopWidget * ptr = QApplication::desktop();
+    auto ptr = QApplication::desktop();
     Qt5xHb::createReturnQWidgetClass(ptr, "QDESKTOPWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWidget * ptr = QApplication::focusWidget();
+    auto ptr = QApplication::focusWidget();
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
   if( ISNUMPAR(0) )
   {
 #endif
-    QCursor * ptr = QApplication::overrideCursor();
+    auto ptr = QApplication::overrideCursor();
     Qt5xHb::createReturnClass(ptr, "QCURSOR", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
     static QStyle * setStyle( const QString & style )
     */
 
-    QStyle * ptr = QApplication::setStyle(PQSTRING(1));
+    auto ptr = QApplication::setStyle(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 
   }
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QStyle * ptr = QApplication::style();
+    auto ptr = QApplication::style();
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
     static QWidget * topLevelAt( const QPoint & point )
     */
 
-    QWidget * ptr = QApplication::topLevelAt(*PQPOINT(1));
+    auto ptr = QApplication::topLevelAt(*PQPOINT(1));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 
   }
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
     static QWidget * topLevelAt( int x, int y )
     */
 
-    QWidget * ptr = QApplication::topLevelAt(PINT(1), PINT(2));
+    auto ptr = QApplication::topLevelAt(PINT(1), PINT(2));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 
   }
@@ -1592,7 +1592,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
     static QWidget * widgetAt( const QPoint & point )
     */
 
-    QWidget * ptr = QApplication::widgetAt(*PQPOINT(1));
+    auto ptr = QApplication::widgetAt(*PQPOINT(1));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 
   }
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
     static QWidget * widgetAt( int x, int y )
     */
 
-    QWidget * ptr = QApplication::widgetAt(PINT(1), PINT(2));
+    auto ptr = QApplication::widgetAt(PINT(1), PINT(2));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 
   }

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 
     if( obj != nullptr )
     {
-      QPushButton * ptr = obj->addButton( PQSTRING(1), static_cast<QDialogButtonBox::ButtonRole>( hb_parni(2) ) );
+      auto ptr = obj->addButton( PQSTRING(1), static_cast<QDialogButtonBox::ButtonRole>( hb_parni(2) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 
     if( obj != nullptr )
     {
-      QPushButton * ptr = obj->addButton( static_cast<QDialogButtonBox::StandardButton>( hb_parni(1) ) );
+      auto ptr = obj->addButton( static_cast<QDialogButtonBox::StandardButton>( hb_parni(1) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPushButton * ptr = obj->button( static_cast<QDialogButtonBox::StandardButton>( hb_parni(1) ) );
+      auto ptr = obj->button( static_cast<QDialogButtonBox::StandardButton>( hb_parni(1) ) );
       Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

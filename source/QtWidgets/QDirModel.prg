@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileIconProvider * ptr = obj->iconProvider();
+      auto ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

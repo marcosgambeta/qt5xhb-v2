@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->buddy();
+      auto ptr = obj->buddy();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMovie * ptr = obj->movie();
+      auto ptr = obj->movie();
       Qt5xHb::createReturnQObjectClass(ptr, "QMOVIE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPicture * ptr = obj->picture();
+      auto ptr = obj->picture();
       Qt5xHb::createReturnClass(ptr, "QPICTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPixmap * ptr = obj->pixmap();
+      auto ptr = obj->pixmap();
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

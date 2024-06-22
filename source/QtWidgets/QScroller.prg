@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSCROLLER_TARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->target();
+      auto ptr = obj->target();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLER )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QScroller * ptr = QScroller::scroller( PQOBJECT(1) );
+    auto ptr = QScroller::scroller( PQOBJECT(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QSCROLLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

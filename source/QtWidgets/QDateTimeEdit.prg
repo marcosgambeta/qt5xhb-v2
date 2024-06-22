@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCalendarWidget * ptr = obj->calendarWidget();
+      auto ptr = obj->calendarWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QCALENDARWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

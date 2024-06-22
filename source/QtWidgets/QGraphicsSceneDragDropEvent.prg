@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMimeData * ptr = obj->mimeData();
+      auto ptr = obj->mimeData();
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->source();
+      auto ptr = obj->source();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

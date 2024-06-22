@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->clone();
+      auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTableWidget * ptr = obj->tableWidget();
+      auto ptr = obj->tableWidget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QTABLEWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

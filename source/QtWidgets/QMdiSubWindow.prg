@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMdiArea * ptr = obj->mdiArea();
+      auto ptr = obj->mdiArea();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDIAREA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->systemMenu();
+      auto ptr = obj->systemMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget();
+      auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

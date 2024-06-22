@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->contextMenu();
+      auto ptr = obj->contextMenu();
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

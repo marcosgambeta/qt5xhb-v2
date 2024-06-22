@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSplitter * ptr = obj->splitter();
+      auto ptr = obj->splitter();
       Qt5xHb::createReturnQWidgetClass( ptr, "QSPLITTER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
