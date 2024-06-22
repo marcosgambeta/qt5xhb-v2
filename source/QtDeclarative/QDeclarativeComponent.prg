@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
     if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
     {
 #endif
-      QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
+      auto ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     if( ISBETWEEN(0, 1) && ( ISQDECLARATIVECONTEXT(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QObject * ptr = obj->create( OPQDECLARATIVECONTEXT( 1, nullptr ) );
+      auto ptr = obj->create( OPQDECLARATIVECONTEXT( 1, nullptr ) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->creationContext();
+      auto ptr = obj->creationContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

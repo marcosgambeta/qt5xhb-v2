@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->context();
+      auto ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeEngine * ptr = obj->engine();
+      auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->scopeObject();
+      auto ptr = obj->scopeObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

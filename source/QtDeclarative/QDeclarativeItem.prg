@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QDeclarativeItem * ptr = obj->childAt( PQREAL(1), PQREAL(2) );
+      auto ptr = obj->childAt( PQREAL(1), PQREAL(2) );
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeItem * ptr = obj->parentItem();
+      auto ptr = obj->parentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

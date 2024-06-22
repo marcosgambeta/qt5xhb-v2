@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QDeclarativeImageProvider * ptr = obj->imageProvider( PQSTRING(1) );
+      auto ptr = obj->imageProvider( PQSTRING(1) );
       Qt5xHb::createReturnClass(ptr, "QDECLARATIVEIMAGEPROVIDER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory();
+      auto ptr = obj->networkAccessManagerFactory();
       Qt5xHb::createReturnClass(ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->rootContext();
+      auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject( PQOBJECT(1) );
+    auto ptr = QDeclarativeEngine::contextForObject( PQOBJECT(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

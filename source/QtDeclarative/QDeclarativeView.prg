@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeEngine * ptr = obj->engine();
+      auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->rootContext();
+      auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsObject * ptr = obj->rootObject();
+      auto ptr = obj->rootObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
