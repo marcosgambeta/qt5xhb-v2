@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRotationReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QROTATIONREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

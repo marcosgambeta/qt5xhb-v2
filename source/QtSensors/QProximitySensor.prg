@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QProximityReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QPROXIMITYREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

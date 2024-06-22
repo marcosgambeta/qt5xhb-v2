@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCOMPASS_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCompassReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QCOMPASSREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

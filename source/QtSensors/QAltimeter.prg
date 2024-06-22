@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QALTIMETER_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAltimeterReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QALTIMETERREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

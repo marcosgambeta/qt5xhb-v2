@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccelerometerReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QACCELEROMETERREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

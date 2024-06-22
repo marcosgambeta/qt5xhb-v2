@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer( PQSTRING(1) );
+    auto ptr = QSensorGestureManager::sensorGestureRecognizer( PQSTRING(1) );
     Qt5xHb::createReturnQObjectClass(ptr, "QSENSORGESTURERECOGNIZER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

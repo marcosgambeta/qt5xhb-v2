@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLightReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QLIGHTREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

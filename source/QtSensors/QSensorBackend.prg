@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSensorReading * ptr = obj->reading();
+      auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QSENSORREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSensor * ptr = obj->sensor();
+      auto ptr = obj->sensor();
       Qt5xHb::createReturnQObjectClass(ptr, "QSENSOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
