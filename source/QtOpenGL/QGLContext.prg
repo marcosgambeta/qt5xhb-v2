@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintDevice * ptr = obj->device();
+      auto ptr = obj->device();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QGLContext * ptr = QGLContext::currentContext();
+    auto ptr = QGLContext::currentContext();
     Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QGLColormap * ptr = &obj->colormap();
+      auto ptr = &obj->colormap();
       Qt5xHb::createReturnClass(ptr, "QGLCOLORMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QGLContext * ptr = obj->context();
+      auto ptr = obj->context();
       Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QGLContext * ptr = obj->overlayContext();
+      auto ptr = obj->overlayContext();
       Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
