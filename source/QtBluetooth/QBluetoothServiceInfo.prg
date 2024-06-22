@@ -92,7 +92,7 @@ RETURN
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QBluetoothServiceInfo()
@@ -103,13 +103,13 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQBLUETOOTHSERVICEINFO(1) )
+  else if (ISNUMPAR(1) && ISQBLUETOOTHSERVICEINFO(1))
   {
     /*
     QBluetoothServiceInfo( const QBluetoothServiceInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothServiceInfo( *PQBLUETOOTHSERVICEINFO(1) );
+    auto obj = new QBluetoothServiceInfo( *PQBLUETOOTHSERVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -149,10 +149,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISCOMPLETE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isComplete() );
+      RBOOL(obj->isComplete());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,10 +201,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETDEVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
+    if (ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1))
     {
 #endif
-      obj->setDevice( *PQBLUETOOTHDEVICEINFO(1) );
+      obj->setDevice( *PQBLUETOOTHDEVICEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,10 +229,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_DEVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBluetoothDeviceInfo( obj->device() );
+      auto ptr = new QBluetoothDeviceInfo(obj->device());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHDEVICEINFO", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_DEVICE )
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
   {
     /*
     void setAttribute( quint16 attributeId, const QVariant & value )
@@ -257,14 +257,14 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 
     if (obj != nullptr)
     {
-      obj->setAttribute( PQUINT16(1), *PQVARIANT(2) );
+      obj->setAttribute(PQUINT16(1), *PQVARIANT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBLUETOOTHUUID(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBLUETOOTHUUID(2))
   {
     /*
     void setAttribute( quint16 attributeId, const QBluetoothUuid & value )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 
     if (obj != nullptr)
     {
-      obj->setAttribute( PQUINT16(1), *PQBLUETOOTHUUID(2) );
+      obj->setAttribute(PQUINT16(1), *PQBLUETOOTHUUID(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -298,10 +298,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant( obj->attribute( PQUINT16(1) ) );
+      auto ptr = new QVariant(obj->attribute(PQUINT16(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -325,11 +325,11 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->attributes();
-      Qt5xHb::convert_qlist_quint16_to_array( list );
+      Qt5xHb::convert_qlist_quint16_to_array( list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,10 +352,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_CONTAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->contains( PQUINT16(1) ) );
+      RBOOL(obj->contains(PQUINT16(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,10 +378,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_REMOVEATTRIBUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeAttribute( PQUINT16(1) );
+      obj->removeAttribute(PQUINT16(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,10 +406,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setServiceName( PQSTRING(1) );
+      obj->setServiceName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,10 +434,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->serviceName() );
+      RQSTRING(obj->serviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,10 +460,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setServiceDescription( PQSTRING(1) );
+      obj->setServiceDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,10 +488,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->serviceDescription() );
+      RQSTRING(obj->serviceDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,10 +514,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEPROVIDER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setServiceProvider( PQSTRING(1) );
+      obj->setServiceProvider(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,10 +542,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEPROVIDER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->serviceProvider() );
+      RQSTRING(obj->serviceProvider());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -568,10 +568,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->socketProtocol() );
+      RENUM(obj->socketProtocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,10 +594,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->protocolServiceMultiplexer() );
+      RINT(obj->protocolServiceMultiplexer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -620,10 +620,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVERCHANNEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->serverChannel() );
+      RINT(obj->serverChannel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -646,10 +646,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEAVAILABILITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setServiceAvailability( PQUINT8(1) );
+      obj->setServiceAvailability(PQUINT8(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,10 +674,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT8( obj->serviceAvailability() );
+      RQUINT8(obj->serviceAvailability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -700,10 +700,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEUUID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBLUETOOTHUUID(1) )
+    if (ISNUMPAR(1) && ISQBLUETOOTHUUID(1))
     {
 #endif
-      obj->setServiceUuid( *PQBLUETOOTHUUID(1) );
+      obj->setServiceUuid( *PQBLUETOOTHUUID(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,10 +728,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEUUID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QBluetoothUuid( obj->serviceUuid() );
+      auto ptr = new QBluetoothUuid(obj->serviceUuid());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHUUID", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->serviceClassUuids();
@@ -807,10 +807,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ISREGISTERED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isRegistered() );
+      RBOOL(obj->isRegistered());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -833,10 +833,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_REGISTERSERVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->registerService( HB_ISNIL(1) ? QBluetoothAddress() : *static_cast<QBluetoothAddress*>(Qt5xHb::itemGetPtr(1)) ) );
+      RBOOL(obj->registerService( HB_ISNIL(1) ? QBluetoothAddress() : *static_cast<QBluetoothAddress*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -859,10 +859,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_UNREGISTERSERVICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->unregisterService() );
+      RBOOL(obj->unregisterService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -906,12 +906,12 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEWFROM )
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QBLUETOOTHSERVICEINFO_NEWFROM );
+  HB_FUNC_EXEC(QBLUETOOTHSERVICEINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QBLUETOOTHSERVICEINFO_NEWFROM );
+  HB_FUNC_EXEC(QBLUETOOTHSERVICEINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SELFDESTRUCTION )
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
