@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QObject * ptr = obj->objectRegisteredAt( PQSTRING(1) );
+      auto ptr = obj->objectRegisteredAt( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDBusConnectionInterface * ptr = obj->interface();
+      auto ptr = obj->interface();
       Qt5xHb::createReturnQObjectClass(ptr, "QDBUSCONNECTIONINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QDBusMessage * ptr = &obj->message();
+      auto ptr = &obj->message();
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
