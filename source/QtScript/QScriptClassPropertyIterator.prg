@@ -94,10 +94,10 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasNext() );
+      RBOOL(obj->hasNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasPrevious() );
+      RBOOL(obj->hasPrevious());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,10 +166,10 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RUINT( obj->id() );
+      RUINT(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,10 +190,10 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QScriptString( obj->name() );
+      auto ptr = new QScriptString(obj->name());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->next();
@@ -241,10 +241,10 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QScriptValue( obj->object() );
+      auto ptr = new QScriptValue(obj->object());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->previous();
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toBack();
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toFront();
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -366,12 +366,12 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROM )
 
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTCLASSPROPERTYITERATOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTCLASSPROPERTYITERATOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_SELFDESTRUCTION )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

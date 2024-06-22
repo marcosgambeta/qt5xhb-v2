@@ -81,10 +81,10 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
     {
 #endif
-      auto ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
+      auto ptr = new QScriptValue(obj->setupPackage(PQSTRING(1), PQSCRIPTENGINE(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
     {
 #endif
-      obj->initialize( PQSTRING(1), PQSCRIPTENGINE(2) );
+      obj->initialize(PQSTRING(1), PQSCRIPTENGINE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

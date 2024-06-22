@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QScriptValue( obj->argument( PINT(1) ) );
+      auto ptr = new QScriptValue(obj->argument(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->argumentCount() );
+      RINT(obj->argumentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->context();
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->engine();
@@ -190,10 +190,10 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QScriptValue( obj->thisObject() );
+      auto ptr = new QScriptValue(obj->thisObject());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -237,12 +237,12 @@ HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
 
 HB_FUNC_STATIC( QSCRIPTABLE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSCRIPTABLE_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTABLE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCRIPTABLE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSCRIPTABLE_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTABLE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCRIPTABLE_SELFDESTRUCTION )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

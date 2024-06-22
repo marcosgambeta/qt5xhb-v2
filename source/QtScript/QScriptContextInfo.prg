@@ -67,25 +67,25 @@ RETURN
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
-  if( ISNUMPAR(1) && ISQSCRIPTCONTEXT(1) )
+  if (ISNUMPAR(1) && ISQSCRIPTCONTEXT(1))
   {
     /*
     QScriptContextInfo( const QScriptContext * context )
     */
-    auto obj = new QScriptContextInfo( PQSCRIPTCONTEXT(1) );
+    auto obj = new QScriptContextInfo(PQSCRIPTCONTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQSCRIPTCONTEXTINFO(1) )
+  else if (ISNUMPAR(1) && ISQSCRIPTCONTEXTINFO(1))
   {
     /*
     QScriptContextInfo( const QScriptContextInfo & other )
     */
-    auto obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO(1) );
+    auto obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     QScriptContextInfo()
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,10 +150,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->functionEndLineNumber() );
+      RINT(obj->functionEndLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,10 +174,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->functionMetaIndex() );
+      RINT(obj->functionMetaIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,10 +198,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->functionName() );
+      RQSTRING(obj->functionName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,10 +222,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->functionParameterNames() );
+      RQSTRINGLIST(obj->functionParameterNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,10 +246,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->functionStartLineNumber() );
+      RINT(obj->functionStartLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->functionType() );
+      RENUM(obj->functionType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,10 +294,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,10 +318,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineNumber() );
+      RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,10 +342,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->scriptId() );
+      RQINT64(obj->scriptId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -388,12 +388,12 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEWFROM )
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTCONTEXTINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTCONTEXTINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SELFDESTRUCTION )
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
