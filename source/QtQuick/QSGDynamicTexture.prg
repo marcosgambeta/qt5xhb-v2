@@ -57,10 +57,10 @@ HB_FUNC_STATIC( QSGDYNAMICTEXTURE_UPDATETEXTURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->updateTexture() );
+      RBOOL(obj->updateTexture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

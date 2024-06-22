@@ -56,7 +56,7 @@ QSGGeometryNode()
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QSGGeometryNode();
     Qt5xHb::returnNewObject(obj, true);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->material();
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->opaqueMaterial();
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
+    if (ISNUMPAR(1) && ISQSGMATERIAL(1))
     {
 #endif
-      obj->setMaterial( PQSGMATERIAL(1) );
+      obj->setMaterial(PQSGMATERIAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,10 +169,10 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
+    if (ISNUMPAR(1) && ISQSGMATERIAL(1))
     {
 #endif
-      obj->setOpaqueMaterial( PQSGMATERIAL(1) );
+      obj->setOpaqueMaterial(PQSGMATERIAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

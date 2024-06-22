@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->activate();
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->deactivate();
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->program();
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -183,12 +183,12 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROM )
 
 HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSGMATERIALSHADER_NEWFROM );
+  HB_FUNC_EXEC(QSGMATERIALSHADER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSGMATERIALSHADER_NEWFROM );
+  HB_FUNC_EXEC(QSGMATERIALSHADER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSGMATERIALSHADER_SELFDESTRUCTION )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

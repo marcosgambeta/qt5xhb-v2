@@ -59,9 +59,9 @@ QQuickImageProvider( QQmlImageProviderBase::ImageType type, QQmlImageProviderBas
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QQuickImageProvider( static_cast<QQmlImageProviderBase::ImageType>( hb_parni(1) ), HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags >( 0 ) : static_cast<QQmlImageProviderBase::Flags >( hb_parni(2) ) );
+    auto obj = new QQuickImageProvider( static_cast<QQmlImageProviderBase::ImageType>( hb_parni(1)), HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags >( 0 ) : static_cast<QQmlImageProviderBase::Flags >( hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -96,10 +96,10 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,10 +120,10 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->imageType() );
+      RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
 #endif
-      auto ptr = new QImage( obj->requestImage( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      auto ptr = new QImage(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -169,10 +169,10 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
 #endif
-      auto ptr = new QPixmap( obj->requestPixmap( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      auto ptr = new QPixmap(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -194,10 +194,10 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
 #endif
-      auto ptr = obj->requestTexture( PQSTRING(1), PQSIZE(2), *PQSIZE(3) );
+      auto ptr = obj->requestTexture(PQSTRING(1), PQSIZE(2), *PQSIZE(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
