@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = &obj->takeFromDocument();
+      auto ptr = &obj->takeFromDocument();
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebFrame * ptr = obj->webFrame();
+      auto ptr = obj->webFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

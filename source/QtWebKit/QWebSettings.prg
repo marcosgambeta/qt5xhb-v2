@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWebSettings * ptr = QWebSettings::globalSettings();
+    auto ptr = QWebSettings::globalSettings();
     Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
