@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLELOCALES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->availableLocales();
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLEVOICES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->availableVoices();
@@ -214,10 +214,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SAY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->say( PQSTRING(1) );
+      obj->say(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_STOP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_PAUSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->pause();
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_RESUME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->resume();
@@ -326,10 +326,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_RATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->rate() );
+      RDOUBLE(obj->rate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,10 +352,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETRATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setRate( PDOUBLE(1) ) );
+      RBOOL(obj->setRate(PDOUBLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,10 +378,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_PITCH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->pitch() );
+      RDOUBLE(obj->pitch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,10 +404,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETPITCH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setPitch( PDOUBLE(1) ) );
+      RBOOL(obj->setPitch(PDOUBLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,10 +430,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_LOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLocale( obj->locale() );
+      auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -457,10 +457,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETLOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      RBOOL( obj->setLocale( *PQLOCALE(1) ) );
+      RBOOL(obj->setLocale( *PQLOCALE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,10 +483,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOLUME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->volume() );
+      RDOUBLE(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,10 +509,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOLUME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setVolume( PDOUBLE(1) ) );
+      RBOOL(obj->setVolume(PDOUBLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,10 +535,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVoice( obj->voice() );
+      auto ptr = new QVoice(obj->voice());
       Qt5xHb::createReturnClass(ptr, "QVOICE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -562,10 +562,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOICE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVOICE(1) )
+    if (ISNUMPAR(1) && ISQVOICE(1))
     {
 #endif
-      RBOOL( obj->setVoice( *PQVOICE(1) ) );
+      RBOOL(obj->setVoice( *PQVOICE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,10 +588,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_STATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTextToSpeech::State)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
