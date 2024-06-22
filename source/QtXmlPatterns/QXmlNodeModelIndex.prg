@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractXmlNodeModel * ptr = obj->model();
+      auto ptr = obj->model();
       Qt5xHb::createReturnClass(ptr, "QABSTRACTXMLNODEMODEL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

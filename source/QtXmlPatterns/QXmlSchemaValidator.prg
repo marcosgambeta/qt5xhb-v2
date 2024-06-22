@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractMessageHandler * ptr = obj->messageHandler();
+      auto ptr = obj->messageHandler();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTMESSAGEHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractUriResolver * ptr = obj->uriResolver();
+      auto ptr = obj->uriResolver();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTURIRESOLVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

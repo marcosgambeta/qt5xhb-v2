@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QTextCodec * ptr = obj->codec();
+      auto ptr = obj->codec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->outputDevice();
+      auto ptr = obj->outputDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

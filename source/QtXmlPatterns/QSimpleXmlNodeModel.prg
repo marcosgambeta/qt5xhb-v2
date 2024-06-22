@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNamePool * ptr = &obj->namePool();
+      auto ptr = &obj->namePool();
       Qt5xHb::createReturnClass(ptr, "QXMLNAMEPOOL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
