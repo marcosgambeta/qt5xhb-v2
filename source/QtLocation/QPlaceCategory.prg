@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPlaceCategory()
@@ -84,13 +84,13 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQPLACECATEGORY(1) )
+  else if (ISNUMPAR(1) && ISQPLACECATEGORY(1))
   {
     /*
     QPlaceCategory( const QPlaceCategory & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceCategory( *PQPLACECATEGORY(1) );
+    auto obj = new QPlaceCategory( *PQPLACECATEGORY(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->categoryId() );
+      RQSTRING(obj->categoryId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCategoryId( PQSTRING(1) );
+      obj->setCategoryId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,10 +210,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,10 +238,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->visibility() );
+      RENUM(obj->visibility());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,10 +264,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVisibility( static_cast<QLocation::Visibility>( hb_parni(1) ) );
+      obj->setVisibility( static_cast<QLocation::Visibility>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,10 +292,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_ICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPlaceIcon( obj->icon() );
+      auto ptr = new QPlaceIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QPLACEICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,10 +319,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACEICON(1) )
+    if (ISNUMPAR(1) && ISQPLACEICON(1))
     {
 #endif
-      obj->setIcon( *PQPLACEICON(1) );
+      obj->setIcon( *PQPLACEICON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,10 +347,10 @@ HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -394,12 +394,12 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEWFROM )
 
 HB_FUNC_STATIC( QPLACECATEGORY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QPLACECATEGORY_NEWFROM );
+  HB_FUNC_EXEC(QPLACECATEGORY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPLACECATEGORY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QPLACECATEGORY_NEWFROM );
+  HB_FUNC_EXEC(QPLACECATEGORY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPLACECATEGORY_SELFDESTRUCTION )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

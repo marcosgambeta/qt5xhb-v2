@@ -73,9 +73,9 @@ QGeoCodeReply( QGeoCodeReply::Error error, const QString & errorString, QObject 
 HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QGeoCodeReply( static_cast<QGeoCodeReply::Error>( hb_parni(1) ), PQSTRING(2), OPQOBJECT( 3, nullptr ) );
+    auto obj = new QGeoCodeReply( static_cast<QGeoCodeReply::Error>( hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ISFINISHED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,10 +168,10 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,10 +194,10 @@ HB_FUNC_STATIC( QGEOCODEREPLY_VIEWPORT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QGeoShape( obj->viewport() );
+      auto ptr = new QGeoShape(obj->viewport());
       Qt5xHb::createReturnClass(ptr, "QGEOSHAPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->locations();
@@ -273,10 +273,10 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LIMIT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->limit() );
+      RINT(obj->limit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,10 +299,10 @@ HB_FUNC_STATIC( QGEOCODEREPLY_OFFSET )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->offset() );
+      RINT(obj->offset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ABORT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->abort();
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ONFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ONFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ONERROR )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoCodeReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ONERROR )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

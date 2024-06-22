@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPlaceEditorial()
@@ -69,13 +69,13 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQPLACECONTENT(1) )
+  else if (ISNUMPAR(1) && ISQPLACECONTENT(1))
   {
     /*
     QPlaceEditorial( const QPlaceContent & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceEditorial( *PQPLACECONTENT(1) );
+    auto obj = new QPlaceEditorial( *PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETTEXT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,10 +169,10 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,10 +195,10 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETTITLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,10 +223,10 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->language() );
+      RQSTRING(obj->language());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETLANGUAGE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setLanguage( PQSTRING(1) );
+      obj->setLanguage(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -61,9 +61,9 @@ QPlaceIdReply( QPlaceIdReply::OperationType operationType, QObject * parent = nu
 HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QPlaceIdReply( static_cast<QPlaceIdReply::OperationType>( hb_parni(1) ), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QPlaceIdReply( static_cast<QPlaceIdReply::OperationType>( hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->operationType() );
+      RENUM(obj->operationType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QPLACEIDREPLY_ID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->id() );
+      RQSTRING(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

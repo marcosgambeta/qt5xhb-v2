@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPlaceImage()
@@ -70,13 +70,13 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQPLACECONTENT(1) )
+  else if (ISNUMPAR(1) && ISQPLACECONTENT(1))
   {
     /*
     QPlaceImage( const QPlaceContent & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceImage( *PQPLACECONTENT(1) );
+    auto obj = new QPlaceImage( *PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -116,10 +116,10 @@ HB_FUNC_STATIC( QPLACEIMAGE_URL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QUrl( obj->url() );
+      auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl( *PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->imageId() );
+      RQSTRING(obj->imageId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setImageId( PQSTRING(1) );
+      obj->setImageId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,10 +225,10 @@ HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->mimeType() );
+      RQSTRING(obj->mimeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,10 +251,10 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETMIMETYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setMimeType( PQSTRING(1) );
+      obj->setMimeType(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -69,9 +69,9 @@ QGeoRouteReply( QGeoRouteReply::Error error, const QString & errorString, QObjec
 HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QGeoRouteReply( static_cast<QGeoRouteReply::Error>( hb_parni(1) ), PQSTRING(2), OPQOBJECT( 3, nullptr ) );
+    auto obj = new QGeoRouteReply( static_cast<QGeoRouteReply::Error>( hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -112,10 +112,10 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,10 +138,10 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,10 +164,10 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,10 +190,10 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QGeoRouteRequest( obj->request() );
+      auto ptr = new QGeoRouteRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QGEOROUTEREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->routes();
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->abort();
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoRouteReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

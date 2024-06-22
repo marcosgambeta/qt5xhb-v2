@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->managerName() );
+      RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->managerVersion() );
+      RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,10 +153,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_CALCULATEROUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGEOROUTEREQUEST(1) )
+    if (ISNUMPAR(1) && ISQGEOROUTEREQUEST(1))
     {
 #endif
-      auto ptr = obj->calculateRoute( *PQGEOROUTEREQUEST(1) );
+      auto ptr = obj->calculateRoute( *PQGEOROUTEREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_UPDATEROUTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2) )
+    if (ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2))
     {
 #endif
-      auto ptr = obj->updateRoute( *PQGEOROUTE(1), *PQGEOCOORDINATE(2) );
+      auto ptr = obj->updateRoute( *PQGEOROUTE(1), *PQGEOCOORDINATE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -207,10 +207,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedTravelModes() );
+      RENUM(obj->supportedTravelModes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,10 +233,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedFeatureTypes() );
+      RENUM(obj->supportedFeatureTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,10 +259,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedFeatureWeights() );
+      RENUM(obj->supportedFeatureWeights());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,10 +285,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedRouteOptimizations() );
+      RENUM(obj->supportedRouteOptimizations());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,10 +311,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedSegmentDetails() );
+      RENUM(obj->supportedSegmentDetails());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,10 +337,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedManeuverDetails() );
+      RENUM(obj->supportedManeuverDetails());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,10 +363,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETLOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,10 +391,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_LOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLocale( obj->locale() );
+      auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -418,10 +418,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETMEASUREMENTSYSTEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMeasurementSystem( static_cast<QLocale::MeasurementSystem>( hb_parni(1) ) );
+      obj->setMeasurementSystem( static_cast<QLocale::MeasurementSystem>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,10 +446,10 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->measurementSystem() );
+      RENUM(obj->measurementSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QGeoRouteReply*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoRouteReply*,QGeoRouteReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

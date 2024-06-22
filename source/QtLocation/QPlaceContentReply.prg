@@ -64,9 +64,9 @@ QPlaceContentReply( QObject * parent = nullptr )
 HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QPlaceContentReply( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QPlaceContentReply( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -107,10 +107,10 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,10 +133,10 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->totalCount() );
+      RINT(obj->totalCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPlaceContentRequest( obj->request() );
+      auto ptr = new QPlaceContentRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPlaceContentRequest( obj->previousPageRequest() );
+      auto ptr = new QPlaceContentRequest(obj->previousPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,10 +213,10 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_NEXTPAGEREQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPlaceContentRequest( obj->nextPageRequest() );
+      auto ptr = new QPlaceContentRequest(obj->nextPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

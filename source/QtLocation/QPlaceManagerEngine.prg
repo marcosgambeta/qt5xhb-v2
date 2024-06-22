@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->managerName() );
+      RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->managerVersion() );
+      RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,10 +177,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACEDETAILS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = obj->getPlaceDetails( PQSTRING(1) );
+      auto ptr = obj->getPlaceDetails(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEDETAILSREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -204,10 +204,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACECONTENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1))
     {
 #endif
-      auto ptr = obj->getPlaceContent( *PQPLACECONTENTREQUEST(1) );
+      auto ptr = obj->getPlaceContent( *PQPLACECONTENTREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACECONTENTREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,10 +231,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
     {
 #endif
-      auto ptr = obj->search( *PQPLACESEARCHREQUEST(1) );
+      auto ptr = obj->search( *PQPLACESEARCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,10 +258,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCHSUGGESTIONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
     {
 #endif
-      auto ptr = obj->searchSuggestions( *PQPLACESEARCHREQUEST(1) );
+      auto ptr = obj->searchSuggestions( *PQPLACESEARCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHSUGGESTIONREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -285,10 +285,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVEPLACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACE(1) )
+    if (ISNUMPAR(1) && ISQPLACE(1))
     {
 #endif
-      auto ptr = obj->savePlace( *PQPLACE(1) );
+      auto ptr = obj->savePlace( *PQPLACE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -312,10 +312,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVEPLACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = obj->removePlace( PQSTRING(1) );
+      auto ptr = obj->removePlace(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -339,10 +339,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVECATEGORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2))
     {
 #endif
-      auto ptr = obj->saveCategory( *PQPLACECATEGORY(1), PQSTRING(2) );
+      auto ptr = obj->saveCategory( *PQPLACECATEGORY(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,10 +366,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVECATEGORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = obj->removeCategory( PQSTRING(1) );
+      auto ptr = obj->removeCategory(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_INITIALIZECATEGORIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->initializeCategories();
@@ -420,10 +420,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_PARENTCATEGORYID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->parentCategoryId( PQSTRING(1) ) );
+      RQSTRING(obj->parentCategoryId(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,10 +446,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORYIDS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRINGLIST( obj->childCategoryIds( PQSTRING(1) ) );
+      RQSTRINGLIST(obj->childCategoryIds(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,10 +472,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CATEGORY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = new QPlaceCategory( obj->category( PQSTRING(1) ) );
+      auto ptr = new QPlaceCategory(obj->category(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QPLACECATEGORY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -499,10 +499,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORIES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto list = obj->childCategories( PQSTRING(1) );
+      auto list = obj->childCategories(PQSTRING(1));
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_LOCALES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->locales();
@@ -603,17 +603,17 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SETLOCALES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QList<QLocale> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      auto aList1 = hb_param( 1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen( aList1);
       for( auto i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QLocale*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
+        par1 << *static_cast<QLocale*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
       }
-      obj->setLocales( par1 );
+      obj->setLocales( par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -638,10 +638,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CONSTRUCTICONURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPLACEICON(1) && ISQSIZE(2) )
+    if (ISNUMPAR(2) && ISQPLACEICON(1) && ISQSIZE(2))
     {
 #endif
-      auto ptr = new QUrl( obj->constructIconUrl( *PQPLACEICON(1), *PQSIZE(2) ) );
+      auto ptr = new QUrl(obj->constructIconUrl( *PQPLACEICON(1), *PQSIZE(2)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -665,10 +665,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_COMPATIBLEPLACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACE(1) )
+    if (ISNUMPAR(1) && ISQPLACE(1))
     {
 #endif
-      auto ptr = new QPlace( obj->compatiblePlace( *PQPLACE(1) ) );
+      auto ptr = new QPlace(obj->compatiblePlace( *PQPLACE(1)));
       Qt5xHb::createReturnClass(ptr, "QPLACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -692,10 +692,10 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MATCHINGPLACES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1))
     {
 #endif
-      auto ptr = obj->matchingPlaces( *PQPLACEMATCHREQUEST(1) );
+      auto ptr = obj->matchingPlaces( *PQPLACEMATCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMATCHREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONFINISHED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QPlaceReply*)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONFINISHED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONERROR )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QPlaceReply*,QPlaceReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONERROR )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEADDED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("placeAdded(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEADDED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEUPDATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("placeUpdated(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEUPDATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEREMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("placeRemoved(QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEREMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYADDED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoryAdded(QPlaceCategory,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYADDED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYUPDATED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoryUpdated(QPlaceCategory,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYUPDATED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYREMOVED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoryRemoved(QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYREMOVED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONDATACHANGED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataChanged()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONDATACHANGED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

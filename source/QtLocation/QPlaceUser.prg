@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLACEUSER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPlaceUser()
@@ -76,13 +76,13 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQPLACEUSER(1) )
+  else if (ISNUMPAR(1) && ISQPLACEUSER(1))
   {
     /*
     QPlaceUser( const QPlaceUser & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceUser( *PQPLACEUSER(1) );
+    auto obj = new QPlaceUser( *PQPLACEUSER(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QPLACEUSER_USERID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->userId() );
+      RQSTRING(obj->userId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,10 +148,10 @@ HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setUserId( PQSTRING(1) );
+      obj->setUserId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,10 +176,10 @@ HB_FUNC_STATIC( QPLACEUSER_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,10 +202,10 @@ HB_FUNC_STATIC( QPLACEUSER_SETNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -251,12 +251,12 @@ HB_FUNC_STATIC( QPLACEUSER_NEWFROM )
 
 HB_FUNC_STATIC( QPLACEUSER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QPLACEUSER_NEWFROM );
+  HB_FUNC_EXEC(QPLACEUSER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPLACEUSER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QPLACEUSER_NEWFROM );
+  HB_FUNC_EXEC(QPLACEUSER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPLACEUSER_SELFDESTRUCTION )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QPLACEUSER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

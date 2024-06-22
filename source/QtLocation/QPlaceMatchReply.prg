@@ -63,9 +63,9 @@ QPlaceMatchReply( QObject * parent = nullptr )
 HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QPlaceMatchReply( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QPlaceMatchReply( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->places();
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QPlaceMatchRequest( obj->request() );
+      auto ptr = new QPlaceMatchRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACEMATCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
