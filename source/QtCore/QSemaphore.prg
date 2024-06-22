@@ -64,9 +64,9 @@ QSemaphore( int n = 0 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSemaphore( OPINT( 1, 0 ) );
+    auto obj = new QSemaphore( OPINT( 1, 0));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->acquire( OPINT( 1, 1 ) );
+      obj->acquire( OPINT( 1, 1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     bool tryAcquire( int n = 1 )
@@ -128,11 +128,11 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
+      RBOOL(obj->tryAcquire( OPINT( 1, 1 )));
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     bool tryAcquire( int n, int timeout )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
+      RBOOL(obj->tryAcquire(PINT(1), PINT(2)));
     }
 
   }
@@ -161,10 +161,10 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->release( OPINT( 1, 1 ) );
+      obj->release( OPINT( 1, 1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,10 +187,10 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->available() );
+      RINT(obj->available());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -233,12 +233,12 @@ HB_FUNC_STATIC( QSEMAPHORE_NEWFROM )
 
 HB_FUNC_STATIC( QSEMAPHORE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSEMAPHORE_NEWFROM );
+  HB_FUNC_EXEC(QSEMAPHORE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSEMAPHORE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSEMAPHORE_NEWFROM );
+  HB_FUNC_EXEC(QSEMAPHORE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSEMAPHORE_SELFDESTRUCTION )
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSEMAPHORE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

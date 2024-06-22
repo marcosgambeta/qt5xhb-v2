@@ -64,7 +64,7 @@ QMetaClassInfo()
 */
 HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QMetaClassInfo();
     Qt5xHb::returnNewObject(obj, true);
@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>( obj->name() ) );
+      hb_retc( static_cast< const char*>(obj->name()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,10 +125,10 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>( obj->value() ) );
+      hb_retc( static_cast< const char*>(obj->value()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->enclosingMetaObject();
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -196,12 +196,12 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
 
 HB_FUNC_STATIC( QMETACLASSINFO_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QMETACLASSINFO_NEWFROM );
+  HB_FUNC_EXEC(QMETACLASSINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMETACLASSINFO_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QMETACLASSINFO_NEWFROM );
+  HB_FUNC_EXEC(QMETACLASSINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMETACLASSINFO_SELFDESTRUCTION )
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

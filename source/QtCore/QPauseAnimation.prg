@@ -52,21 +52,21 @@ RETURN
 
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QPauseAnimation( QObject * parent = nullptr )
     */
-    auto obj = new QPauseAnimation( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QPauseAnimation( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QPauseAnimation( int msecs, QObject * parent = nullptr )
     */
-    auto obj = new QPauseAnimation( PINT(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QPauseAnimation(PINT(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -104,10 +104,10 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDuration( PINT(1) );
+      obj->setDuration(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->duration() );
+      RINT(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

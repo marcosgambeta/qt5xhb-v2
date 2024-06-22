@@ -81,10 +81,10 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->resolveUndeclaredEntity( PQSTRING(1) ) );
+      RQSTRING(obj->resolveUndeclaredEntity(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -127,12 +127,12 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_NEWFROM )
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QXMLSTREAMENTITYRESOLVER_NEWFROM );
+  HB_FUNC_EXEC(QXMLSTREAMENTITYRESOLVER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QXMLSTREAMENTITYRESOLVER_NEWFROM );
+  HB_FUNC_EXEC(QXMLSTREAMENTITYRESOLVER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_SELFDESTRUCTION )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

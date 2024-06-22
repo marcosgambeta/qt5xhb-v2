@@ -73,9 +73,9 @@ Q_DECL_CONSTEXPR QOperatingSystemVersion( QOperatingSystemVersion::OSType osType
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    auto obj = new QOperatingSystemVersion( static_cast<QOperatingSystemVersion::OSType>( hb_parni(1) ), PINT(2), OPINT( 3, -1 ), OPINT( 4, -1 ) );
+    auto obj = new QOperatingSystemVersion( static_cast<QOperatingSystemVersion::OSType>( hb_parni(1)), PINT(2), OPINT( 3, -1 ), OPINT( 4, -1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -110,10 +110,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_CURRENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QOperatingSystemVersion( QOperatingSystemVersion::current() );
+    auto ptr = new QOperatingSystemVersion( QOperatingSystemVersion::current());
     Qt5xHb::createReturnClass(ptr, "QOPERATINGSYSTEMVERSION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_CURRENTTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RENUM( QOperatingSystemVersion::currentType() );
+    RENUM( QOperatingSystemVersion::currentType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -157,10 +157,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_MAJORVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->majorVersion() );
+      RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,10 +183,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_MINORVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minorVersion() );
+      RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,10 +209,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_MICROVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->microVersion() );
+      RINT(obj->microVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,10 +235,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_SEGMENTCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->segmentCount() );
+      RINT(obj->segmentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,10 +264,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,10 +290,10 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -337,12 +337,12 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEWFROM )
 
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QOPERATINGSYSTEMVERSION_NEWFROM );
+  HB_FUNC_EXEC(QOPERATINGSYSTEMVERSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QOPERATINGSYSTEMVERSION_NEWFROM );
+  HB_FUNC_EXEC(QOPERATINGSYSTEMVERSION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_SELFDESTRUCTION )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

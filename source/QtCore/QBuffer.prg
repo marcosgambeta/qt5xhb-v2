@@ -64,21 +64,21 @@ RETURN
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QBuffer( QObject * parent = nullptr )
     */
-    auto obj = new QBuffer( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QBuffer( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QBuffer( QByteArray * byteArray, QObject * parent = nullptr )
     */
-    auto obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT( 2, nullptr ) );
+    auto obj = new QBuffer(PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->buffer();
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->buffer();
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
-  HB_FUNC_EXEC( QBUFFER_BUFFER1 );
+  HB_FUNC_EXEC(QBUFFER_BUFFER1);
 }
 
 /*
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->data();
@@ -196,10 +196,10 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setBuffer( PQBYTEARRAY(1) );
+      obj->setBuffer(PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
     void setData( const QByteArray & data )
@@ -223,13 +223,13 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 
     if (obj != nullptr)
     {
-      obj->setData( *PQBYTEARRAY(1) );
+      obj->setData( *PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     void setData( const char * data, int size )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 
     if (obj != nullptr)
     {
-      obj->setData( PCONSTCHAR(1), PINT(2) );
+      obj->setData(PCONSTCHAR(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -260,10 +260,10 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->atEnd() );
+      RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,10 +284,10 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canReadLine() );
+      RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->close();
@@ -334,10 +334,10 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->open( static_cast<QBuffer::OpenMode>( hb_parni(1) ) ) );
+      RBOOL(obj->open( static_cast<QBuffer::OpenMode>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,10 +358,10 @@ HB_FUNC_STATIC( QBUFFER_POS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->pos() );
+      RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,10 +382,10 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,10 +406,10 @@ HB_FUNC_STATIC( QBUFFER_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->size() );
+      RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

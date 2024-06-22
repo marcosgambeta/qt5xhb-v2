@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QTextBoundaryFinder()
@@ -77,21 +77,21 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQTEXTBOUNDARYFINDER(1) )
+  else if (ISNUMPAR(1) && ISQTEXTBOUNDARYFINDER(1))
   {
     /*
     QTextBoundaryFinder( const QTextBoundaryFinder & other )
     */
-    auto obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1) );
+    auto obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
     QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
     */
-    auto obj = new QTextBoundaryFinder( static_cast<QTextBoundaryFinder::BoundaryType>( hb_parni(1) ), PQSTRING(2) );
+    auto obj = new QTextBoundaryFinder( static_cast<QTextBoundaryFinder::BoundaryType>( hb_parni(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,10 +151,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->string() );
+      RQSTRING(obj->string());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toStart();
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->toEnd();
@@ -251,10 +251,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->position() );
+      RINT(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,10 +275,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPosition( PINT(1) );
+      obj->setPosition(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,10 +301,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->toNextBoundary() );
+      RINT(obj->toNextBoundary());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,10 +325,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->toPreviousBoundary() );
+      RINT(obj->toPreviousBoundary());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAtBoundary() );
+      RBOOL(obj->isAtBoundary());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,10 +373,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->boundaryReasons() );
+      RENUM(obj->boundaryReasons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -419,12 +419,12 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROM )
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEWFROM );
+  HB_FUNC_EXEC(QTEXTBOUNDARYFINDER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QTEXTBOUNDARYFINDER_NEWFROM );
+  HB_FUNC_EXEC(QTEXTBOUNDARYFINDER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SELFDESTRUCTION )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

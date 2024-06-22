@@ -60,9 +60,9 @@ QFileSelector( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QFileSelector( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QFileSelector( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 
 HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QString select( const QString & filePath ) const
@@ -100,11 +100,11 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 
     if (obj != nullptr)
     {
-      RQSTRING( obj->select( PQSTRING(1) ) );
+      RQSTRING(obj->select(PQSTRING(1)));
     }
 
   }
-  else if( ISNUMPAR(1) && ISQURL(1) )
+  else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
     QUrl select( const QUrl & filePath ) const
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QUrl( obj->select( *PQURL(1) ) );
+      auto ptr = new QUrl(obj->select( *PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
     }
 
@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->extraSelectors() );
+      RQSTRINGLIST(obj->extraSelectors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setExtraSelectors( PQSTRINGLIST(1) );
+      obj->setExtraSelectors(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->allSelectors() );
+      RQSTRINGLIST(obj->allSelectors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

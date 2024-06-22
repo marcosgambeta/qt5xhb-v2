@@ -69,30 +69,30 @@ RETURN
 
 HB_FUNC_STATIC( QDEBUG_NEW )
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
     QDebug( QIODevice * device )
     */
-    auto obj = new QDebug( PQIODEVICE(1) );
+    auto obj = new QDebug(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QDebug( QtMsgType t )
     */
-    auto obj = new QDebug( static_cast<QtMsgType>( hb_parni(1) ) );
+    auto obj = new QDebug( static_cast<QtMsgType>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQDEBUG(1) )
+  else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
     /*
     QDebug( const QDebug & o )
     */
-    auto obj = new QDebug( *PQDEBUG(1) );
+    auto obj = new QDebug( *PQDEBUG(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -128,10 +128,10 @@ HB_FUNC_STATIC( QDEBUG_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDEBUG(1) )
+    if (ISNUMPAR(1) && ISQDEBUG(1))
     {
 #endif
-      obj->swap( *PQDEBUG(1) );
+      obj->swap( *PQDEBUG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->space();
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->nospace();
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->maybeSpace();
@@ -229,10 +229,10 @@ HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoInsertSpaces() );
+      RBOOL(obj->autoInsertSpaces());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,10 +253,10 @@ HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoInsertSpaces( PBOOL(1) );
+      obj->setAutoInsertSpaces(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,10 +280,10 @@ HB_FUNC_STATIC( QDEBUG_MAYBEQUOTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISCHAR(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = &obj->maybeQuote( OPCHAR( 1, '"' ) );
+      auto ptr = &obj->maybeQuote( OPCHAR( 1, '"'));
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDEBUG_NOQUOTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->noquote();
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDEBUG_QUOTE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->quote();
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QDEBUG_RESETFORMAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = &obj->resetFormat();
@@ -388,10 +388,10 @@ HB_FUNC_STATIC( QDEBUG_SETVERBOSITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVerbosity( PINT(1) );
+      obj->setVerbosity(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QDEBUG_SETVERBOSITY )
 
 HB_FUNC_STATIC( QDEBUG_VERBOSITY )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     int verbosity() const
@@ -417,12 +417,12 @@ HB_FUNC_STATIC( QDEBUG_VERBOSITY )
 
     if (obj != nullptr)
     {
-      RINT( obj->verbosity() );
+      RINT(obj->verbosity());
     }
 #endif
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QDebug & verbosity( int verbosityLevel )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QDEBUG_VERBOSITY )
 
     if (obj != nullptr)
     {
-      auto ptr = &obj->verbosity( PINT(1) );
+      auto ptr = &obj->verbosity(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
     }
 #endif
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -476,12 +476,12 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
 
 HB_FUNC_STATIC( QDEBUG_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QDEBUG_NEWFROM );
+  HB_FUNC_EXEC(QDEBUG_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDEBUG_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QDEBUG_NEWFROM );
+  HB_FUNC_EXEC(QDEBUG_NEWFROM);
 }
 
 HB_FUNC_STATIC( QDEBUG_SELFDESTRUCTION )
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QDEBUG_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

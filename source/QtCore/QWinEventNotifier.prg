@@ -53,13 +53,13 @@ RETURN
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {
 #ifdef Q_OS_WIN
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
 #ifdef Q_OS_WIN
     /*
     QWinEventNotifier( QObject * parent = nullptr )
     */
-    auto obj = new QWinEventNotifier( OPQOBJECT( 1, nullptr ) );
+    auto obj = new QWinEventNotifier( OPQOBJECT( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
 #endif
@@ -102,10 +102,10 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEnabled() );
+      RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,10 +128,10 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

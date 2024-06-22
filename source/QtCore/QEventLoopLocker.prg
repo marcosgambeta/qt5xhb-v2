@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QEventLoopLocker()
@@ -66,21 +66,21 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQEVENTLOOP(1) )
+  else if (ISNUMPAR(1) && ISQEVENTLOOP(1))
   {
     /*
     QEventLoopLocker( QEventLoop * loop )
     */
-    auto obj = new QEventLoopLocker( PQEVENTLOOP(1) );
+    auto obj = new QEventLoopLocker(PQEVENTLOOP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQTHREAD(1) )
+  else if (ISNUMPAR(1) && ISQTHREAD(1))
   {
     /*
     QEventLoopLocker( QThread * thread )
     */
-    auto obj = new QEventLoopLocker( PQTHREAD(1) );
+    auto obj = new QEventLoopLocker(PQTHREAD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -138,12 +138,12 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QEVENTLOOPLOCKER_NEWFROM );
+  HB_FUNC_EXEC(QEVENTLOOPLOCKER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QEVENTLOOPLOCKER_NEWFROM );
+  HB_FUNC_EXEC(QEVENTLOOPLOCKER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_SELFDESTRUCTION )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

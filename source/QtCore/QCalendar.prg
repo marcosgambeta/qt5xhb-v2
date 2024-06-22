@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC( QCALENDAR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QCalendar()
@@ -95,13 +95,13 @@ HB_FUNC_STATIC( QCALENDAR_NEW )
 #endif
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QCalendar( QCalendar::System system )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-    auto obj = new QCalendar( static_cast<QCalendar::System>( hb_parni(1) ) );
+    auto obj = new QCalendar( static_cast<QCalendar::System>( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -141,10 +141,10 @@ HB_FUNC_STATIC( QCALENDAR_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QCALENDAR_DAYSINYEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->daysInYear( PINT(1) ) );
+      RINT(obj->daysInYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,10 +193,10 @@ HB_FUNC_STATIC( QCALENDAR_MONTHSINYEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->monthsInYear( PINT(1) ) );
+      RINT(obj->monthsInYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QCALENDAR_ISDATEVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      RBOOL( obj->isDateValid( PINT(1), PINT(2), PINT(3) ) );
+      RBOOL(obj->isDateValid(PINT(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,10 +245,10 @@ HB_FUNC_STATIC( QCALENDAR_ISLEAPYEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isLeapYear( PINT(1) ) );
+      RBOOL(obj->isLeapYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,10 +271,10 @@ HB_FUNC_STATIC( QCALENDAR_ISGREGORIAN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isGregorian() );
+      RBOOL(obj->isGregorian());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,10 +297,10 @@ HB_FUNC_STATIC( QCALENDAR_ISLUNAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLunar() );
+      RBOOL(obj->isLunar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,10 +323,10 @@ HB_FUNC_STATIC( QCALENDAR_ISLUNISOLAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLuniSolar() );
+      RBOOL(obj->isLuniSolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QCALENDAR_ISSOLAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSolar() );
+      RBOOL(obj->isSolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,10 +375,10 @@ HB_FUNC_STATIC( QCALENDAR_ISPROLEPTIC )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isProleptic() );
+      RBOOL(obj->isProleptic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,10 +401,10 @@ HB_FUNC_STATIC( QCALENDAR_HASYEARZERO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasYearZero() );
+      RBOOL(obj->hasYearZero());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,10 +427,10 @@ HB_FUNC_STATIC( QCALENDAR_MAXIMUMDAYSINMONTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumDaysInMonth() );
+      RINT(obj->maximumDaysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,10 +453,10 @@ HB_FUNC_STATIC( QCALENDAR_MINIMUMDAYSINMONTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumDaysInMonth() );
+      RINT(obj->minimumDaysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,10 +479,10 @@ HB_FUNC_STATIC( QCALENDAR_MAXIMUMMONTHSINYEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumMonthsInYear() );
+      RINT(obj->maximumMonthsInYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -505,10 +505,10 @@ HB_FUNC_STATIC( QCALENDAR_NAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,10 +531,10 @@ HB_FUNC_STATIC( QCALENDAR_DATEFROMPARTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QDate( obj->dateFromParts( PINT(1), PINT(2), PINT(3) ) );
+      auto ptr = new QDate(obj->dateFromParts(PINT(1), PINT(2), PINT(3)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -558,10 +558,10 @@ HB_FUNC_STATIC( QCALENDAR_DAYOFWEEK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATE(1) )
+    if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      RINT( obj->dayOfWeek( *PQDATE(1) ) );
+      RINT(obj->dayOfWeek( *PQDATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,10 +584,10 @@ HB_FUNC_STATIC( QCALENDAR_WEEKDAYNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RQSTRING( obj->weekDayName( *PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >( hb_parni(3) ) ) );
+      RQSTRING(obj->weekDayName( *PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >( hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,10 +610,10 @@ HB_FUNC_STATIC( QCALENDAR_STANDALONEWEEKDAYNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RQSTRING( obj->standaloneWeekDayName( *PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >( hb_parni(3) ) ) );
+      RQSTRING(obj->standaloneWeekDayName( *PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >( hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -632,10 +632,10 @@ HB_FUNC_STATIC( QCALENDAR_AVAILABLECALENDARS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QCalendar::availableCalendars() );
+    RQSTRINGLIST( QCalendar::availableCalendars());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QCALENDAR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QCALENDAR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -678,12 +678,12 @@ HB_FUNC_STATIC( QCALENDAR_NEWFROM )
 
 HB_FUNC_STATIC( QCALENDAR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QCALENDAR_NEWFROM );
+  HB_FUNC_EXEC(QCALENDAR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCALENDAR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QCALENDAR_NEWFROM );
+  HB_FUNC_EXEC(QCALENDAR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCALENDAR_SELFDESTRUCTION )
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QCALENDAR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

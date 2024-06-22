@@ -75,40 +75,40 @@ RETURN
 
 HB_FUNC( QVERSIONNUMBER_NEW )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
     QVersionNumber( int maj, int min, int mic )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    auto obj = new QVersionNumber( PINT(1), PINT(2), PINT(3) );
+    auto obj = new QVersionNumber(PINT(1), PINT(2), PINT(3));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QVersionNumber( int maj, int min )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    auto obj = new QVersionNumber( PINT(1), PINT(2) );
+    auto obj = new QVersionNumber(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QVersionNumber( int maj )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    auto obj = new QVersionNumber( PINT(1) );
+    auto obj = new QVersionNumber(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     QVersionNumber()
@@ -154,10 +154,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNORMALIZED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNormalized() );
+      RBOOL(obj->isNormalized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVERSIONNUMBER(1) )
+    if (ISNUMPAR(1) && ISQVERSIONNUMBER(1))
     {
 #endif
-      RBOOL( obj->isPrefixOf( *PQVERSIONNUMBER(1) ) );
+      RBOOL(obj->isPrefixOf( *PQVERSIONNUMBER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,10 +232,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MAJORVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->majorVersion() );
+      RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,10 +258,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MICROVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->microVersion() );
+      RINT(obj->microVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,10 +284,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MINORVERSION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minorVersion() );
+      RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,10 +310,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NORMALIZED )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QVersionNumber( obj->normalized() );
+      auto ptr = new QVersionNumber(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -337,10 +337,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->segmentAt( PINT(1) ) );
+      RINT(obj->segmentAt(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,10 +363,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTCOUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->segmentCount() );
+      RINT(obj->segmentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->segments();
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray );
+      hb_itemReturnRelease( pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,10 +423,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toString() );
+      RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,10 +445,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2) )
+  if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2))
   {
 #endif
-    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2) ) );
+    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
     Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -467,10 +467,10 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2) )
+  if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2))
   {
 #endif
-    RINT( QVersionNumber::compare( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2) ) );
+    RINT( QVersionNumber::compare( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -488,13 +488,13 @@ HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
     int par2;
-    auto ptr = new QVersionNumber( QVersionNumber::fromString( PQSTRING(1), &par2 ) );
+    auto ptr = new QVersionNumber( QVersionNumber::fromString(PQSTRING(1), &par2));
     Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
-    hb_storni( par2, 2 );
+    hb_storni( par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -537,12 +537,12 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
 
 HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QVERSIONNUMBER_NEWFROM );
+  HB_FUNC_EXEC(QVERSIONNUMBER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QVERSIONNUMBER_NEWFROM );
+  HB_FUNC_EXEC(QVERSIONNUMBER_NEWFROM);
 }
 
 HB_FUNC_STATIC( QVERSIONNUMBER_SELFDESTRUCTION )
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

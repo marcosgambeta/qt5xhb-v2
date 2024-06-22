@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPersistentModelIndex()
@@ -81,21 +81,21 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
     QPersistentModelIndex( const QModelIndex & index )
     */
-    auto obj = new QPersistentModelIndex( *PQMODELINDEX(1) );
+    auto obj = new QPersistentModelIndex( *PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1))
   {
     /*
     QPersistentModelIndex( const QPersistentModelIndex & other )
     */
-    auto obj = new QPersistentModelIndex( *PQPERSISTENTMODELINDEX(1) );
+    auto obj = new QPersistentModelIndex( *PQPERSISTENTMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -131,10 +131,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1))
     {
 #endif
-      obj->swap( *PQPERSISTENTMODELINDEX(1) );
+      obj->swap( *PQPERSISTENTMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,10 +157,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ROW )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->row() );
+      RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,10 +181,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_COLUMN )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->column() );
+      RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,10 +205,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< void*>( obj->internalPointer() ) );
+      hb_retptr( static_cast< void*>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,10 +229,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINTPTR( obj->internalId() );
+      RQUINTPTR(obj->internalId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,10 +253,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QModelIndex( obj->parent() );
+      auto ptr = new QModelIndex(obj->parent());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -278,10 +278,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2) ) );
+      auto ptr = new QModelIndex(obj->sibling(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -303,10 +303,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QModelIndex( obj->child( PINT(1), PINT(2) ) );
+      auto ptr = new QModelIndex(obj->child(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -328,10 +328,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = new QVariant( obj->data( OPINT( 1, Qt::DisplayRole ) ) );
+      auto ptr = new QVariant(obj->data( OPINT( 1, Qt::DisplayRole )));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -353,10 +353,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->model();
@@ -402,10 +402,10 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -448,12 +448,12 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROM )
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QPERSISTENTMODELINDEX_NEWFROM );
+  HB_FUNC_EXEC(QPERSISTENTMODELINDEX_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QPERSISTENTMODELINDEX_NEWFROM );
+  HB_FUNC_EXEC(QPERSISTENTMODELINDEX_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SELFDESTRUCTION )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

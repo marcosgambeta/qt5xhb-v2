@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QProcessEnvironment()
@@ -76,12 +76,12 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+  else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
   {
     /*
     QProcessEnvironment( const QProcessEnvironment & other )
     */
-    auto obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+    auto obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,10 +117,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+    if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
     {
 #endif
-      obj->swap( *PQPROCESSENVIRONMENT(1) );
+      obj->swap( *PQPROCESSENVIRONMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -193,10 +193,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     void insert( const QString & name, const QString & value )
@@ -218,13 +218,13 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 
     if (obj != nullptr)
     {
-      obj->insert( PQSTRING(1), PQSTRING(2) );
+      obj->insert(PQSTRING(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+  else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
   {
     /*
     void insert( const QProcessEnvironment & e )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 
     if (obj != nullptr)
     {
-      obj->insert( *PQPROCESSENVIRONMENT(1) );
+      obj->insert( *PQPROCESSENVIRONMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -255,10 +255,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->remove( PQSTRING(1) );
+      obj->remove(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,10 +281,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      RQSTRING( obj->value( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RQSTRING(obj->value(PQSTRING(1), OPQSTRING(2, QString() )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,10 +305,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->toStringList() );
+      RQSTRINGLIST(obj->toStringList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,10 +329,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,10 +349,10 @@ static QProcessEnvironment systemEnvironment()
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment() );
+    auto ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment());
     Qt5xHb::createReturnClass(ptr, "QPROCESSENVIRONMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -395,12 +395,12 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEWFROM );
+  HB_FUNC_EXEC(QPROCESSENVIRONMENT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEWFROM );
+  HB_FUNC_EXEC(QPROCESSENVIRONMENT_NEWFROM);
 }
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SELFDESTRUCTION )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

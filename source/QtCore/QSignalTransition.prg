@@ -54,21 +54,21 @@ RETURN
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
     QSignalTransition( QState * sourceState = nullptr )
     */
-    auto obj = new QSignalTransition( OPQSTATE( 1, nullptr ) );
+    auto obj = new QSignalTransition( OPQSTATE( 1, nullptr));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ( ISQSTATE(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3) || HB_ISNIL(3)))
   {
     /*
     QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = nullptr )
     */
-    auto obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE( 3, nullptr ) );
+    auto obj = new QSignalTransition(PQOBJECT(1), PCONSTCHAR(2), OPQSTATE( 3, nullptr));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->senderObject();
@@ -129,10 +129,10 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setSenderObject( PQOBJECT(1) );
+      obj->setSenderObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,10 +155,10 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QByteArray( obj->signal() );
+      auto ptr = new QByteArray(obj->signal());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,10 +180,10 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setSignal( *PQBYTEARRAY(1) );
+      obj->setSignal( *PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

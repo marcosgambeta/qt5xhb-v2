@@ -69,7 +69,7 @@ QMimeDatabase()
 */
 HB_FUNC_STATIC( QMIMEDATABASE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     auto obj = new QMimeDatabase();
     Qt5xHb::returnNewObject(obj, true);
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = new QMimeType( obj->mimeTypeForName( PQSTRING(1) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForName(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QMimeType mimeTypeForFile( const QString & fileName, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault ) const
@@ -132,12 +132,12 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType( obj->mimeTypeForFile( PQSTRING(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >( hb_parni(2) ) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >( hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
   }
-  else if( ISBETWEEN(1, 2) && ISQFILEINFO(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if (ISBETWEEN(1, 2) && ISQFILEINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QMimeType mimeTypeForFile( const QFileInfo & fileInfo, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault ) const
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType( obj->mimeTypeForFile( *PQFILEINFO(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >( hb_parni(2) ) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForFile( *PQFILEINFO(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >( hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto list = obj->mimeTypesForFileName( PQSTRING(1) );
+      auto list = obj->mimeTypesForFileName(PQSTRING(1));
       auto pDynSym = hb_dynsymFindName("QMIMETYPE");
       auto pArray = hb_itemArrayNew(0);
       if( pDynSym != nullptr )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
 {
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
     QMimeType mimeTypeForData( const QByteArray & data ) const
@@ -218,12 +218,12 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType( obj->mimeTypeForData( *PQBYTEARRAY(1) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForData( *PQBYTEARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
   }
-  else if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
     QMimeType mimeTypeForData( QIODevice * device ) const
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType( obj->mimeTypeForData( PQIODEVICE(1) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForData(PQIODEVICE(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
@@ -253,10 +253,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QMimeType( obj->mimeTypeForUrl( *PQURL(1) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForUrl( *PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2))
   {
     /*
     QMimeType mimeTypeForFileNameAndData( const QString & fileName, QIODevice * device ) const
@@ -279,12 +279,12 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), PQIODEVICE(2) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), PQIODEVICE(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2))
   {
     /*
     QMimeType mimeTypeForFileNameAndData( const QString & fileName, const QByteArray & data) const
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), *PQBYTEARRAY(2) ) );
+      auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), *PQBYTEARRAY(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
@@ -314,10 +314,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_SUFFIXFORFILENAME )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->suffixForFileName( PQSTRING(1) ) );
+      RQSTRING(obj->suffixForFileName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->allMimeTypes();
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -410,12 +410,12 @@ HB_FUNC_STATIC( QMIMEDATABASE_NEWFROM )
 
 HB_FUNC_STATIC( QMIMEDATABASE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QMIMEDATABASE_NEWFROM );
+  HB_FUNC_EXEC(QMIMEDATABASE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMIMEDATABASE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QMIMEDATABASE_NEWFROM );
+  HB_FUNC_EXEC(QMIMEDATABASE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QMIMEDATABASE_SELFDESTRUCTION )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

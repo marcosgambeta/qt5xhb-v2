@@ -81,10 +81,10 @@ HB_FUNC_STATIC( QJSONPARSEERROR_ERRORSTRING )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -127,12 +127,12 @@ HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROM )
 
 HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QJSONPARSEERROR_NEWFROM );
+  HB_FUNC_EXEC(QJSONPARSEERROR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QJSONPARSEERROR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QJSONPARSEERROR_NEWFROM );
+  HB_FUNC_EXEC(QJSONPARSEERROR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QJSONPARSEERROR_SELFDESTRUCTION )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

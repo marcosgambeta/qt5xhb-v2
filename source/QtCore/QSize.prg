@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIZE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSize()
@@ -77,12 +77,12 @@ HB_FUNC_STATIC( QSIZE_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QSize( int width, int height )
     */
-    auto obj = new QSize( PINT(1), PINT(2) );
+    auto obj = new QSize(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -118,10 +118,10 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      auto ptr = new QSize( obj->boundedTo( *PQSIZE(1) ) );
+      auto ptr = new QSize(obj->boundedTo( *PQSIZE(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      auto ptr = new QSize( obj->expandedTo( *PQSIZE(1) ) );
+      auto ptr = new QSize(obj->expandedTo( *PQSIZE(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -168,10 +168,10 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->height() );
+      RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,10 +192,10 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,10 +216,10 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,10 +240,10 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
 
 HB_FUNC_STATIC( QSIZE_SCALE )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
     void scale( int width, int height, Qt::AspectRatioMode mode )
@@ -265,13 +265,13 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 
     if (obj != nullptr)
     {
-      obj->scale( PINT(1), PINT(2), static_cast<Qt::AspectRatioMode>( hb_parni(3) ) );
+      obj->scale(PINT(1), PINT(2), static_cast<Qt::AspectRatioMode>( hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
 
   }
-  else if( ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
   {
     /*
     void scale( const QSize & size, Qt::AspectRatioMode mode )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 
     if (obj != nullptr)
     {
-      obj->scale( *PQSIZE(1), static_cast<Qt::AspectRatioMode>( hb_parni(2) ) );
+      obj->scale( *PQSIZE(1), static_cast<Qt::AspectRatioMode>( hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -302,10 +302,10 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHeight( PINT(1) );
+      obj->setHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,10 +328,10 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidth( PINT(1) );
+      obj->setWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->transpose();
@@ -380,10 +380,10 @@ HB_FUNC_STATIC( QSIZE_WIDTH )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->width() );
+      RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSIZE_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QSIZE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -426,12 +426,12 @@ HB_FUNC_STATIC( QSIZE_NEWFROM )
 
 HB_FUNC_STATIC( QSIZE_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSIZE_NEWFROM );
+  HB_FUNC_EXEC(QSIZE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSIZE_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSIZE_NEWFROM );
+  HB_FUNC_EXEC(QSIZE_NEWFROM);
 }
 
 HB_FUNC_STATIC( QSIZE_SELFDESTRUCTION )
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QSIZE_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

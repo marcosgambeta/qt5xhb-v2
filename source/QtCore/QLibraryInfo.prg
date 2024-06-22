@@ -82,10 +82,10 @@ static QString licensee()
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QLibraryInfo::licensee() );
+    RQSTRING( QLibraryInfo::licensee());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -101,10 +101,10 @@ static QString licensedProducts()
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QLibraryInfo::licensedProducts() );
+    RQSTRING( QLibraryInfo::licensedProducts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -120,10 +120,10 @@ static QDate buildDate()
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QDate( QLibraryInfo::buildDate() );
+    auto ptr = new QDate( QLibraryInfo::buildDate());
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -140,10 +140,10 @@ static bool isDebugBuild()
 HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QLibraryInfo::isDebugBuild() );
+    RBOOL( QLibraryInfo::isDebugBuild());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -159,10 +159,10 @@ static QString location( QLibraryInfo::LibraryLocation )
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QLibraryInfo::location( static_cast<QLibraryInfo::LibraryLocation>( hb_parni(1) ) ) );
+    RQSTRING( QLibraryInfo::location( static_cast<QLibraryInfo::LibraryLocation>( hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -204,12 +204,12 @@ HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )
 
 HB_FUNC_STATIC( QLIBRARYINFO_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QLIBRARYINFO_NEWFROM );
+  HB_FUNC_EXEC(QLIBRARYINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QLIBRARYINFO_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QLIBRARYINFO_NEWFROM );
+  HB_FUNC_EXEC(QLIBRARYINFO_NEWFROM);
 }
 
 HB_FUNC_STATIC( QLIBRARYINFO_SELFDESTRUCTION )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

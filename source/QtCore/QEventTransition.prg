@@ -55,21 +55,21 @@ RETURN
 
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
     QEventTransition( QState * sourceState = nullptr )
     */
-    auto obj = new QEventTransition( OPQSTATE( 1, nullptr ) );
+    auto obj = new QEventTransition( OPQSTATE( 1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
-  else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && ( ISQSTATE(3) || HB_ISNIL(3) ) )
+  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3) || HB_ISNIL(3)))
   {
     /*
     QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = nullptr )
     */
-    auto obj = new QEventTransition( PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2) ), OPQSTATE( 3, nullptr ) );
+    auto obj = new QEventTransition(PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2)), OPQSTATE( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->eventSource();
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->eventType() );
+      RENUM(obj->eventType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setEventSource( PQOBJECT(1) );
+      obj->setEventSource(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,10 +182,10 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEventType( static_cast<QEvent::Type>( hb_parni(1) ) );
+      obj->setEventType( static_cast<QEvent::Type>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

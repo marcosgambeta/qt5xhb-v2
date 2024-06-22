@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->machine();
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto ptr = obj->parentState();
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("entered()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
     auto indexOfSignal = sender->metaObject()->indexOfSignal("exited()");
     auto indexOfCodeBlock = -1;
 
-    if( hb_pcount() == 1 )
+    if (hb_pcount() == 1 )
     {
       if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
       {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
         result = true;
       }
     }
-    else if( hb_pcount() == 0 )
+    else if (hb_pcount() == 0 )
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

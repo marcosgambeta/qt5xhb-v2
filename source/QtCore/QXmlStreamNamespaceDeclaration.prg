@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QXmlStreamNamespaceDeclaration()
@@ -69,21 +69,21 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1) )
+  else if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1))
   {
     /*
     QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
     */
-    auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
+    auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
     */
-    auto obj = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
+    auto obj = new QXmlStreamNamespaceDeclaration(PQSTRING(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -119,10 +119,10 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QStringRef( obj->namespaceUri() );
+      auto ptr = new QStringRef(obj->namespaceUri());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -144,10 +144,10 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QStringRef( obj->prefix() );
+      auto ptr = new QStringRef(obj->prefix());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -191,12 +191,12 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROM )
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROM );
+  HB_FUNC_EXEC(QXMLSTREAMNAMESPACEDECLARATION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROM );
+  HB_FUNC_EXEC(QXMLSTREAMNAMESPACEDECLARATION_NEWFROM);
 }
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_SELFDESTRUCTION )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

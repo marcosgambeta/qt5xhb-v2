@@ -85,7 +85,7 @@ RETURN
 
 HB_FUNC_STATIC( QJSONARRAY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QJsonArray()
@@ -94,12 +94,12 @@ HB_FUNC_STATIC( QJSONARRAY_NEW )
     Qt5xHb::returnNewObject(obj, true);
 
   }
-  else if( ISNUMPAR(1) && ISQJSONARRAY(1) )
+  else if (ISNUMPAR(1) && ISQJSONARRAY(1))
   {
     /*
     QJsonArray( const QJsonArray & other )
     */
-    auto obj = new QJsonArray( *PQJSONARRAY(1) );
+    auto obj = new QJsonArray( *PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QJSONARRAY_APPEND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQJSONVALUE(1) )
+    if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->append( *PQJSONVALUE(1) );
+      obj->append( *PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,10 +161,10 @@ HB_FUNC_STATIC( QJSONARRAY_AT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QJsonValue( obj->at( PINT(1) ) );
+      auto ptr = new QJsonValue(obj->at(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QJSONARRAY_CONTAINS )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQJSONVALUE(1) )
+    if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      RBOOL( obj->contains( *PQJSONVALUE(1) ) );
+      RBOOL(obj->contains( *PQJSONVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,10 +210,10 @@ HB_FUNC_STATIC( QJSONARRAY_COUNT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,10 +234,10 @@ HB_FUNC_STATIC( QJSONARRAY_EMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->empty() );
+      RBOOL(obj->empty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,10 +258,10 @@ HB_FUNC_STATIC( QJSONARRAY_FIRST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QJsonValue( obj->first() );
+      auto ptr = new QJsonValue(obj->first());
       Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -283,10 +283,10 @@ HB_FUNC_STATIC( QJSONARRAY_INSERT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQJSONVALUE(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQJSONVALUE(2))
     {
 #endif
-      obj->insert( PINT(1), *PQJSONVALUE(2) );
+      obj->insert(PINT(1), *PQJSONVALUE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,10 +309,10 @@ HB_FUNC_STATIC( QJSONARRAY_ISEMPTY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,10 +333,10 @@ HB_FUNC_STATIC( QJSONARRAY_LAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QJsonValue( obj->last() );
+      auto ptr = new QJsonValue(obj->last());
       Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QJSONARRAY_POP_BACK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->pop_back();
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QJSONARRAY_POP_FRONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->pop_front();
@@ -410,10 +410,10 @@ HB_FUNC_STATIC( QJSONARRAY_PREPEND )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQJSONVALUE(1) )
+    if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->prepend( *PQJSONVALUE(1) );
+      obj->prepend( *PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,10 +436,10 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_BACK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQJSONVALUE(1) )
+    if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->push_back( *PQJSONVALUE(1) );
+      obj->push_back( *PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,10 +462,10 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_FRONT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQJSONVALUE(1) )
+    if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->push_front( *PQJSONVALUE(1) );
+      obj->push_front( *PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,10 +488,10 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeAt( PINT(1) );
+      obj->removeAt(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVEFIRST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->removeFirst();
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVELAST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->removeLast();
@@ -566,10 +566,10 @@ HB_FUNC_STATIC( QJSONARRAY_REPLACE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQJSONVALUE(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQJSONVALUE(2))
     {
 #endif
-      obj->replace( PINT(1), *PQJSONVALUE(2) );
+      obj->replace(PINT(1), *PQJSONVALUE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,10 +592,10 @@ HB_FUNC_STATIC( QJSONARRAY_SIZE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->size() );
+      RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -616,10 +616,10 @@ HB_FUNC_STATIC( QJSONARRAY_TAKEAT )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QJsonValue( obj->takeAt( PINT(1) ) );
+      auto ptr = new QJsonValue(obj->takeAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       auto list = obj->toVariantList();
@@ -687,10 +687,10 @@ static QJsonArray fromStringList( const QStringList & list )
 HB_FUNC_STATIC( QJSONARRAY_FROMSTRINGLIST )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
 #endif
-    auto ptr = new QJsonArray( QJsonArray::fromStringList( PQSTRINGLIST(1) ) );
+    auto ptr = new QJsonArray( QJsonArray::fromStringList(PQSTRINGLIST(1)));
     Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -707,17 +707,17 @@ static QJsonArray fromVariantList( const QVariantList & list )
 HB_FUNC_STATIC( QJSONARRAY_FROMVARIANTLIST )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
 #endif
     QVariantList par1;
-    auto aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
+    auto aList1 = hb_param( 1, HB_IT_ARRAY);
+    int nLen1 = hb_arrayLen( aList1);
     for( auto i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0) ) );
+      par1 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
     }
-    auto ptr = new QJsonArray( QJsonArray::fromVariantList( par1 ) );
+    auto ptr = new QJsonArray( QJsonArray::fromVariantList( par1));
     Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QJSONARRAY_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QJSONARRAY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -760,12 +760,12 @@ HB_FUNC_STATIC( QJSONARRAY_NEWFROM )
 
 HB_FUNC_STATIC( QJSONARRAY_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QJSONARRAY_NEWFROM );
+  HB_FUNC_EXEC(QJSONARRAY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QJSONARRAY_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QJSONARRAY_NEWFROM );
+  HB_FUNC_EXEC(QJSONARRAY_NEWFROM);
 }
 
 HB_FUNC_STATIC( QJSONARRAY_SELFDESTRUCTION )
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QJSONARRAY_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

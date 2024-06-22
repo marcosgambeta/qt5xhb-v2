@@ -65,9 +65,9 @@ QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::No
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QReadWriteLock( HB_ISNIL(1) ? static_cast<QReadWriteLock::RecursionMode >( QReadWriteLock::NonRecursive ) : static_cast<QReadWriteLock::RecursionMode >( hb_parni(1) ) );
+    auto obj = new QReadWriteLock( HB_ISNIL(1) ? static_cast<QReadWriteLock::RecursionMode >( QReadWriteLock::NonRecursive ) : static_cast<QReadWriteLock::RecursionMode >( hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->lockForRead();
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     bool tryLockForRead()
@@ -129,11 +129,11 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->tryLockForRead() );
+      RBOOL(obj->tryLockForRead());
     }
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     bool tryLockForRead( int timeout )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->tryLockForRead( PINT(1) ) );
+      RBOOL(obj->tryLockForRead(PINT(1)));
     }
 
   }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->lockForWrite();
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     bool tryLockForWrite()
@@ -189,11 +189,11 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->tryLockForWrite() );
+      RBOOL(obj->tryLockForWrite());
     }
 
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     bool tryLockForWrite( int timeout )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 
     if (obj != nullptr)
     {
-      RBOOL( obj->tryLockForWrite( PINT(1) ) );
+      RBOOL(obj->tryLockForWrite(PINT(1)));
     }
 
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unlock();
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -270,12 +270,12 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEWFROM )
 
 HB_FUNC_STATIC( QREADWRITELOCK_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QREADWRITELOCK_NEWFROM );
+  HB_FUNC_EXEC(QREADWRITELOCK_NEWFROM);
 }
 
 HB_FUNC_STATIC( QREADWRITELOCK_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QREADWRITELOCK_NEWFROM );
+  HB_FUNC_EXEC(QREADWRITELOCK_NEWFROM);
 }
 
 HB_FUNC_STATIC( QREADWRITELOCK_SELFDESTRUCTION )
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

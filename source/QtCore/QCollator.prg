@@ -73,24 +73,24 @@ RETURN
 
 HB_FUNC_STATIC( QCOLLATOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQLOCALE(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQLOCALE(1) || HB_ISNIL(1)))
   {
     /*
     QCollator( const QLocale & locale = QLocale() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QCollator( HB_ISNIL(1) ? QLocale() : *static_cast<QLocale*>(Qt5xHb::itemGetPtr(1)) );
+    auto obj = new QCollator( HB_ISNIL(1) ? QLocale() : *static_cast<QLocale*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
   }
-  else if( ISNUMPAR(1) && ISQCOLLATOR(1) )
+  else if (ISNUMPAR(1) && ISQCOLLATOR(1))
   {
     /*
     QCollator( const QCollator & )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QCollator( *PQCOLLATOR(1) );
+    auto obj = new QCollator( *PQCOLLATOR(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -130,10 +130,10 @@ HB_FUNC_STATIC( QCOLLATOR_SWAP )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLLATOR(1) )
+    if (ISNUMPAR(1) && ISQCOLLATOR(1))
     {
 #endif
-      obj->swap( *PQCOLLATOR(1) );
+      obj->swap( *PQCOLLATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,10 +158,10 @@ HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QCOLLATOR_LOCALE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      auto ptr = new QLocale( obj->locale() );
+      auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,10 +213,10 @@ HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->caseSensitivity() );
+      RENUM(obj->caseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaseSensitivity( static_cast<Qt::CaseSensitivity>( hb_parni(1) ) );
+      obj->setCaseSensitivity( static_cast<Qt::CaseSensitivity>( hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,10 +267,10 @@ HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setNumericMode( PBOOL(1) );
+      obj->setNumericMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,10 +295,10 @@ HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->numericMode() );
+      RBOOL(obj->numericMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,10 +321,10 @@ HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setIgnorePunctuation( PBOOL(1) );
+      obj->setIgnorePunctuation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->ignorePunctuation() );
+      RBOOL(obj->ignorePunctuation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,10 +375,10 @@ HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      auto ptr = new QCollatorSortKey( obj->sortKey( PQSTRING(1) ) );
+      auto ptr = new QCollatorSortKey(obj->sortKey(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QCOLLATORSORTKEY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -423,12 +423,12 @@ HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
 
 HB_FUNC_STATIC( QCOLLATOR_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QCOLLATOR_NEWFROM );
+  HB_FUNC_EXEC(QCOLLATOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCOLLATOR_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QCOLLATOR_NEWFROM );
+  HB_FUNC_EXEC(QCOLLATOR_NEWFROM);
 }
 
 HB_FUNC_STATIC( QCOLLATOR_SELFDESTRUCTION )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETSELFDESTRUCTION )
 {
   auto self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

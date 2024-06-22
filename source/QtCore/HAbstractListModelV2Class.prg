@@ -51,7 +51,7 @@ HAbstractListModelV2(QObject * parent = nullptr)
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODELV2_NEW )
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     auto obj = new HAbstractListModelV2(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETROWCOUNTCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
       obj->setRowCountCB(PBLOCKORSYMBOL(1));
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETDATACB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
       obj->setDataCB(PBLOCKORSYMBOL(1));
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETHEADERDATACB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
       obj->setHeaderDataCB(PBLOCKORSYMBOL(1));
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETFLAGSCB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
       obj->setFlagsCB(PBLOCKORSYMBOL(1));
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETSETDATACB )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
       obj->setSetDataCB(PBLOCKORSYMBOL(1));
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_RELOADDATA )
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reloadData();
