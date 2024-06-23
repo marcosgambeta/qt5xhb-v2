@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
       auto list = obj->availableLocales();
       auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
       auto list = obj->availableVoices();
       auto pDynSym = hb_dynsymFindName("QVOICE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -658,14 +658,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged(QLocale)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTextToSpeech::localeChanged,
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
                                            (const QLocale & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLOCALE");
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -712,14 +712,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pitchChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTextToSpeech::pitchChanged,
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
                                            (double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -766,14 +766,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rateChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTextToSpeech::rateChanged,
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
                                            (double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -820,14 +820,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTextToSpeech::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTextToSpeech::stateChanged,
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
                                            (QTextToSpeech::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -874,14 +874,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("voiceChanged(QVoice)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTextToSpeech::voiceChanged,
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
                                            (const QVoice & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVOICE");
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -928,14 +928,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<int>::of(&QTextToSpeech::volumeChanged),
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -982,14 +982,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<double>::of(&QTextToSpeech::volumeChanged),
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
                                            (double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
