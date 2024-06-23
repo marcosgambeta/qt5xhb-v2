@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
       auto list = obj->availableSizes( HB_ISNIL(1) ? static_cast<QIcon::Mode >( QIcon::Normal ) : static_cast<QIcon::Mode >( hb_parni(1)), HB_ISNIL(2) ? static_cast<QIcon::State >( QIcon::Off ) : static_cast<QIcon::State >( hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

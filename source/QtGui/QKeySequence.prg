@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
     auto list = QKeySequence::keyBindings( static_cast<QKeySequence::StandardKey>( hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {

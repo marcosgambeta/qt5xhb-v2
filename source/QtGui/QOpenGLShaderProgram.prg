@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
       auto list = obj->shaders();
       auto pDynSym = hb_dynsymFindName("QOPENGLSHADER");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNHEADERCELLS )
       auto list = obj->columnHeaderCells();
       auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWHEADERCELLS )
       auto list = obj->rowHeaderCells();
       auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

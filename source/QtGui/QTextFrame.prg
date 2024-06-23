@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
       auto list = obj->childFrames();
       auto pDynSym = hb_dynsymFindName("QTEXTFRAME");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

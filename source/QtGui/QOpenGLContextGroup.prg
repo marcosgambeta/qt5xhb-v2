@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
       auto list = obj->shares();
       auto pDynSym = hb_dynsymFindName("QOPENGLCONTEXT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

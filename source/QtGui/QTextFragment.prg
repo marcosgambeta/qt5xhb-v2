@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
       auto list = obj->glyphRuns( OPINT( 1, -1 ), OPINT( 2, -1));
       auto pDynSym = hb_dynsymFindName("QGLYPHRUN");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

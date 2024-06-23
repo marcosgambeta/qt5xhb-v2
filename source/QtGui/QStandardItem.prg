@@ -2019,7 +2019,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
       auto list = obj->takeRow(PINT(1));
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -2066,7 +2066,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
       auto list = obj->takeColumn(PINT(1));
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
