@@ -475,14 +475,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("injectionPointChanged(QQuickWebEngineScript::InjectionPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineScript::injectionPointChanged,
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
                                            (QQuickWebEngineScript::InjectionPoint arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -529,14 +529,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineScript::nameChanged,
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
                                            (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -583,14 +583,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("runOnSubframesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineScript::runOnSubframesChanged,
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -637,14 +637,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceCodeChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineScript::sourceCodeChanged,
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
                                            (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -691,14 +691,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceUrlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineScript::sourceUrlChanged,
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
                                            (const QUrl & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -745,14 +745,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("worldIdChanged(QQuickWebEngineScript::ScriptWorldId)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineScript::worldIdChanged,
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
                                            (QQuickWebEngineScript::ScriptWorldId arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

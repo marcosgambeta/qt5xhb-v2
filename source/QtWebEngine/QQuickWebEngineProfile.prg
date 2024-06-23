@@ -993,14 +993,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cachePathChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::cachePathChanged,
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1045,14 +1045,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpAcceptLanguageChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::httpAcceptLanguageChanged,
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1097,14 +1097,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpCacheMaximumSizeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::httpCacheMaximumSizeChanged,
@@ -1112,7 +1112,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1149,14 +1149,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpCacheTypeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::httpCacheTypeChanged,
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1201,14 +1201,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpUserAgentChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::httpUserAgentChanged,
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1253,14 +1253,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("offTheRecordChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::offTheRecordChanged,
@@ -1268,7 +1268,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1305,14 +1305,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("persistentCookiesPolicyChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::persistentCookiesPolicyChanged,
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1357,14 +1357,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("persistentStoragePathChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::persistentStoragePathChanged,
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1409,14 +1409,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("spellCheckEnabledChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::spellCheckEnabledChanged,
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1437,7 +1437,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1461,14 +1461,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("spellCheckLanguagesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::spellCheckLanguagesChanged,
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1489,7 +1489,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1513,14 +1513,14 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("storageNameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QQuickWebEngineProfile::storageNameChanged,
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINEPROFILE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
