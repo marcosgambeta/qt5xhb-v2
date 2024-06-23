@@ -380,7 +380,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
       auto list = obj->seriesList();
       auto pDynSym = hb_dynsymFindName("QSCATTER3DSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
       auto list = obj->axes();
       auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -527,14 +527,14 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisXChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &Q3DScatter::axisXChanged,
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
                                            (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -581,14 +581,14 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisYChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &Q3DScatter::axisYChanged,
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
                                            (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -635,14 +635,14 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisZChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &Q3DScatter::axisZChanged,
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
                                            (QValue3DAxis * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -689,14 +689,14 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QScatter3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &Q3DScatter::selectedSeriesChanged,
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
                                            (QScatter3DSeries * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCATTER");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCATTER3DSERIES");
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
