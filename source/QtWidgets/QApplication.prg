@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
     auto list = QApplication::allWidgets();
     auto pDynSym = hb_dynsymFindName("QWIDGET");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( auto item : list )
       {
@@ -1535,7 +1535,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
     auto list = QApplication::topLevelWidgets();
     auto pDynSym = hb_dynsymFindName("QWIDGET");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( auto item : list )
       {
@@ -1641,14 +1641,14 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusChanged(QWidget*,QWidget*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QApplication::focusChanged,
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
                                            (QWidget * arg1, QWidget * arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAPPLICATION");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWIDGET");
@@ -1673,7 +1673,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

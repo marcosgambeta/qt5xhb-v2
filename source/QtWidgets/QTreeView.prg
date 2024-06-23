@@ -1597,14 +1597,14 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("collapsed(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTreeView::collapsed,
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
                                            (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEVIEW");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1627,7 +1627,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1647,14 +1647,14 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("expanded(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QTreeView::expanded,
@@ -1662,7 +1662,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
                                            (const QModelIndex & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTREEVIEW");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1677,7 +1677,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
