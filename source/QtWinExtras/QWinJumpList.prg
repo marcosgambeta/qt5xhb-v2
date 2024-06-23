@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
       auto list = obj->categories();
       auto pDynSym = hb_dynsymFindName("QWINJUMPLISTCATEGORY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

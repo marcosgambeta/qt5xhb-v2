@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
       auto list = obj->buttons();
       auto pDynSym = hb_dynsymFindName("QWINTHUMBNAILTOOLBUTTON");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
