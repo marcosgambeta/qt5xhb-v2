@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_WAYPOINTS )
       auto list = obj->waypoints();
       auto pDynSym = hb_dynsymFindName("QGEOCOORDINATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_EXCLUDEAREAS )
       auto list = obj->excludeAreas();
       auto pDynSym = hb_dynsymFindName("QGEORECTANGLE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
       auto list = obj->categories();
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

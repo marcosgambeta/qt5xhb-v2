@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
       auto list = obj->routes();
       auto pDynSym = hb_dynsymFindName("QGEOROUTE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -296,14 +296,14 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QGeoRouteReply::finished,
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTEREPLY");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -348,14 +348,14 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoRouteReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<QGeoRouteReply::Error,const QString &>::of(&QGeoRouteReply::error),
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
                                            (QGeoRouteReply::Error arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTEREPLY");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

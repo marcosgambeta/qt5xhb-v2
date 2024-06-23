@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
       auto list = obj->results();
       auto pDynSym = hb_dynsymFindName("QPLACESEARCHRESULT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

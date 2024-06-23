@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
       auto list = obj->categories();
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
       auto list = obj->contactDetails(PQSTRING(1));
       auto pDynSym = hb_dynsymFindName("QPLACECONTACTDETAIL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
