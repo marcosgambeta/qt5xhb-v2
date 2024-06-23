@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
       auto list = obj->availableDevices(PQSTRING(1), nullptr);
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

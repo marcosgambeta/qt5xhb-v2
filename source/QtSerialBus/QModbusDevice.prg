@@ -230,14 +230,14 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QModbusDevice::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QModbusDevice::errorOccurred,
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
                                            (QModbusDevice::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMODBUSDEVICE");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -284,14 +284,14 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QModbusDevice::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QModbusDevice::stateChanged,
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
                                            (QModbusDevice::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMODBUSDEVICE");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

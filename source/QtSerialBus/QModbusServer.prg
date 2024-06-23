@@ -165,14 +165,14 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataWritten(QModbusDataUnit::RegisterType,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QModbusServer::dataWritten,
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
                                            (QModbusDataUnit::RegisterType arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMODBUSSERVER");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
