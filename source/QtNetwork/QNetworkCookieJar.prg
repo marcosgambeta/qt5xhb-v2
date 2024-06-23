@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
       auto list = obj->cookiesForUrl( *PQURL(1));
       auto pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

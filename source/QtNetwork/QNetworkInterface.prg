@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
       auto list = obj->addressEntries();
       auto pDynSym = hb_dynsymFindName("QNETWORKADDRESSENTRY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
     auto list = QNetworkInterface::allAddresses();
     auto pDynSym = hb_dynsymFindName("QHOSTADDRESS");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
     auto list = QNetworkInterface::allInterfaces();
     auto pDynSym = hb_dynsymFindName("QNETWORKINTERFACE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {

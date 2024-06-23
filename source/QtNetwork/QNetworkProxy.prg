@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADERLIST )
       auto list = obj->rawHeaderList();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

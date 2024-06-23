@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
       auto list = obj->addresses();
       auto pDynSym = hb_dynsymFindName("QHOSTADDRESS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
