@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
     auto list = QSerialPortInfo::availablePorts();
     auto pDynSym = hb_dynsymFindName("QSERIALPORTINFO");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
