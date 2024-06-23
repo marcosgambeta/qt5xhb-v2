@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADERS )
       auto list = obj->headers();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
