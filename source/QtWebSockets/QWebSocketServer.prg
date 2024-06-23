@@ -763,14 +763,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("acceptError(QAbstractSocket::SocketError)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::acceptError,
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
                                            (QAbstractSocket::SocketError arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -817,14 +817,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("serverError(QWebSocketProtocol::CloseCode)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::serverError,
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
                                            (QWebSocketProtocol::CloseCode arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -871,14 +871,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("originAuthenticationRequired(QWebSocketCorsAuthenticator*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::originAuthenticationRequired,
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
                                            (QWebSocketCorsAuthenticator * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QWEBSOCKETCORSAUTHENTICATOR");
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -925,14 +925,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::newConnection,
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -977,14 +977,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("peerVerifyError(QSslError)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::peerVerifyError,
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
                                            (const QSslError & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSSLERROR");
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1031,14 +1031,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
   
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::sslErrors,
@@ -1046,12 +1046,12 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
                                            (const QList<QSslError> & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             auto pDynSym = hb_dynsymFindName("QSSLERROR");
             auto pArg1 = hb_itemArrayNew(0);
-            if( pDynSym != nullptr )
+            if (pDynSym != nullptr)
             {
               for( const auto & item : arg1 )
               {
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1106,14 +1106,14 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("closed()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QWebSocketServer::closed,
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBSOCKETSERVER");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
