@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
       auto list = obj->query();
       auto pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -145,14 +145,14 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("search()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QHelpSearchQueryWidget::search,
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPSEARCHQUERYWIDGET");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
