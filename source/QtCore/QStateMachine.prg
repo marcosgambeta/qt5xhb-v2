@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
       auto list = obj->defaultAnimations();
       auto pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -623,14 +623,14 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("started()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QStateMachine::started,
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATEMACHINE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -671,14 +671,14 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stopped()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QStateMachine::stopped,
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATEMACHINE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

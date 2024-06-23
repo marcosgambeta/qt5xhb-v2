@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
       auto list = obj->indexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

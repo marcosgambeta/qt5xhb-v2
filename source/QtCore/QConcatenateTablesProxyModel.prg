@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SOURCEMODELS )
       auto list = obj->sourceModels();
       auto pDynSym = hb_dynsymFindName("QABSTRACTITEMMODEL");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

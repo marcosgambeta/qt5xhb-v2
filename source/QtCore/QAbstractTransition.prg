@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
       auto list = obj->animations();
       auto pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
       auto list = obj->targetStates();
       auto pDynSym = hb_dynsymFindName("QABSTRACTSTATE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -373,14 +373,14 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractTransition::triggered,
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTRANSITION");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
       auto list = obj->aliases();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
     auto list = QTextCodec::availableCodecs();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {

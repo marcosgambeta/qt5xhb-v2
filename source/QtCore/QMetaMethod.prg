@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
       auto list = obj->parameterTypes();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
       auto list = obj->parameterNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
       auto list = obj->staticInstances();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

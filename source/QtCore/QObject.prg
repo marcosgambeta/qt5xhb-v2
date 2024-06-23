@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
       auto list = obj->children();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
       auto list = obj->dynamicPropertyNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
       auto list = obj->findChildren<QObject *>( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
       auto list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
       auto list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 
   if (obj != nullptr)
   {
-    if (hb_pcount() == 0 )
+    if (hb_pcount() == 0)
     {
       Qt5xHb::Events_disconnect_all_events( obj, false);
       Qt5xHb::Signals_disconnect_all_signals( obj, false);
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
 
   if (obj != nullptr)
   {
-    if (hb_pcount() == 0 )
+    if (hb_pcount() == 0)
     {
       Qt5xHb::Events_disconnect_all_events( obj, false);
     }
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 
   if (obj != nullptr)
   {
-    if (hb_pcount() == 0 )
+    if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnect_all_signals( obj, false);
     }
@@ -1249,7 +1249,7 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
       hb_retl( 0);
     }
   }
-  else if (hb_pcount() == 0 )
+  else if (hb_pcount() == 0)
   {
     hb_retl( Qt5xHb::Events_disconnect_event( obj, event));
   }
@@ -2103,7 +2103,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       auto pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem());
@@ -2125,7 +2125,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       auto pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem());
@@ -2179,7 +2179,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 
       auto pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem());
@@ -2212,14 +2212,14 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("destroyed(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QObject::destroyed,
@@ -2227,7 +2227,7 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
                                            (QObject * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOBJECT");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
@@ -2243,7 +2243,7 @@ HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2263,14 +2263,14 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("objectNameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QObject::objectNameChanged,
@@ -2278,7 +2278,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
                                            (const QString & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOBJECT");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -2293,7 +2293,7 @@ HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

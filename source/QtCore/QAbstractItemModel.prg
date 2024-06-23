@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
       auto list = obj->match( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT( 4, 1 ), HB_ISNIL(5) ? static_cast<Qt::MatchFlags >( Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) : static_cast<Qt::MatchFlags >( hb_parni(5)));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -938,14 +938,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeInserted(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::columnsAboutToBeInserted,
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -992,14 +992,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::columnsAboutToBeMoved,
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1050,14 +1050,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsAboutToBeRemoved(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::columnsAboutToBeRemoved,
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1104,14 +1104,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsInserted(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::columnsInserted,
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1158,14 +1158,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsMoved(QModelIndex,int,int,QModelIndex,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::columnsMoved,
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1216,14 +1216,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnsRemoved(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::columnsRemoved,
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1270,14 +1270,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataChanged(QModelIndex,QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::dataChanged,
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
                                            (const QModelIndex & arg1, const QModelIndex & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1322,14 +1322,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("headerDataChanged(Qt::Orientation,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::headerDataChanged,
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
                                            (Qt::Orientation arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1376,14 +1376,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("layoutAboutToBeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::layoutAboutToBeChanged,
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1404,7 +1404,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1424,14 +1424,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("layoutChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::layoutChanged,
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1452,7 +1452,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1472,14 +1472,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelAboutToBeReset()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::modelAboutToBeReset,
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1520,14 +1520,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReset()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::modelReset,
@@ -1535,7 +1535,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1548,7 +1548,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1568,14 +1568,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeInserted(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::rowsAboutToBeInserted,
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1622,14 +1622,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::rowsAboutToBeMoved,
@@ -1637,7 +1637,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1660,7 +1660,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1680,14 +1680,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAboutToBeRemoved(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::rowsAboutToBeRemoved,
@@ -1695,7 +1695,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1734,14 +1734,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsInserted(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::rowsInserted,
@@ -1749,7 +1749,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1768,7 +1768,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1788,14 +1788,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsMoved(QModelIndex,int,int,QModelIndex,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::rowsMoved,
@@ -1803,7 +1803,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3, const QModelIndex & arg4, int arg5) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1826,7 +1826,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1846,14 +1846,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsRemoved(QModelIndex,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractItemModel::rowsRemoved,
@@ -1861,7 +1861,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
                                            (const QModelIndex & arg1, int arg2, int arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
@@ -1880,7 +1880,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

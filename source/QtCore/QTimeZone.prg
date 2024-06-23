@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
     auto list = QTimeZone::availableTimeZoneIds();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
     auto list = QTimeZone::availableTimeZoneIds( static_cast<QLocale::Country>( hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
     auto list = QTimeZone::availableTimeZoneIds(PINT(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
     auto list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
     auto list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), static_cast<QLocale::Country>( hb_parni(2)));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {

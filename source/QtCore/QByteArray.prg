@@ -2324,7 +2324,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
       auto list = obj->split(PCHAR(1));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

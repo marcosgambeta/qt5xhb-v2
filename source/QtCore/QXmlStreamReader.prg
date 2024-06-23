@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
       auto list = obj->entityDeclarations();
       auto pDynSym = hb_dynsymFindName("QXMLSTREAMENTITYECLARATION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
       auto list = obj->namespaceDeclarations();
       auto pDynSym = hb_dynsymFindName("QXMLSTREAMNAMESPACEDECLARATION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
       auto list = obj->notationDeclarations();
       auto pDynSym = hb_dynsymFindName("QXMLSTREAMNOTATIONECLARATION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

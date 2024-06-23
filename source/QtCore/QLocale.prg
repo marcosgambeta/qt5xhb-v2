@@ -1857,7 +1857,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
     auto list = QLocale::matchingLocales( static_cast<QLocale::Language>( hb_parni(1)), static_cast<QLocale::Script>( hb_parni(2)), static_cast<QLocale::Country>( hb_parni(3)));
     auto pDynSym = hb_dynsymFindName("QLOCALE");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {

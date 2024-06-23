@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
       auto list = obj->toCubicSpline();
       auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

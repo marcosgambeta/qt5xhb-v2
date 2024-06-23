@@ -923,14 +923,14 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToQuit()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCoreApplication::aboutToQuit,
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOREAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -971,14 +971,14 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationNameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCoreApplication::applicationNameChanged,
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOREAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1019,14 +1019,14 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationVersionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCoreApplication::applicationVersionChanged,
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOREAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1067,14 +1067,14 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("organizationDomainChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCoreApplication::organizationDomainChanged,
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOREAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1115,14 +1115,14 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("organizationNameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCoreApplication::organizationNameChanged,
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOREAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
