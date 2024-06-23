@@ -381,14 +381,14 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stationIdChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioData::stationIdChanged,
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
                                            (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -431,14 +431,14 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("programTypeChanged(QRadioData::ProgramType)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioData::programTypeChanged,
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
                                            (QRadioData::ProgramType arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -481,14 +481,14 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("programTypeNameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioData::programTypeNameChanged,
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
                                            (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -531,14 +531,14 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stationNameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioData::stationNameChanged,
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
                                            (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -581,14 +581,14 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("radioTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioData::radioTextChanged,
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
                                            (QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -631,14 +631,14 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("alternativeFrequenciesEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioData::alternativeFrequenciesEnabledChanged,
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -681,14 +681,14 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QRadioData::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<QRadioData::Error>::of(&QRadioData::error),
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
                                            (QRadioData::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIODATA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
       auto list = obj->focusZones();
       auto pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -473,14 +473,14 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("digitalZoomChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocus::digitalZoomChanged,
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUS");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -523,14 +523,14 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusZonesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocus::focusZonesChanged,
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUS");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -571,14 +571,14 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumDigitalZoomChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocus::maximumDigitalZoomChanged,
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUS");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -621,14 +621,14 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumOpticalZoomChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocus::maximumOpticalZoomChanged,
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUS");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -671,14 +671,14 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opticalZoomChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocus::opticalZoomChanged,
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUS");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

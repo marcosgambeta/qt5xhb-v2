@@ -736,14 +736,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QRadioTuner::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::stateChanged,
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
                                            (QRadioTuner::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -786,14 +786,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bandChanged(QRadioTuner::Band)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::bandChanged,
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
                                            (QRadioTuner::Band arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -836,14 +836,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("frequencyChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::frequencyChanged,
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -886,14 +886,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stereoStatusChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::stereoStatusChanged,
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -936,14 +936,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("searchingChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::searchingChanged,
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -986,14 +986,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("signalStrengthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::signalStrengthChanged,
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1036,14 +1036,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::volumeChanged,
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1086,14 +1086,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mutedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::mutedChanged,
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1136,14 +1136,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QRadioTuner::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<QRadioTuner::Error>::of(&QRadioTunerControl::error),
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
                                            (QRadioTuner::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1186,14 +1186,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stationFound(int,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::stationFound,
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
                                            (int arg1, QString arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1238,14 +1238,14 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("antennaConnectedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QRadioTunerControl::antennaConnectedChanged,
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QRADIOTUNERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -1268,7 +1268,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

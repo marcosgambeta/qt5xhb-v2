@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTYNAMES )
       auto list = obj->propertyNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
       auto list = obj->devices( *PQBYTEARRAY(1));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

@@ -664,14 +664,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("audioAvailableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::audioAvailableChanged,
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -714,14 +714,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("availablePlaybackRangesChanged(QMediaTimeRange)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::availablePlaybackRangesChanged,
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
                                            (const QMediaTimeRange & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIATIMERANGE");
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -764,14 +764,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bufferStatusChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::bufferStatusChanged,
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -814,14 +814,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("durationChanged(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::durationChanged,
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
                                            (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNLL( nullptr, arg1);
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -864,14 +864,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(int,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::error,
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
                                            (int arg1, const QString & arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -916,14 +916,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaChanged(QMediaContent)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::mediaChanged,
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
                                            (const QMediaContent & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIACONTENT");
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -966,14 +966,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaStatusChanged(QMediaPlayer::MediaStatus)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::mediaStatusChanged,
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
                                            (QMediaPlayer::MediaStatus arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1016,14 +1016,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mutedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::mutedChanged,
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1066,14 +1066,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("playbackRateChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::playbackRateChanged,
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1116,14 +1116,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("positionChanged(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::positionChanged,
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
                                            (qint64 arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNLL( nullptr, arg1);
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1166,14 +1166,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seekableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::seekableChanged,
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1216,14 +1216,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QMediaPlayer::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::stateChanged,
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
                                            (QMediaPlayer::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1266,14 +1266,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("videoAvailableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::videoAvailableChanged,
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1316,14 +1316,14 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QMediaPlayerControl::volumeChanged,
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAPLAYERCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

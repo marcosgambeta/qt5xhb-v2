@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
       auto list = obj->supportedResolutions( *PQIMAGEENCODERSETTINGS(1), &par2);
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {

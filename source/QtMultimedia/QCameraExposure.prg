@@ -848,14 +848,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("apertureChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::apertureChanged,
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -898,14 +898,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("apertureRangeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::apertureRangeChanged,
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -946,14 +946,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("exposureCompensationChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::exposureCompensationChanged,
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -996,14 +996,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flashReady(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::flashReady,
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
                                            (bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             auto pArg1 = hb_itemPutL(nullptr, arg1);
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1046,14 +1046,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("isoSensitivityChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::isoSensitivityChanged,
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1096,14 +1096,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shutterSpeedChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::shutterSpeedChanged,
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
                                            (qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1146,14 +1146,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shutterSpeedRangeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposure::shutterSpeedRangeChanged,
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURE");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

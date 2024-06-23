@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
     auto list = QAudioDeviceInfo::availableDevices( static_cast<QAudio::Mode>( hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QAUDIODEVICEINFO");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {

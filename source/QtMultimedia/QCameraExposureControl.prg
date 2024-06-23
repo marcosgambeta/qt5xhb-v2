@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
       auto list = obj->supportedParameterRange( static_cast<QCameraExposureControl::ExposureParameter>( hb_parni(1)), &par2);
       auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -237,14 +237,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("actualValueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposureControl::actualValueChanged,
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURECONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -287,14 +287,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("parameterRangeChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposureControl::parameterRangeChanged,
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURECONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -337,14 +337,14 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("requestedValueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraExposureControl::requestedValueChanged,
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
                                            (int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAEXPOSURECONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

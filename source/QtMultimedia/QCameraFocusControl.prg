@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_FOCUSZONES )
       auto list = obj->focusZones();
       auto pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -342,14 +342,14 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("customFocusPointChanged(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocusControl::customFocusPointChanged,
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
                                            (const QPointF & arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUSCONTROL");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPOINTF");
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -392,14 +392,14 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusModeChanged(QCameraFocus::FocusModes)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocusControl::focusModeChanged,
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
                                            (QCameraFocus::FocusModes arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUSCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -442,14 +442,14 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusPointModeChanged(QCameraFocus::FocusPointMode)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocusControl::focusPointModeChanged,
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
                                            (QCameraFocus::FocusPointMode arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUSCONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -492,14 +492,14 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusZonesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCameraFocusControl::focusZonesChanged,
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAFOCUSCONTROL");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

@@ -639,14 +639,14 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("errorChanged(QAudio::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractAudioOutput::errorChanged,
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
                                            (QAudio::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOOUTPUT");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -689,14 +689,14 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAudio::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractAudioOutput::stateChanged,
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
                                            (QAudio::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOOUTPUT");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -739,14 +739,14 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("notify()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QAbstractAudioOutput::notify,
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTAUDIOOUTPUT");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

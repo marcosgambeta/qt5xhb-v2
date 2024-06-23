@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
       auto list = obj->supportedViewfinderSettings( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)));
       auto pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
       auto list = obj->supportedViewfinderResolutions( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
     auto list = QCamera::availableDevices();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if( pDynSym != nullptr )
+    if (pDynSym != nullptr)
     {
       for( const auto & item : list )
       {
@@ -1013,14 +1013,14 @@ HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("captureModeChanged(QCamera::CaptureModes)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCamera::captureModeChanged,
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
                                            (QCamera::CaptureModes arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1063,14 +1063,14 @@ HB_FUNC_STATIC( QCAMERA_ONERROR )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QCamera::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<QCamera::Error>::of(&QCamera::error),
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC( QCAMERA_ONERROR )
                                            (QCamera::Error arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QCAMERA_ONERROR )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1113,14 +1113,14 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKFAILED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lockFailed()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCamera::lockFailed,
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKFAILED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKFAILED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1161,14 +1161,14 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<QCamera::LockStatus,QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
                                            (QCamera::LockStatus arg1, QCamera::LockChangeReason arg2) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1213,14 +1213,14 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            QOverload<QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
                                            (QCamera::LockType arg1, QCamera::LockStatus arg2, QCamera::LockChangeReason arg3) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1267,14 +1267,14 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("locked()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCamera::locked,
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKED )
                                            () {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             hb_vmEvalBlockV(cb, 1, pSender);
@@ -1295,7 +1295,7 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1315,14 +1315,14 @@ HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QCamera::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCamera::stateChanged,
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
                                            (QCamera::State arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1365,14 +1365,14 @@ HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QCamera::Status)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QCamera::statusChanged,
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
                                            (QCamera::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERA");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
