@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
       auto list = obj->errors();
       auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -400,14 +400,14 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sceneResized(QSize)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QDeclarativeView::sceneResized,
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
                                            (QSize arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEVIEW");
             auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -450,14 +450,14 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 
   auto result = false;
 
-  if( sender != nullptr )
+  if (sender != nullptr)
   {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QDeclarativeView::Status)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 )
+    if (hb_pcount() == 1)
     {
-      if( Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock) )
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
                                            &QDeclarativeView::statusChanged,
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
                                            (QDeclarativeView::Status arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if( cb != nullptr )
+          if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEVIEW");
             auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
         result = true;
       }
     }
-    else if (hb_pcount() == 0 )
+    else if (hb_pcount() == 0)
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
