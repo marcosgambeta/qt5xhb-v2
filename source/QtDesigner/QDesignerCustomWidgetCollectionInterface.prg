@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
       auto list = obj->customWidgets();
       auto pDynSym = hb_dynsymFindName("QDESIGNERCUSTOMWIDGETINTERFACE");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {

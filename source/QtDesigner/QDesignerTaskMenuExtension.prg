@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
       auto list = obj->taskActions();
       auto pDynSym = hb_dynsymFindName("QACTION");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( auto item : list )
         {
