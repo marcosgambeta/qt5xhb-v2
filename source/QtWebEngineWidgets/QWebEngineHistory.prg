@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
       auto list = obj->items();
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
       auto list = obj->backItems(PINT(1));
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
       auto list = obj->forwardItems(PINT(1));
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
-      if( pDynSym != nullptr )
+      if (pDynSym != nullptr)
       {
         for( const auto & item : list )
         {
