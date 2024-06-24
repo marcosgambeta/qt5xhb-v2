@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->load( *PQURL(1));
+      obj->load(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->pageAction( static_cast<QWebEnginePage::WebAction>( hb_parni(1)));
+      auto ptr = obj->pageAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerPageAction( static_cast<QWebEnginePage::WebAction>( hb_parni(1)), OPBOOL( 2, false));
+      obj->triggerPageAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)), OPBOOL( 2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
