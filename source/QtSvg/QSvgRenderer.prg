@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
     /*
     QSvgRenderer( const QByteArray & contents, QObject * parent = nullptr )
     */
-    auto obj = new QSvgRenderer( *PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 
     if (obj != nullptr)
     {
-      obj->setViewBox( *PQRECT(1));
+      obj->setViewBox(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 
     if (obj != nullptr)
     {
-      obj->setViewBox( *PQRECTF(1));
+      obj->setViewBox(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->load( *PQBYTEARRAY(1)));
+      RBOOL(obj->load(*PQBYTEARRAY(1)));
     }
 
   }

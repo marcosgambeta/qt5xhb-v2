@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQBYTEARRAY(1));
+      obj->load(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

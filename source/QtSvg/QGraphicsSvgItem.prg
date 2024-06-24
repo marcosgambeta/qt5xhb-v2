@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setMaximumCacheSize( *PQSIZE(1));
+      obj->setMaximumCacheSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

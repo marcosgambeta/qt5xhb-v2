@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setSize( *PQSIZE(1));
+      obj->setSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 
     if (obj != nullptr)
     {
-      obj->setViewBox( *PQRECT(1));
+      obj->setViewBox(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 
     if (obj != nullptr)
     {
-      obj->setViewBox( *PQRECTF(1));
+      obj->setViewBox(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
