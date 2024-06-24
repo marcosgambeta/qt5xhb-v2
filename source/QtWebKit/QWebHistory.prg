@@ -74,7 +74,7 @@ RETURN
 /*
 void back()
 */
-HB_FUNC_STATIC( QWEBHISTORY_BACK )
+HB_FUNC_STATIC(QWEBHISTORY_BACK)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACK )
 /*
 QWebHistoryItem backItem() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
+HB_FUNC_STATIC(QWEBHISTORY_BACKITEM)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
 }
 
 /*
-QList<QWebHistoryItem> backItems( int maxItems ) const
+QList<QWebHistoryItem> backItems(int maxItems) const
 */
-HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
+HB_FUNC_STATIC(QWEBHISTORY_BACKITEMS)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
 /*
 bool canGoBack() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
+HB_FUNC_STATIC(QWEBHISTORY_CANGOBACK)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
 /*
 bool canGoForward() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
+HB_FUNC_STATIC(QWEBHISTORY_CANGOFORWARD)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
+HB_FUNC_STATIC(QWEBHISTORY_CLEAR)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_COUNT )
+HB_FUNC_STATIC(QWEBHISTORY_COUNT)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
 /*
 QWebHistoryItem currentItem() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
+HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEM)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
 /*
 int currentItemIndex() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
+HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEMINDEX)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
+HB_FUNC_STATIC(QWEBHISTORY_FORWARD)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
 /*
 QWebHistoryItem forwardItem() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
+HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEM)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -371,9 +371,9 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
 }
 
 /*
-QList<QWebHistoryItem> forwardItems( int maxItems ) const
+QList<QWebHistoryItem> forwardItems(int maxItems) const
 */
-HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
+HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEMS)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -421,9 +421,9 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
 }
 
 /*
-void goToItem( const QWebHistoryItem & item )
+void goToItem(const QWebHistoryItem & item)
 */
-HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
+HB_FUNC_STATIC(QWEBHISTORY_GOTOITEM)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -447,9 +447,9 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
 }
 
 /*
-QWebHistoryItem itemAt( int i ) const
+QWebHistoryItem itemAt(int i) const
 */
-HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
+HB_FUNC_STATIC(QWEBHISTORY_ITEMAT)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
 /*
 QList<QWebHistoryItem> items() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
+HB_FUNC_STATIC(QWEBHISTORY_ITEMS)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
 /*
 int maximumItemCount() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
+HB_FUNC_STATIC(QWEBHISTORY_MAXIMUMITEMCOUNT)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -546,9 +546,9 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
 }
 
 /*
-void setMaximumItemCount( int count )
+void setMaximumItemCount(int count)
 */
-HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
+HB_FUNC_STATIC(QWEBHISTORY_SETMAXIMUMITEMCOUNT)
 {
   auto obj = static_cast<QWebHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_NEWFROM )
+HB_FUNC_STATIC(QWEBHISTORY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -601,22 +601,22 @@ HB_FUNC_STATIC( QWEBHISTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBHISTORY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QWEBHISTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBHISTORY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QWEBHISTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBHISTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBHISTORY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

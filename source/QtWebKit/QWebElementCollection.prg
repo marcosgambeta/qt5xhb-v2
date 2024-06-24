@@ -62,7 +62,7 @@ RETURN
 #include <QtWebKit/QWebElementCollection>
 #endif
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
   else if (ISNUMPAR(2) && ISQWEBELEMENT(1) && HB_ISCHAR(2))
   {
     /*
-    QWebElementCollection( const QWebElement & contextElement, const QString & query )
+    QWebElementCollection(const QWebElement & contextElement, const QString & query)
     */
     auto obj = new QWebElementCollection(*PQWEBELEMENT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
   else if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
   {
     /*
-    QWebElementCollection( const QWebElementCollection & other )
+    QWebElementCollection(const QWebElementCollection & other)
     */
     auto obj = new QWebElementCollection(*PQWEBELEMENTCOLLECTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -114,9 +114,9 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 }
 
 /*
-void append( const QWebElementCollection & other )
+void append(const QWebElementCollection & other)
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -140,9 +140,9 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 }
 
 /*
-QWebElement at( int i ) const
+QWebElement at(int i) const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 /*
 QWebElement first() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 /*
 QWebElement last() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 /*
 QList<QWebElement> toList() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 {
   auto obj = static_cast<QWebElementCollection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
   }
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -318,22 +318,22 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QWEBELEMENTCOLLECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QWEBELEMENTCOLLECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
