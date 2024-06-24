@@ -104,13 +104,13 @@ RETURN
 #include <QtWidgets/QWidget>
 
 /*
-QWebView( QWidget * parent = nullptr )
+QWebView(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QWEBVIEW_NEW )
+HB_FUNC_STATIC(QWEBVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWebView( OPQWIDGET( 1, nullptr));
+    auto obj = new QWebView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QWEBVIEW_NEW )
 /*
 virtual ~QWebView()
 */
-HB_FUNC_STATIC( QWEBVIEW_DELETE )
+HB_FUNC_STATIC(QWEBVIEW_DELETE)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QWEBVIEW_DELETE )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBVIEW_TITLE )
+HB_FUNC_STATIC(QWEBVIEW_TITLE)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBVIEW_URL )
+HB_FUNC_STATIC(QWEBVIEW_URL)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -190,9 +190,9 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBVIEW_SETURL )
+HB_FUNC_STATIC(QWEBVIEW_SETURL)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETURL )
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QWEBVIEW_ICON )
+HB_FUNC_STATIC(QWEBVIEW_ICON)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
+HB_FUNC_STATIC(QWEBVIEW_SELECTEDTEXT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 /*
 QString selectedHtml() const
 */
-HB_FUNC_STATIC( QWEBVIEW_SELECTEDHTML )
+HB_FUNC_STATIC(QWEBVIEW_SELECTEDHTML)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDHTML )
 /*
 bool hasSelection() const
 */
-HB_FUNC_STATIC( QWEBVIEW_HASSELECTION )
+HB_FUNC_STATIC(QWEBVIEW_HASSELECTION)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QWEBVIEW_HASSELECTION )
 /*
 bool isModified() const
 */
-HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
+HB_FUNC_STATIC(QWEBVIEW_ISMODIFIED)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 /*
 qreal textSizeMultiplier() const
 */
-HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
+HB_FUNC_STATIC(QWEBVIEW_TEXTSIZEMULTIPLIER)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -361,9 +361,9 @@ HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 }
 
 /*
-void setTextSizeMultiplier( qreal factor )
+void setTextSizeMultiplier(qreal factor)
 */
-HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
+HB_FUNC_STATIC(QWEBVIEW_SETTEXTSIZEMULTIPLIER)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 /*
 qreal zoomFactor() const
 */
-HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
+HB_FUNC_STATIC(QWEBVIEW_ZOOMFACTOR)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -411,9 +411,9 @@ HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor( qreal factor )
+void setZoomFactor(qreal factor)
 */
-HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
+HB_FUNC_STATIC(QWEBVIEW_SETZOOMFACTOR)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 /*
 QPainter::RenderHints renderHints() const
 */
-HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
+HB_FUNC_STATIC(QWEBVIEW_RENDERHINTS)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -461,9 +461,9 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 }
 
 /*
-void setRenderHints( QPainter::RenderHints hints )
+void setRenderHints(QPainter::RenderHints hints)
 */
-HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
+HB_FUNC_STATIC(QWEBVIEW_SETRENDERHINTS)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -487,9 +487,9 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 }
 
 /*
-bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText(const QString & subString, QWebPage::FindFlags options = 0)
 */
-HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
+HB_FUNC_STATIC(QWEBVIEW_FINDTEXT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags >( 0 ) : static_cast<QWebPage::FindFlags >(hb_parni(2))));
+      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags >(0) : static_cast<QWebPage::FindFlags >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 /*
 QWebHistory * history() const
 */
-HB_FUNC_STATIC( QWEBVIEW_HISTORY )
+HB_FUNC_STATIC(QWEBVIEW_HISTORY)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -535,12 +535,12 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
   }
 }
 
-HB_FUNC_STATIC( QWEBVIEW_LOAD )
+HB_FUNC_STATIC(QWEBVIEW_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load(const QUrl & url)
     */
     auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -555,13 +555,13 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && ISOPTQBYTEARRAY(3))
   {
     /*
-    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load(const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray())
     */
     auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      obj->load(*PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >(hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
+      obj->load(*PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >(QNetworkAccessManager::GetOperation) : static_cast<QNetworkAccessManager::Operation >(hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 /*
 QWebPage * page() const
 */
-HB_FUNC_STATIC( QWEBVIEW_PAGE )
+HB_FUNC_STATIC(QWEBVIEW_PAGE)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -599,9 +599,9 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
 }
 
 /*
-QAction * pageAction ( QWebPage::WebAction action ) const
+QAction * pageAction (QWebPage::WebAction action) const
 */
-HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
+HB_FUNC_STATIC(QWEBVIEW_PAGEACTION)
 {
 #ifndef QT_NO_ACTION
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -626,9 +626,9 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
+HB_FUNC_STATIC(QWEBVIEW_SETCONTENT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,9 +652,9 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml(const QString & html, const QUrl & baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBVIEW_SETHTML )
+HB_FUNC_STATIC(QWEBVIEW_SETHTML)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -678,9 +678,9 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 }
 
 /*
-void setPage( QWebPage * page )
+void setPage(QWebPage * page)
 */
-HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
+HB_FUNC_STATIC(QWEBVIEW_SETPAGE)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -704,9 +704,9 @@ HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 }
 
 /*
-void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
+void setRenderHint(QPainter::RenderHint hint, bool enabled = true)
 */
-HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
+HB_FUNC_STATIC(QWEBVIEW_SETRENDERHINT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL( 2, true));
+      obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 /*
 QWebSettings * settings() const
 */
-HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
+HB_FUNC_STATIC(QWEBVIEW_SETTINGS)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -755,9 +755,9 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 }
 
 /*
-void triggerPageAction( QWebPage::WebAction action, bool checked = false )
+void triggerPageAction(QWebPage::WebAction action, bool checked = false)
 */
-HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
+HB_FUNC_STATIC(QWEBVIEW_TRIGGERPAGEACTION)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerPageAction(static_cast<QWebPage::WebAction>(hb_parni(1)), OPBOOL( 2, false));
+      obj->triggerPageAction(static_cast<QWebPage::WebAction>(hb_parni(1)), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 /*
 void back()
 */
-HB_FUNC_STATIC( QWEBVIEW_BACK )
+HB_FUNC_STATIC(QWEBVIEW_BACK)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QWEBVIEW_BACK )
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBVIEW_FORWARD )
+HB_FUNC_STATIC(QWEBVIEW_FORWARD)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -833,9 +833,9 @@ HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 }
 
 /*
-void print( QPrinter * printer ) const
+void print(QPrinter * printer) const
 */
-HB_FUNC_STATIC( QWEBVIEW_PRINT )
+HB_FUNC_STATIC(QWEBVIEW_PRINT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QWEBVIEW_PRINT )
 /*
 void reload()
 */
-HB_FUNC_STATIC( QWEBVIEW_RELOAD )
+HB_FUNC_STATIC(QWEBVIEW_RELOAD)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QWEBVIEW_STOP )
+HB_FUNC_STATIC(QWEBVIEW_STOP)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -911,9 +911,9 @@ HB_FUNC_STATIC( QWEBVIEW_STOP )
 }
 
 /*
-QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
+QVariant inputMethodQuery(Qt::InputMethodQuery property) const
 */
-HB_FUNC_STATIC( QWEBVIEW_INPUTMETHODQUERY )
+HB_FUNC_STATIC(QWEBVIEW_INPUTMETHODQUERY)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QWEBVIEW_INPUTMETHODQUERY )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QWEBVIEW_SIZEHINT )
+HB_FUNC_STATIC(QWEBVIEW_SIZEHINT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -961,9 +961,9 @@ HB_FUNC_STATIC( QWEBVIEW_SIZEHINT )
 }
 
 /*
-virtual bool event( QEvent * )
+virtual bool event(QEvent *)
 */
-HB_FUNC_STATIC( QWEBVIEW_EVENT )
+HB_FUNC_STATIC(QWEBVIEW_EVENT)
 {
   auto obj = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QWEBVIEW_EVENT )
 /*
 void iconChanged()
 */
-HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
+HB_FUNC_STATIC(QWEBVIEW_ONICONCHANGED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1033,9 +1033,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 }
 
 /*
-void linkClicked( const QUrl & url )
+void linkClicked(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
+HB_FUNC_STATIC(QWEBVIEW_ONLINKCLICKED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBVIEW");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1083,9 +1083,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 }
 
 /*
-void loadFinished( bool ok )
+void loadFinished(bool ok)
 */
-HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
+HB_FUNC_STATIC(QWEBVIEW_ONLOADFINISHED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1133,9 +1133,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 }
 
 /*
-void loadProgress( int progress )
+void loadProgress(int progress)
 */
-HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
+HB_FUNC_STATIC(QWEBVIEW_ONLOADPROGRESS)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 /*
 void loadStarted()
 */
-HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
+HB_FUNC_STATIC(QWEBVIEW_ONLOADSTARTED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 /*
 void selectionChanged()
 */
-HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
+HB_FUNC_STATIC(QWEBVIEW_ONSELECTIONCHANGED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1279,9 +1279,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 }
 
 /*
-void statusBarMessage( const QString & text )
+void statusBarMessage(const QString & text)
 */
-HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
+HB_FUNC_STATIC(QWEBVIEW_ONSTATUSBARMESSAGE)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1329,9 +1329,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 }
 
 /*
-void titleChanged( const QString & title )
+void titleChanged(const QString & title)
 */
-HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
+HB_FUNC_STATIC(QWEBVIEW_ONTITLECHANGED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1379,9 +1379,9 @@ HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 }
 
 /*
-void urlChanged( const QUrl & url )
+void urlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
+HB_FUNC_STATIC(QWEBVIEW_ONURLCHANGED)
 {
   auto sender = qobject_cast<QWebView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBVIEW");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

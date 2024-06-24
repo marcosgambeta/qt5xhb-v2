@@ -119,7 +119,7 @@ RETURN
 /*
 qreal textSizeMultiplier() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
+HB_FUNC_STATIC(QWEBFRAME_TEXTSIZEMULTIPLIER)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -141,9 +141,9 @@ HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
 }
 
 /*
-void setTextSizeMultiplier( qreal factor )
+void setTextSizeMultiplier(qreal factor)
 */
-HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
+HB_FUNC_STATIC(QWEBFRAME_SETTEXTSIZEMULTIPLIER)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
 /*
 qreal zoomFactor() const
 */
-HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
+HB_FUNC_STATIC(QWEBFRAME_ZOOMFACTOR)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -191,9 +191,9 @@ HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor( qreal factor )
+void setZoomFactor(qreal factor)
 */
-HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
+HB_FUNC_STATIC(QWEBFRAME_SETZOOMFACTOR)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TITLE )
+HB_FUNC_STATIC(QWEBFRAME_TITLE)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBFRAME_URL )
+HB_FUNC_STATIC(QWEBFRAME_URL)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -266,9 +266,9 @@ HB_FUNC_STATIC( QWEBFRAME_URL )
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBFRAME_SETURL )
+HB_FUNC_STATIC(QWEBFRAME_SETURL)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETURL )
 /*
 QUrl requestedUrl() const
 */
-HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
+HB_FUNC_STATIC(QWEBFRAME_REQUESTEDURL)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
 /*
 QUrl baseUrl() const
 */
-HB_FUNC_STATIC( QWEBFRAME_BASEURL )
+HB_FUNC_STATIC(QWEBFRAME_BASEURL)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QWEBFRAME_BASEURL )
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QWEBFRAME_ICON )
+HB_FUNC_STATIC(QWEBFRAME_ICON)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
 /*
 QSize contentsSize() const
 */
-HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
+HB_FUNC_STATIC(QWEBFRAME_CONTENTSSIZE)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
 /*
 QPoint scrollPosition() const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLPOSITION)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -417,9 +417,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
 }
 
 /*
-void setScrollPosition( const QPoint & pos )
+void setScrollPosition(const QPoint & pos)
 */
-HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
+HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
 /*
 bool hasFocus() const
 */
-HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
+HB_FUNC_STATIC(QWEBFRAME_HASFOCUS)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -467,9 +467,9 @@ HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
 }
 
 /*
-void addToJavaScriptWindowObject( const QString & name, QObject * object, QWebFrame::ValueOwnership ownership = QWebFrame::QtOwnership )
+void addToJavaScriptWindowObject(const QString & name, QObject * object, QWebFrame::ValueOwnership ownership = QWebFrame::QtOwnership)
 */
-HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
+HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2), HB_ISNIL(3) ? static_cast<QWebFrame::ValueOwnership >( QWebFrame::QtOwnership ) : static_cast<QWebFrame::ValueOwnership >(hb_parni(3)));
+      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2), HB_ISNIL(3) ? static_cast<QWebFrame::ValueOwnership >(QWebFrame::QtOwnership) : static_cast<QWebFrame::ValueOwnership >(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,9 +493,9 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 }
 
 /*
-QList<QWebFrame *> childFrames() const
+QList<QWebFrame*> childFrames() const
 */
-HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
+HB_FUNC_STATIC(QWEBFRAME_CHILDFRAMES)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 /*
 QWebElement documentElement() const
 */
-HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
+HB_FUNC_STATIC(QWEBFRAME_DOCUMENTELEMENT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -565,9 +565,9 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
 }
 
 /*
-QWebElementCollection findAllElements( const QString & selectorQuery ) const
+QWebElementCollection findAllElements(const QString & selectorQuery) const
 */
-HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
+HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -590,9 +590,9 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
 }
 
 /*
-QWebElement findFirstElement( const QString & selectorQuery ) const
+QWebElement findFirstElement(const QString & selectorQuery) const
 */
-HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
+HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
 /*
 QString frameName() const
 */
-HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
+HB_FUNC_STATIC(QWEBFRAME_FRAMENAME)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
 /*
 QRect geometry() const
 */
-HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
+HB_FUNC_STATIC(QWEBFRAME_GEOMETRY)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -664,9 +664,9 @@ HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
 }
 
 /*
-QWebHitTestResult hitTestContent( const QPoint & pos ) const
+QWebHitTestResult hitTestContent(const QPoint & pos) const
 */
-HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
+HB_FUNC_STATIC(QWEBFRAME_HITTESTCONTENT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -688,12 +688,12 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
   }
 }
 
-HB_FUNC_STATIC( QWEBFRAME_LOAD )
+HB_FUNC_STATIC(QWEBFRAME_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load(const QUrl & url)
     */
     auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -708,13 +708,13 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && ISOPTQBYTEARRAY(3))
   {
     /*
-    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load(const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray())
     */
     auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      obj->load(*PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >(hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
+      obj->load(*PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >(QNetworkAccessManager::GetOperation) : static_cast<QNetworkAccessManager::Operation >(hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 /*
 QWebPage * page() const
 */
-HB_FUNC_STATIC( QWEBFRAME_PAGE )
+HB_FUNC_STATIC(QWEBFRAME_PAGE)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QWEBFRAME_PAGE )
 /*
 QWebFrame * parentFrame() const
 */
-HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
+HB_FUNC_STATIC(QWEBFRAME_PARENTFRAME)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
 /*
 QPoint pos() const
 */
-HB_FUNC_STATIC( QWEBFRAME_POS )
+HB_FUNC_STATIC(QWEBFRAME_POS)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -801,12 +801,12 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
   }
 }
 
-HB_FUNC_STATIC( QWEBFRAME_RENDER )
+HB_FUNC_STATIC(QWEBFRAME_RENDER)
 {
   if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQREGION(2) || HB_ISNIL(2)))
   {
     /*
-    void render( QPainter *, const QRegion & clip = QRegion() )
+    void render(QPainter *, const QRegion & clip = QRegion())
     */
     auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3)))
   {
     /*
-    void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
+    void render(QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion())
     */
     auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -840,9 +840,9 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 }
 
 /*
-void scroll( int dx, int dy )
+void scroll(int dx, int dy)
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLL )
+HB_FUNC_STATIC(QWEBFRAME_SCROLL)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -866,9 +866,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLL )
 }
 
 /*
-QRect scrollBarGeometry( Qt::Orientation orientation ) const
+QRect scrollBarGeometry(Qt::Orientation orientation) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARGEOMETRY)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -891,9 +891,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
 }
 
 /*
-int scrollBarMaximum( Qt::Orientation orientation ) const
+int scrollBarMaximum(Qt::Orientation orientation) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMAXIMUM)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -915,9 +915,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
 }
 
 /*
-int scrollBarMinimum( Qt::Orientation orientation ) const
+int scrollBarMinimum(Qt::Orientation orientation) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMINIMUM)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -939,9 +939,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
 }
 
 /*
-Qt::ScrollBarPolicy scrollBarPolicy( Qt::Orientation orientation ) const
+Qt::ScrollBarPolicy scrollBarPolicy(Qt::Orientation orientation) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARPOLICY)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -963,9 +963,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
 }
 
 /*
-int scrollBarValue( Qt::Orientation orientation ) const
+int scrollBarValue(Qt::Orientation orientation) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARVALUE)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -987,9 +987,9 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
 }
 
 /*
-void scrollToAnchor( const QString & anchor )
+void scrollToAnchor(const QString & anchor)
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
 /*
 QWebSecurityOrigin securityOrigin() const
 */
-HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
+HB_FUNC_STATIC(QWEBFRAME_SECURITYORIGIN)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1038,9 +1038,9 @@ HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
+HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
 /*
 void setFocus()
 */
-HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
+HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1090,9 +1090,9 @@ HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml(const QString & html, const QUrl & baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBFRAME_SETHTML )
+HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1116,9 +1116,9 @@ HB_FUNC_STATIC( QWEBFRAME_SETHTML )
 }
 
 /*
-void setScrollBarPolicy( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
+void setScrollBarPolicy(Qt::Orientation orientation, Qt::ScrollBarPolicy policy)
 */
-HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
+HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARPOLICY)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1142,9 +1142,9 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
 }
 
 /*
-void setScrollBarValue( Qt::Orientation orientation, int value )
+void setScrollBarValue(Qt::Orientation orientation, int value)
 */
-HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
+HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
 /*
 QString toHtml() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TOHTML )
+HB_FUNC_STATIC(QWEBFRAME_TOHTML)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
+HB_FUNC_STATIC(QWEBFRAME_TOPLAINTEXT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1216,9 +1216,9 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
 }
 
 /*
-QVariant evaluateJavaScript( const QString & scriptSource )
+QVariant evaluateJavaScript(const QString & scriptSource)
 */
-HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
+HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1241,9 +1241,9 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
 }
 
 /*
-void print ( QPrinter * printer ) const
+void print (QPrinter * printer) const
 */
-HB_FUNC_STATIC( QWEBFRAME_PRINT )
+HB_FUNC_STATIC(QWEBFRAME_PRINT)
 {
 #ifndef QT_NO_PRINTER
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1269,9 +1269,9 @@ HB_FUNC_STATIC( QWEBFRAME_PRINT )
 }
 
 /*
-virtual bool event( QEvent * )
+virtual bool event(QEvent *)
 */
-HB_FUNC_STATIC( QWEBFRAME_EVENT )
+HB_FUNC_STATIC(QWEBFRAME_EVENT)
 {
   auto obj = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1297,9 +1297,9 @@ QWebFrameAdapter* handle() const
 */
 
 /*
-void contentsSizeChanged( const QSize & size )
+void contentsSizeChanged(const QSize & size)
 */
-HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONCONTENTSSIZECHANGED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QSIZE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1349,7 +1349,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
 /*
 void iconChanged()
 */
-HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONICONCHANGED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1397,7 +1397,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
 /*
 void initialLayoutCompleted()
 */
-HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
+HB_FUNC_STATIC(QWEBFRAME_ONINITIALLAYOUTCOMPLETED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
 /*
 void javaScriptWindowObjectCleared()
 */
-HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
+HB_FUNC_STATIC(QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1491,9 +1491,9 @@ HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
 }
 
 /*
-void loadFinished( bool ok )
+void loadFinished(bool ok)
 */
-HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
+HB_FUNC_STATIC(QWEBFRAME_ONLOADFINISHED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1543,7 +1543,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
 /*
 void loadStarted()
 */
-HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
+HB_FUNC_STATIC(QWEBFRAME_ONLOADSTARTED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1591,7 +1591,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
 /*
 void pageChanged()
 */
-HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONPAGECHANGED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1637,9 +1637,9 @@ HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
 }
 
 /*
-void titleChanged( const QString & title )
+void titleChanged(const QString & title)
 */
-HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONTITLECHANGED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1687,9 +1687,9 @@ HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
 }
 
 /*
-void urlChanged( const QUrl & url )
+void urlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONURLCHANGED)
 {
   auto sender = qobject_cast<QWebFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1713,7 +1713,7 @@ HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBFRAME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
