@@ -104,7 +104,7 @@ RETURN
 #include <QtCore/QSize>
 #include <QtCore/QStringList>
 
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_DELETE)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 }
 
 /*
-virtual QModelIndex buddy( const QModelIndex & index ) const
+virtual QModelIndex buddy(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
 }
 
 /*
-virtual bool canFetchMore( const QModelIndex & parent ) const
+virtual bool canFetchMore(const QModelIndex & parent) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -172,9 +172,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
 }
 
 /*
-virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const = 0
+virtual int columnCount(const QModelIndex & parent = QModelIndex()) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,9 +196,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 }
 
 /*
-virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
+virtual QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,9 +221,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -245,9 +245,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 }
 
 /*
-virtual void fetchMore( const QModelIndex & parent )
+virtual void fetchMore(const QModelIndex & parent)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -271,9 +271,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
 }
 
 /*
-virtual Qt::ItemFlags flags( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -295,9 +295,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
 }
 
 /*
-virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
+virtual bool hasChildren(const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL(obj->hasChildren( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RBOOL(obj->hasChildren(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,9 +319,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
 }
 
 /*
-bool hasIndex( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+bool hasIndex(int row, int column, const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -343,9 +343,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
 }
 
 /*
-virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT( 3, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -368,9 +368,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 }
 
 /*
-virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
+virtual QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -393,9 +393,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
 }
 
 /*
-bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
+bool insertColumn(int column, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -417,9 +417,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 }
 
 /*
-virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertColumns(int column, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -441,9 +441,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 }
 
 /*
-bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
+bool insertRow(int row, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -465,9 +465,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
 }
 
 /*
-virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -489,9 +489,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
 }
 
 /*
-virtual QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
+virtual QModelIndexList match(const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
     if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
     {
 #endif
-      auto list = obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT( 4, 1 ), HB_ISNIL(5) ? static_cast<Qt::MatchFlags >( Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) : static_cast<Qt::MatchFlags >(hb_parni(5)));
+      auto list = obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1), HB_ISNIL(5) ? static_cast<Qt::MatchFlags >(Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) : static_cast<Qt::MatchFlags >(hb_parni(5)));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 /*
 virtual QStringList mimeTypes() const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -563,9 +563,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 }
 
 /*
-virtual QModelIndex parent( const QModelIndex & index ) const = 0
+virtual QModelIndex parent(const QModelIndex & index) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -588,9 +588,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
 }
 
 /*
-bool removeColumn( int column, const QModelIndex & parent = QModelIndex() )
+bool removeColumn(int column, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -612,9 +612,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 }
 
 /*
-virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeColumns(int column, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -636,9 +636,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 }
 
 /*
-bool removeRow( int row, const QModelIndex & parent = QModelIndex() )
+bool removeRow(int row, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -660,9 +660,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
 }
 
 /*
-virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -684,9 +684,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const = 0
+virtual int rowCount(const QModelIndex & parent = QModelIndex()) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,9 +708,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -732,9 +732,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 }
 
 /*
-virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
+virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      RBOOL(obj->setHeaderData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), *PQVARIANT(3), OPINT( 4, Qt::EditRole )));
+      RBOOL(obj->setHeaderData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), *PQVARIANT(3), OPINT(4, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -756,9 +756,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 }
 
 /*
-QModelIndex sibling( int row, int column, const QModelIndex & index ) const
+QModelIndex sibling(int row, int column, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -781,9 +781,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
 }
 
 /*
-virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
+virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >(hb_parni(2)));
+      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >(Qt::AscendingOrder) : static_cast<Qt::SortOrder >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -807,9 +807,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 }
 
 /*
-virtual QSize span( const QModelIndex & index ) const
+virtual QSize span(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
 /*
 Qt::DropActions supportedDragActions() const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 /*
 virtual Qt::DropActions supportedDropActions() const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 /*
 virtual void revert()
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 /*
 virtual bool submit()
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 {
   auto obj = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -930,9 +930,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
 }
 
 /*
-void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
+void columnsAboutToBeInserted(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -984,9 +984,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 }
 
 /*
-void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+void columnsAboutToBeMoved(const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1010,10 +1010,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
-            auto pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
+            auto pArg4 = Qt5xHb::Signals_return_object((void *) &arg4, "QMODELINDEX");
             auto pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
@@ -1042,9 +1042,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 }
 
 /*
-void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
+void columnsAboutToBeRemoved(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -1096,9 +1096,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 }
 
 /*
-void columnsInserted( const QModelIndex & parent, int start, int end )
+void columnsInserted(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSINSERTED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -1150,9 +1150,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 }
 
 /*
-void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+void columnsMoved(const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1176,10 +1176,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
-            auto pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
+            auto pArg4 = Qt5xHb::Signals_return_object((void *) &arg4, "QMODELINDEX");
             auto pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
@@ -1208,9 +1208,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 }
 
 /*
-void columnsRemoved( const QModelIndex & parent, int start, int end )
+void columnsRemoved(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSREMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -1262,9 +1262,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 }
 
 /*
-void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+void dataChanged(const QModelIndex & topLeft, const QModelIndex & bottomRight)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONDATACHANGED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1288,8 +1288,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1314,9 +1314,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 }
 
 /*
-void headerDataChanged( Qt::Orientation orientation, int first, int last )
+void headerDataChanged(Qt::Orientation orientation, int first, int last)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONHEADERDATACHANGED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 /*
 void layoutAboutToBeChanged()
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 /*
 void layoutChanged()
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONLAYOUTCHANGED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1466,7 +1466,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 /*
 void modelAboutToBeReset()
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1514,7 +1514,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 /*
 void modelReset()
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONMODELRESET)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1560,9 +1560,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 }
 
 /*
-void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
+void rowsAboutToBeInserted(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -1614,9 +1614,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 }
 
 /*
-void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+void rowsAboutToBeMoved(const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1640,10 +1640,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
-            auto pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
+            auto pArg4 = Qt5xHb::Signals_return_object((void *) &arg4, "QMODELINDEX");
             auto pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
@@ -1672,9 +1672,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 }
 
 /*
-void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
+void rowsAboutToBeRemoved(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1698,7 +1698,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -1726,9 +1726,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 }
 
 /*
-void rowsInserted( const QModelIndex & parent, int start, int end )
+void rowsInserted(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSINSERTED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1752,7 +1752,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
@@ -1780,9 +1780,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 }
 
 /*
-void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+void rowsMoved(const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1806,10 +1806,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
-            auto pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX");
+            auto pArg4 = Qt5xHb::Signals_return_object((void *) &arg4, "QMODELINDEX");
             auto pArg5 = hb_itemPutNI(nullptr, arg5);
             hb_vmEvalBlockV(cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5);
             hb_itemRelease(pSender);
@@ -1838,9 +1838,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 }
 
 /*
-void rowsRemoved( const QModelIndex & parent, int start, int end )
+void rowsRemoved(const QModelIndex & parent, int start, int end)
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
+HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSREMOVED)
 {
   auto sender = qobject_cast<QAbstractItemModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1864,7 +1864,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMMODEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             auto pArg2 = hb_itemPutNI(nullptr, arg2);
             auto pArg3 = hb_itemPutNI(nullptr, arg3);
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);

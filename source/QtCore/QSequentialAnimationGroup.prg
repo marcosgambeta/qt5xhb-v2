@@ -59,13 +59,13 @@ RETURN
 #include <QtCore/QPauseAnimation>
 
 /*
-QSequentialAnimationGroup( QObject * parent = nullptr )
+QSequentialAnimationGroup(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSequentialAnimationGroup( OPQOBJECT( 1, nullptr));
+    auto obj = new QSequentialAnimationGroup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DELETE)
 {
   auto obj = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -93,9 +93,9 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 }
 
 /*
-QPauseAnimation * addPause( int msecs )
+QPauseAnimation * addPause(int msecs)
 */
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 {
   auto obj = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 /*
 QAbstractAnimation * currentAnimation() const
 */
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 {
   auto obj = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -143,9 +143,9 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 }
 
 /*
-QPauseAnimation * insertPause( int index, int msecs )
+QPauseAnimation * insertPause(int index, int msecs)
 */
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 {
   auto obj = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 /*
 virtual int duration() const
 */
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DURATION)
 {
   auto obj = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -192,9 +192,9 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 }
 
 /*
-void currentAnimationChanged( QAbstractAnimation * current )
+void currentAnimationChanged(QAbstractAnimation * current)
 */
-HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
+HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED)
 {
   auto sender = qobject_cast<QSequentialAnimationGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

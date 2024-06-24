@@ -62,41 +62,41 @@ RETURN
 #include <QtCore/QDirIterator>
 #endif
 
-HB_FUNC_STATIC( QDIRITERATOR_NEW )
+HB_FUNC_STATIC(QDIRITERATOR_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDIR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    QDirIterator(const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     */
-    auto obj = new QDirIterator(*PQDIR(1), HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >(hb_parni(2)));
+    auto obj = new QDirIterator(*PQDIR(1), HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags >(QDirIterator::NoIteratorFlags) : static_cast<QDirIterator::IteratorFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    QDirIterator(const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     */
-    auto obj = new QDirIterator(PQSTRING(1), HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >(hb_parni(2)));
+    auto obj = new QDirIterator(PQSTRING(1), HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags >(QDirIterator::NoIteratorFlags) : static_cast<QDirIterator::IteratorFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    QDirIterator(const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     */
-    auto obj = new QDirIterator(PQSTRING(1), static_cast<QDir::Filters>(hb_parni(2)), HB_ISNIL(3) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >(hb_parni(3)));
+    auto obj = new QDirIterator(PQSTRING(1), static_cast<QDir::Filters>(hb_parni(2)), HB_ISNIL(3) ? static_cast<QDirIterator::IteratorFlags >(QDirIterator::NoIteratorFlags) : static_cast<QDirIterator::IteratorFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
+    QDirIterator(const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     */
-    auto obj = new QDirIterator(PQSTRING(1), PQSTRINGLIST(2), HB_ISNIL(3) ? static_cast<QDir::Filters >( QDir::NoFilter ) : static_cast<QDir::Filters >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QDirIterator::IteratorFlags >( QDirIterator::NoIteratorFlags ) : static_cast<QDirIterator::IteratorFlags >(hb_parni(4)));
+    auto obj = new QDirIterator(PQSTRING(1), PQSTRINGLIST(2), HB_ISNIL(3) ? static_cast<QDir::Filters >(QDir::NoFilter) : static_cast<QDir::Filters >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QDirIterator::IteratorFlags >(QDirIterator::NoIteratorFlags) : static_cast<QDirIterator::IteratorFlags >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_DELETE )
+HB_FUNC_STATIC(QDIRITERATOR_DELETE)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 /*
 QFileInfo fileInfo() const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
+HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
+HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 /*
 QString filePath() const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
+HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 /*
 bool hasNext() const
 */
-HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
+HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 /*
 QString next()
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEXT )
+HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QDIRITERATOR_PATH )
+HB_FUNC_STATIC(QDIRITERATOR_PATH)
 {
   auto obj = static_cast<QDirIterator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
   }
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_NEWFROM )
+HB_FUNC_STATIC(QDIRITERATOR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -297,22 +297,22 @@ HB_FUNC_STATIC( QDIRITERATOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDIRITERATOR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDIRITERATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDIRITERATOR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDIRITERATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDIRITERATOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDIRITERATOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDIRITERATOR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

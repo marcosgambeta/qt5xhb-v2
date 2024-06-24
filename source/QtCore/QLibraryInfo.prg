@@ -60,7 +60,7 @@ RETURN
 #include <QtCore/QLibraryInfo>
 #endif
 
-HB_FUNC_STATIC( QLIBRARYINFO_DELETE )
+HB_FUNC_STATIC(QLIBRARYINFO_DELETE)
 {
   auto obj = static_cast<QLibraryInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -79,13 +79,13 @@ HB_FUNC_STATIC( QLIBRARYINFO_DELETE )
 /*
 static QString licensee()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
+HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QLibraryInfo::licensee());
+    RQSTRING(QLibraryInfo::licensee());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -98,13 +98,13 @@ HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 /*
 static QString licensedProducts()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
+HB_FUNC_STATIC(QLIBRARYINFO_LICENSEDPRODUCTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QLibraryInfo::licensedProducts());
+    RQSTRING(QLibraryInfo::licensedProducts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -117,13 +117,13 @@ HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 /*
 static QDate buildDate()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
+HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QDate( QLibraryInfo::buildDate());
+    auto ptr = new QDate(QLibraryInfo::buildDate());
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -137,13 +137,13 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 /*
 static bool isDebugBuild()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
+HB_FUNC_STATIC(QLIBRARYINFO_ISDEBUGBUILD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QLibraryInfo::isDebugBuild());
+    RBOOL(QLibraryInfo::isDebugBuild());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -154,15 +154,15 @@ HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
 }
 
 /*
-static QString location( QLibraryInfo::LibraryLocation )
+static QString location(QLibraryInfo::LibraryLocation)
 */
-HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
+HB_FUNC_STATIC(QLIBRARYINFO_LOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QLibraryInfo::location(static_cast<QLibraryInfo::LibraryLocation>(hb_parni(1))));
+    RQSTRING(QLibraryInfo::location(static_cast<QLibraryInfo::LibraryLocation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 #endif
 }
 
-HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )
+HB_FUNC_STATIC(QLIBRARYINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -202,22 +202,22 @@ HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QLIBRARYINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QLIBRARYINFO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QLIBRARYINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QLIBRARYINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QLIBRARYINFO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QLIBRARYINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QLIBRARYINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QLIBRARYINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QLIBRARYINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QLIBRARYINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

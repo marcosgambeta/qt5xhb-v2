@@ -53,23 +53,23 @@ RETURN
 #include <QtCore/QEventTransition>
 #endif
 
-HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
+HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
-    QEventTransition( QState * sourceState = nullptr )
+    QEventTransition(QState * sourceState = nullptr)
     */
-    auto obj = new QEventTransition( OPQSTATE( 1, nullptr));
+    auto obj = new QEventTransition(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3) || HB_ISNIL(3)))
   {
     /*
-    QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = nullptr )
+    QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = nullptr)
     */
-    auto obj = new QEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)), OPQSTATE( 3, nullptr));
+    auto obj = new QEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)), OPQSTATE(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
+HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 {
   auto obj = qobject_cast<QEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 /*
 QObject * eventSource() const
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
+HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
   auto obj = qobject_cast<QEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 /*
 QEvent::Type eventType() const
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
+HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 {
   auto obj = qobject_cast<QEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 }
 
 /*
-void setEventSource( QObject * object )
+void setEventSource(QObject * object)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
+HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
   auto obj = qobject_cast<QEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,9 +173,9 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 }
 
 /*
-void setEventType( QEvent::Type type )
+void setEventType(QEvent::Type type)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
+HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
   auto obj = qobject_cast<QEventTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

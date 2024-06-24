@@ -79,14 +79,14 @@ RETURN
 #include <QtCore/QSize>
 
 /*
-QConcatenateTablesProxyModel( QObject * parent = nullptr )
+QConcatenateTablesProxyModel(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_NEW )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QConcatenateTablesProxyModel( OPQOBJECT( 1, nullptr));
+    auto obj = new QConcatenateTablesProxyModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_NEW )
 /*
 ~QConcatenateTablesProxyModel()
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DELETE )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -120,9 +120,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DELETE )
 }
 
 /*
-Q_SCRIPTABLE void addSourceModel( QAbstractItemModel * sourceModel )
+Q_SCRIPTABLE void addSourceModel(QAbstractItemModel * sourceModel)
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL )
 }
 
 /*
-Q_SCRIPTABLE void removeSourceModel( QAbstractItemModel * sourceModel )
+Q_SCRIPTABLE void removeSourceModel(QAbstractItemModel * sourceModel)
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL )
 }
 
 /*
-QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
+QModelIndex mapFromSource(const QModelIndex & sourceIndex) const
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -203,9 +203,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE )
 }
 
 /*
-QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
+QModelIndex mapToSource(const QModelIndex & proxyIndex) const
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -230,9 +230,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE )
 }
 
 /*
-QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const override
+QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DATA )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DATA )
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -257,9 +257,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DATA )
 }
 
 /*
-bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole ) override
+bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole) override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SETDATA )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SETDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SETDATA )
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,9 +283,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SETDATA )
 }
 
 /*
-Qt::ItemFlags flags( const QModelIndex & index ) const override
+Qt::ItemFlags flags(const QModelIndex & index) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_FLAGS )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_FLAGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +309,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_FLAGS )
 }
 
 /*
-QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const override
+QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_INDEX )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_INDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -336,9 +336,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_INDEX )
 }
 
 /*
-QModelIndex parent( const QModelIndex & index ) const override
+QModelIndex parent(const QModelIndex & index) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_PARENT )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_PARENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -363,9 +363,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_PARENT )
 }
 
 /*
-int rowCount( const QModelIndex & parent = QModelIndex() ) const override
+int rowCount(const QModelIndex & parent = QModelIndex()) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_ROWCOUNT )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_ROWCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,9 +389,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_ROWCOUNT )
 }
 
 /*
-QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const override
+QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_HEADERDATA )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_HEADERDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_HEADERDATA )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT( 3, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -416,9 +416,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_HEADERDATA )
 }
 
 /*
-int columnCount( const QModelIndex & parent = QModelIndex() ) const override
+int columnCount(const QModelIndex & parent = QModelIndex()) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT )
 /*
 QStringList mimeTypes() const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MIMETYPES )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMETYPES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -468,9 +468,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MIMETYPES )
 }
 
 /*
-QMimeData * mimeData( const QModelIndexList & indexes ) const override
+QMimeData * mimeData(const QModelIndexList & indexes) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MIMEDATA )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -502,9 +502,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_MIMEDATA )
 }
 
 /*
-bool canDropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent ) const override
+bool canDropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -528,9 +528,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA )
 }
 
 /*
-bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent ) override
+bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent) override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -554,9 +554,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA )
 }
 
 /*
-QList<QAbstractItemModel *> sourceModels() const
+QList<QAbstractItemModel*> sourceModels() const
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SOURCEMODELS )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -603,9 +603,9 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SOURCEMODELS )
 }
 
 /*
-QSize span( const QModelIndex & index ) const override
+QSize span(const QModelIndex & index) const override
 */
-HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SPAN )
+HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SPAN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel*>(Qt5xHb::getQObjectPointerFromSelfItem());

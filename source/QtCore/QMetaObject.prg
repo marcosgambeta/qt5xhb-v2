@@ -93,7 +93,7 @@ RETURN
 #include <QtCore/QMetaMethod>
 #include <QtCore/QMetaProperty>
 
-HB_FUNC_STATIC( QMETAOBJECT_DELETE )
+HB_FUNC_STATIC(QMETAOBJECT_DELETE)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,9 +110,9 @@ HB_FUNC_STATIC( QMETAOBJECT_DELETE )
 }
 
 /*
-QMetaClassInfo classInfo( int index ) const
+QMetaClassInfo classInfo(int index) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
+HB_FUNC_STATIC(QMETAOBJECT_CLASSINFO)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
 /*
 int classInfoCount() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
+HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOCOUNT)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 /*
 int classInfoOffset() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
+HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOOFFSET)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 /*
 const char * className() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
+HB_FUNC_STATIC(QMETAOBJECT_CLASSNAME)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
 }
 
 /*
-QMetaMethod constructor( int index ) const
+QMetaMethod constructor(int index) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
+HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTOR)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
 /*
 int constructorCount() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
+HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTORCOUNT)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -256,9 +256,9 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 }
 
 /*
-QMetaEnum enumerator( int index ) const
+QMetaEnum enumerator(int index) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
+HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOR)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
 /*
 int enumeratorCount() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
+HB_FUNC_STATIC(QMETAOBJECT_ENUMERATORCOUNT)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 /*
 int enumeratorOffset() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
+HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOROFFSET)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -329,9 +329,9 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 }
 
 /*
-int indexOfClassInfo( const char * name ) const
+int indexOfClassInfo(const char * name) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCLASSINFO)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -353,9 +353,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
 }
 
 /*
-int indexOfConstructor( const char * constructor ) const
+int indexOfConstructor(const char * constructor) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCONSTRUCTOR)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -377,9 +377,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
 }
 
 /*
-int indexOfEnumerator( const char * name ) const
+int indexOfEnumerator(const char * name) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFENUMERATOR)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -401,9 +401,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
 }
 
 /*
-int indexOfMethod( const char * method ) const
+int indexOfMethod(const char * method) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFMETHOD)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -425,9 +425,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
 }
 
 /*
-int indexOfProperty( const char * name ) const
+int indexOfProperty(const char * name) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFPROPERTY)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -449,9 +449,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
 }
 
 /*
-int indexOfSignal( const char * signal ) const
+int indexOfSignal(const char * signal) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSIGNAL)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -473,9 +473,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
 }
 
 /*
-int indexOfSlot( const char * slot ) const
+int indexOfSlot(const char * slot) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
+HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSLOT)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -497,9 +497,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
 }
 
 /*
-QMetaMethod method( int index ) const
+QMetaMethod method(int index) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_METHOD )
+HB_FUNC_STATIC(QMETAOBJECT_METHOD)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
 /*
 int methodCount() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
+HB_FUNC_STATIC(QMETAOBJECT_METHODCOUNT)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 /*
 int methodOffset() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
+HB_FUNC_STATIC(QMETAOBJECT_METHODOFFSET)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -570,12 +570,12 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 }
 
 /*
-QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() ) const
+QObject * newInstance (QGenericArgument val0 = QGenericArgument(0), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument()) const
 */
 /*
-QMetaProperty property( int index ) const
+QMetaProperty property(int index) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
+HB_FUNC_STATIC(QMETAOBJECT_PROPERTY)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
 /*
 int propertyCount() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
+HB_FUNC_STATIC(QMETAOBJECT_PROPERTYCOUNT)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 /*
 int propertyOffset() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
+HB_FUNC_STATIC(QMETAOBJECT_PROPERTYOFFSET)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 /*
 const QMetaObject * superClass() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
+HB_FUNC_STATIC(QMETAOBJECT_SUPERCLASS)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
 /*
 QMetaProperty userProperty() const
 */
-HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
+HB_FUNC_STATIC(QMETAOBJECT_USERPROPERTY)
 {
   auto obj = static_cast<QMetaObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -696,15 +696,15 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 }
 
 /*
-static bool checkConnectArgs( const char * signal, const char * method )
+static bool checkConnectArgs(const char * signal, const char * method)
 */
-HB_FUNC_STATIC( QMETAOBJECT_CHECKCONNECTARGS )
+HB_FUNC_STATIC(QMETAOBJECT_CHECKCONNECTARGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
 #endif
-    RBOOL( QMetaObject::checkConnectArgs(PCONSTCHAR(1), PCONSTCHAR(2)));
+    RBOOL(QMetaObject::checkConnectArgs(PCONSTCHAR(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -715,9 +715,9 @@ HB_FUNC_STATIC( QMETAOBJECT_CHECKCONNECTARGS )
 }
 
 /*
-static void connectSlotsByName( QObject * object )
+static void connectSlotsByName(QObject * object)
 */
-HB_FUNC_STATIC( QMETAOBJECT_CONNECTSLOTSBYNAME )
+HB_FUNC_STATIC(QMETAOBJECT_CONNECTSLOTSBYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQOBJECT(1))
@@ -736,15 +736,15 @@ HB_FUNC_STATIC( QMETAOBJECT_CONNECTSLOTSBYNAME )
 }
 
 /*
-static QByteArray normalizedSignature( const char * method )
+static QByteArray normalizedSignature(const char * method)
 */
-HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
+HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QByteArray( QMetaObject::normalizedSignature(PCONSTCHAR(1)));
+    auto ptr = new QByteArray(QMetaObject::normalizedSignature(PCONSTCHAR(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -756,15 +756,15 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
 }
 
 /*
-static QByteArray normalizedType( const char * type )
+static QByteArray normalizedType(const char * type)
 */
-HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
+HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QByteArray( QMetaObject::normalizedType(PCONSTCHAR(1)));
+    auto ptr = new QByteArray(QMetaObject::normalizedType(PCONSTCHAR(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
 #endif
 }
 
-HB_FUNC_STATIC( QMETAOBJECT_NEWFROM )
+HB_FUNC_STATIC(QMETAOBJECT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -805,22 +805,22 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMETAOBJECT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMETAOBJECT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMETAOBJECT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAOBJECT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMETAOBJECT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMETAOBJECT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAOBJECT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAOBJECT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMETAOBJECT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAOBJECT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

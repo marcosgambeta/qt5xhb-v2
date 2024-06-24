@@ -64,7 +64,7 @@ QRunnable()
 /*
 virtual ~QRunnable()
 */
-HB_FUNC_STATIC( QRUNNABLE_DELETE )
+HB_FUNC_STATIC(QRUNNABLE_DELETE)
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QRUNNABLE_DELETE )
 /*
 virtual void run() = 0
 */
-HB_FUNC_STATIC( QRUNNABLE_RUN )
+HB_FUNC_STATIC(QRUNNABLE_RUN)
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QRUNNABLE_RUN )
 /*
 bool autoDelete() const
 */
-HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
+HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 }
 
 /*
-void setAutoDelete( bool _autoDelete )
+void setAutoDelete(bool _autoDelete)
 */
-HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
+HB_FUNC_STATIC(QRUNNABLE_SETAUTODELETE)
 {
   auto obj = static_cast<QRunnable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QRUNNABLE_NEWFROM )
+HB_FUNC_STATIC(QRUNNABLE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -186,22 +186,22 @@ HB_FUNC_STATIC( QRUNNABLE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QRUNNABLE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QRUNNABLE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QRUNNABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QRUNNABLE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QRUNNABLE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QRUNNABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QRUNNABLE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QRUNNABLE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QRUNNABLE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QRUNNABLE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

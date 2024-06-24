@@ -48,9 +48,9 @@ RETURN
 #endif
 
 /*
-QTimerEvent( int timerId )
+QTimerEvent(int timerId)
 */
-HB_FUNC_STATIC( QTIMEREVENT_NEW )
+HB_FUNC_STATIC(QTIMEREVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTIMEREVENT_DELETE )
+HB_FUNC_STATIC(QTIMEREVENT_DELETE)
 {
   auto obj = static_cast<QTimerEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 /*
 int timerId() const
 */
-HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
+HB_FUNC_STATIC(QTIMEREVENT_TIMERID)
 {
   auto obj = static_cast<QTimerEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

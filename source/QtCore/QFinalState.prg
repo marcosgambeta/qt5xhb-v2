@@ -49,13 +49,13 @@ RETURN
 #endif
 
 /*
-QFinalState( QState * parent = nullptr )
+QFinalState(QState * parent = nullptr)
 */
-HB_FUNC_STATIC( QFINALSTATE_NEW )
+HB_FUNC_STATIC(QFINALSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
-    auto obj = new QFinalState( OPQSTATE( 1, nullptr));
+    auto obj = new QFinalState(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFINALSTATE_DELETE )
+HB_FUNC_STATIC(QFINALSTATE_DELETE)
 {
   auto obj = qobject_cast<QFinalState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -69,7 +69,7 @@ RETURN
 #include <QtCore/QAbstractEventDispatcher>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_DELETE)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -88,9 +88,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 }
 
 /*
-bool filterNativeEvent( const QByteArray & eventType, void * message, long * result )
+bool filterNativeEvent(const QByteArray & eventType, void * message, long * result)
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
 /*
 virtual void flush() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FLUSH)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 /*
 virtual bool hasPendingEvents() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -164,9 +164,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 }
 
 /*
-void installNativeEventFilter( QAbstractNativeEventFilter * filterObj )
+void installNativeEventFilter(QAbstractNativeEventFilter * filterObj)
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
 /*
 virtual void interrupt() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INTERRUPT)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -216,9 +216,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 }
 
 /*
-virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
+virtual bool processEvents(QEventLoop::ProcessEventsFlags flags) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_PROCESSEVENTS)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 /*
 virtual bool registerEventNotifier(QWinEventNotifier * notifier) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER)
 {
 #ifdef Q_OS_WIN
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -266,9 +266,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
 }
 
 /*
-virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
+virtual void registerSocketNotifier(QSocketNotifier * notifier) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,12 +291,12 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3))
   {
     /*
-    int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
+    int registerTimer(int interval, Qt::TimerType timerType, QObject * object)
     */
     auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECT(4))
   {
     /*
-    virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
+    virtual void registerTimer(int timerId, int interval, Qt::TimerType timerType, QObject * object) = 0
     */
     auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -328,9 +328,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 }
 
 /*
-virtual int remainingTime( int timerId ) = 0
+virtual int remainingTime(int timerId) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REMAININGTIME)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -352,9 +352,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
 }
 
 /*
-void removeNativeEventFilter( QAbstractNativeEventFilter * filter )
+void removeNativeEventFilter(QAbstractNativeEventFilter * filter)
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER )
 /*
 virtual void unregisterEventNotifier(QWinEventNotifier * notifier) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER)
 {
 #ifdef Q_OS_WIN
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -406,9 +406,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
 }
 
 /*
-virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
+virtual void unregisterSocketNotifier(QSocketNotifier * notifier) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -432,9 +432,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 }
 
 /*
-virtual bool unregisterTimer( int timerId ) = 0
+virtual bool unregisterTimer(int timerId) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -456,9 +456,9 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 }
 
 /*
-virtual bool unregisterTimers( QObject * object ) = 0
+virtual bool unregisterTimers(QObject * object) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 /*
 virtual void wakeUp() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_WAKEUP)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -506,15 +506,15 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 }
 
 /*
-static QAbstractEventDispatcher * instance( QThread * thread = nullptr )
+static QAbstractEventDispatcher * instance(QThread * thread = nullptr)
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && (ISQTHREAD(1) || HB_ISNIL(1)))
   {
 #endif
-    auto ptr = QAbstractEventDispatcher::instance( OPQTHREAD( 1, nullptr));
+    auto ptr = QAbstractEventDispatcher::instance(OPQTHREAD(1, nullptr));
     Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 /*
 virtual void startingUp()
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_STARTINGUP )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_STARTINGUP)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_STARTINGUP )
 /*
 virtual void closingDown()
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_CLOSINGDOWN )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_CLOSINGDOWN)
 {
   auto obj = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_CLOSINGDOWN )
 /*
 void aboutToBlock()
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK)
 {
   auto sender = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 /*
 void awake()
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_ONAWAKE)
 {
   auto sender = qobject_cast<QAbstractEventDispatcher*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

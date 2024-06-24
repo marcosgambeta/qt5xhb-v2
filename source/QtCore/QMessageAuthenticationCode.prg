@@ -62,9 +62,9 @@ RETURN
 #endif
 
 /*
-QMessageAuthenticationCode( QCryptographicHash::Algorithm method, const QByteArray & key = QByteArray() )
+QMessageAuthenticationCode(QCryptographicHash::Algorithm method, const QByteArray & key = QByteArray())
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_DELETE )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_DELETE)
 {
   auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_DELETE )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESET)
 {
   auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -120,9 +120,9 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
 }
 
 /*
-void setKey( const QByteArray & key )
+void setKey(const QByteArray & key)
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SETKEY)
 {
   auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,12 +145,12 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_ADDDATA)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    void addData( const char * data, int length )
+    void addData(const char * data, int length)
     */
     auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void addData( const QByteArray & data )
+    void addData(const QByteArray & data)
     */
     auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    bool addData( QIODevice * device )
+    bool addData(QIODevice * device)
     */
     auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 /*
 QByteArray result() const
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESULT)
 {
   auto obj = static_cast<QMessageAuthenticationCode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -222,15 +222,15 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
 }
 
 /*
-static QByteArray hash( const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method )
+static QByteArray hash(const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method)
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_HASH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QByteArray( QMessageAuthenticationCode::hash(*PQBYTEARRAY(1), *PQBYTEARRAY(2), static_cast<QCryptographicHash::Algorithm>(hb_parni(3))));
+    auto ptr = new QByteArray(QMessageAuthenticationCode::hash(*PQBYTEARRAY(1), *PQBYTEARRAY(2), static_cast<QCryptographicHash::Algorithm>(hb_parni(3))));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
 #endif
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROM )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -271,22 +271,22 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMESSAGEAUTHENTICATIONCODE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMESSAGEAUTHENTICATIONCODE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

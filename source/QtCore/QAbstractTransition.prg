@@ -66,7 +66,7 @@ RETURN
 #include <QtCore/QState>
 #include <QtCore/QStateMachine>
 
-HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -85,9 +85,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 }
 
 /*
-void addAnimation( QAbstractAnimation * animation )
+void addAnimation(QAbstractAnimation * animation)
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -111,9 +111,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 }
 
 /*
-QList<QAbstractAnimation *> animations() const
+QList<QAbstractAnimation*> animations() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 /*
 QStateMachine * machine() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -183,9 +183,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 }
 
 /*
-void removeAnimation( QAbstractAnimation * animation )
+void removeAnimation(QAbstractAnimation * animation)
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -209,9 +209,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 }
 
 /*
-void setTargetState( QAbstractState * target )
+void setTargetState(QAbstractState * target)
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -235,9 +235,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 }
 
 /*
-void setTargetStates( const QList<QAbstractState *> & targets )
+void setTargetStates(const QList<QAbstractState*> & targets)
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      QList<QAbstractState *> par1;
+      QList<QAbstractState*> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       for (auto i1 = 0; i1 < nLen1; i1++)
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 /*
 QState * sourceState() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 /*
 QAbstractState * targetState() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -318,9 +318,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 }
 
 /*
-QList<QAbstractState *> targetStates() const
+QList<QAbstractState*> targetStates() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 {
   auto obj = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 /*
 void triggered()
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_ONTRIGGERED)
 {
   auto sender = qobject_cast<QAbstractTransition*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

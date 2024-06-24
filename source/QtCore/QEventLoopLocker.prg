@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QEventLoopLocker>
 #endif
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
   else if (ISNUMPAR(1) && ISQEVENTLOOP(1))
   {
     /*
-    QEventLoopLocker( QEventLoop * loop )
+    QEventLoopLocker(QEventLoop * loop)
     */
     auto obj = new QEventLoopLocker(PQEVENTLOOP(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
   else if (ISNUMPAR(1) && ISQTHREAD(1))
   {
     /*
-    QEventLoopLocker( QThread * thread )
+    QEventLoopLocker(QThread * thread)
     */
     auto obj = new QEventLoopLocker(PQTHREAD(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_DELETE)
 {
   auto obj = static_cast<QEventLoopLocker*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -136,22 +136,22 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QEVENTLOOPLOCKER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QEVENTLOOPLOCKER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QEVENTLOOPLOCKER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QEVENTLOOPLOCKER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

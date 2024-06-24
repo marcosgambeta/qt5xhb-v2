@@ -57,12 +57,12 @@ RETURN
 #include <QtCore/QTextDecoder>
 #endif
 
-HB_FUNC_STATIC( QTEXTDECODER_NEW )
+HB_FUNC_STATIC(QTEXTDECODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1))
   {
     /*
-    QTextDecoder( const QTextCodec * codec )
+    QTextDecoder(const QTextCodec * codec)
     */
     auto obj = new QTextDecoder(PQTEXTCODEC(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
   else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2))
   {
     /*
-    QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
+    QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
     */
     auto obj = new QTextDecoder(PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDECODER_DELETE )
+HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 {
   auto obj = static_cast<QTextDecoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -103,12 +103,12 @@ HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 void toUnicode(QString * target, const char * chars, int len)
 */
 
-HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
+HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QString toUnicode( const char * chars, int len )
+    QString toUnicode(const char * chars, int len)
     */
     auto obj = static_cast<QTextDecoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QString toUnicode( const QByteArray & ba )
+    QString toUnicode(const QByteArray & ba)
     */
     auto obj = static_cast<QTextDecoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 /*
 bool hasFailure() const
 */
-HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
+HB_FUNC_STATIC(QTEXTDECODER_HASFAILURE)
 {
   auto obj = static_cast<QTextDecoder*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDECODER_NEWFROM )
+HB_FUNC_STATIC(QTEXTDECODER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -191,22 +191,22 @@ HB_FUNC_STATIC( QTEXTDECODER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTDECODER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTDECODER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTDECODER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTDECODER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTDECODER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTDECODER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTDECODER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTDECODER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTDECODER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTDECODER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

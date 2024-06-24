@@ -57,7 +57,7 @@ RETURN
 #include <QtCore/QState>
 #include <QtCore/QStateMachine>
 
-HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
+HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 {
   auto obj = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 /*
 QStateMachine * machine() const
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
+HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
   auto obj = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 /*
 QState * parentState() const
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
+HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
   auto obj = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 /*
 void entered()
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
+HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 {
   auto sender = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 /*
 void exited()
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
+HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
 {
   auto sender = qobject_cast<QAbstractState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

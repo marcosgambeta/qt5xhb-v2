@@ -66,7 +66,7 @@ RETURN
 #include <QtCore/QSize>
 #endif
 
-HB_FUNC_STATIC( QSIZE_NEW )
+HB_FUNC_STATIC(QSIZE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QSize( int width, int height )
+    QSize(int width, int height)
     */
     auto obj = new QSize(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSIZE_DELETE )
+HB_FUNC_STATIC(QSIZE_DELETE)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,9 +109,9 @@ HB_FUNC_STATIC( QSIZE_DELETE )
 }
 
 /*
-QSize boundedTo( const QSize & otherSize ) const
+QSize boundedTo(const QSize & otherSize) const
 */
-HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
+HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -134,9 +134,9 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 }
 
 /*
-QSize expandedTo( const QSize & otherSize ) const
+QSize expandedTo(const QSize & otherSize) const
 */
-HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
+HB_FUNC_STATIC(QSIZE_EXPANDEDTO)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 /*
 int height() const
 */
-HB_FUNC_STATIC( QSIZE_HEIGHT )
+HB_FUNC_STATIC(QSIZE_HEIGHT)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QSIZE_ISEMPTY )
+HB_FUNC_STATIC(QSIZE_ISEMPTY)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSIZE_ISNULL )
+HB_FUNC_STATIC(QSIZE_ISNULL)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QSIZE_ISVALID )
+HB_FUNC_STATIC(QSIZE_ISVALID)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -254,12 +254,12 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
   }
 }
 
-HB_FUNC_STATIC( QSIZE_SCALE )
+HB_FUNC_STATIC(QSIZE_SCALE)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void scale( int width, int height, Qt::AspectRatioMode mode )
+    void scale(int width, int height, Qt::AspectRatioMode mode)
     */
     auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSIZE_SCALE )
   else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
   {
     /*
-    void scale( const QSize & size, Qt::AspectRatioMode mode )
+    void scale(const QSize & size, Qt::AspectRatioMode mode)
     */
     auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -293,9 +293,9 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 }
 
 /*
-void setHeight( int height )
+void setHeight(int height)
 */
-HB_FUNC_STATIC( QSIZE_SETHEIGHT )
+HB_FUNC_STATIC(QSIZE_SETHEIGHT)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -319,9 +319,9 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 }
 
 /*
-void setWidth( int width )
+void setWidth(int width)
 */
-HB_FUNC_STATIC( QSIZE_SETWIDTH )
+HB_FUNC_STATIC(QSIZE_SETWIDTH)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
 /*
 void transpose()
 */
-HB_FUNC_STATIC( QSIZE_TRANSPOSE )
+HB_FUNC_STATIC(QSIZE_TRANSPOSE)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 /*
 int width() const
 */
-HB_FUNC_STATIC( QSIZE_WIDTH )
+HB_FUNC_STATIC(QSIZE_WIDTH)
 {
   auto obj = static_cast<QSize*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QSIZE_WIDTH )
   }
 }
 
-HB_FUNC_STATIC( QSIZE_NEWFROM )
+HB_FUNC_STATIC(QSIZE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -424,22 +424,22 @@ HB_FUNC_STATIC( QSIZE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSIZE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSIZE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSIZE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSIZE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSIZE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSIZE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSIZE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSIZE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSIZE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSIZE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

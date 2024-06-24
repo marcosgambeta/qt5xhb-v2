@@ -74,7 +74,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-HB_FUNC_STATIC( QURLQUERY_NEW )
+HB_FUNC_STATIC(QURLQUERY_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
   else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    QUrlQuery( const QUrl & url )
+    QUrlQuery(const QUrl & url)
     */
     auto obj = new QUrlQuery(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QUrlQuery( const QString & queryString )
+    QUrlQuery(const QString & queryString)
     */
     auto obj = new QUrlQuery(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
   else if (ISNUMPAR(1) && ISQURLQUERY(1))
   {
     /*
-    QUrlQuery( const QUrlQuery & other )
+    QUrlQuery(const QUrlQuery & other)
     */
     auto obj = new QUrlQuery(*PQURLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QURLQUERY_DELETE )
+HB_FUNC_STATIC(QURLQUERY_DELETE)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -135,9 +135,9 @@ HB_FUNC_STATIC( QURLQUERY_DELETE )
 }
 
 /*
-void addQueryItem( const QString & key, const QString & value )
+void addQueryItem(const QString & key, const QString & value)
 */
-HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
+HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,9 +161,9 @@ HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 }
 
 /*
-QStringList allQueryItemValues( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
+QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 */
-HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
+HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RQSTRINGLIST(obj->allQueryItemValues(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(2))));
+      RQSTRINGLIST(obj->allQueryItemValues(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions >(QUrl::PrettyDecoded) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QURLQUERY_CLEAR )
+HB_FUNC_STATIC(QURLQUERY_CLEAR)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QURLQUERY_CLEAR )
 }
 
 /*
-bool hasQueryItem( const QString & key ) const
+bool hasQueryItem(const QString & key) const
 */
-HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
+HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
+HB_FUNC_STATIC(QURLQUERY_ISEMPTY)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -259,9 +259,9 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 }
 
 /*
-QString query( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
+QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 */
-HB_FUNC_STATIC( QURLQUERY_QUERY )
+HB_FUNC_STATIC(QURLQUERY_QUERY)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->query( HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(1))));
+      RQSTRING(obj->query(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >(QUrl::PrettyDecoded) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,9 +283,9 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
 }
 
 /*
-QString queryItemValue( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
+QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 */
-HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
+HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RQSTRING(obj->queryItemValue(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(2))));
+      RQSTRING(obj->queryItemValue(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions >(QUrl::PrettyDecoded) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 /*
 QChar queryPairDelimiter() const
 */
-HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
+HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
 /*
 QChar queryValueDelimiter() const
 */
-HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
+HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -357,9 +357,9 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 }
 
 /*
-void removeAllQueryItems( const QString & key )
+void removeAllQueryItems(const QString & key)
 */
-HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
+HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -383,9 +383,9 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 }
 
 /*
-void removeQueryItem( const QString & key )
+void removeQueryItem(const QString & key)
 */
-HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
+HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -409,9 +409,9 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 }
 
 /*
-void setQuery( const QString & queryString )
+void setQuery(const QString & queryString)
 */
-HB_FUNC_STATIC( QURLQUERY_SETQUERY )
+HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -435,9 +435,9 @@ HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 }
 
 /*
-void swap( QUrlQuery & other )
+void swap(QUrlQuery & other)
 */
-HB_FUNC_STATIC( QURLQUERY_SWAP )
+HB_FUNC_STATIC(QURLQUERY_SWAP)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -461,9 +461,9 @@ HB_FUNC_STATIC( QURLQUERY_SWAP )
 }
 
 /*
-QString toString( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
+QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 */
-HB_FUNC_STATIC( QURLQUERY_TOSTRING )
+HB_FUNC_STATIC(QURLQUERY_TOSTRING)
 {
   auto obj = static_cast<QUrlQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >( QUrl::PrettyDecoded ) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(1))));
+      RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions >(QUrl::PrettyDecoded) : static_cast<QUrl::ComponentFormattingOptions >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,13 +487,13 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 /*
 static QChar defaultQueryPairDelimiter()
 */
-HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
+HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYPAIRDELIMITER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter());
+    auto ptr = new QChar(QUrlQuery::defaultQueryPairDelimiter());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -507,13 +507,13 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
 /*
 static QChar defaultQueryValueDelimiter()
 */
-HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
+HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYVALUEDELIMITER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter());
+    auto ptr = new QChar(QUrlQuery::defaultQueryValueDelimiter());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
 #endif
 }
 
-HB_FUNC_STATIC( QURLQUERY_NEWFROM )
+HB_FUNC_STATIC(QURLQUERY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -554,22 +554,22 @@ HB_FUNC_STATIC( QURLQUERY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QURLQUERY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QURLQUERY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QURLQUERY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QURLQUERY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QURLQUERY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QURLQUERY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QURLQUERY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QURLQUERY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QURLQUERY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QURLQUERY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -68,7 +68,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-HB_FUNC_STATIC( QJSONOBJECT_NEW )
+HB_FUNC_STATIC(QJSONOBJECT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
   else if (ISNUMPAR(1) && ISQJSONOBJECT(1))
   {
     /*
-    QJsonObject( const QJsonObject & other )
+    QJsonObject(const QJsonObject & other)
     */
     auto obj = new QJsonObject(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QJSONOBJECT_DELETE )
+HB_FUNC_STATIC(QJSONOBJECT_DELETE)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -111,9 +111,9 @@ HB_FUNC_STATIC( QJSONOBJECT_DELETE )
 }
 
 /*
-bool contains( const QString & key ) const
+bool contains(const QString & key) const
 */
-HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
+HB_FUNC_STATIC(QJSONOBJECT_CONTAINS)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QJSONOBJECT_COUNT )
+HB_FUNC_STATIC(QJSONOBJECT_COUNT)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QJSONOBJECT_COUNT )
 /*
 bool empty() const
 */
-HB_FUNC_STATIC( QJSONOBJECT_EMPTY )
+HB_FUNC_STATIC(QJSONOBJECT_EMPTY)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QJSONOBJECT_EMPTY )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QJSONOBJECT_ISEMPTY )
+HB_FUNC_STATIC(QJSONOBJECT_ISEMPTY)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QJSONOBJECT_ISEMPTY )
 /*
 QStringList keys() const
 */
-HB_FUNC_STATIC( QJSONOBJECT_KEYS )
+HB_FUNC_STATIC(QJSONOBJECT_KEYS)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QJSONOBJECT_KEYS )
 /*
 int length() const
 */
-HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
+HB_FUNC_STATIC(QJSONOBJECT_LENGTH)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -255,9 +255,9 @@ HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
 }
 
 /*
-void remove( const QString & key )
+void remove(const QString & key)
 */
-HB_FUNC_STATIC( QJSONOBJECT_REMOVE )
+HB_FUNC_STATIC(QJSONOBJECT_REMOVE)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QJSONOBJECT_REMOVE )
 /*
 int size() const
 */
-HB_FUNC_STATIC( QJSONOBJECT_SIZE )
+HB_FUNC_STATIC(QJSONOBJECT_SIZE)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -305,9 +305,9 @@ HB_FUNC_STATIC( QJSONOBJECT_SIZE )
 }
 
 /*
-QJsonValue take( const QString & key )
+QJsonValue take(const QString & key)
 */
-HB_FUNC_STATIC( QJSONOBJECT_TAKE )
+HB_FUNC_STATIC(QJSONOBJECT_TAKE)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -330,9 +330,9 @@ HB_FUNC_STATIC( QJSONOBJECT_TAKE )
 }
 
 /*
-QJsonValue value( const QString & key ) const
+QJsonValue value(const QString & key) const
 */
-HB_FUNC_STATIC( QJSONOBJECT_VALUE )
+HB_FUNC_STATIC(QJSONOBJECT_VALUE)
 {
   auto obj = static_cast<QJsonObject*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QJSONOBJECT_VALUE )
   }
 }
 
-HB_FUNC_STATIC( QJSONOBJECT_NEWFROM )
+HB_FUNC_STATIC(QJSONOBJECT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -384,22 +384,22 @@ HB_FUNC_STATIC( QJSONOBJECT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QJSONOBJECT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QJSONOBJECT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QJSONOBJECT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QJSONOBJECT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QJSONOBJECT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QJSONOBJECT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QJSONOBJECT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QJSONOBJECT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QJSONOBJECT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QJSONOBJECT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

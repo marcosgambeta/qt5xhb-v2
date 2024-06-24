@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/QByteArrayMatcher>
 #endif
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QByteArrayMatcher( const QByteArray & pattern )
+    QByteArrayMatcher(const QByteArray & pattern)
     */
     auto obj = new QByteArrayMatcher(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QByteArrayMatcher( const char * pattern, int length )
+    QByteArrayMatcher(const char * pattern, int length)
     */
     auto obj = new QByteArrayMatcher(PCONSTCHAR(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
   else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1))
   {
     /*
-    QByteArrayMatcher( const QByteArrayMatcher & other )
+    QByteArrayMatcher(const QByteArrayMatcher & other)
     */
     auto obj = new QByteArrayMatcher(*PQBYTEARRAYMATCHER(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_DELETE)
 {
   auto obj = static_cast<QByteArrayMatcher*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -119,31 +119,31 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
 {
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    int indexIn( const QByteArray & ba, int from = 0 ) const
+    int indexIn(const QByteArray & ba, int from = 0) const
     */
     auto obj = static_cast<QByteArrayMatcher*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT( 2, 0 )));
+      RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT(2, 0)));
     }
 
   }
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    int indexIn( const char * str, int len, int from = 0 ) const
+    int indexIn(const char * str, int len, int from = 0) const
     */
     auto obj = static_cast<QByteArrayMatcher*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      RINT(obj->indexIn(PCONSTCHAR(1), PINT(2), OPINT( 3, 0 )));
+      RINT(obj->indexIn(PCONSTCHAR(1), PINT(2), OPINT(3, 0)));
     }
 
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 /*
 QByteArray pattern() const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 {
   auto obj = static_cast<QByteArrayMatcher*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -179,9 +179,9 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 }
 
 /*
-void setPattern( const QByteArray & pattern )
+void setPattern(const QByteArray & pattern)
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETPATTERN)
 {
   auto obj = static_cast<QByteArrayMatcher*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROM )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -234,22 +234,22 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QBYTEARRAYMATCHER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QBYTEARRAYMATCHER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -60,7 +60,7 @@ RETURN
 #include <QtCore/QTemporaryDir>
 #endif
 
-HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
+HB_FUNC_STATIC(QTEMPORARYDIR_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QTemporaryDir( const QString & templateName )
+    QTemporaryDir(const QString & templateName)
     */
     auto obj = new QTemporaryDir(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
+HB_FUNC_STATIC(QTEMPORARYDIR_DELETE)
 {
   auto obj = static_cast<QTemporaryDir*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
 /*
 bool autoRemove() const
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
+HB_FUNC_STATIC(QTEMPORARYDIR_AUTOREMOVE)
 {
   auto obj = static_cast<QTemporaryDir*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
+HB_FUNC_STATIC(QTEMPORARYDIR_ISVALID)
 {
   auto obj = static_cast<QTemporaryDir*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
+HB_FUNC_STATIC(QTEMPORARYDIR_PATH)
 {
   auto obj = static_cast<QTemporaryDir*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 /*
 bool remove()
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
+HB_FUNC_STATIC(QTEMPORARYDIR_REMOVE)
 {
   auto obj = static_cast<QTemporaryDir*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,9 +199,9 @@ HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 }
 
 /*
-void setAutoRemove( bool b )
+void setAutoRemove(bool b)
 */
-HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
+HB_FUNC_STATIC(QTEMPORARYDIR_SETAUTOREMOVE)
 {
   auto obj = static_cast<QTemporaryDir*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTEMPORARYDIR_NEWFROM )
+HB_FUNC_STATIC(QTEMPORARYDIR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -254,22 +254,22 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEMPORARYDIR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEMPORARYDIR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEMPORARYDIR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEMPORARYDIR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEMPORARYDIR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEMPORARYDIR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEMPORARYDIR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEMPORARYDIR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEMPORARYDIR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEMPORARYDIR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

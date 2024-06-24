@@ -70,7 +70,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QMARGINSF_NEW )
+HB_FUNC_STATIC(QMARGINSF_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
+    QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QMarginsF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
   else if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
-    QMarginsF( const QMargins & margins )
+    QMarginsF(const QMargins & margins)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QMarginsF(*PQMARGINS(1));
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMARGINSF_DELETE )
+HB_FUNC_STATIC(QMARGINSF_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMARGINSF_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QMARGINSF_ISNULL )
+HB_FUNC_STATIC(QMARGINSF_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMARGINSF_ISNULL )
 /*
 qreal left() const
 */
-HB_FUNC_STATIC( QMARGINSF_LEFT )
+HB_FUNC_STATIC(QMARGINSF_LEFT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QMARGINSF_LEFT )
 /*
 qreal top() const
 */
-HB_FUNC_STATIC( QMARGINSF_TOP )
+HB_FUNC_STATIC(QMARGINSF_TOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMARGINSF_TOP )
 /*
 qreal right() const
 */
-HB_FUNC_STATIC( QMARGINSF_RIGHT )
+HB_FUNC_STATIC(QMARGINSF_RIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMARGINSF_RIGHT )
 /*
 qreal bottom() const
 */
-HB_FUNC_STATIC( QMARGINSF_BOTTOM )
+HB_FUNC_STATIC(QMARGINSF_BOTTOM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -260,9 +260,9 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 }
 
 /*
-void setLeft( qreal left )
+void setLeft(qreal left)
 */
-HB_FUNC_STATIC( QMARGINSF_SETLEFT )
+HB_FUNC_STATIC(QMARGINSF_SETLEFT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -288,9 +288,9 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 }
 
 /*
-void setTop( qreal top )
+void setTop(qreal top)
 */
-HB_FUNC_STATIC( QMARGINSF_SETTOP )
+HB_FUNC_STATIC(QMARGINSF_SETTOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -316,9 +316,9 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
 }
 
 /*
-void setRight( qreal right )
+void setRight(qreal right)
 */
-HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
+HB_FUNC_STATIC(QMARGINSF_SETRIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -344,9 +344,9 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 }
 
 /*
-void setBottom( qreal bottom )
+void setBottom(qreal bottom)
 */
-HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
+HB_FUNC_STATIC(QMARGINSF_SETBOTTOM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 /*
 QMargins toMargins() const
 */
-HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
+HB_FUNC_STATIC(QMARGINSF_TOMARGINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMarginsF*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
 #endif
 }
 
-HB_FUNC_STATIC( QMARGINSF_NEWFROM )
+HB_FUNC_STATIC(QMARGINSF_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -428,22 +428,22 @@ HB_FUNC_STATIC( QMARGINSF_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMARGINSF_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMARGINSF_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMARGINSF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMARGINSF_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMARGINSF_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMARGINSF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMARGINSF_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMARGINSF_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMARGINSF_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMARGINSF_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

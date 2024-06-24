@@ -78,7 +78,7 @@ RETURN
 /*
 QMetaMethod()
 */
-HB_FUNC_STATIC( QMETAMETHOD_NEW )
+HB_FUNC_STATIC(QMETAMETHOD_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMETAMETHOD_DELETE )
+HB_FUNC_STATIC(QMETAMETHOD_DELETE)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 /*
 const char * typeName() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
+HB_FUNC_STATIC(QMETAMETHOD_TYPENAME)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 /*
 QList<QByteArray> parameterTypes() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
+HB_FUNC_STATIC(QMETAMETHOD_PARAMETERTYPES)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
 /*
 QList<QByteArray> parameterNames() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
+HB_FUNC_STATIC(QMETAMETHOD_PARAMETERNAMES)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 /*
 const char * tag() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_TAG )
+HB_FUNC_STATIC(QMETAMETHOD_TAG)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
 /*
 QMetaMethod::Access access() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
+HB_FUNC_STATIC(QMETAMETHOD_ACCESS)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 /*
 QMetaMethod::MethodType methodType() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
+HB_FUNC_STATIC(QMETAMETHOD_METHODTYPE)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 /*
 int attributes() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
+HB_FUNC_STATIC(QMETAMETHOD_ATTRIBUTES)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
 /*
 int methodIndex() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
+HB_FUNC_STATIC(QMETAMETHOD_METHODINDEX)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
 /*
 int revision() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_REVISION )
+HB_FUNC_STATIC(QMETAMETHOD_REVISION)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 /*
 const QMetaObject * enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
+HB_FUNC_STATIC(QMETAMETHOD_ENCLOSINGMETAOBJECT)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -401,29 +401,29 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 }
 
 /*
-bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
+bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
 
 /*
-bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
+bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
 
 /*
-bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
+bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
 
 /*
-bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
+bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
 
 /*
-[1]bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
-[2]bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
-[3]bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
-[4]bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument( 0 ),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument() ) const
+[1]bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
+[2]bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
+[3]bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
+[4]bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
 
-HB_FUNC_STATIC( QMETAMETHOD_INVOKE )
+HB_FUNC_STATIC(QMETAMETHOD_INVOKE)
 {
   hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
 }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE )
 /*
 QByteArray methodSignature() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
+HB_FUNC_STATIC(QMETAMETHOD_METHODSIGNATURE)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
 /*
 QByteArray name() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_NAME )
+HB_FUNC_STATIC(QMETAMETHOD_NAME)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NAME )
 /*
 int returnType() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_RETURNTYPE )
+HB_FUNC_STATIC(QMETAMETHOD_RETURNTYPE)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QMETAMETHOD_RETURNTYPE )
 /*
 int parameterCount() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
+HB_FUNC_STATIC(QMETAMETHOD_PARAMETERCOUNT)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -527,9 +527,9 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
 }
 
 /*
-int parameterType( int index ) const
+int parameterType(int index) const
 */
-HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
+HB_FUNC_STATIC(QMETAMETHOD_PARAMETERTYPE)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -551,9 +551,9 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
 }
 
 /*
-void getParameterTypes( int * types ) const
+void getParameterTypes(int * types) const
 */
-HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
+HB_FUNC_STATIC(QMETAMETHOD_GETPARAMETERTYPES)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
     {
 #endif
       int par1;
-      obj->getParameterTypes( &par1);
+      obj->getParameterTypes(&par1);
       hb_storni(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QMETAMETHOD_ISVALID )
+HB_FUNC_STATIC(QMETAMETHOD_ISVALID)
 {
   auto obj = static_cast<QMetaMethod*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ISVALID )
   }
 }
 
-HB_FUNC_STATIC( QMETAMETHOD_NEWFROM )
+HB_FUNC_STATIC(QMETAMETHOD_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -632,22 +632,22 @@ HB_FUNC_STATIC( QMETAMETHOD_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMETAMETHOD_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMETAMETHOD_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMETAMETHOD_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAMETHOD_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMETAMETHOD_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMETAMETHOD_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAMETHOD_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAMETHOD_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMETAMETHOD_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAMETHOD_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

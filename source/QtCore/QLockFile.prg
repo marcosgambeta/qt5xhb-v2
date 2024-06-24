@@ -68,9 +68,9 @@ RETURN
 #endif
 
 /*
-QLockFile( const QString & fileName )
+QLockFile(const QString & fileName)
 */
-HB_FUNC_STATIC( QLOCKFILE_NEW )
+HB_FUNC_STATIC(QLOCKFILE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISNUMPAR(1) && HB_ISCHAR(1))
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QLOCKFILE_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QLOCKFILE_DELETE )
+HB_FUNC_STATIC(QLOCKFILE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLOCKFILE_DELETE )
 /*
 bool lock()
 */
-HB_FUNC_STATIC( QLOCKFILE_LOCK )
+HB_FUNC_STATIC(QLOCKFILE_LOCK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -130,9 +130,9 @@ HB_FUNC_STATIC( QLOCKFILE_LOCK )
 }
 
 /*
-bool tryLock( int timeout = 0 )
+bool tryLock(int timeout = 0)
 */
-HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
+HB_FUNC_STATIC(QLOCKFILE_TRYLOCK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL(obj->tryLock( OPINT( 1, 0 )));
+      RBOOL(obj->tryLock(OPINT(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
 /*
 void unlock()
 */
-HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
+HB_FUNC_STATIC(QLOCKFILE_UNLOCK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -184,9 +184,9 @@ HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
 }
 
 /*
-void setStaleLockTime( int )
+void setStaleLockTime(int)
 */
-HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
+HB_FUNC_STATIC(QLOCKFILE_SETSTALELOCKTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
 /*
 int staleLockTime() const
 */
-HB_FUNC_STATIC( QLOCKFILE_STALELOCKTIME )
+HB_FUNC_STATIC(QLOCKFILE_STALELOCKTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QLOCKFILE_STALELOCKTIME )
 /*
 bool isLocked() const
 */
-HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
+HB_FUNC_STATIC(QLOCKFILE_ISLOCKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -264,9 +264,9 @@ HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
 }
 
 /*
-bool getLockInfo( qint64 * pid, QString * hostname, QString * appname ) const
+bool getLockInfo(qint64 * pid, QString * hostname, QString * appname) const
 */
-HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO )
+HB_FUNC_STATIC(QLOCKFILE_GETLOCKINFO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO )
     {
 #endif
       qint64 par1;
-      RBOOL(obj->getLockInfo( &par1, nullptr, nullptr));
+      RBOOL(obj->getLockInfo(&par1, nullptr, nullptr));
       hb_stornll(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO )
 /*
 bool removeStaleLockFile()
 */
-HB_FUNC_STATIC( QLOCKFILE_REMOVESTALELOCKFILE )
+HB_FUNC_STATIC(QLOCKFILE_REMOVESTALELOCKFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QLockFile*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QLOCKFILE_REMOVESTALELOCKFILE )
 #endif
 }
 
-HB_FUNC_STATIC( QLOCKFILE_NEWFROM )
+HB_FUNC_STATIC(QLOCKFILE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -347,22 +347,22 @@ HB_FUNC_STATIC( QLOCKFILE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QLOCKFILE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QLOCKFILE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QLOCKFILE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QLOCKFILE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QLOCKFILE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QLOCKFILE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QLOCKFILE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QLOCKFILE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QLOCKFILE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QLOCKFILE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

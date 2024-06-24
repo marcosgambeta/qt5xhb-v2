@@ -70,7 +70,7 @@ RETURN
 /*
 QElapsedTimer()
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
+HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
+HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
 /*
 qint64 elapsed() const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
+HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -124,9 +124,9 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 }
 
 /*
-bool hasExpired( qint64 timeout ) const
+bool hasExpired(qint64 timeout) const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
+HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 /*
 void invalidate()
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
+HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
+HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 /*
 qint64 msecsSinceReference() const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
+HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -222,9 +222,9 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 }
 
 /*
-qint64 msecsTo( const QElapsedTimer & other ) const
+qint64 msecsTo(const QElapsedTimer & other) const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
+HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 /*
 qint64 nsecsElapsed() const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
+HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 /*
 qint64 restart()
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
+HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -294,9 +294,9 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 }
 
 /*
-qint64 secsTo( const QElapsedTimer & other ) const
+qint64 secsTo(const QElapsedTimer & other) const
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
+HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 /*
 void start()
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_START )
+HB_FUNC_STATIC(QELAPSEDTIMER_START)
 {
   auto obj = static_cast<QElapsedTimer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -346,13 +346,13 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
 /*
 static QElapsedTimer::ClockType clockType()
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
+HB_FUNC_STATIC(QELAPSEDTIMER_CLOCKTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RENUM( QElapsedTimer::clockType());
+    RENUM(QElapsedTimer::clockType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -365,13 +365,13 @@ HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 /*
 static bool isMonotonic()
 */
-HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
+HB_FUNC_STATIC(QELAPSEDTIMER_ISMONOTONIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QElapsedTimer::isMonotonic());
+    RBOOL(QElapsedTimer::isMonotonic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 #endif
 }
 
-HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )
+HB_FUNC_STATIC(QELAPSEDTIMER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -411,22 +411,22 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QELAPSEDTIMER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QELAPSEDTIMER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QELAPSEDTIMER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QELAPSEDTIMER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QELAPSEDTIMER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QELAPSEDTIMER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QELAPSEDTIMER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QELAPSEDTIMER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -108,7 +108,7 @@ RETURN
 #include <QtCore/QDateTime>
 #include <QtCore/QDir>
 
-HB_FUNC_STATIC( QFILEINFO_NEW )
+HB_FUNC_STATIC(QFILEINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QFileInfo( const QString & file )
+    QFileInfo(const QString & file)
     */
     auto obj = new QFileInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
   else if (ISNUMPAR(1) && ISQFILE(1))
   {
     /*
-    QFileInfo( const QFile & file )
+    QFileInfo(const QFile & file)
     */
     auto obj = new QFileInfo(*PQFILE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
   else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
   {
     /*
-    QFileInfo( const QDir & dir, const QString & file )
+    QFileInfo(const QDir & dir, const QString & file)
     */
     auto obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
   else if (ISNUMPAR(1) && ISQFILEINFO(1))
   {
     /*
-    QFileInfo( const QFileInfo & fileinfo )
+    QFileInfo(const QFileInfo & fileinfo)
     */
     auto obj = new QFileInfo(*PQFILEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFILEINFO_DELETE )
+HB_FUNC_STATIC(QFILEINFO_DELETE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QFILEINFO_DELETE )
 /*
 QDir absoluteDir() const
 */
-HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
+HB_FUNC_STATIC(QFILEINFO_ABSOLUTEDIR)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
 /*
 QString absoluteFilePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
+HB_FUNC_STATIC(QFILEINFO_ABSOLUTEFILEPATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
 /*
 QString absolutePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
+HB_FUNC_STATIC(QFILEINFO_ABSOLUTEPATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
 /*
 QString baseName() const
 */
-HB_FUNC_STATIC( QFILEINFO_BASENAME )
+HB_FUNC_STATIC(QFILEINFO_BASENAME)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QFILEINFO_BASENAME )
 /*
 QString bundleName() const
 */
-HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
+HB_FUNC_STATIC(QFILEINFO_BUNDLENAME)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
 /*
 bool caching() const
 */
-HB_FUNC_STATIC( QFILEINFO_CACHING )
+HB_FUNC_STATIC(QFILEINFO_CACHING)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QFILEINFO_CACHING )
 /*
 QString canonicalFilePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
+HB_FUNC_STATIC(QFILEINFO_CANONICALFILEPATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
 /*
 QString canonicalPath() const
 */
-HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
+HB_FUNC_STATIC(QFILEINFO_CANONICALPATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
 /*
 QString completeBaseName() const
 */
-HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
+HB_FUNC_STATIC(QFILEINFO_COMPLETEBASENAME)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
 /*
 QString completeSuffix() const
 */
-HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
+HB_FUNC_STATIC(QFILEINFO_COMPLETESUFFIX)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
 /*
 QDateTime created() const
 */
-HB_FUNC_STATIC( QFILEINFO_CREATED )
+HB_FUNC_STATIC(QFILEINFO_CREATED)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QFILEINFO_CREATED )
 /*
 QDir dir() const
 */
-HB_FUNC_STATIC( QFILEINFO_DIR )
+HB_FUNC_STATIC(QFILEINFO_DIR)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QFILEINFO_DIR )
   }
 }
 
-HB_FUNC_STATIC( QFILEINFO_EXISTS )
+HB_FUNC_STATIC(QFILEINFO_EXISTS)
 {
   if (ISNUMPAR(0))
   {
@@ -487,11 +487,11 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static bool exists( const QString & file )
+    static bool exists(const QString & file)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-    RBOOL( QFileInfo::exists(PQSTRING(1)));
+    RBOOL(QFileInfo::exists(PQSTRING(1)));
 #endif
 
   }
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QFILEINFO_FILENAME )
+HB_FUNC_STATIC(QFILEINFO_FILENAME)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QFILEINFO_FILENAME )
 /*
 QString filePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_FILEPATH )
+HB_FUNC_STATIC(QFILEINFO_FILEPATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QFILEINFO_FILEPATH )
 /*
 QString group() const
 */
-HB_FUNC_STATIC( QFILEINFO_GROUP )
+HB_FUNC_STATIC(QFILEINFO_GROUP)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUP )
 /*
 uint groupId() const
 */
-HB_FUNC_STATIC( QFILEINFO_GROUPID )
+HB_FUNC_STATIC(QFILEINFO_GROUPID)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUPID )
 /*
 bool isAbsolute() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISABSOLUTE )
+HB_FUNC_STATIC(QFILEINFO_ISABSOLUTE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QFILEINFO_ISABSOLUTE )
 /*
 bool isBundle() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISBUNDLE )
+HB_FUNC_STATIC(QFILEINFO_ISBUNDLE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QFILEINFO_ISBUNDLE )
 /*
 bool isDir() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISDIR )
+HB_FUNC_STATIC(QFILEINFO_ISDIR)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QFILEINFO_ISDIR )
 /*
 bool isExecutable() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISEXECUTABLE )
+HB_FUNC_STATIC(QFILEINFO_ISEXECUTABLE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QFILEINFO_ISEXECUTABLE )
 /*
 bool isFile() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISFILE )
+HB_FUNC_STATIC(QFILEINFO_ISFILE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QFILEINFO_ISFILE )
 /*
 bool isHidden() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISHIDDEN )
+HB_FUNC_STATIC(QFILEINFO_ISHIDDEN)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QFILEINFO_ISHIDDEN )
 /*
 bool isNativePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISNATIVEPATH )
+HB_FUNC_STATIC(QFILEINFO_ISNATIVEPATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QFILEINFO_ISNATIVEPATH )
 /*
 bool isReadable() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISREADABLE )
+HB_FUNC_STATIC(QFILEINFO_ISREADABLE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QFILEINFO_ISREADABLE )
 /*
 bool isRelative() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISRELATIVE )
+HB_FUNC_STATIC(QFILEINFO_ISRELATIVE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QFILEINFO_ISRELATIVE )
 /*
 bool isRoot() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISROOT )
+HB_FUNC_STATIC(QFILEINFO_ISROOT)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QFILEINFO_ISROOT )
 /*
 bool isSymLink() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISSYMLINK )
+HB_FUNC_STATIC(QFILEINFO_ISSYMLINK)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QFILEINFO_ISSYMLINK )
 /*
 bool isWritable() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISWRITABLE )
+HB_FUNC_STATIC(QFILEINFO_ISWRITABLE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QFILEINFO_ISWRITABLE )
 /*
 QDateTime lastModified() const
 */
-HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
+HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
 /*
 QDateTime lastRead() const
 */
-HB_FUNC_STATIC( QFILEINFO_LASTREAD )
+HB_FUNC_STATIC(QFILEINFO_LASTREAD)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTREAD )
 /*
 bool makeAbsolute()
 */
-HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
+HB_FUNC_STATIC(QFILEINFO_MAKEABSOLUTE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
 /*
 QString owner() const
 */
-HB_FUNC_STATIC( QFILEINFO_OWNER )
+HB_FUNC_STATIC(QFILEINFO_OWNER)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNER )
 /*
 uint ownerId() const
 */
-HB_FUNC_STATIC( QFILEINFO_OWNERID )
+HB_FUNC_STATIC(QFILEINFO_OWNERID)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNERID )
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QFILEINFO_PATH )
+HB_FUNC_STATIC(QFILEINFO_PATH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1033,9 +1033,9 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
 }
 
 /*
-bool permission( QFile::Permissions permissions ) const
+bool permission(QFile::Permissions permissions) const
 */
-HB_FUNC_STATIC( QFILEINFO_PERMISSION )
+HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
 /*
 QFile::Permissions permissions() const
 */
-HB_FUNC_STATIC( QFILEINFO_PERMISSIONS )
+HB_FUNC_STATIC(QFILEINFO_PERMISSIONS)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSIONS )
 /*
 void refresh()
 */
-HB_FUNC_STATIC( QFILEINFO_REFRESH )
+HB_FUNC_STATIC(QFILEINFO_REFRESH)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1107,9 +1107,9 @@ HB_FUNC_STATIC( QFILEINFO_REFRESH )
 }
 
 /*
-void setCaching( bool enable )
+void setCaching(bool enable)
 */
-HB_FUNC_STATIC( QFILEINFO_SETCACHING )
+HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1132,12 +1132,12 @@ HB_FUNC_STATIC( QFILEINFO_SETCACHING )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QFILEINFO_SETFILE )
+HB_FUNC_STATIC(QFILEINFO_SETFILE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setFile( const QString & file )
+    void setFile(const QString & file)
     */
     auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
   else if (ISNUMPAR(1) && ISQFILE(1))
   {
     /*
-    void setFile( const QFile & file )
+    void setFile(const QFile & file)
     */
     auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
   else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
   {
     /*
-    void setFile( const QDir & dir, const QString & file )
+    void setFile(const QDir & dir, const QString & file)
     */
     auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
 /*
 qint64 size() const
 */
-HB_FUNC_STATIC( QFILEINFO_SIZE )
+HB_FUNC_STATIC(QFILEINFO_SIZE)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QFILEINFO_SIZE )
 /*
 QString suffix() const
 */
-HB_FUNC_STATIC( QFILEINFO_SUFFIX )
+HB_FUNC_STATIC(QFILEINFO_SUFFIX)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1234,9 +1234,9 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 }
 
 /*
-void swap( QFileInfo & other )
+void swap(QFileInfo & other)
 */
-HB_FUNC_STATIC( QFILEINFO_SWAP )
+HB_FUNC_STATIC(QFILEINFO_SWAP)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC( QFILEINFO_SWAP )
 /*
 QString symLinkTarget() const
 */
-HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
+HB_FUNC_STATIC(QFILEINFO_SYMLINKTARGET)
 {
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
 /*
 QDateTime birthTime() const
 */
-HB_FUNC_STATIC( QFILEINFO_BIRTHTIME )
+HB_FUNC_STATIC(QFILEINFO_BIRTHTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1311,9 +1311,9 @@ HB_FUNC_STATIC( QFILEINFO_BIRTHTIME )
 }
 
 /*
-QDateTime fileTime( QFile::FileTime time ) const
+QDateTime fileTime(QFile::FileTime time) const
 */
-HB_FUNC_STATIC( QFILEINFO_FILETIME )
+HB_FUNC_STATIC(QFILEINFO_FILETIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1340,7 +1340,7 @@ HB_FUNC_STATIC( QFILEINFO_FILETIME )
 /*
 QDateTime metadataChangeTime() const
 */
-HB_FUNC_STATIC( QFILEINFO_METADATACHANGETIME )
+HB_FUNC_STATIC(QFILEINFO_METADATACHANGETIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QFILEINFO_METADATACHANGETIME )
 /*
 bool isJunction() const
 */
-HB_FUNC_STATIC( QFILEINFO_ISJUNCTION )
+HB_FUNC_STATIC(QFILEINFO_ISJUNCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto obj = static_cast<QFileInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QFILEINFO_ISJUNCTION )
 #endif
 }
 
-HB_FUNC_STATIC( QFILEINFO_NEWFROM )
+HB_FUNC_STATIC(QFILEINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -1420,22 +1420,22 @@ HB_FUNC_STATIC( QFILEINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QFILEINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QFILEINFO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QFILEINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFILEINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QFILEINFO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QFILEINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFILEINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QFILEINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QFILEINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QFILEINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

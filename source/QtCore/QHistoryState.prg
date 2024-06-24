@@ -53,23 +53,23 @@ RETURN
 #include <QtCore/QHistoryState>
 #endif
 
-HB_FUNC_STATIC( QHISTORYSTATE_NEW )
+HB_FUNC_STATIC(QHISTORYSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
-    QHistoryState( QState * parent = nullptr )
+    QHistoryState(QState * parent = nullptr)
     */
-    auto obj = new QHistoryState( OPQSTATE( 1, nullptr));
+    auto obj = new QHistoryState(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2)))
   {
     /*
-    QHistoryState( QHistoryState::HistoryType type, QState * parent = nullptr )
+    QHistoryState(QHistoryState::HistoryType type, QState * parent = nullptr)
     */
-    auto obj = new QHistoryState(static_cast<QHistoryState::HistoryType>(hb_parni(1)), OPQSTATE( 2, nullptr));
+    auto obj = new QHistoryState(static_cast<QHistoryState::HistoryType>(hb_parni(1)), OPQSTATE(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
+HB_FUNC_STATIC(QHISTORYSTATE_DELETE)
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 /*
 QAbstractState * defaultState() const
 */
-HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
+HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 }
 
 /*
-void setDefaultState( QAbstractState * state )
+void setDefaultState(QAbstractState * state)
 */
-HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
+HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 /*
 QHistoryState::HistoryType historyType() const
 */
-HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
+HB_FUNC_STATIC(QHISTORYSTATE_HISTORYTYPE)
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,9 +173,9 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 }
 
 /*
-void setHistoryType( QHistoryState::HistoryType type )
+void setHistoryType(QHistoryState::HistoryType type)
 */
-HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
+HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 {
   auto obj = qobject_cast<QHistoryState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

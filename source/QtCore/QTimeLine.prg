@@ -82,13 +82,13 @@ RETURN
 #endif
 
 /*
-QTimeLine( int duration = 1000, QObject * parent = nullptr )
+QTimeLine(int duration = 1000, QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QTIMELINE_NEW )
+HB_FUNC_STATIC(QTIMELINE_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QTimeLine( OPINT( 1, 1000 ), OPQOBJECT( 2, nullptr));
+    auto obj = new QTimeLine(OPINT(1, 1000), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTIMELINE_DELETE )
+HB_FUNC_STATIC(QTIMELINE_DELETE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTIMELINE_DELETE )
 /*
 int currentFrame() const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
+HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 /*
 int currentTime() const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
+HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 /*
 qreal currentValue() const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
+HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 /*
 QTimeLine::CurveShape curveShape() const
 */
-HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
+HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 /*
 QTimeLine::Direction direction() const
 */
-HB_FUNC_STATIC( QTIMELINE_DIRECTION )
+HB_FUNC_STATIC(QTIMELINE_DIRECTION)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 /*
 int duration() const
 */
-HB_FUNC_STATIC( QTIMELINE_DURATION )
+HB_FUNC_STATIC(QTIMELINE_DURATION)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
 /*
 int endFrame() const
 */
-HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
+HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -284,9 +284,9 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 }
 
 /*
-int frameForTime( int msec ) const
+int frameForTime(int msec) const
 */
-HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
+HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 /*
 int loopCount() const
 */
-HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
+HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -332,9 +332,9 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 }
 
 /*
-void setCurveShape( QTimeLine::CurveShape shape )
+void setCurveShape(QTimeLine::CurveShape shape)
 */
-HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
+HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -358,9 +358,9 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 }
 
 /*
-void setDirection( QTimeLine::Direction direction )
+void setDirection(QTimeLine::Direction direction)
 */
-HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
+HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -384,9 +384,9 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 }
 
 /*
-void setDuration( int duration )
+void setDuration(int duration)
 */
-HB_FUNC_STATIC( QTIMELINE_SETDURATION )
+HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -410,9 +410,9 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 }
 
 /*
-void setEasingCurve( const QEasingCurve & curve )
+void setEasingCurve(const QEasingCurve & curve)
 */
-HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
+HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -436,9 +436,9 @@ HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 }
 
 /*
-void setEndFrame( int frame )
+void setEndFrame(int frame)
 */
-HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
+HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -462,9 +462,9 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 }
 
 /*
-void setFrameRange( int startFrame, int endFrame )
+void setFrameRange(int startFrame, int endFrame)
 */
-HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
+HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -488,9 +488,9 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 }
 
 /*
-void setLoopCount( int count )
+void setLoopCount(int count)
 */
-HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
+HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -514,9 +514,9 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 }
 
 /*
-void setStartFrame( int frame )
+void setStartFrame(int frame)
 */
-HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
+HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -540,9 +540,9 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 }
 
 /*
-void setUpdateInterval( int interval )
+void setUpdateInterval(int interval)
 */
-HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
+HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 /*
 int startFrame() const
 */
-HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
+HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 /*
 QTimeLine::State state() const
 */
-HB_FUNC_STATIC( QTIMELINE_STATE )
+HB_FUNC_STATIC(QTIMELINE_STATE)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
 /*
 int updateInterval() const
 */
-HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
+HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -638,9 +638,9 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 }
 
 /*
-virtual qreal valueForTime( int msec ) const
+virtual qreal valueForTime(int msec) const
 */
-HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
+HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 /*
 void resume()
 */
-HB_FUNC_STATIC( QTIMELINE_RESUME )
+HB_FUNC_STATIC(QTIMELINE_RESUME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -688,9 +688,9 @@ HB_FUNC_STATIC( QTIMELINE_RESUME )
 }
 
 /*
-void setCurrentTime( int msec )
+void setCurrentTime(int msec)
 */
-HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
+HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -714,9 +714,9 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 }
 
 /*
-void setPaused( bool paused )
+void setPaused(bool paused)
 */
-HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
+HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 /*
 void start()
 */
-HB_FUNC_STATIC( QTIMELINE_START )
+HB_FUNC_STATIC(QTIMELINE_START)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QTIMELINE_START )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QTIMELINE_STOP )
+HB_FUNC_STATIC(QTIMELINE_STOP)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QTIMELINE_STOP )
 /*
 void toggleDirection()
 */
-HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
+HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 {
   auto obj = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 /*
 void finished()
 */
-HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
+HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -866,9 +866,9 @@ HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
 }
 
 /*
-void frameChanged( int frame )
+void frameChanged(int frame)
 */
-HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
+HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -916,9 +916,9 @@ HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
 }
 
 /*
-void stateChanged( QTimeLine::State newState )
+void stateChanged(QTimeLine::State newState)
 */
-HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
+HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -966,9 +966,9 @@ HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
 }
 
 /*
-void valueChanged( qreal value )
+void valueChanged(qreal value)
 */
-HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
+HB_FUNC_STATIC(QTIMELINE_ONVALUECHANGED)
 {
   auto sender = qobject_cast<QTimeLine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

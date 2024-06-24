@@ -54,23 +54,23 @@ RETURN
 #include <QtCore/QPropertyAnimation>
 #endif
 
-HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
+HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QPropertyAnimation( QObject * parent = nullptr )
+    QPropertyAnimation(QObject * parent = nullptr)
     */
-    auto obj = new QPropertyAnimation( OPQOBJECT( 1, nullptr));
+    auto obj = new QPropertyAnimation(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
+    QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent = nullptr)
     */
-    auto obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
+HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
 {
   auto obj = qobject_cast<QPropertyAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 /*
 QByteArray propertyName() const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
+HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 {
   auto obj = qobject_cast<QPropertyAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -124,9 +124,9 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 }
 
 /*
-void setPropertyName( const QByteArray & propertyName )
+void setPropertyName(const QByteArray & propertyName)
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
+HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {
   auto obj = qobject_cast<QPropertyAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 }
 
 /*
-void setTargetObject( QObject * target )
+void setTargetObject(QObject * target)
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
+HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 {
   auto obj = qobject_cast<QPropertyAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 /*
 QObject * targetObject() const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
+HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 {
   auto obj = qobject_cast<QPropertyAnimation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

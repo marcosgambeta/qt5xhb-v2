@@ -52,9 +52,9 @@ RETURN
 #endif
 
 /*
-QChildEvent( QEvent::Type type, QObject * child )
+QChildEvent(QEvent::Type type, QObject * child)
 */
-HB_FUNC_STATIC( QCHILDEVENT_NEW )
+HB_FUNC_STATIC(QCHILDEVENT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCHILDEVENT_DELETE )
+HB_FUNC_STATIC(QCHILDEVENT_DELETE)
 {
   auto obj = static_cast<QChildEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCHILDEVENT_DELETE )
 /*
 bool added() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_ADDED )
+HB_FUNC_STATIC(QCHILDEVENT_ADDED)
 {
   auto obj = static_cast<QChildEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 /*
 QObject * child() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_CHILD )
+HB_FUNC_STATIC(QCHILDEVENT_CHILD)
 {
   auto obj = static_cast<QChildEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 /*
 bool polished() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
+HB_FUNC_STATIC(QCHILDEVENT_POLISHED)
 {
   auto obj = static_cast<QChildEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 /*
 bool removed() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
+HB_FUNC_STATIC(QCHILDEVENT_REMOVED)
 {
   auto obj = static_cast<QChildEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

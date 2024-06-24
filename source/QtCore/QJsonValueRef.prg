@@ -74,12 +74,12 @@ RETURN
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonObject>
 
-HB_FUNC_STATIC( QJSONVALUEREF_NEW )
+HB_FUNC_STATIC(QJSONVALUEREF_NEW)
 {
   if (ISNUMPAR(2) && ISQJSONARRAY(1) && HB_ISNUM(2))
   {
     /*
-    QJsonValueRef( QJsonArray * array, int idx )
+    QJsonValueRef(QJsonArray * array, int idx)
     */
     auto obj = new QJsonValueRef(PQJSONARRAY(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
   else if (ISNUMPAR(2) && ISQJSONOBJECT(1) && HB_ISNUM(2))
   {
     /*
-    QJsonValueRef( QJsonObject * object, int idx )
+    QJsonValueRef(QJsonObject * object, int idx)
     */
     auto obj = new QJsonValueRef(PQJSONOBJECT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
   }
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
+HB_FUNC_STATIC(QJSONVALUEREF_DELETE)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
 /*
 QJsonValue::Type type() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
+HB_FUNC_STATIC(QJSONVALUEREF_TYPE)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
+HB_FUNC_STATIC(QJSONVALUEREF_ISNULL)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
 /*
 bool isBool() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
+HB_FUNC_STATIC(QJSONVALUEREF_ISBOOL)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
 /*
 bool isDouble() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
+HB_FUNC_STATIC(QJSONVALUEREF_ISDOUBLE)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
 /*
 bool isString() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
+HB_FUNC_STATIC(QJSONVALUEREF_ISSTRING)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
 /*
 bool isArray() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
+HB_FUNC_STATIC(QJSONVALUEREF_ISARRAY)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
 /*
 bool isObject() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
+HB_FUNC_STATIC(QJSONVALUEREF_ISOBJECT)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
 /*
 bool isUndefined() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
+HB_FUNC_STATIC(QJSONVALUEREF_ISUNDEFINED)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
 /*
 bool toBool() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
+HB_FUNC_STATIC(QJSONVALUEREF_TOBOOL)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
 /*
 int toInt() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
+HB_FUNC_STATIC(QJSONVALUEREF_TOINT)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
 /*
 double toDouble() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
+HB_FUNC_STATIC(QJSONVALUEREF_TODOUBLE)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
+HB_FUNC_STATIC(QJSONVALUEREF_TOSTRING)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
 /*
 QJsonArray toArray() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
+HB_FUNC_STATIC(QJSONVALUEREF_TOARRAY)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
 /*
 QJsonObject toObject() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
+HB_FUNC_STATIC(QJSONVALUEREF_TOOBJECT)
 {
   auto obj = static_cast<QJsonValueRef*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_NEWFROM )
+HB_FUNC_STATIC(QJSONVALUEREF_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -484,22 +484,22 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_NEWFROMOBJECT )
+HB_FUNC_STATIC(QJSONVALUEREF_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QJSONVALUEREF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_NEWFROMPOINTER )
+HB_FUNC_STATIC(QJSONVALUEREF_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QJSONVALUEREF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_SELFDESTRUCTION )
+HB_FUNC_STATIC(QJSONVALUEREF_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QJSONVALUEREF_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QJSONVALUEREF_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

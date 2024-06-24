@@ -39,13 +39,13 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 /*
-HEventFilter( QObject *parent = nullptr )
+HEventFilter(QObject *parent = nullptr)
 */
-HB_FUNC_STATIC( HEVENTFILTER_NEW )
+HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new HEventFilter( OPQOBJECT( 1, nullptr));
+    auto obj = new HEventFilter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( HEVENTFILTER_NEW )
 /*
 ~HEventFilter()
 */
-HB_FUNC_STATIC( HEVENTFILTER_DELETE )
+HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
   auto obj = qobject_cast<HEventFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,9 +76,9 @@ HB_FUNC_STATIC( HEVENTFILTER_DELETE )
 }
 
 /*
-void setEventFilterCB (PHB_ITEM block )
+void setEventFilterCB (PHB_ITEM block)
 */
-HB_FUNC_STATIC( HEVENTFILTER_SETEVENTFILTERCB )
+HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
   auto obj = qobject_cast<HEventFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

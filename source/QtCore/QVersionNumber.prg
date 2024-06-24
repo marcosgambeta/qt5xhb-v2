@@ -73,12 +73,12 @@ RETURN
 #endif
 #endif
 
-HB_FUNC( QVERSIONNUMBER_NEW )
+HB_FUNC(QVERSIONNUMBER_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QVersionNumber( int maj, int min, int mic )
+    QVersionNumber(int maj, int min, int mic)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber(PINT(1), PINT(2), PINT(3));
@@ -89,7 +89,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QVersionNumber( int maj, int min )
+    QVersionNumber(int maj, int min)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber(PINT(1), PINT(2));
@@ -100,7 +100,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QVersionNumber( int maj )
+    QVersionNumber(int maj)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
     auto obj = new QVersionNumber(PINT(1));
@@ -125,7 +125,7 @@ HB_FUNC( QVERSIONNUMBER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QVERSIONNUMBER_DELETE )
+HB_FUNC_STATIC(QVERSIONNUMBER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_DELETE )
 /*
 bool isNormalized() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_ISNORMALIZED )
+HB_FUNC_STATIC(QVERSIONNUMBER_ISNORMALIZED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNORMALIZED )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
+HB_FUNC_STATIC(QVERSIONNUMBER_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -196,9 +196,9 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
 }
 
 /*
-bool isPrefixOf( const QVersionNumber & other ) const
+bool isPrefixOf(const QVersionNumber & other) const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
+HB_FUNC_STATIC(QVERSIONNUMBER_ISPREFIXOF)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
 /*
 int majorVersion() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_MAJORVERSION )
+HB_FUNC_STATIC(QVERSIONNUMBER_MAJORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MAJORVERSION )
 /*
 int microVersion() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_MICROVERSION )
+HB_FUNC_STATIC(QVERSIONNUMBER_MICROVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MICROVERSION )
 /*
 int minorVersion() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_MINORVERSION )
+HB_FUNC_STATIC(QVERSIONNUMBER_MINORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_MINORVERSION )
 /*
 QVersionNumber normalized() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_NORMALIZED )
+HB_FUNC_STATIC(QVERSIONNUMBER_NORMALIZED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -327,9 +327,9 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NORMALIZED )
 }
 
 /*
-int segmentAt( int index ) const
+int segmentAt(int index) const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTAT )
+HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTAT )
 /*
 int segmentCount() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTCOUNT )
+HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTCOUNT )
 /*
 QVector<int> segments() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
+HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
-      hb_itemReturnRelease( pArray);
+      hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
+HB_FUNC_STATIC(QVERSIONNUMBER_TOSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = static_cast<QVersionNumber*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -439,16 +439,16 @@ HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
 }
 
 /*
-static QVersionNumber commonPrefix( const QVersionNumber & v1, const QVersionNumber & v2 )
+static QVersionNumber commonPrefix(const QVersionNumber & v1, const QVersionNumber & v2)
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
+HB_FUNC_STATIC(QVERSIONNUMBER_COMMONPREFIX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2))
   {
 #endif
-    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
+    auto ptr = new QVersionNumber(QVersionNumber::commonPrefix(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
     Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -461,16 +461,16 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
 }
 
 /*
-static int compare( const QVersionNumber & v1, const QVersionNumber & v2 )
+static int compare(const QVersionNumber & v1, const QVersionNumber & v2)
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
+HB_FUNC_STATIC(QVERSIONNUMBER_COMPARE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2))
   {
 #endif
-    RINT( QVersionNumber::compare(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
+    RINT(QVersionNumber::compare(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -482,9 +482,9 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
 }
 
 /*
-static QVersionNumber fromString( const QString & string, int * suffixIndex = nullptr )
+static QVersionNumber fromString(const QString & string, int * suffixIndex = nullptr)
 */
-HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
+HB_FUNC_STATIC(QVERSIONNUMBER_FROMSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
   {
 #endif
     int par2;
-    auto ptr = new QVersionNumber( QVersionNumber::fromString(PQSTRING(1), &par2));
+    auto ptr = new QVersionNumber(QVersionNumber::fromString(PQSTRING(1), &par2));
     Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
     hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
 #endif
 }
 
-HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
+HB_FUNC_STATIC(QVERSIONNUMBER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -535,22 +535,22 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QVERSIONNUMBER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QVERSIONNUMBER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QVERSIONNUMBER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QVERSIONNUMBER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QVERSIONNUMBER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QVERSIONNUMBER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QVERSIONNUMBER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QVERSIONNUMBER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -66,23 +66,23 @@ RETURN
 
 #include <QtCore/QAbstractTransition>
 
-HB_FUNC_STATIC( QSTATE_NEW )
+HB_FUNC_STATIC(QSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
-    QState( QState * parent = nullptr )
+    QState(QState * parent = nullptr)
     */
-    auto obj = new QState( OPQSTATE( 1, nullptr));
+    auto obj = new QState(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2)))
   {
     /*
-    QState( QState::ChildMode childMode, QState * parent = nullptr )
+    QState(QState::ChildMode childMode, QState * parent = nullptr)
     */
-    auto obj = new QState(static_cast<QState::ChildMode>(hb_parni(1)), OPQSTATE( 2, nullptr));
+    auto obj = new QState(static_cast<QState::ChildMode>(hb_parni(1)), OPQSTATE(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSTATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATE_DELETE )
+HB_FUNC_STATIC(QSTATE_DELETE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -110,12 +110,12 @@ HB_FUNC_STATIC( QSTATE_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
+HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
 {
   if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1))
   {
     /*
-    void addTransition( QAbstractTransition * transition )
+    void addTransition(QAbstractTransition * transition)
     */
     auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3))
   {
     /*
-    QSignalTransition * addTransition( QObject * sender, const char * signal, QAbstractState * target )
+    QSignalTransition * addTransition(QObject * sender, const char * signal, QAbstractState * target)
     */
     auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
   else if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
   {
     /*
-    QAbstractTransition * addTransition( QAbstractState * target )
+    QAbstractTransition * addTransition(QAbstractState * target)
     */
     auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 }
 
 /*
-void assignProperty( QObject * object, const char * name, const QVariant & value )
+void assignProperty(QObject * object, const char * name, const QVariant & value)
 */
-HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
+HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 /*
 QState::ChildMode childMode() const
 */
-HB_FUNC_STATIC( QSTATE_CHILDMODE )
+HB_FUNC_STATIC(QSTATE_CHILDMODE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTATE_CHILDMODE )
 /*
 QAbstractState * errorState() const
 */
-HB_FUNC_STATIC( QSTATE_ERRORSTATE )
+HB_FUNC_STATIC(QSTATE_ERRORSTATE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 /*
 QAbstractState * initialState() const
 */
-HB_FUNC_STATIC( QSTATE_INITIALSTATE )
+HB_FUNC_STATIC(QSTATE_INITIALSTATE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -262,9 +262,9 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 }
 
 /*
-void removeTransition( QAbstractTransition * transition )
+void removeTransition(QAbstractTransition * transition)
 */
-HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
+HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -288,9 +288,9 @@ HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 }
 
 /*
-void setChildMode( QState::ChildMode mode )
+void setChildMode(QState::ChildMode mode)
 */
-HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
+HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -314,9 +314,9 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 }
 
 /*
-void setErrorState( QAbstractState * state )
+void setErrorState(QAbstractState * state)
 */
-HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
+HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -340,9 +340,9 @@ HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 }
 
 /*
-void setInitialState( QAbstractState * state )
+void setInitialState(QAbstractState * state)
 */
-HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
+HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -366,9 +366,9 @@ HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 }
 
 /*
-QList<QAbstractTransition *> transitions() const
+QList<QAbstractTransition*> transitions() const
 */
-HB_FUNC_STATIC( QSTATE_TRANSITIONS )
+HB_FUNC_STATIC(QSTATE_TRANSITIONS)
 {
   auto obj = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 /*
 void finished()
 */
-HB_FUNC_STATIC( QSTATE_ONFINISHED )
+HB_FUNC_STATIC(QSTATE_ONFINISHED)
 {
   auto sender = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QSTATE_ONFINISHED )
 /*
 void propertiesAssigned()
 */
-HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
+HB_FUNC_STATIC(QSTATE_ONPROPERTIESASSIGNED)
 {
   auto sender = qobject_cast<QState*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

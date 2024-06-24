@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QMessageLogger>
 #endif
 
-HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
+HB_FUNC_STATIC(QMESSAGELOGGER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3))
   {
     /*
-    QMessageLogger( const char * file, int line, const char * function )
+    QMessageLogger(const char * file, int line, const char * function)
     */
     auto obj = new QMessageLogger(PCONSTCHAR(1), PINT(2), PCONSTCHAR(3));
     Qt5xHb::returnNewObject(obj, true);
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
   {
     /*
-    QMessageLogger( const char * file, int line, const char * function, const char * category )
+    QMessageLogger(const char * file, int line, const char * function, const char * category)
     */
     auto obj = new QMessageLogger(PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PCONSTCHAR(4));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
+HB_FUNC_STATIC(QMESSAGELOGGER_DELETE)
 {
   auto obj = static_cast<QMessageLogger*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROM )
+HB_FUNC_STATIC(QMESSAGELOGGER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -136,22 +136,22 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMESSAGELOGGER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMESSAGELOGGER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMESSAGELOGGER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMESSAGELOGGER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMESSAGELOGGER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMESSAGELOGGER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMESSAGELOGGER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMESSAGELOGGER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMESSAGELOGGER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

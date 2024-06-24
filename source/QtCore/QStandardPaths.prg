@@ -62,15 +62,15 @@ RETURN
 #endif
 
 /*
-static QString writableLocation( QStandardPaths::StandardLocation type )
+static QString writableLocation(QStandardPaths::StandardLocation type)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
+HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QStandardPaths::writableLocation(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
+    RQSTRING(QStandardPaths::writableLocation(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -81,15 +81,15 @@ HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
 }
 
 /*
-static QStringList standardLocations( QStandardPaths::StandardLocation type )
+static QStringList standardLocations(QStandardPaths::StandardLocation type)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
+HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRINGLIST( QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
+    RQSTRINGLIST(QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -100,15 +100,15 @@ HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
 }
 
 /*
-static QString locate( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
+static QString locate(QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
+HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
 #endif
-    RQSTRING( QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(hb_parni(1)), PQSTRING(2), HB_ISNIL(3) ? static_cast<QStandardPaths::LocateOptions >( QStandardPaths::LocateFile ) : static_cast<QStandardPaths::LocateOptions >(hb_parni(3))));
+    RQSTRING(QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(hb_parni(1)), PQSTRING(2), HB_ISNIL(3) ? static_cast<QStandardPaths::LocateOptions >(QStandardPaths::LocateFile) : static_cast<QStandardPaths::LocateOptions >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -119,15 +119,15 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 }
 
 /*
-static QStringList locateAll( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
+static QStringList locateAll(QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
+HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
 #endif
-    RQSTRINGLIST( QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(hb_parni(1)), PQSTRING(2), HB_ISNIL(3) ? static_cast<QStandardPaths::LocateOptions >( QStandardPaths::LocateFile ) : static_cast<QStandardPaths::LocateOptions >(hb_parni(3))));
+    RQSTRINGLIST(QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(hb_parni(1)), PQSTRING(2), HB_ISNIL(3) ? static_cast<QStandardPaths::LocateOptions >(QStandardPaths::LocateFile) : static_cast<QStandardPaths::LocateOptions >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -138,15 +138,15 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 }
 
 /*
-static QString displayName( QStandardPaths::StandardLocation type )
+static QString displayName(QStandardPaths::StandardLocation type)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
+HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QStandardPaths::displayName(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
+    RQSTRING(QStandardPaths::displayName(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -157,15 +157,15 @@ HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
 }
 
 /*
-static QString findExecutable( const QString & executableName, const QStringList & paths = QStringList() )
+static QString findExecutable(const QString & executableName, const QStringList & paths = QStringList())
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
+HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2)))
   {
 #endif
-    RQSTRING( QStandardPaths::findExecutable(PQSTRING(1), OPQSTRINGLIST( 2, QStringList() )));
+    RQSTRING(QStandardPaths::findExecutable(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 }
 
 /*
-static void setTestModeEnabled( bool testMode )
+static void setTestModeEnabled(bool testMode)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_SETTESTMODEENABLED )
+HB_FUNC_STATIC(QSTANDARDPATHS_SETTESTMODEENABLED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISLOG(1))
@@ -199,13 +199,13 @@ HB_FUNC_STATIC( QSTANDARDPATHS_SETTESTMODEENABLED )
 /*
 static bool isTestModeEnabled()
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_ISTESTMODEENABLED )
+HB_FUNC_STATIC(QSTANDARDPATHS_ISTESTMODEENABLED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QStandardPaths::isTestModeEnabled());
+    RBOOL(QStandardPaths::isTestModeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_ISTESTMODEENABLED )
 #endif
 }
 
-HB_FUNC_STATIC( QSTANDARDPATHS_NEWFROM )
+HB_FUNC_STATIC(QSTANDARDPATHS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -245,22 +245,22 @@ HB_FUNC_STATIC( QSTANDARDPATHS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSTANDARDPATHS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSTANDARDPATHS_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSTANDARDPATHS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSTANDARDPATHS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSTANDARDPATHS_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSTANDARDPATHS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSTANDARDPATHS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSTANDARDPATHS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSTANDARDPATHS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSTANDARDPATHS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

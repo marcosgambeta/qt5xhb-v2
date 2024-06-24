@@ -60,23 +60,23 @@ RETURN
 #include <QtCore/QStringListModel>
 #endif
 
-HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QStringListModel( QObject * parent = nullptr )
+    QStringListModel(QObject * parent = nullptr)
     */
-    auto obj = new QStringListModel( OPQOBJECT( 1, nullptr));
+    auto obj = new QStringListModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QStringListModel( const QStringList & strings, QObject * parent = nullptr )
+    QStringListModel(const QStringList & strings, QObject * parent = nullptr)
     */
-    auto obj = new QStringListModel(PQSTRINGLIST(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QStringListModel(PQSTRINGLIST(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -87,9 +87,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 }
 
 /*
-void setStringList( const QStringList & strings )
+void setStringList(const QStringList & strings)
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 /*
 QStringList stringList() const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -137,9 +137,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 }
 
 /*
-virtual QVariant data( const QModelIndex & index, int role ) const
+virtual QVariant data(const QModelIndex & index, int role) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 }
 
 /*
-virtual Qt::ItemFlags flags( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -186,9 +186,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 }
 
 /*
-virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -210,9 +210,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 }
 
 /*
-virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -234,9 +234,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,9 +258,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,9 +282,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 }
 
 /*
-virtual QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
+virtual QModelIndex sibling(int row, int column, const QModelIndex & idx) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -307,9 +307,9 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
 }
 
 /*
-virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
+virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >(hb_parni(2)));
+      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >(Qt::AscendingOrder) : static_cast<Qt::SortOrder >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 /*
 virtual Qt::DropActions supportedDropActions() const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS)
 {
   auto obj = qobject_cast<QStringListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

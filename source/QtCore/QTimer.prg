@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QTimer( QObject * parent = nullptr )
+QTimer(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QTIMER_NEW )
+HB_FUNC_STATIC(QTIMER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QTimer( OPQOBJECT( 1, nullptr));
+    auto obj = new QTimer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTIMER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTIMER_DELETE )
+HB_FUNC_STATIC(QTIMER_DELETE)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTIMER_DELETE )
 /*
 int interval() const
 */
-HB_FUNC_STATIC( QTIMER_INTERVAL )
+HB_FUNC_STATIC(QTIMER_INTERVAL)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QTIMER_ISACTIVE )
+HB_FUNC_STATIC(QTIMER_ISACTIVE)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
 /*
 bool isSingleShot() const
 */
-HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
+HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -166,9 +166,9 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 }
 
 /*
-void setInterval( int msec )
+void setInterval(int msec)
 */
-HB_FUNC_STATIC( QTIMER_SETINTERVAL )
+HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -192,9 +192,9 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 }
 
 /*
-void setSingleShot( bool singleShot )
+void setSingleShot(bool singleShot)
 */
-HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
+HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 /*
 int timerId() const
 */
-HB_FUNC_STATIC( QTIMER_TIMERID )
+HB_FUNC_STATIC(QTIMER_TIMERID)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -241,12 +241,12 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
   }
 }
 
-HB_FUNC_STATIC( QTIMER_START )
+HB_FUNC_STATIC(QTIMER_START)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void start( int msec )
+    void start(int msec)
     */
     auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QTIMER_START )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QTIMER_STOP )
+HB_FUNC_STATIC(QTIMER_STOP)
 {
   auto obj = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -306,9 +306,9 @@ HB_FUNC_STATIC( QTIMER_STOP )
 }
 
 /*
-static void singleShot( int msec, QObject * receiver, const char * member )
+static void singleShot(int msec, QObject * receiver, const char * member)
 */
-HB_FUNC_STATIC( QTIMER_SINGLESHOT )
+HB_FUNC_STATIC(QTIMER_SINGLESHOT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQOBJECT(2) && HB_ISCHAR(3))
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 /*
 void timeout()
 */
-HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
+HB_FUNC_STATIC(QTIMER_ONTIMEOUT)
 {
   auto sender = qobject_cast<QTimer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

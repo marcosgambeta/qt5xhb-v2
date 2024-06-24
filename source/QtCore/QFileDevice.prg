@@ -66,7 +66,7 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-HB_FUNC_STATIC( QFILEDEVICE_DELETE )
+HB_FUNC_STATIC(QFILEDEVICE_DELETE)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QFILEDEVICE_DELETE )
 /*
 QFileDevice::FileError error() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_ERROR )
+HB_FUNC_STATIC(QFILEDEVICE_ERROR)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ERROR )
 /*
 virtual QString fileName() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
+HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
 /*
 bool flush()
 */
-HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
+HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
 /*
 int handle() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
+HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
 /*
 virtual QFileDevice::Permissions permissions() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
+HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -205,9 +205,9 @@ HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
 }
 
 /*
-virtual bool resize( qint64 sz )
+virtual bool resize(qint64 sz)
 */
-HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
+HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -229,9 +229,9 @@ HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
 }
 
 /*
-virtual bool setPermissions( QFileDevice::Permissions permissions )
+virtual bool setPermissions(QFileDevice::Permissions permissions)
 */
-HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
+HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
 /*
 void unsetError()
 */
-HB_FUNC_STATIC( QFILEDEVICE_UNSETERROR )
+HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QFILEDEVICE_UNSETERROR )
 /*
 virtual bool atEnd() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_ATEND )
+HB_FUNC_STATIC(QFILEDEVICE_ATEND)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ATEND )
 /*
 virtual void close()
 */
-HB_FUNC_STATIC( QFILEDEVICE_CLOSE )
+HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QFILEDEVICE_CLOSE )
 /*
 virtual bool isSequential() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
+HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
 /*
 virtual qint64 pos() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_POS )
+HB_FUNC_STATIC(QFILEDEVICE_POS)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -377,9 +377,9 @@ HB_FUNC_STATIC( QFILEDEVICE_POS )
 }
 
 /*
-virtual bool seek( qint64 pos )
+virtual bool seek(qint64 pos)
 */
-HB_FUNC_STATIC( QFILEDEVICE_SEEK )
+HB_FUNC_STATIC(QFILEDEVICE_SEEK)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SEEK )
 /*
 virtual qint64 size() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_SIZE )
+HB_FUNC_STATIC(QFILEDEVICE_SIZE)
 {
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -425,9 +425,9 @@ HB_FUNC_STATIC( QFILEDEVICE_SIZE )
 }
 
 /*
-QDateTime fileTime( QFileDevice::FileTime time ) const
+QDateTime fileTime(QFileDevice::FileTime time) const
 */
-HB_FUNC_STATIC( QFILEDEVICE_FILETIME )
+HB_FUNC_STATIC(QFILEDEVICE_FILETIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -452,9 +452,9 @@ HB_FUNC_STATIC( QFILEDEVICE_FILETIME )
 }
 
 /*
-bool setFileTime( const QDateTime & newDate, QFileDevice::FileTime fileTime )
+bool setFileTime(const QDateTime & newDate, QFileDevice::FileTime fileTime)
 */
-HB_FUNC_STATIC( QFILEDEVICE_SETFILETIME )
+HB_FUNC_STATIC(QFILEDEVICE_SETFILETIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QFileDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());

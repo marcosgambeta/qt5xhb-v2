@@ -72,7 +72,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-HB_FUNC_STATIC( QMIMETYPE_NEW )
+HB_FUNC_STATIC(QMIMETYPE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
   else if (ISNUMPAR(1) && ISQMIMETYPE(1))
   {
     /*
-    QMimeType( const QMimeType & other )
+    QMimeType(const QMimeType & other)
     */
     auto obj = new QMimeType(*PQMIMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMIMETYPE_DELETE )
+HB_FUNC_STATIC(QMIMETYPE_DELETE)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -115,9 +115,9 @@ HB_FUNC_STATIC( QMIMETYPE_DELETE )
 }
 
 /*
-void swap( QMimeType & other )
+void swap(QMimeType & other)
 */
-HB_FUNC_STATIC( QMIMETYPE_SWAP )
+HB_FUNC_STATIC(QMIMETYPE_SWAP)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMIMETYPE_SWAP )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QMIMETYPE_ISVALID )
+HB_FUNC_STATIC(QMIMETYPE_ISVALID)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISVALID )
 /*
 bool isDefault() const
 */
-HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
+HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QMIMETYPE_NAME )
+HB_FUNC_STATIC(QMIMETYPE_NAME)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMIMETYPE_NAME )
 /*
 QString comment() const
 */
-HB_FUNC_STATIC( QMIMETYPE_COMMENT )
+HB_FUNC_STATIC(QMIMETYPE_COMMENT)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMIMETYPE_COMMENT )
 /*
 QString genericIconName() const
 */
-HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
+HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
 /*
 QString iconName() const
 */
-HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
+HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
 /*
 QStringList globPatterns() const
 */
-HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
+HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
 /*
 QStringList parentMimeTypes() const
 */
-HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
+HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
 /*
 QStringList allAncestors() const
 */
-HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
+HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
 /*
 QStringList aliases() const
 */
-HB_FUNC_STATIC( QMIMETYPE_ALIASES )
+HB_FUNC_STATIC(QMIMETYPE_ALIASES)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALIASES )
 /*
 QStringList suffixes() const
 */
-HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
+HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
 /*
 QString preferredSuffix() const
 */
-HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
+HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -429,9 +429,9 @@ HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 }
 
 /*
-bool inherits( const QString & mimeTypeName ) const
+bool inherits(const QString & mimeTypeName) const
 */
-HB_FUNC_STATIC( QMIMETYPE_INHERITS )
+HB_FUNC_STATIC(QMIMETYPE_INHERITS)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QMIMETYPE_INHERITS )
 /*
 QString filterString() const
 */
-HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
+HB_FUNC_STATIC(QMIMETYPE_FILTERSTRING)
 {
   auto obj = static_cast<QMimeType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
   }
 }
 
-HB_FUNC_STATIC( QMIMETYPE_NEWFROM )
+HB_FUNC_STATIC(QMIMETYPE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -506,22 +506,22 @@ HB_FUNC_STATIC( QMIMETYPE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMIMETYPE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMIMETYPE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMIMETYPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMIMETYPE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMIMETYPE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMIMETYPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMIMETYPE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMIMETYPE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMIMETYPE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMIMETYPE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

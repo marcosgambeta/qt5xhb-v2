@@ -63,7 +63,7 @@ RETURN
 #include <QtCore/QPointF>
 #endif
 
-HB_FUNC_STATIC( QPOINTF_NEW )
+HB_FUNC_STATIC(QPOINTF_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPointF( const QPoint & point )
+    QPointF(const QPoint & point)
     */
     auto obj = new QPointF(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPointF( qreal xpos, qreal ypos )
+    QPointF(qreal xpos, qreal ypos)
     */
     auto obj = new QPointF(PQREAL(1), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPOINTF_DELETE )
+HB_FUNC_STATIC(QPOINTF_DELETE)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPOINTF_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QPOINTF_ISNULL )
+HB_FUNC_STATIC(QPOINTF_ISNULL)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPOINTF_ISNULL )
 /*
 qreal manhattanLength() const
 */
-HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
+HB_FUNC_STATIC(QPOINTF_MANHATTANLENGTH)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -163,9 +163,9 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 }
 
 /*
-void setX( qreal x )
+void setX(qreal x)
 */
-HB_FUNC_STATIC( QPOINTF_SETX )
+HB_FUNC_STATIC(QPOINTF_SETX)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -189,9 +189,9 @@ HB_FUNC_STATIC( QPOINTF_SETX )
 }
 
 /*
-void setY( qreal y )
+void setY(qreal y)
 */
-HB_FUNC_STATIC( QPOINTF_SETY )
+HB_FUNC_STATIC(QPOINTF_SETY)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QPOINTF_SETY )
 /*
 QPoint toPoint() const
 */
-HB_FUNC_STATIC( QPOINTF_TOPOINT )
+HB_FUNC_STATIC(QPOINTF_TOPOINT)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QPOINTF_TOPOINT )
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QPOINTF_X )
+HB_FUNC_STATIC(QPOINTF_X)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QPOINTF_X )
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QPOINTF_Y )
+HB_FUNC_STATIC(QPOINTF_Y)
 {
   auto obj = static_cast<QPointF*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPOINTF_Y )
   }
 }
 
-HB_FUNC_STATIC( QPOINTF_NEWFROM )
+HB_FUNC_STATIC(QPOINTF_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -317,22 +317,22 @@ HB_FUNC_STATIC( QPOINTF_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPOINTF_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPOINTF_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QPOINTF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPOINTF_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPOINTF_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QPOINTF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPOINTF_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPOINTF_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPOINTF_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPOINTF_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

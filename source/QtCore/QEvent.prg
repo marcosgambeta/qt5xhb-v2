@@ -63,9 +63,9 @@ RETURN
 #endif
 
 /*
-QEvent( QEvent::Type type )
+QEvent(QEvent::Type type)
 */
-HB_FUNC_STATIC( QEVENT_NEW )
+HB_FUNC_STATIC(QEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEVENT_DELETE )
+HB_FUNC_STATIC(QEVENT_DELETE)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QEVENT_DELETE )
 /*
 void accept()
 */
-HB_FUNC_STATIC( QEVENT_ACCEPT )
+HB_FUNC_STATIC(QEVENT_ACCEPT)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
 /*
 void ignore()
 */
-HB_FUNC_STATIC( QEVENT_IGNORE )
+HB_FUNC_STATIC(QEVENT_IGNORE)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
 /*
 bool isAccepted() const
 */
-HB_FUNC_STATIC( QEVENT_ISACCEPTED )
+HB_FUNC_STATIC(QEVENT_ISACCEPTED)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -171,9 +171,9 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 }
 
 /*
-void setAccepted( bool accepted )
+void setAccepted(bool accepted)
 */
-HB_FUNC_STATIC( QEVENT_SETACCEPTED )
+HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 /*
 bool spontaneous() const
 */
-HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
+HB_FUNC_STATIC(QEVENT_SPONTANEOUS)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 /*
 QEvent::Type type() const
 */
-HB_FUNC_STATIC( QEVENT_TYPE )
+HB_FUNC_STATIC(QEVENT_TYPE)
 {
   auto obj = static_cast<QEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -245,15 +245,15 @@ HB_FUNC_STATIC( QEVENT_TYPE )
 }
 
 /*
-static int registerEventType( int hint = -1 )
+static int registerEventType(int hint = -1)
 */
-HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
+HB_FUNC_STATIC(QEVENT_REGISTEREVENTTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
 #endif
-    RINT( QEvent::registerEventType( OPINT( 1, -1 )));
+    RINT(QEvent::registerEventType(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 #endif
 }
 
-HB_FUNC_STATIC( QEVENT_NEWFROM )
+HB_FUNC_STATIC(QEVENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -293,22 +293,22 @@ HB_FUNC_STATIC( QEVENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QEVENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QEVENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QEVENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QEVENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QEVENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QEVENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QEVENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QEVENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QEVENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QEVENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

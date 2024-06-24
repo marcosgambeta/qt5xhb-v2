@@ -50,16 +50,16 @@ RETURN
 #include <QtCore/QWinEventNotifier>
 #endif
 
-HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
+HB_FUNC_STATIC(QWINEVENTNOTIFIER_NEW)
 {
 #ifdef Q_OS_WIN
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
 #ifdef Q_OS_WIN
     /*
-    QWinEventNotifier( QObject * parent = nullptr )
+    QWinEventNotifier(QObject * parent = nullptr)
     */
-    auto obj = new QWinEventNotifier( OPQOBJECT( 1, nullptr));
+    auto obj = new QWinEventNotifier(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
 #endif
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
+HB_FUNC_STATIC(QWINEVENTNOTIFIER_DELETE)
 {
 #ifdef Q_OS_WIN
   auto obj = qobject_cast<QWinEventNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
+HB_FUNC_STATIC(QWINEVENTNOTIFIER_ISENABLED)
 {
 #ifdef Q_OS_WIN
   auto obj = qobject_cast<QWinEventNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
 /*
 void setEnabled(bool enable)
 */
-HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
+HB_FUNC_STATIC(QWINEVENTNOTIFIER_SETENABLED)
 {
 #ifdef Q_OS_WIN
   auto obj = qobject_cast<QWinEventNotifier*>(Qt5xHb::getQObjectPointerFromSelfItem());

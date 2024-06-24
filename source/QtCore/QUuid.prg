@@ -65,7 +65,7 @@ RETURN
 #include <QtCore/QUuid>
 #endif
 
-HB_FUNC_STATIC( QUUID_NEW )
+HB_FUNC_STATIC(QUUID_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QUUID_NEW )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QUuid( const QByteArray & text )
+    QUuid(const QByteArray & text)
     */
     auto obj = new QUuid(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QUUID_NEW )
   }
 }
 
-HB_FUNC_STATIC( QUUID_DELETE )
+HB_FUNC_STATIC(QUUID_DELETE)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QUUID_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QUUID_ISNULL )
+HB_FUNC_STATIC(QUUID_ISNULL)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
 /*
 QByteArray toByteArray() const
 */
-HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
+HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
 /*
 QByteArray toRfc4122() const
 */
-HB_FUNC_STATIC( QUUID_TORFC4122 )
+HB_FUNC_STATIC(QUUID_TORFC4122)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QUUID_TOSTRING )
+HB_FUNC_STATIC(QUUID_TOSTRING)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
 /*
 QUuid::Variant variant() const
 */
-HB_FUNC_STATIC( QUUID_VARIANT )
+HB_FUNC_STATIC(QUUID_VARIANT)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
 /*
 QUuid::Version version() const
 */
-HB_FUNC_STATIC( QUUID_VERSION )
+HB_FUNC_STATIC(QUUID_VERSION)
 {
   auto obj = static_cast<QUuid*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -253,25 +253,25 @@ HB_FUNC_STATIC( QUUID_VERSION )
   }
 }
 
-HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
+HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
 {
   if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2))
   {
     /*
-    static QUuid createUuidV3( const QUuid & ns, const QByteArray & baseData )
+    static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
     */
 
-    auto ptr = new QUuid( QUuid::createUuidV3(*PQUUID(1), *PQBYTEARRAY(2)));
+    auto ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
 
   }
   else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2))
   {
     /*
-    static QUuid createUuidV3( const QUuid & ns, const QString & baseData )
+    static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
     */
 
-    auto ptr = new QUuid( QUuid::createUuidV3(*PQUUID(1), PQSTRING(2)));
+    auto ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
 
   }
@@ -281,25 +281,25 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
   }
 }
 
-HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
+HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
 {
   if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2))
   {
     /*
-    static QUuid createUuidV5( const QUuid & ns, const QByteArray & baseData )
+    static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
     */
 
-    auto ptr = new QUuid( QUuid::createUuidV5(*PQUUID(1), *PQBYTEARRAY(2)));
+    auto ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
 
   }
   else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2))
   {
     /*
-    static QUuid createUuidV5( const QUuid & ns, const QString & baseData )
+    static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
     */
 
-    auto ptr = new QUuid( QUuid::createUuidV5(*PQUUID(1), PQSTRING(2)));
+    auto ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
 
   }
@@ -310,15 +310,15 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 }
 
 /*
-static QUuid fromRfc4122( const QByteArray & bytes )
+static QUuid fromRfc4122(const QByteArray & bytes)
 */
-HB_FUNC_STATIC( QUUID_FROMRFC4122 )
+HB_FUNC_STATIC(QUUID_FROMRFC4122)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto ptr = new QUuid( QUuid::fromRfc4122(*PQBYTEARRAY(1)));
+    auto ptr = new QUuid(QUuid::fromRfc4122(*PQBYTEARRAY(1)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 #endif
 }
 
-HB_FUNC_STATIC( QUUID_NEWFROM )
+HB_FUNC_STATIC(QUUID_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -359,22 +359,22 @@ HB_FUNC_STATIC( QUUID_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QUUID_NEWFROMOBJECT )
+HB_FUNC_STATIC(QUUID_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QUUID_NEWFROM);
 }
 
-HB_FUNC_STATIC( QUUID_NEWFROMPOINTER )
+HB_FUNC_STATIC(QUUID_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QUUID_NEWFROM);
 }
 
-HB_FUNC_STATIC( QUUID_SELFDESTRUCTION )
+HB_FUNC_STATIC(QUUID_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QUUID_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QUUID_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
