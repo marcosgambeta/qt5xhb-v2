@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->qt_metacast(PCONSTCHAR(1))));
+      hb_retptr(static_cast< void*>(obj->qt_metacast(PCONSTCHAR(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

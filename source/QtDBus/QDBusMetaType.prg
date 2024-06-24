@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
   if (ISNUMPAR(3) && ISQDBUSARGUMENT(1) && HB_ISNUM(2) && HB_ISPOINTER(3))
   {
 #endif
-    RBOOL( QDBusMetaType::demarshall( *PQDBUSARGUMENT(1), PINT(2), static_cast< void*>( hb_parptr(3))));
+    RBOOL( QDBusMetaType::demarshall(*PQDBUSARGUMENT(1), PINT(2), static_cast< void*>(hb_parptr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    hb_retc( static_cast< const char*>( QDBusMetaType::typeToSignature(PINT(1))));
+    hb_retc(static_cast< const char*>( QDBusMetaType::typeToSignature(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

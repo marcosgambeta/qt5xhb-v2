@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
     /*
     QDBusConnection( const QDBusConnection & other )
     */
-    auto obj = new QDBusConnection( *PQDBUSCONNECTION(1));
+    auto obj = new QDBusConnection(*PQDBUSCONNECTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
     if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
     {
 #endif
-      RBOOL(obj->send( *PQDBUSMESSAGE(1)));
+      RBOOL(obj->send(*PQDBUSMESSAGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->callWithCallback( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT( 5, -1 )));
+      RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT( 5, -1 )));
     }
 
   }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->callWithCallback( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT( 4, -1 )));
+      RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT( 4, -1 )));
     }
 
   }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
     if (ISBETWEEN(1, 3) && ISQDBUSMESSAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QDBusMessage(obj->call( *PQDBUSMESSAGE(1), HB_ISNIL(2) ? static_cast<QDBus::CallMode >( QDBus::Block ) : static_cast<QDBus::CallMode >( hb_parni(2)), OPINT( 3, -1 )));
+      auto ptr = new QDBusMessage(obj->call(*PQDBUSMESSAGE(1), HB_ISNIL(2) ? static_cast<QDBus::CallMode >( QDBus::Block ) : static_cast<QDBus::CallMode >(hb_parni(2)), OPINT( 3, -1 )));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
     if (ISBETWEEN(1, 2) && ISQDBUSMESSAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QDBusPendingCall(obj->asyncCall( *PQDBUSMESSAGE(1), OPINT( 2, -1 )));
+      auto ptr = new QDBusPendingCall(obj->asyncCall(*PQDBUSMESSAGE(1), OPINT( 2, -1 )));
       Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->registerObject(PQSTRING(1), PQOBJECT(2), HB_ISNIL(3) ? static_cast<QDBusConnection::RegisterOptions >( QDBusConnection::ExportAdaptors ) : static_cast<QDBusConnection::RegisterOptions >( hb_parni(3))));
+      RBOOL(obj->registerObject(PQSTRING(1), PQOBJECT(2), HB_ISNIL(3) ? static_cast<QDBusConnection::RegisterOptions >( QDBusConnection::ExportAdaptors ) : static_cast<QDBusConnection::RegisterOptions >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->unregisterObject(PQSTRING(1), HB_ISNIL(2) ? static_cast<QDBusConnection::UnregisterMode >( QDBusConnection::UnregisterNode ) : static_cast<QDBusConnection::UnregisterMode >( hb_parni(2)));
+      obj->unregisterObject(PQSTRING(1), HB_ISNIL(2) ? static_cast<QDBusConnection::UnregisterMode >( QDBusConnection::UnregisterNode ) : static_cast<QDBusConnection::UnregisterMode >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->internalPointer()));
+      hb_retptr(static_cast< void*>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS )
     static QDBusConnection connectToBus( QDBusConnection::BusType type, const QString & name )
     */
 
-    auto ptr = new QDBusConnection( QDBusConnection::connectToBus( static_cast<QDBusConnection::BusType>( hb_parni(1)), PQSTRING(2)));
+    auto ptr = new QDBusConnection( QDBusConnection::connectToBus(static_cast<QDBusConnection::BusType>(hb_parni(1)), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
 
   }

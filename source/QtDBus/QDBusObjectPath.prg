@@ -83,7 +83,7 @@ QDBusObjectPath( QLatin1String path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
-  auto obj = new QDBusObjectPath( *PQLATIN1STRING(1));
+  auto obj = new QDBusObjectPath(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

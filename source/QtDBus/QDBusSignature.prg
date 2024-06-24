@@ -84,7 +84,7 @@ QDBusSignature( QLatin1String signature )
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
-  auto obj = new QDBusSignature( *PQLATIN1STRING(1));
+  auto obj = new QDBusSignature(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

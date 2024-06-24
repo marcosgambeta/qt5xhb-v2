@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 
     if (obj != nullptr)
     {
-      obj->sendErrorReply( static_cast<QDBusError::ErrorType>( hb_parni(1)), OPQSTRING(2, QString()));
+      obj->sendErrorReply(static_cast<QDBusError::ErrorType>(hb_parni(1)), OPQSTRING(2, QString()));
     }
 
     hb_itemReturn(hb_stackSelfItem());

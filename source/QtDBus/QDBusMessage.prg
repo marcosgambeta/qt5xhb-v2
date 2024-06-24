@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
     /*
     QDBusMessage( const QDBusMessage & other )
     */
-    auto obj = new QDBusMessage( *PQDBUSMESSAGE(1));
+    auto obj = new QDBusMessage(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,14 +134,14 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
       QList<QVariant> par1;
       if( HB_ISARRAY(1))
       {
-        auto aList1 = hb_param( 1, HB_IT_ARRAY);
-        int nLen1 = hb_arrayLen( aList1);
-        for( auto i1 = 0; i1 < nLen1; i1++ )
+        auto aList1 = hb_param(1, HB_IT_ARRAY);
+        int nLen1 = hb_arrayLen(aList1);
+        for (auto i1 = 0; i1 < nLen1; i1++)
         {
-          par1 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+          par1 << *static_cast<QVariant*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
         }
       }
-      auto ptr = new QDBusMessage(obj->createReply( par1));
+      auto ptr = new QDBusMessage(obj->createReply(par1));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QDBusMessage(obj->createReply( *PQVARIANT(1)));
+      auto ptr = new QDBusMessage(obj->createReply(*PQVARIANT(1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QDBusMessage(obj->createErrorReply( *PQDBUSERROR(1)));
+      auto ptr = new QDBusMessage(obj->createErrorReply(*PQDBUSERROR(1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QDBusMessage(obj->createErrorReply( static_cast<QDBusError::ErrorType>( hb_parni(1)), PQSTRING(2)));
+      auto ptr = new QDBusMessage(obj->createErrorReply(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
 
@@ -546,13 +546,13 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETARGUMENTS )
     {
 #endif
       QList<QVariant> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QVariant*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setArguments( par1);
+      obj->setArguments(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
     static QDBusMessage createError( const QDBusError & err )
     */
 
-    auto ptr = new QDBusMessage( QDBusMessage::createError( *PQDBUSERROR(1)));
+    auto ptr = new QDBusMessage( QDBusMessage::createError(*PQDBUSERROR(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 
   }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
     static QDBusMessage createError( QDBusError::ErrorType type, const QString & msg )
     */
 
-    auto ptr = new QDBusMessage( QDBusMessage::createError( static_cast<QDBusError::ErrorType>( hb_parni(1)), PQSTRING(2)));
+    auto ptr = new QDBusMessage( QDBusMessage::createError(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 
   }

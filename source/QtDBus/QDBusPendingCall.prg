@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
   if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1))
   {
-    auto obj = new QDBusPendingCall( *PQDBUSPENDINGCALL(1));
+    auto obj = new QDBusPendingCall(*PQDBUSPENDINGCALL(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_SWAP )
     if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1))
     {
 #endif
-      obj->swap( *PQDBUSPENDINGCALL(1));
+      obj->swap(*PQDBUSPENDINGCALL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
   if (ISNUMPAR(1) && ISQDBUSERROR(1))
   {
 #endif
-    auto ptr = new QDBusPendingCall( QDBusPendingCall::fromError( *PQDBUSERROR(1)));
+    auto ptr = new QDBusPendingCall( QDBusPendingCall::fromError(*PQDBUSERROR(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMCOMPLETEDCALL )
   if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
   {
 #endif
-    auto ptr = new QDBusPendingCall( QDBusPendingCall::fromCompletedCall( *PQDBUSMESSAGE(1)));
+    auto ptr = new QDBusPendingCall( QDBusPendingCall::fromCompletedCall(*PQDBUSMESSAGE(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

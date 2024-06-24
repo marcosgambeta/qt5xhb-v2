@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
     /*
     QDBusArgument( const QDBusArgument & other )
     */
-    auto obj = new QDBusArgument( *PQDBUSARGUMENT(1));
+    auto obj = new QDBusArgument(*PQDBUSARGUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->appendVariant( *PQVARIANT(1));
+      obj->appendVariant(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

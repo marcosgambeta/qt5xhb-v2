@@ -87,7 +87,7 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
     /*
     QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
     */
-    auto obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1));
+    auto obj = new QDBusUnixFileDescriptor(*PQDBUSUNIXFILEDESCRIPTOR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SWAP )
     if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1))
     {
 #endif
-      obj->swap( *PQDBUSUNIXFILEDESCRIPTOR(1));
+      obj->swap(*PQDBUSUNIXFILEDESCRIPTOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

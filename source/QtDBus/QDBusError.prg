@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     /*
     QDBusError( const QDBusMessage & msg )
     */
-    auto obj = new QDBusError( *PQDBUSMESSAGE(1));
+    auto obj = new QDBusError(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     /*
     QDBusError( QDBusError::ErrorType error, const QString & message )
     */
-    auto obj = new QDBusError( static_cast<QDBusError::ErrorType>( hb_parni(1)), PQSTRING(2));
+    auto obj = new QDBusError(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
     /*
     QDBusError( const QDBusError & other )
     */
-    auto obj = new QDBusError( *PQDBUSERROR(1));
+    auto obj = new QDBusError(*PQDBUSERROR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QDBusError::errorString( static_cast<QDBusError::ErrorType>( hb_parni(1))));
+    RQSTRING( QDBusError::errorString(static_cast<QDBusError::ErrorType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
