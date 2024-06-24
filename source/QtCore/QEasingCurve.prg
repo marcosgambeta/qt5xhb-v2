@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
     /*
     QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
     */
-    auto obj = new QEasingCurve( HB_ISNIL(1) ? static_cast<QEasingCurve::Type >( QEasingCurve::Linear ) : static_cast<QEasingCurve::Type >( hb_parni(1)));
+    auto obj = new QEasingCurve( HB_ISNIL(1) ? static_cast<QEasingCurve::Type >( QEasingCurve::Linear ) : static_cast<QEasingCurve::Type >(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
     /*
     QEasingCurve( const QEasingCurve & other )
     */
-    auto obj = new QEasingCurve( *PQEASINGCURVE(1));
+    auto obj = new QEasingCurve(*PQEASINGCURVE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
     if (ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3))
     {
 #endif
-      obj->addCubicBezierSegment( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3));
+      obj->addCubicBezierSegment(*PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
     if (ISNUMPAR(4) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->addTCBSegment( *PQPOINTF(1), PQREAL(2), PQREAL(3), PQREAL(4));
+      obj->addTCBSegment(*PQPOINTF(1), PQREAL(2), PQREAL(3), PQREAL(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<QEasingCurve::Type>( hb_parni(1)));
+      obj->setType(static_cast<QEasingCurve::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SWAP )
     if (ISNUMPAR(1) && ISQEASINGCURVE(1))
     {
 #endif
-      obj->swap( *PQEASINGCURVE(1));
+      obj->swap(*PQEASINGCURVE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

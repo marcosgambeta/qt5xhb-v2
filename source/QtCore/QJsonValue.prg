@@ -85,7 +85,7 @@ QJsonValue( QJsonValue::Type type = QJsonValue::Null )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
-  auto obj = new QJsonValue( HB_ISNIL(1) ? static_cast<QJsonValue::Type >( QJsonValue::Null ) : static_cast<QJsonValue::Type >( hb_parni(1)));
+  auto obj = new QJsonValue( HB_ISNIL(1) ? static_cast<QJsonValue::Type >( QJsonValue::Null ) : static_cast<QJsonValue::Type >(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
     /*
     QJsonValue( const QJsonArray & a )
     */
-    auto obj = new QJsonValue( *PQJSONARRAY(1));
+    auto obj = new QJsonValue(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
     /*
     QJsonValue( const QJsonObject & o )
     */
-    auto obj = new QJsonValue( *PQJSONOBJECT(1));
+    auto obj = new QJsonValue(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
     /*
     QJsonValue( const QJsonValue & other )
     */
-    auto obj = new QJsonValue( *PQJSONVALUE(1));
+    auto obj = new QJsonValue(*PQJSONVALUE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QJsonArray(obj->toArray( *PQJSONARRAY(1)));
+      auto ptr = new QJsonArray(obj->toArray(*PQJSONARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
     }
 
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QJsonObject(obj->toObject( *PQJSONOBJECT(1)));
+      auto ptr = new QJsonObject(obj->toObject(*PQJSONOBJECT(1)));
       Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
     }
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QJSONVALUE_FROMVARIANT )
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
 #endif
-    auto ptr = new QJsonValue( QJsonValue::fromVariant( *PQVARIANT(1)));
+    auto ptr = new QJsonValue( QJsonValue::fromVariant(*PQVARIANT(1)));
     Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

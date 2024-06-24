@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->open( static_cast<QFile::OpenMode>( hb_parni(1))));
+      RBOOL(obj->open(static_cast<QFile::OpenMode>(hb_parni(1))));
     }
 
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->open( static_cast< FILE*>( hb_parptr(1)), static_cast<QFile::OpenMode>( hb_parni(2)), HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags >( QFile::DontCloseHandle ) : static_cast<QFile::FileHandleFlags >( hb_parni(3))));
+      RBOOL(obj->open(static_cast< FILE*>(hb_parptr(1)), static_cast<QFile::OpenMode>(hb_parni(2)), HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags >( QFile::DontCloseHandle ) : static_cast<QFile::FileHandleFlags >(hb_parni(3))));
     }
 
   }
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->open(PINT(1), static_cast<QFile::OpenMode>( hb_parni(2)), HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags >( QFile::DontCloseHandle ) : static_cast<QFile::FileHandleFlags >( hb_parni(3))));
+      RBOOL(obj->open(PINT(1), static_cast<QFile::OpenMode>(hb_parni(2)), HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags >( QFile::DontCloseHandle ) : static_cast<QFile::FileHandleFlags >(hb_parni(3))));
     }
 
   }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->setPermissions( static_cast<QFile::Permissions>( hb_parni(1))));
+      RBOOL(obj->setPermissions(static_cast<QFile::Permissions>(hb_parni(1))));
     }
 
   }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
     static bool setPermissions( const QString & fileName, QFile::Permissions permissions )
     */
 
-    RBOOL( QFile::setPermissions(PQSTRING(1), static_cast<QFile::Permissions>( hb_parni(2))));
+    RBOOL( QFile::setPermissions(PQSTRING(1), static_cast<QFile::Permissions>(hb_parni(2))));
 
   }
   else
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
     static QString decodeName( const QByteArray & localFileName )
     */
 
-    RQSTRING( QFile::decodeName( *PQBYTEARRAY(1)));
+    RQSTRING( QFile::decodeName(*PQBYTEARRAY(1)));
 
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))

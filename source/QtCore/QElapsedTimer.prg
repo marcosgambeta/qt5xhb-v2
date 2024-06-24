@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
     if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
     {
 #endif
-      RQINT64(obj->msecsTo( *PQELAPSEDTIMER(1)));
+      RQINT64(obj->msecsTo(*PQELAPSEDTIMER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
     if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
     {
 #endif
-      RQINT64(obj->secsTo( *PQELAPSEDTIMER(1)));
+      RQINT64(obj->secsTo(*PQELAPSEDTIMER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 
     if (obj != nullptr)
     {
-      obj->writeAttribute( *PQXMLSTREAMATTRIBUTE(1));
+      obj->writeAttribute(*PQXMLSTREAMATTRIBUTE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
     if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTES(1))
     {
 #endif
-      obj->writeAttributes( *PQXMLSTREAMATTRIBUTES(1));
+      obj->writeAttributes(*PQXMLSTREAMATTRIBUTES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
     if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1))
     {
 #endif
-      obj->writeCurrentToken( *PQXMLSTREAMREADER(1));
+      obj->writeCurrentToken(*PQXMLSTREAMREADER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

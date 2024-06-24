@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
     /*
     QXmlStreamReader( const QByteArray & data )
     */
-    auto obj = new QXmlStreamReader( *PQBYTEARRAY(1));
+    auto obj = new QXmlStreamReader(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 
     if (obj != nullptr)
     {
-      obj->addData( *PQBYTEARRAY(1));
+      obj->addData(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
     if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1))
     {
 #endif
-      obj->addExtraNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1));
+      obj->addExtraNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->readElementText( HB_ISNIL(1) ? static_cast<QXmlStreamReader::ReadElementTextBehaviour >( QXmlStreamReader::ErrorOnUnexpectedElement ) : static_cast<QXmlStreamReader::ReadElementTextBehaviour >( hb_parni(1))));
+      RQSTRING(obj->readElementText( HB_ISNIL(1) ? static_cast<QXmlStreamReader::ReadElementTextBehaviour >( QXmlStreamReader::ErrorOnUnexpectedElement ) : static_cast<QXmlStreamReader::ReadElementTextBehaviour >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

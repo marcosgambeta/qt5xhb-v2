@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
     if (ISNUMPAR(1) && ISQEASINGCURVE(1))
     {
 #endif
-      obj->setEasingCurve( *PQEASINGCURVE(1));
+      obj->setEasingCurve(*PQEASINGCURVE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setEndValue( *PQVARIANT(1));
+      obj->setEndValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setStartValue( *PQVARIANT(1));
+      obj->setStartValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

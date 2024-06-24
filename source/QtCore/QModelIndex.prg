@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
     /*
     QModelIndex( const QModelIndex & other )
     */
-    auto obj = new QModelIndex( *PQMODELINDEX(1));
+    auto obj = new QModelIndex(*PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->internalPointer()));
+      hb_retptr(static_cast< void*>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
     static QTemporaryFile * createNativeFile( QFile & file )
     */
 
-    auto ptr = QTemporaryFile::createNativeFile( *PQFILE(1));
+    auto ptr = QTemporaryFile::createNativeFile(*PQFILE(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
 
   }

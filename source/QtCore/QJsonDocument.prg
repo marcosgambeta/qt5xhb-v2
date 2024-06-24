@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     /*
     QJsonDocument( const QJsonObject & object )
     */
-    auto obj = new QJsonDocument( *PQJSONOBJECT(1));
+    auto obj = new QJsonDocument(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     /*
     QJsonDocument( const QJsonArray & array )
     */
-    auto obj = new QJsonDocument( *PQJSONARRAY(1));
+    auto obj = new QJsonDocument(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
     /*
     QJsonDocument( const QJsonDocument & other )
     */
-    auto obj = new QJsonDocument( *PQJSONDOCUMENT(1));
+    auto obj = new QJsonDocument(*PQJSONDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -299,8 +299,8 @@ HB_FUNC_STATIC( QJSONDOCUMENT_RAWDATA )
     {
 #endif
       int par1;
-      hb_retc( static_cast< const char*>(obj->rawData( &par1 )));
-      hb_storni( par1, 1);
+      hb_retc(static_cast< const char*>(obj->rawData( &par1 )));
+      hb_storni(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_SETARRAY )
     if (ISNUMPAR(1) && ISQJSONARRAY(1))
     {
 #endif
-      obj->setArray( *PQJSONARRAY(1));
+      obj->setArray(*PQJSONARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_SETOBJECT )
     if (ISNUMPAR(1) && ISQJSONOBJECT(1))
     {
 #endif
-      obj->setObject( *PQJSONOBJECT(1));
+      obj->setObject(*PQJSONOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
-    auto ptr = new QJsonDocument( QJsonDocument::fromBinaryData( *PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QJsonDocument::DataValidation >( QJsonDocument::Validate ) : static_cast<QJsonDocument::DataValidation >( hb_parni(2))));
+    auto ptr = new QJsonDocument( QJsonDocument::fromBinaryData(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QJsonDocument::DataValidation >( QJsonDocument::Validate ) : static_cast<QJsonDocument::DataValidation >(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQJSONPARSEERROR(2) || HB_ISNIL(2)))
   {
 #endif
-    auto ptr = new QJsonDocument( QJsonDocument::fromJson( *PQBYTEARRAY(1), HB_ISNIL(2) ? nullptr : static_cast<QJsonParseError*>(Qt5xHb::itemGetPtr(2))));
+    auto ptr = new QJsonDocument( QJsonDocument::fromJson(*PQBYTEARRAY(1), HB_ISNIL(2) ? nullptr : static_cast<QJsonParseError*>(Qt5xHb::itemGetPtr(2))));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
 #endif
-    auto ptr = new QJsonDocument( QJsonDocument::fromRawData(PCONSTCHAR(1), PINT(2), HB_ISNIL(3) ? static_cast<QJsonDocument::DataValidation >( QJsonDocument::Validate ) : static_cast<QJsonDocument::DataValidation >( hb_parni(3))));
+    auto ptr = new QJsonDocument( QJsonDocument::fromRawData(PCONSTCHAR(1), PINT(2), HB_ISNIL(3) ? static_cast<QJsonDocument::DataValidation >( QJsonDocument::Validate ) : static_cast<QJsonDocument::DataValidation >(hb_parni(3))));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMVARIANT )
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
 #endif
-    auto ptr = new QJsonDocument( QJsonDocument::fromVariant( *PQVARIANT(1)));
+    auto ptr = new QJsonDocument( QJsonDocument::fromVariant(*PQVARIANT(1)));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

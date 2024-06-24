@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
     /*
     QTextBoundaryFinder( const QTextBoundaryFinder & other )
     */
-    auto obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1));
+    auto obj = new QTextBoundaryFinder(*PQTEXTBOUNDARYFINDER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
     /*
     QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
     */
-    auto obj = new QTextBoundaryFinder( static_cast<QTextBoundaryFinder::BoundaryType>( hb_parni(1)), PQSTRING(2));
+    auto obj = new QTextBoundaryFinder(static_cast<QTextBoundaryFinder::BoundaryType>(hb_parni(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }

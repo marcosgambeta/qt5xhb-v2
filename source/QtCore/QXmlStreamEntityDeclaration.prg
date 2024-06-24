@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
     /*
     QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
     */
-    auto obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1));
+    auto obj = new QXmlStreamEntityDeclaration(*PQXMLSTREAMENTITYDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

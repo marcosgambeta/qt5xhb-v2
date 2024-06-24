@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
     /*
     QStateMachine( QState::ChildMode childMode, QObject * parent = nullptr )
     */
-    auto obj = new QStateMachine( static_cast<QState::ChildMode>( hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QStateMachine(static_cast<QState::ChildMode>(hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGlobalRestorePolicy( static_cast<QState::RestorePolicy>( hb_parni(1)));
+      obj->setGlobalRestorePolicy(static_cast<QState::RestorePolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
     if (ISBETWEEN(1, 2) && ISQEVENT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? static_cast<QStateMachine::EventPriority >( QStateMachine::NormalPriority ) : static_cast<QStateMachine::EventPriority >( hb_parni(2)));
+      obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? static_cast<QStateMachine::EventPriority >( QStateMachine::NormalPriority ) : static_cast<QStateMachine::EventPriority >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

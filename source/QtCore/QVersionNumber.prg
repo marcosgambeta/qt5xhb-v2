@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
     if (ISNUMPAR(1) && ISQVERSIONNUMBER(1))
     {
 #endif
-      RBOOL(obj->isPrefixOf( *PQVERSIONNUMBER(1)));
+      RBOOL(obj->isPrefixOf(*PQVERSIONNUMBER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTS )
 #endif
       auto list = obj->segments();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
   if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2))
   {
 #endif
-    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
+    auto ptr = new QVersionNumber( QVersionNumber::commonPrefix(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
     Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
   if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2))
   {
 #endif
-    RINT( QVersionNumber::compare( *PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
+    RINT( QVersionNumber::compare(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
     int par2;
     auto ptr = new QVersionNumber( QVersionNumber::fromString(PQSTRING(1), &par2));
     Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
-    hb_storni( par2, 2);
+    hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

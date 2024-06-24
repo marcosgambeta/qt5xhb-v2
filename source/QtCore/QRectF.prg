@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QRECTF_NEW )
     /*
     QRectF( const QPointF & topLeft, const QSizeF & size )
     */
-    auto obj = new QRectF( *PQPOINTF(1), *PQSIZEF(2));
+    auto obj = new QRectF(*PQPOINTF(1), *PQSIZEF(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QRECTF_NEW )
     /*
     QRectF( const QPointF & topLeft, const QPointF & bottomRight )
     */
-    auto obj = new QRectF( *PQPOINTF(1), *PQPOINTF(2));
+    auto obj = new QRectF(*PQPOINTF(1), *PQPOINTF(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QRECTF_NEW )
     /*
     QRectF( const QRect & rectangle )
     */
-    auto obj = new QRectF( *PQRECT(1));
+    auto obj = new QRectF(*PQRECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
     }
 
   }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->contains( *PQRECTF(1)));
+      RBOOL(obj->contains(*PQRECTF(1)));
     }
 
   }
@@ -397,10 +397,10 @@ HB_FUNC_STATIC( QRECTF_GETCOORDS )
       qreal par3;
       qreal par4;
       obj->getCoords( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,10 +431,10 @@ HB_FUNC_STATIC( QRECTF_GETRECT )
       qreal par3;
       qreal par4;
       obj->getRect( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTED )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->intersected( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->intersected(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTS )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      RBOOL(obj->intersects( *PQRECTF(1)));
+      RBOOL(obj->intersects(*PQRECTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->moveBottomLeft( *PQPOINTF(1));
+      obj->moveBottomLeft(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->moveBottomRight( *PQPOINTF(1));
+      obj->moveBottomRight(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QRECTF_MOVECENTER )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->moveCenter( *PQPOINTF(1));
+      obj->moveCenter(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QRECTF_MOVETO )
 
     if (obj != nullptr)
     {
-      obj->moveTo( *PQPOINTF(1));
+      obj->moveTo(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->moveTopLeft( *PQPOINTF(1));
+      obj->moveTopLeft(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->moveTopRight( *PQPOINTF(1));
+      obj->moveTopRight(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setBottomLeft( *PQPOINTF(1));
+      obj->setBottomLeft(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setBottomRight( *PQPOINTF(1));
+      obj->setBottomRight(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QRECTF_SETSIZE )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setSize( *PQSIZEF(1));
+      obj->setSize(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setTopLeft( *PQPOINTF(1));
+      obj->setTopLeft(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setTopRight( *PQPOINTF(1));
+      obj->setTopRight(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1502,7 +1502,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATE )
 
     if (obj != nullptr)
     {
-      obj->translate( *PQPOINTF(1));
+      obj->translate(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1539,7 +1539,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->translated( *PQPOINTF(1)));
+      auto ptr = new QRectF(obj->translated(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -1563,7 +1563,7 @@ HB_FUNC_STATIC( QRECTF_UNITED )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->united( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->united(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

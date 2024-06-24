@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->className()));
+      hb_retc(static_cast< const char*>(obj->className()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

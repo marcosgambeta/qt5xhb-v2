@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     /*
     QFileInfo( const QFile & file )
     */
-    auto obj = new QFileInfo( *PQFILE(1));
+    auto obj = new QFileInfo(*PQFILE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     /*
     QFileInfo( const QDir & dir, const QString & file )
     */
-    auto obj = new QFileInfo( *PQDIR(1), PQSTRING(2));
+    auto obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
     /*
     QFileInfo( const QFileInfo & fileinfo )
     */
-    auto obj = new QFileInfo( *PQFILEINFO(1));
+    auto obj = new QFileInfo(*PQFILEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->permission( static_cast<QFile::Permissions>( hb_parni(1))));
+      RBOOL(obj->permission(static_cast<QFile::Permissions>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
 
     if (obj != nullptr)
     {
-      obj->setFile( *PQFILE(1));
+      obj->setFile(*PQFILE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
 
     if (obj != nullptr)
     {
-      obj->setFile( *PQDIR(1), PQSTRING(2));
+      obj->setFile(*PQDIR(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QFILEINFO_SWAP )
     if (ISNUMPAR(1) && ISQFILEINFO(1))
     {
 #endif
-      obj->swap( *PQFILEINFO(1));
+      obj->swap(*PQFILEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1324,7 +1324,7 @@ HB_FUNC_STATIC( QFILEINFO_FILETIME )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QDateTime(obj->fileTime( static_cast<QFile::FileTime>( hb_parni(1))));
+      auto ptr = new QDateTime(obj->fileTime(static_cast<QFile::FileTime>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
     /*
     QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = nullptr )
     */
-    auto obj = new QEventTransition(PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2)), OPQSTATE( 3, nullptr));
+    auto obj = new QEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)), OPQSTATE( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEventType( static_cast<QEvent::Type>( hb_parni(1)));
+      obj->setEventType(static_cast<QEvent::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

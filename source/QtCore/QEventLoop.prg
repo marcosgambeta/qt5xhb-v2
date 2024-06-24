@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->exec( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >( hb_parni(1))));
+      RINT(obj->exec( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->processEvents( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >( hb_parni(1))));
+      RBOOL(obj->processEvents( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >(hb_parni(1))));
     }
 
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 
     if (obj != nullptr)
     {
-      obj->processEvents( static_cast<QEventLoop::ProcessEventsFlags>( hb_parni(1)), PINT(2));
+      obj->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

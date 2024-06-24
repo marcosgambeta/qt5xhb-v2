@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSingleDashWordOptionMode( static_cast<QCommandLineParser::SingleDashWordOptionMode>( hb_parni(1)));
+      obj->setSingleDashWordOptionMode(static_cast<QCommandLineParser::SingleDashWordOptionMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDOPTION )
     if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
     {
 #endif
-      RBOOL(obj->addOption( *PQCOMMANDLINEOPTION(1)));
+      RBOOL(obj->addOption(*PQCOMMANDLINEOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 
     if (obj != nullptr)
     {
-      obj->process( *PQCOREAPPLICATION(1));
+      obj->process(*PQCOREAPPLICATION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->isSet( *PQCOMMANDLINEOPTION(1)));
+      RBOOL(obj->isSet(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 
     if (obj != nullptr)
     {
-      RQSTRING(obj->value( *PQCOMMANDLINEOPTION(1)));
+      RQSTRING(obj->value(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 
     if (obj != nullptr)
     {
-      RQSTRINGLIST(obj->values( *PQCOMMANDLINEOPTION(1)));
+      RQSTRINGLIST(obj->values(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
 

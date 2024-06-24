@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     /*
     QItemSelectionRange( const QItemSelectionRange & other )
     */
-    auto obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE(1));
+    auto obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     /*
     QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
     */
-    auto obj = new QItemSelectionRange( *PQMODELINDEX(1), *PQMODELINDEX(2));
+    auto obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
     /*
     QItemSelectionRange( const QModelIndex & index )
     */
-    auto obj = new QItemSelectionRange( *PQMODELINDEX(1));
+    auto obj = new QItemSelectionRange(*PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->contains( *PQMODELINDEX(1)));
+      RBOOL(obj->contains(*PQMODELINDEX(1)));
     }
 
   }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
     if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
     {
 #endif
-      RBOOL(obj->intersects( *PQITEMSELECTIONRANGE(1)));
+      RBOOL(obj->intersects(*PQITEMSELECTIONRANGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
     if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
     {
 #endif
-      auto ptr = new QItemSelectionRange(obj->intersected( *PQITEMSELECTIONRANGE(1)));
+      auto ptr = new QItemSelectionRange(obj->intersected(*PQITEMSELECTIONRANGE(1)));
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTIONRANGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

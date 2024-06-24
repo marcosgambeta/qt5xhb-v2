@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->name()));
+      hb_retc(static_cast< const char*>(obj->name()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->key(PINT(1))));
+      hb_retc(static_cast< const char*>(obj->key(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->scope()));
+      hb_retc(static_cast< const char*>(obj->scope()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->valueToKey(PINT(1))));
+      hb_retc(static_cast< const char*>(obj->valueToKey(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QMETAENUM_ENUMNAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->enumName()));
+      hb_retc(static_cast< const char*>(obj->enumName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSAVEFILE_OPEN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->open( static_cast<QIODevice::OpenMode>( hb_parni(1))));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

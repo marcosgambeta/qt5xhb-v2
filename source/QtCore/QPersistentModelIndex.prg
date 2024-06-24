@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
     /*
     QPersistentModelIndex( const QModelIndex & index )
     */
-    auto obj = new QPersistentModelIndex( *PQMODELINDEX(1));
+    auto obj = new QPersistentModelIndex(*PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
     /*
     QPersistentModelIndex( const QPersistentModelIndex & other )
     */
-    auto obj = new QPersistentModelIndex( *PQPERSISTENTMODELINDEX(1));
+    auto obj = new QPersistentModelIndex(*PQPERSISTENTMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SWAP )
     if (ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1))
     {
 #endif
-      obj->swap( *PQPERSISTENTMODELINDEX(1));
+      obj->swap(*PQPERSISTENTMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->internalPointer()));
+      hb_retptr(static_cast< void*>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

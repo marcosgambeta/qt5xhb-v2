@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
     /*
     QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
     */
-    auto obj = new QTextDecoder(PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>( hb_parni(2)));
+    auto obj = new QTextDecoder(PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 
     if (obj != nullptr)
     {
-      RQSTRING(obj->toUnicode( *PQBYTEARRAY(1)));
+      RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));
     }
 
   }

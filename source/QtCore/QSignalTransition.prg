@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setSignal( *PQBYTEARRAY(1));
+      obj->setSignal(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

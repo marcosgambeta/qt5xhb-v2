@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType(obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >( hb_parni(2))));
+      auto ptr = new QMimeType(obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType(obj->mimeTypeForFile( *PQFILEINFO(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >( hb_parni(2))));
+      auto ptr = new QMimeType(obj->mimeTypeForFile(*PQFILEINFO(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode >( QMimeDatabase::MatchDefault ) : static_cast<QMimeDatabase::MatchMode >(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
 
     if (obj != nullptr)
     {
-      auto ptr = new QMimeType(obj->mimeTypeForData( *PQBYTEARRAY(1)));
+      auto ptr = new QMimeType(obj->mimeTypeForData(*PQBYTEARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QMimeType(obj->mimeTypeForUrl( *PQURL(1)));
+      auto ptr = new QMimeType(obj->mimeTypeForUrl(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

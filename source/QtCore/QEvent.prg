@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    auto obj = new QEvent( static_cast<QEvent::Type>( hb_parni(1)));
+    auto obj = new QEvent(static_cast<QEvent::Type>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else

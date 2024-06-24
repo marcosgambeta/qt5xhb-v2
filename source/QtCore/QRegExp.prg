@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
     /*
     QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
     */
-    auto obj = new QRegExp(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast<Qt::CaseSensitivity >( hb_parni(2)), HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax >( QRegExp::RegExp ) : static_cast<QRegExp::PatternSyntax >( hb_parni(3)));
+    auto obj = new QRegExp(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity >( Qt::CaseSensitive ) : static_cast<Qt::CaseSensitivity >(hb_parni(2)), HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax >( QRegExp::RegExp ) : static_cast<QRegExp::PatternSyntax >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
     /*
     QRegExp( const QRegExp & rx )
     */
-    auto obj = new QRegExp( *PQREGEXP(1));
+    auto obj = new QRegExp(*PQREGEXP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT(obj->indexIn(PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QRegExp::CaretMode >( QRegExp::CaretAtZero ) : static_cast<QRegExp::CaretMode >( hb_parni(3))));
+      RINT(obj->indexIn(PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QRegExp::CaretMode >( QRegExp::CaretAtZero ) : static_cast<QRegExp::CaretMode >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT(obj->lastIndexIn(PQSTRING(1), OPINT( 2, -1 ), HB_ISNIL(3) ? static_cast<QRegExp::CaretMode >( QRegExp::CaretAtZero ) : static_cast<QRegExp::CaretMode >( hb_parni(3))));
+      RINT(obj->lastIndexIn(PQSTRING(1), OPINT( 2, -1 ), HB_ISNIL(3) ? static_cast<QRegExp::CaretMode >( QRegExp::CaretAtZero ) : static_cast<QRegExp::CaretMode >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaseSensitivity( static_cast<Qt::CaseSensitivity>( hb_parni(1)));
+      obj->setCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPatternSyntax( static_cast<QRegExp::PatternSyntax>( hb_parni(1)));
+      obj->setPatternSyntax(static_cast<QRegExp::PatternSyntax>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

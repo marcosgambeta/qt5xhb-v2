@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_RELOADDATA )
 // QModelIndex createIndex ( int row, int column )
 // HB_FUNC_STATIC( HABSTRACTTABLEMODEL_CREATEINDEX )
 // {
-//   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
+//   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 //   if( obj )
 //   {
 //     auto ptr = new QModelIndex(obj->createIndex ( hb_parni(1), hb_parni(2)));

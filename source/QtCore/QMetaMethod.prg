@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->typeName()));
+      hb_retc(static_cast< const char*>(obj->typeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->tag()));
+      hb_retc(static_cast< const char*>(obj->tag()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
 #endif
       int par1;
       obj->getParameterTypes( &par1);
-      hb_storni( par1, 1);
+      hb_storni(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

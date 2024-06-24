@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
     /*
     QJsonObject( const QJsonObject & other )
     */
-    auto obj = new QJsonObject( *PQJSONOBJECT(1));
+    auto obj = new QJsonObject(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

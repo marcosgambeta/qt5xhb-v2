@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSTATE_NEW )
     /*
     QState( QState::ChildMode childMode, QState * parent = nullptr )
     */
-    auto obj = new QState( static_cast<QState::ChildMode>( hb_parni(1)), OPQSTATE( 2, nullptr));
+    auto obj = new QState(static_cast<QState::ChildMode>(hb_parni(1)), OPQSTATE( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setChildMode( static_cast<QState::ChildMode>( hb_parni(1)));
+      obj->setChildMode(static_cast<QState::ChildMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

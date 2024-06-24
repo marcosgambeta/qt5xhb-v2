@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
     if (ISNUMPAR(1) && ISQTIME(1))
     {
 #endif
-      RINT(obj->msecsTo( *PQTIME(1)));
+      RINT(obj->msecsTo(*PQTIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
     if (ISNUMPAR(1) && ISQTIME(1))
     {
 #endif
-      RINT(obj->secsTo( *PQTIME(1)));
+      RINT(obj->secsTo(*PQTIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
 
     if (obj != nullptr)
     {
-      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<Qt::DateFormat >( Qt::TextDate ) : static_cast<Qt::DateFormat >( hb_parni(1))));
+      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<Qt::DateFormat >( Qt::TextDate ) : static_cast<Qt::DateFormat >(hb_parni(1))));
     }
 
   }
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QTIME_FROMSTRING )
     static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
     */
 
-    auto ptr = new QTime( QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat >( Qt::TextDate ) : static_cast<Qt::DateFormat >( hb_parni(2))));
+    auto ptr = new QTime( QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat >( Qt::TextDate ) : static_cast<Qt::DateFormat >(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QTIME", true);
 
   }

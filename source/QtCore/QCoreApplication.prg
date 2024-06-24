@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
     static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
     */
 
-    QCoreApplication::processEvents( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >( hb_parni(1)));
+    QCoreApplication::processEvents( HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags >( QEventLoop::AllEvents ) : static_cast<QEventLoop::ProcessEventsFlags >(hb_parni(1)));
 
     hb_itemReturn(hb_stackSelfItem());
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
     static void processEvents( QEventLoop::ProcessEventsFlags flags, int maxtime )
     */
 
-    QCoreApplication::processEvents( static_cast<QEventLoop::ProcessEventsFlags>( hb_parni(1)), PINT(2));
+    QCoreApplication::processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)), PINT(2));
 
     hb_itemReturn(hb_stackSelfItem());
 
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
   {
 #endif
-    QCoreApplication::setAttribute( static_cast<Qt::ApplicationAttribute>( hb_parni(1)), OPBOOL( 2, true));
+    QCoreApplication::setAttribute(static_cast<Qt::ApplicationAttribute>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RBOOL( QCoreApplication::testAttribute( static_cast<Qt::ApplicationAttribute>( hb_parni(1))));
+    RBOOL( QCoreApplication::testAttribute(static_cast<Qt::ApplicationAttribute>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

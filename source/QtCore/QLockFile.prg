@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO )
 #endif
       qint64 par1;
       RBOOL(obj->getLockInfo( &par1, nullptr, nullptr));
-      hb_stornll( par1, 1);
+      hb_stornll(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

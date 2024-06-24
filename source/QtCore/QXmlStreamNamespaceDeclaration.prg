@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
     /*
     QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
     */
-    auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1));
+    auto obj = new QXmlStreamNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

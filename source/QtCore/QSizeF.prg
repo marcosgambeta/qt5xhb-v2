@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
     /*
     QSizeF( const QSize & sz )
     */
-    auto obj = new QSizeF( *PQSIZE(1));
+    auto obj = new QSizeF(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
 
     if (obj != nullptr)
     {
-      obj->scale(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>( hb_parni(3)));
+      obj->scale(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
 
     if (obj != nullptr)
     {
-      obj->scale( *PQSIZEF(1), static_cast<Qt::AspectRatioMode>( hb_parni(2)));
+      obj->scale(*PQSIZEF(1), static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QSizeF(obj->scaled(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>( hb_parni(3))));
+      auto ptr = new QSizeF(obj->scaled(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QSizeF(obj->scaled( *PQSIZEF(1), static_cast<Qt::AspectRatioMode>( hb_parni(2))));
+      auto ptr = new QSizeF(obj->scaled(*PQSIZEF(1), static_cast<Qt::AspectRatioMode>(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      auto ptr = new QSizeF(obj->expandedTo( *PQSIZEF(1)));
+      auto ptr = new QSizeF(obj->expandedTo(*PQSIZEF(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      auto ptr = new QSizeF(obj->boundedTo( *PQSIZEF(1)));
+      auto ptr = new QSizeF(obj->boundedTo(*PQSIZEF(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

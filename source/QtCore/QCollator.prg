@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
     QCollator( const QCollator & )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QCollator( *PQCOLLATOR(1));
+    auto obj = new QCollator(*PQCOLLATOR(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCOLLATOR_SWAP )
     if (ISNUMPAR(1) && ISQCOLLATOR(1))
     {
 #endif
-      obj->swap( *PQCOLLATOR(1));
+      obj->swap(*PQCOLLATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1));
+      obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaseSensitivity( static_cast<Qt::CaseSensitivity>( hb_parni(1)));
+      obj->setCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
     /*
     QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
     */
-    auto obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1));
+    auto obj = new QXmlStreamNotationDeclaration(*PQXMLSTREAMNOTATIONDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

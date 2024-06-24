@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->mapFromSource( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->mapFromSource(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->mapToSource( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->mapToSource(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->parent( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_HEADERDATA )
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>( hb_parni(2)), PINT(3)));
+      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), PINT(3)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
 #endif
-      RBOOL(obj->dropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>( hb_parni(2)), PINT(3), PINT(4), *PQMODELINDEX(5)));
+      RBOOL(obj->dropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>(hb_parni(2)), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
     if (ISNUMPAR(1) && ISQITEMSELECTION(1))
     {
 #endif
-      auto ptr = new QItemSelection(obj->mapSelectionFromSource( *PQITEMSELECTION(1)));
+      auto ptr = new QItemSelection(obj->mapSelectionFromSource(*PQITEMSELECTION(1)));
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
     if (ISNUMPAR(1) && ISQITEMSELECTION(1))
     {
 #endif
-      auto ptr = new QItemSelection(obj->mapSelectionToSource( *PQITEMSELECTION(1)));
+      auto ptr = new QItemSelection(obj->mapSelectionToSource(*PQITEMSELECTION(1)));
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -389,12 +389,12 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
     if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
     {
 #endif
-      auto list = obj->match( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT( 4, 1 ), HB_ISNIL(5) ? static_cast<Qt::MatchFlags >( Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) : static_cast<Qt::MatchFlags >( hb_parni(5)));
+      auto list = obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT( 4, 1 ), HB_ISNIL(5) ? static_cast<Qt::MatchFlags >( Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) : static_cast<Qt::MatchFlags >(hb_parni(5)));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

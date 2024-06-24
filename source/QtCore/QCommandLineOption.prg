@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
     /*
     QCommandLineOption( const QCommandLineOption & other )
     */
-    auto obj = new QCommandLineOption( *PQCOMMANDLINEOPTION(1));
+    auto obj = new QCommandLineOption(*PQCOMMANDLINEOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
     if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
     {
 #endif
-      obj->swap( *PQCOMMANDLINEOPTION(1));
+      obj->swap(*PQCOMMANDLINEOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

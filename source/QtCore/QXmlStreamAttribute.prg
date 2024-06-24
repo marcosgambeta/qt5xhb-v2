@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
     /*
     QXmlStreamAttribute( const QXmlStreamAttribute & other )
     */
-    auto obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1));
+    auto obj = new QXmlStreamAttribute(*PQXMLSTREAMATTRIBUTE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

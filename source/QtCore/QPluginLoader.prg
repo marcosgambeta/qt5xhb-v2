@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLoadHints( static_cast<QLibrary::LoadHints>( hb_parni(1)));
+      obj->setLoadHints(static_cast<QLibrary::LoadHints>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

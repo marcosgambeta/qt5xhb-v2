@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QURL_NEW )
     /*
     QUrl( const QUrl & other )
     */
-    auto obj = new QUrl( *PQURL(1));
+    auto obj = new QUrl(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QURL_NEW )
     /*
     QUrl( const QString & url, QUrl::ParsingMode parsingMode )
     */
-    auto obj = new QUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>( hb_parni(2)));
+    auto obj = new QUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QURL_ISPARENTOF )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      RBOOL(obj->isParentOf( *PQURL(1)));
+      RBOOL(obj->isParentOf(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QURL_RESOLVED )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QUrl(obj->resolved( *PQURL(1)));
+      auto ptr = new QUrl(obj->resolved(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QURL_SETURL )
 
     if (obj != nullptr)
     {
-      obj->setUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>( hb_parni(2)));
+      obj->setUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QURL_SWAP )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->swap( *PQURL(1));
+      obj->swap(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = new QByteArray(obj->toEncoded( HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions >( QUrl::None ) : static_cast<QUrl::FormattingOptions >( hb_parni(1))));
+      auto ptr = new QByteArray(obj->toEncoded( HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions >( QUrl::None ) : static_cast<QUrl::FormattingOptions >(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions >( QUrl::None ) : static_cast<QUrl::FormattingOptions >( hb_parni(1))));
+      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions >( QUrl::None ) : static_cast<QUrl::FormattingOptions >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QURL_FROMACE )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    RQSTRING( QUrl::fromAce( *PQBYTEARRAY(1)));
+    RQSTRING( QUrl::fromAce(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
     static QUrl fromEncoded( const QByteArray & input )
     */
 
-    auto ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY(1)));
+    auto ptr = new QUrl( QUrl::fromEncoded(*PQBYTEARRAY(1)));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
 
   }
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
     static QUrl fromEncoded( const QByteArray & input, QUrl::ParsingMode parsingMode )
     */
 
-    auto ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY(1), static_cast<QUrl::ParsingMode>( hb_parni(2))));
+    auto ptr = new QUrl( QUrl::fromEncoded(*PQBYTEARRAY(1), static_cast<QUrl::ParsingMode>(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
 
   }
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    RQSTRING( QUrl::fromPercentEncoding( *PQBYTEARRAY(1)));
+    RQSTRING( QUrl::fromPercentEncoding(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

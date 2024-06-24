@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
     QStorageInfo( const QDir & dir )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QStorageInfo( *PQDIR(1));
+    auto obj = new QStorageInfo(*PQDIR(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
     QStorageInfo( const QStorageInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QStorageInfo( *PQSTORAGEINFO(1));
+    auto obj = new QStorageInfo(*PQSTORAGEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
     if (ISNUMPAR(1) && ISQSTORAGEINFO(1))
     {
 #endif
-      obj->swap( *PQSTORAGEINFO(1));
+      obj->swap(*PQSTORAGEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

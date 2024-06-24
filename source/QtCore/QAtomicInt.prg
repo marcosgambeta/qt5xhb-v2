@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
     /*
     QAtomicInt( const QAtomicInt & other )
     */
-    auto obj = new QAtomicInt( *PQATOMICINT(1));
+    auto obj = new QAtomicInt(*PQATOMICINT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

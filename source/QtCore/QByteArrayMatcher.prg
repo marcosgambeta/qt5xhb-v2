@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
     /*
     QByteArrayMatcher( const QByteArray & pattern )
     */
-    auto obj = new QByteArrayMatcher( *PQBYTEARRAY(1));
+    auto obj = new QByteArrayMatcher(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
     /*
     QByteArrayMatcher( const QByteArrayMatcher & other )
     */
-    auto obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER(1));
+    auto obj = new QByteArrayMatcher(*PQBYTEARRAYMATCHER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 
     if (obj != nullptr)
     {
-      RINT(obj->indexIn( *PQBYTEARRAY(1), OPINT( 2, 0 )));
+      RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT( 2, 0 )));
     }
 
   }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setPattern( *PQBYTEARRAY(1));
+      obj->setPattern(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

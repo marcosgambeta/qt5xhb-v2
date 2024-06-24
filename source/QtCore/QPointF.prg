@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
     /*
     QPointF( const QPoint & point )
     */
-    auto obj = new QPointF( *PQPOINT(1));
+    auto obj = new QPointF(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

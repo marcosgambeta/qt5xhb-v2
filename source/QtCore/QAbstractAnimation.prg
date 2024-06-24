@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDirection( static_cast<QAbstractAnimation::Direction>( hb_parni(1)));
+      obj->setDirection(static_cast<QAbstractAnimation::Direction>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->start( HB_ISNIL(1) ? static_cast<QAbstractAnimation::DeletionPolicy >( QAbstractAnimation::KeepWhenStopped ) : static_cast<QAbstractAnimation::DeletionPolicy >( hb_parni(1)));
+      obj->start( HB_ISNIL(1) ? static_cast<QAbstractAnimation::DeletionPolicy >( QAbstractAnimation::KeepWhenStopped ) : static_cast<QAbstractAnimation::DeletionPolicy >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

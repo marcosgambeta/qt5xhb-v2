@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QJSONARRAY_NEW )
     /*
     QJsonArray( const QJsonArray & other )
     */
-    auto obj = new QJsonArray( *PQJSONARRAY(1));
+    auto obj = new QJsonArray(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QJSONARRAY_APPEND )
     if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->append( *PQJSONVALUE(1));
+      obj->append(*PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QJSONARRAY_CONTAINS )
     if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      RBOOL(obj->contains( *PQJSONVALUE(1)));
+      RBOOL(obj->contains(*PQJSONVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QJSONARRAY_PREPEND )
     if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->prepend( *PQJSONVALUE(1));
+      obj->prepend(*PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_BACK )
     if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->push_back( *PQJSONVALUE(1));
+      obj->push_back(*PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_FRONT )
     if (ISNUMPAR(1) && ISQJSONVALUE(1))
     {
 #endif
-      obj->push_front( *PQJSONVALUE(1));
+      obj->push_front(*PQJSONVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -711,13 +711,13 @@ HB_FUNC_STATIC( QJSONARRAY_FROMVARIANTLIST )
   {
 #endif
     QVariantList par1;
-    auto aList1 = hb_param( 1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen( aList1);
-    for( auto i1 = 0; i1 < nLen1; i1++ )
+    auto aList1 = hb_param(1, HB_IT_ARRAY);
+    int nLen1 = hb_arrayLen(aList1);
+    for (auto i1 = 0; i1 < nLen1; i1++)
     {
-      par1 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+      par1 << *static_cast<QVariant*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
     }
-    auto ptr = new QJsonArray( QJsonArray::fromVariantList( par1));
+    auto ptr = new QJsonArray( QJsonArray::fromVariantList(par1));
     Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

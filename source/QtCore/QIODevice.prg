@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->open( static_cast<QIODevice::OpenMode>( hb_parni(1))));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 
     if (obj != nullptr)
     {
-      RQINT64(obj->write( *PQBYTEARRAY(1)));
+      RQINT64(obj->write(*PQBYTEARRAY(1)));
     }
 
   }

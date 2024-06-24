@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
     /*
     QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
     */
-    auto obj = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2));
+    auto obj = new QItemSelection(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
     {
 #endif
-      obj->select( *PQMODELINDEX(1), *PQMODELINDEX(2));
+      obj->select(*PQMODELINDEX(1), *PQMODELINDEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL(obj->contains( *PQMODELINDEX(1)));
+      RBOOL(obj->contains(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
     if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
     {
 #endif
-      obj->merge( *PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->merge(*PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
   if (ISNUMPAR(3) && ISQITEMSELECTIONRANGE(1) && ISQITEMSELECTIONRANGE(2) && ISQITEMSELECTION(3))
   {
 #endif
-    QItemSelection::split( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3));
+    QItemSelection::split(*PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

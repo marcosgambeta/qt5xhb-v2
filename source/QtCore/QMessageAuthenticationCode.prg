@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
-    auto obj = new QMessageAuthenticationCode( static_cast<QCryptographicHash::Algorithm>( hb_parni(1)), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QMessageAuthenticationCode(static_cast<QCryptographicHash::Algorithm>(hb_parni(1)), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setKey( *PQBYTEARRAY(1));
+      obj->setKey(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 
     if (obj != nullptr)
     {
-      obj->addData( *PQBYTEARRAY(1));
+      obj->addData(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
   if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QByteArray( QMessageAuthenticationCode::hash( *PQBYTEARRAY(1), *PQBYTEARRAY(2), static_cast<QCryptographicHash::Algorithm>( hb_parni(3))));
+    auto ptr = new QByteArray( QMessageAuthenticationCode::hash(*PQBYTEARRAY(1), *PQBYTEARRAY(2), static_cast<QCryptographicHash::Algorithm>(hb_parni(3))));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

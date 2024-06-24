@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
     /*
     QBitArray( const QBitArray & other )
     */
-    auto obj = new QBitArray( *PQBITARRAY(1));
+    auto obj = new QBitArray(*PQBITARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

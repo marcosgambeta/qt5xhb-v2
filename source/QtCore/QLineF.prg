@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     /*
     QLineF( const QPointF & p1, const QPointF & p2 )
     */
-    auto obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2));
+    auto obj = new QLineF(*PQPOINTF(1), *PQPOINTF(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     /*
     QLineF( const QLine & line )
     */
-    auto obj = new QLineF( *PQLINE(1));
+    auto obj = new QLineF(*PQLINE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
     if (ISNUMPAR(1) && ISQLINEF(1))
     {
 #endif
-      RQREAL(obj->angleTo( *PQLINEF(1)));
+      RQREAL(obj->angleTo(*PQLINEF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QLINEF_INTERSECT )
     if (ISNUMPAR(2) && ISQLINEF(1) && ISQPOINTF(2))
     {
 #endif
-      RENUM(obj->intersect( *PQLINEF(1), PQPOINTF(2)));
+      RENUM(obj->intersect(*PQLINEF(1), PQPOINTF(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QLINEF_SETP1 )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setP1( *PQPOINTF(1));
+      obj->setP1(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QLINEF_SETP2 )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setP2( *PQPOINTF(1));
+      obj->setP2(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QLINEF_SETPOINTS )
     if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
     {
 #endif
-      obj->setPoints( *PQPOINTF(1), *PQPOINTF(2));
+      obj->setPoints(*PQPOINTF(1), *PQPOINTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 
     if (obj != nullptr)
     {
-      obj->translate( *PQPOINTF(1));
+      obj->translate(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QLineF(obj->translated( *PQPOINTF(1)));
+      auto ptr = new QLineF(obj->translated(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QLINEF", true);
     }
 

@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
     if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->findChild<QObject *>( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
+      auto ptr = obj->findChild<QObject *>( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >(hb_parni(2)));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -582,12 +582,12 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
   
     if (obj != nullptr)
     {
-      auto list = obj->findChildren<QObject *>( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
+      auto list = obj->findChildren<QObject *>( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >(hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -618,12 +618,12 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if (obj != nullptr)
     {
-      auto list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
+      auto list = obj->findChildren<QObject *>(*PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >(hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -655,12 +655,12 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if (obj != nullptr)
     {
-      auto list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >( hb_parni(2)));
+      auto list = obj->findChildren<QObject *>(*PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions >( Qt::FindChildrenRecursively ) : static_cast<Qt::FindChildOptions >(hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TimerType >( Qt::CoarseTimer ) : static_cast<Qt::TimerType >( hb_parni(2))));
+      RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TimerType >( Qt::CoarseTimer ) : static_cast<Qt::TimerType >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1236,9 +1236,9 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
 {
   auto obj = qobject_cast<QObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (hb_pcount() == 1 && hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) )
+  if (hb_pcount() == 1 && hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL ) )
   {
-    auto item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL));
+    auto item = hb_itemNew( hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL));
 
     if( item )
     {
@@ -2094,7 +2094,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
   if (obj != nullptr)
   {
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -2107,7 +2107,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem());
-        auto codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL);
+        auto codeblock = hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL);
         hb_vmPush( codeblock);
         hb_vmSend(1);
       }
@@ -2136,11 +2136,11 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
-    else if (ISNUMPAR(2) && HB_ISNUM(1) && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
+    else if (ISNUMPAR(2) && HB_ISNUM(1) && hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
     {
       int event = hb_parni(1);
 
-      auto item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL));
+      auto item = hb_itemNew( hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL));
 
       if( item )
       {

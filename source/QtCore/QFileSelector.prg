@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QUrl(obj->select( *PQURL(1)));
+      auto ptr = new QUrl(obj->select(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
     }
 

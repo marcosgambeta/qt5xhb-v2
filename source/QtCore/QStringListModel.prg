@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QVariant(obj->data( *PQMODELINDEX(1), PINT(2)));
+      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RENUM(obj->flags( *PQMODELINDEX(1)));
+      RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >( hb_parni(2)));
+      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

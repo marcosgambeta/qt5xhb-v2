@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
     /*
     QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
     */
-    auto obj = new QTextEncoder(PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>( hb_parni(2)));
+    auto obj = new QTextEncoder(PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -129,7 +129,7 @@ QChar( QLatin1Char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
-  auto obj = new QChar( *PQLATIN1CHAR(1));
+  auto obj = new QChar(*PQLATIN1CHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -183,7 +183,7 @@ QChar( QChar::SpecialCharacter ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
-  auto obj = new QChar( static_cast<QChar::SpecialCharacter>( hb_parni(1)));
+  auto obj = new QChar(static_cast<QChar::SpecialCharacter>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 

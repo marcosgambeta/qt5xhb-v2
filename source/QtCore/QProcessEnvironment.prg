@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
     /*
     QProcessEnvironment( const QProcessEnvironment & other )
     */
-    auto obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1));
+    auto obj = new QProcessEnvironment(*PQPROCESSENVIRONMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SWAP )
     if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
     {
 #endif
-      obj->swap( *PQPROCESSENVIRONMENT(1));
+      obj->swap(*PQPROCESSENVIRONMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 
     if (obj != nullptr)
     {
-      obj->insert( *PQPROCESSENVIRONMENT(1));
+      obj->insert(*PQPROCESSENVIRONMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

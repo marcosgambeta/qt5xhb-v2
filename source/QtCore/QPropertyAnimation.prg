@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setPropertyName( *PQBYTEARRAY(1));
+      obj->setPropertyName(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

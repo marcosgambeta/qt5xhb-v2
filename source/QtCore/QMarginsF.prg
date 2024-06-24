@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
     QMarginsF( const QMargins & margins )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QMarginsF( *PQMARGINS(1));
+    auto obj = new QMarginsF(*PQMARGINS(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

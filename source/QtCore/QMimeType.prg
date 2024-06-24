@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
     /*
     QMimeType( const QMimeType & other )
     */
-    auto obj = new QMimeType( *PQMIMETYPE(1));
+    auto obj = new QMimeType(*PQMIMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMIMETYPE_SWAP )
     if (ISNUMPAR(1) && ISQMIMETYPE(1))
     {
 #endif
-      obj->swap( *PQMIMETYPE(1));
+      obj->swap(*PQMIMETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

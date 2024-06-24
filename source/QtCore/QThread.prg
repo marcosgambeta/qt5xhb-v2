@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPriority( static_cast<QThread::Priority>( hb_parni(1)));
+      obj->setPriority(static_cast<QThread::Priority>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QTHREAD_START )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->start( HB_ISNIL(1) ? static_cast<QThread::Priority >( QThread::InheritPriority ) : static_cast<QThread::Priority >( hb_parni(1)));
+      obj->start( HB_ISNIL(1) ? static_cast<QThread::Priority >( QThread::InheritPriority ) : static_cast<QThread::Priority >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

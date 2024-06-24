@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->load( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3, QString() ), OPQSTRING(4, QString() ), OPQSTRING(5, QString() )));
+      RBOOL(obj->load(*PQLOCALE(1), PQSTRING(2), OPQSTRING(3, QString() ), OPQSTRING(4, QString() ), OPQSTRING(5, QString() )));
     }
 
   }

@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isEnabled( static_cast<QtMsgType>( hb_parni(1))));
+      RBOOL(obj->isEnabled(static_cast<QtMsgType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setEnabled( static_cast<QtMsgType>( hb_parni(1)), PBOOL(2));
+      obj->setEnabled(static_cast<QtMsgType>(hb_parni(1)), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->categoryName()));
+      hb_retc(static_cast< const char*>(obj->categoryName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      auto ptr = new QSize(obj->boundedTo( *PQSIZE(1)));
+      auto ptr = new QSize(obj->boundedTo(*PQSIZE(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      auto ptr = new QSize(obj->expandedTo( *PQSIZE(1)));
+      auto ptr = new QSize(obj->expandedTo(*PQSIZE(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 
     if (obj != nullptr)
     {
-      obj->scale(PINT(1), PINT(2), static_cast<Qt::AspectRatioMode>( hb_parni(3)));
+      obj->scale(PINT(1), PINT(2), static_cast<Qt::AspectRatioMode>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 
     if (obj != nullptr)
     {
-      obj->scale( *PQSIZE(1), static_cast<Qt::AspectRatioMode>( hb_parni(2)));
+      obj->scale(*PQSIZE(1), static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

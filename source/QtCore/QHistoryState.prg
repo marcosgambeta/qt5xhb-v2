@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
     /*
     QHistoryState( QHistoryState::HistoryType type, QState * parent = nullptr )
     */
-    auto obj = new QHistoryState( static_cast<QHistoryState::HistoryType>( hb_parni(1)), OPQSTATE( 2, nullptr));
+    auto obj = new QHistoryState(static_cast<QHistoryState::HistoryType>(hb_parni(1)), OPQSTATE( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHistoryType( static_cast<QHistoryState::HistoryType>( hb_parni(1)));
+      obj->setHistoryType(static_cast<QHistoryState::HistoryType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

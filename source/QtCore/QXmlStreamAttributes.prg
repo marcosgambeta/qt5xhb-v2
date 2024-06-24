@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 
     if (obj != nullptr)
     {
-      obj->append( *PQXMLSTREAMATTRIBUTE(1));
+      obj->append(*PQXMLSTREAMATTRIBUTE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->hasAttribute( *PQLATIN1STRING(1)));
+      RBOOL(obj->hasAttribute(*PQLATIN1STRING(1)));
     }
 
   }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
     if (ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2))
     {
 #endif
-      auto ptr = new QStringRef(obj->value( *PQLATIN1STRING(1), *PQLATIN1STRING(2)));
+      auto ptr = new QStringRef(obj->value(*PQLATIN1STRING(1), *PQLATIN1STRING(2)));
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
     if (ISNUMPAR(1) && ISQLATIN1STRING(1))
     {
 #endif
-      auto ptr = new QStringRef(obj->value( *PQLATIN1STRING(1)));
+      auto ptr = new QStringRef(obj->value(*PQLATIN1STRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

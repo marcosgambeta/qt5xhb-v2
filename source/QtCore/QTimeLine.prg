@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurveShape( static_cast<QTimeLine::CurveShape>( hb_parni(1)));
+      obj->setCurveShape(static_cast<QTimeLine::CurveShape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDirection( static_cast<QTimeLine::Direction>( hb_parni(1)));
+      obj->setDirection(static_cast<QTimeLine::Direction>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
     if (ISNUMPAR(1) && ISQEASINGCURVE(1))
     {
 #endif
-      obj->setEasingCurve( *PQEASINGCURVE(1));
+      obj->setEasingCurve(*PQEASINGCURVE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

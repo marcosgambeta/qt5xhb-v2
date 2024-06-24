@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL(obj->isSelected( *PQMODELINDEX(1)));
+      RBOOL(obj->isSelected(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setCurrentIndex( *PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->setCurrentIndex(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 
     if (obj != nullptr)
     {
-      obj->select( *PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->select(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 
     if (obj != nullptr)
     {
-      obj->select( *PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->select(*PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

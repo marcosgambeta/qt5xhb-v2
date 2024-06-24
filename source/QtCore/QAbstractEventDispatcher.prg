@@ -101,8 +101,8 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
     {
 #endif
       long par3;
-      RBOOL(obj->filterNativeEvent( *PQBYTEARRAY(1), static_cast< void*>( hb_parptr(2)), &par3));
-      hb_stornl( par3, 3);
+      RBOOL(obj->filterNativeEvent(*PQBYTEARRAY(1), static_cast< void*>(hb_parptr(2)), &par3));
+      hb_stornl(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->processEvents( static_cast<QEventLoop::ProcessEventsFlags>( hb_parni(1))));
+      RBOOL(obj->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 
     if (obj != nullptr)
     {
-      RINT(obj->registerTimer(PINT(1), static_cast<Qt::TimerType>( hb_parni(2)), PQOBJECT(3)));
+      RINT(obj->registerTimer(PINT(1), static_cast<Qt::TimerType>(hb_parni(2)), PQOBJECT(3)));
     }
 
   }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 
     if (obj != nullptr)
     {
-      obj->registerTimer(PINT(1), PINT(2), static_cast<Qt::TimerType>( hb_parni(3)), PQOBJECT(4));
+      obj->registerTimer(PINT(1), PINT(2), static_cast<Qt::TimerType>(hb_parni(3)), PQOBJECT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());

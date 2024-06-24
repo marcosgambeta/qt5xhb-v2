@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 
     if (obj != nullptr)
     {
-      obj->setData( *PQBYTEARRAY(1));
+      obj->setData(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->open( static_cast<QBuffer::OpenMode>( hb_parni(1))));
+      RBOOL(obj->open(static_cast<QBuffer::OpenMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

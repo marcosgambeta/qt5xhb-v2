@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1));
+      obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

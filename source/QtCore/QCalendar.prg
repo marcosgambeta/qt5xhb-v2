@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCALENDAR_NEW )
     QCalendar( QCalendar::System system )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-    auto obj = new QCalendar( static_cast<QCalendar::System>( hb_parni(1)));
+    auto obj = new QCalendar(static_cast<QCalendar::System>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QCALENDAR_DAYOFWEEK )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      RINT(obj->dayOfWeek( *PQDATE(1)));
+      RINT(obj->dayOfWeek(*PQDATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QCALENDAR_WEEKDAYNAME )
     if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RQSTRING(obj->weekDayName( *PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >( hb_parni(3))));
+      RQSTRING(obj->weekDayName(*PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QCALENDAR_STANDALONEWEEKDAYNAME )
     if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RQSTRING(obj->standaloneWeekDayName( *PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >( hb_parni(3))));
+      RQSTRING(obj->standaloneWeekDayName(*PQLOCALE(1), PINT(2), HB_ISNIL(3) ? static_cast<QLocale::FormatType >( QLocale::LongFormat ) : static_cast<QLocale::FormatType >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
