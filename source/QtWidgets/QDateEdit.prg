@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
     /*
     QDateEdit( const QDate & date, QWidget * parent = nullptr )
     */
-    auto obj = new QDateEdit( *PQDATE(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QDateEdit(*PQDATE(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }

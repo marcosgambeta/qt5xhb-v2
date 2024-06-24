@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->indexAbove( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->indexAbove(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->indexBelow( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->indexBelow(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL(obj->isExpanded( *PQMODELINDEX(1)));
+      RBOOL(obj->isExpanded(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setExpanded( *PQMODELINDEX(1), PBOOL(2));
+      obj->setExpanded(*PQMODELINDEX(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->sortByColumn(PINT(1), static_cast<Qt::SortOrder>( hb_parni(2)));
+      obj->sortByColumn(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
     {
 #endif
-      obj->dataChanged( *PQMODELINDEX(1), *PQMODELINDEX(2));
+      obj->dataChanged(*PQMODELINDEX(1), *PQMODELINDEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->indexAt( *PQPOINT(1)));
+      auto ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QTreeView::ScrollHint >( QTreeView::EnsureVisible ) : static_cast<QTreeView::ScrollHint >( hb_parni(2)));
+      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QTreeView::ScrollHint >( QTreeView::EnsureVisible ) : static_cast<QTreeView::ScrollHint >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX(1));
+      obj->setRootIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QRect(obj->visualRect( *PQMODELINDEX(1)));
+      auto ptr = new QRect(obj->visualRect(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1393,7 +1393,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->collapse( *PQMODELINDEX(1));
+      obj->collapse(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPAND )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->expand( *PQMODELINDEX(1));
+      obj->expand(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

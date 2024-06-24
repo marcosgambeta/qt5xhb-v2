@@ -295,10 +295,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
       qreal par3;
       qreal par4;
       obj->getContentsMargins( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

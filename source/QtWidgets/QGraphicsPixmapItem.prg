@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
     /*
     QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsPixmapItem( *PQPIXMAP(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QGraphicsPixmapItem(*PQPIXMAP(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 
     if (obj != nullptr)
     {
-      obj->setOffset( *PQPOINTF(1));
+      obj->setOffset(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1));
+      obj->setPixmap(*PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShapeMode( static_cast<QGraphicsPixmapItem::ShapeMode>( hb_parni(1)));
+      obj->setShapeMode(static_cast<QGraphicsPixmapItem::ShapeMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTransformationMode( static_cast<Qt::TransformationMode>( hb_parni(1)));
+      obj->setTransformationMode(static_cast<Qt::TransformationMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

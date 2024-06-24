@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setLastOffset( *PQPOINTF(1));
+      obj->setLastOffset(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setOffset( *PQPOINTF(1));
+      obj->setOffset(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

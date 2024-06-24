@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
     /*
     QScrollerProperties( const QScrollerProperties & sp )
     */
-    auto obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1));
+    auto obj = new QScrollerProperties(*PQSCROLLERPROPERTIES(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->scrollMetric( static_cast<QScrollerProperties::ScrollMetric>( hb_parni(1))));
+      auto ptr = new QVariant(obj->scrollMetric(static_cast<QScrollerProperties::ScrollMetric>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setScrollMetric( static_cast<QScrollerProperties::ScrollMetric>( hb_parni(1)), *PQVARIANT(2));
+      obj->setScrollMetric(static_cast<QScrollerProperties::ScrollMetric>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
     if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
     {
 #endif
-      obj->setDefaultScrollerProperties( *PQSCROLLERPROPERTIES(1));
+      obj->setDefaultScrollerProperties(*PQSCROLLERPROPERTIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

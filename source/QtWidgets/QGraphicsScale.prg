@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setOrigin( *PQVECTOR3D(1));
+      obj->setOrigin(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->grabGesture( static_cast<Qt::GestureType>( hb_parni(1)), HB_ISNIL(2) ? static_cast<Qt::GestureFlags >( Qt::GestureFlags() ) : static_cast<Qt::GestureFlags >( hb_parni(2)));
+      obj->grabGesture(static_cast<Qt::GestureType>(hb_parni(1)), HB_ISNIL(2) ? static_cast<Qt::GestureFlags >( Qt::GestureFlags() ) : static_cast<Qt::GestureFlags >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->ungrabGesture( static_cast<Qt::GestureType>( hb_parni(1)));
+      obj->ungrabGesture(static_cast<Qt::GestureType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_BOUNDINGREGION )
     if (ISNUMPAR(1) && ISQTRANSFORM(1))
     {
 #endif
-      auto ptr = new QRegion(obj->boundingRegion( *PQTRANSFORM(1)));
+      auto ptr = new QRegion(obj->boundingRegion(*PQTRANSFORM(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_COLLIDESWITHITEM )
     if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >( Qt::IntersectsItemShape ) : static_cast<Qt::ItemSelectionMode >( hb_parni(2))));
+      RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >( Qt::IntersectsItemShape ) : static_cast<Qt::ItemSelectionMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_COLLIDESWITHPATH )
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->collidesWithPath( *PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >( Qt::IntersectsItemShape ) : static_cast<Qt::ItemSelectionMode >( hb_parni(2))));
+      RBOOL(obj->collidesWithPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >( Qt::IntersectsItemShape ) : static_cast<Qt::ItemSelectionMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_CONTAINS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_DEVICETRANSFORM )
     if (ISNUMPAR(1) && ISQTRANSFORM(1))
     {
 #endif
-      auto ptr = new QTransform(obj->deviceTransform( *PQTRANSFORM(1)));
+      auto ptr = new QTransform(obj->deviceTransform(*PQTRANSFORM(1)));
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1265,7 +1265,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ISOBSCURED )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->isObscured( *PQRECTF(1)));
+      RBOOL(obj->isObscured(*PQRECTF(1)));
     }
 
   }
@@ -1483,7 +1483,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ITEMTRANSFORM )
       bool par2;
       auto ptr = new QTransform(obj->itemTransform(PQGRAPHICSITEM(1), &par2));
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPointF(obj->mapFromParent( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->mapFromParent(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
 
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapFromParent( *PQRECTF(1)));
+      auto ptr = new QPolygonF(obj->mapFromParent(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -1625,7 +1625,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapFromParent( *PQPOLYGONF(1)));
+      auto ptr = new QPolygonF(obj->mapFromParent(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -1639,7 +1639,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPainterPath(obj->mapFromParent( *PQPAINTERPATH(1)));
+      auto ptr = new QPainterPath(obj->mapFromParent(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
 
@@ -1689,7 +1689,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPointF(obj->mapFromScene( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->mapFromScene(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
 
@@ -1703,7 +1703,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapFromScene( *PQRECTF(1)));
+      auto ptr = new QPolygonF(obj->mapFromScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -1717,7 +1717,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapFromScene( *PQPOLYGONF(1)));
+      auto ptr = new QPolygonF(obj->mapFromScene(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -1731,7 +1731,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPFROMSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPainterPath(obj->mapFromScene( *PQPAINTERPATH(1)));
+      auto ptr = new QPainterPath(obj->mapFromScene(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
 
@@ -1817,7 +1817,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPRECTFROMPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->mapRectFromParent( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRectFromParent(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -1853,7 +1853,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPRECTFROMSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->mapRectFromScene( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRectFromScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -1925,7 +1925,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPRECTTOPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->mapRectToParent( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRectToParent(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -1961,7 +1961,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPRECTTOSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->mapRectToScene( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRectToScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -2089,7 +2089,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPointF(obj->mapToParent( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->mapToParent(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
 
@@ -2103,7 +2103,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapToParent( *PQRECTF(1)));
+      auto ptr = new QPolygonF(obj->mapToParent(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -2117,7 +2117,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapToParent( *PQPOLYGONF(1)));
+      auto ptr = new QPolygonF(obj->mapToParent(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -2131,7 +2131,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOPARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPainterPath(obj->mapToParent( *PQPAINTERPATH(1)));
+      auto ptr = new QPainterPath(obj->mapToParent(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
 
@@ -2181,7 +2181,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPointF(obj->mapToScene( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->mapToScene(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
 
@@ -2195,7 +2195,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapToScene( *PQRECTF(1)));
+      auto ptr = new QPolygonF(obj->mapToScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -2209,7 +2209,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->mapToScene( *PQPOLYGONF(1)));
+      auto ptr = new QPolygonF(obj->mapToScene(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -2223,7 +2223,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_MAPTOSCENE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPainterPath(obj->mapToScene( *PQPAINTERPATH(1)));
+      auto ptr = new QPainterPath(obj->mapToScene(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
 
@@ -2829,7 +2829,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETACCEPTEDMOUSEBUTTONS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAcceptedMouseButtons( static_cast<Qt::MouseButtons>( hb_parni(1)));
+      obj->setAcceptedMouseButtons(static_cast<Qt::MouseButtons>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2907,7 +2907,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETCACHEMODE )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZE(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setCacheMode( static_cast<QGraphicsItem::CacheMode>( hb_parni(1)), HB_ISNIL(2) ? QSize() : *static_cast<QSize*>(Qt5xHb::itemGetPtr(2)));
+      obj->setCacheMode(static_cast<QGraphicsItem::CacheMode>(hb_parni(1)), HB_ISNIL(2) ? QSize() : *static_cast<QSize*>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2933,7 +2933,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETCURSOR )
     if (ISNUMPAR(1) && ISQCURSOR(1))
     {
 #endif
-      obj->setCursor( *PQCURSOR(1));
+      obj->setCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3037,7 +3037,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETFLAG )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFlag( static_cast<QGraphicsItem::GraphicsItemFlag>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setFlag(static_cast<QGraphicsItem::GraphicsItemFlag>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3063,7 +3063,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<QGraphicsItem::GraphicsItemFlags>( hb_parni(1)));
+      obj->setFlags(static_cast<QGraphicsItem::GraphicsItemFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3089,7 +3089,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETFOCUS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setFocus( HB_ISNIL(1) ? static_cast<Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast<Qt::FocusReason >( hb_parni(1)));
+      obj->setFocus( HB_ISNIL(1) ? static_cast<Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast<Qt::FocusReason >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3193,7 +3193,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETINPUTMETHODHINTS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInputMethodHints( static_cast<Qt::InputMethodHints>( hb_parni(1)));
+      obj->setInputMethodHints(static_cast<Qt::InputMethodHints>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3245,7 +3245,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETPANELMODALITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPanelModality( static_cast<QGraphicsItem::PanelModality>( hb_parni(1)));
+      obj->setPanelModality(static_cast<QGraphicsItem::PanelModality>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3295,7 +3295,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETPOS )
 
     if (obj != nullptr)
     {
-      obj->setPos( *PQPOINTF(1));
+      obj->setPos(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3416,7 +3416,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETTRANSFORM )
     if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setTransform( *PQTRANSFORM(1), OPBOOL( 2, false));
+      obj->setTransform(*PQTRANSFORM(1), OPBOOL( 2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3440,7 +3440,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_SETTRANSFORMORIGINPOINT )
 
     if (obj != nullptr)
     {
-      obj->setTransformOriginPoint( *PQPOINTF(1));
+      obj->setTransformOriginPoint(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
     /*
     QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
     */
-    auto obj = new QKeyEventTransition(PQOBJECT(1), static_cast<QEvent::Type>( hb_parni(2)), PINT(3), OPQSTATE( 4, nullptr));
+    auto obj = new QKeyEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)), PINT(3), OPQSTATE( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModifierMask( static_cast<Qt::KeyboardModifiers>( hb_parni(1)));
+      obj->setModifierMask(static_cast<Qt::KeyboardModifiers>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->boundingRectFor( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->boundingRectFor(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 
     if (obj != nullptr)
     {
-      obj->setOffset( *PQPOINTF(1));
+      obj->setOffset(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

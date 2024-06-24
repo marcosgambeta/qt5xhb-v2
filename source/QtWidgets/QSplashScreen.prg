@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
     /*
     QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
     */
-    auto obj = new QSplashScreen( HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+    auto obj = new QSplashScreen( HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
     /*
     QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
     */
-    auto obj = new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3)));
+    auto obj = new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap*>(Qt5xHb::itemGetPtr(2)), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1));
+      obj->setPixmap(*PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
     /*
     QTreeWidgetItem( const QTreeWidgetItem & other )
     */
-    auto obj = new QTreeWidgetItem( *PQTREEWIDGETITEM(1));
+    auto obj = new QTreeWidgetItem(*PQTREEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -267,13 +267,13 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILDREN )
     {
 #endif
       QList<QTreeWidgetItem *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QTreeWidgetItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QTreeWidgetItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->addChildren( par1);
+      obj->addChildren(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,11 +645,11 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILDREN )
     {
 #endif
       QList<QTreeWidgetItem *> par2;
-      auto aList2 = hb_param( 2, HB_IT_ARRAY);
-      int nLen2 = hb_arrayLen( aList2);
-      for( auto i2 = 0; i2 < nLen2; i2++ )
+      auto aList2 = hb_param(2, HB_IT_ARRAY);
+      int nLen2 = hb_arrayLen(aList2);
+      for (auto i2 = 0; i2 < nLen2; i2++)
       {
-        par2 << static_cast<QTreeWidgetItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0)));
+        par2 << static_cast<QTreeWidgetItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2+1), "POINTER", 0)));
       }
       obj->insertChildren(PINT(1), par2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_READ )
     if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->read( *PQDATASTREAM(1));
+      obj->read(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHECKSTATE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setCheckState(PINT(1), static_cast<Qt::CheckState>( hb_parni(2)));
+      obj->setCheckState(PINT(1), static_cast<Qt::CheckState>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHILDINDICATORPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setChildIndicatorPolicy( static_cast<QTreeWidgetItem::ChildIndicatorPolicy>( hb_parni(1)));
+      obj->setChildIndicatorPolicy(static_cast<QTreeWidgetItem::ChildIndicatorPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<Qt::ItemFlags>( hb_parni(1)));
+      obj->setFlags(static_cast<Qt::ItemFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1393,7 +1393,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->sortChildren(PINT(1), static_cast<Qt::SortOrder>( hb_parni(2)));
+      obj->sortChildren(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1473,7 +1473,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1660,7 +1660,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_WRITE )
     if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->write( *PQDATASTREAM(1));
+      obj->write(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

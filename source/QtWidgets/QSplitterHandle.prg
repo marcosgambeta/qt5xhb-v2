@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2))
   {
-    auto obj = new QSplitterHandle( static_cast<Qt::Orientation>( hb_parni(1)), PQSPLITTER(2));
+    auto obj = new QSplitterHandle(static_cast<Qt::Orientation>(hb_parni(1)), PQSPLITTER(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

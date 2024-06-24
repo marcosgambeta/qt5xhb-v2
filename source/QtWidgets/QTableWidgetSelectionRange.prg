@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
     /*
     QTableWidgetSelectionRange( const QTableWidgetSelectionRange & other )
     */
-    auto obj = new QTableWidgetSelectionRange( *PQTABLEWIDGETSELECTIONRANGE(1));
+    auto obj = new QTableWidgetSelectionRange(*PQTABLEWIDGETSELECTIONRANGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

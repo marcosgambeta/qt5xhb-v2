@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
   if (ISNUMPAR(1) && ISQCOLORMAP(1))
   {
-    auto obj = new QColormap( *PQCOLORMAP(1));
+    auto obj = new QColormap(*PQCOLORMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
     /*
     QDateTimeEdit( const QDateTime & datetime, QWidget * parent = nullptr )
     */
-    auto obj = new QDateTimeEdit( *PQDATETIME(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QDateTimeEdit(*PQDATETIME(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
     /*
     QDateTimeEdit( const QDate & date, QWidget * parent = nullptr )
     */
-    auto obj = new QDateTimeEdit( *PQDATE(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QDateTimeEdit(*PQDATE(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
     /*
     QDateTimeEdit( const QTime & time, QWidget * parent = nullptr )
     */
-    auto obj = new QDateTimeEdit( *PQTIME(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QDateTimeEdit(*PQTIME(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING(obj->sectionText( static_cast<QDateTimeEdit::Section>( hb_parni(1))));
+      RQSTRING(obj->sectionText(static_cast<QDateTimeEdit::Section>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurrentSection( static_cast<QDateTimeEdit::Section>( hb_parni(1)));
+      obj->setCurrentSection(static_cast<QDateTimeEdit::Section>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATERANGE )
     if (ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2))
     {
 #endif
-      obj->setDateRange( *PQDATE(1), *PQDATE(2));
+      obj->setDateRange(*PQDATE(1), *PQDATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIMERANGE )
     if (ISNUMPAR(2) && ISQDATETIME(1) && ISQDATETIME(2))
     {
 #endif
-      obj->setDateTimeRange( *PQDATETIME(1), *PQDATETIME(2));
+      obj->setDateTimeRange(*PQDATETIME(1), *PQDATETIME(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATE )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setMaximumDate( *PQDATE(1));
+      obj->setMaximumDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATETIME )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setMaximumDateTime( *PQDATETIME(1));
+      obj->setMaximumDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMTIME )
     if (ISNUMPAR(1) && ISQTIME(1))
     {
 #endif
-      obj->setMaximumTime( *PQTIME(1));
+      obj->setMaximumTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATE )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setMinimumDate( *PQDATE(1));
+      obj->setMinimumDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATETIME )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setMinimumDateTime( *PQDATETIME(1));
+      obj->setMinimumDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMTIME )
     if (ISNUMPAR(1) && ISQTIME(1))
     {
 #endif
-      obj->setMinimumTime( *PQTIME(1));
+      obj->setMinimumTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETSELECTEDSECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSelectedSection( static_cast<QDateTimeEdit::Section>( hb_parni(1)));
+      obj->setSelectedSection(static_cast<QDateTimeEdit::Section>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMERANGE )
     if (ISNUMPAR(2) && ISQTIME(1) && ISQTIME(2))
     {
 #endif
-      obj->setTimeRange( *PQTIME(1), *PQTIME(2));
+      obj->setTimeRange(*PQTIME(1), *PQTIME(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTimeSpec( static_cast<Qt::TimeSpec>( hb_parni(1)));
+      obj->setTimeSpec(static_cast<Qt::TimeSpec>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATE )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setDate( *PQDATE(1));
+      obj->setDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIME )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setDateTime( *PQDATETIME(1));
+      obj->setDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
     if (ISNUMPAR(1) && ISQTIME(1))
     {
 #endif
-      obj->setTime( *PQTIME(1));
+      obj->setTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

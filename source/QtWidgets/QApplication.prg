@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( auto item : list )
+      for (auto item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -1537,7 +1537,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( auto item : list )
+      for (auto item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
     /*
     QProgressDialog( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
     */
-    auto obj = new QProgressDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+    auto obj = new QProgressDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
     /*
     QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
     */
-    auto obj = new QProgressDialog(PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET( 5, nullptr ), HB_ISNIL(6) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(6)));
+    auto obj = new QProgressDialog(PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET( 5, nullptr ), HB_ISNIL(6) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
 
   }

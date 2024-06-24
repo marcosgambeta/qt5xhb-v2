@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
     /*
     QStyleOptionFrame( const QStyleOptionFrame & other )
     */
-    auto obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1));
+    auto obj = new QStyleOptionFrame(*PQSTYLEOPTIONFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>( hb_parni(1));
+      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>(hb_parni(1));
     }
     else
     {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFRAMESHAPE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->frameShape = static_cast<QFrame::Shape>( hb_parni(1));
+      obj->frameShape = static_cast<QFrame::Shape>(hb_parni(1));
     }
     else
     {

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
     /*
     QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
     */
-    auto obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1));
+    auto obj = new QStyleOptionMenuItem(*PQSTYLEOPTIONMENUITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMENUITEMTYPE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->menuItemType = static_cast<QStyleOptionMenuItem::MenuItemType>( hb_parni(1));
+      obj->menuItemType = static_cast<QStyleOptionMenuItem::MenuItemType>(hb_parni(1));
     }
     else
     {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETCHECKTYPE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->checkType = static_cast<QStyleOptionMenuItem::CheckType>( hb_parni(1));
+      obj->checkType = static_cast<QStyleOptionMenuItem::CheckType>(hb_parni(1));
     }
     else
     {

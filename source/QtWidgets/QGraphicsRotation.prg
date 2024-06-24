@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 
     if (obj != nullptr)
     {
-      obj->setAxis( *PQVECTOR3D(1));
+      obj->setAxis(*PQVECTOR3D(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 
     if (obj != nullptr)
     {
-      obj->setAxis( static_cast<Qt::Axis>( hb_parni(1)));
+      obj->setAxis(static_cast<Qt::Axis>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setOrigin( *PQVECTOR3D(1));
+      obj->setOrigin(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

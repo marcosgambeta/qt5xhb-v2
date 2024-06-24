@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
     /*
     QTableWidgetItem( const QTableWidgetItem & other )
     */
-    auto obj = new QTableWidgetItem( *PQTABLEWIDGETITEM(1));
+    auto obj = new QTableWidgetItem(*PQTABLEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_READ )
     if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->read( *PQDATASTREAM(1));
+      obj->read(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETBACKGROUND )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1));
+      obj->setBackground(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETCHECKSTATE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCheckState( static_cast<Qt::CheckState>( hb_parni(1)));
+      obj->setCheckState(static_cast<Qt::CheckState>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<Qt::ItemFlags>( hb_parni(1)));
+      obj->setFlags(static_cast<Qt::ItemFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFOREGROUND )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setForeground( *PQBRUSH(1));
+      obj->setForeground(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSIZEHINT )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setSizeHint( *PQSIZE(1));
+      obj->setSizeHint(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_WRITE )
     if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->write( *PQDATASTREAM(1));
+      obj->write(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

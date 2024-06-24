@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
     if (ISBETWEEN(1, 3) && ISQVARIANT(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT(obj->findData( *PQVARIANT(1), OPINT( 2, Qt::UserRole ), HB_ISNIL(3) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >( hb_parni(3))));
+      RINT(obj->findData(*PQVARIANT(1), OPINT( 2, Qt::UserRole ), HB_ISNIL(3) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >( hb_parni(2))));
+      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly | Qt::MatchCaseSensitive ) : static_cast<Qt::MatchFlags >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETICONSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setIconSize( *PQSIZE(1));
+      obj->setIconSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInsertPolicy( static_cast<QComboBox::InsertPolicy>( hb_parni(1)));
+      obj->setInsertPolicy(static_cast<QComboBox::InsertPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETROOTMODELINDEX )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setRootModelIndex( *PQMODELINDEX(1));
+      obj->setRootModelIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSizeAdjustPolicy( static_cast<QComboBox::SizeAdjustPolicy>( hb_parni(1)));
+      obj->setSizeAdjustPolicy(static_cast<QComboBox::SizeAdjustPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

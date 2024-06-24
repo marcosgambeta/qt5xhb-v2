@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    auto obj = new QBoxLayout( static_cast<QBoxLayout::Direction>( hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QBoxLayout(static_cast<QBoxLayout::Direction>(hb_parni(1)), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
     if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->addWidget(PQWIDGET(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(3)));
+      obj->addWidget(PQWIDGET(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->insertWidget(PINT(1), PQWIDGET(2), OPINT( 3, 0 ), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(4)));
+      obj->insertWidget(PINT(1), PQWIDGET(2), OPINT( 3, 0 ), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDirection( static_cast<QBoxLayout::Direction>( hb_parni(1)));
+      obj->setDirection(static_cast<QBoxLayout::Direction>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setGeometry( *PQRECT(1));
+      obj->setGeometry(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

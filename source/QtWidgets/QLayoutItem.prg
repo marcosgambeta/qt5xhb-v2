@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setGeometry( *PQRECT(1));
+      obj->setGeometry(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

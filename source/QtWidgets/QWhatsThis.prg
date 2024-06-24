@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
   if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
 #endif
-    QWhatsThis::showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET( 3, nullptr));
+    QWhatsThis::showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET( 3, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

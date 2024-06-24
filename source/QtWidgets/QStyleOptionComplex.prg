@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
     /*
     QStyleOptionComplex( const QStyleOptionComplex & other )
     */
-    auto obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1));
+    auto obj = new QStyleOptionComplex(*PQSTYLEOPTIONCOMPLEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->subControls = static_cast<QStyle::SubControls>( hb_parni(1));
+      obj->subControls = static_cast<QStyle::SubControls>(hb_parni(1));
     }
     else
     {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->activeSubControls = static_cast<QStyle::SubControls>( hb_parni(1));
+      obj->activeSubControls = static_cast<QStyle::SubControls>(hb_parni(1));
     }
     else
     {

@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
     /*
     QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
     */
-    auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1));
+    auto obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

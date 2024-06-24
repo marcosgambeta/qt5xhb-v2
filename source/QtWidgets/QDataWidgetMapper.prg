@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX(1));
+      obj->setRootIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSubmitPolicy( static_cast<QDataWidgetMapper::SubmitPolicy>( hb_parni(1)));
+      obj->setSubmitPolicy(static_cast<QDataWidgetMapper::SubmitPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setCurrentModelIndex( *PQMODELINDEX(1));
+      obj->setCurrentModelIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

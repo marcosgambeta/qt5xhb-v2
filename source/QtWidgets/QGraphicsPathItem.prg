@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
     /*
     QGraphicsPathItem( const QPainterPath & path, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsPathItem( *PQPAINTERPATH(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QGraphicsPathItem(*PQPAINTERPATH(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
-      obj->setPath( *PQPAINTERPATH(1));
+      obj->setPath(*PQPAINTERPATH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

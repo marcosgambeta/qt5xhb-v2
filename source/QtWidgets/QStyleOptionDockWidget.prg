@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
     /*
     QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
     */
-    auto obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1));
+    auto obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

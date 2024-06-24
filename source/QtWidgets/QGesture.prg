@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGestureCancelPolicy( static_cast<QGesture::GestureCancelPolicy>( hb_parni(1)));
+      obj->setGestureCancelPolicy(static_cast<QGesture::GestureCancelPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setHotSpot( *PQPOINTF(1));
+      obj->setHotSpot(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

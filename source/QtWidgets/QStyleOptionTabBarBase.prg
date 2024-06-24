@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
     /*
     QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
     */
-    auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1));
+    auto obj = new QStyleOptionTabBarBase(*PQSTYLEOPTIONTABBARBASE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape = static_cast<QTabBar::Shape>( hb_parni(1));
+      obj->shape = static_cast<QTabBar::Shape>(hb_parni(1));
     }
     else
     {

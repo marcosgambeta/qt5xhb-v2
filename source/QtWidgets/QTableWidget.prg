@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( *PQPOINT(1));
+      auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
 
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 
     if (obj != nullptr)
     {
-      obj->setCurrentCell(PINT(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(3)));
+      obj->setCurrentCell(PINT(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 
     if (obj != nullptr)
     {
-      obj->setCurrentItem(PQTABLEWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->setCurrentItem(PQTABLEWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETRANGESELECTED )
     if (ISNUMPAR(2) && ISQTABLEWIDGETSELECTIONRANGE(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setRangeSelected( *PQTABLEWIDGETSELECTIONRANGE(1), PBOOL(2));
+      obj->setRangeSelected(*PQTABLEWIDGETSELECTIONRANGE(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sortItems(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >( hb_parni(2)));
+      obj->sortItems(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
     if (ISBETWEEN(1, 2) && ISQTABLEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->scrollToItem(PQTABLEWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >( hb_parni(2)));
+      obj->scrollToItem(PQTABLEWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

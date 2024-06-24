@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMENU_ACTIONAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = obj->actionAt( *PQPOINT(1));
+      auto ptr = obj->actionAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->exec( *PQPOINT(1), OPQACTION( 2, nullptr));
+      auto ptr = obj->exec(*PQPOINT(1), OPQACTION( 2, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -505,13 +505,13 @@ HB_FUNC_STATIC( QMENU_EXEC )
     */
 
     QList<QAction *> par1;
-    auto aList1 = hb_param( 1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen( aList1);
-    for( auto i1 = 0; i1 < nLen1; i1++ )
+    auto aList1 = hb_param(1, HB_IT_ARRAY);
+    int nLen1 = hb_arrayLen(aList1);
+    for (auto i1 = 0; i1 < nLen1; i1++)
     {
-      par1 << static_cast<QAction*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+      par1 << static_cast<QAction*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
     }
-    auto ptr = QMenu::exec( par1, *PQPOINT(2), OPQACTION( 3, 0 ), OPQWIDGET( 4, 0));
+    auto ptr = QMenu::exec(par1, *PQPOINT(2), OPQACTION( 3, 0 ), OPQWIDGET( 4, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 
   }
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
     if (ISBETWEEN(1, 2) && ISQPOINT(1) && (ISQACTION(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->popup( *PQPOINT(1), OPQACTION( 2, nullptr));
+      obj->popup(*PQPOINT(1), OPQACTION( 2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QMENU_WCEMENU )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< HMENU >(obj->wceMenu()));
+      hb_retptr(static_cast< HMENU >(obj->wceMenu()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QMENU_TONSMENU )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< NSMenu*>(obj->toNSMenu()));
+      hb_retptr(static_cast< NSMenu*>(obj->toNSMenu()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

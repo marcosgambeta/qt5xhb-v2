@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
     /*
     QStyleOptionToolBox( const QStyleOptionToolBox & other )
     */
-    auto obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1));
+    auto obj = new QStyleOptionToolBox(*PQSTYLEOPTIONTOOLBOX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->position = static_cast<QStyleOptionToolBox::TabPosition>( hb_parni(1));
+      obj->position = static_cast<QStyleOptionToolBox::TabPosition>(hb_parni(1));
     }
     else
     {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->selectedPosition = static_cast<QStyleOptionToolBox::SelectedPosition>( hb_parni(1));
+      obj->selectedPosition = static_cast<QStyleOptionToolBox::SelectedPosition>(hb_parni(1));
     }
     else
     {

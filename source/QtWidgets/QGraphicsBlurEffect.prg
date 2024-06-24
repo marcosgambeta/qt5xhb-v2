@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->boundingRectFor( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->boundingRectFor(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBlurHints( static_cast<QGraphicsBlurEffect::BlurHints>( hb_parni(1)));
+      obj->setBlurHints(static_cast<QGraphicsBlurEffect::BlurHints>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

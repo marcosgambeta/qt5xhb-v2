@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setOpacityMask( *PQBRUSH(1));
+      obj->setOpacityMask(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

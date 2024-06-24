@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RQSTRING(obj->anchorAt( *PQPOINT(1)));
+      RQSTRING(obj->anchorAt(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->createStandardContextMenu( *PQPOINT(1));
+      auto ptr = obj->createStandardContextMenu(*PQPOINT(1));
       Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
     }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = new QTextCursor(obj->cursorForPosition( *PQPOINT(1)));
+      auto ptr = new QTextCursor(obj->cursorForPosition(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->cursorRect( *PQTEXTCURSOR(1)));
+      auto ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >( hb_parni(2))));
+      RBOOL(obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
     if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->mergeCurrentCharFormat( *PQTEXTCHARFORMAT(1));
+      obj->mergeCurrentCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->moveCursor( static_cast<QTextCursor::MoveOperation>( hb_parni(1)), HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode >( QTextCursor::MoveAnchor ) : static_cast<QTextCursor::MoveMode >( hb_parni(2)));
+      obj->moveCursor(static_cast<QTextCursor::MoveOperation>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode >( QTextCursor::MoveAnchor ) : static_cast<QTextCursor::MoveMode >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAutoFormatting( static_cast<QTextEdit::AutoFormatting>( hb_parni(1)));
+      obj->setAutoFormatting(static_cast<QTextEdit::AutoFormatting>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTCHARFORMAT )
     if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->setCurrentCharFormat( *PQTEXTCHARFORMAT(1));
+      obj->setCurrentCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLineWrapMode( static_cast<QTextEdit::LineWrapMode>( hb_parni(1)));
+      obj->setLineWrapMode(static_cast<QTextEdit::LineWrapMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCURSOR )
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
 #endif
-      obj->setTextCursor( *PQTEXTCURSOR(1));
+      obj->setTextCursor(*PQTEXTCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1275,7 +1275,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextInteractionFlags( static_cast<Qt::TextInteractionFlags>( hb_parni(1)));
+      obj->setTextInteractionFlags(static_cast<Qt::TextInteractionFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWordWrapMode( static_cast<QTextOption::WrapMode>( hb_parni(1)));
+      obj->setWordWrapMode(static_cast<QTextOption::WrapMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1858,7 +1858,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setCurrentFont( *PQFONT(1));
+      obj->setCurrentFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2251,7 +2251,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOMARKDOWN )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->toMarkdown( HB_ISNIL(1) ? static_cast<QTextDocument::MarkdownFeatures >( QTextDocument::MarkdownDialectGitHub ) : static_cast<QTextDocument::MarkdownFeatures >( hb_parni(1))));
+      RQSTRING(obj->toMarkdown( HB_ISNIL(1) ? static_cast<QTextDocument::MarkdownFeatures >( QTextDocument::MarkdownDialectGitHub ) : static_cast<QTextDocument::MarkdownFeatures >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

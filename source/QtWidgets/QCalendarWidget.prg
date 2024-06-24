@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      auto ptr = new QTextCharFormat(obj->dateTextFormat( *PQDATE(1)));
+      auto ptr = new QTextCharFormat(obj->dateTextFormat(*PQDATE(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATETEXTFORMAT )
     if (ISNUMPAR(2) && ISQDATE(1) && ISQTEXTCHARFORMAT(2))
     {
 #endif
-      obj->setDateTextFormat( *PQDATE(1), *PQTEXTCHARFORMAT(2));
+      obj->setDateTextFormat(*PQDATE(1), *PQTEXTCHARFORMAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstDayOfWeek( static_cast<Qt::DayOfWeek>( hb_parni(1)));
+      obj->setFirstDayOfWeek(static_cast<Qt::DayOfWeek>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
     if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->setHeaderTextFormat( *PQTEXTCHARFORMAT(1));
+      obj->setHeaderTextFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHorizontalHeaderFormat( static_cast<QCalendarWidget::HorizontalHeaderFormat>( hb_parni(1)));
+      obj->setHorizontalHeaderFormat(static_cast<QCalendarWidget::HorizontalHeaderFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMAXIMUMDATE )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setMaximumDate( *PQDATE(1));
+      obj->setMaximumDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMINIMUMDATE )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setMinimumDate( *PQDATE(1));
+      obj->setMinimumDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSelectionMode( static_cast<QCalendarWidget::SelectionMode>( hb_parni(1)));
+      obj->setSelectionMode(static_cast<QCalendarWidget::SelectionMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVerticalHeaderFormat( static_cast<QCalendarWidget::VerticalHeaderFormat>( hb_parni(1)));
+      obj->setVerticalHeaderFormat(static_cast<QCalendarWidget::VerticalHeaderFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTEXTCHARFORMAT(2))
     {
 #endif
-      obj->setWeekdayTextFormat( static_cast<Qt::DayOfWeek>( hb_parni(1)), *PQTEXTCHARFORMAT(2));
+      obj->setWeekdayTextFormat(static_cast<Qt::DayOfWeek>(hb_parni(1)), *PQTEXTCHARFORMAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QTextCharFormat(obj->weekdayTextFormat( static_cast<Qt::DayOfWeek>( hb_parni(1))));
+      auto ptr = new QTextCharFormat(obj->weekdayTextFormat(static_cast<Qt::DayOfWeek>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATERANGE )
     if (ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2))
     {
 #endif
-      obj->setDateRange( *PQDATE(1), *PQDATE(2));
+      obj->setDateRange(*PQDATE(1), *PQDATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
     if (ISNUMPAR(1) && ISQDATE(1))
     {
 #endif
-      obj->setSelectedDate( *PQDATE(1));
+      obj->setSelectedDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

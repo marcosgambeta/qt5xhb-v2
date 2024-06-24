@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
     /*
     QStyleOptionHeader( const QStyleOptionHeader & other )
     */
-    auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1));
+    auto obj = new QStyleOptionHeader(*PQSTYLEOPTIONHEADER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXTALIGNMENT )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1));
+      obj->textAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     }
     else
     {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICONALIGNMENT )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->iconAlignment = static_cast<Qt::Alignment>( hb_parni(1));
+      obj->iconAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     }
     else
     {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->position = static_cast<QStyleOptionHeader::SectionPosition>( hb_parni(1));
+      obj->position = static_cast<QStyleOptionHeader::SectionPosition>(hb_parni(1));
     }
     else
     {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSELECTEDPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->selectedPosition = static_cast<QStyleOptionHeader::SelectedPosition>( hb_parni(1));
+      obj->selectedPosition = static_cast<QStyleOptionHeader::SelectedPosition>(hb_parni(1));
     }
     else
     {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSORTINDICATOR )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->sortIndicator = static_cast<QStyleOptionHeader::SortIndicator>( hb_parni(1));
+      obj->sortIndicator = static_cast<QStyleOptionHeader::SortIndicator>(hb_parni(1));
     }
     else
     {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETORIENTATION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->orientation = static_cast<Qt::Orientation>( hb_parni(1));
+      obj->orientation = static_cast<Qt::Orientation>(hb_parni(1));
     }
     else
     {

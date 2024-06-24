@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 
     if (obj != nullptr)
     {
-      auto ptr = new QIcon(obj->icon( static_cast<QFileIconProvider::IconType>( hb_parni(1))));
+      auto ptr = new QIcon(obj->icon(static_cast<QFileIconProvider::IconType>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 
     if (obj != nullptr)
     {
-      auto ptr = new QIcon(obj->icon( *PQFILEINFO(1)));
+      auto ptr = new QIcon(obj->icon(*PQFILEINFO(1)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
     if (ISNUMPAR(1) && ISQFILEINFO(1))
     {
 #endif
-      RQSTRING(obj->type( *PQFILEINFO(1)));
+      RQSTRING(obj->type(*PQFILEINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

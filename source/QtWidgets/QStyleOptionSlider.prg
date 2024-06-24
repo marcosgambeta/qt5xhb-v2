@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
     /*
     QStyleOptionSlider( const QStyleOptionSlider & other )
     */
-    auto obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1));
+    auto obj = new QStyleOptionSlider(*PQSTYLEOPTIONSLIDER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETORIENTATION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->orientation = static_cast<Qt::Orientation>( hb_parni(1));
+      obj->orientation = static_cast<Qt::Orientation>(hb_parni(1));
     }
     else
     {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->tickPosition = static_cast<QSlider::TickPosition>( hb_parni(1));
+      obj->tickPosition = static_cast<QSlider::TickPosition>(hb_parni(1));
     }
     else
     {

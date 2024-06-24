@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTOOLTIP_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTOOLTIP_SETPALETTE )
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
 #endif
-      obj->setPalette( *PQPALETTE(1));
+      obj->setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
 
     if (obj != nullptr)
     {
-      obj->showText( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4));
+      obj->showText(*PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
 
     if (obj != nullptr)
     {
-      obj->showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET( 3, nullptr));
+      obj->showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET( 3, nullptr));
     }
 
     hb_itemReturn(hb_stackSelfItem());

@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->ensureBlockLayout( *PQTEXTBLOCK(1));
+      obj->ensureBlockLayout(*PQTEXTBLOCK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      auto ptr = new QRectF(obj->blockBoundingRect( *PQTEXTBLOCK(1)));
+      auto ptr = new QRectF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
     if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
     {
 #endif
-      RINT(obj->hitTest( *PQPOINTF(1), static_cast<Qt::HitTestAccuracy>( hb_parni(2))));
+      RINT(obj->hitTest(*PQPOINTF(1), static_cast<Qt::HitTestAccuracy>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

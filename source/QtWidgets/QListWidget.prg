@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( *PQPOINT(1));
+      auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
 
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 
     if (obj != nullptr)
     {
-      obj->setCurrentItem(PQLISTWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->setCurrentItem(PQLISTWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 
     if (obj != nullptr)
     {
-      obj->setCurrentRow(PINT(1), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(2)));
+      obj->setCurrentRow(PINT(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->sortItems( HB_ISNIL(1) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >( hb_parni(1)));
+      obj->sortItems( HB_ISNIL(1) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
     if (ISBETWEEN(1, 2) && ISQLISTWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->scrollToItem(PQLISTWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >( hb_parni(2)));
+      obj->scrollToItem(PQLISTWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

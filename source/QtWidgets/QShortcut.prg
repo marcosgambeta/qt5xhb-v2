@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
     /*
     QShortcut( const QKeySequence & key, QWidget * parent, const char * member = nullptr, const char * ambiguousMember = nullptr, Qt::ShortcutContext context = Qt::WindowShortcut )
     */
-    auto obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR( 3, nullptr ), OPCONSTCHAR( 4, nullptr ), HB_ISNIL(5) ? static_cast<Qt::ShortcutContext >( Qt::WindowShortcut ) : static_cast<Qt::ShortcutContext >( hb_parni(5)));
+    auto obj = new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR( 3, nullptr ), OPCONSTCHAR( 4, nullptr ), HB_ISNIL(5) ? static_cast<Qt::ShortcutContext >( Qt::WindowShortcut ) : static_cast<Qt::ShortcutContext >(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContext( static_cast<Qt::ShortcutContext>( hb_parni(1)));
+      obj->setContext(static_cast<Qt::ShortcutContext>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
     if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
-      obj->setKey( *PQKEYSEQUENCE(1));
+      obj->setKey(*PQKEYSEQUENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

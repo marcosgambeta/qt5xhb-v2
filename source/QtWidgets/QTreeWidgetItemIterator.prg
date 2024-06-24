@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
     /*
     QTreeWidgetItemIterator( const QTreeWidgetItemIterator & it )
     */
-    auto obj = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR(1));
+    auto obj = new QTreeWidgetItemIterator(*PQTREEWIDGETITEMITERATOR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
     /*
     QTreeWidgetItemIterator( QTreeWidget * widget, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
     */
-    auto obj = new QTreeWidgetItemIterator(PQTREEWIDGET(1), HB_ISNIL(2) ? static_cast<QTreeWidgetItemIterator::IteratorFlags >( QTreeWidgetItemIterator::All ) : static_cast<QTreeWidgetItemIterator::IteratorFlags >( hb_parni(2)));
+    auto obj = new QTreeWidgetItemIterator(PQTREEWIDGET(1), HB_ISNIL(2) ? static_cast<QTreeWidgetItemIterator::IteratorFlags >( QTreeWidgetItemIterator::All ) : static_cast<QTreeWidgetItemIterator::IteratorFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
     /*
     QTreeWidgetItemIterator( QTreeWidgetItem * item, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
     */
-    auto obj = new QTreeWidgetItemIterator(PQTREEWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QTreeWidgetItemIterator::IteratorFlags >( QTreeWidgetItemIterator::All ) : static_cast<QTreeWidgetItemIterator::IteratorFlags >( hb_parni(2)));
+    auto obj = new QTreeWidgetItemIterator(PQTREEWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QTreeWidgetItemIterator::IteratorFlags >( QTreeWidgetItemIterator::All ) : static_cast<QTreeWidgetItemIterator::IteratorFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
     /*
     QStyleOptionButton( const QStyleOptionButton & other )
     */
-    auto obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1));
+    auto obj = new QStyleOptionButton(*PQSTYLEOPTIONBUTTON(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionButton::ButtonFeatures>( hb_parni(1));
+      obj->features = static_cast<QStyleOptionButton::ButtonFeatures>(hb_parni(1));
     }
     else
     {

@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMode( static_cast<QLCDNumber::Mode>( hb_parni(1)));
+      obj->setMode(static_cast<QLCDNumber::Mode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSegmentStyle( static_cast<QLCDNumber::SegmentStyle>( hb_parni(1)));
+      obj->setSegmentStyle(static_cast<QLCDNumber::SegmentStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

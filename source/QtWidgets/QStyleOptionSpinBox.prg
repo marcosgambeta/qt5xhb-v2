@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
     /*
     QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
     */
-    auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1));
+    auto obj = new QStyleOptionSpinBox(*PQSTYLEOPTIONSPINBOX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni(1));
+      obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>(hb_parni(1));
     }
     else
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>( hb_parni(1));
+      obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>(hb_parni(1));
     }
     else
     {

@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQPOINTF(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->handleInput( static_cast<QScroller::Input>( hb_parni(1)), *PQPOINTF(2), OPQINT64( 3, 0 )));
+      RBOOL(obj->handleInput(static_cast<QScroller::Input>(hb_parni(1)), *PQPOINTF(2), OPQINT64( 3, 0 )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,15 +183,15 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
     if (obj != nullptr)
     {
       QList<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setSnapPositionsX( par1);
+      obj->setSnapPositionsX(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -230,15 +230,15 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
     if (obj != nullptr)
     {
       QList<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setSnapPositionsY( par1);
+      obj->setSnapPositionsY(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 
     if (obj != nullptr)
     {
-      obj->ensureVisible( *PQRECTF(1), PQREAL(2), PQREAL(3));
+      obj->ensureVisible(*PQRECTF(1), PQREAL(2), PQREAL(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 
     if (obj != nullptr)
     {
-      obj->ensureVisible( *PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4));
+      obj->ensureVisible(*PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 
     if (obj != nullptr)
     {
-      obj->scrollTo( *PQPOINTF(1));
+      obj->scrollTo(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 
     if (obj != nullptr)
     {
-      obj->scrollTo( *PQPOINTF(1), PINT(2));
+      obj->scrollTo(*PQPOINTF(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSCROLLERPROPERTIES )
     if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
     {
 #endif
-      obj->setScrollerProperties( *PQSCROLLERPROPERTIES(1));
+      obj->setScrollerProperties(*PQSCROLLERPROPERTIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( auto item : list )
+      for (auto item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
   if (ISBETWEEN(1, 2) && ISQOBJECT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
-    RENUM( QScroller::grabGesture(PQOBJECT(1), HB_ISNIL(2) ? static_cast<QScroller::ScrollerGestureType >( QScroller::TouchGesture ) : static_cast<QScroller::ScrollerGestureType >( hb_parni(2))));
+    RENUM( QScroller::grabGesture(PQOBJECT(1), HB_ISNIL(2) ? static_cast<QScroller::ScrollerGestureType >( QScroller::TouchGesture ) : static_cast<QScroller::ScrollerGestureType >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

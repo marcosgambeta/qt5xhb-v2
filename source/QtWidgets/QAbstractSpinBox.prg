@@ -117,8 +117,8 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
     {
 #endif
       QString par1 = hb_parc(1);
-      obj->fixup( par1);
-      hb_storc( QSTRINGTOSTRING( par1), 1);
+      obj->fixup(par1);
+      hb_storc( QSTRINGTOSTRING(par1), 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonSymbols( static_cast<QAbstractSpinBox::ButtonSymbols>( hb_parni(1)));
+      obj->setButtonSymbols(static_cast<QAbstractSpinBox::ButtonSymbols>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCorrectionMode( static_cast<QAbstractSpinBox::CorrectionMode>( hb_parni(1)));
+      obj->setCorrectionMode(static_cast<QAbstractSpinBox::CorrectionMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -696,9 +696,9 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM(obj->validate( par1, par2));
-      hb_storc( QSTRINGTOSTRING( par1), 1);
-      hb_storni( par2, 2);
+      RENUM(obj->validate(par1, par2));
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1))));
+      auto ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_NEW )
     /*
     QStyleOptionTab( const QStyleOptionTab & other )
     */
-    auto obj = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1));
+    auto obj = new QStyleOptionTab(*PQSTYLEOPTIONTAB(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSHAPE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape = static_cast<QTabBar::Shape>( hb_parni(1));
+      obj->shape = static_cast<QTabBar::Shape>(hb_parni(1));
     }
     else
     {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->position = static_cast<QStyleOptionTab::TabPosition>( hb_parni(1));
+      obj->position = static_cast<QStyleOptionTab::TabPosition>(hb_parni(1));
     }
     else
     {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSELECTEDPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->selectedPosition = static_cast<QStyleOptionTab::SelectedPosition>( hb_parni(1));
+      obj->selectedPosition = static_cast<QStyleOptionTab::SelectedPosition>(hb_parni(1));
     }
     else
     {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETCORNERWIDGETS )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->cornerWidgets = static_cast<QStyleOptionTab::CornerWidgets>( hb_parni(1));
+      obj->cornerWidgets = static_cast<QStyleOptionTab::CornerWidgets>(hb_parni(1));
     }
     else
     {
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETFEATURES )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionTab::TabFeatures>( hb_parni(1));
+      obj->features = static_cast<QStyleOptionTab::TabFeatures>(hb_parni(1));
     }
     else
     {

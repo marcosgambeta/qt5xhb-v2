@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
   if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    auto obj = new QSpacerItem(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >( hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >( hb_parni(4)));
+    auto obj = new QSpacerItem(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->changeSize(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >( hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >( hb_parni(4)));
+      obj->changeSize(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setGeometry( *PQRECT(1));
+      obj->setGeometry(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

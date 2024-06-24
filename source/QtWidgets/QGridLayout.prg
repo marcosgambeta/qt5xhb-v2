@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
     if (ISBETWEEN(3, 6) && ISQLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
     {
 #endif
-      obj->addItem(PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT( 4, 1 ), OPINT( 5, 1 ), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(6)));
+      obj->addItem(PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT( 4, 1 ), OPINT( 5, 1 ), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 
     if (obj != nullptr)
     {
-      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(4)));
+      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 
     if (obj != nullptr)
     {
-      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(6)));
+      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(6)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 
     if (obj != nullptr)
     {
-      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(4)));
+      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 
     if (obj != nullptr)
     {
-      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >( hb_parni(6)));
+      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? static_cast<Qt::Alignment >( 0 ) : static_cast<Qt::Alignment >(hb_parni(6)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -348,10 +348,10 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
       int par4;
       int par5;
       obj->getItemPosition(PINT(1), &par2, &par3, &par4, &par5);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
-      hb_storni( par5, 5);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
+      hb_storni(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOriginCorner( static_cast<Qt::Corner>( hb_parni(1)));
+      obj->setOriginCorner(static_cast<Qt::Corner>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setGeometry( *PQRECT(1));
+      obj->setGeometry(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

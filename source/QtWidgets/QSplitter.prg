@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
     /*
     QSplitter( Qt::Orientation orientation, QWidget * parent = nullptr )
     */
-    auto obj = new QSplitter( static_cast<Qt::Orientation>( hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QSplitter(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -211,8 +211,8 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
       int par2;
       int par3;
       obj->getRange(PINT(1), &par2, &par3);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RBOOL(obj->restoreState( *PQBYTEARRAY(1)));
+      RBOOL(obj->restoreState(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

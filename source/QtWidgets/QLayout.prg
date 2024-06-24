@@ -436,7 +436,7 @@ void QLayout_setAlignment1()
 
   if (obj != nullptr)
   {
-    RBOOL(obj->setAlignment(PQWIDGET(1), static_cast<Qt::Alignment>( hb_parni(2))));
+    RBOOL(obj->setAlignment(PQWIDGET(1), static_cast<Qt::Alignment>(hb_parni(2))));
   }
 }
 
@@ -449,7 +449,7 @@ void QLayout_setAlignment2()
 
   if (obj != nullptr)
   {
-    obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+    obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
   }
 
   hb_itemReturn(hb_stackSelfItem());
@@ -464,7 +464,7 @@ void QLayout_setAlignment3()
 
   if (obj != nullptr)
   {
-    RBOOL(obj->setAlignment(PQLAYOUT(1), static_cast<Qt::Alignment>( hb_parni(2))));
+    RBOOL(obj->setAlignment(PQLAYOUT(1), static_cast<Qt::Alignment>(hb_parni(2))));
   }
 }
 
@@ -512,7 +512,7 @@ void QLayout_setContentsMargins2()
 
   if (obj != nullptr)
   {
-    obj->setContentsMargins( *PQMARGINS(1));
+    obj->setContentsMargins(*PQMARGINS(1));
   }
 
   hb_itemReturn(hb_stackSelfItem());
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSizeConstraint( static_cast<QLayout::SizeConstraint>( hb_parni(1)));
+      obj->setSizeConstraint(static_cast<QLayout::SizeConstraint>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setGeometry( *PQRECT(1));
+      obj->setGeometry(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

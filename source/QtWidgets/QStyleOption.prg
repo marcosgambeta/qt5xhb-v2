@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
     /*
     QStyleOption( const QStyleOption & other )
     */
-    auto obj = new QStyleOption( *PQSTYLEOPTION(1));
+    auto obj = new QStyleOption(*PQSTYLEOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->state = static_cast<QStyle::State>( hb_parni(1));
+      obj->state = static_cast<QStyle::State>(hb_parni(1));
     }
     else
     {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->direction = static_cast<Qt::LayoutDirection>( hb_parni(1));
+      obj->direction = static_cast<Qt::LayoutDirection>(hb_parni(1));
     }
     else
     {

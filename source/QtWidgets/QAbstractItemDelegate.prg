@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
     if (ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2))
     {
 #endif
-      auto ptr = new QSize(obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)));
+      auto ptr = new QSize(obj->sizeHint(*PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
   if (ISNUMPAR(4) && ISQFONTMETRICS(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4))
   {
 #endif
-    RQSTRING( QAbstractItemDelegate::elidedText( *PQFONTMETRICS(1), PINT(2), static_cast<Qt::TextElideMode>( hb_parni(3)), PQSTRING(4)));
+    RQSTRING( QAbstractItemDelegate::elidedText(*PQFONTMETRICS(1), PINT(2), static_cast<Qt::TextElideMode>(hb_parni(3)), PQSTRING(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 #endif
       auto list = obj->paintingRoles();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);

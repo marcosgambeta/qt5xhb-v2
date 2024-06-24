@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
     /*
     QScrollBar( Qt::Orientation orientation, QWidget * parent = nullptr )
     */
-    auto obj = new QScrollBar( static_cast<Qt::Orientation>( hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QScrollBar(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }

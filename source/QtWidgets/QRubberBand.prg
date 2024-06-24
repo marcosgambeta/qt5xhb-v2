@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    auto obj = new QRubberBand( static_cast<QRubberBand::Shape>( hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QRubberBand(static_cast<QRubberBand::Shape>(hb_parni(1)), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 
     if (obj != nullptr)
     {
-      obj->move( *PQPOINT(1));
+      obj->move(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 
     if (obj != nullptr)
     {
-      obj->resize( *PQSIZE(1));
+      obj->resize(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 
     if (obj != nullptr)
     {
-      obj->setGeometry( *PQRECT(1));
+      obj->setGeometry(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

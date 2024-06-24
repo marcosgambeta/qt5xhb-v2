@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
     if (ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2))
     {
 #endif
-      auto ptr = new QSize(obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)));
+      auto ptr = new QSize(obj->sizeHint(*PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
     if (ISNUMPAR(2) && ISQVARIANT(1) && ISQLOCALE(2))
     {
 #endif
-      RQSTRING(obj->displayText( *PQVARIANT(1), *PQLOCALE(2)));
+      RQSTRING(obj->displayText(*PQVARIANT(1), *PQLOCALE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

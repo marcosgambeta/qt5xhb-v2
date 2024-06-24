@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
     /*
     QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
     */
-    auto obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1));
+    auto obj = new QStyleOptionProgressBar(*PQSTYLEOPTIONPROGRESSBAR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1));
+      obj->textAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     }
     else
     {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETORIENTATION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->orientation = static_cast<Qt::Orientation>( hb_parni(1));
+      obj->orientation = static_cast<Qt::Orientation>(hb_parni(1));
     }
     else
     {

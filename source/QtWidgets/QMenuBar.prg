@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = obj->actionAt( *PQPOINT(1));
+      auto ptr = obj->actionAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->cornerWidget( HB_ISNIL(1) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >( hb_parni(1)));
+      auto ptr = obj->cornerWidget( HB_ISNIL(1) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >(hb_parni(1)));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >( hb_parni(2)));
+      obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QMENUBAR_TONSMENU )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< NSMenu*>(obj->toNSMenu()));
+      hb_retptr(static_cast< NSMenu*>(obj->toNSMenu()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

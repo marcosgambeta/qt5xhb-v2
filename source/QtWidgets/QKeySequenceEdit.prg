@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
     QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QKeySequenceEdit(*PQKEYSEQUENCE(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
     if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
-      obj->setKeySequence( *PQKEYSEQUENCE(1));
+      obj->setKeySequence(*PQKEYSEQUENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

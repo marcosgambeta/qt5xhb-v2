@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QTILERULES_NEW )
     /*
     QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
     */
-    auto obj = new QTileRules( static_cast<Qt::TileRule>( hb_parni(1)), static_cast<Qt::TileRule>( hb_parni(2)));
+    auto obj = new QTileRules(static_cast<Qt::TileRule>(hb_parni(1)), static_cast<Qt::TileRule>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTILERULES_NEW )
     /*
     QTileRules( Qt::TileRule rule = Qt::StretchTile )
     */
-    auto obj = new QTileRules( HB_ISNIL(1) ? static_cast<Qt::TileRule >( Qt::StretchTile ) : static_cast<Qt::TileRule >( hb_parni(1)));
+    auto obj = new QTileRules( HB_ISNIL(1) ? static_cast<Qt::TileRule >( Qt::StretchTile ) : static_cast<Qt::TileRule >(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }

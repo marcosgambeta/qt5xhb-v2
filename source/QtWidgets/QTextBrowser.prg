@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1));
+      obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

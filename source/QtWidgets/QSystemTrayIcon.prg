@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
     if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->showMessage(PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? static_cast<QSystemTrayIcon::MessageIcon >( QSystemTrayIcon::Information ) : static_cast<QSystemTrayIcon::MessageIcon >( hb_parni(3)), OPINT( 4, 10000));
+      obj->showMessage(PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? static_cast<QSystemTrayIcon::MessageIcon >( QSystemTrayIcon::Information ) : static_cast<QSystemTrayIcon::MessageIcon >(hb_parni(3)), OPINT( 4, 10000));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

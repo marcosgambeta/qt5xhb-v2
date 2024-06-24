@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
     /*
     QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
     */
-    auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1));
+    auto obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>( hb_parni(1));
+      obj->features = static_cast<QStyleOptionFrame::FrameFeatures>(hb_parni(1));
     }
     else
     {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment = static_cast<Qt::Alignment>( hb_parni(1));
+      obj->textAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     }
     else
     {

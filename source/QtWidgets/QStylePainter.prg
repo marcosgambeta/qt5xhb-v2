@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2))
     {
 #endif
-      obj->drawPrimitive( static_cast<QStyle::PrimitiveElement>( hb_parni(1)), *PQSTYLEOPTION(2));
+      obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2))
     {
 #endif
-      obj->drawControl( static_cast<QStyle::ControlElement>( hb_parni(1)), *PQSTYLEOPTION(2));
+      obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2))
     {
 #endif
-      obj->drawComplexControl( static_cast<QStyle::ComplexControl>( hb_parni(1)), *PQSTYLEOPTIONCOMPLEX(2));
+      obj->drawComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), *PQSTYLEOPTIONCOMPLEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
     if (ISBETWEEN(5, 6) && ISQRECT(1) && HB_ISNUM(2) && ISQPALETTE(3) && HB_ISLOG(4) && HB_ISCHAR(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
     {
 #endif
-      obj->drawItemText( *PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), HB_ISNIL(6) ? static_cast<QPalette::ColorRole >( QPalette::NoRole ) : static_cast<QPalette::ColorRole >( hb_parni(6)));
+      obj->drawItemText(*PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), HB_ISNIL(6) ? static_cast<QPalette::ColorRole >( QPalette::NoRole ) : static_cast<QPalette::ColorRole >(hb_parni(6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
     if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3))
     {
 #endif
-      obj->drawItemPixmap( *PQRECT(1), PINT(2), *PQPIXMAP(3));
+      obj->drawItemPixmap(*PQRECT(1), PINT(2), *PQPIXMAP(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
     /*
     QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QGraphicsPolygonItem(*PQPOLYGONF(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFillRule( static_cast<Qt::FillRule>( hb_parni(1)));
+      obj->setFillRule(static_cast<Qt::FillRule>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
     if (ISNUMPAR(1) && ISQPOLYGONF(1))
     {
 #endif
-      obj->setPolygon( *PQPOLYGONF(1));
+      obj->setPolygon(*PQPOLYGONF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

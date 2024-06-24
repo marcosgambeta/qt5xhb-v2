@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
     /*
     QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
     */
-    auto obj = new QGraphicsLinearLayout( static_cast<Qt::Orientation>( hb_parni(1)), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsLayoutItem*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QGraphicsLinearLayout(static_cast<Qt::Orientation>(hb_parni(1)), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsLayoutItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
     if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Alignment>( hb_parni(2)));
+      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Alignment>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1));
+      obj->setGeometry(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QSizeF(obj->sizeHint( static_cast<Qt::SizeHint>( hb_parni(1)), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2))));
+      auto ptr = new QSizeF(obj->sizeHint(static_cast<Qt::SizeHint>(hb_parni(1)), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

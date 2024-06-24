@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSLIDER_NEW )
     /*
     QSlider( Qt::Orientation orientation, QWidget * parent = nullptr )
     */
-    auto obj = new QSlider( static_cast<Qt::Orientation>( hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QSlider(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTickPosition( static_cast<QSlider::TickPosition>( hb_parni(1)));
+      obj->setTickPosition(static_cast<QSlider::TickPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

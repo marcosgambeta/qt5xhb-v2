@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGridStyle( static_cast<Qt::PenStyle>( hb_parni(1)));
+      obj->setGridStyle(static_cast<Qt::PenStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX(1));
+      obj->setRootIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VISUALRECT )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QRect(obj->visualRect( *PQMODELINDEX(1)));
+      auto ptr = new QRect(obj->visualRect(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SCROLLTO )
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >( hb_parni(2)));
+      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->indexAt( *PQPOINT(1)));
+      auto ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->sortByColumn(PINT(1), static_cast<Qt::SortOrder>( hb_parni(2)));
+      obj->sortByColumn(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

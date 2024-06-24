@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QFrame( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+    auto obj = new QFrame( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setFrameRect( *PQRECT(1));
+      obj->setFrameRect(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFrameShadow( static_cast<QFrame::Shadow>( hb_parni(1)));
+      obj->setFrameShadow(static_cast<QFrame::Shadow>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFrameShape( static_cast<QFrame::Shape>( hb_parni(1)));
+      obj->setFrameShape(static_cast<QFrame::Shape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

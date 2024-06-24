@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->availableGeometry( *PQPOINT(1)));
+      auto ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->screenGeometry( *PQPOINT(1)));
+      auto ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 
     if (obj != nullptr)
     {
-      RINT(obj->screenNumber( *PQPOINT(1)));
+      RINT(obj->screenNumber(*PQPOINT(1)));
     }
 
   }

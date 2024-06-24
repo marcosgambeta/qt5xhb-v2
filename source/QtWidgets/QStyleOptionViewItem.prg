@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
     /*
     QStyleOptionViewItem( const QStyleOptionViewItem & other )
     */
-    auto obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1));
+    auto obj = new QStyleOptionViewItem(*PQSTYLEOPTIONVIEWITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->displayAlignment = static_cast<Qt::Alignment>( hb_parni(1));
+      obj->displayAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     }
     else
     {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->decorationAlignment = static_cast<Qt::Alignment>( hb_parni(1));
+      obj->decorationAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     }
     else
     {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textElideMode = static_cast<Qt::TextElideMode>( hb_parni(1));
+      obj->textElideMode = static_cast<Qt::TextElideMode>(hb_parni(1));
     }
     else
     {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->decorationPosition = static_cast<QStyleOptionViewItem::Position>( hb_parni(1));
+      obj->decorationPosition = static_cast<QStyleOptionViewItem::Position>(hb_parni(1));
     }
     else
     {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFEATURES )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = static_cast<QStyleOptionViewItem::ViewItemFeatures>( hb_parni(1));
+      obj->features = static_cast<QStyleOptionViewItem::ViewItemFeatures>(hb_parni(1));
     }
     else
     {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETCHECKSTATE )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->checkState = static_cast<Qt::CheckState>( hb_parni(1));
+      obj->checkState = static_cast<Qt::CheckState>(hb_parni(1));
     }
     else
     {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETVIEWITEMPOSITION )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->viewItemPosition = static_cast<QStyleOptionViewItem::ViewItemPosition>( hb_parni(1));
+      obj->viewItemPosition = static_cast<QStyleOptionViewItem::ViewItemPosition>(hb_parni(1));
     }
     else
     {

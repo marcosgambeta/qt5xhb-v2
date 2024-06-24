@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setCenterPoint( *PQPOINTF(1));
+      obj->setCenterPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setChangeFlags( static_cast<QPinchGesture::ChangeFlags>( hb_parni(1)));
+      obj->setChangeFlags(static_cast<QPinchGesture::ChangeFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setLastCenterPoint( *PQPOINTF(1));
+      obj->setLastCenterPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setStartCenterPoint( *PQPOINTF(1));
+      obj->setStartCenterPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTotalChangeFlags( static_cast<QPinchGesture::ChangeFlags>( hb_parni(1)));
+      obj->setTotalChangeFlags(static_cast<QPinchGesture::ChangeFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

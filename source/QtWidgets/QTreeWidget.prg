@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( *PQPOINT(1));
+      auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 
     if (obj != nullptr)
     {
-      obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>( hb_parni(3)));
+      obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->sortItems(PINT(1), static_cast<Qt::SortOrder>( hb_parni(2)));
+      obj->sortItems(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
     if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->scrollToItem(PQTREEWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >( hb_parni(2)));
+      obj->scrollToItem(PQTREEWIDGETITEM(1), HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint >( QAbstractItemView::EnsureVisible ) : static_cast<QAbstractItemView::ScrollHint >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

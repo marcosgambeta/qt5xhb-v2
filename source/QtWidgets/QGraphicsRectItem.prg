@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
     /*
     QGraphicsRectItem( const QRectF & rect, QGraphicsItem * parent = nullptr )
     */
-    auto obj = new QGraphicsRectItem( *PQRECTF(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QGraphicsRectItem(*PQRECTF(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
 
     if (obj != nullptr)
     {
-      obj->setRect( *PQRECTF(1));
+      obj->setRect(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_CONTAINS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

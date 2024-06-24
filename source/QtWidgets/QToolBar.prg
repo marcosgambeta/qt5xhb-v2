@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->actionAt( *PQPOINT(1));
+      auto ptr = obj->actionAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isAreaAllowed( static_cast<Qt::ToolBarArea>( hb_parni(1))));
+      RBOOL(obj->isAreaAllowed(static_cast<Qt::ToolBarArea>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAllowedAreas( static_cast<Qt::ToolBarAreas>( hb_parni(1)));
+      obj->setAllowedAreas(static_cast<Qt::ToolBarAreas>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setIconSize( *PQSIZE(1));
+      obj->setIconSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setToolButtonStyle( static_cast<Qt::ToolButtonStyle>( hb_parni(1)));
+      obj->setToolButtonStyle(static_cast<Qt::ToolButtonStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
     /*
     QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
     */
-    auto obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1));
+    auto obj = new QStyleOptionTitleBar(*PQSTYLEOPTIONTITLEBAR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS )
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->titleBarFlags = static_cast<Qt::WindowFlags>( hb_parni(1));
+      obj->titleBarFlags = static_cast<Qt::WindowFlags>(hb_parni(1));
     }
     else
     {

@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RINT(obj->cursorPositionAt( *PQPOINT(1)));
+      RINT(obj->cursorPositionAt(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEchoMode( static_cast<QLineEdit::EchoMode>( hb_parni(1)));
+      obj->setEchoMode(static_cast<QLineEdit::EchoMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -729,10 +729,10 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
       int par3;
       int par4;
       obj->getTextMargins( &par1, &par2, &par3, &par4);
-      hb_storni( par1, 1);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 
     if (obj != nullptr)
     {
-      obj->setTextMargins( *PQMARGINS(1));
+      obj->setTextMargins(*PQMARGINS(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1))));
+      auto ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1699,7 +1699,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORMOVESTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCursorMoveStyle( static_cast<Qt::CursorMoveStyle>( hb_parni(1)));
+      obj->setCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1773,7 +1773,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 
     if (obj != nullptr)
     {
-      obj->addAction(PQACTION(1), static_cast<QLineEdit::ActionPosition>( hb_parni(2)));
+      obj->addAction(PQACTION(1), static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1788,7 +1788,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), static_cast<QLineEdit::ActionPosition>( hb_parni(2)));
+      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 

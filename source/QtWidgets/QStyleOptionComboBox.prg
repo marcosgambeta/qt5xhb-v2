@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
     /*
     QStyleOptionComboBox( const QStyleOptionComboBox & other )
     */
-    auto obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1));
+    auto obj = new QStyleOptionComboBox(*PQSTYLEOPTIONCOMBOBOX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

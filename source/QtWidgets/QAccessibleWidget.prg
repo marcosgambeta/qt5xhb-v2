@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
   if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)))
   {
-    auto obj = new QAccessibleWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<QAccessible::Role >( QAccessible::Client ) : static_cast<QAccessible::Role >( hb_parni(2)), OPQSTRING(3, QString()));
+    auto obj = new QAccessibleWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<QAccessible::Role >( QAccessible::Client ) : static_cast<QAccessible::Role >(hb_parni(2)), OPQSTRING(3, QString()));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING(obj->text( static_cast<QAccessible::Text>( hb_parni(1))));
+      RQSTRING(obj->text(static_cast<QAccessible::Text>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->interface_cast( static_cast<QAccessible::InterfaceType>( hb_parni(1)))));
+      hb_retptr(static_cast< void*>(obj->interface_cast(static_cast<QAccessible::InterfaceType>(hb_parni(1)))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

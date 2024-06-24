@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1));
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

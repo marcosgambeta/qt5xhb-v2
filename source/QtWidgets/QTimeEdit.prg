@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW )
     /*
     QTimeEdit( const QTime & time, QWidget * parent = nullptr )
     */
-    auto obj = new QTimeEdit( *PQTIME(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QTimeEdit(*PQTIME(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }

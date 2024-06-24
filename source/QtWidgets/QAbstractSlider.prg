@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<Qt::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->triggerAction( static_cast<QAbstractSlider::SliderAction>( hb_parni(1)));
+      obj->triggerAction(static_cast<QAbstractSlider::SliderAction>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

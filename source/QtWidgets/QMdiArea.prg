@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+      auto ptr = obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
       Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setActivationOrder( static_cast<QMdiArea::WindowOrder>( hb_parni(1)));
+      obj->setActivationOrder(static_cast<QMdiArea::WindowOrder>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1));
+      obj->setBackground(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setOption( static_cast<QMdiArea::AreaOption>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setOption(static_cast<QMdiArea::AreaOption>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTabPosition( static_cast<QTabWidget::TabPosition>( hb_parni(1)));
+      obj->setTabPosition(static_cast<QTabWidget::TabPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTabShape( static_cast<QTabWidget::TabShape>( hb_parni(1)));
+      obj->setTabShape(static_cast<QTabWidget::TabShape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setViewMode( static_cast<QMdiArea::ViewMode>( hb_parni(1)));
+      obj->setViewMode(static_cast<QMdiArea::ViewMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -490,12 +490,12 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto list = obj->subWindowList( HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder >( QMdiArea::CreationOrder ) : static_cast<QMdiArea::WindowOrder >( hb_parni(1)));
+      auto list = obj->subWindowList( HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder >( QMdiArea::CreationOrder ) : static_cast<QMdiArea::WindowOrder >(hb_parni(1)));
       auto pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->testOption( static_cast<QMdiArea::AreaOption>( hb_parni(1))));
+      RBOOL(obj->testOption(static_cast<QMdiArea::AreaOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

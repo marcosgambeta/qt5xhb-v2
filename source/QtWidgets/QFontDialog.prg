@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
     /*
     QFontDialog( const QFont & initial, QWidget * parent = nullptr )
     */
-    auto obj = new QFontDialog( *PQFONT(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QFontDialog(*PQFONT(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setCurrentFont( *PQFONT(1));
+      obj->setCurrentFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOptions( static_cast<QFontDialog::FontDialogOptions>( hb_parni(1)));
+      obj->setOptions(static_cast<QFontDialog::FontDialogOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setOption( static_cast<QFontDialog::FontDialogOption>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setOption(static_cast<QFontDialog::FontDialogOption>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->testOption( static_cast<QFontDialog::FontDialogOption>( hb_parni(1))));
+      RBOOL(obj->testOption(static_cast<QFontDialog::FontDialogOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
     bool par1;
     auto ptr = new QFont( QFontDialog::getFont( &par1, OPQWIDGET( 2, nullptr )));
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
-    hb_storl( par1, 1);
+    hb_storl(par1, 1);
 
   }
   else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
@@ -355,9 +355,9 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
     */
 
     bool par1;
-    auto ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), OPQWIDGET( 3, nullptr ), OPQSTRING(4, QString() ), HB_ISNIL(5) ? static_cast<QFontDialog::FontDialogOptions >( 0 ) : static_cast<QFontDialog::FontDialogOptions >( hb_parni(5))));
+    auto ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), OPQWIDGET( 3, nullptr ), OPQSTRING(4, QString() ), HB_ISNIL(5) ? static_cast<QFontDialog::FontDialogOptions >( 0 ) : static_cast<QFontDialog::FontDialogOptions >(hb_parni(5))));
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
-    hb_storl( par1, 1);
+    hb_storl(par1, 1);
 
   }
   else

@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING(obj->buttonText( static_cast<QWizard::WizardButton>( hb_parni(1))));
+      RQSTRING(obj->buttonText(static_cast<QWizard::WizardButton>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setButtonText( static_cast<QWizard::WizardButton>( hb_parni(1)), PQSTRING(2));
+      obj->setButtonText(static_cast<QWizard::WizardButton>(hb_parni(1)), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QPixmap(obj->pixmap( static_cast<QWizard::WizardPixmap>( hb_parni(1))));
+      auto ptr = new QPixmap(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2))
     {
 #endif
-      obj->setPixmap( static_cast<QWizard::WizardPixmap>( hb_parni(1)), *PQPIXMAP(2));
+      obj->setPixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1)), *PQPIXMAP(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

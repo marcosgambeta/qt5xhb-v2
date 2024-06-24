@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

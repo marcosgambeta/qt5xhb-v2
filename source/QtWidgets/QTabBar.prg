@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setElideMode( static_cast<Qt::TextElideMode>( hb_parni(1)));
+      obj->setElideMode(static_cast<Qt::TextElideMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QTABBAR_SETICONSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setIconSize( *PQSIZE(1));
+      obj->setIconSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSelectionBehaviorOnRemove( static_cast<QTabBar::SelectionBehavior>( hb_parni(1)));
+      obj->setSelectionBehaviorOnRemove(static_cast<QTabBar::SelectionBehavior>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QTABBAR_SETSHAPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShape( static_cast<QTabBar::Shape>( hb_parni(1)));
+      obj->setShape(static_cast<QTabBar::Shape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3))
     {
 #endif
-      obj->setTabButton(PINT(1), static_cast<QTabBar::ButtonPosition>( hb_parni(2)), PQWIDGET(3));
+      obj->setTabButton(PINT(1), static_cast<QTabBar::ButtonPosition>(hb_parni(2)), PQWIDGET(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QTABBAR_TABAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RINT(obj->tabAt( *PQPOINT(1)));
+      RINT(obj->tabAt(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = obj->tabButton(PINT(1), static_cast<QTabBar::ButtonPosition>( hb_parni(2)));
+      auto ptr = obj->tabButton(PINT(1), static_cast<QTabBar::ButtonPosition>(hb_parni(2)));
       Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

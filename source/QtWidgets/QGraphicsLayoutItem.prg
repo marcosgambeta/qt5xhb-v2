@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QSizeF(obj->effectiveSizeHint( static_cast<Qt::SizeHint>( hb_parni(1)), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2))));
+      auto ptr = new QSizeF(obj->effectiveSizeHint(static_cast<Qt::SizeHint>(hb_parni(1)), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>(Qt5xHb::itemGetPtr(2))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -198,10 +198,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
       qreal par3;
       qreal par4;
       obj->getContentsMargins( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1));
+      obj->setGeometry(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 
     if (obj != nullptr)
     {
-      obj->setMaximumSize( *PQSIZEF(1));
+      obj->setMaximumSize(*PQSIZEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 
     if (obj != nullptr)
     {
-      obj->setMinimumSize( *PQSIZEF(1));
+      obj->setMinimumSize(*PQSIZEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 
     if (obj != nullptr)
     {
-      obj->setPreferredSize( *PQSIZEF(1));
+      obj->setPreferredSize(*PQSIZEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 
     if (obj != nullptr)
     {
-      obj->setSizePolicy( *PQSIZEPOLICY(1));
+      obj->setSizePolicy(*PQSIZEPOLICY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 
     if (obj != nullptr)
     {
-      obj->setSizePolicy( static_cast<QSizePolicy::Policy>( hb_parni(1)), static_cast<QSizePolicy::Policy>( hb_parni(2)), HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType >( QSizePolicy::DefaultType ) : static_cast<QSizePolicy::ControlType >( hb_parni(3)));
+      obj->setSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)), HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType >( QSizePolicy::DefaultType ) : static_cast<QSizePolicy::ControlType >(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
