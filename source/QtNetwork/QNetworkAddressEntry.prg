@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
     /*
     QNetworkAddressEntry( const QNetworkAddressEntry & other )
     */
-    auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1));
+    auto obj = new QNetworkAddressEntry(*PQNETWORKADDRESSENTRY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setBroadcast( *PQHOSTADDRESS(1));
+      obj->setBroadcast(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setIp( *PQHOSTADDRESS(1));
+      obj->setIp(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setNetmask( *PQHOSTADDRESS(1));
+      obj->setNetmask(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SWAP )
     if (ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1))
     {
 #endif
-      obj->swap( *PQNETWORKADDRESSENTRY(1));
+      obj->swap(*PQNETWORKADDRESSENTRY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

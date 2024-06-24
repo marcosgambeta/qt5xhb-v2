@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
     /*
     QAuthenticator( const QAuthenticator & other )
     */
-    auto obj = new QAuthenticator( *PQAUTHENTICATOR(1));
+    auto obj = new QAuthenticator(*PQAUTHENTICATOR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

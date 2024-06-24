@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
     /*
     QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = nullptr )
     */
-    auto obj = new QHttpMultiPart( static_cast<QHttpMultiPart::ContentType>( hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QHttpMultiPart(static_cast<QHttpMultiPart::ContentType>(hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
     if (ISNUMPAR(1) && ISQHTTPPART(1))
     {
 #endif
-      obj->append( *PQHTTPPART(1));
+      obj->append(*PQHTTPPART(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setBoundary( *PQBYTEARRAY(1));
+      obj->setBoundary(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContentType( static_cast<QHttpMultiPart::ContentType>( hb_parni(1)));
+      obj->setContentType(static_cast<QHttpMultiPart::ContentType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
     /*
     QSslCertificateExtension( const QSslCertificateExtension & other )
     */
-    auto obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1));
+    auto obj = new QSslCertificateExtension(*PQSSLCERTIFICATEEXTENSION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
     if (ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1))
     {
 #endif
-      obj->swap( *PQSSLCERTIFICATEEXTENSION(1));
+      obj->swap(*PQSSLCERTIFICATEEXTENSION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

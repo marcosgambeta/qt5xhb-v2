@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
     /*
     QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
     */
-    auto obj = new QDnsLookup( static_cast<QDnsLookup::Type>( hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QDnsLookup(static_cast<QDnsLookup::Type>(hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
     QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QDnsLookup( static_cast<QDnsLookup::Type>( hb_parni(1)), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT( 4, nullptr));
+    auto obj = new QDnsLookup(static_cast<QDnsLookup::Type>(hb_parni(1)), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<QDnsLookup::Type>( hb_parni(1)));
+      obj->setType(static_cast<QDnsLookup::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->setNameserver( *PQHOSTADDRESS(1));
+      obj->setNameserver(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

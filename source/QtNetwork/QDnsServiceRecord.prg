@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
     /*
     QDnsServiceRecord( const QDnsServiceRecord & other )
     */
-    auto obj = new QDnsServiceRecord( *PQDNSSERVICERECORD(1));
+    auto obj = new QDnsServiceRecord(*PQDNSSERVICERECORD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
     if (ISNUMPAR(1) && ISQDNSSERVICERECORD(1))
     {
 #endif
-      obj->swap( *PQDNSSERVICERECORD(1));
+      obj->swap(*PQDNSSERVICERECORD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

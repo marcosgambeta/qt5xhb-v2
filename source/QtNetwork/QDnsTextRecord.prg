@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
     /*
     QDnsTextRecord( const QDnsTextRecord & other )
     */
-    auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1));
+    auto obj = new QDnsTextRecord(*PQDNSTEXTRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_SWAP )
     if (ISNUMPAR(1) && ISQDNSTEXTRECORD(1))
     {
 #endif
-      obj->swap( *PQDNSTEXTRECORD(1));
+      obj->swap(*PQDNSTEXTRECORD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

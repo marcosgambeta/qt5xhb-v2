@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = obj->data( *PQURL(1));
+      auto ptr = obj->data(*PQURL(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QNetworkCacheMetaData(obj->metaData( *PQURL(1)));
+      auto ptr = new QNetworkCacheMetaData(obj->metaData(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
     if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
     {
 #endif
-      auto ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1));
+      auto ptr = obj->prepare(*PQNETWORKCACHEMETADATA(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      RBOOL(obj->remove( *PQURL(1)));
+      RBOOL(obj->remove(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
     if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
     {
 #endif
-      obj->updateMetaData( *PQNETWORKCACHEMETADATA(1));
+      obj->updateMetaData(*PQNETWORKCACHEMETADATA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

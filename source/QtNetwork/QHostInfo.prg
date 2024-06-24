@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
     /*
     QHostInfo( const QHostInfo & other )
     */
-    auto obj = new QHostInfo( *PQHOSTINFO(1));
+    auto obj = new QHostInfo(*PQHOSTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHOSTINFO_SWAP )
     if (ISNUMPAR(1) && ISQHOSTINFO(1))
     {
 #endif
-      obj->swap( *PQHOSTINFO(1));
+      obj->swap(*PQHOSTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -259,13 +259,13 @@ HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
     {
 #endif
       QList<QHostAddress> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QHostAddress*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QHostAddress*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setAddresses( par1);
+      obj->setAddresses(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERROR )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setError( static_cast<QHostInfo::HostInfoError>( hb_parni(1)));
+      obj->setError(static_cast<QHostInfo::HostInfoError>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

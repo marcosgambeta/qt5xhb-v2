@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 
     if (obj != nullptr)
     {
-      obj->connectToServer( HB_ISNIL(1) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >( hb_parni(1)));
+      obj->connectToServer( HB_ISNIL(1) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 
     if (obj != nullptr)
     {
-      obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >( hb_parni(2)));
+      obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_OPEN )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL(obj->open( HB_ISNIL(1) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >( hb_parni(1))));
+      RBOOL(obj->open( HB_ISNIL(1) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETSOCKETDESCRIPTOR )
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setSocketDescriptor(PQINTPTR(1), HB_ISNIL(2) ? static_cast<QLocalSocket::LocalSocketState >( QLocalSocket::ConnectedState ) : static_cast<QLocalSocket::LocalSocketState >( hb_parni(2)), HB_ISNIL(3) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >( hb_parni(3))));
+      RBOOL(obj->setSocketDescriptor(PQINTPTR(1), HB_ISNIL(2) ? static_cast<QLocalSocket::LocalSocketState >( QLocalSocket::ConnectedState ) : static_cast<QLocalSocket::LocalSocketState >(hb_parni(2)), HB_ISNIL(3) ? static_cast<QIODevice::OpenMode >( QIODevice::ReadWrite ) : static_cast<QIODevice::OpenMode >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

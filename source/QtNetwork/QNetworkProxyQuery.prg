@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest )
     */
-    auto obj = new QNetworkProxyQuery( *PQURL(1), HB_ISNIL(2) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::UrlRequest ) : static_cast<QNetworkProxyQuery::QueryType >( hb_parni(2)));
+    auto obj = new QNetworkProxyQuery(*PQURL(1), HB_ISNIL(2) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::UrlRequest ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
     */
-    auto obj = new QNetworkProxyQuery(PQSTRING(1), PINT(2), OPQSTRING(3, QString() ), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpSocket ) : static_cast<QNetworkProxyQuery::QueryType >( hb_parni(4)));
+    auto obj = new QNetworkProxyQuery(PQSTRING(1), PINT(2), OPQSTRING(3, QString() ), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpSocket ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer )
     */
-    auto obj = new QNetworkProxyQuery(PQUINT16(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpServer ) : static_cast<QNetworkProxyQuery::QueryType >( hb_parni(3)));
+    auto obj = new QNetworkProxyQuery(PQUINT16(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpServer ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest )
     */
-    auto obj = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), *PQURL(2), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::UrlRequest ) : static_cast<QNetworkProxyQuery::QueryType >( hb_parni(3)));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), *PQURL(2), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::UrlRequest ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
     */
-    auto obj = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), PQSTRING(2), PINT(3), OPQSTRING(4, QString() ), HB_ISNIL(5) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpSocket ) : static_cast<QNetworkProxyQuery::QueryType >( hb_parni(5)));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQSTRING(2), PINT(3), OPQSTRING(4, QString() ), HB_ISNIL(5) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpSocket ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer )
     */
-    auto obj = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3, QString() ), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpServer ) : static_cast<QNetworkProxyQuery::QueryType >( hb_parni(4)));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3, QString() ), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpServer ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
     /*
     QNetworkProxyQuery( const QNetworkProxyQuery & other )
     */
-    auto obj = new QNetworkProxyQuery( *PQNETWORKPROXYQUERY(1));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKPROXYQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setQueryType( static_cast<QNetworkProxyQuery::QueryType>( hb_parni(1)));
+      obj->setQueryType(static_cast<QNetworkProxyQuery::QueryType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SWAP )
     if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
     {
 #endif
-      obj->swap( *PQNETWORKPROXYQUERY(1));
+      obj->swap(*PQNETWORKPROXYQUERY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION )
     if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
     {
 #endif
-      obj->setNetworkConfiguration( *PQNETWORKCONFIGURATION(1));
+      obj->setNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

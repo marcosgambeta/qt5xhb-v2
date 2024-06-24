@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->header( static_cast<QNetworkRequest::KnownHeaders>( hb_parni(1))));
+      auto ptr = new QVariant(obj->header(static_cast<QNetworkRequest::KnownHeaders>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RBOOL(obj->hasRawHeader( *PQBYTEARRAY(1)));
+      RBOOL(obj->hasRawHeader(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->rawHeader( *PQBYTEARRAY(1)));
+      auto ptr = new QByteArray(obj->rawHeader(*PQBYTEARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->attribute( static_cast<QNetworkRequest::Attribute>( hb_parni(1))));
+      auto ptr = new QVariant(obj->attribute(static_cast<QNetworkRequest::Attribute>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
     if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
     {
 #endif
-      obj->setSslConfiguration( *PQSSLCONFIGURATION(1));
+      obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,13 +619,13 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
     if (obj != nullptr)
     {
       QList<QSslError> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QSslError*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QSslError*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->ignoreSslErrors( par1);
+      obj->ignoreSslErrors(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
     /*
     QSslCipher( const QString & name, QSsl::SslProtocol protocol )
     */
-    auto obj = new QSslCipher(PQSTRING(1), static_cast<QSsl::SslProtocol>( hb_parni(2)));
+    auto obj = new QSslCipher(PQSTRING(1), static_cast<QSsl::SslProtocol>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
     /*
     QSslCipher( const QSslCipher & other )
     */
-    auto obj = new QSslCipher( *PQSSLCIPHER(1));
+    auto obj = new QSslCipher(*PQSSLCIPHER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SWAP )
     if (ISNUMPAR(1) && ISQSSLCIPHER(1))
     {
 #endif
-      obj->swap( *PQSSLCIPHER(1));
+      obj->swap(*PQSSLCIPHER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

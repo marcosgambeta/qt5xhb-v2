@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_WRITEDATAGRAM )
     if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1))
     {
 #endif
-      RBOOL(obj->writeDatagram( *PQNETWORKDATAGRAM(1)));
+      RBOOL(obj->writeDatagram(*PQNETWORKDATAGRAM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

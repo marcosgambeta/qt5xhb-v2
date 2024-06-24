@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
 #endif
       bool par2;
       RBOOL(obj->waitForNewConnection( OPINT( 1, 0 ), &par2));
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
     if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
     {
 #endif
-      obj->setProxy( *PQNETWORKPROXY(1));
+      obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

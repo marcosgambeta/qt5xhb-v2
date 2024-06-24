@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNetworkAccessible( static_cast<QNetworkAccessManager::NetworkAccessibility>( hb_parni(1)));
+      obj->setNetworkAccessible(static_cast<QNetworkAccessManager::NetworkAccessibility>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
     if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
     {
 #endif
-      obj->setProxy( *PQNETWORKPROXY(1));
+      obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -602,13 +602,13 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS )
     {
 #endif
       QVector<QHstsPolicy> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QHstsPolicy*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QHstsPolicy*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->addStrictTransportSecurityHosts( par1);
+      obj->addStrictTransportSecurityHosts(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
     if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
     {
 #endif
-      auto ptr = obj->head( *PQNETWORKREQUEST(1));
+      auto ptr = obj->head(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
     if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
     {
 #endif
-      auto ptr = obj->get( *PQNETWORKREQUEST(1));
+      auto ptr = obj->get(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->post( *PQNETWORKREQUEST(1), PQIODEVICE(2));
+      auto ptr = obj->post(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->post( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
+      auto ptr = obj->post(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->post( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
+      auto ptr = obj->post(*PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->put( *PQNETWORKREQUEST(1), PQIODEVICE(2));
+      auto ptr = obj->put(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->put( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
+      auto ptr = obj->put(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->put( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
+      auto ptr = obj->put(*PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
     if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
     {
 #endif
-      auto ptr = obj->deleteResource( *PQNETWORKREQUEST(1));
+      auto ptr = obj->deleteResource(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE( 3, nullptr));
+      auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE( 3, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3));
+      auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 #endif
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3));
+      auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 #endif
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
     if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
     {
 #endif
-      obj->setConfiguration( *PQNETWORKCONFIGURATION(1));
+      obj->setConfiguration(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETREDIRECTPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRedirectPolicy( static_cast<QNetworkRequest::RedirectPolicy>( hb_parni(1)));
+      obj->setRedirectPolicy(static_cast<QNetworkRequest::RedirectPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
             auto pArg2 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg2 )
+              for (const auto & item : arg2)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

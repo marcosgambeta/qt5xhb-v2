@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
     /*
     QNetworkConfiguration( const QNetworkConfiguration & other )
     */
-    auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1));
+    auto obj = new QNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
     if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
     {
 #endif
-      obj->swap( *PQNETWORKCONFIGURATION(1));
+      obj->swap(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

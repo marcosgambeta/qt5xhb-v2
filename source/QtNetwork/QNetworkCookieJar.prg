@@ -106,12 +106,12 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto list = obj->cookiesForUrl( *PQURL(1));
+      auto list = obj->cookiesForUrl(*PQURL(1));
       auto pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -157,13 +157,13 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
     {
 #endif
       QList<QNetworkCookie> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QNetworkCookie*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QNetworkCookie*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      RBOOL(obj->setCookiesFromUrl( par1, *PQURL(2)));
+      RBOOL(obj->setCookiesFromUrl(par1, *PQURL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_INSERTCOOKIE )
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
 #endif
-      RBOOL(obj->insertCookie( *PQNETWORKCOOKIE(1)));
+      RBOOL(obj->insertCookie(*PQNETWORKCOOKIE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_UPDATECOOKIE )
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
 #endif
-      RBOOL(obj->updateCookie( *PQNETWORKCOOKIE(1)));
+      RBOOL(obj->updateCookie(*PQNETWORKCOOKIE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
 #endif
-      RBOOL(obj->deleteCookie( *PQNETWORKCOOKIE(1)));
+      RBOOL(obj->deleteCookie(*PQNETWORKCOOKIE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

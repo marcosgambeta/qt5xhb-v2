@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->joinMulticastGroup( *PQHOSTADDRESS(1)));
+      RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1)));
     }
 
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->joinMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
+      RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
 
   }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->leaveMulticastGroup( *PQHOSTADDRESS(1)));
+      RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1)));
     }
 
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->leaveMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
+      RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
 
   }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QUDPSOCKET_SETMULTICASTINTERFACE )
     if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
     {
 #endif
-      obj->setMulticastInterface( *PQNETWORKINTERFACE(1));
+      obj->setMulticastInterface(*PQNETWORKINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 
     if (obj != nullptr)
     {
-      RQINT64(obj->writeDatagram( *PQNETWORKDATAGRAM(1)));
+      RQINT64(obj->writeDatagram(*PQNETWORKDATAGRAM(1)));
     }
 #endif
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 
     if (obj != nullptr)
     {
-      RQINT64(obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)));
+      RQINT64(obj->writeDatagram(*PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)));
     }
 
   }

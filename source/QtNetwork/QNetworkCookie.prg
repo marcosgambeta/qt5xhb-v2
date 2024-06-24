@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
     /*
     QNetworkCookie( const QNetworkCookie & other )
     */
-    auto obj = new QNetworkCookie( *PQNETWORKCOOKIE(1));
+    auto obj = new QNetworkCookie(*PQNETWORKCOOKIE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setExpirationDate( *PQDATETIME(1));
+      obj->setExpirationDate(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setName( *PQBYTEARRAY(1));
+      obj->setName(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setValue( *PQBYTEARRAY(1));
+      obj->setValue(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = new QByteArray(obj->toRawForm( HB_ISNIL(1) ? static_cast<QNetworkCookie::RawForm >( QNetworkCookie::Full ) : static_cast<QNetworkCookie::RawForm >( hb_parni(1))));
+      auto ptr = new QByteArray(obj->toRawForm( HB_ISNIL(1) ? static_cast<QNetworkCookie::RawForm >( QNetworkCookie::Full ) : static_cast<QNetworkCookie::RawForm >(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -535,12 +535,12 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto list = QNetworkCookie::parseCookies( *PQBYTEARRAY(1));
+    auto list = QNetworkCookie::parseCookies(*PQBYTEARRAY(1));
     auto pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SWAP )
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
 #endif
-      obj->swap( *PQNETWORKCOOKIE(1));
+      obj->swap(*PQNETWORKCOOKIE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_HASSAMEIDENTIFIER )
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
 #endif
-      RBOOL(obj->hasSameIdentifier( *PQNETWORKCOOKIE(1)));
+      RBOOL(obj->hasSameIdentifier(*PQNETWORKCOOKIE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NORMALIZE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->normalize( *PQURL(1));
+      obj->normalize(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
     /*
     QNetworkInterface( const QNetworkInterface & other )
     */
-    auto obj = new QNetworkInterface( *PQNETWORKINTERFACE(1));
+    auto obj = new QNetworkInterface(*PQNETWORKINTERFACE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_SWAP )
     if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
     {
 #endif
-      obj->swap( *PQNETWORKINTERFACE(1));
+      obj->swap(*PQNETWORKINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

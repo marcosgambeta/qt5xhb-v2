@@ -84,7 +84,7 @@ QHostAddress( QHostAddress::SpecialAddress address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW9 )
 {
-  auto obj = new QHostAddress( static_cast<QHostAddress::SpecialAddress>( hb_parni(1)));
+  auto obj = new QHostAddress(static_cast<QHostAddress::SpecialAddress>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     /*
     QHostAddress( const QHostAddress & copy )
     */
-    auto obj = new QHostAddress( *PQHOSTADDRESS(1));
+    auto obj = new QHostAddress(*PQHOSTADDRESS(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SWAP )
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
 #endif
-      obj->swap( *PQHOSTADDRESS(1));
+      obj->swap(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
     {
       bool par1;
       RQUINT32(obj->toIPv4Address( &par1));
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
     }
 #endif
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISEQUAL )
     if (ISBETWEEN(1, 2) && ISQHOSTADDRESS(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->isEqual( *PQHOSTADDRESS(1), HB_ISNIL(2) ? static_cast<QHostAddress::ConversionMode >( QHostAddress::TolerantConversion ) : static_cast<QHostAddress::ConversionMode >( hb_parni(2))));
+      RBOOL(obj->isEqual(*PQHOSTADDRESS(1), HB_ISNIL(2) ? static_cast<QHostAddress::ConversionMode >( QHostAddress::TolerantConversion ) : static_cast<QHostAddress::ConversionMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
     if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->isInSubnet( *PQHOSTADDRESS(1), PINT(2)));
+      RBOOL(obj->isInSubnet(*PQHOSTADDRESS(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

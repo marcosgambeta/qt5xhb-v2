@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETSOCKETOPTIONS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSocketOptions( static_cast<QLocalServer::SocketOptions>( hb_parni(1)));
+      obj->setSocketOptions(static_cast<QLocalServer::SocketOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 #endif
       bool par2;
       RBOOL(obj->waitForNewConnection( OPINT( 1, 0 ), &par2));
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

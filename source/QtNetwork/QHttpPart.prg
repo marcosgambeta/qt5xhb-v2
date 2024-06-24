@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
     /*
     QHttpPart( const QHttpPart & other )
     */
-    auto obj = new QHttpPart( *PQHTTPPART(1));
+    auto obj = new QHttpPart(*PQHTTPPART(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODY )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setBody( *PQBYTEARRAY(1));
+      obj->setBody(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setHeader( static_cast<QNetworkRequest::KnownHeaders>( hb_parni(1)), *PQVARIANT(2));
+      obj->setHeader(static_cast<QNetworkRequest::KnownHeaders>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
     {
 #endif
-      obj->setRawHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2));
+      obj->setRawHeader(*PQBYTEARRAY(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QHTTPPART_SWAP )
     if (ISNUMPAR(1) && ISQHTTPPART(1))
     {
 #endif
-      obj->swap( *PQHTTPPART(1));
+      obj->swap(*PQHTTPPART(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
