@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
     QSerialPortInfo( const QSerialPort & port )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QSerialPortInfo( *PQSERIALPORT(1));
+    auto obj = new QSerialPortInfo(*PQSERIALPORT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
     QSerialPortInfo( const QSerialPortInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QSerialPortInfo( *PQSERIALPORTINFO(1));
+    auto obj = new QSerialPortInfo(*PQSERIALPORTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_SWAP )
     if (ISNUMPAR(1) && ISQSERIALPORTINFO(1))
     {
 #endif
-      obj->swap( *PQSERIALPORTINFO(1));
+      obj->swap(*PQSERIALPORTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSERIALPORT_NEW )
     QSerialPort( const QSerialPortInfo & info, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QSerialPort( *PQSERIALPORTINFO(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSerialPort(*PQSERIALPORTINFO(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPORT )
     if (ISNUMPAR(1) && ISQSERIALPORTINFO(1))
     {
 #endif
-      obj->setPort( *PQSERIALPORTINFO(1));
+      obj->setPort(*PQSERIALPORTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSERIALPORT_OPEN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->open( static_cast<QIODevice::OpenMode>( hb_parni(1))));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->setBaudRate(PQINT32(1), HB_ISNIL(2) ? static_cast<QSerialPort::Directions >( QSerialPort::AllDirections ) : static_cast<QSerialPort::Directions >( hb_parni(2))));
+      RBOOL(obj->setBaudRate(PQINT32(1), HB_ISNIL(2) ? static_cast<QSerialPort::Directions >( QSerialPort::AllDirections ) : static_cast<QSerialPort::Directions >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQINT32(obj->baudRate( HB_ISNIL(1) ? static_cast<QSerialPort::Directions >( QSerialPort::AllDirections ) : static_cast<QSerialPort::Directions >( hb_parni(1))));
+      RQINT32(obj->baudRate( HB_ISNIL(1) ? static_cast<QSerialPort::Directions >( QSerialPort::AllDirections ) : static_cast<QSerialPort::Directions >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATABITS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->setDataBits( static_cast<QSerialPort::DataBits>( hb_parni(1))));
+      RBOOL(obj->setDataBits(static_cast<QSerialPort::DataBits>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPARITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->setParity( static_cast<QSerialPort::Parity>( hb_parni(1))));
+      RBOOL(obj->setParity(static_cast<QSerialPort::Parity>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETSTOPBITS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->setStopBits( static_cast<QSerialPort::StopBits>( hb_parni(1))));
+      RBOOL(obj->setStopBits(static_cast<QSerialPort::StopBits>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETFLOWCONTROL )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->setFlowControl( static_cast<QSerialPort::FlowControl>( hb_parni(1))));
+      RBOOL(obj->setFlowControl(static_cast<QSerialPort::FlowControl>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLEAR )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL(obj->clear( HB_ISNIL(1) ? static_cast<QSerialPort::Directions >( QSerialPort::AllDirections ) : static_cast<QSerialPort::Directions >( hb_parni(1))));
+      RBOOL(obj->clear( HB_ISNIL(1) ? static_cast<QSerialPort::Directions >( QSerialPort::AllDirections ) : static_cast<QSerialPort::Directions >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL(obj->setDataErrorPolicy( HB_ISNIL(1) ? static_cast<QSerialPort::DataErrorPolicy >( QSerialPort::IgnorePolicy ) : static_cast<QSerialPort::DataErrorPolicy >( hb_parni(1))));
+      RBOOL(obj->setDataErrorPolicy( HB_ISNIL(1) ? static_cast<QSerialPort::DataErrorPolicy >( QSerialPort::IgnorePolicy ) : static_cast<QSerialPort::DataErrorPolicy >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
