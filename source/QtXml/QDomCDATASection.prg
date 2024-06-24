@@ -47,7 +47,7 @@ RETURN
 #include <QtXml/QDomCDATASection>
 #endif
 
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
+HB_FUNC_STATIC(QDOMCDATASECTION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
   else if (ISNUMPAR(1) && ISQDOMCDATASECTION(1))
   {
     /*
-    QDomCDATASection( const QDomCDATASection & x )
+    QDomCDATASection(const QDomCDATASection & x)
     */
     auto obj = new QDomCDATASection(*PQDOMCDATASECTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
+HB_FUNC_STATIC(QDOMCDATASECTION_DELETE)
 {
   auto obj = static_cast<QDomCDATASection*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
+HB_FUNC_STATIC(QDOMCDATASECTION_NODETYPE)
 {
   auto obj = static_cast<QDomCDATASection*>(Qt5xHb::itemGetPtrStackSelfItem());
 

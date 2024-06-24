@@ -63,7 +63,7 @@ RETURN
 #include <QtXml/QDomImplementation>
 #endif
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
   else if (ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1))
   {
     /*
-    QDomImplementation( const QDomImplementation & x )
+    QDomImplementation(const QDomImplementation & x)
     */
     auto obj = new QDomImplementation(*PQDOMIMPLEMENTATION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_DELETE)
 {
   auto obj = static_cast<QDomImplementation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -106,9 +106,9 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
 }
 
 /*
-QDomDocument createDocument( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
+QDomDocument createDocument(const QString & nsURI, const QString & qName, const QDomDocumentType & doctype)
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
 {
   auto obj = static_cast<QDomImplementation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 }
 
 /*
-QDomDocumentType createDocumentType( const QString & qName, const QString & publicId, const QString & systemId )
+QDomDocumentType createDocumentType(const QString & qName, const QString & publicId, const QString & systemId)
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
 {
   auto obj = static_cast<QDomImplementation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,9 +156,9 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 }
 
 /*
-bool hasFeature( const QString & feature, const QString & version ) const
+bool hasFeature(const QString & feature, const QString & version) const
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
 {
   auto obj = static_cast<QDomImplementation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 /*
 bool isNull()
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
 {
   auto obj = static_cast<QDomImplementation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -206,13 +206,13 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 /*
 static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_INVALIDDATAPOLICY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RENUM( QDomImplementation::invalidDataPolicy());
+    RENUM(QDomImplementation::invalidDataPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -223,9 +223,9 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 }
 
 /*
-static void setInvalidDataPolicy( QDomImplementation::InvalidDataPolicy policy )
+static void setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy policy)
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEWFROM )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -273,22 +273,22 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDOMIMPLEMENTATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDOMIMPLEMENTATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDOMIMPLEMENTATION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

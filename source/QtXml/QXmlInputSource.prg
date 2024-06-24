@@ -61,7 +61,7 @@ RETURN
 #include <QtXml/QXmlInputSource>
 #endif
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QXmlInputSource( QIODevice * dev )
+    QXmlInputSource(QIODevice * dev)
     */
     auto obj = new QXmlInputSource(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_DELETE)
 {
   auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 /*
 virtual QString data() const
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
 {
   auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 /*
 virtual void fetchData()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 {
   auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 /*
 virtual QChar next()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
 {
   auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 /*
 virtual void reset()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 {
   auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -204,12 +204,12 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    virtual void setData( const QString & dat )
+    virtual void setData(const QString & dat)
     */
     auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    virtual void setData( const QByteArray & dat )
+    virtual void setData(const QByteArray & dat)
     */
     auto obj = static_cast<QXmlInputSource*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
   }
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEWFROM )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -272,22 +272,22 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLINPUTSOURCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLINPUTSOURCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLINPUTSOURCE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

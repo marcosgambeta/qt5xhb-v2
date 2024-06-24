@@ -62,7 +62,7 @@ RETURN
 #include <QtXml/QDomNodeList>
 #endif
 
-HB_FUNC_STATIC( QDOMNODELIST_NEW )
+HB_FUNC_STATIC(QDOMNODELIST_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
   else if (ISNUMPAR(1) && ISQDOMNODELIST(1))
   {
     /*
-    QDomNodeList( const QDomNodeList & n )
+    QDomNodeList(const QDomNodeList & n)
     */
     auto obj = new QDomNodeList(*PQDOMNODELIST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMNODELIST_DELETE )
+HB_FUNC_STATIC(QDOMNODELIST_DELETE)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -105,9 +105,9 @@ HB_FUNC_STATIC( QDOMNODELIST_DELETE )
 }
 
 /*
-QDomNode at( int index ) const
+QDomNode at(int index) const
 */
-HB_FUNC_STATIC( QDOMNODELIST_AT )
+HB_FUNC_STATIC(QDOMNODELIST_AT)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QDOMNODELIST_COUNT )
+HB_FUNC_STATIC(QDOMNODELIST_COUNT)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
+HB_FUNC_STATIC(QDOMNODELIST_ISEMPTY)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 }
 
 /*
-QDomNode item( int index ) const
+QDomNode item(int index) const
 */
-HB_FUNC_STATIC( QDOMNODELIST_ITEM )
+HB_FUNC_STATIC(QDOMNODELIST_ITEM)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 /*
 uint length() const
 */
-HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
+HB_FUNC_STATIC(QDOMNODELIST_LENGTH)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 /*
 int size() const
 */
-HB_FUNC_STATIC( QDOMNODELIST_SIZE )
+HB_FUNC_STATIC(QDOMNODELIST_SIZE)
 {
   auto obj = static_cast<QDomNodeList*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
   }
 }
 
-HB_FUNC_STATIC( QDOMNODELIST_NEWFROM )
+HB_FUNC_STATIC(QDOMNODELIST_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -280,22 +280,22 @@ HB_FUNC_STATIC( QDOMNODELIST_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDOMNODELIST_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDOMNODELIST_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDOMNODELIST_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDOMNODELIST_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDOMNODELIST_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDOMNODELIST_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDOMNODELIST_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDOMNODELIST_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDOMNODELIST_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDOMNODELIST_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

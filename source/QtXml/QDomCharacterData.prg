@@ -55,7 +55,7 @@ RETURN
 #include <QtXml/QDomCharacterData>
 #endif
 
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
   else if (ISNUMPAR(1) && ISQDOMCHARACTERDATA(1))
   {
     /*
-    QDomCharacterData( const QDomCharacterData & x )
+    QDomCharacterData(const QDomCharacterData & x)
     */
     auto obj = new QDomCharacterData(*PQDOMCHARACTERDATA(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETE )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETE)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETE )
 }
 
 /*
-void appendData( const QString & arg )
+void appendData(const QString & arg)
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
 /*
 QString data() const
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_DATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
 }
 
 /*
-void deleteData( unsigned long offset, unsigned long count )
+void deleteData(unsigned long offset, unsigned long count)
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -174,9 +174,9 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
 }
 
 /*
-void insertData( unsigned long offset, const QString & arg )
+void insertData(unsigned long offset, const QString & arg)
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
 /*
 uint length() const
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_LENGTH)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -248,9 +248,9 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
 }
 
 /*
-void replaceData( unsigned long offset, unsigned long count, const QString & arg )
+void replaceData(unsigned long offset, unsigned long count, const QString & arg)
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -274,9 +274,9 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
 }
 
 /*
-void setData( const QString & v )
+void setData(const QString & v)
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -300,9 +300,9 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
 }
 
 /*
-QString substringData( unsigned long offset, unsigned long count )
+QString substringData(unsigned long offset, unsigned long count)
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
+HB_FUNC_STATIC(QDOMCHARACTERDATA_SUBSTRINGDATA)
 {
   auto obj = static_cast<QDomCharacterData*>(Qt5xHb::itemGetPtrStackSelfItem());
 

@@ -60,21 +60,21 @@ RETURN
 #include <QtXml/QXmlParseException>
 #endif
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 {
   if (ISBETWEEN(0, 5) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+    QXmlParseException(const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString())
     */
-    auto obj = new QXmlParseException( OPQSTRING(1, QString() ), OPINT( 2, -1 ), OPINT( 3, -1 ), OPQSTRING(4, QString() ), OPQSTRING(5, QString()));
+    auto obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1), OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
   {
     /*
-    QXmlParseException( const QXmlParseException & other )
+    QXmlParseException(const QXmlParseException & other)
     */
     auto obj = new QXmlParseException(*PQXMLPARSEEXCEPTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 {
   auto obj = static_cast<QXmlParseException*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 /*
 int columnNumber() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 {
   auto obj = static_cast<QXmlParseException*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 /*
 int lineNumber() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 {
   auto obj = static_cast<QXmlParseException*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 /*
 QString message() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 {
   auto obj = static_cast<QXmlParseException*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 /*
 QString publicId() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 {
   auto obj = static_cast<QXmlParseException*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 /*
 QString systemId() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SYSTEMID)
 {
   auto obj = static_cast<QXmlParseException*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
   }
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROM )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -252,22 +252,22 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLPARSEEXCEPTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLPARSEEXCEPTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

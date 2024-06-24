@@ -50,7 +50,7 @@ RETURN
 #include <QtXml/QDomProcessingInstruction>
 #endif
 
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
   else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1))
   {
     /*
-    QDomProcessingInstruction( const QDomProcessingInstruction & x )
+    QDomProcessingInstruction(const QDomProcessingInstruction & x)
     */
     auto obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DELETE)
 {
   auto obj = static_cast<QDomProcessingInstruction*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
 /*
 QString data() const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DATA)
 {
   auto obj = static_cast<QDomProcessingInstruction*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
 {
   auto obj = static_cast<QDomProcessingInstruction*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -141,9 +141,9 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 }
 
 /*
-void setData( const QString & d )
+void setData(const QString & d)
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 {
   auto obj = static_cast<QDomProcessingInstruction*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 /*
 QString target() const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_TARGET)
 {
   auto obj = static_cast<QDomProcessingInstruction*>(Qt5xHb::itemGetPtrStackSelfItem());
 

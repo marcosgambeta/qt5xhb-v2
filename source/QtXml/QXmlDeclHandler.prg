@@ -58,7 +58,7 @@ RETURN
 #include <QtXml/QXmlDeclHandler>
 #endif
 
-HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
+HB_FUNC_STATIC(QXMLDECLHANDLER_DELETE)
 {
   auto obj = static_cast<QXmlDeclHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -75,9 +75,9 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
 }
 
 /*
-virtual bool attributeDecl( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
+virtual bool attributeDecl(const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value) = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
+HB_FUNC_STATIC(QXMLDECLHANDLER_ATTRIBUTEDECL)
 {
   auto obj = static_cast<QXmlDeclHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
+HB_FUNC_STATIC(QXMLDECLHANDLER_ERRORSTRING)
 {
   auto obj = static_cast<QXmlDeclHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
 }
 
 /*
-virtual bool externalEntityDecl( const QString & name, const QString & publicId, const QString & systemId ) = 0
+virtual bool externalEntityDecl(const QString & name, const QString & publicId, const QString & systemId) = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
+HB_FUNC_STATIC(QXMLDECLHANDLER_EXTERNALENTITYDECL)
 {
   auto obj = static_cast<QXmlDeclHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
 }
 
 /*
-virtual bool internalEntityDecl( const QString & name, const QString & value ) = 0
+virtual bool internalEntityDecl(const QString & name, const QString & value) = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
+HB_FUNC_STATIC(QXMLDECLHANDLER_INTERNALENTITYDECL)
 {
   auto obj = static_cast<QXmlDeclHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
   }
 }
 
-HB_FUNC_STATIC( QXMLDECLHANDLER_NEWFROM )
+HB_FUNC_STATIC(QXMLDECLHANDLER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -200,22 +200,22 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLDECLHANDLER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLDECLHANDLER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLDECLHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLDECLHANDLER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLDECLHANDLER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLDECLHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLDECLHANDLER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLDECLHANDLER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLDECLHANDLER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLDECLHANDLER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

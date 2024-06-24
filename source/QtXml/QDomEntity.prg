@@ -50,7 +50,7 @@ RETURN
 #include <QtXml/QDomEntity>
 #endif
 
-HB_FUNC_STATIC( QDOMENTITY_NEW )
+HB_FUNC_STATIC(QDOMENTITY_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
   else if (ISNUMPAR(1) && ISQDOMENTITY(1))
   {
     /*
-    QDomEntity( const QDomEntity & x )
+    QDomEntity(const QDomEntity & x)
     */
     auto obj = new QDomEntity(*PQDOMENTITY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMENTITY_DELETE )
+HB_FUNC_STATIC(QDOMENTITY_DELETE)
 {
   auto obj = static_cast<QDomEntity*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDOMENTITY_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
+HB_FUNC_STATIC(QDOMENTITY_NODETYPE)
 {
   auto obj = static_cast<QDomEntity*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 /*
 QString notationName() const
 */
-HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
+HB_FUNC_STATIC(QDOMENTITY_NOTATIONNAME)
 {
   auto obj = static_cast<QDomEntity*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 /*
 QString publicId() const
 */
-HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
+HB_FUNC_STATIC(QDOMENTITY_PUBLICID)
 {
   auto obj = static_cast<QDomEntity*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 /*
 QString systemId() const
 */
-HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
+HB_FUNC_STATIC(QDOMENTITY_SYSTEMID)
 {
   auto obj = static_cast<QDomEntity*>(Qt5xHb::itemGetPtrStackSelfItem());
 

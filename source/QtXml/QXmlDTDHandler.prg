@@ -57,7 +57,7 @@ RETURN
 #include <QtXml/QXmlDTDHandler>
 #endif
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
+HB_FUNC_STATIC(QXMLDTDHANDLER_DELETE)
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
+HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 }
 
 /*
-virtual bool notationDecl( const QString & name, const QString & publicId, const QString & systemId ) = 0
+virtual bool notationDecl(const QString & name, const QString & publicId, const QString & systemId) = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 }
 
 /*
-virtual bool unparsedEntityDecl( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName ) = 0
+virtual bool unparsedEntityDecl(const QString & name, const QString & publicId, const QString & systemId, const QString & notationName) = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
+HB_FUNC_STATIC(QXMLDTDHANDLER_UNPARSEDENTITYDECL)
 {
   auto obj = static_cast<QXmlDTDHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
   }
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -175,22 +175,22 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLDTDHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLDTDHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLDTDHANDLER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLDTDHANDLER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

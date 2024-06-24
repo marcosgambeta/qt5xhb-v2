@@ -47,7 +47,7 @@ RETURN
 #include <QtXml/QDomEntityReference>
 #endif
 
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
+HB_FUNC_STATIC(QDOMENTITYREFERENCE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
   else if (ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1))
   {
     /*
-    QDomEntityReference( const QDomEntityReference & x )
+    QDomEntityReference(const QDomEntityReference & x)
     */
     auto obj = new QDomEntityReference(*PQDOMENTITYREFERENCE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_DELETE )
+HB_FUNC_STATIC(QDOMENTITYREFERENCE_DELETE)
 {
   auto obj = static_cast<QDomEntityReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
+HB_FUNC_STATIC(QDOMENTITYREFERENCE_NODETYPE)
 {
   auto obj = static_cast<QDomEntityReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 

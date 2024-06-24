@@ -47,7 +47,7 @@ RETURN
 #include <QtXml/QDomDocumentFragment>
 #endif
 
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
+HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
   else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1))
   {
     /*
-    QDomDocumentFragment( const QDomDocumentFragment & x )
+    QDomDocumentFragment(const QDomDocumentFragment & x)
     */
     auto obj = new QDomDocumentFragment(*PQDOMDOCUMENTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_DELETE )
+HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_DELETE)
 {
   auto obj = static_cast<QDomDocumentFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
+HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NODETYPE)
 {
   auto obj = static_cast<QDomDocumentFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 

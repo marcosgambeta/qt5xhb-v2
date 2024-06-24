@@ -48,7 +48,7 @@ RETURN
 #include <QtXml/QDomText>
 #endif
 
-HB_FUNC_STATIC( QDOMTEXT_NEW )
+HB_FUNC_STATIC(QDOMTEXT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
   else if (ISNUMPAR(1) && ISQDOMTEXT(1))
   {
     /*
-    QDomText( const QDomText & x )
+    QDomText(const QDomText & x)
     */
     auto obj = new QDomText(*PQDOMTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMTEXT_DELETE )
+HB_FUNC_STATIC(QDOMTEXT_DELETE)
 {
   auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDOMTEXT_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
+HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 {
   auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -115,9 +115,9 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 }
 
 /*
-QDomText splitText( int offset )
+QDomText splitText(int offset)
 */
-HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
+HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
 {
   auto obj = static_cast<QDomText*>(Qt5xHb::itemGetPtrStackSelfItem());
 

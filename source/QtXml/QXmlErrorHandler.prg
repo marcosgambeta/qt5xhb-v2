@@ -58,7 +58,7 @@ RETURN
 #include <QtXml/QXmlErrorHandler>
 #endif
 
-HB_FUNC_STATIC( QXMLERRORHANDLER_DELETE )
+HB_FUNC_STATIC(QXMLERRORHANDLER_DELETE)
 {
   auto obj = static_cast<QXmlErrorHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -75,9 +75,9 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_DELETE )
 }
 
 /*
-virtual bool error( const QXmlParseException & exception ) = 0
+virtual bool error(const QXmlParseException & exception) = 0
 */
-HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
+HB_FUNC_STATIC(QXMLERRORHANDLER_ERROR)
 {
   auto obj = static_cast<QXmlErrorHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
+HB_FUNC_STATIC(QXMLERRORHANDLER_ERRORSTRING)
 {
   auto obj = static_cast<QXmlErrorHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 }
 
 /*
-virtual bool fatalError( const QXmlParseException & exception ) = 0
+virtual bool fatalError(const QXmlParseException & exception) = 0
 */
-HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
+HB_FUNC_STATIC(QXMLERRORHANDLER_FATALERROR)
 {
   auto obj = static_cast<QXmlErrorHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 }
 
 /*
-virtual bool warning( const QXmlParseException & exception ) = 0
+virtual bool warning(const QXmlParseException & exception) = 0
 */
-HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
+HB_FUNC_STATIC(QXMLERRORHANDLER_WARNING)
 {
   auto obj = static_cast<QXmlErrorHandler*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
   }
 }
 
-HB_FUNC_STATIC( QXMLERRORHANDLER_NEWFROM )
+HB_FUNC_STATIC(QXMLERRORHANDLER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -200,22 +200,22 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLERRORHANDLER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLERRORHANDLER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLERRORHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLERRORHANDLER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLERRORHANDLER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLERRORHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLERRORHANDLER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLERRORHANDLER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLERRORHANDLER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLERRORHANDLER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
