@@ -74,14 +74,14 @@ RETURN
 #endif
 
 /*
-QQuickWebEngineScript( QObject * parent = nullptr )
+QQuickWebEngineScript(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QQuickWebEngineScript( OPQOBJECT( 1, nullptr));
+    auto obj = new QQuickWebEngineScript(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
 /*
 ~QQuickWebEngineScript()
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_DELETE )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_DELETE )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NAME )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -141,9 +141,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NAME )
 }
 
 /*
-Q_INVOKABLE void setName( const QString & name )
+Q_INVOKABLE void setName(const QString & name)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETNAME )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETNAME )
 /*
 QUrl sourceUrl() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCEURL )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SOURCEURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +196,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCEURL )
 }
 
 /*
-Q_INVOKABLE void setSourceUrl( const QUrl & url )
+Q_INVOKABLE void setSourceUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCEURL )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETSOURCEURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCEURL )
 /*
 QString sourceCode() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCECODE )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SOURCECODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -250,9 +250,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCECODE )
 }
 
 /*
-Q_INVOKABLE void setSourceCode( const QString & code )
+Q_INVOKABLE void setSourceCode(const QString & code)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCECODE )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETSOURCECODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCECODE )
 /*
 QQuickWebEngineScript::InjectionPoint injectionPoint() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_INJECTIONPOINT )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_INJECTIONPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -304,9 +304,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_INJECTIONPOINT )
 }
 
 /*
-Q_INVOKABLE void setInjectionPoint( QQuickWebEngineScript::InjectionPoint injectionPoint )
+Q_INVOKABLE void setInjectionPoint(QQuickWebEngineScript::InjectionPoint injectionPoint)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT )
 /*
 QQuickWebEngineScript::ScriptWorldId worldId() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_WORLDID )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_WORLDID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -358,9 +358,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_WORLDID )
 }
 
 /*
-Q_INVOKABLE void setWorldId( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
+Q_INVOKABLE void setWorldId(QQuickWebEngineScript::ScriptWorldId scriptWorldId)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETWORLDID )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETWORLDID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETWORLDID )
 /*
 bool runOnSubframes() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -412,9 +412,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES )
 }
 
 /*
-Q_INVOKABLE void setRunOnSubframes( bool on )
+Q_INVOKABLE void setRunOnSubframes(bool on)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES )
 /*
 Q_INVOKABLE QString toString() const
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_TOSTRING )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_TOSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -466,9 +466,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_TOSTRING )
 }
 
 /*
-void injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
+void injectionPointChanged(QQuickWebEngineScript::InjectionPoint injectionPoint)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -520,9 +520,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 }
 
 /*
-void nameChanged( const QString & name )
+void nameChanged(const QString & name)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONNAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -574,9 +574,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
 }
 
 /*
-void runOnSubframesChanged( bool on )
+void runOnSubframesChanged(bool on)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -628,9 +628,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
 }
 
 /*
-void sourceCodeChanged( const QString & code )
+void sourceCodeChanged(const QString & code)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -682,9 +682,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
 }
 
 /*
-void sourceUrlChanged( const QUrl & url )
+void sourceUrlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQUICKWEBENGINESCRIPT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -736,9 +736,9 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 }
 
 /*
-void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
+void worldIdChanged(QQuickWebEngineScript::ScriptWorldId scriptWorldId)
 */
-HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
+HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QQuickWebEngineScript*>(Qt5xHb::getQObjectPointerFromSelfItem());
