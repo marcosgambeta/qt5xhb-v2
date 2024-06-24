@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isCaptureDestinationSupported( static_cast<QCameraImageCapture::CaptureDestinations>( hb_parni(1))));
+      RBOOL(obj->isCaptureDestinationSupported(static_cast<QCameraImageCapture::CaptureDestinations>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaptureDestination( static_cast<QCameraImageCapture::CaptureDestinations>( hb_parni(1)));
+      obj->setCaptureDestination(static_cast<QCameraImageCapture::CaptureDestinations>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

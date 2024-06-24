@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     /*
     QMediaResource( const QUrl & url, const QString & mimeType = QString() )
     */
-    auto obj = new QMediaResource( *PQURL(1), OPQSTRING(2, QString()));
+    auto obj = new QMediaResource(*PQURL(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     /*
     QMediaResource( const QNetworkRequest & request, const QString & mimeType = QString() )
     */
-    auto obj = new QMediaResource( *PQNETWORKREQUEST(1), OPQSTRING(2, QString()));
+    auto obj = new QMediaResource(*PQNETWORKREQUEST(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
     /*
     QMediaResource( const QMediaResource & other )
     */
-    auto obj = new QMediaResource( *PQMEDIARESOURCE(1));
+    auto obj = new QMediaResource(*PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 
     if (obj != nullptr)
     {
-      obj->setResolution( *PQSIZE(1));
+      obj->setResolution(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

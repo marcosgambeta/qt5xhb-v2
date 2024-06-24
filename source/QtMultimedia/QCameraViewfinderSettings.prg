@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
     QCameraViewfinderSettings( const QCameraViewfinderSettings & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-    auto obj = new QCameraViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1));
+    auto obj = new QCameraViewfinderSettings(*PQCAMERAVIEWFINDERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SWAP )
     if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1))
     {
 #endif
-      obj->swap( *PQCAMERAVIEWFINDERSETTINGS(1));
+      obj->swap(*PQCAMERAVIEWFINDERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION )
 
     if (obj != nullptr)
     {
-      obj->setResolution( *PQSIZE(1));
+      obj->setResolution(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPixelFormat( static_cast<QVideoFrame::PixelFormat>( hb_parni(1)));
+      obj->setPixelFormat(static_cast<QVideoFrame::PixelFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO )
 
     if (obj != nullptr)
     {
-      obj->setPixelAspectRatio( *PQSIZE(1));
+      obj->setPixelAspectRatio(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

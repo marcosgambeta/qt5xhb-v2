@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCAMERA_NEW )
     /*
     QCamera( const QByteArray & deviceName, QObject * parent = nullptr )
     */
-    auto obj = new QCamera( *PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QCamera(*PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCAMERA_NEW )
     QCamera( const QCameraInfo & cameraInfo, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QCamera( *PQCAMERAINFO(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QCamera(*PQCAMERAINFO(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCAMERA_NEW )
     QCamera( QCamera::Position position, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QCamera( static_cast<QCamera::Position>( hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QCamera(static_cast<QCamera::Position>(hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaptureMode( static_cast<QCamera::CaptureModes>( hb_parni(1)));
+      obj->setCaptureMode(static_cast<QCamera::CaptureModes>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
 
     if (obj != nullptr)
     {
-      RENUM(obj->lockStatus( static_cast<QCamera::LockType>( hb_parni(1))));
+      RENUM(obj->lockStatus(static_cast<QCamera::LockType>(hb_parni(1))));
     }
 
   }
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isCaptureModeSupported( static_cast<QCamera::CaptureModes>( hb_parni(1))));
+      RBOOL(obj->isCaptureModeSupported(static_cast<QCamera::CaptureModes>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
 
     if (obj != nullptr)
     {
-      obj->searchAndLock( static_cast<QCamera::LockTypes>( hb_parni(1)));
+      obj->searchAndLock(static_cast<QCamera::LockTypes>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK )
 
     if (obj != nullptr)
     {
-      obj->unlock( static_cast<QCamera::LockTypes>( hb_parni(1)));
+      obj->unlock(static_cast<QCamera::LockTypes>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDERSETTINGS )
     if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1))
     {
 #endif
-      obj->setViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1));
+      obj->setViewfinderSettings(*PQCAMERAVIEWFINDERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
 #endif
       auto list = obj->supportedViewfinderPixelFormats( HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings*>(Qt5xHb::itemGetPtr(1)));
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    RQSTRING( QCamera::deviceDescription( *PQBYTEARRAY(1)));
+    RQSTRING( QCamera::deviceDescription(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

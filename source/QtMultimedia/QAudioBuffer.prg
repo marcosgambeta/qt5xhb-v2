@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
     /*
     QAudioBuffer( const QAudioBuffer & other )
     */
-    auto obj = new QAudioBuffer( *PQAUDIOBUFFER(1));
+    auto obj = new QAudioBuffer(*PQAUDIOBUFFER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
     /*
     QAudioBuffer( const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1 )
     */
-    auto obj = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64( 3, -1));
+    auto obj = new QAudioBuffer(*PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64( 3, -1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DATA )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->data()));
+      hb_retptr(static_cast< void*>(obj->data()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

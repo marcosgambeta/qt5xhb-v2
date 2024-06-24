@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFocusMode( static_cast<QCameraFocus::FocusModes>( hb_parni(1)));
+      obj->setFocusMode(static_cast<QCameraFocus::FocusModes>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFocusPointMode( static_cast<QCameraFocus::FocusPointMode>( hb_parni(1)));
+      obj->setFocusPointMode(static_cast<QCameraFocus::FocusPointMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setCustomFocusPoint( *PQPOINTF(1));
+      obj->setCustomFocusPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isFocusModeSupported( static_cast<QCameraFocus::FocusModes>( hb_parni(1))));
+      RBOOL(obj->isFocusModeSupported(static_cast<QCameraFocus::FocusModes>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isFocusPointModeSupported( static_cast<QCameraFocus::FocusPointMode>( hb_parni(1))));
+      RBOOL(obj->isFocusPointModeSupported(static_cast<QCameraFocus::FocusPointMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

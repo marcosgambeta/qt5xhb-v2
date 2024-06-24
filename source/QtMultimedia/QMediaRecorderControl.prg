@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      RBOOL(obj->setOutputLocation( *PQURL(1)));
+      RBOOL(obj->setOutputLocation(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setState( static_cast<QMediaRecorder::State>( hb_parni(1)));
+      obj->setState(static_cast<QMediaRecorder::State>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -137,12 +137,12 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      auto list = obj->supportedResolutions( *PQIMAGEENCODERSETTINGS(1), &par2);
+      auto list = obj->supportedResolutions(*PQIMAGEENCODERSETTINGS(1), &par2);
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
     if (ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1))
     {
 #endif
-      obj->setImageSettings( *PQIMAGEENCODERSETTINGS(1));
+      obj->setImageSettings(*PQIMAGEENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isFlashModeSupported( static_cast<QCameraExposure::FlashModes>( hb_parni(1))));
+      RBOOL(obj->isFlashModeSupported(static_cast<QCameraExposure::FlashModes>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlashMode( static_cast<QCameraExposure::FlashModes>( hb_parni(1)));
+      obj->setFlashMode(static_cast<QCameraExposure::FlashModes>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

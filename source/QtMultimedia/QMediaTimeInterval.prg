@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
     /*
     QMediaTimeInterval( const QMediaTimeInterval & other )
     */
-    auto obj = new QMediaTimeInterval( *PQMEDIATIMEINTERVAL(1));
+    auto obj = new QMediaTimeInterval(*PQMEDIATIMEINTERVAL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

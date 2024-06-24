@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
     {
 #endif
-      RQSTRING(obj->deviceDescription( *PQBYTEARRAY(1), *PQBYTEARRAY(2)));
+      RQSTRING(obj->deviceDescription(*PQBYTEARRAY(1), *PQBYTEARRAY(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,12 +113,12 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      auto list = obj->devices( *PQBYTEARRAY(1));
+      auto list = obj->devices(*PQBYTEARRAY(1));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

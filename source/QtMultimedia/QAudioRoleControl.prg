@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAudioRole( static_cast<QAudio::Role>( hb_parni(1)));
+      obj->setAudioRole(static_cast<QAudio::Role>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
 #endif
       auto list = obj->supportedAudioRoles();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QMediaPlayer( OPQOBJECT( 1, nullptr ), HB_ISNIL(2) ? static_cast<QMediaPlayer::Flags >( 0 ) : static_cast<QMediaPlayer::Flags >( hb_parni(2)));
+    auto obj = new QMediaPlayer( OPQOBJECT( 1, nullptr ), HB_ISNIL(2) ? static_cast<QMediaPlayer::Flags >( 0 ) : static_cast<QMediaPlayer::Flags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
     if (ISBETWEEN(1, 2) && ISQMEDIACONTENT(1) && (ISQIODEVICE(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setMedia( *PQMEDIACONTENT(1), OPQIODEVICE( 2, nullptr));
+      obj->setMedia(*PQMEDIACONTENT(1), OPQIODEVICE( 2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETAUDIOROLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAudioRole( static_cast<QAudio::Role>( hb_parni(1)));
+      obj->setAudioRole(static_cast<QAudio::Role>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -907,13 +907,13 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
     {
 #endif
       QList<QNetworkConfiguration> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QNetworkConfiguration*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QNetworkConfiguration*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setNetworkConfigurations( par1);
+      obj->setNetworkConfigurations(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
 #endif
-    RENUM( QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST( 2, QStringList() ), HB_ISNIL(3) ? static_cast<QMediaPlayer::Flags >( QMediaPlayer::Flags() ) : static_cast<QMediaPlayer::Flags >( hb_parni(3))));
+    RENUM( QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST( 2, QStringList() ), HB_ISNIL(3) ? static_cast<QMediaPlayer::Flags >( QMediaPlayer::Flags() ) : static_cast<QMediaPlayer::Flags >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
 #endif
-    RQSTRINGLIST( QMediaPlayer::supportedMimeTypes( HB_ISNIL(1) ? static_cast<QMediaPlayer::Flags >( QMediaPlayer::Flags() ) : static_cast<QMediaPlayer::Flags >( hb_parni(1))));
+    RQSTRINGLIST( QMediaPlayer::supportedMimeTypes( HB_ISNIL(1) ? static_cast<QMediaPlayer::Flags >( QMediaPlayer::Flags() ) : static_cast<QMediaPlayer::Flags >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDAUDIOROLES )
 #endif
       auto list = obj->supportedAudioRoles();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);

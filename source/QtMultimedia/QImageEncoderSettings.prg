@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
     /*
     QImageEncoderSettings( const QImageEncoderSettings & other )
     */
-    auto obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1));
+    auto obj = new QImageEncoderSettings(*PQIMAGEENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 
     if (obj != nullptr)
     {
-      obj->setResolution( *PQSIZE(1));
+      obj->setResolution(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setQuality( static_cast<QMultimedia::EncodingQuality>( hb_parni(1)));
+      obj->setQuality(static_cast<QMultimedia::EncodingQuality>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

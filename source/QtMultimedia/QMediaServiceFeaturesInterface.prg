@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RENUM(obj->supportedFeatures( *PQBYTEARRAY(1)));
+      RENUM(obj->supportedFeatures(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

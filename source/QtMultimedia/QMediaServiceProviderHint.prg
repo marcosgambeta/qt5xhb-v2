@@ -70,7 +70,7 @@ QMediaServiceProviderHint( QCamera::Position position )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
-  auto obj = new QMediaServiceProviderHint( static_cast<QCamera::Position>( hb_parni(1)));
+  auto obj = new QMediaServiceProviderHint(static_cast<QCamera::Position>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -79,7 +79,7 @@ QMediaServiceProviderHint( QMediaServiceProviderHint::Features features )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
-  auto obj = new QMediaServiceProviderHint( static_cast<QMediaServiceProviderHint::Features>( hb_parni(1)));
+  auto obj = new QMediaServiceProviderHint(static_cast<QMediaServiceProviderHint::Features>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
     /*
     QMediaServiceProviderHint( const QByteArray & device )
     */
-    auto obj = new QMediaServiceProviderHint( *PQBYTEARRAY(1));
+    auto obj = new QMediaServiceProviderHint(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
     /*
     QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
     */
-    auto obj = new QMediaServiceProviderHint( *PQMEDIASERVICEPROVIDERHINT(1));
+    auto obj = new QMediaServiceProviderHint(*PQMEDIASERVICEPROVIDERHINT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlashMode( static_cast<QCameraExposure::FlashModes>( hb_parni(1)));
+      obj->setFlashMode(static_cast<QCameraExposure::FlashModes>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setExposureMode( static_cast<QCameraExposure::ExposureMode>( hb_parni(1)));
+      obj->setExposureMode(static_cast<QCameraExposure::ExposureMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMeteringMode( static_cast<QCameraExposure::MeteringMode>( hb_parni(1)));
+      obj->setMeteringMode(static_cast<QCameraExposure::MeteringMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isExposureModeSupported( static_cast<QCameraExposure::ExposureMode>( hb_parni(1))));
+      RBOOL(obj->isExposureModeSupported(static_cast<QCameraExposure::ExposureMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isFlashModeSupported( static_cast<QCameraExposure::FlashModes>( hb_parni(1))));
+      RBOOL(obj->isFlashModeSupported(static_cast<QCameraExposure::FlashModes>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isMeteringModeSupported( static_cast<QCameraExposure::MeteringMode>( hb_parni(1))));
+      RBOOL(obj->isMeteringModeSupported(static_cast<QCameraExposure::MeteringMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setSpotMeteringPoint( *PQPOINTF(1));
+      obj->setSpotMeteringPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
       bool par1;
       auto list = obj->supportedApertures( &par1);
       Qt5xHb::convert_qlist_qreal_to_array( list);
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
       bool par1;
       auto list = obj->supportedIsoSensitivities( &par1);
       Qt5xHb::convert_qlist_int_to_array( list);
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
       bool par1;
       auto list = obj->supportedShutterSpeeds( &par1);
       Qt5xHb::convert_qlist_qreal_to_array( list);
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

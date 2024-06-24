@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
     /*
     QAudioDeviceInfo( const QAudioDeviceInfo & other )
     */
-    auto obj = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1));
+    auto obj = new QAudioDeviceInfo(*PQAUDIODEVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
     if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
 #endif
-      RBOOL(obj->isFormatSupported( *PQAUDIOFORMAT(1)));
+      RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
     if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
 #endif
-      auto ptr = new QAudioFormat(obj->nearestFormat( *PQAUDIOFORMAT(1)));
+      auto ptr = new QAudioFormat(obj->nearestFormat(*PQAUDIOFORMAT(1)));
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 #endif
       auto list = obj->supportedByteOrders();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 #endif
       auto list = obj->supportedSampleTypes();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
@@ -409,12 +409,12 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    auto list = QAudioDeviceInfo::availableDevices( static_cast<QAudio::Mode>( hb_parni(1)));
+    auto list = QAudioDeviceInfo::availableDevices(static_cast<QAudio::Mode>(hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QAUDIODEVICEINFO");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

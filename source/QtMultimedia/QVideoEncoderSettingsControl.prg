@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
     if (ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1))
     {
 #endif
-      obj->setVideoSettings( *PQVIDEOENCODERSETTINGS(1));
+      obj->setVideoSettings(*PQVIDEOENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,9 +116,9 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
     {
 #endif
       bool par2;
-      auto list = obj->supportedFrameRates( *PQVIDEOENCODERSETTINGS(1), &par2);
+      auto list = obj->supportedFrameRates(*PQVIDEOENCODERSETTINGS(1), &par2);
       Qt5xHb::convert_qlist_qreal_to_array( list);
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,12 +143,12 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      auto list = obj->supportedResolutions( *PQVIDEOENCODERSETTINGS(1), &par2);
+      auto list = obj->supportedResolutions(*PQVIDEOENCODERSETTINGS(1), &par2);
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBand( static_cast<QRadioTuner::Band>( hb_parni(1)));
+      obj->setBand(static_cast<QRadioTuner::Band>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isBandSupported( static_cast<QRadioTuner::Band>( hb_parni(1))));
+      RBOOL(obj->isBandSupported(static_cast<QRadioTuner::Band>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT(obj->frequencyStep( static_cast<QRadioTuner::Band>( hb_parni(1))));
+      RINT(obj->frequencyStep(static_cast<QRadioTuner::Band>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETSTEREOMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStereoMode( static_cast<QRadioTuner::StereoMode>( hb_parni(1)));
+      obj->setStereoMode(static_cast<QRadioTuner::StereoMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->searchAllStations( HB_ISNIL(1) ? static_cast<QRadioTuner::SearchMode >( QRadioTuner::SearchFast ) : static_cast<QRadioTuner::SearchMode >( hb_parni(1)));
+      obj->searchAllStations( HB_ISNIL(1) ? static_cast<QRadioTuner::SearchMode >( QRadioTuner::SearchFast ) : static_cast<QRadioTuner::SearchMode >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

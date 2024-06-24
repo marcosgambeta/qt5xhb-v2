@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isParameterSupported( static_cast<QCameraImageProcessingControl::ProcessingParameter>( hb_parni(1))));
+      RBOOL(obj->isParameterSupported(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      RBOOL(obj->isParameterValueSupported( static_cast<QCameraImageProcessingControl::ProcessingParameter>( hb_parni(1)), *PQVARIANT(2)));
+      RBOOL(obj->isParameterValueSupported(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1)), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->parameter( static_cast<QCameraImageProcessingControl::ProcessingParameter>( hb_parni(1))));
+      auto ptr = new QVariant(obj->parameter(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setParameter( static_cast<QCameraImageProcessingControl::ProcessingParameter>( hb_parni(1)), *PQVARIANT(2));
+      obj->setParameter(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

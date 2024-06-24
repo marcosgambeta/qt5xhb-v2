@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
     /*
     QAudioEncoderSettings( const QAudioEncoderSettings & other )
     */
-    auto obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1));
+    auto obj = new QAudioEncoderSettings(*PQAUDIOENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEncodingMode( static_cast<QMultimedia::EncodingMode>( hb_parni(1)));
+      obj->setEncodingMode(static_cast<QMultimedia::EncodingMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setQuality( static_cast<QMultimedia::EncodingQuality>( hb_parni(1)));
+      obj->setQuality(static_cast<QMultimedia::EncodingQuality>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isEventFeedbackEnabled( static_cast<QCameraFeedbackControl::EventType>( hb_parni(1))));
+      RBOOL(obj->isEventFeedbackEnabled(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isEventFeedbackLocked( static_cast<QCameraFeedbackControl::EventType>( hb_parni(1))));
+      RBOOL(obj->isEventFeedbackLocked(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetEventFeedback( static_cast<QCameraFeedbackControl::EventType>( hb_parni(1)));
+      obj->resetEventFeedback(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      RBOOL(obj->setEventFeedbackEnabled( static_cast<QCameraFeedbackControl::EventType>( hb_parni(1)), PBOOL(2)));
+      RBOOL(obj->setEventFeedbackEnabled(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1)), PBOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL(obj->setEventFeedbackSound( static_cast<QCameraFeedbackControl::EventType>( hb_parni(1)), PQSTRING(2)));
+      RBOOL(obj->setEventFeedbackSound(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1)), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

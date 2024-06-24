@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
     /*
     QAudioOutput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
     */
-    auto obj = new QAudioOutput( *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat*>(Qt5xHb::itemGetPtr(2)), OPQOBJECT( 3, nullptr));
+    auto obj = new QAudioOutput(*PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat*>(Qt5xHb::itemGetPtr(2)), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }

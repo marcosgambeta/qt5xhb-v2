@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
     /*
     QAudioFormat( const QAudioFormat & other )
     */
-    auto obj = new QAudioFormat( *PQAUDIOFORMAT(1));
+    auto obj = new QAudioFormat(*PQAUDIOFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setByteOrder( static_cast<QAudioFormat::Endian>( hb_parni(1)));
+      obj->setByteOrder(static_cast<QAudioFormat::Endian>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSampleType( static_cast<QAudioFormat::SampleType>( hb_parni(1)));
+      obj->setSampleType(static_cast<QAudioFormat::SampleType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

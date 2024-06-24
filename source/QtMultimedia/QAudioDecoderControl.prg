@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETAUDIOFORMAT )
     if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
 #endif
-      obj->setAudioFormat( *PQAUDIOFORMAT(1));
+      obj->setAudioFormat(*PQAUDIOFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

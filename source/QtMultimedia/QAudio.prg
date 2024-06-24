@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
 #endif
-    RQREAL( QAudio::convertVolume(PQREAL(1), static_cast<QAudio::VolumeScale>( hb_parni(2)), static_cast<QAudio::VolumeScale>( hb_parni(3))));
+    RQREAL( QAudio::convertVolume(PQREAL(1), static_cast<QAudio::VolumeScale>(hb_parni(2)), static_cast<QAudio::VolumeScale>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

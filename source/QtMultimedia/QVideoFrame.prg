@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     /*
     QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
     */
-    auto obj = new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), static_cast<QVideoFrame::PixelFormat>( hb_parni(3)));
+    auto obj = new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), static_cast<QVideoFrame::PixelFormat>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     /*
     QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
     */
-    auto obj = new QVideoFrame(PINT(1), *PQSIZE(2), PINT(3), static_cast<QVideoFrame::PixelFormat>( hb_parni(4)));
+    auto obj = new QVideoFrame(PINT(1), *PQSIZE(2), PINT(3), static_cast<QVideoFrame::PixelFormat>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     /*
     QVideoFrame( const QImage & image )
     */
-    auto obj = new QVideoFrame( *PQIMAGE(1));
+    auto obj = new QVideoFrame(*PQIMAGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
     /*
     QVideoFrame( const QVideoFrame & other )
     */
-    auto obj = new QVideoFrame( *PQVIDEOFRAME(1));
+    auto obj = new QVideoFrame(*PQVIDEOFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->map( static_cast<QAbstractVideoBuffer::MapMode>( hb_parni(1))));
+      RBOOL(obj->map(static_cast<QAbstractVideoBuffer::MapMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFieldType( static_cast<QVideoFrame::FieldType>( hb_parni(1)));
+      obj->setFieldType(static_cast<QVideoFrame::FieldType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RENUM( QVideoFrame::imageFormatFromPixelFormat( static_cast<QVideoFrame::PixelFormat>( hb_parni(1))));
+    RENUM( QVideoFrame::imageFormatFromPixelFormat(static_cast<QVideoFrame::PixelFormat>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RENUM( QVideoFrame::pixelFormatFromImageFormat( static_cast<QImage::Format>( hb_parni(1))));
+    RENUM( QVideoFrame::pixelFormatFromImageFormat(static_cast<QImage::Format>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

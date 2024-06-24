@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     /*
     QMediaContent( const QUrl & contentUrl )
     */
-    auto obj = new QMediaContent( *PQURL(1));
+    auto obj = new QMediaContent(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     /*
     QMediaContent( const QNetworkRequest & contentRequest )
     */
-    auto obj = new QMediaContent( *PQNETWORKREQUEST(1));
+    auto obj = new QMediaContent(*PQNETWORKREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     /*
     QMediaContent( const QMediaResource & contentResource )
     */
-    auto obj = new QMediaContent( *PQMEDIARESOURCE(1));
+    auto obj = new QMediaContent(*PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -111,13 +111,13 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     QMediaContent( const QMediaResourceList & resources )
     */
     QMediaResourceList par1;
-    auto aList1 = hb_param( 1, HB_IT_ARRAY);
-    int nLen1 = hb_arrayLen( aList1);
-    for( auto i1 = 0; i1 < nLen1; i1++ )
+    auto aList1 = hb_param(1, HB_IT_ARRAY);
+    int nLen1 = hb_arrayLen(aList1);
+    for (auto i1 = 0; i1 < nLen1; i1++)
     {
-      par1 << *static_cast<QMediaResource*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+      par1 << *static_cast<QMediaResource*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
     }
-    auto obj = new QMediaContent( par1);
+    auto obj = new QMediaContent(par1);
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
     /*
     QMediaContent( const QMediaContent & other )
     */
-    auto obj = new QMediaContent( *PQMEDIACONTENT(1));
+    auto obj = new QMediaContent(*PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

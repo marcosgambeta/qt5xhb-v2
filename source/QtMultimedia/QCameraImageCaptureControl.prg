@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDriveMode( static_cast<QCameraImageCapture::DriveMode>( hb_parni(1)));
+      obj->setDriveMode(static_cast<QCameraImageCapture::DriveMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

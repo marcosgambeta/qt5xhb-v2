@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCAMERAINFO_NEW )
     QCameraInfo( const QCamera & camera )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QCameraInfo( *PQCAMERA(1));
+    auto obj = new QCameraInfo(*PQCAMERA(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCAMERAINFO_NEW )
     QCameraInfo( const QCameraInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QCameraInfo( *PQCAMERAINFO(1));
+    auto obj = new QCameraInfo(*PQCAMERAINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -290,12 +290,12 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
 #endif
-    auto list = QCameraInfo::availableCameras( HB_ISNIL(1) ? static_cast<QCamera::Position >( QCamera::UnspecifiedPosition ) : static_cast<QCamera::Position >( hb_parni(1)));
+    auto list = QCameraInfo::availableCameras( HB_ISNIL(1) ? static_cast<QCamera::Position >( QCamera::UnspecifiedPosition ) : static_cast<QCamera::Position >(hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QCAMERAINFO");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
     /*
     QMediaTimeRange( const QMediaTimeInterval & interval )
     */
-    auto obj = new QMediaTimeRange( *PQMEDIATIMEINTERVAL(1));
+    auto obj = new QMediaTimeRange(*PQMEDIATIMEINTERVAL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
     /*
     QMediaTimeRange( const QMediaTimeRange & range )
     */
-    auto obj = new QMediaTimeRange( *PQMEDIATIMERANGE(1));
+    auto obj = new QMediaTimeRange(*PQMEDIATIMERANGE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 
     if (obj != nullptr)
     {
-      obj->addInterval( *PQMEDIATIMEINTERVAL(1));
+      obj->addInterval(*PQMEDIATIMEINTERVAL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
     if (ISNUMPAR(1) && ISQMEDIATIMERANGE(1))
     {
 #endif
-      obj->addTimeRange( *PQMEDIATIMERANGE(1));
+      obj->addTimeRange(*PQMEDIATIMERANGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 
     if (obj != nullptr)
     {
-      obj->removeInterval( *PQMEDIATIMEINTERVAL(1));
+      obj->removeInterval(*PQMEDIATIMEINTERVAL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
     if (ISNUMPAR(1) && ISQMEDIATIMERANGE(1))
     {
 #endif
-      obj->removeTimeRange( *PQMEDIATIMERANGE(1));
+      obj->removeTimeRange(*PQMEDIATIMERANGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

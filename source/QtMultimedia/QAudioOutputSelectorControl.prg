@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
 #endif
       auto list = obj->availableOutputs();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
         hb_arrayAddForward(pArray, pItem);
