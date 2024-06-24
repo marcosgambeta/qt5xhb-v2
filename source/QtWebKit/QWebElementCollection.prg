@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
     /*
     QWebElementCollection( const QWebElement & contextElement, const QString & query )
     */
-    auto obj = new QWebElementCollection( *PQWEBELEMENT(1), PQSTRING(2));
+    auto obj = new QWebElementCollection(*PQWEBELEMENT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
     /*
     QWebElementCollection( const QWebElementCollection & other )
     */
-    auto obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION(1));
+    auto obj = new QWebElementCollection(*PQWEBELEMENTCOLLECTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
     if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
     {
 #endif
-      obj->append( *PQWEBELEMENTCOLLECTION(1));
+      obj->append(*PQWEBELEMENTCOLLECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

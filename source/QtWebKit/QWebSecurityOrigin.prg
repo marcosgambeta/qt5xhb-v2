@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 {
   if (ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1))
   {
-    auto obj = new QWebSecurityOrigin( *PQWEBSECURITYORIGIN(1));
+    auto obj = new QWebSecurityOrigin(*PQWEBSECURITYORIGIN(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

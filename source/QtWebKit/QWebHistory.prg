@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
     if (ISNUMPAR(1) && ISQWEBHISTORYITEM(1))
     {
 #endif
-      obj->goToItem( *PQWEBHISTORYITEM(1));
+      obj->goToItem(*PQWEBHISTORYITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

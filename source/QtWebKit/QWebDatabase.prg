@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
   if (ISNUMPAR(1) && ISQWEBDATABASE(1))
   {
-    auto obj = new QWebDatabase( *PQWEBDATABASE(1));
+    auto obj = new QWebDatabase(*PQWEBDATABASE(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
   if (ISNUMPAR(1) && ISQWEBDATABASE(1))
   {
 #endif
-    QWebDatabase::removeDatabase( *PQWEBDATABASE(1));
+    QWebDatabase::removeDatabase(*PQWEBDATABASE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

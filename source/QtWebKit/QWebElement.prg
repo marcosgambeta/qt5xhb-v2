@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
     /*
     QWebElement( const QWebElement & other )
     */
-    auto obj = new QWebElement( *PQWEBELEMENT(1));
+    auto obj = new QWebElement(*PQWEBELEMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 
     if (obj != nullptr)
     {
-      obj->appendInside( *PQWEBELEMENT(1));
+      obj->appendInside(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 
     if (obj != nullptr)
     {
-      obj->appendOutside( *PQWEBELEMENT(1));
+      obj->appendOutside(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 
     if (obj != nullptr)
     {
-      obj->encloseContentsWith( *PQWEBELEMENT(1));
+      obj->encloseContentsWith(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 
     if (obj != nullptr)
     {
-      obj->encloseWith( *PQWEBELEMENT(1));
+      obj->encloseWith(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 
     if (obj != nullptr)
     {
-      obj->prependInside( *PQWEBELEMENT(1));
+      obj->prependInside(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 
     if (obj != nullptr)
     {
-      obj->prependOutside( *PQWEBELEMENT(1));
+      obj->prependOutside(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1191,7 +1191,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 
     if (obj != nullptr)
     {
-      obj->replace( *PQWEBELEMENT(1));
+      obj->replace(*PQWEBELEMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      RQSTRING(obj->styleProperty(PQSTRING(1), static_cast<QWebElement::StyleResolveStrategy>( hb_parni(2))));
+      RQSTRING(obj->styleProperty(PQSTRING(1), static_cast<QWebElement::StyleResolveStrategy>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
