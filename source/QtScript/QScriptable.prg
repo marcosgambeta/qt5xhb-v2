@@ -65,7 +65,7 @@ RETURN
 #include <QtScript/QScriptEngine>
 #include <QtScript/QScriptValue>
 
-HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
+HB_FUNC_STATIC(QSCRIPTABLE_DELETE)
 {
   auto obj = static_cast<QScriptable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -82,9 +82,9 @@ HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 }
 
 /*
-QScriptValue argument( int index ) const
+QScriptValue argument(int index) const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
+HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 {
   auto obj = static_cast<QScriptable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 /*
 int argumentCount() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
+HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 {
   auto obj = static_cast<QScriptable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 /*
 QScriptContext * context() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
+HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 {
   auto obj = static_cast<QScriptable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
+HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 {
   auto obj = static_cast<QScriptable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 /*
 QScriptValue thisObject() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
+HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 {
   auto obj = static_cast<QScriptable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTABLE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -235,22 +235,22 @@ HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTABLE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSCRIPTABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTABLE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSCRIPTABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTABLE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTABLE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

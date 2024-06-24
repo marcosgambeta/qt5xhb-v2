@@ -59,7 +59,7 @@ RETURN
 #include <QtScript/QScriptProgram>
 #endif
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -73,16 +73,16 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QScriptProgram( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
+    QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
     */
-    auto obj = new QScriptProgram(PQSTRING(1), OPQSTRING(2, QString() ), OPINT( 3, 1));
+    auto obj = new QScriptProgram(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1))
   {
     /*
-    QScriptProgram( const QScriptProgram & other )
+    QScriptProgram(const QScriptProgram & other)
     */
     auto obj = new QScriptProgram(*PQSCRIPTPROGRAM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_DELETE)
 {
   auto obj = static_cast<QScriptProgram*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_FILENAME)
 {
   auto obj = static_cast<QScriptProgram*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 /*
 int firstLineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_FIRSTLINENUMBER)
 {
   auto obj = static_cast<QScriptProgram*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_ISNULL)
 {
   auto obj = static_cast<QScriptProgram*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 /*
 QString sourceCode() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_SOURCECODE)
 {
   auto obj = static_cast<QScriptProgram*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -236,22 +236,22 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSCRIPTPROGRAM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSCRIPTPROGRAM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

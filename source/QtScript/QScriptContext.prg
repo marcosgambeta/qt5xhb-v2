@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtScript/QScriptEngine>
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_DELETE)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
 /*
 QScriptValue activationObject() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_ACTIVATIONOBJECT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -117,9 +117,9 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 }
 
 /*
-QScriptValue argument( int index ) const
+QScriptValue argument(int index) const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
 /*
 int argumentCount() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTCOUNT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
 /*
 QScriptValue argumentsObject() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTSOBJECT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 /*
 QStringList backtrace() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_BACKTRACE)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
 /*
 QScriptValue callee() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_CALLEE)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_ENGINE)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
 /*
 bool isCalledAsConstructor() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 /*
 QScriptContext * parentContext() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_PARENTCONTEXT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -314,9 +314,9 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 }
 
 /*
-void setActivationObject( const QScriptValue & activation )
+void setActivationObject(const QScriptValue & activation)
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -340,9 +340,9 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 }
 
 /*
-void setThisObject( const QScriptValue & thisObject )
+void setThisObject(const QScriptValue & thisObject)
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_SETTHISOBJECT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 /*
 QScriptContext::ExecutionState state() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_STATE)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 /*
 QScriptValue thisObject() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_THISOBJECT)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -414,12 +414,12 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
-    QScriptValue throwError( QScriptContext::Error error, const QString & text )
+    QScriptValue throwError(QScriptContext::Error error, const QString & text)
     */
     auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QScriptValue throwError( const QString & text )
+    QScriptValue throwError(const QString & text)
     */
     auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -451,9 +451,9 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 }
 
 /*
-QScriptValue throwValue( const QScriptValue & value )
+QScriptValue throwValue(const QScriptValue & value)
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWVALUE)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_TOSTRING)
 {
   auto obj = static_cast<QScriptContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -529,22 +529,22 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSCRIPTCONTEXT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSCRIPTCONTEXT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTCONTEXT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTCONTEXT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
