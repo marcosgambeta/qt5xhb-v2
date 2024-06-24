@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWEBSOCKET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if (ISBETWEEN(0, 3) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QWebSocket( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<QWebSocketProtocol::Version >( QWebSocketProtocol::VersionLatest ) : static_cast<QWebSocketProtocol::Version >( hb_parni(2)), OPQOBJECT( 3, nullptr));
+    auto obj = new QWebSocket( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<QWebSocketProtocol::Version >( QWebSocketProtocol::VersionLatest ) : static_cast<QWebSocketProtocol::Version >(hb_parni(2)), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPROXY )
     if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
     {
 #endif
-      obj->setProxy( *PQNETWORKPROXY(1));
+      obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPAUSEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPauseMode( static_cast<QAbstractSocket::PauseModes>( hb_parni(1)));
+      obj->setPauseMode(static_cast<QAbstractSocket::PauseModes>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RQINT64(obj->sendBinaryMessage( *PQBYTEARRAY(1)));
+      RQINT64(obj->sendBinaryMessage(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -905,13 +905,13 @@ HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
     if (obj != nullptr)
     {
       QList<QSslError> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QSslError*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QSslError*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->ignoreSslErrors( par1);
+      obj->ignoreSslErrors(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETSSLCONFIGURATION )
     if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
     {
 #endif
-      obj->setSslConfiguration( *PQSSLCONFIGURATION(1));
+      obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
     if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->close( HB_ISNIL(1) ? static_cast<QWebSocketProtocol::CloseCode >( QWebSocketProtocol::CloseCodeNormal ) : static_cast<QWebSocketProtocol::CloseCode >( hb_parni(1)), OPQSTRING(2, QString()));
+      obj->close( HB_ISNIL(1) ? static_cast<QWebSocketProtocol::CloseCode >( QWebSocketProtocol::CloseCodeNormal ) : static_cast<QWebSocketProtocol::CloseCode >(hb_parni(1)), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QWEBSOCKET_OPEN )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->open( *PQURL(1));
+      obj->open(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1814,7 +1814,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

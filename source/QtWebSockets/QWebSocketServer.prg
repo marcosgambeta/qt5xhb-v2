@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QWebSocketServer(PQSTRING(1), static_cast<QWebSocketServer::SslMode>( hb_parni(2)), OPQOBJECT( 3, nullptr));
+    auto obj = new QWebSocketServer(PQSTRING(1), static_cast<QWebSocketServer::SslMode>(hb_parni(2)), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETPROXY )
     if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
     {
 #endif
-      obj->setProxy( *PQNETWORKPROXY(1));
+      obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSSLCONFIGURATION )
     if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
     {
 #endif
-      obj->setSslConfiguration( *PQSSLCONFIGURATION(1));
+      obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
 #endif
       auto list = obj->supportedVersions();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
     QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QWebSocketCorsAuthenticator( *PQWEBSOCKETCORSAUTHENTICATOR(1));
+    auto obj = new QWebSocketCorsAuthenticator(*PQWEBSOCKETCORSAUTHENTICATOR(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SWAP )
     if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1))
     {
 #endif
-      obj->swap( *PQWEBSOCKETCORSAUTHENTICATOR(1));
+      obj->swap(*PQWEBSOCKETCORSAUTHENTICATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
