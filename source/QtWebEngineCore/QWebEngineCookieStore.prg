@@ -58,7 +58,7 @@ RETURN
 /*
 virtual ~QWebEngineCookieStore()
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETE )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETE)
 {
   auto obj = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -77,9 +77,9 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETE )
 }
 
 /*
-void setCookie( const QNetworkCookie & cookie, const QUrl & origin = QUrl() )
+void setCookie(const QNetworkCookie & cookie, const QUrl & origin = QUrl())
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_SETCOOKIE)
 {
   auto obj = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -103,9 +103,9 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
 }
 
 /*
-void deleteCookie( const QNetworkCookie & cookie, const QUrl & origin = QUrl() )
+void deleteCookie(const QNetworkCookie & cookie, const QUrl & origin = QUrl())
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETECOOKIE)
 {
   auto obj = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
 /*
 void deleteSessionCookies()
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES)
 {
   auto obj = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES )
 /*
 void deleteAllCookies()
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETEALLCOOKIES )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETEALLCOOKIES)
 {
   auto obj = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETEALLCOOKIES )
 /*
 void loadAllCookies()
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_LOADALLCOOKIES )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_LOADALLCOOKIES)
 {
   auto obj = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_LOADALLCOOKIES )
 }
 
 /*
-void cookieAdded( const QNetworkCookie & cookie )
+void cookieAdded(const QNetworkCookie & cookie)
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEADDED)
 {
   auto sender = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINECOOKIESTORE");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCOOKIE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QNETWORKCOOKIE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -257,9 +257,9 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
 }
 
 /*
-void cookieRemoved( const QNetworkCookie & cookie )
+void cookieRemoved(const QNetworkCookie & cookie)
 */
-HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
+HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED)
 {
   auto sender = qobject_cast<QWebEngineCookieStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINECOOKIESTORE");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCOOKIE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QNETWORKCOOKIE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

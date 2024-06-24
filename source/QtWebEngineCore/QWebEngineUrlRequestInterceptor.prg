@@ -49,13 +49,13 @@ RETURN
 #endif
 
 /*
-QWebEngineUrlRequestInterceptor( QObject * p = nullptr )
+QWebEngineUrlRequestInterceptor(QObject * p = nullptr)
 */
-HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
+HB_FUNC_STATIC(QWEBENGINEURLREQUESTINTERCEPTOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWebEngineUrlRequestInterceptor( OPQOBJECT( 1, nullptr));
+    auto obj = new QWebEngineUrlRequestInterceptor(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -65,9 +65,9 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
 }
 
 /*
-virtual void interceptRequest( QWebEngineUrlRequestInfo & info ) = 0
+virtual void interceptRequest(QWebEngineUrlRequestInfo & info) = 0
 */
-HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST )
+HB_FUNC_STATIC(QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestInterceptor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
