@@ -73,15 +73,15 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
     /*
-    QGeoAreaMonitorInfo( const QString & name = QString() )
+    QGeoAreaMonitorInfo(const QString & name = QString())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoAreaMonitorInfo( OPQSTRING(1, QString()));
+    auto obj = new QGeoAreaMonitorInfo(OPQSTRING(1, QString()));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
   else if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1))
   {
     /*
-    QGeoAreaMonitorInfo( const QGeoAreaMonitorInfo & other )
+    QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoAreaMonitorInfo(*PQGEOAREAMONITORINFO(1));
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_DELETE )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_DELETE )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NAME )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NAME )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETNAME )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETNAME )
 /*
 QString identifier() const
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_IDENTIFIER )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_IDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_IDENTIFIER )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_ISVALID )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_ISVALID )
 /*
 QGeoShape area() const
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_AREA )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_AREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -255,9 +255,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_AREA )
 }
 
 /*
-void setArea( const QGeoShape & newShape )
+void setArea(const QGeoShape & newShape)
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETAREA )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETAREA )
 /*
 QDateTime expiration() const
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_EXPIRATION )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_EXPIRATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_EXPIRATION )
 }
 
 /*
-void setExpiration( const QDateTime & expiry )
+void setExpiration(const QDateTime & expiry)
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETEXPIRATION )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETEXPIRATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETEXPIRATION )
 /*
 bool isPersistent() const
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_ISPERSISTENT )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISPERSISTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -364,9 +364,9 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_ISPERSISTENT )
 }
 
 /*
-void setPersistent( bool isPersistent )
+void setPersistent(bool isPersistent)
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETPERSISTENT )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETPERSISTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAreaMonitorInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETPERSISTENT )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEWFROM )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -421,22 +421,22 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOAREAMONITORINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOAREAMONITORINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

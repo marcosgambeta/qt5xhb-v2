@@ -63,7 +63,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QGEOSHAPE_NEW )
+HB_FUNC_STATIC(QGEOSHAPE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
   else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
-    QGeoShape( const QGeoShape & other )
+    QGeoShape(const QGeoShape & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoShape(*PQGEOSHAPE(1));
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_DELETE )
+HB_FUNC_STATIC(QGEOSHAPE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoShape*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGEOSHAPE_DELETE )
 /*
 QGeoShape::ShapeType type() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_TYPE )
+HB_FUNC_STATIC(QGEOSHAPE_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoShape*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGEOSHAPE_TYPE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
+HB_FUNC_STATIC(QGEOSHAPE_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoShape*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
+HB_FUNC_STATIC(QGEOSHAPE_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoShape*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -190,9 +190,9 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
 }
 
 /*
-bool contains( const QGeoCoordinate & coordinate ) const
+bool contains(const QGeoCoordinate & coordinate) const
 */
-HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
+HB_FUNC_STATIC(QGEOSHAPE_CONTAINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoShape*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
+HB_FUNC_STATIC(QGEOSHAPE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -245,22 +245,22 @@ HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOSHAPE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOSHAPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOSHAPE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOSHAPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOSHAPE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOSHAPE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

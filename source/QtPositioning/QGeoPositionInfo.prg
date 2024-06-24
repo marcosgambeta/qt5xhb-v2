@@ -70,7 +70,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
   else if (ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQDATETIME(2))
   {
     /*
-    QGeoPositionInfo( const QGeoCoordinate & coordinate, const QDateTime & updateTime )
+    QGeoPositionInfo(const QGeoCoordinate & coordinate, const QDateTime & updateTime)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoPositionInfo(*PQGEOCOORDINATE(1), *PQDATETIME(2));
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
   else if (ISNUMPAR(1) && ISQGEOPOSITIONINFO(1))
   {
     /*
-    QGeoPositionInfo( const QGeoPositionInfo & other )
+    QGeoPositionInfo(const QGeoPositionInfo & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoPositionInfo(*PQGEOPOSITIONINFO(1));
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_DELETE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_ISVALID )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +156,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ISVALID )
 }
 
 /*
-void setTimestamp( const QDateTime & timestamp )
+void setTimestamp(const QDateTime & timestamp)
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_SETTIMESTAMP )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_SETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETTIMESTAMP )
 /*
 QDateTime timestamp() const
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_TIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
 }
 
 /*
-void setCoordinate( const QGeoCoordinate & coordinate )
+void setCoordinate(const QGeoCoordinate & coordinate)
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_SETCOORDINATE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_SETCOORDINATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETCOORDINATE )
 /*
 QGeoCoordinate coordinate() const
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_COORDINATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -266,9 +266,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
 }
 
 /*
-void setAttribute( QGeoPositionInfo::Attribute attribute, qreal value )
+void setAttribute(QGeoPositionInfo::Attribute attribute, qreal value)
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_SETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -294,9 +294,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
 }
 
 /*
-qreal attribute( QGeoPositionInfo::Attribute attribute ) const
+qreal attribute(QGeoPositionInfo::Attribute attribute) const
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_ATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -320,9 +320,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
 }
 
 /*
-void removeAttribute( QGeoPositionInfo::Attribute attribute )
+void removeAttribute(QGeoPositionInfo::Attribute attribute)
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_REMOVEATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -348,9 +348,9 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
 }
 
 /*
-bool hasAttribute( QGeoPositionInfo::Attribute attribute ) const
+bool hasAttribute(QGeoPositionInfo::Attribute attribute) const
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_HASATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoPositionInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEWFROM )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -403,22 +403,22 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOPOSITIONINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOPOSITIONINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOPOSITIONINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOPOSITIONINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

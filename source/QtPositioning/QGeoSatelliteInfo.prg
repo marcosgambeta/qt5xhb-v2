@@ -69,7 +69,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
   else if (ISNUMPAR(1) && ISQGEOSATELLITEINFO(1))
   {
     /*
-    QGeoSatelliteInfo( const QGeoSatelliteInfo & other )
+    QGeoSatelliteInfo(const QGeoSatelliteInfo & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoSatelliteInfo(*PQGEOSATELLITEINFO(1));
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_DELETE )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +118,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_DELETE )
 }
 
 /*
-void setSatelliteSystem( QGeoSatelliteInfo::SatelliteSystem system )
+void setSatelliteSystem(QGeoSatelliteInfo::SatelliteSystem system)
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITESYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
 /*
 QGeoSatelliteInfo::SatelliteSystem satelliteSystem() const
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITESYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -172,9 +172,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
 }
 
 /*
-void setSatelliteIdentifier( int satId )
+void setSatelliteIdentifier(int satId)
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER )
 /*
 int satelliteIdentifier() const
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITEIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -226,9 +226,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
 }
 
 /*
-void setSignalStrength( int signalStrength )
+void setSignalStrength(int signalStrength)
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSIGNALSTRENGTH )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSIGNALSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSIGNALSTRENGTH )
 /*
 int signalStrength() const
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SIGNALSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -280,9 +280,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
 }
 
 /*
-void setAttribute( QGeoSatelliteInfo::Attribute attribute, qreal value )
+void setAttribute(QGeoSatelliteInfo::Attribute attribute, qreal value)
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -308,9 +308,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
 }
 
 /*
-qreal attribute( QGeoSatelliteInfo::Attribute attribute ) const
+qreal attribute(QGeoSatelliteInfo::Attribute attribute) const
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_ATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -334,9 +334,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
 }
 
 /*
-void removeAttribute( QGeoSatelliteInfo::Attribute attribute )
+void removeAttribute(QGeoSatelliteInfo::Attribute attribute)
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_REMOVEATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -362,9 +362,9 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
 }
 
 /*
-bool hasAttribute( QGeoSatelliteInfo::Attribute attribute ) const
+bool hasAttribute(QGeoSatelliteInfo::Attribute attribute) const
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_HASATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoSatelliteInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_NEWFROM )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -417,22 +417,22 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOSATELLITEINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOSATELLITEINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

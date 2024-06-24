@@ -82,7 +82,7 @@ RETURN
 
 #include <QtCore/QString>
 
-HB_FUNC_STATIC( QGEOADDRESS_NEW )
+HB_FUNC_STATIC(QGEOADDRESS_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
   else if (ISNUMPAR(1) && ISQGEOADDRESS(1))
   {
     /*
-    QGeoAddress( const QGeoAddress & other )
+    QGeoAddress(const QGeoAddress & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = new QGeoAddress(*PQGEOADDRESS(1));
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOADDRESS_DELETE )
+HB_FUNC_STATIC(QGEOADDRESS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGEOADDRESS_DELETE )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_TEXT )
+HB_FUNC_STATIC(QGEOADDRESS_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -157,9 +157,9 @@ HB_FUNC_STATIC( QGEOADDRESS_TEXT )
 }
 
 /*
-void setText( const QString & text )
+void setText(const QString & text)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETTEXT )
+HB_FUNC_STATIC(QGEOADDRESS_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETTEXT )
 /*
 QString country() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
+HB_FUNC_STATIC(QGEOADDRESS_COUNTRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
 }
 
 /*
-void setCountry( const QString & country )
+void setCountry(const QString & country)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRY )
+HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRY )
 /*
 QString countryCode() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
+HB_FUNC_STATIC(QGEOADDRESS_COUNTRYCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -265,9 +265,9 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
 }
 
 /*
-void setCountryCode( const QString & countryCode )
+void setCountryCode(const QString & countryCode)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRYCODE )
+HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRYCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRYCODE )
 /*
 QString state() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_STATE )
+HB_FUNC_STATIC(QGEOADDRESS_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -319,9 +319,9 @@ HB_FUNC_STATIC( QGEOADDRESS_STATE )
 }
 
 /*
-void setState( const QString & state )
+void setState(const QString & state)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETSTATE )
+HB_FUNC_STATIC(QGEOADDRESS_SETSTATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETSTATE )
 /*
 QString county() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
+HB_FUNC_STATIC(QGEOADDRESS_COUNTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
 }
 
 /*
-void setCounty( const QString & county )
+void setCounty(const QString & county)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTY )
+HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTY )
 /*
 QString city() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_CITY )
+HB_FUNC_STATIC(QGEOADDRESS_CITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -427,9 +427,9 @@ HB_FUNC_STATIC( QGEOADDRESS_CITY )
 }
 
 /*
-void setCity( const QString & city )
+void setCity(const QString & city)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCITY )
+HB_FUNC_STATIC(QGEOADDRESS_SETCITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCITY )
 /*
 QString district() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
+HB_FUNC_STATIC(QGEOADDRESS_DISTRICT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -481,9 +481,9 @@ HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
 }
 
 /*
-void setDistrict( const QString & district )
+void setDistrict(const QString & district)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETDISTRICT )
+HB_FUNC_STATIC(QGEOADDRESS_SETDISTRICT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETDISTRICT )
 /*
 QString postalCode() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
+HB_FUNC_STATIC(QGEOADDRESS_POSTALCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -535,9 +535,9 @@ HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
 }
 
 /*
-void setPostalCode( const QString & postalCode )
+void setPostalCode(const QString & postalCode)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETPOSTALCODE )
+HB_FUNC_STATIC(QGEOADDRESS_SETPOSTALCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETPOSTALCODE )
 /*
 QString street() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_STREET )
+HB_FUNC_STATIC(QGEOADDRESS_STREET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -589,9 +589,9 @@ HB_FUNC_STATIC( QGEOADDRESS_STREET )
 }
 
 /*
-void setStreet( const QString & street )
+void setStreet(const QString & street)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETSTREET )
+HB_FUNC_STATIC(QGEOADDRESS_SETSTREET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETSTREET )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_ISEMPTY )
+HB_FUNC_STATIC(QGEOADDRESS_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QGEOADDRESS_ISEMPTY )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QGEOADDRESS_CLEAR )
+HB_FUNC_STATIC(QGEOADDRESS_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QGEOADDRESS_CLEAR )
 /*
 bool isTextGenerated() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_ISTEXTGENERATED )
+HB_FUNC_STATIC(QGEOADDRESS_ISTEXTGENERATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QGeoAddress*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QGEOADDRESS_ISTEXTGENERATED )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOADDRESS_NEWFROM )
+HB_FUNC_STATIC(QGEOADDRESS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -726,22 +726,22 @@ HB_FUNC_STATIC( QGEOADDRESS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOADDRESS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOADDRESS_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOADDRESS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOADDRESS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOADDRESS_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOADDRESS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOADDRESS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOADDRESS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOADDRESS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOADDRESS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
