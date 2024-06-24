@@ -58,7 +58,7 @@ RETURN
 #include <QtDesigner/QAbstractExtensionManager>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
 {
   auto obj = static_cast<QAbstractExtensionManager*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -75,9 +75,9 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
 }
 
 /*
-virtual QObject * extension( QObject * object, const QString & iid ) const = 0
+virtual QObject * extension(QObject * object, const QString & iid) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
 {
   auto obj = static_cast<QAbstractExtensionManager*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 }
 
 /*
-virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid ) = 0
+virtual void registerExtensions(QAbstractExtensionFactory * factory, const QString & iid) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
   auto obj = static_cast<QAbstractExtensionManager*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -126,9 +126,9 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 }
 
 /*
-virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid ) = 0
+virtual void unregisterExtensions(QAbstractExtensionFactory * factory, const QString & iid) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
   auto obj = static_cast<QAbstractExtensionManager*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -181,22 +181,22 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QABSTRACTEXTENSIONMANAGER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QABSTRACTEXTENSIONMANAGER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

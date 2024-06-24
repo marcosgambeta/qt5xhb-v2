@@ -55,13 +55,13 @@ RETURN
 #include <QtDesigner/QExtensionManager>
 
 /*
-QExtensionFactory( QExtensionManager * parent = nullptr )
+QExtensionFactory(QExtensionManager * parent = nullptr)
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1)))
   {
-    auto obj = new QExtensionFactory( OPQEXTENSIONMANAGER( 1, nullptr));
+    auto obj = new QExtensionFactory(OPQEXTENSIONMANAGER(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_DELETE)
 {
   auto obj = qobject_cast<QExtensionFactory*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 /*
 QExtensionManager * extensionManager() const
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 {
   auto obj = qobject_cast<QExtensionFactory*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,9 +114,9 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 }
 
 /*
-virtual QObject * extension( QObject * object, const QString & iid ) const
+virtual QObject * extension(QObject * object, const QString & iid) const
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {
   auto obj = qobject_cast<QExtensionFactory*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

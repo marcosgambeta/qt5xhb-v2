@@ -69,7 +69,7 @@ RETURN
 
 #include <QtDesigner/QDesignerFormWindowInterface>
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
 /*
 virtual QWidget * current() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
     {
 #endif
       auto ptr = obj->current();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
 /*
 virtual QDesignerFormWindowInterface * formWindow() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
     {
 #endif
       auto ptr = obj->formWindow();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
 /*
 virtual bool hasSelection() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
 }
 
 /*
-bool isWidgetSelected( QWidget * widget ) const
+bool isWidgetSelected(QWidget * widget) const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -184,9 +184,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
 }
 
 /*
-virtual bool movePosition( QDesignerFormWindowCursorInterface::MoveOperation operation, QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor ) = 0
+virtual bool movePosition(QDesignerFormWindowCursorInterface::MoveOperation operation, QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor) = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->movePosition(static_cast<QDesignerFormWindowCursorInterface::MoveOperation>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode >( QDesignerFormWindowCursorInterface::MoveAnchor ) : static_cast<QDesignerFormWindowCursorInterface::MoveMode >(hb_parni(2))));
+      RBOOL(obj->movePosition(static_cast<QDesignerFormWindowCursorInterface::MoveOperation>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode >(QDesignerFormWindowCursorInterface::MoveAnchor) : static_cast<QDesignerFormWindowCursorInterface::MoveMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
 /*
 virtual int position() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -232,9 +232,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
 }
 
 /*
-virtual QWidget * selectedWidget( int index ) const = 0
+virtual QWidget * selectedWidget(int index) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
     {
 #endif
       auto ptr = obj->selectedWidget(PINT(1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
 /*
 virtual int selectedWidgetCount() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -281,9 +281,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
 }
 
 /*
-virtual void setPosition( int position, QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor ) = 0
+virtual void setPosition(int position, QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor) = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode >( QDesignerFormWindowCursorInterface::MoveAnchor ) : static_cast<QDesignerFormWindowCursorInterface::MoveMode >(hb_parni(2)));
+      obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode >(QDesignerFormWindowCursorInterface::MoveAnchor) : static_cast<QDesignerFormWindowCursorInterface::MoveMode >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,9 +307,9 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
 }
 
 /*
-virtual QWidget * widget( int index ) const = 0
+virtual QWidget * widget(int index) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
     {
 #endif
       auto ptr = obj->widget(PINT(1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
 /*
 virtual int widgetCount() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT)
 {
   auto obj = static_cast<QDesignerFormWindowCursorInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
   }
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -385,22 +385,22 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

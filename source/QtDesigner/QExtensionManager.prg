@@ -53,13 +53,13 @@ RETURN
 #endif
 
 /*
-QExtensionManager( QObject * parent = nullptr )
+QExtensionManager(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
+HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QExtensionManager( OPQOBJECT( 1, nullptr));
+    auto obj = new QExtensionManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
+HB_FUNC_STATIC(QEXTENSIONMANAGER_DELETE)
 {
   auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -87,9 +87,9 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 }
 
 /*
-virtual QObject * extension( QObject * object, const QString & iid ) const
+virtual QObject * extension(QObject * object, const QString & iid) const
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
+HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
 {
   auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -112,9 +112,9 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 }
 
 /*
-virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void registerExtensions(QAbstractExtensionFactory * factory, const QString & iid = QString())
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
+HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
   auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -138,9 +138,9 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 }
 
 /*
-virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void unregisterExtensions(QAbstractExtensionFactory * factory, const QString & iid = QString())
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
+HB_FUNC_STATIC(QEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
   auto obj = qobject_cast<QExtensionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

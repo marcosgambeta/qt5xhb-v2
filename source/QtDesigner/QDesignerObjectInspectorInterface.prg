@@ -52,7 +52,7 @@ RETURN
 
 #include <QtDesigner/QDesignerFormEditorInterface>
 
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_DELETE)
 {
   auto obj = qobject_cast<QDesignerObjectInspectorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core() const
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
 {
   auto obj = qobject_cast<QDesignerObjectInspectorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,9 +96,9 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 }
 
 /*
-virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
+virtual void setFormWindow(QDesignerFormWindowInterface * formWindow) = 0
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerObjectInspectorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

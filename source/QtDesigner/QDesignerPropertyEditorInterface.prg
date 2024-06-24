@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtDesigner/QDesignerFormEditorInterface>
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_DELETE)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core() const
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CORE)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 /*
 virtual QString currentPropertyName() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 /*
 virtual bool isReadOnly() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 /*
 virtual QObject * object() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_OBJECT)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 }
 
 /*
-virtual void setObject( QObject * object ) = 0
+virtual void setObject(QObject * object) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -204,9 +204,9 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 }
 
 /*
-virtual void setPropertyValue( const QString & name, const QVariant & value, bool changed = true ) = 0
+virtual void setPropertyValue(const QString & name, const QVariant & value, bool changed = true) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && (HB_ISLOG(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setPropertyValue(PQSTRING(1), *PQVARIANT(2), OPBOOL( 3, true));
+      obj->setPropertyValue(PQSTRING(1), *PQVARIANT(2), OPBOOL(3, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,9 +230,9 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 }
 
 /*
-virtual void setReadOnly( bool readOnly ) = 0
+virtual void setReadOnly(bool readOnly) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY)
 {
   auto obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -256,9 +256,9 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 }
 
 /*
-void propertyChanged( const QString & name, const QVariant & value )
+void propertyChanged(const QString & name, const QVariant & value)
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
+HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED)
 {
   auto sender = qobject_cast<QDesignerPropertyEditorInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDESIGNERPROPERTYEDITORINTERFACE");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QVARIANT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
