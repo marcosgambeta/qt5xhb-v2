@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHttpCacheType( static_cast<QQuickWebEngineProfile::HttpCacheType>( hb_parni(1)));
+      obj->setHttpCacheType(static_cast<QQuickWebEngineProfile::HttpCacheType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPersistentCookiesPolicy( static_cast<QQuickWebEngineProfile::PersistentCookiesPolicy>( hb_parni(1)));
+      obj->setPersistentCookiesPolicy(static_cast<QQuickWebEngineProfile::PersistentCookiesPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      auto ptr = obj->urlSchemeHandler( *PQBYTEARRAY(1));
+      auto ptr = obj->urlSchemeHandler(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEURLSCHEMEHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER )
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQWEBENGINEURLSCHEMEHANDLER(2))
     {
 #endif
-      obj->installUrlSchemeHandler( *PQBYTEARRAY(1), PQWEBENGINEURLSCHEMEHANDLER(2));
+      obj->installUrlSchemeHandler(*PQBYTEARRAY(1), PQWEBENGINEURLSCHEMEHANDLER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->removeUrlScheme( *PQBYTEARRAY(1));
+      obj->removeUrlScheme(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
