@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
     QPlaceUser( const QPlaceUser & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceUser( *PQPLACEUSER(1));
+    auto obj = new QPlaceUser(*PQPLACEUSER(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

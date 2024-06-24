@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPLACE_NEW )
     QPlace( const QPlace & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlace( *PQPLACE(1));
+    auto obj = new QPlace(*PQPLACE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -222,13 +222,13 @@ HB_FUNC_STATIC( QPLACE_SETCATEGORIES )
     {
 #endif
       QList<QPlaceCategory> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QPlaceCategory*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QPlaceCategory*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setCategories( par1);
+      obj->setCategories(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPLACE_SETCATEGORY )
     if (ISNUMPAR(1) && ISQPLACECATEGORY(1))
     {
 #endif
-      obj->setCategory( *PQPLACECATEGORY(1));
+      obj->setCategory(*PQPLACECATEGORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QPLACE_SETLOCATION )
     if (ISNUMPAR(1) && ISQGEOLOCATION(1))
     {
 #endif
-      obj->setLocation( *PQGEOLOCATION(1));
+      obj->setLocation(*PQGEOLOCATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QPLACE_SETRATINGS )
     if (ISNUMPAR(1) && ISQPLACERATINGS(1))
     {
 #endif
-      obj->setRatings( *PQPLACERATINGS(1));
+      obj->setRatings(*PQPLACERATINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QPLACE_SETSUPPLIER )
     if (ISNUMPAR(1) && ISQPLACESUPPLIER(1))
     {
 #endif
-      obj->setSupplier( *PQPLACESUPPLIER(1));
+      obj->setSupplier(*PQPLACESUPPLIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QPLACE_SETICON )
     if (ISNUMPAR(1) && ISQPLACEICON(1))
     {
 #endif
-      obj->setIcon( *PQPLACEICON(1));
+      obj->setIcon(*PQPLACEICON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QPLACE_TOTALCONTENTCOUNT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT(obj->totalContentCount( static_cast<QPlaceContent::Type>( hb_parni(1))));
+      RINT(obj->totalContentCount(static_cast<QPlaceContent::Type>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QPLACE_SETTOTALCONTENTCOUNT )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setTotalContentCount( static_cast<QPlaceContent::Type>( hb_parni(1)), PINT(2));
+      obj->setTotalContentCount(static_cast<QPlaceContent::Type>(hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1067,11 +1067,11 @@ HB_FUNC_STATIC( QPLACE_SETCONTACTDETAILS )
     {
 #endif
       QList<QPlaceContactDetail> par2;
-      auto aList2 = hb_param( 2, HB_IT_ARRAY);
-      int nLen2 = hb_arrayLen( aList2);
-      for( auto i2 = 0; i2 < nLen2; i2++ )
+      auto aList2 = hb_param(2, HB_IT_ARRAY);
+      int nLen2 = hb_arrayLen(aList2);
+      for (auto i2 = 0; i2 < nLen2; i2++)
       {
-        par2 << *static_cast<QPlaceContactDetail*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0)));
+        par2 << *static_cast<QPlaceContactDetail*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2+1), "POINTER", 0)));
       }
       obj->setContactDetails(PQSTRING(1), par2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QPLACE_SETVISIBILITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVisibility( static_cast<QLocation::Visibility>( hb_parni(1)));
+      obj->setVisibility(static_cast<QLocation::Visibility>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

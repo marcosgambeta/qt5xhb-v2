@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_SETDATETIME )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setDateTime( *PQDATETIME(1));
+      obj->setDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

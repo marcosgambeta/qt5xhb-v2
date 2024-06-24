@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_CALCULATEROUTE )
     if (ISNUMPAR(1) && ISQGEOROUTEREQUEST(1))
     {
 #endif
-      auto ptr = obj->calculateRoute( *PQGEOROUTEREQUEST(1));
+      auto ptr = obj->calculateRoute(*PQGEOROUTEREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_UPDATEROUTE )
     if (ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2))
     {
 #endif
-      auto ptr = obj->updateRoute( *PQGEOROUTE(1), *PQGEOCOORDINATE(2));
+      auto ptr = obj->updateRoute(*PQGEOROUTE(1), *PQGEOCOORDINATE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SETLOCALE )
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1));
+      obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_SETMEASUREMENTSYSTEM )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMeasurementSystem( static_cast<QLocale::MeasurementSystem>( hb_parni(1)));
+      obj->setMeasurementSystem(static_cast<QLocale::MeasurementSystem>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

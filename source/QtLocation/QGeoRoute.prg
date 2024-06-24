@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGEOROUTE_NEW )
     QGeoRoute( const QGeoRoute & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QGeoRoute( *PQGEOROUTE(1));
+    auto obj = new QGeoRoute(*PQGEOROUTE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETREQUEST )
     if (ISNUMPAR(1) && ISQGEOROUTEREQUEST(1))
     {
 #endif
-      obj->setRequest( *PQGEOROUTEREQUEST(1));
+      obj->setRequest(*PQGEOROUTEREQUEST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETBOUNDS )
     if (ISNUMPAR(1) && ISQGEORECTANGLE(1))
     {
 #endif
-      obj->setBounds( *PQGEORECTANGLE(1));
+      obj->setBounds(*PQGEORECTANGLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETFIRSTROUTESEGMENT )
     if (ISNUMPAR(1) && ISQGEOROUTESEGMENT(1))
     {
 #endif
-      obj->setFirstRouteSegment( *PQGEOROUTESEGMENT(1));
+      obj->setFirstRouteSegment(*PQGEOROUTESEGMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QGEOROUTE_SETTRAVELMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTravelMode( static_cast<QGeoRouteRequest::TravelMode>( hb_parni(1)));
+      obj->setTravelMode(static_cast<QGeoRouteRequest::TravelMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,13 +526,13 @@ HB_FUNC_STATIC( QGEOROUTE_SETPATH )
     {
 #endif
       QList<QGeoCoordinate> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QGeoCoordinate*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QGeoCoordinate*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setPath( par1);
+      obj->setPath(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QGEOROUTE_PATH )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

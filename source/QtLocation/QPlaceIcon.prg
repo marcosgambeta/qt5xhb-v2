@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
     QPlaceIcon( const QPlaceIcon & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceIcon( *PQPLACEICON(1));
+    auto obj = new QPlaceIcon(*PQPLACEICON(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

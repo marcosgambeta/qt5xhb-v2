@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
     QPlaceMatchRequest( const QPlaceMatchRequest & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceMatchRequest( *PQPLACEMATCHREQUEST(1));
+    auto obj = new QPlaceMatchRequest(*PQPLACEMATCHREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -179,13 +179,13 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
     {
 #endif
       QList<QPlace> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QPlace*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QPlace*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setPlaces( par1);
+      obj->setPlaces(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,13 +214,13 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
     {
 #endif
       QList<QPlaceSearchResult> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QPlaceSearchResult*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QPlaceSearchResult*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setResults( par1);
+      obj->setResults(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

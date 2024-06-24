@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
     QPlaceContentRequest( const QPlaceContentRequest & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceContentRequest( *PQPLACECONTENTREQUEST(1));
+    auto obj = new QPlaceContentRequest(*PQPLACECONTENTREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContentType( static_cast<QPlaceContent::Type>( hb_parni(1)));
+      obj->setContentType(static_cast<QPlaceContent::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setContentContext( *PQVARIANT(1));
+      obj->setContentContext(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

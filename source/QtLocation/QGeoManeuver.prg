@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEW )
     QGeoManeuver( const QGeoManeuver & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QGeoManeuver( *PQGEOMANEUVER(1));
+    auto obj = new QGeoManeuver(*PQGEOMANEUVER(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      obj->setPosition( *PQGEOCOORDINATE(1));
+      obj->setPosition(*PQGEOCOORDINATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDirection( static_cast<QGeoManeuver::InstructionDirection>( hb_parni(1)));
+      obj->setDirection(static_cast<QGeoManeuver::InstructionDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      obj->setWaypoint( *PQGEOCOORDINATE(1));
+      obj->setWaypoint(*PQGEOCOORDINATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

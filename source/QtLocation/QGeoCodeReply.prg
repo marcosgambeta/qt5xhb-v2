@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QGeoCodeReply( static_cast<QGeoCodeReply::Error>( hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QGeoCodeReply(static_cast<QGeoCodeReply::Error>(hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

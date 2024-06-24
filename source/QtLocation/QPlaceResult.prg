@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
     if (ISNUMPAR(1) && ISQPLACE(1))
     {
 #endif
-      obj->setPlace( *PQPLACE(1));
+      obj->setPlace(*PQPLACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

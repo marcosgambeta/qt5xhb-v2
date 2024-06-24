@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
     QPlaceEditorial( const QPlaceContent & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceEditorial( *PQPLACECONTENT(1));
+    auto obj = new QPlaceEditorial(*PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

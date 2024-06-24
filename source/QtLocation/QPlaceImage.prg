@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
     QPlaceImage( const QPlaceContent & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceImage( *PQPLACECONTENT(1));
+    auto obj = new QPlaceImage(*PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

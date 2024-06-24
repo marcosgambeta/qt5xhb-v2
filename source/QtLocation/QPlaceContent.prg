@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPLACECONTENT_NEW )
     QPlaceContent( const QPlaceContent & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceContent( *PQPLACECONTENT(1));
+    auto obj = new QPlaceContent(*PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SETSUPPLIER )
     if (ISNUMPAR(1) && ISQPLACESUPPLIER(1))
     {
 #endif
-      obj->setSupplier( *PQPLACESUPPLIER(1));
+      obj->setSupplier(*PQPLACESUPPLIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SETUSER )
     if (ISNUMPAR(1) && ISQPLACEUSER(1))
     {
 #endif
-      obj->setUser( *PQPLACEUSER(1));
+      obj->setUser(*PQPLACEUSER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

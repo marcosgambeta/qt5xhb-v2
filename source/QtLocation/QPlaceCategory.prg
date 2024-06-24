@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
     QPlaceCategory( const QPlaceCategory & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QPlaceCategory( *PQPLACECATEGORY(1));
+    auto obj = new QPlaceCategory(*PQPLACECATEGORY(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVisibility( static_cast<QLocation::Visibility>( hb_parni(1)));
+      obj->setVisibility(static_cast<QLocation::Visibility>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
     if (ISNUMPAR(1) && ISQPLACEICON(1))
     {
 #endif
-      obj->setIcon( *PQPLACEICON(1));
+      obj->setIcon(*PQPLACEICON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
