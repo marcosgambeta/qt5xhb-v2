@@ -63,7 +63,7 @@ QBluetoothUuid( QBluetoothUuid::ProtocolUuid uuid )
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothUuid( static_cast<QBluetoothUuid::ProtocolUuid>( hb_parni(1)));
+  auto obj = new QBluetoothUuid(static_cast<QBluetoothUuid::ProtocolUuid>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 #endif
 }
@@ -74,7 +74,7 @@ QBluetoothUuid( QBluetoothUuid::ServiceClassUuid uuid )
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothUuid( static_cast<QBluetoothUuid::ServiceClassUuid>( hb_parni(1)));
+  auto obj = new QBluetoothUuid(static_cast<QBluetoothUuid::ServiceClassUuid>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 #endif
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW )
     QBluetoothUuid( const QBluetoothUuid & uuid )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothUuid( *PQBLUETOOTHUUID(1));
+    auto obj = new QBluetoothUuid(*PQBLUETOOTHUUID(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW )
     QBluetoothUuid( const QUuid & uuid )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothUuid( *PQUUID(1));
+    auto obj = new QBluetoothUuid(*PQUUID(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 #endif
       bool par1;
       RQUINT16(obj->toUInt16( &par1));
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
 #endif
       bool par1;
       RQUINT32(obj->toUInt32( &par1));
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

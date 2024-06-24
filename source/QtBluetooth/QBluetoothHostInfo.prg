@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
     QBluetoothHostInfo( const QBluetoothHostInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothHostInfo( *PQBLUETOOTHHOSTINFO(1));
+    auto obj = new QBluetoothHostInfo(*PQBLUETOOTHHOSTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
     if (ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1))
     {
 #endif
-      obj->setAddress( *PQBLUETOOTHADDRESS(1));
+      obj->setAddress(*PQBLUETOOTHADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
     QBluetoothDeviceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothDeviceDiscoveryAgent( *PQBLUETOOTHADDRESS(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QBluetoothDeviceDiscoveryAgent(*PQBLUETOOTHADDRESS(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInquiryType( static_cast<QBluetoothDeviceDiscoveryAgent::InquiryType>( hb_parni(1)));
+      obj->setInquiryType(static_cast<QBluetoothDeviceDiscoveryAgent::InquiryType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto & item : list )
+        for (auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

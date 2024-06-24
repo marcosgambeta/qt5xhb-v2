@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
     QBluetoothLocalDevice( const QBluetoothAddress & address, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothLocalDevice( *PQBLUETOOTHADDRESS(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QBluetoothLocalDevice(*PQBLUETOOTHADDRESS(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_REQUESTPAIRING )
     if (ISNUMPAR(2) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2))
     {
 #endif
-      obj->requestPairing( *PQBLUETOOTHADDRESS(1), static_cast<QBluetoothLocalDevice::Pairing>( hb_parni(2)));
+      obj->requestPairing(*PQBLUETOOTHADDRESS(1), static_cast<QBluetoothLocalDevice::Pairing>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS )
     if (ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1))
     {
 #endif
-      RENUM(obj->pairingStatus( *PQBLUETOOTHADDRESS(1)));
+      RENUM(obj->pairingStatus(*PQBLUETOOTHADDRESS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_SETHOSTMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHostMode( static_cast<QBluetoothLocalDevice::HostMode>( hb_parni(1)));
+      obj->setHostMode(static_cast<QBluetoothLocalDevice::HostMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ALLDEVICES )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

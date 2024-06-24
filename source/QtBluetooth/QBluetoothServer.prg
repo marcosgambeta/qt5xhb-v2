@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QBluetoothServer( static_cast<QBluetoothServiceInfo::Protocol>( hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QBluetoothServer(static_cast<QBluetoothServiceInfo::Protocol>(hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 
     if (obj != nullptr)
     {
-      auto ptr = new QBluetoothServiceInfo(obj->listen( *PQBLUETOOTHUUID(1), OPQSTRING(2, QString() )));
+      auto ptr = new QBluetoothServiceInfo(obj->listen(*PQBLUETOOTHUUID(1), OPQSTRING(2, QString() )));
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHSERVICEINFO", true);
     }
 #endif
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETSECURITYFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSecurityFlags( static_cast<QBluetooth::SecurityFlags>( hb_parni(1)));
+      obj->setSecurityFlags(static_cast<QBluetooth::SecurityFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

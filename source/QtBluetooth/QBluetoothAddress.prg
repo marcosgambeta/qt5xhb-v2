@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_NEW )
     QBluetoothAddress( const QBluetoothAddress & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothAddress( *PQBLUETOOTHADDRESS(1));
+    auto obj = new QBluetoothAddress(*PQBLUETOOTHADDRESS(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

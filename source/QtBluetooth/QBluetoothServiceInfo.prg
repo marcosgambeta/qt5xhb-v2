@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
     QBluetoothServiceInfo( const QBluetoothServiceInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QBluetoothServiceInfo( *PQBLUETOOTHSERVICEINFO(1));
+    auto obj = new QBluetoothServiceInfo(*PQBLUETOOTHSERVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETDEVICE )
     if (ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1))
     {
 #endif
-      obj->setDevice( *PQBLUETOOTHDEVICEINFO(1));
+      obj->setDevice(*PQBLUETOOTHDEVICEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETSERVICEUUID )
     if (ISNUMPAR(1) && ISQBLUETOOTHUUID(1))
     {
 #endif
-      obj->setServiceUuid( *PQBLUETOOTHUUID(1));
+      obj->setServiceUuid(*PQBLUETOOTHUUID(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
