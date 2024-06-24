@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QMASKGENERATOR_DELETE )
+HB_FUNC_STATIC(QMASKGENERATOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMaskGenerator*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMASKGENERATOR_DELETE )
 /*
 virtual bool seed() = 0
 */
-HB_FUNC_STATIC( QMASKGENERATOR_SEED )
+HB_FUNC_STATIC(QMASKGENERATOR_SEED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMaskGenerator*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QMASKGENERATOR_SEED )
 /*
 virtual quint32 nextMask() = 0
 */
-HB_FUNC_STATIC( QMASKGENERATOR_NEXTMASK )
+HB_FUNC_STATIC(QMASKGENERATOR_NEXTMASK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QMaskGenerator*>(Qt5xHb::itemGetPtrStackSelfItem());
