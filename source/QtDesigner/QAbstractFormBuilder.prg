@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
     if (ISNUMPAR(1) && ISQDIR(1))
     {
 #endif
-      obj->setWorkingDirectory( *PQDIR(1));
+      obj->setWorkingDirectory(*PQDIR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
