@@ -75,7 +75,7 @@ RETURN
 
 #include <QtPositioning/QGeoCoordinate>
 
-HB_FUNC_STATIC( QGEOMANEUVER_NEW )
+HB_FUNC_STATIC(QGEOMANEUVER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEW )
   else if (ISNUMPAR(1) && ISQGEOMANEUVER(1))
   {
     /*
-    QGeoManeuver( const QGeoManeuver & other )
+    QGeoManeuver(const QGeoManeuver & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QGeoManeuver(*PQGEOMANEUVER(1));
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOMANEUVER_DELETE )
+HB_FUNC_STATIC(QGEOMANEUVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
+HB_FUNC_STATIC(QGEOMANEUVER_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
 }
 
 /*
-void setPosition( const QGeoCoordinate & position )
+void setPosition(const QGeoCoordinate & position)
 */
-HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
+HB_FUNC_STATIC(QGEOMANEUVER_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
 /*
 QGeoCoordinate position() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
+HB_FUNC_STATIC(QGEOMANEUVER_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -205,9 +205,9 @@ HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
 }
 
 /*
-void setInstructionText( const QString & instructionText )
+void setInstructionText(const QString & instructionText)
 */
-HB_FUNC_STATIC( QGEOMANEUVER_SETINSTRUCTIONTEXT )
+HB_FUNC_STATIC(QGEOMANEUVER_SETINSTRUCTIONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETINSTRUCTIONTEXT )
 /*
 QString instructionText() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_INSTRUCTIONTEXT )
+HB_FUNC_STATIC(QGEOMANEUVER_INSTRUCTIONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -259,9 +259,9 @@ HB_FUNC_STATIC( QGEOMANEUVER_INSTRUCTIONTEXT )
 }
 
 /*
-void setDirection( QGeoManeuver::InstructionDirection direction )
+void setDirection(QGeoManeuver::InstructionDirection direction)
 */
-HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
+HB_FUNC_STATIC(QGEOMANEUVER_SETDIRECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
 /*
 QGeoManeuver::InstructionDirection direction() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
+HB_FUNC_STATIC(QGEOMANEUVER_DIRECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -313,9 +313,9 @@ HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
 }
 
 /*
-void setTimeToNextInstruction( int secs )
+void setTimeToNextInstruction(int secs)
 */
-HB_FUNC_STATIC( QGEOMANEUVER_SETTIMETONEXTINSTRUCTION )
+HB_FUNC_STATIC(QGEOMANEUVER_SETTIMETONEXTINSTRUCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETTIMETONEXTINSTRUCTION )
 /*
 int timeToNextInstruction() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
+HB_FUNC_STATIC(QGEOMANEUVER_TIMETONEXTINSTRUCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -367,9 +367,9 @@ HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
 }
 
 /*
-void setDistanceToNextInstruction( qreal distance )
+void setDistanceToNextInstruction(qreal distance)
 */
-HB_FUNC_STATIC( QGEOMANEUVER_SETDISTANCETONEXTINSTRUCTION )
+HB_FUNC_STATIC(QGEOMANEUVER_SETDISTANCETONEXTINSTRUCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDISTANCETONEXTINSTRUCTION )
 /*
 qreal distanceToNextInstruction() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
+HB_FUNC_STATIC(QGEOMANEUVER_DISTANCETONEXTINSTRUCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -421,9 +421,9 @@ HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
 }
 
 /*
-void setWaypoint( const QGeoCoordinate & coordinate )
+void setWaypoint(const QGeoCoordinate & coordinate)
 */
-HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
+HB_FUNC_STATIC(QGEOMANEUVER_SETWAYPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
 /*
 QGeoCoordinate waypoint() const
 */
-HB_FUNC_STATIC( QGEOMANEUVER_WAYPOINT )
+HB_FUNC_STATIC(QGEOMANEUVER_WAYPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoManeuver*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_WAYPOINT )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOMANEUVER_NEWFROM )
+HB_FUNC_STATIC(QGEOMANEUVER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -505,22 +505,22 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOMANEUVER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOMANEUVER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOMANEUVER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOMANEUVER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOMANEUVER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOMANEUVER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOMANEUVER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOMANEUVER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOMANEUVER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOMANEUVER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

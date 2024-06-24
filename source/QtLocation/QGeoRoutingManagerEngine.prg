@@ -70,7 +70,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_DELETE )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_DELETE )
 /*
 QString managerName() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERNAME )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERNAME )
 /*
 int managerVersion() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERVERSION )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +143,9 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MANAGERVERSION )
 }
 
 /*
-virtual QGeoRouteReply * calculateRoute( const QGeoRouteRequest & request ) = 0
+virtual QGeoRouteReply * calculateRoute(const QGeoRouteRequest & request) = 0
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_CALCULATEROUTE )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_CALCULATEROUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +170,9 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_CALCULATEROUTE )
 }
 
 /*
-virtual QGeoRouteReply * updateRoute( const QGeoRoute & route, const QGeoCoordinate & position )
+virtual QGeoRouteReply * updateRoute(const QGeoRoute & route, const QGeoCoordinate & position)
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_UPDATEROUTE )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_UPDATEROUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_UPDATEROUTE )
 /*
 QGeoRouteRequest::TravelModes supportedTravelModes() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES )
 /*
 QGeoRouteRequest::FeatureTypes supportedFeatureTypes() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES )
 /*
 QGeoRouteRequest::FeatureWeights supportedFeatureWeights() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS )
 /*
 QGeoRouteRequest::RouteOptimizations supportedRouteOptimizations() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS )
 /*
 QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS )
 /*
 QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -353,9 +353,9 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS )
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale(const QLocale & locale)
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETLOCALE )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETLOCALE )
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_LOCALE )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -408,9 +408,9 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_LOCALE )
 }
 
 /*
-void setMeasurementSystem( QLocale::MeasurementSystem system )
+void setMeasurementSystem(QLocale::MeasurementSystem system)
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETMEASUREMENTSYSTEM )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SETMEASUREMENTSYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_SETMEASUREMENTSYSTEM )
 /*
 QLocale::MeasurementSystem measurementSystem() const
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -462,9 +462,9 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM )
 }
 
 /*
-void finished( QGeoRouteReply * reply )
+void finished(QGeoRouteReply * reply)
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -516,9 +516,9 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
 }
 
 /*
-void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() )
+void error(QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString())
 */
-HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
+HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QGeoRoutingManagerEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());

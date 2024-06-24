@@ -64,7 +64,7 @@ RETURN
 
 #include <QtCore/QLocale>
 
-HB_FUNC_STATIC( QGEOCODINGMANAGER_DELETE )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_DELETE )
 /*
 QString managerName() const
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
 /*
 int managerVersion() const
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,12 +136,12 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
 {
   if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2)))
   {
     /*
-    QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & bounds = QGeoShape() )
+    QGeoCodeReply * geocode(const QGeoAddress & address, const QGeoShape & bounds = QGeoShape())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -157,14 +157,14 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
   else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) && (ISQGEOSHAPE(4) || HB_ISNIL(4)))
   {
     /*
-    QGeoCodeReply * geocode( const QString & searchString, int limit = -1, int offset = 0, const QGeoShape & bounds = QGeoShape() )
+    QGeoCodeReply * geocode(const QString & searchString, int limit = -1, int offset = 0, const QGeoShape & bounds = QGeoShape())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->geocode(PQSTRING(1), OPINT( 2, -1 ), OPINT( 3, 0 ), HB_ISNIL(4) ? QGeoShape() : *static_cast<QGeoShape*>(Qt5xHb::itemGetPtr(4)));
+      auto ptr = obj->geocode(PQSTRING(1), OPINT(2, -1), OPINT(3, 0), HB_ISNIL(4) ? QGeoShape() : *static_cast<QGeoShape*>(Qt5xHb::itemGetPtr(4)));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
@@ -177,9 +177,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
 }
 
 /*
-QGeoCodeReply * reverseGeocode( const QGeoCoordinate & coordinate, const QGeoShape & bounds = QGeoShape() )
+QGeoCodeReply * reverseGeocode(const QGeoCoordinate & coordinate, const QGeoShape & bounds = QGeoShape())
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -204,9 +204,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale(const QLocale & locale)
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -259,9 +259,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
 }
 
 /*
-void finished( QGeoCodeReply * reply )
+void finished(QGeoCodeReply * reply)
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -313,9 +313,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
 }
 
 /*
-void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() )
+void error(QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString())
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
+HB_FUNC_STATIC(QGEOCODINGMANAGER_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QGeoCodingManager*>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -71,7 +71,7 @@ RETURN
 
 #include <QtLocation/QPlaceIcon>
 
-HB_FUNC_STATIC( QPLACECATEGORY_NEW )
+HB_FUNC_STATIC(QPLACECATEGORY_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
   else if (ISNUMPAR(1) && ISQPLACECATEGORY(1))
   {
     /*
-    QPlaceCategory( const QPlaceCategory & other )
+    QPlaceCategory(const QPlaceCategory & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceCategory(*PQPLACECATEGORY(1));
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLACECATEGORY_DELETE )
+HB_FUNC_STATIC(QPLACECATEGORY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_DELETE )
 /*
 QString categoryId() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
+HB_FUNC_STATIC(QPLACECATEGORY_CATEGORYID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -146,9 +146,9 @@ HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
 }
 
 /*
-void setCategoryId( const QString & identifier )
+void setCategoryId(const QString & identifier)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
+HB_FUNC_STATIC(QPLACECATEGORY_SETCATEGORYID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_NAME )
+HB_FUNC_STATIC(QPLACECATEGORY_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QPLACECATEGORY_NAME )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
+HB_FUNC_STATIC(QPLACECATEGORY_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
 /*
 QLocation::Visibility visibility() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
+HB_FUNC_STATIC(QPLACECATEGORY_VISIBILITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -254,9 +254,9 @@ HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
 }
 
 /*
-void setVisibility( QLocation::Visibility visibility )
+void setVisibility(QLocation::Visibility visibility)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
+HB_FUNC_STATIC(QPLACECATEGORY_SETVISIBILITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
 /*
 QPlaceIcon icon() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_ICON )
+HB_FUNC_STATIC(QPLACECATEGORY_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -309,9 +309,9 @@ HB_FUNC_STATIC( QPLACECATEGORY_ICON )
 }
 
 /*
-void setIcon( const QPlaceIcon & icon )
+void setIcon(const QPlaceIcon & icon)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
+HB_FUNC_STATIC(QPLACECATEGORY_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
+HB_FUNC_STATIC(QPLACECATEGORY_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACECATEGORY_NEWFROM )
+HB_FUNC_STATIC(QPLACECATEGORY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -392,22 +392,22 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPLACECATEGORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPLACECATEGORY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QPLACECATEGORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACECATEGORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPLACECATEGORY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QPLACECATEGORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACECATEGORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACECATEGORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPLACECATEGORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACECATEGORY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

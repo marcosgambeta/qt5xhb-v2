@@ -55,14 +55,14 @@ RETURN
 #endif
 
 /*
-QPlaceSearchSuggestionReply( QObject * parent = nullptr )
+QPlaceSearchSuggestionReply(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
+HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QPlaceSearchSuggestionReply( OPQOBJECT( 1, nullptr));
+    auto obj = new QPlaceSearchSuggestionReply(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_DELETE )
+HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceSearchSuggestionReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_DELETE )
 /*
 QStringList suggestions() const
 */
-HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS )
+HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceSearchSuggestionReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS )
 /*
 QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_TYPE )
+HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceSearchSuggestionReply*>(Qt5xHb::getQObjectPointerFromSelfItem());

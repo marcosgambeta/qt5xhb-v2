@@ -67,7 +67,7 @@ RETURN
 
 #include <QtLocation/QPlaceManager>
 
-HB_FUNC_STATIC( QPLACEICON_NEW )
+HB_FUNC_STATIC(QPLACEICON_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
   else if (ISNUMPAR(1) && ISQPLACEICON(1))
   {
     /*
-    QPlaceIcon( const QPlaceIcon & other )
+    QPlaceIcon(const QPlaceIcon & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceIcon(*PQPLACEICON(1));
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLACEICON_DELETE )
+HB_FUNC_STATIC(QPLACEICON_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceIcon*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -116,9 +116,9 @@ HB_FUNC_STATIC( QPLACEICON_DELETE )
 }
 
 /*
-QUrl url( const QSize & size = QSize() ) const
+QUrl url(const QSize & size = QSize()) const
 */
-HB_FUNC_STATIC( QPLACEICON_URL )
+HB_FUNC_STATIC(QPLACEICON_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceIcon*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QPLACEICON_URL )
     if (ISBETWEEN(0, 1) && (ISQSIZE(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = new QUrl(obj->url( HB_ISNIL(1) ? QSize() : *static_cast<QSize*>(Qt5xHb::itemGetPtr(1))));
+      auto ptr = new QUrl(obj->url(HB_ISNIL(1) ? QSize() : *static_cast<QSize*>(Qt5xHb::itemGetPtr(1))));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPLACEICON_URL )
 /*
 QPlaceManager * manager() const
 */
-HB_FUNC_STATIC( QPLACEICON_MANAGER )
+HB_FUNC_STATIC(QPLACEICON_MANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceIcon*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -170,9 +170,9 @@ HB_FUNC_STATIC( QPLACEICON_MANAGER )
 }
 
 /*
-void setManager( QPlaceManager * manager )
+void setManager(QPlaceManager * manager)
 */
-HB_FUNC_STATIC( QPLACEICON_SETMANAGER )
+HB_FUNC_STATIC(QPLACEICON_SETMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceIcon*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPLACEICON_SETMANAGER )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPLACEICON_ISEMPTY )
+HB_FUNC_STATIC(QPLACEICON_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceIcon*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPLACEICON_ISEMPTY )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEICON_NEWFROM )
+HB_FUNC_STATIC(QPLACEICON_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -253,22 +253,22 @@ HB_FUNC_STATIC( QPLACEICON_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPLACEICON_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPLACEICON_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QPLACEICON_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACEICON_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPLACEICON_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QPLACEICON_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACEICON_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACEICON_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPLACEICON_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACEICON_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

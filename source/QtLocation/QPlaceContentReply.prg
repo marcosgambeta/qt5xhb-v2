@@ -59,14 +59,14 @@ RETURN
 #endif
 
 /*
-QPlaceContentReply( QObject * parent = nullptr )
+QPlaceContentReply(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QPlaceContentReply( OPQOBJECT( 1, nullptr));
+    auto obj = new QPlaceContentReply(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACECONTENTREPLY_DELETE )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceContentReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_DELETE )
 /*
 QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceContentReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
 /*
 int totalCount() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_TOTALCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceContentReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
 /*
 QPlaceContentRequest request() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceContentReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
 /*
 QPlaceContentRequest previousPageRequest() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceContentReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
 /*
 QPlaceContentRequest nextPageRequest() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_NEXTPAGEREQUEST )
+HB_FUNC_STATIC(QPLACECONTENTREPLY_NEXTPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceContentReply*>(Qt5xHb::getQObjectPointerFromSelfItem());

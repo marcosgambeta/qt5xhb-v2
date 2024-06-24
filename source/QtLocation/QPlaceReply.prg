@@ -61,14 +61,14 @@ RETURN
 #endif
 
 /*
-QPlaceReply( QObject * parent = nullptr )
+QPlaceReply(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QPLACEREPLY_NEW )
+HB_FUNC_STATIC(QPLACEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QPlaceReply( OPQOBJECT( 1, nullptr));
+    auto obj = new QPlaceReply(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPLACEREPLY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEREPLY_DELETE )
+HB_FUNC_STATIC(QPLACEREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPLACEREPLY_DELETE )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
+HB_FUNC_STATIC(QPLACEREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
 /*
 virtual QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACEREPLY_TYPE )
+HB_FUNC_STATIC(QPLACEREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QPLACEREPLY_TYPE )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QPLACEREPLY_ERRORSTRING )
+HB_FUNC_STATIC(QPLACEREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ERRORSTRING )
 /*
 QPlaceReply::Error error() const
 */
-HB_FUNC_STATIC( QPLACEREPLY_ERROR )
+HB_FUNC_STATIC(QPLACEREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ERROR )
 /*
 virtual void abort()
 */
-HB_FUNC_STATIC( QPLACEREPLY_ABORT )
+HB_FUNC_STATIC(QPLACEREPLY_ABORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ABORT )
 /*
 void finished()
 */
-HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
+HB_FUNC_STATIC(QPLACEREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +283,9 @@ HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
 }
 
 /*
-void error( QPlaceReply::Error error, const QString & errorString = QString() )
+void error(QPlaceReply::Error error, const QString & errorString = QString())
 */
-HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
+HB_FUNC_STATIC(QPLACEREPLY_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QPlaceReply*>(Qt5xHb::getQObjectPointerFromSelfItem());

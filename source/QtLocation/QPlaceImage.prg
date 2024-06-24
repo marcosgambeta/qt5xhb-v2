@@ -57,7 +57,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QPLACEIMAGE_NEW )
+HB_FUNC_STATIC(QPLACEIMAGE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
   else if (ISNUMPAR(1) && ISQPLACECONTENT(1))
   {
     /*
-    QPlaceImage( const QPlaceContent & other )
+    QPlaceImage(const QPlaceContent & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceImage(*PQPLACECONTENT(1));
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLACEIMAGE_DELETE )
+HB_FUNC_STATIC(QPLACEIMAGE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_DELETE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QPLACEIMAGE_URL )
+HB_FUNC_STATIC(QPLACEIMAGE_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +133,9 @@ HB_FUNC_STATIC( QPLACEIMAGE_URL )
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
+HB_FUNC_STATIC(QPLACEIMAGE_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
 /*
 QString imageId() const
 */
-HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
+HB_FUNC_STATIC(QPLACEIMAGE_IMAGEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
 }
 
 /*
-void setImageId( const QString & identifier )
+void setImageId(const QString & identifier)
 */
-HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
+HB_FUNC_STATIC(QPLACEIMAGE_SETIMAGEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
 /*
 QString mimeType() const
 */
-HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
+HB_FUNC_STATIC(QPLACEIMAGE_MIMETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -241,9 +241,9 @@ HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
 }
 
 /*
-void setMimeType( const QString & data )
+void setMimeType(const QString & data)
 */
-HB_FUNC_STATIC( QPLACEIMAGE_SETMIMETYPE )
+HB_FUNC_STATIC(QPLACEIMAGE_SETMIMETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceImage*>(Qt5xHb::itemGetPtrStackSelfItem());

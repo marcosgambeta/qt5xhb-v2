@@ -63,7 +63,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QPLACEUSER_NEW )
+HB_FUNC_STATIC(QPLACEUSER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
   else if (ISNUMPAR(1) && ISQPLACEUSER(1))
   {
     /*
-    QPlaceUser( const QPlaceUser & other )
+    QPlaceUser(const QPlaceUser & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceUser(*PQPLACEUSER(1));
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLACEUSER_DELETE )
+HB_FUNC_STATIC(QPLACEUSER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceUser*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPLACEUSER_DELETE )
 /*
 QString userId() const
 */
-HB_FUNC_STATIC( QPLACEUSER_USERID )
+HB_FUNC_STATIC(QPLACEUSER_USERID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceUser*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +138,9 @@ HB_FUNC_STATIC( QPLACEUSER_USERID )
 }
 
 /*
-void setUserId( const QString & identifier )
+void setUserId(const QString & identifier)
 */
-HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
+HB_FUNC_STATIC(QPLACEUSER_SETUSERID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceUser*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QPLACEUSER_NAME )
+HB_FUNC_STATIC(QPLACEUSER_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceUser*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -192,9 +192,9 @@ HB_FUNC_STATIC( QPLACEUSER_NAME )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QPLACEUSER_SETNAME )
+HB_FUNC_STATIC(QPLACEUSER_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceUser*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPLACEUSER_SETNAME )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEUSER_NEWFROM )
+HB_FUNC_STATIC(QPLACEUSER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -249,22 +249,22 @@ HB_FUNC_STATIC( QPLACEUSER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPLACEUSER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPLACEUSER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QPLACEUSER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACEUSER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPLACEUSER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QPLACEUSER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACEUSER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACEUSER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPLACEUSER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACEUSER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

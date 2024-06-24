@@ -76,7 +76,7 @@ RETURN
 #include <QtLocation/QGeoManeuver>
 #include <QtPositioning/QGeoCoordinate>
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
   else if (ISNUMPAR(1) && ISQGEOROUTESEGMENT(1))
   {
     /*
-    QGeoRouteSegment( const QGeoRouteSegment & other )
+    QGeoRouteSegment(const QGeoRouteSegment & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QGeoRouteSegment(*PQGEOROUTESEGMENT(1));
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_DELETE )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_ISVALID )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +151,9 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_ISVALID )
 }
 
 /*
-void setNextRouteSegment( const QGeoRouteSegment & routeSegment )
+void setNextRouteSegment(const QGeoRouteSegment & routeSegment)
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SETNEXTROUTESEGMENT )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SETNEXTROUTESEGMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_SETNEXTROUTESEGMENT )
 /*
 QGeoRouteSegment nextRouteSegment() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_NEXTROUTESEGMENT )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_NEXTROUTESEGMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -206,9 +206,9 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEXTROUTESEGMENT )
 }
 
 /*
-void setTravelTime( int secs )
+void setTravelTime(int secs)
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SETTRAVELTIME )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SETTRAVELTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_SETTRAVELTIME )
 /*
 int travelTime() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_TRAVELTIME )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_TRAVELTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -260,9 +260,9 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_TRAVELTIME )
 }
 
 /*
-void setDistance( qreal distance )
+void setDistance(qreal distance)
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SETDISTANCE )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SETDISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_SETDISTANCE )
 /*
 qreal distance() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_DISTANCE )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_DISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -314,9 +314,9 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_DISTANCE )
 }
 
 /*
-void setPath( const QList<QGeoCoordinate> & path )
+void setPath(const QList<QGeoCoordinate> & path)
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SETPATH )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SETPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_SETPATH )
 /*
 QList<QGeoCoordinate> path() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_PATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -401,9 +401,9 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
 }
 
 /*
-void setManeuver( const QGeoManeuver & maneuver )
+void setManeuver(const QGeoManeuver & maneuver)
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SETMANEUVER )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SETMANEUVER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_SETMANEUVER )
 /*
 QGeoManeuver maneuver() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_MANEUVER )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_MANEUVER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_MANEUVER )
 /*
 bool isLegLastSegment() const
 */
-HB_FUNC_STATIC( QGEOROUTESEGMENT_ISLEGLASTSEGMENT )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_ISLEGLASTSEGMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
   auto obj = static_cast<QGeoRouteSegment*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_ISLEGLASTSEGMENT )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_NEWFROM )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -511,22 +511,22 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGEOROUTESEGMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGEOROUTESEGMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOROUTESEGMENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOROUTESEGMENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

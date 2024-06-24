@@ -66,7 +66,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QPLACERATINGS_NEW )
+HB_FUNC_STATIC(QPLACERATINGS_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPLACERATINGS_NEW )
   else if (ISNUMPAR(1) && ISQPLACERATINGS(1))
   {
     /*
-    QPlaceRatings( const QPlaceRatings & other )
+    QPlaceRatings(const QPlaceRatings & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     auto obj = new QPlaceRatings(*PQPLACERATINGS(1));
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPLACERATINGS_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLACERATINGS_DELETE )
+HB_FUNC_STATIC(QPLACERATINGS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPLACERATINGS_DELETE )
 /*
 qreal average() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_AVERAGE )
+HB_FUNC_STATIC(QPLACERATINGS_AVERAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -141,9 +141,9 @@ HB_FUNC_STATIC( QPLACERATINGS_AVERAGE )
 }
 
 /*
-void setAverage( qreal average )
+void setAverage(qreal average)
 */
-HB_FUNC_STATIC( QPLACERATINGS_SETAVERAGE )
+HB_FUNC_STATIC(QPLACERATINGS_SETAVERAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPLACERATINGS_SETAVERAGE )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_COUNT )
+HB_FUNC_STATIC(QPLACERATINGS_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -195,9 +195,9 @@ HB_FUNC_STATIC( QPLACERATINGS_COUNT )
 }
 
 /*
-void setCount( int count )
+void setCount(int count)
 */
-HB_FUNC_STATIC( QPLACERATINGS_SETCOUNT )
+HB_FUNC_STATIC(QPLACERATINGS_SETCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QPLACERATINGS_SETCOUNT )
 /*
 qreal maximum() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_MAXIMUM )
+HB_FUNC_STATIC(QPLACERATINGS_MAXIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -249,9 +249,9 @@ HB_FUNC_STATIC( QPLACERATINGS_MAXIMUM )
 }
 
 /*
-void setMaximum( qreal max )
+void setMaximum(qreal max)
 */
-HB_FUNC_STATIC( QPLACERATINGS_SETMAXIMUM )
+HB_FUNC_STATIC(QPLACERATINGS_SETMAXIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QPLACERATINGS_SETMAXIMUM )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_ISEMPTY )
+HB_FUNC_STATIC(QPLACERATINGS_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QPlaceRatings*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPLACERATINGS_ISEMPTY )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACERATINGS_NEWFROM )
+HB_FUNC_STATIC(QPLACERATINGS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -332,22 +332,22 @@ HB_FUNC_STATIC( QPLACERATINGS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPLACERATINGS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPLACERATINGS_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QPLACERATINGS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACERATINGS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPLACERATINGS_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QPLACERATINGS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPLACERATINGS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACERATINGS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPLACERATINGS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPLACERATINGS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
