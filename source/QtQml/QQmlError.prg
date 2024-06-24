@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
     /*
     QQmlError( const QQmlError & other )
     */
-    auto obj = new QQmlError( *PQQMLERROR(1));
+    auto obj = new QQmlError(*PQQMLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QQMLERROR_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
     /*
     QQmlScriptString( const QQmlScriptString & other )
     */
-    auto obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1));
+    auto obj = new QQmlScriptString(*PQQMLSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
 #endif
       bool par1;
       RBOOL(obj->booleanLiteral( &par1));
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
 #endif
       bool par1;
       RQREAL(obj->numberLiteral( &par1));
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

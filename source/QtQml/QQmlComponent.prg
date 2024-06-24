@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
     /*
     QQmlComponent( QQmlEngine * engine, const QString & fileName, QQmlComponent::CompilationMode mode, QObject * parent = nullptr )
     */
-    auto obj = new QQmlComponent(PQQMLENGINE(1), PQSTRING(2), static_cast<QQmlComponent::CompilationMode>( hb_parni(3)), OPQOBJECT( 4, nullptr));
+    auto obj = new QQmlComponent(PQQMLENGINE(1), PQSTRING(2), static_cast<QQmlComponent::CompilationMode>(hb_parni(3)), OPQOBJECT( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
     /*
     QQmlComponent( QQmlEngine * engine, const QUrl & url, QQmlComponent::CompilationMode mode, QObject * parent = nullptr )
     */
-    auto obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), static_cast<QQmlComponent::CompilationMode>( hb_parni(3)), OPQOBJECT( 4, nullptr));
+    auto obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), static_cast<QQmlComponent::CompilationMode>(hb_parni(3)), OPQOBJECT( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 
     if (obj != nullptr)
     {
-      obj->create( *PQQMLINCUBATOR(1), OPQQMLCONTEXT( 2, nullptr ), OPQQMLCONTEXT( 3, nullptr));
+      obj->create(*PQQMLINCUBATOR(1), OPQQMLCONTEXT( 2, nullptr ), OPQQMLCONTEXT( 3, nullptr));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 
     if (obj != nullptr)
     {
-      obj->loadUrl( *PQURL(1));
+      obj->loadUrl(*PQURL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 
     if (obj != nullptr)
     {
-      obj->loadUrl( *PQURL(1), static_cast<QQmlComponent::CompilationMode>( hb_parni(2)));
+      obj->loadUrl(*PQURL(1), static_cast<QQmlComponent::CompilationMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2))
     {
 #endif
-      obj->setData( *PQBYTEARRAY(1), *PQURL(2));
+      obj->setData(*PQBYTEARRAY(1), *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETTARGET )
     if (ISNUMPAR(1) && ISQQMLPROPERTY(1))
     {
 #endif
-      obj->setTarget( *PQQMLPROPERTY(1));
+      obj->setTarget(*PQQMLPROPERTY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

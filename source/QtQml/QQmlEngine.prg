@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETBASEURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setBaseUrl( *PQURL(1));
+      obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
 #endif
-    QQmlEngine::setObjectOwnership(PQOBJECT(1), static_cast<QQmlEngine::ObjectOwnership>( hb_parni(2)));
+    QQmlEngine::setObjectOwnership(PQOBJECT(1), static_cast<QQmlEngine::ObjectOwnership>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

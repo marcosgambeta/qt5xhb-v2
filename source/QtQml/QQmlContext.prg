@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QUrl(obj->resolvedUrl( *PQURL(1)));
+      auto ptr = new QUrl(obj->resolvedUrl(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setBaseUrl( *PQURL(1));
+      obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

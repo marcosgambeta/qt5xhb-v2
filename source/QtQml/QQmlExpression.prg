@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
     /*
     QQmlExpression( const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr )
     */
-    auto obj = new QQmlExpression( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT( 2, nullptr ), OPQOBJECT( 3, nullptr ), OPQOBJECT( 4, nullptr));
+    auto obj = new QQmlExpression(*PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT( 2, nullptr ), OPQOBJECT( 3, nullptr ), OPQOBJECT( 4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
       bool par1;
       auto ptr = new QVariant(obj->evaluate( &par1));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

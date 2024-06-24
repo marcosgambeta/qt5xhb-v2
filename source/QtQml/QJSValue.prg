@@ -102,7 +102,7 @@ QJSValue( QJSValue::SpecialValue value = QJSValue::UndefinedValue )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW1 )
 {
-  auto obj = new QJSValue( HB_ISNIL(1) ? static_cast<QJSValue::SpecialValue >( QJSValue::UndefinedValue ) : static_cast<QJSValue::SpecialValue >( hb_parni(1)));
+  auto obj = new QJSValue( HB_ISNIL(1) ? static_cast<QJSValue::SpecialValue >( QJSValue::UndefinedValue ) : static_cast<QJSValue::SpecialValue >(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
     /*
     QJSValue( const QJSValue & other )
     */
-    auto obj = new QJSValue( *PQJSVALUE(1));
+    auto obj = new QJSValue(*PQJSVALUE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
     /*
     QJSValue( const QLatin1String & value )
     */
-    auto obj = new QJSValue( *PQLATIN1STRING(1));
+    auto obj = new QJSValue(*PQLATIN1STRING(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QJSVALUE_EQUALS )
     if (ISNUMPAR(1) && ISQJSVALUE(1))
     {
 #endif
-      RBOOL(obj->equals( *PQJSVALUE(1)));
+      RBOOL(obj->equals(*PQJSVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROTOTYPE )
     if (ISNUMPAR(1) && ISQJSVALUE(1))
     {
 #endif
-      obj->setPrototype( *PQJSVALUE(1));
+      obj->setPrototype(*PQJSVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QJSVALUE_STRICTLYEQUALS )
     if (ISNUMPAR(1) && ISQJSVALUE(1))
     {
 #endif
-      RBOOL(obj->strictlyEquals( *PQJSVALUE(1)));
+      RBOOL(obj->strictlyEquals(*PQJSVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
 #endif
       bool par1;
       obj->incubateWhile( &par1, OPINT( 2, 0));
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

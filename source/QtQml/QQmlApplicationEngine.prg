@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
     QQmlApplicationEngine( const QUrl & url, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QQmlApplicationEngine( *PQURL(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQURL(1));
+      obj->load(*PQURL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
     if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->loadData( *PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
+      obj->loadData(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

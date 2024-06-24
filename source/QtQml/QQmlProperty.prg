@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
     /*
     QQmlProperty( const QQmlProperty & other )
     */
-    auto obj = new QQmlProperty( *PQQMLPROPERTY(1));
+    auto obj = new QQmlProperty(*PQQMLPROPERTY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->propertyTypeName()));
+      hb_retc(static_cast< const char*>(obj->propertyTypeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->write( *PQVARIANT(1)));
+      RBOOL(obj->write(*PQVARIANT(1)));
     }
 
   }
