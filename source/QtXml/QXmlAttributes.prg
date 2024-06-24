@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if (obj != nullptr)
     {
-      RINT(obj->index( *PQLATIN1STRING(1)));
+      RINT(obj->index(*PQLATIN1STRING(1)));
     }
 
   }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if (obj != nullptr)
     {
-      RQSTRING(obj->value( *PQLATIN1STRING(1)));
+      RQSTRING(obj->value(*PQLATIN1STRING(1)));
     }
 
   }

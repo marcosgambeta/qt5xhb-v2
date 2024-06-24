@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
     /*
     QDomNodeList( const QDomNodeList & n )
     */
-    auto obj = new QDomNodeList( *PQDOMNODELIST(1));
+    auto obj = new QDomNodeList(*PQDOMNODELIST(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

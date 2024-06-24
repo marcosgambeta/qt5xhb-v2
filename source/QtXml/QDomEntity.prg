@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
     /*
     QDomEntity( const QDomEntity & x )
     */
-    auto obj = new QDomEntity( *PQDOMENTITY(1));
+    auto obj = new QDomEntity(*PQDOMENTITY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

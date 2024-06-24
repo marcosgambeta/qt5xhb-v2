@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
     /*
     QDomNotation( const QDomNotation & x )
     */
-    auto obj = new QDomNotation( *PQDOMNOTATION(1));
+    auto obj = new QDomNotation(*PQDOMNOTATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

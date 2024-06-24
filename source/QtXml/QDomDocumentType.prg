@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     /*
     QDomDocumentType( const QDomDocumentType & n )
     */
-    auto obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1));
+    auto obj = new QDomDocumentType(*PQDOMDOCUMENTTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

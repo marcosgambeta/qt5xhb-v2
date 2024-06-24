@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
     /*
     QDomNamedNodeMap( const QDomNamedNodeMap & n )
     */
-    auto obj = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1));
+    auto obj = new QDomNamedNodeMap(*PQDOMNAMEDNODEMAP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
     if (ISNUMPAR(1) && ISQDOMNODE(1))
     {
 #endif
-      auto ptr = new QDomNode(obj->setNamedItem( *PQDOMNODE(1)));
+      auto ptr = new QDomNode(obj->setNamedItem(*PQDOMNODE(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
     if (ISNUMPAR(1) && ISQDOMNODE(1))
     {
 #endif
-      auto ptr = new QDomNode(obj->setNamedItemNS( *PQDOMNODE(1)));
+      auto ptr = new QDomNode(obj->setNamedItemNS(*PQDOMNODE(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

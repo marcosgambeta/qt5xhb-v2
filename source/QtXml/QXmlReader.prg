@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
 #endif
       bool par2;
       RBOOL(obj->feature(PQSTRING(1), &par2));
-      hb_storl( par2, 2);
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,8 +357,8 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
     {
 #endif
       bool par2;
-      hb_retptr( static_cast< void*>(obj->property(PQSTRING(1), &par2 )));
-      hb_storl( par2, 2);
+      hb_retptr(static_cast< void*>(obj->property(PQSTRING(1), &par2 )));
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2))
     {
 #endif
-      obj->setProperty(PQSTRING(1), static_cast< void*>( hb_parptr(2)));
+      obj->setProperty(PQSTRING(1), static_cast< void*>(hb_parptr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

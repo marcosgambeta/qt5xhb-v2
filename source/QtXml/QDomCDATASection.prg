@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
     /*
     QDomCDATASection( const QDomCDATASection & x )
     */
-    auto obj = new QDomCDATASection( *PQDOMCDATASECTION(1));
+    auto obj = new QDomCDATASection(*PQDOMCDATASECTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
     /*
     QDomCharacterData( const QDomCharacterData & x )
     */
-    auto obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1));
+    auto obj = new QDomCharacterData(*PQDOMCHARACTERDATA(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

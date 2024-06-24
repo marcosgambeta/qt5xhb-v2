@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
     /*
     QDomComment( const QDomComment & x )
     */
-    auto obj = new QDomComment( *PQDOMCOMMENT(1));
+    auto obj = new QDomComment(*PQDOMCOMMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
     /*
     QDomAttr( const QDomAttr & x )
     */
-    auto obj = new QDomAttr( *PQDOMATTR(1));
+    auto obj = new QDomAttr(*PQDOMATTR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

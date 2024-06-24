@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
     /*
     QDomElement( const QDomElement & x )
     */
-    auto obj = new QDomElement( *PQDOMELEMENT(1));
+    auto obj = new QDomElement(*PQDOMELEMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
     if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
 #endif
-      auto ptr = new QDomAttr(obj->removeAttributeNode( *PQDOMATTR(1)));
+      auto ptr = new QDomAttr(obj->removeAttributeNode(*PQDOMATTR(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
     if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
 #endif
-      auto ptr = new QDomAttr(obj->setAttributeNode( *PQDOMATTR(1)));
+      auto ptr = new QDomAttr(obj->setAttributeNode(*PQDOMATTR(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
     if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
 #endif
-      auto ptr = new QDomAttr(obj->setAttributeNodeNS( *PQDOMATTR(1)));
+      auto ptr = new QDomAttr(obj->setAttributeNodeNS(*PQDOMATTR(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

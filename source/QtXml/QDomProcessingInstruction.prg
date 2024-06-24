@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
     /*
     QDomProcessingInstruction( const QDomProcessingInstruction & x )
     */
-    auto obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1));
+    auto obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

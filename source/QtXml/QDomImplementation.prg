@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
     /*
     QDomImplementation( const QDomImplementation & x )
     */
-    auto obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1));
+    auto obj = new QDomImplementation(*PQDOMIMPLEMENTATION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QDomImplementation::setInvalidDataPolicy( static_cast<QDomImplementation::InvalidDataPolicy>( hb_parni(1)));
+    QDomImplementation::setInvalidDataPolicy(static_cast<QDomImplementation::InvalidDataPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

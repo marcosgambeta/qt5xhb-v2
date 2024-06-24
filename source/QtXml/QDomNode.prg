@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDOMNODE_NEW )
     /*
     QDomNode( const QDomNode & n )
     */
-    auto obj = new QDomNode( *PQDOMNODE(1));
+    auto obj = new QDomNode(*PQDOMNODE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
     if (ISNUMPAR(1) && ISQDOMNODE(1))
     {
 #endif
-      auto ptr = new QDomNode(obj->appendChild( *PQDOMNODE(1)));
+      auto ptr = new QDomNode(obj->appendChild(*PQDOMNODE(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
     if (ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2))
     {
 #endif
-      auto ptr = new QDomNode(obj->insertAfter( *PQDOMNODE(1), *PQDOMNODE(2)));
+      auto ptr = new QDomNode(obj->insertAfter(*PQDOMNODE(1), *PQDOMNODE(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
     if (ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2))
     {
 #endif
-      auto ptr = new QDomNode(obj->insertBefore( *PQDOMNODE(1), *PQDOMNODE(2)));
+      auto ptr = new QDomNode(obj->insertBefore(*PQDOMNODE(1), *PQDOMNODE(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
     if (ISNUMPAR(1) && ISQDOMNODE(1))
     {
 #endif
-      auto ptr = new QDomNode(obj->removeChild( *PQDOMNODE(1)));
+      auto ptr = new QDomNode(obj->removeChild(*PQDOMNODE(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
     if (ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2))
     {
 #endif
-      auto ptr = new QDomNode(obj->replaceChild( *PQDOMNODE(1), *PQDOMNODE(2)));
+      auto ptr = new QDomNode(obj->replaceChild(*PQDOMNODE(1), *PQDOMNODE(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 
     if (obj != nullptr)
     {
-      obj->save( *PQTEXTSTREAM(1), PINT(2));
+      obj->save(*PQTEXTSTREAM(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 
     if (obj != nullptr)
     {
-      obj->save( *PQTEXTSTREAM(1), PINT(2), static_cast<QDomNode::EncodingPolicy>( hb_parni(3)));
+      obj->save(*PQTEXTSTREAM(1), PINT(2), static_cast<QDomNode::EncodingPolicy>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

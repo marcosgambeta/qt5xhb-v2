@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
     /*
     QDomText( const QDomText & x )
     */
-    auto obj = new QDomText( *PQDOMTEXT(1));
+    auto obj = new QDomText(*PQDOMTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

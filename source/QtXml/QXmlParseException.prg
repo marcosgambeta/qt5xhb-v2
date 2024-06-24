@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
     /*
     QXmlParseException( const QXmlParseException & other )
     */
-    auto obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1));
+    auto obj = new QXmlParseException(*PQXMLPARSEEXCEPTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 
     if (obj != nullptr)
     {
-      obj->setData( *PQBYTEARRAY(1));
+      obj->setData(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

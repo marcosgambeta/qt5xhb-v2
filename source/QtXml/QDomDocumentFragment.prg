@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
     /*
     QDomDocumentFragment( const QDomDocumentFragment & x )
     */
-    auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1));
+    auto obj = new QDomDocumentFragment(*PQDOMDOCUMENTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
     /*
     QDomEntityReference( const QDomEntityReference & x )
     */
-    auto obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1));
+    auto obj = new QDomEntityReference(*PQDOMENTITYREFERENCE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
