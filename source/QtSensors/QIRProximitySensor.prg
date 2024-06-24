@@ -55,14 +55,14 @@ RETURN
 #endif
 
 /*
-QIRProximitySensor( QObject * parent = nullptr )
+QIRProximitySensor(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QIRPROXIMITYSENSOR_NEW )
+HB_FUNC_STATIC(QIRPROXIMITYSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QIRProximitySensor( OPQOBJECT( 1, nullptr));
+    auto obj = new QIRProximitySensor(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QIRPROXIMITYSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QIRPROXIMITYSENSOR_DELETE )
+HB_FUNC_STATIC(QIRPROXIMITYSENSOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QIRProximitySensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QIRPROXIMITYSENSOR_DELETE )
 /*
 QIRProximityReading * reading() const
 */
-HB_FUNC_STATIC( QIRPROXIMITYSENSOR_READING )
+HB_FUNC_STATIC(QIRPROXIMITYSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QIRProximitySensor*>(Qt5xHb::getQObjectPointerFromSelfItem());

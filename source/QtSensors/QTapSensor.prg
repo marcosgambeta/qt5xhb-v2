@@ -59,14 +59,14 @@ RETURN
 #endif
 
 /*
-QTapSensor( QObject * parent = nullptr )
+QTapSensor(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QTAPSENSOR_NEW )
+HB_FUNC_STATIC(QTAPSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QTapSensor( OPQOBJECT( 1, nullptr));
+    auto obj = new QTapSensor(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QTAPSENSOR_DELETE )
+HB_FUNC_STATIC(QTAPSENSOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTAPSENSOR_DELETE )
 /*
 QTapReading * reading() const
 */
-HB_FUNC_STATIC( QTAPSENSOR_READING )
+HB_FUNC_STATIC(QTAPSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
 /*
 bool returnDoubleTapEvents() const
 */
-HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
+HB_FUNC_STATIC(QTAPSENSOR_RETURNDOUBLETAPEVENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 }
 
 /*
-void setReturnDoubleTapEvents( bool returnDoubleTapEvents )
+void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 */
-HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
+HB_FUNC_STATIC(QTAPSENSOR_SETRETURNDOUBLETAPEVENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 }
 
 /*
-void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
+void returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
 */
-HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
+HB_FUNC_STATIC(QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QTapSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());

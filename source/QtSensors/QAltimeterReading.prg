@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QALTIMETERREADING_DELETE )
+HB_FUNC_STATIC(QALTIMETERREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAltimeterReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QALTIMETERREADING_DELETE )
 /*
 qreal altitude() const
 */
-HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
+HB_FUNC_STATIC(QALTIMETERREADING_ALTITUDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAltimeterReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
 }
 
 /*
-void setAltitude( qreal altitude )
+void setAltitude(qreal altitude)
 */
-HB_FUNC_STATIC( QALTIMETERREADING_SETALTITUDE )
+HB_FUNC_STATIC(QALTIMETERREADING_SETALTITUDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAltimeterReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

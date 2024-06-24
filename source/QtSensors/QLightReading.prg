@@ -50,7 +50,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QLIGHTREADING_DELETE )
+HB_FUNC_STATIC(QLIGHTREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QLIGHTREADING_DELETE )
 /*
 qreal lux() const
 */
-HB_FUNC_STATIC( QLIGHTREADING_LUX )
+HB_FUNC_STATIC(QLIGHTREADING_LUX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -97,9 +97,9 @@ HB_FUNC_STATIC( QLIGHTREADING_LUX )
 }
 
 /*
-void setLux( qreal lux )
+void setLux(qreal lux)
 */
-HB_FUNC_STATIC( QLIGHTREADING_SETLUX )
+HB_FUNC_STATIC(QLIGHTREADING_SETLUX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

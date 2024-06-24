@@ -50,7 +50,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QGYROSCOPEFILTER_DELETE )
+HB_FUNC_STATIC(QGYROSCOPEFILTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QGyroscopeFilter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -69,9 +69,9 @@ HB_FUNC_STATIC( QGYROSCOPEFILTER_DELETE )
 }
 
 /*
-virtual bool filter( QGyroscopeReading * reading ) = 0
+virtual bool filter(QGyroscopeReading * reading) = 0
 */
-HB_FUNC_STATIC( QGYROSCOPEFILTER_FILTER )
+HB_FUNC_STATIC(QGYROSCOPEFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = static_cast<QGyroscopeFilter*>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -59,14 +59,14 @@ RETURN
 #endif
 
 /*
-QLightSensor( QObject * parent = nullptr )
+QLightSensor(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
+HB_FUNC_STATIC(QLIGHTSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QLightSensor( OPQOBJECT( 1, nullptr));
+    auto obj = new QLightSensor(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
+HB_FUNC_STATIC(QLIGHTSENSOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
 /*
 QLightReading * reading() const
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_READING )
+HB_FUNC_STATIC(QLIGHTSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
 /*
 qreal fieldOfView() const
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
+HB_FUNC_STATIC(QLIGHTSENSOR_FIELDOFVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
 }
 
 /*
-void setFieldOfView( qreal fieldOfView )
+void setFieldOfView(qreal fieldOfView)
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
+HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QLightSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 }
 
 /*
-void fieldOfViewChanged( qreal fieldOfView )
+void fieldOfViewChanged(qreal fieldOfView)
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
+HB_FUNC_STATIC(QLIGHTSENSOR_ONFIELDOFVIEWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QLightSensor*>(Qt5xHb::getQObjectPointerFromSelfItem());

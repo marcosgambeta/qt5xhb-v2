@@ -66,7 +66,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QSENSORBACKEND_DELETE )
+HB_FUNC_STATIC(QSENSORBACKEND_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_DELETE )
 /*
 virtual void start() = 0
 */
-HB_FUNC_STATIC( QSENSORBACKEND_START )
+HB_FUNC_STATIC(QSENSORBACKEND_START)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_START )
 /*
 virtual void stop() = 0
 */
-HB_FUNC_STATIC( QSENSORBACKEND_STOP )
+HB_FUNC_STATIC(QSENSORBACKEND_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +143,9 @@ HB_FUNC_STATIC( QSENSORBACKEND_STOP )
 }
 
 /*
-virtual bool isFeatureSupported( QSensor::Feature feature ) const
+virtual bool isFeatureSupported(QSensor::Feature feature) const
 */
-HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
+HB_FUNC_STATIC(QSENSORBACKEND_ISFEATURESUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -169,9 +169,9 @@ HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
 }
 
 /*
-void addDataRate( qreal min, qreal max )
+void addDataRate(qreal min, qreal max)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
+HB_FUNC_STATIC(QSENSORBACKEND_ADDDATARATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -197,9 +197,9 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
 }
 
 /*
-void setDataRates( const QSensor * otherSensor )
+void setDataRates(const QSensor * otherSensor)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
+HB_FUNC_STATIC(QSENSORBACKEND_SETDATARATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -225,9 +225,9 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
 }
 
 /*
-void addOutputRange( qreal min, qreal max, qreal accuracy )
+void addOutputRange(qreal min, qreal max, qreal accuracy)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
+HB_FUNC_STATIC(QSENSORBACKEND_ADDOUTPUTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -253,9 +253,9 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription(const QString & description)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
+HB_FUNC_STATIC(QSENSORBACKEND_SETDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
 /*
 QSensorReading * reading() const
 */
-HB_FUNC_STATIC( QSENSORBACKEND_READING )
+HB_FUNC_STATIC(QSENSORBACKEND_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_READING )
 /*
 QSensor * sensor() const
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
+HB_FUNC_STATIC(QSENSORBACKEND_SENSOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
 /*
 void newReadingAvailable()
 */
-HB_FUNC_STATIC( QSENSORBACKEND_NEWREADINGAVAILABLE )
+HB_FUNC_STATIC(QSENSORBACKEND_NEWREADINGAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_NEWREADINGAVAILABLE )
 /*
 void sensorStopped()
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSORSTOPPED )
+HB_FUNC_STATIC(QSENSORBACKEND_SENSORSTOPPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORSTOPPED )
 /*
 void sensorBusy()
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
+HB_FUNC_STATIC(QSENSORBACKEND_SENSORBUSY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -419,9 +419,9 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
 }
 
 /*
-void sensorError( int error )
+void sensorError(int error)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
+HB_FUNC_STATIC(QSENSORBACKEND_SENSORERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorBackend*>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QPRESSUREREADING_DELETE )
+HB_FUNC_STATIC(QPRESSUREREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QPressureReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPRESSUREREADING_DELETE )
 /*
 qreal pressure() const
 */
-HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
+HB_FUNC_STATIC(QPRESSUREREADING_PRESSURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QPressureReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
 }
 
 /*
-void setPressure( qreal pressure )
+void setPressure(qreal pressure)
 */
-HB_FUNC_STATIC( QPRESSUREREADING_SETPRESSURE )
+HB_FUNC_STATIC(QPRESSUREREADING_SETPRESSURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QPressureReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

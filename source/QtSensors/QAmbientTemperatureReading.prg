@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_DELETE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAmbientTemperatureReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_DELETE )
 /*
 qreal temperature() const
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_TEMPERATURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAmbientTemperatureReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
 }
 
 /*
-void setTemperature( qreal temperature )
+void setTemperature(qreal temperature)
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_SETTEMPERATURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAmbientTemperatureReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

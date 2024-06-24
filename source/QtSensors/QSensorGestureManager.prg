@@ -60,14 +60,14 @@ RETURN
 #endif
 
 /*
-QSensorGestureManager( QObject * parent = nullptr )
+QSensorGestureManager(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSensorGestureManager( OPQOBJECT( 1, nullptr));
+    auto obj = new QSensorGestureManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_DELETE )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorGestureManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_DELETE )
 }
 
 /*
-bool registerSensorGestureRecognizer( QSensorGestureRecognizer * recognizer )
+bool registerSensorGestureRecognizer(QSensorGestureRecognizer * recognizer)
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorGestureManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
 /*
 QStringList gestureIds() const
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_GESTUREIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorGestureManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
 }
 
 /*
-QStringList recognizerSignals( const QString & recognizerId ) const
+QStringList recognizerSignals(const QString & recognizerId) const
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorGestureManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
 }
 
 /*
-static QSensorGestureRecognizer * sensorGestureRecognizer( const QString & id )
+static QSensorGestureRecognizer * sensorGestureRecognizer(const QString & id)
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
 /*
 void newSensorGestureAvailable()
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
+HB_FUNC_STATIC(QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QSensorGestureManager*>(Qt5xHb::getQObjectPointerFromSelfItem());

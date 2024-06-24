@@ -57,7 +57,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QACCELEROMETERREADING_DELETE )
+HB_FUNC_STATIC(QACCELEROMETERREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_DELETE )
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_X )
+HB_FUNC_STATIC(QACCELEROMETERREADING_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -104,9 +104,9 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_X )
 }
 
 /*
-void setX( qreal x )
+void setX(qreal x)
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_SETX )
+HB_FUNC_STATIC(QACCELEROMETERREADING_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETX )
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_Y )
+HB_FUNC_STATIC(QACCELEROMETERREADING_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_Y )
 }
 
 /*
-void setY( qreal y )
+void setY(qreal y)
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_SETY )
+HB_FUNC_STATIC(QACCELEROMETERREADING_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETY )
 /*
 qreal z() const
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_Z )
+HB_FUNC_STATIC(QACCELEROMETERREADING_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +212,9 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_Z )
 }
 
 /*
-void setZ( qreal z )
+void setZ(qreal z)
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_SETZ )
+HB_FUNC_STATIC(QACCELEROMETERREADING_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometerReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

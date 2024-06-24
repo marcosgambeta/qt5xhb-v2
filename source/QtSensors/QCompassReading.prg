@@ -55,7 +55,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QCOMPASSREADING_DELETE )
+HB_FUNC_STATIC(QCOMPASSREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompassReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_DELETE )
 /*
 qreal azimuth() const
 */
-HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
+HB_FUNC_STATIC(QCOMPASSREADING_AZIMUTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompassReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +102,9 @@ HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
 }
 
 /*
-void setAzimuth( qreal azimuth )
+void setAzimuth(qreal azimuth)
 */
-HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
+HB_FUNC_STATIC(QCOMPASSREADING_SETAZIMUTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompassReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
 /*
 qreal calibrationLevel() const
 */
-HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
+HB_FUNC_STATIC(QCOMPASSREADING_CALIBRATIONLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompassReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +156,9 @@ HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
 }
 
 /*
-void setCalibrationLevel( qreal calibrationLevel )
+void setCalibrationLevel(qreal calibrationLevel)
 */
-HB_FUNC_STATIC( QCOMPASSREADING_SETCALIBRATIONLEVEL )
+HB_FUNC_STATIC(QCOMPASSREADING_SETCALIBRATIONLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompassReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

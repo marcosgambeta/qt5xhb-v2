@@ -55,14 +55,14 @@ RETURN
 #endif
 
 /*
-QCompass( QObject * parent = nullptr )
+QCompass(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QCOMPASS_NEW )
+HB_FUNC_STATIC(QCOMPASS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QCompass( OPQOBJECT( 1, nullptr));
+    auto obj = new QCompass(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QCOMPASS_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QCOMPASS_DELETE )
+HB_FUNC_STATIC(QCOMPASS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompass*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QCOMPASS_DELETE )
 /*
 QCompassReading * reading() const
 */
-HB_FUNC_STATIC( QCOMPASS_READING )
+HB_FUNC_STATIC(QCOMPASS_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QCompass*>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -56,7 +56,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QSENSORREADING_DELETE )
+HB_FUNC_STATIC(QSENSORREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSENSORREADING_DELETE )
 /*
 quint64 timestamp() const
 */
-HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
+HB_FUNC_STATIC(QSENSORREADING_TIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -103,9 +103,9 @@ HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
 }
 
 /*
-void setTimestamp( quint64 timestamp )
+void setTimestamp(quint64 timestamp)
 */
-HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
+HB_FUNC_STATIC(QSENSORREADING_SETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
 /*
 int valueCount() const
 */
-HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
+HB_FUNC_STATIC(QSENSORREADING_VALUECOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +157,9 @@ HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
 }
 
 /*
-QVariant value( int index ) const
+QVariant value(int index) const
 */
-HB_FUNC_STATIC( QSENSORREADING_VALUE )
+HB_FUNC_STATIC(QSENSORREADING_VALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QSensorReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

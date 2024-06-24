@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
+HB_FUNC_STATIC(QHOLSTERREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QHolsterReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
 /*
 bool holstered() const
 */
-HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
+HB_FUNC_STATIC(QHOLSTERREADING_HOLSTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QHolsterReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
 }
 
 /*
-void setHolstered( bool holstered )
+void setHolstered(bool holstered)
 */
-HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
+HB_FUNC_STATIC(QHOLSTERREADING_SETHOLSTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QHolsterReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

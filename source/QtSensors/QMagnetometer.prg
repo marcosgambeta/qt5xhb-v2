@@ -59,14 +59,14 @@ RETURN
 #endif
 
 /*
-QMagnetometer( QObject * parent = nullptr )
+QMagnetometer(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QMAGNETOMETER_NEW )
+HB_FUNC_STATIC(QMAGNETOMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QMagnetometer( OPQOBJECT( 1, nullptr));
+    auto obj = new QMagnetometer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
+HB_FUNC_STATIC(QMAGNETOMETER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QMagnetometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 /*
 QMagnetometerReading * reading() const
 */
-HB_FUNC_STATIC( QMAGNETOMETER_READING )
+HB_FUNC_STATIC(QMAGNETOMETER_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QMagnetometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
 /*
 bool returnGeoValues() const
 */
-HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
+HB_FUNC_STATIC(QMAGNETOMETER_RETURNGEOVALUES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QMagnetometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 }
 
 /*
-void setReturnGeoValues( bool returnGeoValues )
+void setReturnGeoValues(bool returnGeoValues)
 */
-HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
+HB_FUNC_STATIC(QMAGNETOMETER_SETRETURNGEOVALUES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QMagnetometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 }
 
 /*
-void returnGeoValuesChanged( bool returnGeoValues )
+void returnGeoValuesChanged(bool returnGeoValues)
 */
-HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
+HB_FUNC_STATIC(QMAGNETOMETER_ONRETURNGEOVALUESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QMagnetometer*>(Qt5xHb::getQObjectPointerFromSelfItem());

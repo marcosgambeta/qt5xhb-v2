@@ -54,7 +54,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QTAPREADING_DELETE )
+HB_FUNC_STATIC(QTAPREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTAPREADING_DELETE )
 /*
 QTapReading::TapDirection tapDirection() const
 */
-HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
+HB_FUNC_STATIC(QTAPREADING_TAPDIRECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
 }
 
 /*
-void setTapDirection( QTapReading::TapDirection tapDirection )
+void setTapDirection(QTapReading::TapDirection tapDirection)
 */
-HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
+HB_FUNC_STATIC(QTAPREADING_SETTAPDIRECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
 /*
 bool isDoubleTap() const
 */
-HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
+HB_FUNC_STATIC(QTAPREADING_ISDOUBLETAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +155,9 @@ HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
 }
 
 /*
-void setDoubleTap( bool doubleTap )
+void setDoubleTap(bool doubleTap)
 */
-HB_FUNC_STATIC( QTAPREADING_SETDOUBLETAP )
+HB_FUNC_STATIC(QTAPREADING_SETDOUBLETAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QTapReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

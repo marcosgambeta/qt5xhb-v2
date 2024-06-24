@@ -55,14 +55,14 @@ RETURN
 #endif
 
 /*
-QGyroscope( QObject * parent = nullptr )
+QGyroscope(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QGYROSCOPE_NEW )
+HB_FUNC_STATIC(QGYROSCOPE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGyroscope( OPQOBJECT( 1, nullptr));
+    auto obj = new QGyroscope(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGYROSCOPE_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QGYROSCOPE_DELETE )
+HB_FUNC_STATIC(QGYROSCOPE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QGyroscope*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGYROSCOPE_DELETE )
 /*
 QGyroscopeReading * reading() const
 */
-HB_FUNC_STATIC( QGYROSCOPE_READING )
+HB_FUNC_STATIC(QGYROSCOPE_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QGyroscope*>(Qt5xHb::getQObjectPointerFromSelfItem());

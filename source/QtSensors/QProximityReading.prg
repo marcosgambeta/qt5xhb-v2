@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QPROXIMITYREADING_DELETE )
+HB_FUNC_STATIC(QPROXIMITYREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QProximityReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPROXIMITYREADING_DELETE )
 /*
 bool close() const
 */
-HB_FUNC_STATIC( QPROXIMITYREADING_CLOSE )
+HB_FUNC_STATIC(QPROXIMITYREADING_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QProximityReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QPROXIMITYREADING_CLOSE )
 }
 
 /*
-void setClose( bool close )
+void setClose(bool close)
 */
-HB_FUNC_STATIC( QPROXIMITYREADING_SETCLOSE )
+HB_FUNC_STATIC(QPROXIMITYREADING_SETCLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QProximityReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

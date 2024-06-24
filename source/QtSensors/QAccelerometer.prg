@@ -59,14 +59,14 @@ RETURN
 #endif
 
 /*
-QAccelerometer( QObject * parent = nullptr )
+QAccelerometer(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QACCELEROMETER_NEW )
+HB_FUNC_STATIC(QACCELEROMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QAccelerometer( OPQOBJECT( 1, nullptr));
+    auto obj = new QAccelerometer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QACCELEROMETER_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QACCELEROMETER_DELETE )
+HB_FUNC_STATIC(QACCELEROMETER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QACCELEROMETER_DELETE )
 /*
 QAccelerometer::AccelerationMode accelerationMode() const
 */
-HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
+HB_FUNC_STATIC(QACCELEROMETER_ACCELERATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 }
 
 /*
-void setAccelerationMode( QAccelerometer::AccelerationMode accelerationMode )
+void setAccelerationMode(QAccelerometer::AccelerationMode accelerationMode)
 */
-HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
+HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 /*
 QAccelerometerReading * reading() const
 */
-HB_FUNC_STATIC( QACCELEROMETER_READING )
+HB_FUNC_STATIC(QACCELEROMETER_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QAccelerometer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
 }
 
 /*
-void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
+void accelerationModeChanged(QAccelerometer::AccelerationMode accelerationMode)
 */
-HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
+HB_FUNC_STATIC(QACCELEROMETER_ONACCELERATIONMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QAccelerometer*>(Qt5xHb::getQObjectPointerFromSelfItem());

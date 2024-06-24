@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QIRPROXIMITYREADING_DELETE )
+HB_FUNC_STATIC(QIRPROXIMITYREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QIRProximityReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QIRPROXIMITYREADING_DELETE )
 /*
 qreal reflectance() const
 */
-HB_FUNC_STATIC( QIRPROXIMITYREADING_REFLECTANCE )
+HB_FUNC_STATIC(QIRPROXIMITYREADING_REFLECTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QIRProximityReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QIRPROXIMITYREADING_REFLECTANCE )
 }
 
 /*
-void setReflectance( qreal reflectance )
+void setReflectance(qreal reflectance)
 */
-HB_FUNC_STATIC( QIRPROXIMITYREADING_SETREFLECTANCE )
+HB_FUNC_STATIC(QIRPROXIMITYREADING_SETREFLECTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QIRProximityReading*>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QORIENTATIONREADING_DELETE )
+HB_FUNC_STATIC(QORIENTATIONREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QOrientationReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_DELETE )
 /*
 QOrientationReading::Orientation orientation() const
 */
-HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
+HB_FUNC_STATIC(QORIENTATIONREADING_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QOrientationReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
 }
 
 /*
-void setOrientation( QOrientationReading::Orientation orientation )
+void setOrientation(QOrientationReading::Orientation orientation)
 */
-HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
+HB_FUNC_STATIC(QORIENTATIONREADING_SETORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QOrientationReading*>(Qt5xHb::getQObjectPointerFromSelfItem());
