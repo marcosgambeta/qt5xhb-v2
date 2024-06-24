@@ -62,7 +62,7 @@ RETURN
 /*
 ~QInAppTransaction()
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
+HB_FUNC_STATIC(QINAPPTRANSACTION_DELETE)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 /*
 QInAppTransaction::TransactionStatus status() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
+HB_FUNC_STATIC(QINAPPTRANSACTION_STATUS)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 /*
 QInAppProduct * product() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
+HB_FUNC_STATIC(QINAPPTRANSACTION_PRODUCT)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
 /*
 virtual QString orderId() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
+HB_FUNC_STATIC(QINAPPTRANSACTION_ORDERID)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
 /*
 virtual QInAppTransaction::FailureReason failureReason() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
+HB_FUNC_STATIC(QINAPPTRANSACTION_FAILUREREASON)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
 /*
 virtual QString errorString() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
+HB_FUNC_STATIC(QINAPPTRANSACTION_ERRORSTRING)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
 /*
 virtual QDateTime timestamp() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
+HB_FUNC_STATIC(QINAPPTRANSACTION_TIMESTAMP)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
 /*
 Q_INVOKABLE virtual void finalize() = 0
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
+HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -253,9 +253,9 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
 }
 
 /*
-Q_INVOKABLE virtual QString platformProperty( const QString & propertyName ) const
+Q_INVOKABLE virtual QString platformProperty(const QString & propertyName) const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
+HB_FUNC_STATIC(QINAPPTRANSACTION_PLATFORMPROPERTY)
 {
   auto obj = qobject_cast<QInAppTransaction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

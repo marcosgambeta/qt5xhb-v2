@@ -60,13 +60,13 @@ RETURN
 #include <QtPurchasing/QInAppTransaction>
 
 /*
-QInAppStore( QObject * parent = nullptr )
+QInAppStore(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QINAPPSTORE_NEW )
+HB_FUNC_STATIC(QINAPPSTORE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QInAppStore( OPQOBJECT( 1, nullptr));
+    auto obj = new QInAppStore(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 /*
 ~QInAppStore()
 */
-HB_FUNC_STATIC( QINAPPSTORE_DELETE )
+HB_FUNC_STATIC(QINAPPSTORE_DELETE)
 {
   auto obj = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QINAPPSTORE_DELETE )
 /*
 Q_INVOKABLE void restorePurchases()
 */
-HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
+HB_FUNC_STATIC(QINAPPSTORE_RESTOREPURCHASES)
 {
   auto obj = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
 }
 
 /*
-Q_INVOKABLE void registerProduct( QInAppProduct::ProductType productType, const QString & identifier )
+Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const QString & identifier)
 */
-HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
+HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 {
   auto obj = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -149,9 +149,9 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 }
 
 /*
-Q_INVOKABLE QInAppProduct * registeredProduct( const QString & identifier ) const
+Q_INVOKABLE QInAppProduct * registeredProduct(const QString & identifier) const
 */
-HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
+HB_FUNC_STATIC(QINAPPSTORE_REGISTEREDPRODUCT)
 {
   auto obj = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -174,9 +174,9 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 }
 
 /*
-Q_INVOKABLE void setPlatformProperty( const QString & propertyName, const QString & value )
+Q_INVOKABLE void setPlatformProperty(const QString & propertyName, const QString & value)
 */
-HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
+HB_FUNC_STATIC(QINAPPSTORE_SETPLATFORMPROPERTY)
 {
   auto obj = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
 }
 
 /*
-void productRegistered( QInAppProduct * product )
+void productRegistered(QInAppProduct * product)
 */
-HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
+HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
 {
   auto sender = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -250,9 +250,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 }
 
 /*
-void productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
+void productUnknown(QInAppProduct::ProductType productType, const QString & identifier)
 */
-HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
+HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
 {
   auto sender = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -302,9 +302,9 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 }
 
 /*
-void transactionReady( QInAppTransaction * transaction )
+void transactionReady(QInAppTransaction * transaction)
 */
-HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
+HB_FUNC_STATIC(QINAPPSTORE_ONTRANSACTIONREADY)
 {
   auto sender = qobject_cast<QInAppStore*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
