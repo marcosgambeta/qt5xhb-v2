@@ -63,13 +63,13 @@ RETURN
 #include <QtHelp/QHelpSearchEngine>
 
 /*
-QHelpEngine( const QString & collectionFile, QObject * parent = nullptr )
+QHelpEngine(const QString & collectionFile, QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QHELPENGINE_NEW )
+HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QHelpEngine(PQSTRING(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QHelpEngine(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHELPENGINE_DELETE )
+HB_FUNC_STATIC(QHELPENGINE_DELETE)
 {
   auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QHELPENGINE_DELETE )
 /*
 QHelpContentModel * contentModel() const
 */
-HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
+HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 {
   auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 /*
 QHelpContentWidget * contentWidget()
 */
-HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
+HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 {
   auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
     {
 #endif
       auto ptr = obj->contentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPCONTENTWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QHELPCONTENTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 /*
 QHelpIndexModel * indexModel() const
 */
-HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
+HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 {
   auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 /*
 QHelpIndexWidget * indexWidget()
 */
-HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
+HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 {
   auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
     {
 #endif
       auto ptr = obj->indexWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPINDEXWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QHELPINDEXWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 /*
 QHelpSearchEngine * searchEngine()
 */
-HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
+HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 {
   auto obj = qobject_cast<QHelpEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

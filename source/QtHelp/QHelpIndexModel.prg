@@ -54,9 +54,9 @@ RETURN
 #endif
 
 /*
-void createIndex( const QString & customFilterName )
+void createIndex(const QString & customFilterName)
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
+HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
   auto obj = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -80,9 +80,9 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 }
 
 /*
-QModelIndex filter( const QString & filter, const QString & wildcard = QString() )
+QModelIndex filter(const QString & filter, const QString & wildcard = QString())
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
+HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
   auto obj = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QModelIndex(obj->filter(PQSTRING(1), OPQSTRING(2, QString() )));
+      auto ptr = new QModelIndex(obj->filter(PQSTRING(1), OPQSTRING(2, QString())));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 /*
 bool isCreatingIndex() const
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
+HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
   auto obj = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 /*
 void indexCreated()
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
+HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
 {
   auto sender = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 /*
 void indexCreationStarted()
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
+HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATIONSTARTED)
 {
   auto sender = qobject_cast<QHelpIndexModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

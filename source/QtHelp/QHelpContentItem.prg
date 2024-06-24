@@ -64,7 +64,7 @@ RETURN
 
 #include <QtCore/QUrl>
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
+HB_FUNC_STATIC(QHELPCONTENTITEM_DELETE)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -81,9 +81,9 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 }
 
 /*
-QHelpContentItem * child( int row ) const
+QHelpContentItem * child(int row) const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
+HB_FUNC_STATIC(QHELPCONTENTITEM_CHILD)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
+HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDCOUNT)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -130,9 +130,9 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 }
 
 /*
-int childPosition( QHelpContentItem * child ) const
+int childPosition(QHelpContentItem * child) const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
+HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 /*
 QHelpContentItem * parent() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
+HB_FUNC_STATIC(QHELPCONTENTITEM_PARENT)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 /*
 int row() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
+HB_FUNC_STATIC(QHELPCONTENTITEM_ROW)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
+HB_FUNC_STATIC(QHELPCONTENTITEM_TITLE)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
+HB_FUNC_STATIC(QHELPCONTENTITEM_URL)
 {
   auto obj = static_cast<QHelpContentItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
   }
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
+HB_FUNC_STATIC(QHELPCONTENTITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -281,22 +281,22 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QHELPCONTENTITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QHELPCONTENTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QHELPCONTENTITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QHELPCONTENTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QHELPCONTENTITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QHELPCONTENTITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

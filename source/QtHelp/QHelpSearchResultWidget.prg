@@ -51,7 +51,7 @@ RETURN
 #include <QtHelp/QHelpSearchResultWidget>
 #endif
 
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
+HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 {
   auto obj = qobject_cast<QHelpSearchResultWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -70,9 +70,9 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 }
 
 /*
-QUrl linkAt( const QPoint & point )
+QUrl linkAt(const QPoint & point)
 */
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
+HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
   auto obj = qobject_cast<QHelpSearchResultWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -95,9 +95,9 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
 }
 
 /*
-void requestShowLink( const QUrl & link )
+void requestShowLink(const QUrl & link)
 */
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
+HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
 {
   auto sender = qobject_cast<QHelpSearchResultWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPSEARCHRESULTWIDGET");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -51,7 +51,7 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #endif
 
-HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
+HB_FUNC_STATIC(QHELPINDEXWIDGET_DELETE)
 {
   auto obj = qobject_cast<QHelpIndexWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
 /*
 void activateCurrentItem()
 */
-HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
+HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
   auto obj = qobject_cast<QHelpIndexWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,9 +96,9 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 }
 
 /*
-void filterIndices( const QString & filter, const QString & wildcard = QString() )
+void filterIndices(const QString & filter, const QString & wildcard = QString())
 */
-HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
+HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
   auto obj = qobject_cast<QHelpIndexWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 }
 
 /*
-void linkActivated( const QUrl & link, const QString & keyword )
+void linkActivated(const QUrl & link, const QString & keyword)
 */
-HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
+HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
   auto sender = qobject_cast<QHelpIndexWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPINDEXWIDGET");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);

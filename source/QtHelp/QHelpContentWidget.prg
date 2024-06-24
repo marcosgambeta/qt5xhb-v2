@@ -53,7 +53,7 @@ RETURN
 
 #include <QtCore/QUrl>
 
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
 {
   auto obj = qobject_cast<QHelpContentWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -72,9 +72,9 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
 }
 
 /*
-QModelIndex indexOf( const QUrl & link )
+QModelIndex indexOf(const QUrl & link)
 */
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
   auto obj = qobject_cast<QHelpContentWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -97,9 +97,9 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
 }
 
 /*
-void linkActivated( const QUrl & link )
+void linkActivated(const QUrl & link)
 */
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_ONLINKACTIVATED)
 {
   auto sender = qobject_cast<QHelpContentWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHELPCONTENTWIDGET");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

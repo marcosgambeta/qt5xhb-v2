@@ -61,7 +61,7 @@ RETURN
 #include <QtHelp/QHelpContentModel>
 #endif
 
-HB_FUNC_STATIC( QHELPCONTENTMODEL_DELETE )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -80,9 +80,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DELETE )
 }
 
 /*
-QHelpContentItem * contentItemAt( const QModelIndex & index ) const
+QHelpContentItem * contentItemAt(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -105,9 +105,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
 }
 
 /*
-void createContents( const QString & customFilterName )
+void createContents(const QString & customFilterName)
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
 /*
 bool isCreatingContents() const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -155,9 +155,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
 }
 
 /*
-virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
+virtual int columnCount(const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,9 +179,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
 }
 
 /*
-virtual QVariant data( const QModelIndex & index, int role ) const
+virtual QVariant data(const QModelIndex & index, int role) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -204,9 +204,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
 }
 
 /*
-virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -229,9 +229,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
 }
 
 /*
-virtual QModelIndex parent( const QModelIndex & index ) const
+virtual QModelIndex parent(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -254,9 +254,9 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
 }
 
 /*
-virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 {
   auto obj = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT(obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
 /*
 void contentsCreated()
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATED)
 {
   auto sender = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 /*
 void contentsCreationStarted()
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
+HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED)
 {
   auto sender = qobject_cast<QHelpContentModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
