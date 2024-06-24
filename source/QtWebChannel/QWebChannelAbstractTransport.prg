@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
     if (ISNUMPAR(1) && ISQJSONOBJECT(1))
     {
 #endif
-      obj->sendMessage( *PQJSONOBJECT(1));
+      obj->sendMessage(*PQJSONOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
