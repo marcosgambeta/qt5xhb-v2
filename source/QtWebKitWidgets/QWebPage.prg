@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setViewportSize( *PQSIZE(1));
+      obj->setViewportSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setPreferredContentsSize( *PQSIZE(1));
+      obj->setPreferredContentsSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLinkDelegationPolicy( static_cast<QWebPage::LinkDelegationPolicy>( hb_parni(1)));
+      obj->setLinkDelegationPolicy(static_cast<QWebPage::LinkDelegationPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
 #endif
-      obj->setPalette( *PQPALETTE(1));
+      obj->setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVISIBILITYSTATE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVisibilityState( static_cast<QWebPage::VisibilityState>( hb_parni(1)));
+      obj->setVisibilityState(static_cast<QWebPage::VisibilityState>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = obj->action( static_cast<QWebPage::WebAction>( hb_parni(1)));
+      auto ptr = obj->action(static_cast<QWebPage::WebAction>(hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags >( 0 ) : static_cast<QWebPage::FindFlags >( hb_parni(2))));
+      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags >( 0 ) : static_cast<QWebPage::FindFlags >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = obj->frameAt( *PQPOINT(1));
+      auto ptr = obj->frameAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1))));
+      auto ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerAction( static_cast<QWebPage::WebAction>( hb_parni(1)), OPBOOL( 2, false));
+      obj->triggerAction(static_cast<QWebPage::WebAction>(hb_parni(1)), OPBOOL( 2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->updatePositionDependentActions( *PQPOINT(1));
+      obj->updatePositionDependentActions(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETACTUALVISIBLECONTENTRECT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setActualVisibleContentRect( *PQRECT(1));
+      obj->setActualVisibleContentRect(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETFEATUREPERMISSION )
     if (ISNUMPAR(3) && ISQWEBFRAME(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setFeaturePermission(PQWEBFRAME(1), static_cast<QWebPage::Feature>( hb_parni(2)), static_cast<QWebPage::PermissionPolicy>( hb_parni(3)));
+      obj->setFeaturePermission(PQWEBFRAME(1), static_cast<QWebPage::Feature>(hb_parni(2)), static_cast<QWebPage::PermissionPolicy>(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

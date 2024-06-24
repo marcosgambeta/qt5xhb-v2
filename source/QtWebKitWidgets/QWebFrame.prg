@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setScrollPosition( *PQPOINT(1));
+      obj->setScrollPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2), HB_ISNIL(3) ? static_cast<QWebFrame::ValueOwnership >( QWebFrame::QtOwnership ) : static_cast<QWebFrame::ValueOwnership >( hb_parni(3)));
+      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2), HB_ISNIL(3) ? static_cast<QWebFrame::ValueOwnership >( QWebFrame::QtOwnership ) : static_cast<QWebFrame::ValueOwnership >(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      auto ptr = new QWebHitTestResult(obj->hitTestContent( *PQPOINT(1)));
+      auto ptr = new QWebHitTestResult(obj->hitTestContent(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBHITTESTRESULT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQURL(1));
+      obj->load(*PQURL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 
     if (obj != nullptr)
     {
-      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >( hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
+      obj->load(*PQNETWORKREQUEST(1), HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation >( QNetworkAccessManager::GetOperation ) : static_cast<QNetworkAccessManager::Operation >(hb_parni(2)), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 
     if (obj != nullptr)
     {
-      obj->render(PQPAINTER(1), static_cast<QWebFrame::RenderLayers>( hb_parni(2)), HB_ISNIL(3) ? QRegion() : *static_cast<QRegion*>(Qt5xHb::itemGetPtr(3)));
+      obj->render(PQPAINTER(1), static_cast<QWebFrame::RenderLayers>(hb_parni(2)), HB_ISNIL(3) ? QRegion() : *static_cast<QRegion*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QRect(obj->scrollBarGeometry( static_cast<Qt::Orientation>( hb_parni(1))));
+      auto ptr = new QRect(obj->scrollBarGeometry(static_cast<Qt::Orientation>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT(obj->scrollBarMaximum( static_cast<Qt::Orientation>( hb_parni(1))));
+      RINT(obj->scrollBarMaximum(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT(obj->scrollBarMinimum( static_cast<Qt::Orientation>( hb_parni(1))));
+      RINT(obj->scrollBarMinimum(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM(obj->scrollBarPolicy( static_cast<Qt::Orientation>( hb_parni(1))));
+      RENUM(obj->scrollBarPolicy(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT(obj->scrollBarValue( static_cast<Qt::Orientation>( hb_parni(1))));
+      RINT(obj->scrollBarValue(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setScrollBarPolicy( static_cast<Qt::Orientation>( hb_parni(1)), static_cast<Qt::ScrollBarPolicy>( hb_parni(2)));
+      obj->setScrollBarPolicy(static_cast<Qt::Orientation>(hb_parni(1)), static_cast<Qt::ScrollBarPolicy>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setScrollBarValue( static_cast<Qt::Orientation>( hb_parni(1)), PINT(2));
+      obj->setScrollBarValue(static_cast<Qt::Orientation>(hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

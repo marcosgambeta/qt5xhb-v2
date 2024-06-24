@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
     /*
     QWebHitTestResult( const QWebHitTestResult & other )
     */
-    auto obj = new QWebHitTestResult( *PQWEBHITTESTRESULT(1));
+    auto obj = new QWebHitTestResult(*PQWEBHITTESTRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
