@@ -49,7 +49,7 @@ RETURN
 #include <QtQml/QQmlExtensionPlugin>
 #endif
 
-HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_DELETE )
+HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QQmlExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -68,9 +68,9 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_DELETE )
 }
 
 /*
-virtual void initializeEngine( QQmlEngine * engine, const char * uri )
+virtual void initializeEngine(QQmlEngine * engine, const char * uri)
 */
-HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
+HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
   auto obj = qobject_cast<QQmlExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
 }
 
 /*
-virtual void registerTypes( const char * uri ) = 0
+virtual void registerTypes(const char * uri) = 0
 */
-HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
+HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_REGISTERTYPES)
 {
   auto obj = qobject_cast<QQmlExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

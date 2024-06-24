@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QQmlPropertyMap( QObject * parent = nullptr )
+QQmlPropertyMap(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QQmlPropertyMap( OPQOBJECT( 1, nullptr));
+    auto obj = new QQmlPropertyMap(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYMAP_DELETE )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_DELETE)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_DELETE )
 }
 
 /*
-void clear( const QString & key )
+void clear(const QString & key)
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_CLEAR)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -120,9 +120,9 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
 }
 
 /*
-bool contains( const QString & key ) const
+bool contains(const QString & key) const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_CONTAINS)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_COUNT)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
 }
 
 /*
-void insert( const QString & key, const QVariant & value )
+void insert(const QString & key, const QVariant & value)
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_INSERT)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_ISEMPTY)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
 /*
 QStringList keys() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_KEYS )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_KEYS)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_KEYS )
 /*
 int size() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_SIZE)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -266,9 +266,9 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
 }
 
 /*
-QVariant value( const QString & key ) const
+QVariant value(const QString & key) const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_VALUE)
 {
   auto obj = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,9 +291,9 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
 }
 
 /*
-void valueChanged( const QString & key, const QVariant & value )
+void valueChanged(const QString & key, const QVariant & value)
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_ONVALUECHANGED)
 {
   auto sender = qobject_cast<QQmlPropertyMap*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLPROPERTYMAP");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QVARIANT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -55,7 +55,7 @@ RETURN
 #include <QtQml/QJSEngine>
 #endif
 
-HB_FUNC_STATIC( QJSENGINE_NEW )
+HB_FUNC_STATIC(QJSENGINE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    QJSEngine( QObject * parent )
+    QJSEngine(QObject * parent)
     */
     auto obj = new QJSEngine(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QJSENGINE_DELETE )
+HB_FUNC_STATIC(QJSENGINE_DELETE)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QJSENGINE_DELETE )
 /*
 void collectGarbage()
 */
-HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
+HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -126,9 +126,9 @@ HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
 }
 
 /*
-QJSValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
+QJSValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
 */
-HB_FUNC_STATIC( QJSENGINE_EVALUATE )
+HB_FUNC_STATIC(QJSENGINE_EVALUATE)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QJSValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString() ), OPINT( 3, 1 )));
+      auto ptr = new QJSValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
 /*
 QJSValue globalObject() const
 */
-HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
+HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
 }
 
 /*
-QJSValue newArray( uint length = 0 )
+QJSValue newArray(uint length = 0)
 */
-HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
+HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = new QJSValue(obj->newArray( OPUINT( 1, 0 )));
+      auto ptr = new QJSValue(obj->newArray(OPUINT(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
 /*
 QJSValue newObject()
 */
-HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
+HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -226,9 +226,9 @@ HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
 }
 
 /*
-QJSValue newQObject( QObject * object )
+QJSValue newQObject(QObject * object)
 */
-HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
+HB_FUNC_STATIC(QJSENGINE_NEWQOBJECT)
 {
   auto obj = qobject_cast<QJSEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

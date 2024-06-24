@@ -58,15 +58,15 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
+HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QQmlApplicationEngine( QObject * parent = nullptr )
+    QQmlApplicationEngine(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QQmlApplicationEngine( OPQOBJECT( 1, nullptr));
+    auto obj = new QQmlApplicationEngine(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QQmlApplicationEngine( const QUrl & url, QObject * parent = nullptr )
+    QQmlApplicationEngine(const QUrl & url, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QQmlApplicationEngine( const QString & filePath, QObject * parent = nullptr )
+    QQmlApplicationEngine(const QString & filePath, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QQmlApplicationEngine(PQSTRING(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QQmlApplicationEngine(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_DELETE )
+HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -120,9 +120,9 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_DELETE )
 }
 
 /*
-QList<QObject *> rootObjects()
+QList<QObject*> rootObjects()
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
+HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -168,12 +168,12 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 #endif
 }
 
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
+HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load(const QUrl & url)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void load( const QString & filePath )
+    void load(const QString & filePath)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
     auto obj = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 }
 
 /*
-void loadData( const QByteArray & data, const QUrl & url = QUrl() )
+void loadData(const QByteArray & data, const QUrl & url = QUrl())
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
+HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -239,9 +239,9 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
 }
 
 /*
-void objectCreated( QObject * obj, const QUrl & url )
+void objectCreated(QObject * obj, const QUrl & url)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
+HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ONOBJECTCREATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QQmlApplicationEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLAPPLICATIONENGINE");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QURL");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QURL");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

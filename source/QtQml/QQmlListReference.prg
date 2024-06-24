@@ -68,7 +68,7 @@ RETURN
 #include <QtQml/QQmlListReference>
 #endif
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -82,9 +82,9 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQQMLENGINE(3) || HB_ISNIL(3)))
   {
     /*
-    QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = nullptr )
+    QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
     */
-    auto obj = new QQmlListReference(PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE( 3, nullptr));
+    auto obj = new QQmlListReference(PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3, nullptr));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_DELETE)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -111,9 +111,9 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
 }
 
 /*
-bool append( QObject * object ) const
+bool append(QObject * object) const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_APPEND)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -135,9 +135,9 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 }
 
 /*
-QObject * at( int index ) const
+QObject * at(int index) const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_AT)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
 /*
 bool canAppend() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
 /*
 bool canAt() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
 /*
 bool canClear() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
 /*
 bool canCount() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
 /*
 bool clear() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
 /*
 const QMetaObject * listElementType() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_OBJECT)
 {
   auto obj = static_cast<QQmlListReference*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
   }
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROM )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -407,22 +407,22 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QQMLLISTREFERENCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QQMLLISTREFERENCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

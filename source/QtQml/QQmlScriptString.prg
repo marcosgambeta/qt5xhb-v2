@@ -61,7 +61,7 @@ RETURN
 #include <QtQml/QQmlScriptString>
 #endif
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
   else if (ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1))
   {
     /*
-    QQmlScriptString( const QQmlScriptString & other )
+    QQmlScriptString(const QQmlScriptString & other)
     */
     auto obj = new QQmlScriptString(*PQQMLSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_DELETE)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -104,9 +104,9 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
 }
 
 /*
-bool booleanLiteral( bool * ok ) const
+bool booleanLiteral(bool * ok) const
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
     {
 #endif
       bool par1;
-      RBOOL(obj->booleanLiteral( &par1));
+      RBOOL(obj->booleanLiteral(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
 /*
 bool isNullLiteral() const
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
 /*
 bool isUndefinedLiteral() const
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -202,9 +202,9 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
 }
 
 /*
-qreal numberLiteral( bool * ok ) const
+qreal numberLiteral(bool * ok) const
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
     {
 #endif
       bool par1;
-      RQREAL(obj->numberLiteral( &par1));
+      RQREAL(obj->numberLiteral(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
 /*
 QString stringLiteral() const
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 {
   auto obj = static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
   }
 }
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEWFROM )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -281,22 +281,22 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QQMLSCRIPTSTRING_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QQMLSCRIPTSTRING_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLSCRIPTSTRING_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

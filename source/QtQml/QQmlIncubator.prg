@@ -66,13 +66,13 @@ RETURN
 #endif
 
 /*
-QQmlIncubator( QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous )
+QQmlIncubator(QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous)
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    auto obj = new QQmlIncubator( HB_ISNIL(1) ? static_cast<QQmlIncubator::IncubationMode >( QQmlIncubator::Asynchronous ) : static_cast<QQmlIncubator::IncubationMode >(hb_parni(1)));
+    auto obj = new QQmlIncubator(HB_ISNIL(1) ? static_cast<QQmlIncubator::IncubationMode >(QQmlIncubator::Asynchronous) : static_cast<QQmlIncubator::IncubationMode >(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_DELETE )
+HB_FUNC_STATIC(QQMLINCUBATOR_DELETE)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_DELETE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
+HB_FUNC_STATIC(QQMLINCUBATOR_CLEAR)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
 /*
 void forceCompletion()
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
+HB_FUNC_STATIC(QQMLINCUBATOR_FORCECOMPLETION)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
 /*
 QQmlIncubator::IncubationMode incubationMode() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
+HB_FUNC_STATIC(QQMLINCUBATOR_INCUBATIONMODE)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
 /*
 bool isError() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISERROR)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
 /*
 bool isLoading() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISLOADING)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISNULL)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
 /*
 bool isReady() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISREADY)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
+HB_FUNC_STATIC(QQMLINCUBATOR_OBJECT)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
 /*
 QQmlIncubator::Status status() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
+HB_FUNC_STATIC(QQMLINCUBATOR_STATUS)
 {
   auto obj = static_cast<QQmlIncubator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
   }
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROM )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -348,22 +348,22 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QQMLINCUBATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QQMLINCUBATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLINCUBATOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLINCUBATOR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
