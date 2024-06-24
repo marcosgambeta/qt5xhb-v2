@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->configureButton(PINT(1), static_cast<QGamepadManager::GamepadButton>( hb_parni(2))));
+      RBOOL(obj->configureButton(PINT(1), static_cast<QGamepadManager::GamepadButton>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->configureAxis(PINT(1), static_cast<QGamepadManager::GamepadAxis>( hb_parni(2))));
+      RBOOL(obj->configureAxis(PINT(1), static_cast<QGamepadManager::GamepadAxis>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->setCancelConfigureButton(PINT(1), static_cast<QGamepadManager::GamepadButton>( hb_parni(2))));
+      RBOOL(obj->setCancelConfigureButton(PINT(1), static_cast<QGamepadManager::GamepadButton>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

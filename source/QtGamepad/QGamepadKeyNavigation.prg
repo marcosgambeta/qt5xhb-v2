@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETUPKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUpKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setUpKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETDOWNKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDownKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setDownKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETLEFTKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLeftKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setLeftKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETRIGHTKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRightKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setRightKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONAKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonAKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonAKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONBKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonBKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonBKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONXKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonXKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonXKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONYKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonYKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonYKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSELECTKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonSelectKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonSelectKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSTARTKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonStartKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonStartKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONGUIDEKEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonGuideKey( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonGuideKey(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL1KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonL1Key( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonL1Key(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR1KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonR1Key( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonR1Key(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL2KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonL2Key( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonL2Key(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR2KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonR2Key( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonR2Key(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL3KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonL3Key( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonL3Key(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR3KEY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setButtonR3Key( static_cast<Qt::Key>( hb_parni(1)));
+      obj->setButtonR3Key(static_cast<Qt::Key>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
