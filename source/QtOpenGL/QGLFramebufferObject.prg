@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     /*
     QGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
     */
-    auto obj = new QGLFramebufferObject( *PQSIZE(1), OPGLENUM( 2, GL_TEXTURE_2D));
+    auto obj = new QGLFramebufferObject(*PQSIZE(1), OPGLENUM( 2, GL_TEXTURE_2D));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     /*
     QGLFramebufferObject( const QSize & size, const QGLFramebufferObjectFormat & format )
     */
-    auto obj = new QGLFramebufferObject( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2));
+    auto obj = new QGLFramebufferObject(*PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     /*
     QGLFramebufferObject( int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
-    auto obj = new QGLFramebufferObject(PINT(1), PINT(2), static_cast<QGLFramebufferObject::Attachment>( hb_parni(3)), OPGLENUM( 4, GL_TEXTURE_2D ), OPGLENUM( 5, GL_RGBA8));
+    auto obj = new QGLFramebufferObject(PINT(1), PINT(2), static_cast<QGLFramebufferObject::Attachment>(hb_parni(3)), OPGLENUM( 4, GL_TEXTURE_2D ), OPGLENUM( 5, GL_RGBA8));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     /*
     QGLFramebufferObject( const QSize & size, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
-    auto obj = new QGLFramebufferObject( *PQSIZE(1), static_cast<QGLFramebufferObject::Attachment>( hb_parni(2)), OPGLENUM( 3, GL_TEXTURE_2D ), OPGLENUM( 4, GL_RGBA8));
+    auto obj = new QGLFramebufferObject(*PQSIZE(1), static_cast<QGLFramebufferObject::Attachment>(hb_parni(2)), OPGLENUM( 3, GL_TEXTURE_2D ), OPGLENUM( 4, GL_RGBA8));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());

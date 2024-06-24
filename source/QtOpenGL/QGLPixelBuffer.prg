@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
     /*
     QGLPixelBuffer( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = nullptr )
     */
-    auto obj = new QGLPixelBuffer( *PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat*>(Qt5xHb::itemGetPtr(2)), OPQGLWIDGET( 3, nullptr));
+    auto obj = new QGLPixelBuffer(*PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat*>(Qt5xHb::itemGetPtr(2)), OPQGLWIDGET( 3, nullptr));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D )));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D )));
     }
 
   }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D )));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D )));
     }
 
   }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());

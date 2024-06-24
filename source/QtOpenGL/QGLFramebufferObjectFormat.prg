@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
     /*
     QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
     */
-    auto obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1));
+    auto obj = new QGLFramebufferObjectFormat(*PQGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAttachment( static_cast<QGLFramebufferObject::Attachment>( hb_parni(1)));
+      obj->setAttachment(static_cast<QGLFramebufferObject::Attachment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

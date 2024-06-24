@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
     /*
     QGLColormap( const QGLColormap & map )
     */
-    auto obj = new QGLColormap( *PQGLCOLORMAP(1));
+    auto obj = new QGLColormap(*PQGLCOLORMAP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

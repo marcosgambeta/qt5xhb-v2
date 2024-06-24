@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
   if (ISNUMPAR(1) && ISQGLFORMAT(1))
   {
-    auto obj = new QGLContext( *PQGLFORMAT(1));
+    auto obj = new QGLContext(*PQGLFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>( hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
 
   }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
     }
 
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
     }
 
   }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>( hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
 
   }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
     if (ISNUMPAR(1) && ISQGLFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQGLFORMAT(1));
+      obj->setFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

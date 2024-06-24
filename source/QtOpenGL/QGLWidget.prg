@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     /*
     QGLWidget( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
     */
-    auto obj = new QGLWidget( OPQWIDGET( 1, nullptr ), OPQGLWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3)));
+    auto obj = new QGLWidget( OPQWIDGET( 1, nullptr ), OPQGLWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     /*
     QGLWidget( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
     */
-    auto obj = new QGLWidget(PQGLCONTEXT(1), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL(4) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(4)));
+    auto obj = new QGLWidget(PQGLCONTEXT(1), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL(4) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     /*
     QGLWidget( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
     */
-    auto obj = new QGLWidget( *PQGLFORMAT(1), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL(4) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(4)));
+    auto obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET( 2, nullptr ), OPQGLWIDGET( 3, nullptr ), HB_ISNIL(4) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
     }
 
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
     }
 
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>( hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
 
   }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>( hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
 
   }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 
     if (obj != nullptr)
     {
-      obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
     if (ISNUMPAR(1) && ISQGLCOLORMAP(1))
     {
 #endif
-      obj->setColormap( *PQGLCOLORMAP(1));
+      obj->setColormap(*PQGLCOLORMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
   if (ISNUMPAR(1) && ISQIMAGE(1))
   {
 #endif
-    auto ptr = new QImage( QGLWidget::convertToGLFormat( *PQIMAGE(1)));
+    auto ptr = new QImage( QGLWidget::convertToGLFormat(*PQIMAGE(1)));
     Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

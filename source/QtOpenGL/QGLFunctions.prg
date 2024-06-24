@@ -1563,7 +1563,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->hasOpenGLFeature( static_cast<QGLFunctions::OpenGLFeature>( hb_parni(1))));
+      RBOOL(obj->hasOpenGLFeature(static_cast<QGLFunctions::OpenGLFeature>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
