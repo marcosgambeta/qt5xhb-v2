@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
     /*
     QDeclarativeError( const QDeclarativeError & other )
     */
-    auto obj = new QDeclarativeError( *PQDECLARATIVEERROR(1));
+    auto obj = new QDeclarativeError(*PQDECLARATIVEERROR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

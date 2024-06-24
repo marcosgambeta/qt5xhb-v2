@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setBaseUrl( *PQURL(1));
+      obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
 #endif
-    QDeclarativeEngine::setObjectOwnership(PQOBJECT(1), static_cast<QDeclarativeEngine::ObjectOwnership>( hb_parni(2)));
+    QDeclarativeEngine::setObjectOwnership(PQOBJECT(1), static_cast<QDeclarativeEngine::ObjectOwnership>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

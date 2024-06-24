@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->loadUrl( *PQURL(1));
+      obj->loadUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2))
     {
 #endif
-      obj->setData( *PQBYTEARRAY(1), *PQURL(2));
+      obj->setData(*PQBYTEARRAY(1), *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

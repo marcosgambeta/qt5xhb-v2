@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
     /*
     QDeclarativeView( const QUrl & source, QWidget * parent = nullptr )
     */
-    auto obj = new QDeclarativeView( *PQURL(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QDeclarativeView(*PQURL(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setResizeMode( static_cast<QDeclarativeView::ResizeMode>( hb_parni(1)));
+      obj->setResizeMode(static_cast<QDeclarativeView::ResizeMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1));
+      obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

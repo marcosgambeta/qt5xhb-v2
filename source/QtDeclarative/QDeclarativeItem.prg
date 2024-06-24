@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QScriptValue(obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
+      auto ptr = new QScriptValue(obj->mapFromItem(*PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QScriptValue(obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
+      auto ptr = new QScriptValue(obj->mapToItem(*PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTransformOrigin( static_cast<QDeclarativeItem::TransformOrigin>( hb_parni(1)));
+      obj->setTransformOrigin(static_cast<QDeclarativeItem::TransformOrigin>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

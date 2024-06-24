@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
       bool par1;
       auto ptr = new QVariant(obj->evaluate( &par1));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

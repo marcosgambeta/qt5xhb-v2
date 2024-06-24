@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
     /*
     QDeclarativeScriptString( const QDeclarativeScriptString & other )
     */
-    auto obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1));
+    auto obj = new QDeclarativeScriptString(*PQDECLARATIVESCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

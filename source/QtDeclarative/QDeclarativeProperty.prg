@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
     {
       if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1))
       {
-        auto obj = new QDeclarativeProperty( *PQDECLARATIVEPROPERTY(1));
+        auto obj = new QDeclarativeProperty(*PQDECLARATIVEPROPERTY(1));
         Qt5xHb::returnNewObject(obj, true);
       }
       else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->propertyTypeName()));
+      hb_retc(static_cast< const char*>(obj->propertyTypeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->write( *PQVARIANT(1)));
+      RBOOL(obj->write(*PQVARIANT(1)));
     }
 
   }
