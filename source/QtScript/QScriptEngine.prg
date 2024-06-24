@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 
     if (obj != nullptr)
     {
-      auto ptr = new QScriptValue(obj->evaluate( *PQSCRIPTPROGRAM(1)));
+      auto ptr = new QScriptValue(obj->evaluate(*PQSCRIPTPROGRAM(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWDATE )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      auto ptr = new QScriptValue(obj->newDate( *PQDATETIME(1)));
+      auto ptr = new QScriptValue(obj->newDate(*PQDATETIME(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QScriptValue(obj->newRegExp( *PQREGEXP(1)));
+      auto ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QScriptValue(obj->newVariant( *PQVARIANT(1)));
+      auto ptr = new QScriptValue(obj->newVariant(*PQVARIANT(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
 
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QScriptValue(obj->newVariant( *PQSCRIPTVALUE(1), *PQVARIANT(2)));
+      auto ptr = new QScriptValue(obj->newVariant(*PQSCRIPTVALUE(1), *PQVARIANT(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
 
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
     if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
     {
 #endif
-      obj->setGlobalObject( *PQSCRIPTVALUE(1));
+      obj->setGlobalObject(*PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
     if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
     {
 #endif
-      auto ptr = new QScriptValue(obj->toObject( *PQSCRIPTVALUE(1)));
+      auto ptr = new QScriptValue(obj->toObject(*PQSCRIPTVALUE(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

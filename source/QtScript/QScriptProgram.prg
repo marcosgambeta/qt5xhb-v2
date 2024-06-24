@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
     /*
     QScriptProgram( const QScriptProgram & other )
     */
-    auto obj = new QScriptProgram( *PQSCRIPTPROGRAM(1));
+    auto obj = new QScriptProgram(*PQSCRIPTPROGRAM(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

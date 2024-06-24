@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QVariant(obj->extension( static_cast<QScriptClass::Extension>( hb_parni(1)), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2))));
+      auto ptr = new QVariant(obj->extension(static_cast<QScriptClass::Extension>(hb_parni(1)), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>(Qt5xHb::itemGetPtr(2))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
     if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
     {
 #endif
-      auto ptr = obj->newIterator( *PQSCRIPTVALUE(1));
+      auto ptr = obj->newIterator(*PQSCRIPTVALUE(1));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCLASSPROPERTYITERATOR", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QScriptValue(obj->property( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
+      auto ptr = new QScriptValue(obj->property(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
     {
 #endif
-      RENUM(obj->propertyFlags( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
+      RENUM(obj->propertyFlags(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
     if (ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4))
     {
 #endif
-      obj->setProperty( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3), *PQSCRIPTVALUE(4));
+      obj->setProperty(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3), *PQSCRIPTVALUE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->supportsExtension( static_cast<QScriptClass::Extension>( hb_parni(1))));
+      RBOOL(obj->supportsExtension(static_cast<QScriptClass::Extension>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

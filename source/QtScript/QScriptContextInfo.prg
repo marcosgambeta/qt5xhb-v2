@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
     /*
     QScriptContextInfo( const QScriptContextInfo & other )
     */
-    auto obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO(1));
+    auto obj = new QScriptContextInfo(*PQSCRIPTCONTEXTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

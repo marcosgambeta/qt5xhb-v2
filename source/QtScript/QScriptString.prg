@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
     /*
     QScriptString( const QScriptString & other )
     */
-    auto obj = new QScriptString( *PQSCRIPTSTRING(1));
+    auto obj = new QScriptString(*PQSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
