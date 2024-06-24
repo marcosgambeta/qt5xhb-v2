@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QX11INFO_DISPLAY )
   if (ISNUMPAR(0))
   {
 #endif
-    hb_retptr( static_cast< Display*>( QX11Info::display()));
+    hb_retptr(static_cast< Display*>( QX11Info::display()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QX11INFO_CONNECTION )
   if (ISNUMPAR(0))
   {
 #endif
-    hb_retptr( static_cast< xcb_connection_t*>( QX11Info::connection()));
+    hb_retptr(static_cast< xcb_connection_t*>( QX11Info::connection()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QX11INFO_SETNEXTSTARTUPID )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    QX11Info::setNextStartupId( *PQBYTEARRAY(1));
+    QX11Info::setNextStartupId(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
