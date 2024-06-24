@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLELOCALES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLEVOICES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETLOCALE )
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      RBOOL(obj->setLocale( *PQLOCALE(1)));
+      RBOOL(obj->setLocale(*PQLOCALE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOICE )
     if (ISNUMPAR(1) && ISQVOICE(1))
     {
 #endif
-      RBOOL(obj->setVoice( *PQVOICE(1)));
+      RBOOL(obj->setVoice(*PQVOICE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

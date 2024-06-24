@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QVOICE_NEW )
     QVoice( const QVoice & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QVoice( *PQVOICE(1));
+    auto obj = new QVoice(*PQVOICE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QVOICE_GENDERNAME )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QVoice::genderName( static_cast<QVoice::Gender>( hb_parni(1))));
+    RQSTRING( QVoice::genderName(static_cast<QVoice::Gender>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QVOICE_AGENAME )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QVoice::ageName( static_cast<QVoice::Age>( hb_parni(1))));
+    RQSTRING( QVoice::ageName(static_cast<QVoice::Age>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
