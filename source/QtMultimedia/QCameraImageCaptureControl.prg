@@ -63,7 +63,7 @@ RETURN
 /*
 ~QCameraImageCaptureControl()
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
 /*
 virtual void cancelCapture() = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
 {
   auto obj = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -108,9 +108,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
 }
 
 /*
-virtual int capture( const QString & fileName ) = 0
+virtual int capture(const QString & fileName) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CAPTURE)
 {
   auto obj = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
 /*
 virtual QCameraImageCapture::DriveMode driveMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
 {
   auto obj = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
 /*
 virtual bool isReadyForCapture() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
 {
   auto obj = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -180,9 +180,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
 }
 
 /*
-virtual void setDriveMode( QCameraImageCapture::DriveMode mode ) = 0
+virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE)
 {
   auto obj = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -206,9 +206,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
 }
 
 /*
-void error( int id, int error, const QString & errorString )
+void error(int id, int error, const QString & errorString)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONERROR)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -260,9 +260,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
 }
 
 /*
-void imageAvailable( int requestId, const QVideoFrame & buffer )
+void imageAvailable(int requestId, const QVideoFrame & buffer)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAIMAGECAPTURECONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVIDEOFRAME");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QVIDEOFRAME");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -312,9 +312,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
 }
 
 /*
-void imageCaptured( int requestId, const QImage & preview )
+void imageCaptured(int requestId, const QImage & preview)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAIMAGECAPTURECONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QIMAGE");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QIMAGE");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -364,9 +364,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
 }
 
 /*
-void imageExposed( int requestId )
+void imageExposed(int requestId)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -414,9 +414,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
 }
 
 /*
-void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+void imageMetadataAvailable(int id, const QString & key, const QVariant & value)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCAMERAIMAGECAPTURECONTROL");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
             auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
-            auto pArg3 = Qt5xHb::Signals_return_object( (void *) &arg3, "QVARIANT");
+            auto pArg3 = Qt5xHb::Signals_return_object((void *) &arg3, "QVARIANT");
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -468,9 +468,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
 }
 
 /*
-void imageSaved( int requestId, const QString & fileName )
+void imageSaved(int requestId, const QString & fileName)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -520,9 +520,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
 }
 
 /*
-void readyForCaptureChanged( bool ready )
+void readyForCaptureChanged(bool ready)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED)
 {
   auto sender = qobject_cast<QCameraImageCaptureControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

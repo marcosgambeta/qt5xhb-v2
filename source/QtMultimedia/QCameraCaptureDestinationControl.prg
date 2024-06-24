@@ -55,7 +55,7 @@ RETURN
 /*
 ~QCameraCaptureDestinationControl()
 */
-HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraCaptureDestinationControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )
 /*
 virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
+HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION)
 {
   auto obj = qobject_cast<QCameraCaptureDestinationControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
 }
 
 /*
-virtual bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinations destination ) const = 0
+virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
+HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED)
 {
   auto obj = qobject_cast<QCameraCaptureDestinationControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
 }
 
 /*
-virtual void setCaptureDestination( QCameraImageCapture::CaptureDestinations destination ) = 0
+virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
+HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION)
 {
   auto obj = qobject_cast<QCameraCaptureDestinationControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
 }
 
 /*
-void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
 */
-HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
+HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED)
 {
   auto sender = qobject_cast<QCameraCaptureDestinationControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

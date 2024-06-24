@@ -59,7 +59,7 @@ RETURN
 /*
 virtual ~QAudioRoleControl()
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QAudioRoleControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
 /*
 virtual QAudio::Role audioRole() const = 0
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QAudioRoleControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -106,9 +106,9 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
 }
 
 /*
-virtual void setAudioRole( QAudio::Role role ) = 0
+virtual void setAudioRole(QAudio::Role role) = 0
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QAudioRoleControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
 /*
 virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto obj = qobject_cast<QAudioRoleControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
 }
 
 /*
-void audioRoleChanged( QAudio::Role role )
+void audioRoleChanged(QAudio::Role role)
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_ONAUDIOROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto sender = qobject_cast<QAudioRoleControl*>(Qt5xHb::getQObjectPointerFromSelfItem());

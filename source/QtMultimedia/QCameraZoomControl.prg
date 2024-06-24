@@ -64,7 +64,7 @@ RETURN
 /*
 ~QCameraZoomControl()
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_DELETE )
 /*
 virtual qreal currentDigitalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM )
 /*
 virtual qreal currentOpticalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM )
 /*
 virtual qreal maximumDigitalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM )
 /*
 virtual qreal maximumOpticalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM )
 /*
 virtual qreal requestedDigitalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM )
 /*
 virtual qreal requestedOpticalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -227,9 +227,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
 }
 
 /*
-virtual void zoomTo( qreal optical, qreal digital ) = 0
+virtual void zoomTo(qreal optical, qreal digital) = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ZOOMTO)
 {
   auto obj = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -253,9 +253,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
 }
 
 /*
-void currentDigitalZoomChanged( qreal zoom )
+void currentDigitalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -303,9 +303,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
 }
 
 /*
-void currentOpticalZoomChanged( qreal zoom )
+void currentOpticalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -353,9 +353,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
 }
 
 /*
-void maximumDigitalZoomChanged( qreal zoom )
+void maximumDigitalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -403,9 +403,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
 }
 
 /*
-void maximumOpticalZoomChanged( qreal zoom )
+void maximumOpticalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -453,9 +453,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
 }
 
 /*
-void requestedDigitalZoomChanged( qreal zoom )
+void requestedDigitalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -503,9 +503,9 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
 }
 
 /*
-void requestedOpticalZoomChanged( qreal zoom )
+void requestedOpticalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraZoomControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

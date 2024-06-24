@@ -54,13 +54,13 @@ RETURN
 #endif
 
 /*
-QAudioProbe( QObject * parent = nullptr )
+QAudioProbe(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QAUDIOPROBE_NEW )
+HB_FUNC_STATIC(QAUDIOPROBE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QAudioProbe( OPQOBJECT( 1, nullptr));
+    auto obj = new QAudioProbe(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 /*
 ~QAudioProbe()
 */
-HB_FUNC_STATIC( QAUDIOPROBE_DELETE )
+HB_FUNC_STATIC(QAUDIOPROBE_DELETE)
 {
   auto obj = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_DELETE )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
+HB_FUNC_STATIC(QAUDIOPROBE_ISACTIVE)
 {
   auto obj = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,12 +114,12 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
   }
 }
 
-HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
+HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
 {
   if (ISNUMPAR(1) && ISQMEDIAOBJECT(1))
   {
     /*
-    bool setSource( QMediaObject * source )
+    bool setSource(QMediaObject * source)
     */
     auto obj = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
   else if (ISNUMPAR(1) && ISQMEDIARECORDER(1))
   {
     /*
-    bool setSource( QMediaRecorder * source )
+    bool setSource(QMediaRecorder * source)
     */
     auto obj = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -149,9 +149,9 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 }
 
 /*
-void audioBufferProbed( const QAudioBuffer & buffer )
+void audioBufferProbed(const QAudioBuffer & buffer)
 */
-HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
+HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
 {
   auto sender = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOBUFFER");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QAUDIOBUFFER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 /*
 void flush()
 */
-HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
+HB_FUNC_STATIC(QAUDIOPROBE_ONFLUSH)
 {
   auto sender = qobject_cast<QAudioProbe*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

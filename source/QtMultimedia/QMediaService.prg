@@ -53,7 +53,7 @@ RETURN
 /*
 ~QMediaService()
 */
-HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
+HB_FUNC_STATIC(QMEDIASERVICE_DELETE)
 {
   auto obj = qobject_cast<QMediaService*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -72,9 +72,9 @@ HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
 }
 
 /*
-virtual void releaseControl( QMediaControl * control ) = 0
+virtual void releaseControl(QMediaControl * control) = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
+HB_FUNC_STATIC(QMEDIASERVICE_RELEASECONTROL)
 {
   auto obj = qobject_cast<QMediaService*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
 }
 
 /*
-virtual QMediaControl * requestControl( const char * interface ) = 0
+virtual QMediaControl * requestControl(const char * interface) = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
+HB_FUNC_STATIC(QMEDIASERVICE_REQUESTCONTROL)
 {
   auto obj = qobject_cast<QMediaService*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -69,7 +69,7 @@ RETURN
 
 #include <QtCore/QList>
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
+HB_FUNC_STATIC(QMEDIATIMERANGE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QMediaTimeRange( qint64 start, qint64 end )
+    QMediaTimeRange(qint64 start, qint64 end)
     */
     auto obj = new QMediaTimeRange(PQINT64(1), PQINT64(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
   else if (ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1))
   {
     /*
-    QMediaTimeRange( const QMediaTimeInterval & interval )
+    QMediaTimeRange(const QMediaTimeInterval & interval)
     */
     auto obj = new QMediaTimeRange(*PQMEDIATIMEINTERVAL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
   else if (ISNUMPAR(1) && ISQMEDIATIMERANGE(1))
   {
     /*
-    QMediaTimeRange( const QMediaTimeRange & range )
+    QMediaTimeRange(const QMediaTimeRange & range)
     */
     auto obj = new QMediaTimeRange(*PQMEDIATIMERANGE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 /*
 ~QMediaTimeRange()
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
+HB_FUNC_STATIC(QMEDIATIMERANGE_DELETE)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -132,12 +132,12 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
+HB_FUNC_STATIC(QMEDIATIMERANGE_ADDINTERVAL)
 {
   if (ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1))
   {
     /*
-    void addInterval( const QMediaTimeInterval & interval )
+    void addInterval(const QMediaTimeInterval & interval)
     */
     auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void addInterval( qint64 start, qint64 end )
+    void addInterval(qint64 start, qint64 end)
     */
     auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -171,9 +171,9 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 }
 
 /*
-void addTimeRange( const QMediaTimeRange & range )
+void addTimeRange(const QMediaTimeRange & range)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
+HB_FUNC_STATIC(QMEDIATIMERANGE_ADDTIMERANGE)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_CLEAR )
+HB_FUNC_STATIC(QMEDIATIMERANGE_CLEAR)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -223,9 +223,9 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_CLEAR )
 }
 
 /*
-bool contains( qint64 time ) const
+bool contains(qint64 time) const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_CONTAINS )
+HB_FUNC_STATIC(QMEDIATIMERANGE_CONTAINS)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_CONTAINS )
 /*
 qint64 earliestTime() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_EARLIESTTIME )
+HB_FUNC_STATIC(QMEDIATIMERANGE_EARLIESTTIME)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_EARLIESTTIME )
 /*
 QList<QMediaTimeInterval> intervals() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
+HB_FUNC_STATIC(QMEDIATIMERANGE_INTERVALS)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
 /*
 bool isContinuous() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ISCONTINUOUS )
+HB_FUNC_STATIC(QMEDIATIMERANGE_ISCONTINUOUS)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ISCONTINUOUS )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ISEMPTY )
+HB_FUNC_STATIC(QMEDIATIMERANGE_ISEMPTY)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ISEMPTY )
 /*
 qint64 latestTime() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
+HB_FUNC_STATIC(QMEDIATIMERANGE_LATESTTIME)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -392,12 +392,12 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
   }
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
+HB_FUNC_STATIC(QMEDIATIMERANGE_REMOVEINTERVAL)
 {
   if (ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1))
   {
     /*
-    void removeInterval( const QMediaTimeInterval & interval )
+    void removeInterval(const QMediaTimeInterval & interval)
     */
     auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void removeInterval( qint64 start, qint64 end )
+    void removeInterval(qint64 start, qint64 end)
     */
     auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -431,9 +431,9 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 }
 
 /*
-void removeTimeRange( const QMediaTimeRange & range )
+void removeTimeRange(const QMediaTimeRange & range)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
+HB_FUNC_STATIC(QMEDIATIMERANGE_REMOVETIMERANGE)
 {
   auto obj = static_cast<QMediaTimeRange*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEWFROM )
+HB_FUNC_STATIC(QMEDIATIMERANGE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -486,22 +486,22 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMEDIATIMERANGE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMEDIATIMERANGE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMEDIATIMERANGE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMEDIATIMERANGE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMEDIATIMERANGE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMEDIATIMERANGE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMEDIATIMERANGE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

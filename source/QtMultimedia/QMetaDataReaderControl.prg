@@ -58,7 +58,7 @@ RETURN
 /*
 ~QMetaDataReaderControl()
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_DELETE )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_DELETE )
 /*
 virtual bool isMetaDataAvailable() const = 0
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_ISMETADATAAVAILABLE )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_ISMETADATAAVAILABLE)
 {
   auto obj = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ISMETADATAAVAILABLE )
 }
 
 /*
-virtual QVariant metaData( const QString & key ) const = 0
+virtual QVariant metaData(const QString & key) const = 0
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_METADATA )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_METADATA)
 {
   auto obj = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_METADATA )
 /*
 virtual QStringList availableMetaData() const = 0
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_AVAILABLEMETADATA)
 {
   auto obj = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
 /*
 void metaDataChanged()
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_ONMETADATACHANGED1)
 {
   auto sender = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -198,9 +198,9 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
 }
 
 /*
-void metaDataChanged( const QString & key, const QVariant & value )
+void metaDataChanged(const QString & key, const QVariant & value)
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_ONMETADATACHANGED2)
 {
   auto sender = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMETADATAREADERCONTROL");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QVARIANT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -250,9 +250,9 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
 }
 
 /*
-void metaDataAvailableChanged( bool available )
+void metaDataAvailableChanged(bool available)
 */
-HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
+HB_FUNC_STATIC(QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED)
 {
   auto sender = qobject_cast<QMetaDataReaderControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

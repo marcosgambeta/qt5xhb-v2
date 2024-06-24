@@ -55,7 +55,7 @@ RETURN
 /*
 virtual ~QMediaAudioProbeControl()
 */
-HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
+HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaAudioProbeControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -74,9 +74,9 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
 }
 
 /*
-void audioBufferProbed( const QAudioBuffer & buffer )
+void audioBufferProbed(const QAudioBuffer & buffer)
 */
-HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
+HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
 {
   auto sender = qobject_cast<QMediaAudioProbeControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAAUDIOPROBECONTROL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QAUDIOBUFFER");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QAUDIOBUFFER");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 /*
 void flush()
 */
-HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
+HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONFLUSH)
 {
   auto sender = qobject_cast<QMediaAudioProbeControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

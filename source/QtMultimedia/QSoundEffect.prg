@@ -77,13 +77,13 @@ RETURN
 #endif
 
 /*
-QSoundEffect( QObject * parent = nullptr )
+QSoundEffect(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
+HB_FUNC_STATIC(QSOUNDEFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSoundEffect( OPQOBJECT( 1, nullptr));
+    auto obj = new QSoundEffect(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 /*
 ~QSoundEffect()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_DELETE )
+HB_FUNC_STATIC(QSOUNDEFFECT_DELETE)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_DELETE )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
+HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -139,9 +139,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
 }
 
 /*
-void setSource( const QUrl & url )
+void setSource(const QUrl & url)
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
 /*
 int loopCount() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
+HB_FUNC_STATIC(QSOUNDEFFECT_LOOPCOUNT)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -189,9 +189,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
 }
 
 /*
-void setLoopCount( int loopCount )
+void setLoopCount(int loopCount)
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETLOOPCOUNT)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
 /*
 int loopsRemaining() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
+HB_FUNC_STATIC(QSOUNDEFFECT_LOOPSREMAINING)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
 /*
 qreal volume() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
+HB_FUNC_STATIC(QSOUNDEFFECT_VOLUME)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -263,9 +263,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
 }
 
 /*
-void setVolume( qreal volume )
+void setVolume(qreal volume)
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETVOLUME)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
 /*
 bool isMuted() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ISMUTED)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -313,9 +313,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
 }
 
 /*
-void setMuted( bool muted )
+void setMuted(bool muted)
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETMUTED)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
 /*
 bool isPlaying() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
+HB_FUNC_STATIC(QSOUNDEFFECT_ISPLAYING)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
 /*
 QSoundEffect::Status status() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
+HB_FUNC_STATIC(QSOUNDEFFECT_STATUS)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
 /*
 QString category() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
+HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -411,9 +411,9 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
 }
 
 /*
-void setCategory( const QString & category )
+void setCategory(const QString & category)
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
 /*
 bool isLoaded() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ISLOADED)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
 /*
 void play()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
+HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
+HB_FUNC_STATIC(QSOUNDEFFECT_STOP)
 {
   auto obj = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -515,13 +515,13 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
 /*
 static QStringList supportedMimeTypes()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
+HB_FUNC_STATIC(QSOUNDEFFECT_SUPPORTEDMIMETYPES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QSoundEffect::supportedMimeTypes());
+    RQSTRINGLIST(QSoundEffect::supportedMimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 /*
 void sourceChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONSOURCECHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 /*
 void loopCountChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPCOUNTCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 /*
 void loopsRemainingChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPSREMAININGCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 /*
 void volumeChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONVOLUMECHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 /*
 void mutedChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONMUTEDCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 /*
 void loadedChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONLOADEDCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 /*
 void playingChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONPLAYINGCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 /*
 void statusChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONSTATUSCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 /*
 void categoryChanged()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONCATEGORYCHANGED)
 {
   auto sender = qobject_cast<QSoundEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

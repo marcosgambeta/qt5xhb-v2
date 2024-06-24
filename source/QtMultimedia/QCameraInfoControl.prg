@@ -56,7 +56,7 @@ RETURN
 /*
 virtual ~QCameraInfoControl()
 */
-HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAINFOCONTROL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QCameraInfoControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -77,9 +77,9 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
 }
 
 /*
-virtual QCamera::Position cameraPosition( const QString & deviceName ) const = 0
+virtual QCamera::Position cameraPosition(const QString & deviceName) const = 0
 */
-HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
+HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QCameraInfoControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -103,9 +103,9 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 }
 
 /*
-virtual int cameraOrientation( const QString & deviceName ) const = 0
+virtual int cameraOrientation(const QString & deviceName) const = 0
 */
-HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
+HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QCameraInfoControl*>(Qt5xHb::getQObjectPointerFromSelfItem());

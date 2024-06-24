@@ -58,7 +58,7 @@ RETURN
 /*
 virtual ~QAudioInputSelectorControl()
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_DELETE)
 {
   auto obj = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )
 /*
 virtual QString activeInput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT)
 {
   auto obj = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
 /*
 virtual QList<QString> availableInputs() const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS)
 {
   auto obj = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
 /*
 virtual QString defaultInput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT)
 {
   auto obj = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -157,9 +157,9 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
 }
 
 /*
-virtual QString inputDescription( const QString & name ) const = 0
+virtual QString inputDescription(const QString & name) const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION)
 {
   auto obj = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -181,9 +181,9 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
 }
 
 /*
-virtual void setActiveInput( const QString & name ) = 0
+virtual void setActiveInput(const QString & name) = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT)
 {
   auto obj = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
 }
 
 /*
-void activeInputChanged( const QString & name )
+void activeInputChanged(const QString & name)
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED)
 {
   auto sender = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
 /*
 void availableInputsChanged()
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED)
 {
   auto sender = qobject_cast<QAudioInputSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

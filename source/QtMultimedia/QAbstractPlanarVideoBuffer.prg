@@ -50,13 +50,13 @@ RETURN
 #endif
 
 /*
-QAbstractPlanarVideoBuffer( QAbstractVideoBuffer::HandleType type ) [ABSTRACT]
+QAbstractPlanarVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
 */
 
 /*
 virtual ~QAbstractPlanarVideoBuffer()
 */
-HB_FUNC_STATIC( QABSTRACTPLANARVIDEOBUFFER_DELETE )
+HB_FUNC_STATIC(QABSTRACTPLANARVIDEOBUFFER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QAbstractPlanarVideoBuffer*>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -90,7 +90,7 @@ RETURN
 /*
 qreal aperture() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_APERTURE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_APERTURE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_APERTURE )
 /*
 qreal shutterSpeed() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SHUTTERSPEED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SHUTTERSPEED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SHUTTERSPEED )
 /*
 int isoSensitivity() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISOSENSITIVITY )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ISOSENSITIVITY)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISOSENSITIVITY )
 /*
 qreal exposureCompensation() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSURECOMPENSATION )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_EXPOSURECOMPENSATION)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -184,9 +184,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSURECOMPENSATION )
 }
 
 /*
-void setExposureCompensation( qreal ev )
+void setExposureCompensation(qreal ev)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION )
 /*
 bool isFlashReady() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHREADY )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHREADY)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHREADY )
 /*
 QCameraExposure::FlashModes flashMode() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_FLASHMODE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -258,9 +258,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
 }
 
 /*
-void setFlashMode( QCameraExposure::FlashModes mode )
+void setFlashMode(QCameraExposure::FlashModes mode)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETFLASHMODE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
 /*
 QCameraExposure::ExposureMode exposureMode() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_EXPOSUREMODE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -308,9 +308,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
 }
 
 /*
-void setExposureMode( QCameraExposure::ExposureMode mode )
+void setExposureMode(QCameraExposure::ExposureMode mode)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSUREMODE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
 /*
 QCameraExposure::MeteringMode meteringMode() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_METERINGMODE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -358,9 +358,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
 }
 
 /*
-void setMeteringMode( QCameraExposure::MeteringMode mode )
+void setMeteringMode(QCameraExposure::MeteringMode mode)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMETERINGMODE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
 /*
 bool isAvailable() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISAVAILABLE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ISAVAILABLE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -408,9 +408,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISAVAILABLE )
 }
 
 /*
-bool isExposureModeSupported( QCameraExposure::ExposureMode mode ) const
+bool isExposureModeSupported(QCameraExposure::ExposureMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -432,9 +432,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
 }
 
 /*
-bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const
+bool isFlashModeSupported(QCameraExposure::FlashModes mode) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -456,9 +456,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
 }
 
 /*
-bool isMeteringModeSupported( QCameraExposure::MeteringMode mode ) const
+bool isMeteringModeSupported(QCameraExposure::MeteringMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
 /*
 qreal requestedAperture() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDAPERTURE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDAPERTURE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDAPERTURE )
 /*
 int requestedIsoSensitivity() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY )
 /*
 qreal requestedShutterSpeed() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -552,9 +552,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED )
 }
 
 /*
-void setSpotMeteringPoint( const QPointF & point )
+void setSpotMeteringPoint(const QPointF & point)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETSPOTMETERINGPOINT)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
 /*
 QPointF spotMeteringPoint() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SPOTMETERINGPOINT)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -603,9 +603,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
 }
 
 /*
-QList<qreal> supportedApertures( bool * continuous = nullptr ) const
+QList<qreal> supportedApertures(bool * continuous = nullptr) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDAPERTURES)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -616,8 +616,8 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
     {
 #endif
       bool par1;
-      auto list = obj->supportedApertures( &par1);
-      Qt5xHb::convert_qlist_qreal_to_array( list);
+      auto list = obj->supportedApertures(&par1);
+      Qt5xHb::convert_qlist_qreal_to_array(list);
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -630,9 +630,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 }
 
 /*
-QList<int> supportedIsoSensitivities( bool * continuous = nullptr ) const
+QList<int> supportedIsoSensitivities(bool * continuous = nullptr) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -643,8 +643,8 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
     {
 #endif
       bool par1;
-      auto list = obj->supportedIsoSensitivities( &par1);
-      Qt5xHb::convert_qlist_int_to_array( list);
+      auto list = obj->supportedIsoSensitivities(&par1);
+      Qt5xHb::convert_qlist_int_to_array(list);
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -657,9 +657,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 }
 
 /*
-QList<qreal> supportedShutterSpeeds( bool * continuous = nullptr ) const
+QList<qreal> supportedShutterSpeeds(bool * continuous = nullptr) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -670,8 +670,8 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
     {
 #endif
       bool par1;
-      auto list = obj->supportedShutterSpeeds( &par1);
-      Qt5xHb::convert_qlist_qreal_to_array( list);
+      auto list = obj->supportedShutterSpeeds(&par1);
+      Qt5xHb::convert_qlist_qreal_to_array(list);
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
 /*
 void setAutoAperture()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOAPERTURE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOAPERTURE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOAPERTURE )
 /*
 void setAutoIsoSensitivity()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY )
 /*
 void setAutoShutterSpeed()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -762,9 +762,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED )
 }
 
 /*
-void setManualAperture( qreal aperture )
+void setManualAperture(qreal aperture)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALAPERTURE)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -788,9 +788,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
 }
 
 /*
-void setManualIsoSensitivity( int iso )
+void setManualIsoSensitivity(int iso)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -814,9 +814,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
 }
 
 /*
-void setManualShutterSpeed( qreal seconds )
+void setManualShutterSpeed(qreal seconds)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED)
 {
   auto obj = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -840,9 +840,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
 }
 
 /*
-void apertureChanged( qreal value )
+void apertureChanged(qreal value)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURECHANGED)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 /*
 void apertureRangeChanged()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURERANGECHANGED)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -938,9 +938,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 }
 
 /*
-void exposureCompensationChanged( qreal value )
+void exposureCompensationChanged(qreal value)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -988,9 +988,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 }
 
 /*
-void flashReady( bool ready )
+void flashReady(bool ready)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONFLASHREADY)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1038,9 +1038,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 }
 
 /*
-void isoSensitivityChanged( int value )
+void isoSensitivityChanged(int value)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1088,9 +1088,9 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 }
 
 /*
-void shutterSpeedChanged( qreal speed )
+void shutterSpeedChanged(qreal speed)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 /*
 void shutterSpeedRangeChanged()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED)
 {
   auto sender = qobject_cast<QCameraExposure*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

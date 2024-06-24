@@ -55,7 +55,7 @@ RETURN
 /*
 ~QVideoRendererControl()
 */
-HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )
+HB_FUNC_STATIC(QVIDEORENDERERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QVideoRendererControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -74,9 +74,9 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )
 }
 
 /*
-virtual void setSurface( QAbstractVideoSurface * surface ) = 0
+virtual void setSurface(QAbstractVideoSurface * surface) = 0
 */
-HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
+HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SETSURFACE)
 {
   auto obj = qobject_cast<QVideoRendererControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
 /*
 virtual QAbstractVideoSurface * surface() const = 0
 */
-HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
+HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SURFACE)
 {
   auto obj = qobject_cast<QVideoRendererControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

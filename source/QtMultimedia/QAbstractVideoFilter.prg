@@ -58,13 +58,13 @@ RETURN
 #endif
 
 /*
-QAbstractVideoFilter( QObject * parent = nullptr ) [ABSTRACT]
+QAbstractVideoFilter(QObject * parent = nullptr) [ABSTRACT]
 */
 
 /*
 ~QAbstractVideoFilter()
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_DELETE )
+HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QAbstractVideoFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_DELETE )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
+HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ISACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QAbstractVideoFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +111,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
 }
 
 /*
-void setActive( bool v )
+void setActive(bool v)
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
+HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_SETACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QAbstractVideoFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
 /*
 virtual QVideoFilterRunnable * createFilterRunnable() = 0
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
+HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QAbstractVideoFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
 /*
 void activeChanged()
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
+HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ONACTIVECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto sender = qobject_cast<QAbstractVideoFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());

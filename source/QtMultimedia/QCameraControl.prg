@@ -62,7 +62,7 @@ RETURN
 /*
 ~QCameraControl()
 */
-HB_FUNC_STATIC( QCAMERACONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERACONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -81,9 +81,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_DELETE )
 }
 
 /*
-virtual bool canChangeProperty( QCameraControl::PropertyChangeType changeType, QCamera::Status status ) const = 0
+virtual bool canChangeProperty(QCameraControl::PropertyChangeType changeType, QCamera::Status status) const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
+HB_FUNC_STATIC(QCAMERACONTROL_CANCHANGEPROPERTY)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
 /*
 virtual QCamera::CaptureModes captureMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
+HB_FUNC_STATIC(QCAMERACONTROL_CAPTUREMODE)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -129,9 +129,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
 }
 
 /*
-virtual bool isCaptureModeSupported( QCamera::CaptureModes mode ) const = 0
+virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERACONTROL_ISCAPTUREMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -153,9 +153,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
 }
 
 /*
-virtual void setCaptureMode( QCamera::CaptureModes mode ) = 0
+virtual void setCaptureMode(QCamera::CaptureModes mode) = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
+HB_FUNC_STATIC(QCAMERACONTROL_SETCAPTUREMODE)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -179,9 +179,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
 }
 
 /*
-virtual void setState( QCamera::State state ) = 0
+virtual void setState(QCamera::State state) = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
+HB_FUNC_STATIC(QCAMERACONTROL_SETSTATE)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
 /*
 virtual QCamera::State state() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_STATE )
+HB_FUNC_STATIC(QCAMERACONTROL_STATE)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATE )
 /*
 virtual QCamera::Status status() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
+HB_FUNC_STATIC(QCAMERACONTROL_STATUS)
 {
   auto obj = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -253,9 +253,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
 }
 
 /*
-void captureModeChanged( QCamera::CaptureModes mode )
+void captureModeChanged(QCamera::CaptureModes mode)
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
+HB_FUNC_STATIC(QCAMERACONTROL_ONCAPTUREMODECHANGED)
 {
   auto sender = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -303,9 +303,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 }
 
 /*
-void error( int error, const QString & errorString )
+void error(int error, const QString & errorString)
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
+HB_FUNC_STATIC(QCAMERACONTROL_ONERROR)
 {
   auto sender = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -355,9 +355,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 }
 
 /*
-void stateChanged( QCamera::State state )
+void stateChanged(QCamera::State state)
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
+HB_FUNC_STATIC(QCAMERACONTROL_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -405,9 +405,9 @@ HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 }
 
 /*
-void statusChanged( QCamera::Status status )
+void statusChanged(QCamera::Status status)
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QCAMERACONTROL_ONSTATUSCHANGED)
 {
   auto sender = qobject_cast<QCameraControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

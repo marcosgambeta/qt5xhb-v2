@@ -54,7 +54,7 @@ RETURN
 /*
 ~QCameraViewfinderSettingsControl()
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraViewfinderSettingsControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -73,9 +73,9 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE )
 }
 
 /*
-virtual bool isViewfinderParameterSupported( QCameraViewfinderSettingsControl::ViewfinderParameter parameter ) const = 0
+virtual bool isViewfinderParameterSupported(QCameraViewfinderSettingsControl::ViewfinderParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED)
 {
   auto obj = qobject_cast<QCameraViewfinderSettingsControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -97,9 +97,9 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED 
 }
 
 /*
-virtual void setViewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter, const QVariant & value ) = 0
+virtual void setViewfinderParameter(QCameraViewfinderSettingsControl::ViewfinderParameter parameter, const QVariant & value) = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER)
 {
   auto obj = qobject_cast<QCameraViewfinderSettingsControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
 }
 
 /*
-virtual QVariant viewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter ) const = 0
+virtual QVariant viewfinderParameter(QCameraViewfinderSettingsControl::ViewfinderParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER)
 {
   auto obj = qobject_cast<QCameraViewfinderSettingsControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -55,7 +55,7 @@ RETURN
 /*
 virtual ~QMediaVideoProbeControl()
 */
-HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
+HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaVideoProbeControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
 /*
 void flush()
 */
-HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
+HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
 {
   auto sender = qobject_cast<QMediaVideoProbeControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 }
 
 /*
-void videoFrameProbed( const QVideoFrame & frame )
+void videoFrameProbed(const QVideoFrame & frame)
 */
-HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
+HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED)
 {
   auto sender = qobject_cast<QMediaVideoProbeControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAVIDEOPROBECONTROL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVIDEOFRAME");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QVIDEOFRAME");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

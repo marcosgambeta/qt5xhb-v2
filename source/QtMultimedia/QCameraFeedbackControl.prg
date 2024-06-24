@@ -55,7 +55,7 @@ RETURN
 /*
 ~QCameraFeedbackControl()
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraFeedbackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -74,9 +74,9 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
 }
 
 /*
-virtual bool isEventFeedbackEnabled( QCameraFeedbackControl::EventType event ) const = 0
+virtual bool isEventFeedbackEnabled(QCameraFeedbackControl::EventType event) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED)
 {
   auto obj = qobject_cast<QCameraFeedbackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
 }
 
 /*
-virtual bool isEventFeedbackLocked( QCameraFeedbackControl::EventType event ) const = 0
+virtual bool isEventFeedbackLocked(QCameraFeedbackControl::EventType event) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED)
 {
   auto obj = qobject_cast<QCameraFeedbackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
 }
 
 /*
-virtual void resetEventFeedback( QCameraFeedbackControl::EventType event ) = 0
+virtual void resetEventFeedback(QCameraFeedbackControl::EventType event) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK)
 {
   auto obj = qobject_cast<QCameraFeedbackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
 }
 
 /*
-virtual bool setEventFeedbackEnabled( QCameraFeedbackControl::EventType event, bool enabled ) = 0
+virtual bool setEventFeedbackEnabled(QCameraFeedbackControl::EventType event, bool enabled) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED)
 {
   auto obj = qobject_cast<QCameraFeedbackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -172,9 +172,9 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
 }
 
 /*
-virtual bool setEventFeedbackSound( QCameraFeedbackControl::EventType event, const QString & filePath ) = 0
+virtual bool setEventFeedbackSound(QCameraFeedbackControl::EventType event, const QString & filePath) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 {
   auto obj = qobject_cast<QCameraFeedbackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

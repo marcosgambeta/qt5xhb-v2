@@ -60,7 +60,7 @@ RETURN
 /*
 virtual ~QMediaGaplessPlaybackControl()
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )
 /*
 virtual qreal crossfadeTime() const = 0
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME)
 {
   auto obj = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
 /*
 virtual bool isCrossfadeSupported() const = 0
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED)
 {
   auto obj = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
 /*
 virtual QMediaContent nextMedia() const = 0
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA)
 {
   auto obj = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,9 +152,9 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
 }
 
 /*
-virtual void setCrossfadeTime( qreal crossfadeTime ) = 0
+virtual void setCrossfadeTime(qreal crossfadeTime) = 0
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME)
 {
   auto obj = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
 }
 
 /*
-virtual void setNextMedia( const QMediaContent & media ) = 0
+virtual void setNextMedia(const QMediaContent & media) = 0
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA)
 {
   auto obj = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
 /*
 void advancedToNextMedia()
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA)
 {
   auto sender = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -252,9 +252,9 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 }
 
 /*
-void crossfadeTimeChanged( qreal crossfadeTime )
+void crossfadeTimeChanged(qreal crossfadeTime)
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED)
 {
   auto sender = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -302,9 +302,9 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
 }
 
 /*
-void nextMediaChanged( const QMediaContent & media )
+void nextMediaChanged(const QMediaContent & media)
 */
-HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
+HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED)
 {
   auto sender = qobject_cast<QMediaGaplessPlaybackControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAGAPLESSPLAYBACKCONTROL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMEDIACONTENT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMEDIACONTENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

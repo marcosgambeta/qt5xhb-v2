@@ -67,7 +67,7 @@ RETURN
 
 #include <QtMultimedia/QMediaPlaylist>
 
-HB_FUNC_STATIC( QMEDIACONTENT_NEW )
+HB_FUNC_STATIC(QMEDIACONTENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    QMediaContent( const QUrl & contentUrl )
+    QMediaContent(const QUrl & contentUrl)
     */
     auto obj = new QMediaContent(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
   {
     /*
-    QMediaContent( const QNetworkRequest & contentRequest )
+    QMediaContent(const QNetworkRequest & contentRequest)
     */
     auto obj = new QMediaContent(*PQNETWORKREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   else if (ISNUMPAR(1) && ISQMEDIARESOURCE(1))
   {
     /*
-    QMediaContent( const QMediaResource & contentResource )
+    QMediaContent(const QMediaResource & contentResource)
     */
     auto obj = new QMediaContent(*PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    QMediaContent( const QMediaResourceList & resources )
+    QMediaContent(const QMediaResourceList & resources)
     */
     QMediaResourceList par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   else if (ISNUMPAR(1) && ISQMEDIACONTENT(1))
   {
     /*
-    QMediaContent( const QMediaContent & other )
+    QMediaContent(const QMediaContent & other)
     */
     auto obj = new QMediaContent(*PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -133,9 +133,9 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2) || HB_ISNIL(2)) && ISOPTLOG(3))
   {
     /*
-    QMediaContent( QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false )
+    QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
     */
-    auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)), OPBOOL( 3, false));
+    auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)), OPBOOL(3, false));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 /*
 ~QMediaContent()
 */
-HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
+HB_FUNC_STATIC(QMEDIACONTENT_DELETE)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
 /*
 QNetworkRequest canonicalRequest() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
+HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
 /*
 QMediaResource canonicalResource() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
+HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
 /*
 QUrl canonicalUrl() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
+HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
+HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
 /*
 QMediaPlaylist * playlist() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
+HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
 /*
 QMediaResourceList resources() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
+HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
 {
   auto obj = static_cast<QMediaContent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
   }
 }
 
-HB_FUNC_STATIC( QMEDIACONTENT_NEWFROM )
+HB_FUNC_STATIC(QMEDIACONTENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -368,22 +368,22 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMEDIACONTENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMEDIACONTENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QMEDIACONTENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMEDIACONTENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMEDIACONTENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QMEDIACONTENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMEDIACONTENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMEDIACONTENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMEDIACONTENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMEDIACONTENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

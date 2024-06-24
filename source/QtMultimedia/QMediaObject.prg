@@ -72,7 +72,7 @@ RETURN
 /*
 ~QMediaObject()
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
+HB_FUNC_STATIC(QMEDIAOBJECT_DELETE)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
 /*
 int notifyInterval() const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
+HB_FUNC_STATIC(QMEDIAOBJECT_NOTIFYINTERVAL)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -115,9 +115,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
 }
 
 /*
-void setNotifyInterval( int milliSeconds )
+void setNotifyInterval(int milliSeconds)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
+HB_FUNC_STATIC(QMEDIAOBJECT_SETNOTIFYINTERVAL)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
 /*
 virtual QMultimedia::AvailabilityStatus availability() const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABILITY )
+HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABILITY)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABILITY )
 /*
 QStringList availableMetaData() const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
+HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABLEMETADATA)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -189,9 +189,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
 }
 
 /*
-virtual bool bind( QObject * object )
+virtual bool bind(QObject * object)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
+HB_FUNC_STATIC(QMEDIAOBJECT_BIND)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
 /*
 virtual bool isAvailable() const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
+HB_FUNC_STATIC(QMEDIAOBJECT_ISAVAILABLE)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
 /*
 bool isMetaDataAvailable() const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
+HB_FUNC_STATIC(QMEDIAOBJECT_ISMETADATAAVAILABLE)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -261,9 +261,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
 }
 
 /*
-QVariant metaData( const QString & key ) const
+QVariant metaData(const QString & key) const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
+HB_FUNC_STATIC(QMEDIAOBJECT_METADATA)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
 /*
 virtual QMediaService * service() const
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
+HB_FUNC_STATIC(QMEDIAOBJECT_SERVICE)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -311,9 +311,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
 }
 
 /*
-virtual void unbind( QObject * object )
+virtual void unbind(QObject * object)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
+HB_FUNC_STATIC(QMEDIAOBJECT_UNBIND)
 {
   auto obj = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -337,9 +337,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 }
 
 /*
-void availabilityChanged( bool available )
+void availabilityChanged(bool available)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
+HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED1)
 {
   auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -387,9 +387,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 }
 
 /*
-void availabilityChanged( QMultimedia::AvailabilityStatus availability )
+void availabilityChanged(QMultimedia::AvailabilityStatus availability)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
+HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED2)
 {
   auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -437,9 +437,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
 }
 
 /*
-void metaDataAvailableChanged( bool available )
+void metaDataAvailableChanged(bool available)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
+HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED)
 {
   auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
 /*
 void metaDataChanged()
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
+HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED1)
 {
   auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -535,9 +535,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
 }
 
 /*
-void metaDataChanged( const QString & key, const QVariant & value )
+void metaDataChanged(const QString & key, const QVariant & value)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
+HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED2)
 {
   auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIAOBJECT");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVARIANT");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QVARIANT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -587,9 +587,9 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
 }
 
 /*
-void notifyIntervalChanged( int milliseconds )
+void notifyIntervalChanged(int milliseconds)
 */
-HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
+HB_FUNC_STATIC(QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED)
 {
   auto sender = qobject_cast<QMediaObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

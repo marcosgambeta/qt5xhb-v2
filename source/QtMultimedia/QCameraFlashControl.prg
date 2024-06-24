@@ -56,7 +56,7 @@ RETURN
 /*
 ~QCameraFlashControl()
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )
 /*
 virtual QCameraExposure::FlashModes flashMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_FLASHMODE)
 {
   auto obj = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
 }
 
 /*
-virtual bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const = 0
+virtual bool isFlashModeSupported(QCameraExposure::FlashModes mode) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
 /*
 virtual bool isFlashReady() const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHREADY)
 {
   auto obj = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
 }
 
 /*
-virtual void setFlashMode( QCameraExposure::FlashModes mode ) = 0
+virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_SETFLASHMODE)
 {
   auto obj = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,9 +173,9 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
 }
 
 /*
-void flashReady( bool ready )
+void flashReady(bool ready)
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ONFLASHREADY)
 {
   auto sender = qobject_cast<QCameraFlashControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

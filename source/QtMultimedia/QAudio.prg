@@ -55,16 +55,16 @@ RETURN
 #endif
 
 /*
-static qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
+static qreal convertVolume(qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to)
 */
-HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
+HB_FUNC_STATIC(QAUDIO_CONVERTVOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
 #endif
-    RQREAL( QAudio::convertVolume(PQREAL(1), static_cast<QAudio::VolumeScale>(hb_parni(2)), static_cast<QAudio::VolumeScale>(hb_parni(3))));
+    RQREAL(QAudio::convertVolume(PQREAL(1), static_cast<QAudio::VolumeScale>(hb_parni(2)), static_cast<QAudio::VolumeScale>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
 #endif
 }
 
-HB_FUNC_STATIC( QAUDIO_NEWFROM )
+HB_FUNC_STATIC(QAUDIO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -105,22 +105,22 @@ HB_FUNC_STATIC( QAUDIO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QAUDIO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QAUDIO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QAUDIO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUDIO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QAUDIO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QAUDIO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUDIO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QAUDIO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QAUDIO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QAUDIO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

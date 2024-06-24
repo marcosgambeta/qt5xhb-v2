@@ -58,7 +58,7 @@ RETURN
 /*
 virtual ~QCameraViewfinderSettingsControl2()
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QCameraViewfinderSettingsControl2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )
 /*
 virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QCameraViewfinderSettingsControl2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
 /*
 virtual QCameraViewfinderSettings viewfinderSettings() const = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QCameraViewfinderSettingsControl2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
 }
 
 /*
-virtual void setViewfinderSettings( const QCameraViewfinderSettings & settings ) = 0
+virtual void setViewfinderSettings(const QCameraViewfinderSettings & settings) = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = qobject_cast<QCameraViewfinderSettingsControl2*>(Qt5xHb::getQObjectPointerFromSelfItem());

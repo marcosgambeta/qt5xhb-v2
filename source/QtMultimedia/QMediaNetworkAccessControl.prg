@@ -55,7 +55,7 @@ RETURN
 /*
 virtual ~QMediaNetworkAccessControl()
 */
-HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_DELETE )
+HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaNetworkAccessControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_DELETE )
 /*
 virtual QNetworkConfiguration currentConfiguration() const = 0
 */
-HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
+HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 {
   auto obj = qobject_cast<QMediaNetworkAccessControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
 }
 
 /*
-virtual void setConfigurations( const QList<QNetworkConfiguration> & configurations ) = 0
+virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
 */
-HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
+HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 {
   auto obj = qobject_cast<QMediaNetworkAccessControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,9 +132,9 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
 }
 
 /*
-void configurationChanged( const QNetworkConfiguration & configuration )
+void configurationChanged(const QNetworkConfiguration & configuration)
 */
-HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
+HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED)
 {
   auto sender = qobject_cast<QMediaNetworkAccessControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QMEDIANETWORKACCESSCONTROL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCONFIGURATION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QNETWORKCONFIGURATION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

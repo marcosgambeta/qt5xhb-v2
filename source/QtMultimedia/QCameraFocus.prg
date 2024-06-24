@@ -72,7 +72,7 @@ RETURN
 /*
 QCameraFocus::FocusModes focusMode() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
+HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSMODE)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
 }
 
 /*
-void setFocusMode( QCameraFocus::FocusModes mode )
+void setFocusMode(QCameraFocus::FocusModes mode)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
+HB_FUNC_STATIC(QCAMERAFOCUS_SETFOCUSMODE)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
 /*
 QCameraFocus::FocusPointMode focusPointMode() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
+HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSPOINTMODE)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -144,9 +144,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
 }
 
 /*
-void setFocusPointMode( QCameraFocus::FocusPointMode mode )
+void setFocusPointMode(QCameraFocus::FocusPointMode mode)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
+HB_FUNC_STATIC(QCAMERAFOCUS_SETFOCUSPOINTMODE)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
 /*
 QPointF customFocusPoint() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
+HB_FUNC_STATIC(QCAMERAFOCUS_CUSTOMFOCUSPOINT)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -195,9 +195,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
 }
 
 /*
-void setCustomFocusPoint( const QPointF & point )
+void setCustomFocusPoint(const QPointF & point)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
+HB_FUNC_STATIC(QCAMERAFOCUS_SETCUSTOMFOCUSPOINT)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
 /*
 QCameraFocusZoneList focusZones() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
+HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSZONES)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
 /*
 qreal opticalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
+HB_FUNC_STATIC(QCAMERAFOCUS_OPTICALZOOM)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
 /*
 qreal digitalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
+HB_FUNC_STATIC(QCAMERAFOCUS_DIGITALZOOM)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
 /*
 bool isAvailable() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
+HB_FUNC_STATIC(QCAMERAFOCUS_ISAVAILABLE)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -343,9 +343,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
 }
 
 /*
-bool isFocusModeSupported( QCameraFocus::FocusModes mode ) const
+bool isFocusModeSupported(QCameraFocus::FocusModes mode) const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ISFOCUSMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -367,9 +367,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
 }
 
 /*
-bool isFocusPointModeSupported( QCameraFocus::FocusPointMode mode ) const
+bool isFocusPointModeSupported(QCameraFocus::FocusPointMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
 /*
 qreal maximumDigitalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
+HB_FUNC_STATIC(QCAMERAFOCUS_MAXIMUMDIGITALZOOM)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
 /*
 qreal maximumOpticalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
+HB_FUNC_STATIC(QCAMERAFOCUS_MAXIMUMOPTICALZOOM)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -439,9 +439,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
 }
 
 /*
-void zoomTo( qreal opticalZoom, qreal digitalZoom )
+void zoomTo(qreal opticalZoom, qreal digitalZoom)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
+HB_FUNC_STATIC(QCAMERAFOCUS_ZOOMTO)
 {
   auto obj = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -465,9 +465,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
 }
 
 /*
-void digitalZoomChanged( qreal value )
+void digitalZoomChanged(qreal value)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ONDIGITALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 /*
 void focusZonesChanged()
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ONFOCUSZONESCHANGED)
 {
   auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -563,9 +563,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 }
 
 /*
-void maximumDigitalZoomChanged( qreal zoom )
+void maximumDigitalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -613,9 +613,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 }
 
 /*
-void maximumOpticalZoomChanged( qreal zoom )
+void maximumOpticalZoomChanged(qreal zoom)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -663,9 +663,9 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 }
 
 /*
-void opticalZoomChanged( qreal value )
+void opticalZoomChanged(qreal value)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
+HB_FUNC_STATIC(QCAMERAFOCUS_ONOPTICALZOOMCHANGED)
 {
   auto sender = qobject_cast<QCameraFocus*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

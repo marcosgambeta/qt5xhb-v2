@@ -55,7 +55,7 @@ RETURN
 /*
 ~QCameraCaptureBufferFormatControl()
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraCaptureBufferFormatControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
 /*
 virtual QVideoFrame::PixelFormat bufferFormat() const = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT)
 {
   auto obj = qobject_cast<QCameraCaptureBufferFormatControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
 }
 
 /*
-virtual void setBufferFormat( QVideoFrame::PixelFormat format ) = 0
+virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT)
 {
   auto obj = qobject_cast<QCameraCaptureBufferFormatControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
 /*
 virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS)
 {
   auto obj = qobject_cast<QCameraCaptureBufferFormatControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -156,9 +156,9 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
 }
 
 /*
-void bufferFormatChanged( QVideoFrame::PixelFormat format )
+void bufferFormatChanged(QVideoFrame::PixelFormat format)
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED)
 {
   auto sender = qobject_cast<QCameraCaptureBufferFormatControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

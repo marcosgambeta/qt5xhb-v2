@@ -60,7 +60,7 @@ RETURN
 /*
 virtual ~QVideoDeviceSelectorControl()
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DELETE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
 /*
 virtual int defaultDevice() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
 /*
 virtual int deviceCount() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICECOUNT)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
 }
 
 /*
-virtual QString deviceDescription( int index ) const = 0
+virtual QString deviceDescription(int index) const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -151,9 +151,9 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
 }
 
 /*
-virtual QString deviceName( int index ) const = 0
+virtual QString deviceName(int index) const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICENAME)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
 /*
 virtual int selectedDevice() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -199,9 +199,9 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
 }
 
 /*
-virtual void setSelectedDevice( int index ) = 0
+virtual void setSelectedDevice(int index) = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
 /*
 void devicesChanged()
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED)
 {
   auto sender = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -273,9 +273,9 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
 }
 
 /*
-void selectedDeviceChanged( int index )
+void selectedDeviceChanged(int index)
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1)
 {
   auto sender = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -323,9 +323,9 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
 }
 
 /*
-void selectedDeviceChanged( const QString & name )
+void selectedDeviceChanged(const QString & name)
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2)
 {
   auto sender = qobject_cast<QVideoDeviceSelectorControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

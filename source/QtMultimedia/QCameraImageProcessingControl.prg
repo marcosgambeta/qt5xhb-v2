@@ -55,7 +55,7 @@ RETURN
 /*
 ~QCameraImageProcessingControl()
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_DELETE )
+HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraImageProcessingControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -74,9 +74,9 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_DELETE )
 }
 
 /*
-virtual bool isParameterSupported( QCameraImageProcessingControl::ProcessingParameter parameter ) const = 0
+virtual bool isParameterSupported(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED )
+HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED)
 {
   auto obj = qobject_cast<QCameraImageProcessingControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED )
 }
 
 /*
-virtual bool isParameterValueSupported( QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value ) const = 0
+virtual bool isParameterValueSupported(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value) const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
+HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
 {
   auto obj = qobject_cast<QCameraImageProcessingControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
 }
 
 /*
-virtual QVariant parameter( QCameraImageProcessingControl::ProcessingParameter parameter ) const = 0
+virtual QVariant parameter(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
+HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER)
 {
   auto obj = qobject_cast<QCameraImageProcessingControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
 }
 
 /*
-virtual void setParameter( QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value ) = 0
+virtual void setParameter(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER )
+HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER)
 {
   auto obj = qobject_cast<QCameraImageProcessingControl*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
