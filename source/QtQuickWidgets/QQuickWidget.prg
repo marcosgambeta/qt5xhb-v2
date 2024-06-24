@@ -81,16 +81,16 @@ RETURN
 #include <QtQml/QQmlError>
 #include <QtQuick/QQuickItem>
 
-HB_FUNC_STATIC( QQUICKWIDGET_NEW )
+HB_FUNC_STATIC(QQUICKWIDGET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QQuickWidget( QWidget * parent = nullptr )
+    QQuickWidget(QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QQuickWidget( OPQWIDGET( 1, nullptr));
+    auto obj = new QQuickWidget(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
   else if (ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWIDGET(2))
   {
     /*
-    QQuickWidget( QQmlEngine * engine, QWidget * parent )
+    QQuickWidget(QQmlEngine * engine, QWidget * parent)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = new QQuickWidget(PQQMLENGINE(1), PQWIDGET(2));
@@ -109,10 +109,10 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QQuickWidget( const QUrl & source, QWidget * parent = nullptr )
+    QQuickWidget(const QUrl & source, QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QQuickWidget(*PQURL(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QQuickWidget(*PQURL(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
+HB_FUNC_STATIC(QQUICKWIDGET_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
+HB_FUNC_STATIC(QQUICKWIDGET_SOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +172,9 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
 }
 
 /*
-void setSource( const QUrl & )
+void setSource(const QUrl &)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
+HB_FUNC_STATIC(QQUICKWIDGET_SETSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 /*
 QQmlEngine * engine() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
+HB_FUNC_STATIC(QQUICKWIDGET_ENGINE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 /*
 QQmlContext * rootContext() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
+HB_FUNC_STATIC(QQUICKWIDGET_ROOTCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 /*
 QQuickItem * rootObject() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
+HB_FUNC_STATIC(QQUICKWIDGET_ROOTOBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 /*
 QQuickWidget::ResizeMode resizeMode() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
+HB_FUNC_STATIC(QQUICKWIDGET_RESIZEMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -307,9 +307,9 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 }
 
 /*
-void setResizeMode( QQuickWidget::ResizeMode )
+void setResizeMode(QQuickWidget::ResizeMode)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
+HB_FUNC_STATIC(QQUICKWIDGET_SETRESIZEMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 /*
 QQuickWidget::Status status() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
+HB_FUNC_STATIC(QQUICKWIDGET_STATUS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
 /*
 QList<QQmlError> errors() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
+HB_FUNC_STATIC(QQUICKWIDGET_ERRORS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
+HB_FUNC_STATIC(QQUICKWIDGET_SIZEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
 /*
 QSize initialSize() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
+HB_FUNC_STATIC(QQUICKWIDGET_INITIALSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -467,9 +467,9 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 }
 
 /*
-void setContent( const QUrl & url, QQmlComponent * component, QObject * item )
+void setContent(const QUrl & url, QQmlComponent * component, QObject * item)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
+HB_FUNC_STATIC(QQUICKWIDGET_SETCONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
 /*
 QSurfaceFormat format() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
+HB_FUNC_STATIC(QQUICKWIDGET_FORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -522,9 +522,9 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
 }
 
 /*
-void setFormat( const QSurfaceFormat & format )
+void setFormat(const QSurfaceFormat & format)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
+HB_FUNC_STATIC(QQUICKWIDGET_SETFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -550,9 +550,9 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 }
 
 /*
-void statusChanged( QQuickWidget::Status status )
+void statusChanged(QQuickWidget::Status status)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QQUICKWIDGET_ONSTATUSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -604,9 +604,9 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 }
 
 /*
-void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
+void sceneGraphError(QQuickWindow::SceneGraphError error, const QString & message)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
+HB_FUNC_STATIC(QQUICKWIDGET_ONSCENEGRAPHERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto sender = qobject_cast<QQuickWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
