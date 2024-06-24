@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_CONFIGURATIONKEYS )
 #endif
       auto list = obj->configurationKeys();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_WRITEFRAME )
     if (ISNUMPAR(1) && ISQCANBUSFRAME(1))
     {
 #endif
-      RBOOL(obj->writeFrame( *PQCANBUSFRAME(1)));
+      RBOOL(obj->writeFrame(*PQCANBUSFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_INTERPRETERRORFRAME )
     if (ISNUMPAR(1) && ISQCANBUSFRAME(1))
     {
 #endif
-      RQSTRING(obj->interpretErrorFrame( *PQCANBUSFRAME(1)));
+      RQSTRING(obj->interpretErrorFrame(*PQCANBUSFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_CLEAR )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->clear( static_cast<QCanBusDevice::Directions>( hb_parni(1)));
+      obj->clear(static_cast<QCanBusDevice::Directions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

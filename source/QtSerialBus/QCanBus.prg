@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

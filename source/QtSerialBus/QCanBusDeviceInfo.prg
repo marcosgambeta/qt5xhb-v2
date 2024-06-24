@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if (ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1))
   {
-    auto obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1));
+    auto obj = new QCanBusDeviceInfo(*PQCANBUSDEVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_SWAP )
     if (ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1))
     {
 #endif
-      obj->swap( *PQCANBUSDEVICEINFO(1));
+      obj->swap(*PQCANBUSDEVICEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
