@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    auto obj = new QWinJumpListItem( static_cast<QWinJumpListItem::Type>( hb_parni(1)));
+    auto obj = new QWinJumpListItem(static_cast<QWinJumpListItem::Type>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<QWinJumpListItem::Type>( hb_parni(1)));
+      obj->setType(static_cast<QWinJumpListItem::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTWIN_CREATEMASK )
   if (ISNUMPAR(1) && ISQBITMAP(1))
   {
 #endif
-    hb_retptr( static_cast< HBITMAP >( QtWin::createMask( *PQBITMAP(1))));
+    hb_retptr(static_cast< HBITMAP >( QtWin::createMask(*PQBITMAP(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTWIN_TOHBITMAP )
   if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
-    hb_retptr( static_cast< HBITMAP >( QtWin::toHBITMAP( *PQPIXMAP(1), HB_ISNIL(2) ? static_cast<QtWin::HBitmapFormat >( QtWin::HBitmapNoAlpha ) : static_cast<QtWin::HBitmapFormat >( hb_parni(2)))));
+    hb_retptr(static_cast< HBITMAP >( QtWin::toHBITMAP(*PQPIXMAP(1), HB_ISNIL(2) ? static_cast<QtWin::HBitmapFormat >( QtWin::HBitmapNoAlpha ) : static_cast<QtWin::HBitmapFormat >(hb_parni(2)))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
   if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
-    auto ptr = new QPixmap( QtWin::fromHBITMAP( (HBITMAP) hb_parptr(1), HB_ISNIL(2) ? static_cast<QtWin::HBitmapFormat >( QtWin::HBitmapNoAlpha ) : static_cast<QtWin::HBitmapFormat >( hb_parni(2))));
+    auto ptr = new QPixmap( QtWin::fromHBITMAP( (HBITMAP) hb_parptr(1), HB_ISNIL(2) ? static_cast<QtWin::HBitmapFormat >( QtWin::HBitmapNoAlpha ) : static_cast<QtWin::HBitmapFormat >(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTWIN_TOHICON )
   if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
 #endif
-    hb_retptr( static_cast< HICON >( QtWin::toHICON( *PQPIXMAP(1))));
+    hb_retptr(static_cast< HICON >( QtWin::toHICON(*PQPIXMAP(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QTWIN_TOHRGN )
   if (ISNUMPAR(1) && ISQREGION(1))
   {
 #endif
-    hb_retptr( static_cast< HRGN >( QtWin::toHRGN( *PQREGION(1))));
+    hb_retptr(static_cast< HRGN >( QtWin::toHRGN(*PQREGION(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
     bool par1;
     auto ptr = new QColor( QtWin::colorizationColor( &par1));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
-    hb_storl( par1, 1);
+    hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
   if (ISNUMPAR(2) && ISQWINDOW(1) && HB_ISNUM(2))
   {
 #endif
-    QtWin::setWindowFlip3DPolicy(PQWINDOW(1), static_cast<QtWin::WindowFlip3DPolicy>( hb_parni(2)));
+    QtWin::setWindowFlip3DPolicy(PQWINDOW(1), static_cast<QtWin::WindowFlip3DPolicy>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

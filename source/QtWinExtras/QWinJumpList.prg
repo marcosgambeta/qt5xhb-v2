@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
