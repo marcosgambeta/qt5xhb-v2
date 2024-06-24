@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setState( static_cast<QAxScriptEngine::State>( hb_parni(1)));
+      obj->setState(static_cast<QAxScriptEngine::State>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
     /*
     QAxObject( IUnknown * iface, QObject * parent = nullptr )
     */
-    auto obj = new QAxObject( static_cast< IUnknown*>( hb_parptr(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QAxObject(static_cast< IUnknown*>(hb_parptr(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }

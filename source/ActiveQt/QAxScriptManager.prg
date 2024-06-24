@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRINGLIST(obj->functions( HB_ISNIL(1) ? static_cast<QAxScript::FunctionFlags >( QAxScript::FunctionNames ) : static_cast<QAxScript::FunctionFlags >( hb_parni(1))));
+      RQSTRINGLIST(obj->functions( HB_ISNIL(1) ? static_cast<QAxScript::FunctionFlags >( QAxScript::FunctionNames ) : static_cast<QAxScript::FunctionFlags >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
 #endif
-    RBOOL( QAxFactory::startServer( HB_ISNIL(1) ? static_cast<QAxFactory::ServerType >( QAxFactory::MultipleInstances ) : static_cast<QAxFactory::ServerType >( hb_parni(1))));
+    RBOOL( QAxFactory::startServer( HB_ISNIL(1) ? static_cast<QAxFactory::ServerType >( QAxFactory::MultipleInstances ) : static_cast<QAxFactory::ServerType >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
