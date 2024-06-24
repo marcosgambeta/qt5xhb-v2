@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
     /*
     QVector3D( const QPoint & point )
     */
-    auto obj = new QVector3D( *PQPOINT(1));
+    auto obj = new QVector3D(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
     /*
     QVector3D( const QPointF & point )
     */
-    auto obj = new QVector3D( *PQPOINTF(1));
+    auto obj = new QVector3D(*PQPOINTF(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
     /*
     QVector3D( const QVector2D & vector )
     */
-    auto obj = new QVector3D( *PQVECTOR2D(1));
+    auto obj = new QVector3D(*PQVECTOR2D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
     /*
     QVector3D( const QVector2D & vector, float zpos )
     */
-    auto obj = new QVector3D( *PQVECTOR2D(1), PFLOAT(2));
+    auto obj = new QVector3D(*PQVECTOR2D(1), PFLOAT(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
     /*
     QVector3D( const QVector4D & vector )
     */
-    auto obj = new QVector3D( *PQVECTOR4D(1));
+    auto obj = new QVector3D(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPOINT )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      RFLOAT(obj->distanceToPoint( *PQVECTOR3D(1)));
+      RFLOAT(obj->distanceToPoint(*PQVECTOR3D(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 
     if (obj != nullptr)
     {
-      RFLOAT(obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2)));
+      RFLOAT(obj->distanceToPlane(*PQVECTOR3D(1), *PQVECTOR3D(2)));
     }
 
   }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 
     if (obj != nullptr)
     {
-      RFLOAT(obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
+      RFLOAT(obj->distanceToPlane(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
     }
 
   }
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
     if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
     {
 #endif
-      RFLOAT(obj->distanceToLine( *PQVECTOR3D(1), *PQVECTOR3D(2)));
+      RFLOAT(obj->distanceToLine(*PQVECTOR3D(1), *PQVECTOR3D(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
   {
 #endif
-    RFLOAT( QVector3D::dotProduct( *PQVECTOR3D(1), *PQVECTOR3D(2)));
+    RFLOAT( QVector3D::dotProduct(*PQVECTOR3D(1), *PQVECTOR3D(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
   {
 #endif
-    auto ptr = new QVector3D( QVector3D::crossProduct( *PQVECTOR3D(1), *PQVECTOR3D(2)));
+    auto ptr = new QVector3D( QVector3D::crossProduct(*PQVECTOR3D(1), *PQVECTOR3D(2)));
     Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
     static QVector3D normal( const QVector3D & v1, const QVector3D & v2 )
     */
 
-    auto ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2)));
+    auto ptr = new QVector3D( QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2)));
     Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 
   }
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
     static QVector3D normal( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
     */
 
-    auto ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
+    auto ptr = new QVector3D( QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
     Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 
   }

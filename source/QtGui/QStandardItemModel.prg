@@ -164,13 +164,13 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDCOLUMN )
     {
 #endif
       QList<QStandardItem *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QStandardItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->appendColumn( par1);
+      obj->appendColumn(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,13 +195,13 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
     if (obj != nullptr)
     {
       QList<QStandardItem *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QStandardItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->appendRow( par1);
+      obj->appendRow(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -267,12 +267,12 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto list = obj->findItems(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly ) : static_cast<Qt::MatchFlags >( hb_parni(2)), OPINT( 3, 0));
+      auto list = obj->findItems(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::MatchFlags >( Qt::MatchExactly ) : static_cast<Qt::MatchFlags >(hb_parni(2)), OPINT( 3, 0));
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -363,11 +363,11 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
     if (obj != nullptr)
     {
       QList<QStandardItem *> par2;
-      auto aList2 = hb_param( 2, HB_IT_ARRAY);
-      int nLen2 = hb_arrayLen( aList2);
-      for( auto i2 = 0; i2 < nLen2; i2++ )
+      auto aList2 = hb_param(2, HB_IT_ARRAY);
+      int nLen2 = hb_arrayLen(aList2);
+      for (auto i2 = 0; i2 < nLen2; i2++)
       {
-        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0)));
+        par2 << static_cast<QStandardItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2+1), "POINTER", 0)));
       }
       obj->insertColumn(PINT(1), par2);
     }
@@ -406,11 +406,11 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
     if (obj != nullptr)
     {
       QList<QStandardItem *> par2;
-      auto aList2 = hb_param( 2, HB_IT_ARRAY);
-      int nLen2 = hb_arrayLen( aList2);
-      for( auto i2 = 0; i2 < nLen2; i2++ )
+      auto aList2 = hb_param(2, HB_IT_ARRAY);
+      int nLen2 = hb_arrayLen(aList2);
+      for (auto i2 = 0; i2 < nLen2; i2++)
       {
-        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0)));
+        par2 << static_cast<QStandardItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2+1), "POINTER", 0)));
       }
       obj->insertRow(PINT(1), par2);
     }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = obj->itemFromIndex( *PQMODELINDEX(1));
+      auto ptr = obj->itemFromIndex(*PQMODELINDEX(1));
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QModelIndex(obj->parent( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QVariant(obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>( hb_parni(2)), OPINT( 3, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT( 3, Qt::DisplayRole )));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      RBOOL(obj->setHeaderData(PINT(1), static_cast<Qt::Orientation>( hb_parni(2)), *PQVARIANT(3), OPINT( 4, Qt::EditRole )));
+      RBOOL(obj->setHeaderData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), *PQVARIANT(3), OPINT( 4, Qt::EditRole )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FLAGS )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RENUM(obj->flags( *PQMODELINDEX(1)));
+      RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >( hb_parni(2)));
+      obj->sort(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder >( Qt::AscendingOrder ) : static_cast<Qt::SortOrder >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1480,13 +1480,13 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QModelIndex*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      auto ptr = obj->mimeData( par1);
+      auto ptr = obj->mimeData(par1);
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1511,7 +1511,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
 #endif
-      RBOOL(obj->dropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>( hb_parni(2)), PINT(3), PINT(4), *PQMODELINDEX(5)));
+      RBOOL(obj->dropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>(hb_parni(2)), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_CLEARITEMDATA )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL(obj->clearItemData( *PQMODELINDEX(1)));
+      RBOOL(obj->clearItemData(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

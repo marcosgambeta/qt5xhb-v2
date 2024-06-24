@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      RINT(obj->itemNumber( *PQTEXTBLOCK(1)));
+      RINT(obj->itemNumber(*PQTEXTBLOCK(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      RQSTRING(obj->itemText( *PQTEXTBLOCK(1)));
+      RQSTRING(obj->itemText(*PQTEXTBLOCK(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVE )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->remove( *PQTEXTBLOCK(1));
+      obj->remove(*PQTEXTBLOCK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->add( *PQTEXTBLOCK(1));
+      obj->add(*PQTEXTBLOCK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
     if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQTEXTLISTFORMAT(1));
+      obj->setFormat(*PQTEXTLISTFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

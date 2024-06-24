@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
     /*
     QTextBlock( const QTextBlock & o )
     */
-    auto obj = new QTextBlock( *PQTEXTBLOCK(1));
+    auto obj = new QTextBlock(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

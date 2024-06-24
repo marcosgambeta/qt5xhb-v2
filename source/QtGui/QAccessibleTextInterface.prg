@@ -100,8 +100,8 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
       int par2;
       int par3;
       obj->selection(PINT(1), &par2, &par3);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_OFFSETATPOINT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RINT(obj->offsetAtPoint( *PQPOINT(1)));
+      RINT(obj->offsetAtPoint(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,8 +405,8 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
       int par2;
       int par3;
       RQSTRING(obj->attributes(PINT(1), &par2, &par3));
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

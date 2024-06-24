@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
     /*
     QStaticText( const QStaticText & other )
     */
-    auto obj = new QStaticText( *PQSTATICTEXT(1));
+    auto obj = new QStaticText(*PQSTATICTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SWAP )
     if (ISNUMPAR(1) && ISQSTATICTEXT(1))
     {
 #endif
-      obj->swap( *PQSTATICTEXT(1));
+      obj->swap(*PQSTATICTEXT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextFormat( static_cast<Qt::TextFormat>( hb_parni(1)));
+      obj->setTextFormat(static_cast<Qt::TextFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
     if (ISNUMPAR(1) && ISQTEXTOPTION(1))
     {
 #endif
-      obj->setTextOption( *PQTEXTOPTION(1));
+      obj->setTextOption(*PQTEXTOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPerformanceHint( static_cast<QStaticText::PerformanceHint>( hb_parni(1)));
+      obj->setPerformanceHint(static_cast<QStaticText::PerformanceHint>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

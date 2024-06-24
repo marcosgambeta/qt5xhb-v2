@@ -464,8 +464,8 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
     if (obj != nullptr)
     {
       int par1;
-      RQREAL(obj->cursorToX( &par1, HB_ISNIL(2) ? static_cast<QTextLine::Edge >( QTextLine::Leading ) : static_cast<QTextLine::Edge >( hb_parni(2))));
-      hb_storni( par1, 1);
+      RQREAL(obj->cursorToX( &par1, HB_ISNIL(2) ? static_cast<QTextLine::Edge >( QTextLine::Leading ) : static_cast<QTextLine::Edge >(hb_parni(2))));
+      hb_storni(par1, 1);
     }
 
   }
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 
     if (obj != nullptr)
     {
-      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? static_cast<QTextLine::Edge >( QTextLine::Leading ) : static_cast<QTextLine::Edge >( hb_parni(2))));
+      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? static_cast<QTextLine::Edge >( QTextLine::Leading ) : static_cast<QTextLine::Edge >(hb_parni(2))));
     }
 
   }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2) ? static_cast<QTextLine::CursorPosition >( QTextLine::CursorBetweenCharacters ) : static_cast<QTextLine::CursorPosition >( hb_parni(2))));
+      RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2) ? static_cast<QTextLine::CursorPosition >( QTextLine::CursorBetweenCharacters ) : static_cast<QTextLine::CursorPosition >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1));
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

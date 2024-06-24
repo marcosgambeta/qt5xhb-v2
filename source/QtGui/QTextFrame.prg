@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
     if (ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1))
     {
 #endif
-      obj->setFrameFormat( *PQTEXTFRAMEFORMAT(1));
+      obj->setFrameFormat(*PQTEXTFRAMEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

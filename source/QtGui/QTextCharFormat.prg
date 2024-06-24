@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFontCapitalization( static_cast<QFont::Capitalization>( hb_parni(1)));
+      obj->setFontCapitalization(static_cast<QFont::Capitalization>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACINGTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFontLetterSpacingType( static_cast<QFont::SpacingType>( hb_parni(1)));
+      obj->setFontLetterSpacingType(static_cast<QFont::SpacingType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFontStyleHint( static_cast<QFont::StyleHint>( hb_parni(1)), HB_ISNIL(2) ? static_cast<QFont::StyleStrategy >( QFont::PreferDefault ) : static_cast<QFont::StyleStrategy >( hb_parni(2)));
+      obj->setFontStyleHint(static_cast<QFont::StyleHint>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QFont::StyleStrategy >( QFont::PreferDefault ) : static_cast<QFont::StyleStrategy >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFontStyleStrategy( static_cast<QFont::StyleStrategy>( hb_parni(1)));
+      obj->setFontStyleStrategy(static_cast<QFont::StyleStrategy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFontHintingPreference( static_cast<QFont::HintingPreference>( hb_parni(1)));
+      obj->setFontHintingPreference(static_cast<QFont::HintingPreference>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUnderlineStyle( static_cast<QTextCharFormat::UnderlineStyle>( hb_parni(1)));
+      obj->setUnderlineStyle(static_cast<QTextCharFormat::UnderlineStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1179,7 +1179,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVerticalAlignment( static_cast<QTextCharFormat::VerticalAlignment>( hb_parni(1)));
+      obj->setVerticalAlignment(static_cast<QTextCharFormat::VerticalAlignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setTextOutline( *PQPEN(1));
+      obj->setTextOutline(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

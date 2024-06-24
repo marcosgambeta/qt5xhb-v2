@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
     /*
     QTextDocumentFragment( const QTextCursor & range )
     */
-    auto obj = new QTextDocumentFragment( *PQTEXTCURSOR(1));
+    auto obj = new QTextDocumentFragment(*PQTEXTCURSOR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
     /*
     QTextDocumentFragment( const QTextDocumentFragment & rhs )
     */
-    auto obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1));
+    auto obj = new QTextDocumentFragment(*PQTEXTDOCUMENTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

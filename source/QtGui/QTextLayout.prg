@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     /*
     QTextLayout( const QTextBlock & b )
     */
-    auto obj = new QTextLayout( *PQTEXTBLOCK(1));
+    auto obj = new QTextLayout(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETRAWFONT )
     if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
 #endif
-      obj->setRawFont( *PQRAWFONT(1));
+      obj->setRawFont(*PQRAWFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
     if (ISNUMPAR(1) && ISQTEXTOPTION(1))
     {
 #endif
-      obj->setTextOption( *PQTEXTOPTION(1));
+      obj->setTextOption(*PQTEXTOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCursorMoveStyle( static_cast<Qt::CursorMoveStyle>( hb_parni(1)));
+      obj->setCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->nextCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >( QTextLayout::SkipCharacters ) : static_cast<QTextLayout::CursorMode >( hb_parni(2))));
+      RINT(obj->nextCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >( QTextLayout::SkipCharacters ) : static_cast<QTextLayout::CursorMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->previousCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >( QTextLayout::SkipCharacters ) : static_cast<QTextLayout::CursorMode >( hb_parni(2))));
+      RINT(obj->previousCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >( QTextLayout::SkipCharacters ) : static_cast<QTextLayout::CursorMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1));
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

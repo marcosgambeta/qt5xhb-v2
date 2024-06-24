@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPICTUREIO_FORMAT )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->format()));
+      hb_retc(static_cast< const char*>(obj->format()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QPICTUREIO_PARAMETERS )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->parameters()));
+      hb_retc(static_cast< const char*>(obj->parameters()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
     if (ISNUMPAR(1) && ISQPICTURE(1))
     {
 #endif
-      obj->setPicture( *PQPICTURE(1));
+      obj->setPicture(*PQPICTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

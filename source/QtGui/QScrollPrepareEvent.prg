@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_NEW )
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    auto obj = new QScrollPrepareEvent( *PQPOINTF(1));
+    auto obj = new QScrollPrepareEvent(*PQPOINTF(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETVIEWPORTSIZE )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setViewportSize( *PQSIZEF(1));
+      obj->setViewportSize(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setContentPosRange( *PQRECTF(1));
+      obj->setContentPosRange(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setContentPos( *PQPOINTF(1));
+      obj->setContentPos(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

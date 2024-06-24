@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1));
+      obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->supportsOption( static_cast<QImageIOHandler::ImageOption>( hb_parni(1))));
+      RBOOL(obj->supportsOption(static_cast<QImageIOHandler::ImageOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      RBOOL(obj->write( *PQIMAGE(1)));
+      RBOOL(obj->write(*PQIMAGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -631,12 +631,12 @@ HB_FUNC_STATIC( QIMAGEWRITER_IMAGEFORMATSFORMIMETYPE )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto list = QImageWriter::imageFormatsForMimeType( *PQBYTEARRAY(1));
+    auto list = QImageWriter::imageFormatsForMimeType(*PQBYTEARRAY(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

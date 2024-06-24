@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_HASEXTENSION )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RBOOL(obj->hasExtension( *PQBYTEARRAY(1)));
+      RBOOL(obj->hasExtension(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETFORMAT )
     if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1));
+      obj->setFormat(*PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

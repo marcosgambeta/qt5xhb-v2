@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
     /*
     QTextOption( Qt::Alignment alignment )
     */
-    auto obj = new QTextOption( static_cast<Qt::Alignment>( hb_parni(1)));
+    auto obj = new QTextOption(static_cast<Qt::Alignment>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
     /*
     QTextOption( const QTextOption & o )
     */
-    auto obj = new QTextOption( *PQTEXTOPTION(1));
+    auto obj = new QTextOption(*PQTEXTOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextDirection( static_cast<Qt::LayoutDirection>( hb_parni(1)));
+      obj->setTextDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWrapMode( static_cast<QTextOption::WrapMode>( hb_parni(1)));
+      obj->setWrapMode(static_cast<QTextOption::WrapMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<QTextOption::Flags>( hb_parni(1)));
+      obj->setFlags(static_cast<QTextOption::Flags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,15 +386,15 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
     {
 #endif
       QList<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setTabArray( par1);
+      obj->setTabArray(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

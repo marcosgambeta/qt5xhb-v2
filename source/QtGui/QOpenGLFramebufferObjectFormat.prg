@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
     /*
     QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
     */
-    auto obj = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1));
+    auto obj = new QOpenGLFramebufferObjectFormat(*PQOPENGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAttachment( static_cast<QOpenGLFramebufferObject::Attachment>( hb_parni(1)));
+      obj->setAttachment(static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

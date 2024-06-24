@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( auto item : list )
+      for (auto item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
   if (ISNUMPAR(1) && ISQCURSOR(1))
   {
 #endif
-    QGuiApplication::changeOverrideCursor( *PQCURSOR(1));
+    QGuiApplication::changeOverrideCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( auto item : list )
+      for (auto item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
   if (ISNUMPAR(1) && ISQFONT(1))
   {
 #endif
-    QGuiApplication::setFont( *PQFONT(1));
+    QGuiApplication::setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QGuiApplication::setLayoutDirection( static_cast<Qt::LayoutDirection>( hb_parni(1)));
+    QGuiApplication::setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
   if (ISNUMPAR(1) && ISQCURSOR(1))
   {
 #endif
-    QGuiApplication::setOverrideCursor( *PQCURSOR(1));
+    QGuiApplication::setOverrideCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
   if (ISNUMPAR(1) && ISQPALETTE(1))
   {
 #endif
-    QGuiApplication::setPalette( *PQPALETTE(1));
+    QGuiApplication::setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
 #endif
-    auto ptr = QGuiApplication::topLevelAt( *PQPOINT(1));
+    auto ptr = QGuiApplication::topLevelAt(*PQPOINT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( auto item : list )
+      for (auto item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENAT )
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
 #endif
-    auto ptr = QGuiApplication::screenAt( *PQPOINT(1));
+    auto ptr = QGuiApplication::screenAt(*PQPOINT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QGuiApplication::setHighDpiScaleFactorRoundingPolicy( static_cast<Qt::HighDpiScaleFactorRoundingPolicy>( hb_parni(1)));
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(static_cast<Qt::HighDpiScaleFactorRoundingPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
     /*
     QOpenGLPaintDevice( const QSize & size )
     */
-    auto obj = new QOpenGLPaintDevice( *PQSIZE(1));
+    auto obj = new QOpenGLPaintDevice(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setSize( *PQSIZE(1));
+      obj->setSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

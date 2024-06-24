@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNotation( static_cast<QDoubleValidator::Notation>( hb_parni(1)));
+      obj->setNotation(static_cast<QDoubleValidator::Notation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,9 +343,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM(obj->validate( par1, par2));
-      hb_storc( QSTRINGTOSTRING( par1), 1);
-      hb_storni( par2, 2);
+      RENUM(obj->validate(par1, par2));
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

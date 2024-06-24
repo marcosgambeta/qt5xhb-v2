@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
     /*
     QPicture( const QPicture & pic )
     */
-    auto obj = new QPicture( *PQPICTURE(1));
+    auto obj = new QPicture(*PQPICTURE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( static_cast< const char*>(obj->data()));
+      hb_retc(static_cast< const char*>(obj->data()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setBoundingRect( *PQRECT(1));
+      obj->setBoundingRect(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QPICTURE_SWAP )
     if (ISNUMPAR(1) && ISQPICTURE(1))
     {
 #endif
-      obj->swap( *PQPICTURE(1));
+      obj->swap(*PQPICTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

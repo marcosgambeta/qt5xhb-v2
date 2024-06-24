@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
     /*
     QWheelEvent( const QPointF & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
-    auto obj = new QWheelEvent( *PQPOINTF(1), PINT(2), static_cast<Qt::MouseButtons>( hb_parni(3)), static_cast<Qt::KeyboardModifiers>( hb_parni(4)), HB_ISNIL(5) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(5)));
+    auto obj = new QWheelEvent(*PQPOINTF(1), PINT(2), static_cast<Qt::MouseButtons>(hb_parni(3)), static_cast<Qt::KeyboardModifiers>(hb_parni(4)), HB_ISNIL(5) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
     /*
     QWheelEvent( const QPointF & pos, const QPointF & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
-    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), static_cast<Qt::MouseButtons>( hb_parni(4)), static_cast<Qt::KeyboardModifiers>( hb_parni(5)), HB_ISNIL(6) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >( hb_parni(6)));
+    auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), PINT(3), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)), HB_ISNIL(6) ? static_cast<Qt::Orientation >( Qt::Vertical ) : static_cast<Qt::Orientation >(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
     /*
     QWheelEvent( const QPointF & pos, const QPointF & globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), static_cast<Qt::Orientation>( hb_parni(6)), static_cast<Qt::MouseButtons>( hb_parni(7)), static_cast<Qt::KeyboardModifiers>( hb_parni(8)));
+    auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), static_cast<Qt::Orientation>(hb_parni(6)), static_cast<Qt::MouseButtons>(hb_parni(7)), static_cast<Qt::KeyboardModifiers>(hb_parni(8)));
     Qt5xHb::returnNewObject(obj, false);
 
   }

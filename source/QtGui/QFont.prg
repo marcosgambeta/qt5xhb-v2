@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     /*
     QFont( const QFont & font, QPaintDevice * pd )
     */
-    auto obj = new QFont( *PQFONT(1), PQPAINTDEVICE(2));
+    auto obj = new QFont(*PQFONT(1), PQPAINTDEVICE(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     /*
     QFont( const QFont & font )
     */
-    auto obj = new QFont( *PQFONT(1));
+    auto obj = new QFont(*PQFONT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QFONT_ISCOPYOF )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      RBOOL(obj->isCopyOf( *PQFONT(1)));
+      RBOOL(obj->isCopyOf(*PQFONT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QFONT_RESOLVE )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      auto ptr = new QFont(obj->resolve( *PQFONT(1)));
+      auto ptr = new QFont(obj->resolve(*PQFONT(1)));
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCapitalization( static_cast<QFont::Capitalization>( hb_parni(1)));
+      obj->setCapitalization(static_cast<QFont::Capitalization>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setLetterSpacing( static_cast<QFont::SpacingType>( hb_parni(1)), PQREAL(2));
+      obj->setLetterSpacing(static_cast<QFont::SpacingType>(hb_parni(1)), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStyle( static_cast<QFont::Style>( hb_parni(1)));
+      obj->setStyle(static_cast<QFont::Style>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setStyleHint( static_cast<QFont::StyleHint>( hb_parni(1)), HB_ISNIL(2) ? static_cast<QFont::StyleStrategy >( QFont::PreferDefault ) : static_cast<QFont::StyleStrategy >( hb_parni(2)));
+      obj->setStyleHint(static_cast<QFont::StyleHint>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QFont::StyleStrategy >( QFont::PreferDefault ) : static_cast<QFont::StyleStrategy >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStyleStrategy( static_cast<QFont::StyleStrategy>( hb_parni(1)));
+      obj->setStyleStrategy(static_cast<QFont::StyleStrategy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1587,7 +1587,7 @@ static QVariant toVariant( const QFont & )
 */
 void QFont_toVariant2()
 {
-  QFont * font = (QFont *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0));
+  QFont * font = (QFont *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
   QVariant * variant = new QVariant();
   variant->setValue<QFont>( *font);
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -1619,7 +1619,7 @@ HB_FUNC_STATIC( QFONT_FROMVARIANT )
 {
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0));
+    QVariant * variant = (QVariant *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QFont * font = new QFont( variant->value<QFont>());
     Qt5xHb::createReturnClass( font, "QFONT", true);
   }

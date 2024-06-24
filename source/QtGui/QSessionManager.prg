@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRestartHint( static_cast<QSessionManager::RestartHint>( hb_parni(1)));
+      obj->setRestartHint(static_cast<QSessionManager::RestartHint>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

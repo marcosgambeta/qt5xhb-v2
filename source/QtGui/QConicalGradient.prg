@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
     /*
     QConicalGradient( const QPointF & center, qreal angle )
     */
-    auto obj = new QConicalGradient( *PQPOINTF(1), PQREAL(2));
+    auto obj = new QConicalGradient(*PQPOINTF(1), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 
     if (obj != nullptr)
     {
-      obj->setCenter( *PQPOINTF(1));
+      obj->setCenter(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

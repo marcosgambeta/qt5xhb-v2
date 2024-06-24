@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
     /*
     QTextFragment( const QTextFragment & o )
     */
-    auto obj = new QTextFragment( *PQTEXTFRAGMENT(1));
+    auto obj = new QTextFragment(*PQTEXTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

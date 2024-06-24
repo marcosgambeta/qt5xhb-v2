@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
     /*
     QTextTableCell( const QTextTableCell & o )
     */
-    auto obj = new QTextTableCell( *PQTEXTTABLECELL(1));
+    auto obj = new QTextTableCell(*PQTEXTTABLECELL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
     if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQTEXTCHARFORMAT(1));
+      obj->setFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

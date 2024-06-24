@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
     /*
     QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
     */
-    auto obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1));
+    auto obj = new QOpenGLPixelTransferOptions(*PQOPENGLPIXELTRANSFEROPTIONS(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SWAP )
     if (ISNUMPAR(1) && ISQOPENGLPIXELTRANSFEROPTIONS(1))
     {
 #endif
-      obj->swap( *PQOPENGLPIXELTRANSFEROPTIONS(1));
+      obj->swap(*PQOPENGLPIXELTRANSFEROPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

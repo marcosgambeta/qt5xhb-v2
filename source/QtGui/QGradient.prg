@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCoordinateMode( static_cast<QGradient::CoordinateMode>( hb_parni(1)));
+      obj->setCoordinateMode(static_cast<QGradient::CoordinateMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSpread( static_cast<QGradient::Spread>( hb_parni(1)));
+      obj->setSpread(static_cast<QGradient::Spread>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

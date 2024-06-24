@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     /*
     QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
     */
-    auto obj = new QRawFont(PQSTRING(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3)));
+    auto obj = new QRawFont(PQSTRING(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     /*
     QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
     */
-    auto obj = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >( hb_parni(3)));
+    auto obj = new QRawFont(*PQBYTEARRAY(1), PQREAL(2), HB_ISNIL(3) ? static_cast<QFont::HintingPreference >( QFont::PreferDefaultHinting ) : static_cast<QFont::HintingPreference >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
     /*
     QRawFont( const QRawFont & other )
     */
-    auto obj = new QRawFont( *PQRAWFONT(1));
+    auto obj = new QRawFont(*PQRAWFONT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QRAWFONT_SWAP )
     if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
 #endif
-      obj->swap( *PQRAWFONT(1));
+      obj->swap(*PQRAWFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 #endif
       auto list = obj->glyphIndexesForString(PQSTRING(1));
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
@@ -344,20 +344,20 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
     {
 #endif
       QVector<quint32> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       quint32 temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
       }
-      auto list = obj->advancesForGlyphIndexes( par1);
+      auto list = obj->advancesForGlyphIndexes(par1);
       auto pDynSym = hb_dynsymFindName("QPOINTF");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQTRANSFORM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QImage(obj->alphaMapForGlyph(PQUINT32(1), HB_ISNIL(2) ? static_cast<QRawFont::AntialiasingType >( QRawFont::SubPixelAntialiasing ) : static_cast<QRawFont::AntialiasingType >( hb_parni(2)), HB_ISNIL(3) ? QTransform() : *static_cast<QTransform*>(Qt5xHb::itemGetPtr(3))));
+      auto ptr = new QImage(obj->alphaMapForGlyph(PQUINT32(1), HB_ISNIL(2) ? static_cast<QRawFont::AntialiasingType >( QRawFont::SubPixelAntialiasing ) : static_cast<QRawFont::AntialiasingType >(hb_parni(2)), HB_ISNIL(3) ? QTransform() : *static_cast<QTransform*>(Qt5xHb::itemGetPtr(3))));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->loadFromFile(PQSTRING(1), PQREAL(2), static_cast<QFont::HintingPreference>( hb_parni(3)));
+      obj->loadFromFile(PQSTRING(1), PQREAL(2), static_cast<QFont::HintingPreference>(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
     if (ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->loadFromData( *PQBYTEARRAY(1), PQREAL(2), static_cast<QFont::HintingPreference>( hb_parni(3)));
+      obj->loadFromData(*PQBYTEARRAY(1), PQREAL(2), static_cast<QFont::HintingPreference>(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->supportsCharacter( *PQCHAR(1)));
+      RBOOL(obj->supportsCharacter(*PQCHAR(1)));
     }
 
   }
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 #endif
       auto list = obj->supportedWritingSystems();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QRAWFONT_FROMFONT )
   if (ISBETWEEN(1, 2) && ISQFONT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
 #endif
-    auto ptr = new QRawFont( QRawFont::fromFont( *PQFONT(1), HB_ISNIL(2) ? static_cast<QFontDatabase::WritingSystem >( QFontDatabase::Any ) : static_cast<QFontDatabase::WritingSystem >( hb_parni(2))));
+    auto ptr = new QRawFont( QRawFont::fromFont(*PQFONT(1), HB_ISNIL(2) ? static_cast<QFontDatabase::WritingSystem >( QFontDatabase::Any ) : static_cast<QFontDatabase::WritingSystem >(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QRAWFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

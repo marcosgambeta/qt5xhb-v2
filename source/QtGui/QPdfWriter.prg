@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 
     if (obj != nullptr)
     {
-      obj->setPageSize( static_cast<QPagedPaintDevice::PageSize>( hb_parni(1)));
+      obj->setPageSize(static_cast<QPagedPaintDevice::PageSize>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->setPageSize( *PQPAGESIZE(1)));
+      RBOOL(obj->setPageSize(*PQPAGESIZE(1)));
     }
 #endif
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZEMM )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setPageSizeMM( *PQSIZEF(1));
+      obj->setPageSizeMM(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGELAYOUT )
     if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
     {
 #endif
-      RBOOL(obj->setPageLayout( *PQPAGELAYOUT(1)));
+      RBOOL(obj->setPageLayout(*PQPAGELAYOUT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->setPageMargins( *PQMARGINSF(1)));
+      RBOOL(obj->setPageMargins(*PQMARGINSF(1)));
     }
 #endif
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->setPageMargins( *PQMARGINSF(1), static_cast<QPageLayout::Unit>( hb_parni(2))));
+      RBOOL(obj->setPageMargins(*PQMARGINSF(1), static_cast<QPageLayout::Unit>(hb_parni(2))));
     }
 #endif
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->setPageOrientation( static_cast<QPageLayout::Orientation>( hb_parni(1))));
+      RBOOL(obj->setPageOrientation(static_cast<QPageLayout::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPDFVERSION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPdfVersion( static_cast<QPagedPaintDevice::PdfVersion>( hb_parni(1)));
+      obj->setPdfVersion(static_cast<QPagedPaintDevice::PdfVersion>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

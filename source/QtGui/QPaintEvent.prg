@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
     /*
     QPaintEvent( const QRegion & paintRegion )
     */
-    auto obj = new QPaintEvent( *PQREGION(1));
+    auto obj = new QPaintEvent(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
     /*
     QPaintEvent( const QRect & paintRect )
     */
-    auto obj = new QPaintEvent( *PQRECT(1));
+    auto obj = new QPaintEvent(*PQRECT(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }

@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL(obj->addShaderFromSourceCode( static_cast<QOpenGLShader::ShaderType>( hb_parni(1)), PCONSTCHAR(2)));
+      RBOOL(obj->addShaderFromSourceCode(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
     {
 #endif
-      RBOOL(obj->addShaderFromSourceCode( static_cast<QOpenGLShader::ShaderType>( hb_parni(1)), *PQBYTEARRAY(2)));
+      RBOOL(obj->addShaderFromSourceCode(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), *PQBYTEARRAY(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL(obj->addShaderFromSourceCode( static_cast<QOpenGLShader::ShaderType>( hb_parni(1)), PQSTRING(2)));
+      RBOOL(obj->addShaderFromSourceCode(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL(obj->addShaderFromSourceFile( static_cast<QOpenGLShader::ShaderType>( hb_parni(1)), PQSTRING(2)));
+      RBOOL(obj->addShaderFromSourceFile(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

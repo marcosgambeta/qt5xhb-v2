@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     /*
     QPalette( Qt::GlobalColor button )
     */
-    auto obj = new QPalette( static_cast<Qt::GlobalColor>( hb_parni(1)));
+    auto obj = new QPalette(static_cast<Qt::GlobalColor>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     /*
     QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
     */
-    auto obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9));
+    auto obj = new QPalette(*PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
     /*
     QPalette( const QPalette & p )
     */
-    auto obj = new QPalette( *PQPALETTE(1));
+    auto obj = new QPalette(*PQPALETTE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 
     if (obj != nullptr)
     {
-      auto ptr = &obj->brush( static_cast<QPalette::ColorGroup>( hb_parni(1)), static_cast<QPalette::ColorRole>( hb_parni(2)));
+      auto ptr = &obj->brush(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)));
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
     }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 
     if (obj != nullptr)
     {
-      auto ptr = &obj->brush( static_cast<QPalette::ColorRole>( hb_parni(1)));
+      auto ptr = &obj->brush(static_cast<QPalette::ColorRole>(hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
     }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 
     if (obj != nullptr)
     {
-      auto ptr = &obj->color( static_cast<QPalette::ColorGroup>( hb_parni(1)), static_cast<QPalette::ColorRole>( hb_parni(2)));
+      auto ptr = &obj->color(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
     }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 
     if (obj != nullptr)
     {
-      auto ptr = &obj->color( static_cast<QPalette::ColorRole>( hb_parni(1)));
+      auto ptr = &obj->color(static_cast<QPalette::ColorRole>(hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
     }
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->isBrushSet( static_cast<QPalette::ColorGroup>( hb_parni(1)), static_cast<QPalette::ColorRole>( hb_parni(2))));
+      RBOOL(obj->isBrushSet(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
 #endif
-      RBOOL(obj->isCopyOf( *PQPALETTE(1)));
+      RBOOL(obj->isCopyOf(*PQPALETTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->isEqual( static_cast<QPalette::ColorGroup>( hb_parni(1)), static_cast<QPalette::ColorGroup>( hb_parni(2))));
+      RBOOL(obj->isEqual(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorGroup>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
 #endif
-      auto ptr = new QPalette(obj->resolve( *PQPALETTE(1)));
+      auto ptr = new QPalette(obj->resolve(*PQPALETTE(1)));
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 
     if (obj != nullptr)
     {
-      obj->setBrush( static_cast<QPalette::ColorRole>( hb_parni(1)), *PQBRUSH(2));
+      obj->setBrush(static_cast<QPalette::ColorRole>(hb_parni(1)), *PQBRUSH(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 
     if (obj != nullptr)
     {
-      obj->setBrush( static_cast<QPalette::ColorGroup>( hb_parni(1)), static_cast<QPalette::ColorRole>( hb_parni(2)), *PQBRUSH(3));
+      obj->setBrush(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)), *PQBRUSH(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 
     if (obj != nullptr)
     {
-      obj->setColor( static_cast<QPalette::ColorGroup>( hb_parni(1)), static_cast<QPalette::ColorRole>( hb_parni(2)), HB_ISOBJECT(3) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(3)) : QColor( hb_parc(3)));
+      obj->setColor(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)), HB_ISOBJECT(3) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(3)) : QColor( hb_parc(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 
     if (obj != nullptr)
     {
-      obj->setColor( static_cast<QPalette::ColorRole>( hb_parni(1)), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
+      obj->setColor(static_cast<QPalette::ColorRole>(hb_parni(1)), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
     if (ISNUMPAR(10) && HB_ISNUM(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) && ISQBRUSH(10))
     {
 #endif
-      obj->setColorGroup( static_cast<QPalette::ColorGroup>( hb_parni(1)), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9), *PQBRUSH(10));
+      obj->setColorGroup(static_cast<QPalette::ColorGroup>(hb_parni(1)), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9), *PQBRUSH(10));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCurrentColorGroup( static_cast<QPalette::ColorGroup>( hb_parni(1)));
+      obj->setCurrentColorGroup(static_cast<QPalette::ColorGroup>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

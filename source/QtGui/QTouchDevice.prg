@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<QTouchDevice::DeviceType>( hb_parni(1)));
+      obj->setType(static_cast<QTouchDevice::DeviceType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCapabilities( static_cast<QTouchDevice::Capabilities>( hb_parni(1)));
+      obj->setCapabilities(static_cast<QTouchDevice::Capabilities>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

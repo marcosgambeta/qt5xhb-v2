@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
     /*
     QTextFormat( const QTextFormat & rhs )
     */
-    auto obj = new QTextFormat( *PQTEXTFORMAT(1));
+    auto obj = new QTextFormat(*PQTEXTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SWAP )
     if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
     {
 #endif
-      obj->swap( *PQTEXTFORMAT(1));
+      obj->swap(*PQTEXTFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
     if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
     {
 #endif
-      obj->merge( *PQTEXTFORMAT(1));
+      obj->merge(*PQTEXTFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -660,11 +660,11 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
     if (obj != nullptr)
     {
       QVector<QTextLength> par2;
-      auto aList2 = hb_param( 2, HB_IT_ARRAY);
-      int nLen2 = hb_arrayLen( aList2);
-      for( auto i2 = 0; i2 < nLen2; i2++ )
+      auto aList2 = hb_param(2, HB_IT_ARRAY);
+      int nLen2 = hb_arrayLen(aList2);
+      for (auto i2 = 0; i2 < nLen2; i2++)
       {
-        par2 << *static_cast<QTextLength*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0)));
+        par2 << *static_cast<QTextLength*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2+1), "POINTER", 0)));
       }
       obj->setProperty(PINT(1), par2);
     }
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLayoutDirection( static_cast<Qt::LayoutDirection>( hb_parni(1)));
+      obj->setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETBACKGROUND )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1));
+      obj->setBackground(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETFOREGROUND )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setForeground( *PQBRUSH(1));
+      obj->setForeground(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

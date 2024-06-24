@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
     /*
     QRegExpValidator( const QRegExp & rx, QObject * parent = nullptr )
     */
-    auto obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QRegExpValidator(*PQREGEXP(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRegExp( *PQREGEXP(1));
+      obj->setRegExp(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM(obj->validate( par1, par2));
-      hb_storc( QSTRINGTOSTRING( par1), 1);
-      hb_storni( par2, 2);
+      RENUM(obj->validate(par1, par2));
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

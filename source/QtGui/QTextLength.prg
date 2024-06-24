@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
     /*
     QTextLength( QTextLength::Type type, qreal value )
     */
-    auto obj = new QTextLength( static_cast<QTextLength::Type>( hb_parni(1)), PQREAL(2));
+    auto obj = new QTextLength(static_cast<QTextLength::Type>(hb_parni(1)), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }

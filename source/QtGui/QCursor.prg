@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     /*
     QCursor( Qt::CursorShape shape )
     */
-    auto obj = new QCursor( static_cast<Qt::CursorShape>( hb_parni(1)));
+    auto obj = new QCursor(static_cast<Qt::CursorShape>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     /*
     QCursor( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
     */
-    auto obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT( 3, -1 ), OPINT( 4, -1));
+    auto obj = new QCursor(*PQBITMAP(1), *PQBITMAP(2), OPINT( 3, -1 ), OPINT( 4, -1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     /*
     QCursor( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
     */
-    auto obj = new QCursor( *PQPIXMAP(1), OPINT( 2, -1 ), OPINT( 3, -1));
+    auto obj = new QCursor(*PQPIXMAP(1), OPINT( 2, -1 ), OPINT( 3, -1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
     /*
     QCursor( const QCursor & c )
     */
-    auto obj = new QCursor( *PQCURSOR(1));
+    auto obj = new QCursor(*PQCURSOR(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShape( static_cast<Qt::CursorShape>( hb_parni(1)));
+      obj->setShape(static_cast<Qt::CursorShape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCURSOR_SETPOS )
     static void setPos( const QPoint & p )
     */
 
-    QCursor::setPos( *PQPOINT(1));
+    QCursor::setPos(*PQPOINT(1));
 
     hb_itemReturn(hb_stackSelfItem());
 

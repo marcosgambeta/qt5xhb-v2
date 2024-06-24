@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
     /*
     QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QMouseEvent( static_cast<QEvent::Type>( hb_parni(1)), *PQPOINTF(2), static_cast<Qt::MouseButton>( hb_parni(3)), static_cast<Qt::MouseButtons>( hb_parni(4)), static_cast<Qt::KeyboardModifiers>( hb_parni(5)));
+    auto obj = new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), static_cast<Qt::MouseButton>(hb_parni(3)), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
     /*
     QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QMouseEvent( static_cast<QEvent::Type>( hb_parni(1)), *PQPOINTF(2), *PQPOINTF(3), static_cast<Qt::MouseButton>( hb_parni(4)), static_cast<Qt::MouseButtons>( hb_parni(5)), static_cast<Qt::KeyboardModifiers>( hb_parni(6)));
+    auto obj = new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), *PQPOINTF(3), static_cast<Qt::MouseButton>(hb_parni(4)), static_cast<Qt::MouseButtons>(hb_parni(5)), static_cast<Qt::KeyboardModifiers>(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
     /*
     QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QMouseEvent( static_cast<QEvent::Type>( hb_parni(1)), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), static_cast<Qt::MouseButton>( hb_parni(5)), static_cast<Qt::MouseButtons>( hb_parni(6)), static_cast<Qt::KeyboardModifiers>( hb_parni(7)));
+    auto obj = new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), static_cast<Qt::MouseButton>(hb_parni(5)), static_cast<Qt::MouseButtons>(hb_parni(6)), static_cast<Qt::KeyboardModifiers>(hb_parni(7)));
     Qt5xHb::returnNewObject(obj, false);
 
   }

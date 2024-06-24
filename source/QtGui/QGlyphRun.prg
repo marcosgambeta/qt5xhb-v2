@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
     /*
     QGlyphRun( const QGlyphRun & other )
     */
-    auto obj = new QGlyphRun( *PQGLYPHRUN(1));
+    auto obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
     if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
 #endif
-      obj->setRawFont( *PQRAWFONT(1));
+      obj->setRawFont(*PQRAWFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

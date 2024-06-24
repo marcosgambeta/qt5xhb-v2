@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1));
+      obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->write( *PQTEXTDOCUMENTFRAGMENT(1)));
+      RBOOL(obj->write(*PQTEXTDOCUMENTFRAGMENT(1)));
     }
 
   }

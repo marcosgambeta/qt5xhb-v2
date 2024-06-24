@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
     /*
     QInputMethodEvent( const QInputMethodEvent & other )
     */
-    auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1));
+    auto obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt5xHb::returnNewObject(obj, false);
 
   }

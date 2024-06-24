@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
     /*
     QQuaternion( const QVector4D & vector )
     */
-    auto obj = new QQuaternion( *PQVECTOR4D(1));
+    auto obj = new QQuaternion(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
 
     if (obj != nullptr)
     {
-      obj->setVector( *PQVECTOR3D(1));
+      obj->setVector(*PQVECTOR3D(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      auto ptr = new QVector3D(obj->rotatedVector( *PQVECTOR3D(1)));
+      auto ptr = new QVector3D(obj->rotatedVector(*PQVECTOR3D(1)));
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
     static QQuaternion fromAxisAndAngle( const QVector3D & axis, float angle )
     */
 
-    auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2)));
+    auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 
   }
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QQUATERNION_SLERP )
   if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QQuaternion( QQuaternion::slerp( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
+    auto ptr = new QQuaternion( QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QQUATERNION_NLERP )
   if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QQuaternion( QQuaternion::nlerp( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
+    auto ptr = new QQuaternion( QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

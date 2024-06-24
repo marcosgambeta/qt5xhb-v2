@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 
     if (obj != nullptr)
     {
-      obj->drawEllipse( *PQRECTF(1));
+      obj->drawEllipse(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 
     if (obj != nullptr)
     {
-      obj->drawEllipse( *PQRECT(1));
+      obj->drawEllipse(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
     if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->drawImage( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(4)));
+      obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
-      obj->drawPath( *PQPAINTERPATH(1));
+      obj->drawPath(*PQPAINTERPATH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
     if (ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQRECTF(3))
     {
 #endif
-      obj->drawPixmap( *PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3));
+      obj->drawPixmap(*PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
     if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTEXTITEM(2))
     {
 #endif
-      obj->drawTextItem( *PQPOINTF(1), *PQTEXTITEM(2));
+      obj->drawTextItem(*PQPOINTF(1), *PQTEXTITEM(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
     if (ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQPOINTF(3))
     {
 #endif
-      obj->drawTiledPixmap( *PQRECTF(1), *PQPIXMAP(2), *PQPOINTF(3));
+      obj->drawTiledPixmap(*PQRECTF(1), *PQPIXMAP(2), *PQPOINTF(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->hasFeature( static_cast<QPaintEngine::PaintEngineFeatures>( hb_parni(1))));
+      RBOOL(obj->hasFeature(static_cast<QPaintEngine::PaintEngineFeatures>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
     if (ISNUMPAR(1) && ISQPAINTENGINESTATE(1))
     {
 #endif
-      obj->updateState( *PQPAINTENGINESTATE(1));
+      obj->updateState(*PQPAINTENGINESTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

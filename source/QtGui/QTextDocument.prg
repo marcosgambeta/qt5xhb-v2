@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setMetaInformation( static_cast<QTextDocument::MetaInformation>( hb_parni(1)), PQSTRING(2));
+      obj->setMetaInformation(static_cast<QTextDocument::MetaInformation>(hb_parni(1)), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING(obj->metaInformation( static_cast<QTextDocument::MetaInformation>( hb_parni(1))));
+      RQSTRING(obj->metaInformation(static_cast<QTextDocument::MetaInformation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 
     if (obj != nullptr)
     {
-      auto ptr = new QTextCursor(obj->find(PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >( hb_parni(3))));
+      auto ptr = new QTextCursor(obj->find(PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
 
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 
     if (obj != nullptr)
     {
-      auto ptr = new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >( hb_parni(3))));
+      auto ptr = new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
 
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 
     if (obj != nullptr)
     {
-      auto ptr = new QTextCursor(obj->find( *PQREGEXP(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >( hb_parni(3))));
+      auto ptr = new QTextCursor(obj->find(*PQREGEXP(1), OPINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
 
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 
     if (obj != nullptr)
     {
-      auto ptr = new QTextCursor(obj->find( *PQREGEXP(1), *PQTEXTCURSOR(2), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >( hb_parni(3))));
+      auto ptr = new QTextCursor(obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2), HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags >( 0 ) : static_cast<QTextDocument::FindFlags >(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
 
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
     if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
     {
 #endif
-      auto ptr = obj->objectForFormat( *PQTEXTFORMAT(1));
+      auto ptr = obj->objectForFormat(*PQTEXTFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setPageSize( *PQSIZEF(1));
+      obj->setPageSize(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setDefaultFont( *PQFONT(1));
+      obj->setDefaultFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1686,7 +1686,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->clearUndoRedoStacks( HB_ISNIL(1) ? static_cast<QTextDocument::Stacks >( QTextDocument::UndoAndRedoStacks ) : static_cast<QTextDocument::Stacks >( hb_parni(1)));
+      obj->clearUndoRedoStacks( HB_ISNIL(1) ? static_cast<QTextDocument::Stacks >( QTextDocument::UndoAndRedoStacks ) : static_cast<QTextDocument::Stacks >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1787,7 +1787,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
     if (ISNUMPAR(1) && ISQTEXTOPTION(1))
     {
 #endif
-      obj->setDefaultTextOption( *PQTEXTOPTION(1));
+      obj->setDefaultTextOption(*PQTEXTOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDefaultCursorMoveStyle( static_cast<Qt::CursorMoveStyle>( hb_parni(1)));
+      obj->setDefaultCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1966,7 +1966,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMARKDOWN )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setMarkdown(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::MarkdownFeatures >( QTextDocument::MarkdownDialectGitHub ) : static_cast<QTextDocument::MarkdownFeatures >( hb_parni(2)));
+      obj->setMarkdown(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::MarkdownFeatures >( QTextDocument::MarkdownDialectGitHub ) : static_cast<QTextDocument::MarkdownFeatures >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1994,7 +1994,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOMARKDOWN )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->toMarkdown( HB_ISNIL(1) ? static_cast<QTextDocument::MarkdownFeatures >( QTextDocument::MarkdownDialectGitHub ) : static_cast<QTextDocument::MarkdownFeatures >( hb_parni(1))));
+      RQSTRING(obj->toMarkdown( HB_ISNIL(1) ? static_cast<QTextDocument::MarkdownFeatures >( QTextDocument::MarkdownDialectGitHub ) : static_cast<QTextDocument::MarkdownFeatures >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

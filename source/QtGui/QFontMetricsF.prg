@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     /*
     QFontMetricsF( const QFont & font )
     */
-    auto obj = new QFontMetricsF( *PQFONT(1));
+    auto obj = new QFontMetricsF(*PQFONT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     /*
     QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
     */
-    auto obj = new QFontMetricsF( *PQFONT(1), PQPAINTDEVICE(2));
+    auto obj = new QFontMetricsF(*PQFONT(1), PQPAINTDEVICE(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     /*
     QFontMetricsF( const QFontMetrics & fontMetrics )
     */
-    auto obj = new QFontMetricsF( *PQFONTMETRICS(1));
+    auto obj = new QFontMetricsF(*PQFONTMETRICS(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
     /*
     QFontMetricsF( const QFontMetricsF & fm )
     */
-    auto obj = new QFontMetricsF( *PQFONTMETRICSF(1));
+    auto obj = new QFontMetricsF(*PQFONTMETRICSF(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->boundingRect( *PQCHAR(1)));
+      auto ptr = new QRectF(obj->boundingRect(*PQCHAR(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -225,9 +225,9 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
     if (obj != nullptr)
     {
       int par5;
-      auto ptr = new QRectF(obj->boundingRect( *PQRECTF(1), PINT(2), PQSTRING(3), OPINT( 4, 0 ), &par5));
+      auto ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3), OPINT( 4, 0 ), &par5));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
-      hb_storni( par5, 5);
+      hb_storni(par5, 5);
     }
 
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
     if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      RQSTRING(obj->elidedText(PQSTRING(1), static_cast<Qt::TextElideMode>( hb_parni(2)), PQREAL(3), OPINT( 4, 0 )));
+      RQSTRING(obj->elidedText(PQSTRING(1), static_cast<Qt::TextElideMode>(hb_parni(2)), PQREAL(3), OPINT( 4, 0 )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
       int par4;
       auto ptr = new QSizeF(obj->size(PINT(1), PQSTRING(2), OPINT( 3, 0 ), &par4));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
-      hb_storni( par4, 4);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

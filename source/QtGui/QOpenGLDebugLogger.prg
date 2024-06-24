@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->pushGroup(PQSTRING(1), OPGLUINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Source >( QOpenGLDebugMessage::ApplicationSource ) : static_cast<QOpenGLDebugMessage::Source >( hb_parni(3)));
+      obj->pushGroup(PQSTRING(1), OPGLUINT( 2, 0 ), HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Source >( QOpenGLDebugMessage::ApplicationSource ) : static_cast<QOpenGLDebugMessage::Source >(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
     if (ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1))
     {
 #endif
-      obj->logMessage( *PQOPENGLDEBUGMESSAGE(1));
+      obj->logMessage(*PQOPENGLDEBUGMESSAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STARTLOGGING )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->startLogging( HB_ISNIL(1) ? static_cast<QOpenGLDebugLogger::LoggingMode >( QOpenGLDebugLogger::AsynchronousLogging ) : static_cast<QOpenGLDebugLogger::LoggingMode >( hb_parni(1)));
+      obj->startLogging( HB_ISNIL(1) ? static_cast<QOpenGLDebugLogger::LoggingMode >( QOpenGLDebugLogger::AsynchronousLogging ) : static_cast<QOpenGLDebugLogger::LoggingMode >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

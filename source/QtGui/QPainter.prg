@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->boundingRect( *PQRECTF(1), PINT(2), PQSTRING(3)));
+      auto ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->boundingRect( *PQRECT(1), PINT(2), PQSTRING(3)));
+      auto ptr = new QRect(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->boundingRect( *PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption*>(Qt5xHb::itemGetPtr(3))));
+      auto ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption*>(Qt5xHb::itemGetPtr(3))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
 
     if (obj != nullptr)
     {
-      obj->drawArc( *PQRECTF(1), PINT(2), PINT(3));
+      obj->drawArc(*PQRECTF(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
 
     if (obj != nullptr)
     {
-      obj->drawArc( *PQRECT(1), PINT(2), PINT(3));
+      obj->drawArc(*PQRECT(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 
     if (obj != nullptr)
     {
-      obj->drawChord( *PQRECTF(1), PINT(2), PINT(3));
+      obj->drawChord(*PQRECTF(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 
     if (obj != nullptr)
     {
-      obj->drawChord( *PQRECT(1), PINT(2), PINT(3));
+      obj->drawChord(*PQRECT(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
 
     if (obj != nullptr)
     {
-      obj->drawConvexPolygon( *PQPOLYGONF(1));
+      obj->drawConvexPolygon(*PQPOLYGONF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
 
     if (obj != nullptr)
     {
-      obj->drawConvexPolygon( *PQPOLYGON(1));
+      obj->drawConvexPolygon(*PQPOLYGON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 
     if (obj != nullptr)
     {
-      obj->drawEllipse( *PQRECTF(1));
+      obj->drawEllipse(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 
     if (obj != nullptr)
     {
-      obj->drawEllipse( *PQRECT(1));
+      obj->drawEllipse(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 
     if (obj != nullptr)
     {
-      obj->drawEllipse( *PQPOINTF(1), PQREAL(2), PQREAL(3));
+      obj->drawEllipse(*PQPOINTF(1), PQREAL(2), PQREAL(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 
     if (obj != nullptr)
     {
-      obj->drawEllipse( *PQPOINT(1), PINT(2), PINT(3));
+      obj->drawEllipse(*PQPOINT(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(4)));
+      obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQRECT(1), *PQIMAGE(2), *PQRECT(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(4)));
+      obj->drawImage(*PQRECT(1), *PQIMAGE(2), *PQRECT(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQPOINTF(1), *PQIMAGE(2));
+      obj->drawImage(*PQPOINTF(1), *PQIMAGE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQPOINT(1), *PQIMAGE(2));
+      obj->drawImage(*PQPOINT(1), *PQIMAGE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(4)));
+      obj->drawImage(*PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQPOINT(1), *PQIMAGE(2), *PQRECT(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(4)));
+      obj->drawImage(*PQPOINT(1), *PQIMAGE(2), *PQRECT(3), HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQRECTF(1), *PQIMAGE(2));
+      obj->drawImage(*PQRECTF(1), *PQIMAGE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage( *PQRECT(1), *PQIMAGE(2));
+      obj->drawImage(*PQRECT(1), *PQIMAGE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 
     if (obj != nullptr)
     {
-      obj->drawImage(PINT(1), PINT(2), *PQIMAGE(3), OPINT( 4, 0 ), OPINT( 5, 0 ), OPINT( 6, -1 ), OPINT( 7, -1 ), HB_ISNIL(8) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >( hb_parni(8)));
+      obj->drawImage(PINT(1), PINT(2), *PQIMAGE(3), OPINT( 4, 0 ), OPINT( 5, 0 ), OPINT( 6, -1 ), OPINT( 7, -1 ), HB_ISNIL(8) ? static_cast<Qt::ImageConversionFlags >( Qt::AutoColor ) : static_cast<Qt::ImageConversionFlags >(hb_parni(8)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 
     if (obj != nullptr)
     {
-      obj->drawLine( *PQLINEF(1));
+      obj->drawLine(*PQLINEF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 
     if (obj != nullptr)
     {
-      obj->drawLine( *PQLINE(1));
+      obj->drawLine(*PQLINE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 
     if (obj != nullptr)
     {
-      obj->drawLine( *PQPOINT(1), *PQPOINT(2));
+      obj->drawLine(*PQPOINT(1), *PQPOINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 
     if (obj != nullptr)
     {
-      obj->drawLine( *PQPOINTF(1), *PQPOINTF(2));
+      obj->drawLine(*PQPOINTF(1), *PQPOINTF(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPATH )
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
-      obj->drawPath( *PQPAINTERPATH(1));
+      obj->drawPath(*PQPAINTERPATH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
 
     if (obj != nullptr)
     {
-      obj->drawPicture( *PQPOINTF(1), *PQPICTURE(2));
+      obj->drawPicture(*PQPOINTF(1), *PQPICTURE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
 
     if (obj != nullptr)
     {
-      obj->drawPicture( *PQPOINT(1), *PQPICTURE(2));
+      obj->drawPicture(*PQPOINT(1), *PQPICTURE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 
     if (obj != nullptr)
     {
-      obj->drawPie( *PQRECTF(1), PINT(2), PINT(3));
+      obj->drawPie(*PQRECTF(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1115,7 +1115,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 
     if (obj != nullptr)
     {
-      obj->drawPie( *PQRECT(1), PINT(2), PINT(3));
+      obj->drawPie(*PQRECT(1), PINT(2), PINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3));
+      obj->drawPixmap(*PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQRECT(1), *PQPIXMAP(2), *PQRECT(3));
+      obj->drawPixmap(*PQRECT(1), *PQPIXMAP(2), *PQRECT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQPOINTF(1), *PQPIXMAP(2), *PQRECTF(3));
+      obj->drawPixmap(*PQPOINTF(1), *PQPIXMAP(2), *PQRECTF(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQPOINT(1), *PQPIXMAP(2), *PQRECT(3));
+      obj->drawPixmap(*PQPOINT(1), *PQPIXMAP(2), *PQRECT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1213,7 +1213,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQPOINTF(1), *PQPIXMAP(2));
+      obj->drawPixmap(*PQPOINTF(1), *PQPIXMAP(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQPOINT(1), *PQPIXMAP(2));
+      obj->drawPixmap(*PQPOINT(1), *PQPIXMAP(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawPixmap( *PQRECT(1), *PQPIXMAP(2));
+      obj->drawPixmap(*PQRECT(1), *PQPIXMAP(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1326,7 +1326,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
 
     if (obj != nullptr)
     {
-      obj->drawPoint( *PQPOINTF(1));
+      obj->drawPoint(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1341,7 +1341,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
 
     if (obj != nullptr)
     {
-      obj->drawPoint( *PQPOINT(1));
+      obj->drawPoint(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
 
     if (obj != nullptr)
     {
-      obj->drawPoints( *PQPOLYGONF(1));
+      obj->drawPoints(*PQPOLYGONF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
 
     if (obj != nullptr)
     {
-      obj->drawPoints( *PQPOLYGON(1));
+      obj->drawPoints(*PQPOLYGON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 
     if (obj != nullptr)
     {
-      obj->drawPolygon( *PQPOLYGONF(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >( hb_parni(2)));
+      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1432,7 +1432,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 
     if (obj != nullptr)
     {
-      obj->drawPolygon( *PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >( hb_parni(2)));
+      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1455,7 +1455,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 
     if (obj != nullptr)
     {
-      obj->drawPolyline( *PQPOLYGONF(1));
+      obj->drawPolyline(*PQPOLYGONF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 
     if (obj != nullptr)
     {
-      obj->drawPolyline( *PQPOLYGON(1));
+      obj->drawPolyline(*PQPOLYGON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
 
     if (obj != nullptr)
     {
-      obj->drawRect( *PQRECTF(1));
+      obj->drawRect(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
 
     if (obj != nullptr)
     {
-      obj->drawRect( *PQRECT(1));
+      obj->drawRect(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 
     if (obj != nullptr)
     {
-      obj->drawRoundedRect( *PQRECTF(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? static_cast<Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast<Qt::SizeMode >( hb_parni(4)));
+      obj->drawRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? static_cast<Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast<Qt::SizeMode >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 
     if (obj != nullptr)
     {
-      obj->drawRoundedRect( *PQRECT(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? static_cast<Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast<Qt::SizeMode >( hb_parni(4)));
+      obj->drawRoundedRect(*PQRECT(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? static_cast<Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast<Qt::SizeMode >(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 
     if (obj != nullptr)
     {
-      obj->drawRoundedRect(PINT(1), PINT(2), PINT(3), PINT(4), PQREAL(5), PQREAL(6), HB_ISNIL(7) ? static_cast<Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast<Qt::SizeMode >( hb_parni(7)));
+      obj->drawRoundedRect(PINT(1), PINT(2), PINT(3), PINT(4), PQREAL(5), PQREAL(6), HB_ISNIL(7) ? static_cast<Qt::SizeMode >( Qt::AbsoluteSize ) : static_cast<Qt::SizeMode >(hb_parni(7)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1599,7 +1599,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawStaticText( *PQPOINTF(1), *PQSTATICTEXT(2));
+      obj->drawStaticText(*PQPOINTF(1), *PQSTATICTEXT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawStaticText( *PQPOINT(1), *PQSTATICTEXT(2));
+      obj->drawStaticText(*PQPOINT(1), *PQSTATICTEXT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1652,7 +1652,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawText( *PQPOINTF(1), PQSTRING(2));
+      obj->drawText(*PQPOINTF(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawText( *PQPOINT(1), PQSTRING(2));
+      obj->drawText(*PQPOINT(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawText( *PQRECTF(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? nullptr : static_cast<QRectF*>(Qt5xHb::itemGetPtr(4)));
+      obj->drawText(*PQRECTF(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? nullptr : static_cast<QRectF*>(Qt5xHb::itemGetPtr(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawText( *PQRECT(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? nullptr : static_cast<QRect*>(Qt5xHb::itemGetPtr(4)));
+      obj->drawText(*PQRECT(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? nullptr : static_cast<QRect*>(Qt5xHb::itemGetPtr(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1742,7 +1742,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 
     if (obj != nullptr)
     {
-      obj->drawText( *PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption*>(Qt5xHb::itemGetPtr(3)));
+      obj->drawText(*PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1765,7 +1765,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawTiledPixmap( *PQRECTF(1), *PQPIXMAP(2), HB_ISNIL(3) ? QPointF() : *static_cast<QPointF*>(Qt5xHb::itemGetPtr(3)));
+      obj->drawTiledPixmap(*PQRECTF(1), *PQPIXMAP(2), HB_ISNIL(3) ? QPointF() : *static_cast<QPointF*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1780,7 +1780,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 
     if (obj != nullptr)
     {
-      obj->drawTiledPixmap( *PQRECT(1), *PQPIXMAP(2), HB_ISNIL(3) ? QPoint() : *static_cast<QPoint*>(Qt5xHb::itemGetPtr(3)));
+      obj->drawTiledPixmap(*PQRECT(1), *PQPIXMAP(2), HB_ISNIL(3) ? QPoint() : *static_cast<QPoint*>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1868,7 +1868,7 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
 
     if (obj != nullptr)
     {
-      obj->eraseRect( *PQRECTF(1));
+      obj->eraseRect(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1883,7 +1883,7 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
 
     if (obj != nullptr)
     {
-      obj->eraseRect( *PQRECT(1));
+      obj->eraseRect(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1923,7 +1923,7 @@ HB_FUNC_STATIC( QPAINTER_FILLPATH )
     if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQBRUSH(2))
     {
 #endif
-      obj->fillPath( *PQPAINTERPATH(1), *PQBRUSH(2));
+      obj->fillPath(*PQPAINTERPATH(1), *PQBRUSH(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1947,7 +1947,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECTF(1), *PQBRUSH(2));
+      obj->fillRect(*PQRECTF(1), *PQBRUSH(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1962,7 +1962,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<Qt::BrushStyle>( hb_parni(5)));
+      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<Qt::BrushStyle>(hb_parni(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1977,7 +1977,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECT(1), static_cast<Qt::BrushStyle>( hb_parni(2)));
+      obj->fillRect(*PQRECT(1), static_cast<Qt::BrushStyle>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1992,7 +1992,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECTF(1), static_cast<Qt::BrushStyle>( hb_parni(2)));
+      obj->fillRect(*PQRECTF(1), static_cast<Qt::BrushStyle>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2007,7 +2007,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECT(1), *PQBRUSH(2));
+      obj->fillRect(*PQRECT(1), *PQBRUSH(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2022,7 +2022,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
+      obj->fillRect(*PQRECT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2037,7 +2037,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECTF(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
+      obj->fillRect(*PQRECTF(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2082,7 +2082,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<Qt::GlobalColor>( hb_parni(5)));
+      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<Qt::GlobalColor>(hb_parni(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2097,7 +2097,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECT(1), static_cast<Qt::GlobalColor>( hb_parni(2)));
+      obj->fillRect(*PQRECT(1), static_cast<Qt::GlobalColor>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2112,7 +2112,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECTF(1), static_cast<Qt::GlobalColor>( hb_parni(2)));
+      obj->fillRect(*PQRECTF(1), static_cast<Qt::GlobalColor>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2128,7 +2128,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<QGradient::Preset>( hb_parni(5)));
+      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<QGradient::Preset>(hb_parni(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2145,7 +2145,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECT(1), static_cast<QGradient::Preset>( hb_parni(2)));
+      obj->fillRect(*PQRECT(1), static_cast<QGradient::Preset>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2162,7 +2162,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 
     if (obj != nullptr)
     {
-      obj->fillRect( *PQRECTF(1), static_cast<QGradient::Preset>( hb_parni(2)));
+      obj->fillRect(*PQRECTF(1), static_cast<QGradient::Preset>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2563,7 +2563,7 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUND )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackground( *PQBRUSH(1));
+      obj->setBackground(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2589,7 +2589,7 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBackgroundMode( static_cast<Qt::BGMode>( hb_parni(1)));
+      obj->setBackgroundMode(static_cast<Qt::BGMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2613,7 +2613,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 
     if (obj != nullptr)
     {
-      obj->setBrush( *PQBRUSH(1));
+      obj->setBrush(*PQBRUSH(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2628,7 +2628,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 
     if (obj != nullptr)
     {
-      obj->setBrush( static_cast<Qt::BrushStyle>( hb_parni(1)));
+      obj->setBrush(static_cast<Qt::BrushStyle>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2651,7 +2651,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 
     if (obj != nullptr)
     {
-      obj->setBrushOrigin( *PQPOINTF(1));
+      obj->setBrushOrigin(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2666,7 +2666,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 
     if (obj != nullptr)
     {
-      obj->setBrushOrigin( *PQPOINT(1));
+      obj->setBrushOrigin(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2706,7 +2706,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setClipPath( *PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >( hb_parni(2)));
+      obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2730,7 +2730,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 
     if (obj != nullptr)
     {
-      obj->setClipRect( *PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >( hb_parni(2)));
+      obj->setClipRect(*PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2745,7 +2745,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 
     if (obj != nullptr)
     {
-      obj->setClipRect(PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >( hb_parni(5)));
+      obj->setClipRect(PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >(hb_parni(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2760,7 +2760,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 
     if (obj != nullptr)
     {
-      obj->setClipRect( *PQRECT(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >( hb_parni(2)));
+      obj->setClipRect(*PQRECT(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2785,7 +2785,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
     if (ISBETWEEN(1, 2) && ISQREGION(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setClipRegion( *PQREGION(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >( hb_parni(2)));
+      obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation >( Qt::ReplaceClip ) : static_cast<Qt::ClipOperation >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2837,7 +2837,7 @@ HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCompositionMode( static_cast<QPainter::CompositionMode>( hb_parni(1)));
+      obj->setCompositionMode(static_cast<QPainter::CompositionMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2863,7 +2863,7 @@ HB_FUNC_STATIC( QPAINTER_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2889,7 +2889,7 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLayoutDirection( static_cast<Qt::LayoutDirection>( hb_parni(1)));
+      obj->setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2939,7 +2939,7 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
 
     if (obj != nullptr)
     {
-      obj->setPen( *PQPEN(1));
+      obj->setPen(*PQPEN(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2969,7 +2969,7 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
 
     if (obj != nullptr)
     {
-      obj->setPen( static_cast<Qt::PenStyle>( hb_parni(1)));
+      obj->setPen(static_cast<Qt::PenStyle>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2994,7 +2994,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setRenderHint( static_cast<QPainter::RenderHint>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3020,7 +3020,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setRenderHints( static_cast<QPainter::RenderHints>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setRenderHints(static_cast<QPainter::RenderHints>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3046,7 +3046,7 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
     if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setTransform( *PQTRANSFORM(1), OPBOOL( 2, false));
+      obj->setTransform(*PQTRANSFORM(1), OPBOOL( 2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3096,7 +3096,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 
     if (obj != nullptr)
     {
-      obj->setViewport( *PQRECT(1));
+      obj->setViewport(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3134,7 +3134,7 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
 
     if (obj != nullptr)
     {
-      obj->setWindow( *PQRECT(1));
+      obj->setWindow(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3200,7 +3200,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
     if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setWorldTransform( *PQTRANSFORM(1), OPBOOL( 2, false));
+      obj->setWorldTransform(*PQTRANSFORM(1), OPBOOL( 2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3252,7 +3252,7 @@ HB_FUNC_STATIC( QPAINTER_STROKEPATH )
     if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQPEN(2))
     {
 #endif
-      obj->strokePath( *PQPAINTERPATH(1), *PQPEN(2));
+      obj->strokePath(*PQPAINTERPATH(1), *PQPEN(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3278,7 +3278,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->testRenderHint( static_cast<QPainter::RenderHint>( hb_parni(1))));
+      RBOOL(obj->testRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3325,7 +3325,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 
     if (obj != nullptr)
     {
-      obj->translate( *PQPOINTF(1));
+      obj->translate(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3340,7 +3340,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 
     if (obj != nullptr)
     {
-      obj->translate( *PQPOINT(1));
+      obj->translate(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

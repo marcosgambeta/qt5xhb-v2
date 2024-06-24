@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
     QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QRegularExpressionValidator(*PQREGULAREXPRESSION(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
     if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
     {
 #endif
-      obj->setRegularExpression( *PQREGULAREXPRESSION(1));
+      obj->setRegularExpression(*PQREGULAREXPRESSION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

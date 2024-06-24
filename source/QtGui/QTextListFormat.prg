@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStyle( static_cast<QTextListFormat::Style>( hb_parni(1)));
+      obj->setStyle(static_cast<QTextListFormat::Style>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

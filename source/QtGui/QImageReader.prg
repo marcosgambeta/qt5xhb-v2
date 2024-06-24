@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETCLIPRECT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setClipRect( *PQRECT(1));
+      obj->setClipRect(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFORMAT )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1));
+      obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDCLIPRECT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setScaledClipRect( *PQRECT(1));
+      obj->setScaledClipRect(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setScaledSize( *PQSIZE(1));
+      obj->setScaledSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->supportsOption( static_cast<QImageIOHandler::ImageOption>( hb_parni(1))));
+      RBOOL(obj->supportsOption(static_cast<QImageIOHandler::ImageOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -1152,12 +1152,12 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMATSFORMIMETYPE )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto list = QImageReader::imageFormatsForMimeType( *PQBYTEARRAY(1));
+    auto list = QImageReader::imageFormatsForMimeType(*PQBYTEARRAY(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

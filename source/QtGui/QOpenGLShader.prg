@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QOpenGLShader( static_cast<QOpenGLShader::ShaderType>( hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QOpenGLShader(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE2 )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RBOOL(obj->compileSourceCode( *PQBYTEARRAY(1)));
+      RBOOL(obj->compileSourceCode(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_HASOPENGLSHADERS )
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOPENGLCONTEXT(2) || HB_ISNIL(2)))
   {
 #endif
-    RBOOL( QOpenGLShader::hasOpenGLShaders( static_cast<QOpenGLShader::ShaderType>( hb_parni(1)), OPQOPENGLCONTEXT( 2, nullptr )));
+    RBOOL( QOpenGLShader::hasOpenGLShaders(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), OPQOPENGLCONTEXT( 2, nullptr )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

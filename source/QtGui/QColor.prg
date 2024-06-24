@@ -166,7 +166,7 @@ QColor( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
-  auto obj = new QColor( static_cast<Qt::GlobalColor>( hb_parni(1)));
+  auto obj = new QColor(static_cast<Qt::GlobalColor>(hb_parni(1)));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QColor(obj->convertTo( static_cast<QColor::Spec>( hb_parni(1))));
+      auto ptr = new QColor(obj->convertTo(static_cast<QColor::Spec>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -495,11 +495,11 @@ HB_FUNC_STATIC( QCOLOR_GETCMYK )
       int par4;
       int par5;
       obj->getCmyk( &par1, &par2, &par3, &par4, &par5);
-      hb_storni( par1, 1);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
-      hb_storni( par5, 5);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
+      hb_storni(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,11 +531,11 @@ HB_FUNC_STATIC( QCOLOR_GETCMYKF )
       qreal par4;
       qreal par5;
       obj->getCmykF( &par1, &par2, &par3, &par4, &par5);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
-      hb_stornd( par5, 5);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
+      hb_stornd(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,10 +566,10 @@ HB_FUNC_STATIC( QCOLOR_GETHSL )
       int par3;
       int par4;
       obj->getHsl( &par1, &par2, &par3, &par4);
-      hb_storni( par1, 1);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,10 +600,10 @@ HB_FUNC_STATIC( QCOLOR_GETHSLF )
       qreal par3;
       qreal par4;
       obj->getHslF( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,10 +634,10 @@ HB_FUNC_STATIC( QCOLOR_GETHSV )
       int par3;
       int par4;
       obj->getHsv( &par1, &par2, &par3, &par4);
-      hb_storni( par1, 1);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -668,10 +668,10 @@ HB_FUNC_STATIC( QCOLOR_GETHSVF )
       qreal par3;
       qreal par4;
       obj->getHsvF( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,10 +702,10 @@ HB_FUNC_STATIC( QCOLOR_GETRGB )
       int par3;
       int par4;
       obj->getRgb( &par1, &par2, &par3, &par4);
-      hb_storni( par1, 1);
-      hb_storni( par2, 2);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,10 +736,10 @@ HB_FUNC_STATIC( QCOLOR_GETRGBF )
       qreal par3;
       qreal par4;
       obj->getRgbF( &par1, &par2, &par3, &par4);
-      hb_stornd( par1, 1);
-      hb_stornd( par2, 2);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2435,7 +2435,7 @@ static QVariant toVariant( const QColor & )
 */
 void QColor_toVariant2()
 {
-  QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0));
+  QColor * color = (QColor *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
   QVariant * variant = new QVariant();
   variant->setValue<QColor>( *color);
   Qt5xHb::createReturnClass( variant, "QVARIANT", true);
@@ -2467,7 +2467,7 @@ HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
 {
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg(hb_param( 1, HB_IT_OBJECT ), "POINTER", 0));
+    QVariant * variant = (QVariant *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QColor * color = new QColor( variant->value<QColor>());
     Qt5xHb::createReturnClass( color, "QCOLOR", true);
   }

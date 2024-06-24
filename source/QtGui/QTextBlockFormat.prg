@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageBreakPolicy( static_cast<QTextBlockFormat::PageBreakFlags>( hb_parni(1)));
+      obj->setPageBreakPolicy(static_cast<QTextBlockFormat::PageBreakFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

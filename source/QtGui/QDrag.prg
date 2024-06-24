@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QPixmap(obj->dragCursor( static_cast<Qt::DropAction>( hb_parni(1))));
+      auto ptr = new QPixmap(obj->dragCursor(static_cast<Qt::DropAction>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 
     if (obj != nullptr)
     {
-      RENUM(obj->exec( HB_ISNIL(1) ? static_cast<Qt::DropActions >( Qt::MoveAction ) : static_cast<Qt::DropActions >( hb_parni(1))));
+      RENUM(obj->exec( HB_ISNIL(1) ? static_cast<Qt::DropActions >( Qt::MoveAction ) : static_cast<Qt::DropActions >(hb_parni(1))));
     }
 
   }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 
     if (obj != nullptr)
     {
-      RENUM(obj->exec( static_cast<Qt::DropActions>( hb_parni(1)), static_cast<Qt::DropAction>( hb_parni(2))));
+      RENUM(obj->exec(static_cast<Qt::DropActions>(hb_parni(1)), static_cast<Qt::DropAction>(hb_parni(2))));
     }
 
   }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
     if (ISNUMPAR(2) && ISQPIXMAP(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setDragCursor( *PQPIXMAP(1), static_cast<Qt::DropAction>( hb_parni(2)));
+      obj->setDragCursor(*PQPIXMAP(1), static_cast<Qt::DropAction>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setHotSpot( *PQPOINT(1));
+      obj->setHotSpot(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1));
+      obj->setPixmap(*PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

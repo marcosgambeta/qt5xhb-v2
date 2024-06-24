@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
     if (ISNUMPAR(1) && ISQTRANSFORM(1))
     {
 #endif
-      obj->setInputItemTransform( *PQTRANSFORM(1));
+      obj->setInputItemTransform(*PQTRANSFORM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->invokeAction( static_cast<QInputMethod::Action>( hb_parni(1)), PINT(2));
+      obj->invokeAction(static_cast<QInputMethod::Action>(hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->update( static_cast<Qt::InputMethodQueries>( hb_parni(1)));
+      obj->update(static_cast<Qt::InputMethodQueries>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

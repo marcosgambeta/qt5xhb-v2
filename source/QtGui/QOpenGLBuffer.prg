@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
     /*
     QOpenGLBuffer( QOpenGLBuffer::Type type )
     */
-    auto obj = new QOpenGLBuffer( static_cast<QOpenGLBuffer::Type>( hb_parni(1)));
+    auto obj = new QOpenGLBuffer(static_cast<QOpenGLBuffer::Type>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
     /*
     QOpenGLBuffer( const QOpenGLBuffer & other )
     */
-    auto obj = new QOpenGLBuffer( *PQOPENGLBUFFER(1));
+    auto obj = new QOpenGLBuffer(*PQOPENGLBUFFER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 
     if (obj != nullptr)
     {
-      obj->allocate( static_cast< const void*>( hb_parptr(1)), PINT(2));
+      obj->allocate(static_cast< const void*>(hb_parptr(1)), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->map( static_cast<QOpenGLBuffer::Access>( hb_parni(1)))));
+      hb_retptr(static_cast< void*>(obj->map(static_cast<QOpenGLBuffer::Access>(hb_parni(1)))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
     {
 #endif
-      RBOOL(obj->read(PINT(1), static_cast< void*>( hb_parptr(2)), PINT(3)));
+      RBOOL(obj->read(PINT(1), static_cast< void*>(hb_parptr(2)), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
     static void release( QOpenGLBuffer::Type type )
     */
 
-    QOpenGLBuffer::release( static_cast<QOpenGLBuffer::Type>( hb_parni(1)));
+    QOpenGLBuffer::release(static_cast<QOpenGLBuffer::Type>(hb_parni(1)));
 
     hb_itemReturn(hb_stackSelfItem());
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUsagePattern( static_cast<QOpenGLBuffer::UsagePattern>( hb_parni(1)));
+      obj->setUsagePattern(static_cast<QOpenGLBuffer::UsagePattern>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
     {
 #endif
-      obj->write(PINT(1), static_cast< const void*>( hb_parptr(2)), PINT(3));
+      obj->write(PINT(1), static_cast< const void*>(hb_parptr(2)), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

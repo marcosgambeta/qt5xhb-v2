@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETFORMAT )
     if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1));
+      obj->setFormat(*PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

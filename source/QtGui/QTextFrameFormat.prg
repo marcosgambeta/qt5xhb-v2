@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPosition( static_cast<QTextFrameFormat::Position>( hb_parni(1)));
+      obj->setPosition(static_cast<QTextFrameFormat::Position>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBorderBrush( *PQBRUSH(1));
+      obj->setBorderBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBorderStyle( static_cast<QTextFrameFormat::BorderStyle>( hb_parni(1)));
+      obj->setBorderStyle(static_cast<QTextFrameFormat::BorderStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 
     if (obj != nullptr)
     {
-      obj->setWidth( *PQTEXTLENGTH(1));
+      obj->setWidth(*PQTEXTLENGTH(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 
     if (obj != nullptr)
     {
-      obj->setHeight( *PQTEXTLENGTH(1));
+      obj->setHeight(*PQTEXTLENGTH(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageBreakPolicy( static_cast<QTextFrameFormat::PageBreakFlags>( hb_parni(1)));
+      obj->setPageBreakPolicy(static_cast<QTextFrameFormat::PageBreakFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

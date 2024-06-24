@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
   if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISLOG(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    auto obj = new QKeyEvent( static_cast<QEvent::Type>( hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>( hb_parni(3)), OPQSTRING(4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1));
+    auto obj = new QKeyEvent(static_cast<QEvent::Type>(hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)), OPQSTRING(4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->matches( static_cast<QKeySequence::StandardKey>( hb_parni(1))));
+      RBOOL(obj->matches(static_cast<QKeySequence::StandardKey>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

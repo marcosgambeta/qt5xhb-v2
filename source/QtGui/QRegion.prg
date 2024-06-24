@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     /*
     QRegion( int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle )
     */
-    auto obj = new QRegion(PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? static_cast<QRegion::RegionType >( QRegion::Rectangle ) : static_cast<QRegion::RegionType >( hb_parni(5)));
+    auto obj = new QRegion(PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? static_cast<QRegion::RegionType >( QRegion::Rectangle ) : static_cast<QRegion::RegionType >(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     /*
     QRegion( const QRect & r, QRegion::RegionType t = QRegion::Rectangle )
     */
-    auto obj = new QRegion( *PQRECT(1), HB_ISNIL(2) ? static_cast<QRegion::RegionType >( QRegion::Rectangle ) : static_cast<QRegion::RegionType >( hb_parni(2)));
+    auto obj = new QRegion(*PQRECT(1), HB_ISNIL(2) ? static_cast<QRegion::RegionType >( QRegion::Rectangle ) : static_cast<QRegion::RegionType >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     /*
     QRegion( const QPolygon & pa, Qt::FillRule fillRule = Qt::OddEvenFill )
     */
-    auto obj = new QRegion( *PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >( hb_parni(2)));
+    auto obj = new QRegion(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule >( Qt::OddEvenFill ) : static_cast<Qt::FillRule >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     /*
     QRegion( const QRegion & region )
     */
-    auto obj = new QRegion( *PQREGION(1));
+    auto obj = new QRegion(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QREGION_NEW )
     /*
     QRegion( const QBitmap & bitmap )
     */
-    auto obj = new QRegion( *PQBITMAP(1));
+    auto obj = new QRegion(*PQBITMAP(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QREGION_SWAP )
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
-      obj->swap( *PQREGION(1));
+      obj->swap(*PQREGION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->contains( *PQPOINT(1)));
+      RBOOL(obj->contains(*PQPOINT(1)));
     }
 
   }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->contains( *PQRECT(1)));
+      RBOOL(obj->contains(*PQRECT(1)));
     }
 
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
 
     if (obj != nullptr)
     {
-      obj->translate( *PQPOINT(1));
+      obj->translate(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRegion(obj->translated( *PQPOINT(1)));
+      auto ptr = new QRegion(obj->translated(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRegion(obj->united( *PQREGION(1)));
+      auto ptr = new QRegion(obj->united(*PQREGION(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRegion(obj->united( *PQRECT(1)));
+      auto ptr = new QRegion(obj->united(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QREGION_SUBTRACTED )
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
-      auto ptr = new QRegion(obj->subtracted( *PQREGION(1)));
+      auto ptr = new QRegion(obj->subtracted(*PQREGION(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QREGION_XORED )
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
-      auto ptr = new QRegion(obj->xored( *PQREGION(1)));
+      auto ptr = new QRegion(obj->xored(*PQREGION(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->intersects( *PQREGION(1)));
+      RBOOL(obj->intersects(*PQREGION(1)));
     }
 
   }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->intersects( *PQRECT(1)));
+      RBOOL(obj->intersects(*PQRECT(1)));
     }
 
   }

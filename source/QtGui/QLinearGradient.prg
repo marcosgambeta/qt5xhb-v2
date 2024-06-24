@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
     /*
     QLinearGradient( const QPointF & start, const QPointF & finalStop )
     */
-    auto obj = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2));
+    auto obj = new QLinearGradient(*PQPOINTF(1), *PQPOINTF(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
 
     if (obj != nullptr)
     {
-      obj->setFinalStop( *PQPOINTF(1));
+      obj->setFinalStop(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 
     if (obj != nullptr)
     {
-      obj->setStart( *PQPOINTF(1));
+      obj->setStart(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

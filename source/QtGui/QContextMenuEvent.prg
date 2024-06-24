@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
     /*
     QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
     */
-    auto obj = new QContextMenuEvent( static_cast<QContextMenuEvent::Reason>( hb_parni(1)), *PQPOINT(2), *PQPOINT(3), static_cast<Qt::KeyboardModifiers>( hb_parni(4)));
+    auto obj = new QContextMenuEvent(static_cast<QContextMenuEvent::Reason>(hb_parni(1)), *PQPOINT(2), *PQPOINT(3), static_cast<Qt::KeyboardModifiers>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
     /*
     QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos )
     */
-    auto obj = new QContextMenuEvent( static_cast<QContextMenuEvent::Reason>( hb_parni(1)), *PQPOINT(2), *PQPOINT(3));
+    auto obj = new QContextMenuEvent(static_cast<QContextMenuEvent::Reason>(hb_parni(1)), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
     /*
     QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos )
     */
-    auto obj = new QContextMenuEvent( static_cast<QContextMenuEvent::Reason>( hb_parni(1)), *PQPOINT(2));
+    auto obj = new QContextMenuEvent(static_cast<QContextMenuEvent::Reason>(hb_parni(1)), *PQPOINT(2));
     Qt5xHb::returnNewObject(obj, false);
 
   }

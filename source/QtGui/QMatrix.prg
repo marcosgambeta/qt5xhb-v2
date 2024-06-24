@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     /*
     QMatrix( Qt::Initialization )
     */
-    auto obj = new QMatrix( static_cast<Qt::Initialization>( hb_parni(1)));
+    auto obj = new QMatrix(static_cast<Qt::Initialization>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
     /*
     QMatrix( const QMatrix & matrix )
     */
-    auto obj = new QMatrix( *PQMATRIX(1));
+    auto obj = new QMatrix(*PQMATRIX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -334,8 +334,8 @@ HB_FUNC_STATIC( QMATRIX_MAP1 )
       int par3;
       int par4;
       obj->map(PINT(1), PINT(2), &par3, &par4);
-      hb_storni( par3, 3);
-      hb_storni( par4, 4);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,8 +364,8 @@ HB_FUNC_STATIC( QMATRIX_MAP2 )
       qreal par3;
       qreal par4;
       obj->map(PQREAL(1), PQREAL(2), &par3, &par4);
-      hb_stornd( par3, 3);
-      hb_stornd( par4, 4);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPoint(obj->map( *PQPOINT(1)));
+      auto ptr = new QPoint(obj->map(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
     }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPointF(obj->map( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->map(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QLine(obj->map( *PQLINE(1)));
+      auto ptr = new QLine(obj->map(*PQLINE(1)));
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QLineF(obj->map( *PQLINEF(1)));
+      auto ptr = new QLineF(obj->map(*PQLINEF(1)));
       Qt5xHb::createReturnClass(ptr, "QLINEF", true);
     }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygon(obj->map( *PQPOLYGON(1)));
+      auto ptr = new QPolygon(obj->map(*PQPOLYGON(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPolygonF(obj->map( *PQPOLYGONF(1)));
+      auto ptr = new QPolygonF(obj->map(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRegion(obj->map( *PQREGION(1)));
+      auto ptr = new QRegion(obj->map(*PQREGION(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 
     if (obj != nullptr)
     {
-      auto ptr = new QPainterPath(obj->map( *PQPAINTERPATH(1)));
+      auto ptr = new QPainterPath(obj->map(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QMATRIX_MAPRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->mapRect( *PQRECT(1)));
+      auto ptr = new QRect(obj->mapRect(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QMATRIX_MAPRECT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QRectF(obj->mapRect( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QMATRIX_MAPTOPOLYGON )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      auto ptr = new QPolygon(obj->mapToPolygon( *PQRECT(1)));
+      auto ptr = new QPolygon(obj->mapToPolygon(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QMATRIX_INVERTED )
       bool par1;
       auto ptr = new QMatrix(obj->inverted( &par1));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
-      hb_storl( par1, 1);
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

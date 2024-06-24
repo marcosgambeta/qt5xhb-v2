@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
     /*
     QVector2D( const QPoint & point )
     */
-    auto obj = new QVector2D( *PQPOINT(1));
+    auto obj = new QVector2D(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
     /*
     QVector2D( const QPointF & point )
     */
-    auto obj = new QVector2D( *PQPOINTF(1));
+    auto obj = new QVector2D(*PQPOINTF(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
     /*
     QVector2D( const QVector3D & vector )
     */
-    auto obj = new QVector2D( *PQVECTOR3D(1));
+    auto obj = new QVector2D(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
     /*
     QVector2D( const QVector4D & vector )
     */
-    auto obj = new QVector2D( *PQVECTOR4D(1));
+    auto obj = new QVector2D(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QVECTOR2D_DISTANCETOPOINT )
     if (ISNUMPAR(1) && ISQVECTOR2D(1))
     {
 #endif
-      RFLOAT(obj->distanceToPoint( *PQVECTOR2D(1)));
+      RFLOAT(obj->distanceToPoint(*PQVECTOR2D(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QVECTOR2D_DISTANCETOLINE )
     if (ISNUMPAR(2) && ISQVECTOR2D(1) && ISQVECTOR2D(2))
     {
 #endif
-      RFLOAT(obj->distanceToLine( *PQVECTOR2D(1), *PQVECTOR2D(2)));
+      RFLOAT(obj->distanceToLine(*PQVECTOR2D(1), *PQVECTOR2D(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
   if (ISNUMPAR(2) && ISQVECTOR2D(1) && ISQVECTOR2D(2))
   {
 #endif
-    RFLOAT( QVector2D::dotProduct( *PQVECTOR2D(1), *PQVECTOR2D(2)));
+    RFLOAT( QVector2D::dotProduct(*PQVECTOR2D(1), *PQVECTOR2D(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

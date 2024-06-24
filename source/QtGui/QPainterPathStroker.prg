@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
     QPainterPathStroker( const QPen & pen )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QPainterPathStroker( *PQPEN(1));
+    auto obj = new QPainterPathStroker(*PQPEN(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
-      auto ptr = new QPainterPath(obj->createStroke( *PQPAINTERPATH(1)));
+      auto ptr = new QPainterPath(obj->createStroke(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 #endif
       auto list = obj->dashPattern();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutND(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCapStyle( static_cast<Qt::PenCapStyle>( hb_parni(1)));
+      obj->setCapStyle(static_cast<Qt::PenCapStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 
     if (obj != nullptr)
     {
-      obj->setDashPattern( static_cast<Qt::PenStyle>( hb_parni(1)));
+      obj->setDashPattern(static_cast<Qt::PenStyle>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -399,15 +399,15 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
     if (obj != nullptr)
     {
       QVector<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->setDashPattern( par1);
+      obj->setDashPattern(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setJoinStyle( static_cast<Qt::PenJoinStyle>( hb_parni(1)));
+      obj->setJoinStyle(static_cast<Qt::PenJoinStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

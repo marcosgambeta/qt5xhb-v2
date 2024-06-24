@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_BEGINPAINT )
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
-      obj->beginPaint( *PQREGION(1));
+      obj->beginPaint(*PQREGION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_FLUSH )
     if (ISBETWEEN(1, 3) && ISQREGION(1) && (ISQWINDOW(2) || HB_ISNIL(2)) && (ISQPOINT(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->flush( *PQREGION(1), OPQWINDOW( 2, nullptr ), HB_ISNIL(3) ? QPoint() : *static_cast<QPoint*>(Qt5xHb::itemGetPtr(3)));
+      obj->flush(*PQREGION(1), OPQWINDOW( 2, nullptr ), HB_ISNIL(3) ? QPoint() : *static_cast<QPoint*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_RESIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->resize( *PQSIZE(1));
+      obj->resize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SCROLL )
     if (ISNUMPAR(3) && ISQREGION(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      RBOOL(obj->scroll( *PQREGION(1), PINT(2), PINT(3)));
+      RBOOL(obj->scroll(*PQREGION(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SETSTATICCONTENTS )
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
-      obj->setStaticContents( *PQREGION(1));
+      obj->setStaticContents(*PQREGION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

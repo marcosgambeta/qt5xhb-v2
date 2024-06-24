@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRINGLIST(obj->families( HB_ISNIL(1) ? static_cast<QFontDatabase::WritingSystem >( QFontDatabase::Any ) : static_cast<QFontDatabase::WritingSystem >( hb_parni(1))));
+      RQSTRINGLIST(obj->families( HB_ISNIL(1) ? static_cast<QFontDatabase::WritingSystem >( QFontDatabase::Any ) : static_cast<QFontDatabase::WritingSystem >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 
     if (obj != nullptr)
     {
-      RQSTRING(obj->styleString( *PQFONT(1)));
+      RQSTRING(obj->styleString(*PQFONT(1)));
     }
 
   }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 
     if (obj != nullptr)
     {
-      RQSTRING(obj->styleString( *PQFONTINFO(1)));
+      RQSTRING(obj->styleString(*PQFONTINFO(1)));
     }
 
   }
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    RINT( QFontDatabase::addApplicationFontFromData( *PQBYTEARRAY(1)));
+    RINT( QFontDatabase::addApplicationFontFromData(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QFontDatabase::writingSystemName( static_cast<QFontDatabase::WritingSystem>( hb_parni(1))));
+    RQSTRING( QFontDatabase::writingSystemName(static_cast<QFontDatabase::WritingSystem>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QFontDatabase::writingSystemSample( static_cast<QFontDatabase::WritingSystem>( hb_parni(1))));
+    RQSTRING( QFontDatabase::writingSystemSample(static_cast<QFontDatabase::WritingSystem>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

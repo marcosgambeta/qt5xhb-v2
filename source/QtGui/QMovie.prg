@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCacheMode( static_cast<QMovie::CacheMode>( hb_parni(1)));
+      obj->setCacheMode(static_cast<QMovie::CacheMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1));
+      obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setScaledSize( *PQSIZE(1));
+      obj->setScaledSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

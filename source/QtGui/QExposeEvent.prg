@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 {
   if (ISNUMPAR(1) && ISQREGION(1))
   {
-    auto obj = new QExposeEvent( *PQREGION(1));
+    auto obj = new QExposeEvent(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else

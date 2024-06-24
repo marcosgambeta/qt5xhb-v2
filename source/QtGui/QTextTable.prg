@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 
     if (obj != nullptr)
     {
-      obj->mergeCells( *PQTEXTCURSOR(1));
+      obj->mergeCells(*PQTEXTCURSOR(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 
     if (obj != nullptr)
     {
-      auto ptr = new QTextTableCell(obj->cellAt( *PQTEXTCURSOR(1)));
+      auto ptr = new QTextTableCell(obj->cellAt(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
 #endif
-      auto ptr = new QTextCursor(obj->rowStart( *PQTEXTCURSOR(1)));
+      auto ptr = new QTextCursor(obj->rowStart(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
 #endif
-      auto ptr = new QTextCursor(obj->rowEnd( *PQTEXTCURSOR(1)));
+      auto ptr = new QTextCursor(obj->rowEnd(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
     if (ISNUMPAR(1) && ISQTEXTTABLEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQTEXTTABLEFORMAT(1));
+      obj->setFormat(*PQTEXTTABLEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

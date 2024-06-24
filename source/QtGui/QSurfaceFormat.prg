@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
     /*
     QSurfaceFormat( QSurfaceFormat::FormatOptions options )
     */
-    auto obj = new QSurfaceFormat( static_cast<QSurfaceFormat::FormatOptions>( hb_parni(1)));
+    auto obj = new QSurfaceFormat(static_cast<QSurfaceFormat::FormatOptions>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
     /*
     QSurfaceFormat( const QSurfaceFormat & other )
     */
-    auto obj = new QSurfaceFormat( *PQSURFACEFORMAT(1));
+    auto obj = new QSurfaceFormat(*PQSURFACEFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSwapBehavior( static_cast<QSurfaceFormat::SwapBehavior>( hb_parni(1)));
+      obj->setSwapBehavior(static_cast<QSurfaceFormat::SwapBehavior>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setProfile( static_cast<QSurfaceFormat::OpenGLContextProfile>( hb_parni(1)));
+      obj->setProfile(static_cast<QSurfaceFormat::OpenGLContextProfile>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRenderableType( static_cast<QSurfaceFormat::RenderableType>( hb_parni(1)));
+      obj->setRenderableType(static_cast<QSurfaceFormat::RenderableType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOption( static_cast<QSurfaceFormat::FormatOptions>( hb_parni(1)));
+      obj->setOption(static_cast<QSurfaceFormat::FormatOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->testOption( static_cast<QSurfaceFormat::FormatOptions>( hb_parni(1))));
+      RBOOL(obj->testOption(static_cast<QSurfaceFormat::FormatOptions>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setCurrentValue( *PQVARIANT(1));
+      obj->setCurrentValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

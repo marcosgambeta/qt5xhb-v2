@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->rehighlightBlock( *PQTEXTBLOCK(1));
+      obj->rehighlightBlock(*PQTEXTBLOCK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     /*
     QVector4D( const QPoint & point )
     */
-    auto obj = new QVector4D( *PQPOINT(1));
+    auto obj = new QVector4D(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     /*
     QVector4D( const QPointF & point )
     */
-    auto obj = new QVector4D( *PQPOINTF(1));
+    auto obj = new QVector4D(*PQPOINTF(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     /*
     QVector4D( const QVector2D & vector )
     */
-    auto obj = new QVector4D( *PQVECTOR2D(1));
+    auto obj = new QVector4D(*PQVECTOR2D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     /*
     QVector4D( const QVector2D & vector, float zpos, float wpos )
     */
-    auto obj = new QVector4D( *PQVECTOR2D(1), PFLOAT(2), PFLOAT(3));
+    auto obj = new QVector4D(*PQVECTOR2D(1), PFLOAT(2), PFLOAT(3));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     /*
     QVector4D( const QVector3D & vector )
     */
-    auto obj = new QVector4D( *PQVECTOR3D(1));
+    auto obj = new QVector4D(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
     /*
     QVector4D( const QVector3D & vector, float wpos )
     */
-    auto obj = new QVector4D( *PQVECTOR3D(1), PFLOAT(2));
+    auto obj = new QVector4D(*PQVECTOR3D(1), PFLOAT(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QVECTOR4D_DOTPRODUCT )
   if (ISNUMPAR(2) && ISQVECTOR4D(1) && ISQVECTOR4D(2))
   {
 #endif
-    RFLOAT( QVector4D::dotProduct( *PQVECTOR4D(1), *PQVECTOR4D(2)));
+    RFLOAT( QVector4D::dotProduct(*PQVECTOR4D(1), *PQVECTOR4D(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

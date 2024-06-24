@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
   if (ISNUMPAR(1) && ISQURL(1))
   {
 #endif
-    RBOOL( QDesktopServices::openUrl( *PQURL(1)));
+    RBOOL( QDesktopServices::openUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

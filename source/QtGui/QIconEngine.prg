@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
     if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QSize(obj->actualSize( *PQSIZE(1), static_cast<QIcon::Mode>( hb_parni(2)), static_cast<QIcon::State>( hb_parni(3))));
+      auto ptr = new QSize(obj->actualSize(*PQSIZE(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
     if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->addFile(PQSTRING(1), *PQSIZE(2), static_cast<QIcon::Mode>( hb_parni(3)), static_cast<QIcon::State>( hb_parni(4)));
+      obj->addFile(PQSTRING(1), *PQSIZE(2), static_cast<QIcon::Mode>(hb_parni(3)), static_cast<QIcon::State>(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
     if (ISNUMPAR(3) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->addPixmap( *PQPIXMAP(1), static_cast<QIcon::Mode>( hb_parni(2)), static_cast<QIcon::State>( hb_parni(3)));
+      obj->addPixmap(*PQPIXMAP(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,12 +174,12 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
     if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto list = obj->availableSizes( HB_ISNIL(1) ? static_cast<QIcon::Mode >( QIcon::Normal ) : static_cast<QIcon::Mode >( hb_parni(1)), HB_ISNIL(2) ? static_cast<QIcon::State >( QIcon::Off ) : static_cast<QIcon::State >( hb_parni(2)));
+      auto list = obj->availableSizes( HB_ISNIL(1) ? static_cast<QIcon::Mode >( QIcon::Normal ) : static_cast<QIcon::Mode >(hb_parni(1)), HB_ISNIL(2) ? static_cast<QIcon::State >( QIcon::Off ) : static_cast<QIcon::State >(hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QICONENGINE_PAINT )
     if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
 #endif
-      obj->paint(PQPAINTER(1), *PQRECT(2), static_cast<QIcon::Mode>( hb_parni(3)), static_cast<QIcon::State>( hb_parni(4)));
+      obj->paint(PQPAINTER(1), *PQRECT(2), static_cast<QIcon::Mode>(hb_parni(3)), static_cast<QIcon::State>(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
     if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QPixmap(obj->pixmap( *PQSIZE(1), static_cast<QIcon::Mode>( hb_parni(2)), static_cast<QIcon::State>( hb_parni(3))));
+      auto ptr = new QPixmap(obj->pixmap(*PQSIZE(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QICONENGINE_READ )
     if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      RBOOL(obj->read( *PQDATASTREAM(1)));
+      RBOOL(obj->read(*PQDATASTREAM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
     {
 #endif
-      obj->virtual_hook(PINT(1), static_cast< void*>( hb_parptr(2)));
+      obj->virtual_hook(PINT(1), static_cast< void*>(hb_parptr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QICONENGINE_WRITE )
     if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      RBOOL(obj->write( *PQDATASTREAM(1)));
+      RBOOL(obj->write(*PQDATASTREAM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
