@@ -48,7 +48,7 @@ RETURN
 #include <QtQuick/QSGBasicGeometryNode>
 #endif
 
-HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_DELETE )
+HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_DELETE)
 {
   auto obj = static_cast<QSGBasicGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_DELETE )
 /*
 QSGGeometry * geometry()
 */
-HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
+HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
 {
   auto obj = static_cast<QSGBasicGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -90,9 +90,9 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
 }
 
 /*
-void setGeometry( QSGGeometry * geometry )
+void setGeometry(QSGGeometry * geometry)
 */
-HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_SETGEOMETRY )
+HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_SETGEOMETRY)
 {
   auto obj = static_cast<QSGBasicGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 

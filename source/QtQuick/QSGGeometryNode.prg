@@ -54,7 +54,7 @@ RETURN
 /*
 QSGGeometryNode()
 */
-HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
+HB_FUNC_STATIC(QSGGEOMETRYNODE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGGEOMETRYNODE_DELETE )
+HB_FUNC_STATIC(QSGGEOMETRYNODE_DELETE)
 {
   auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_DELETE )
 /*
 QSGMaterial * material() const
 */
-HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
+HB_FUNC_STATIC(QSGGEOMETRYNODE_MATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
 /*
 QSGMaterial * opaqueMaterial() const
 */
-HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
+HB_FUNC_STATIC(QSGGEOMETRYNODE_OPAQUEMATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -134,9 +134,9 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
 }
 
 /*
-void setMaterial( QSGMaterial * material )
+void setMaterial(QSGMaterial * material)
 */
-HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
+HB_FUNC_STATIC(QSGGEOMETRYNODE_SETMATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 }
 
 /*
-void setOpaqueMaterial( QSGMaterial * material )
+void setOpaqueMaterial(QSGMaterial * material)
 */
-HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
+HB_FUNC_STATIC(QSGGEOMETRYNODE_SETOPAQUEMATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 

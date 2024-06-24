@@ -56,7 +56,7 @@ RETURN
 
 #include <QtQuick/QSGTexture>
 
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_DELETE)
 {
   auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -75,9 +75,9 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 }
 
 /*
-virtual QSGTexture * createTexture( QQuickWindow * window ) const = 0
+virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 {
   auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
 /*
 virtual QImage image() const
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
 {
   auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
 /*
 virtual int textureByteCount() const = 0
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 {
   auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
 /*
 virtual QSize textureSize() const = 0
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTURESIZE)
 {
   auto obj = static_cast<QQuickTextureFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 

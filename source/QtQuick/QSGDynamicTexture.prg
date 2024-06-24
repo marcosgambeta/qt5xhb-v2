@@ -50,7 +50,7 @@ RETURN
 /*
 virtual bool updateTexture() = 0
 */
-HB_FUNC_STATIC( QSGDYNAMICTEXTURE_UPDATETEXTURE )
+HB_FUNC_STATIC(QSGDYNAMICTEXTURE_UPDATETEXTURE)
 {
   auto obj = qobject_cast<QSGDynamicTexture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

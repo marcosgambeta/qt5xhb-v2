@@ -52,7 +52,7 @@ RETURN
 /*
 QSGFlatColorMaterial()
 */
-HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_NEW )
+HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_DELETE )
+HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_DELETE)
 {
   auto obj = static_cast<QSGFlatColorMaterial*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_DELETE )
 /*
 const QColor & color() const
 */
-HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
+HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_COLOR)
 {
   auto obj = static_cast<QSGFlatColorMaterial*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -107,9 +107,9 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
 }
 
 /*
-void setColor( const QColor & color )
+void setColor(const QColor & color)
 */
-HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_SETCOLOR )
+HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_SETCOLOR)
 {
   auto obj = static_cast<QSGFlatColorMaterial*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_SETCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

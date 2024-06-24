@@ -55,13 +55,13 @@ RETURN
 #endif
 
 /*
-QQuickImageProvider( QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0)
+QQuickImageProvider(QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0)
 */
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QQuickImageProvider(static_cast<QQmlImageProviderBase::ImageType>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags >( 0 ) : static_cast<QQmlImageProviderBase::Flags >(hb_parni(2)));
+    auto obj = new QQuickImageProvider(static_cast<QQmlImageProviderBase::ImageType>(hb_parni(1)), HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags >(0) : static_cast<QQmlImageProviderBase::Flags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_DELETE)
 {
   auto obj = static_cast<QQuickImageProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
 /*
 virtual QQmlImageProviderBase::Flags flags() const = 0
 */
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 {
   auto obj = static_cast<QQuickImageProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
 /*
 virtual QQmlImageProviderBase::ImageType imageType() const = 0
 */
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 {
   auto obj = static_cast<QQuickImageProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -135,9 +135,9 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
 }
 
 /*
-virtual QImage requestImage( const QString & id, QSize * size, const QSize & requestedSize )
+virtual QImage requestImage(const QString & id, QSize * size, const QSize & requestedSize)
 */
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 {
   auto obj = static_cast<QQuickImageProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
 }
 
 /*
-virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & requestedSize )
+virtual QPixmap requestPixmap(const QString & id, QSize * size, const QSize & requestedSize)
 */
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 {
   auto obj = static_cast<QQuickImageProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -185,9 +185,9 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
 }
 
 /*
-virtual QQuickTextureFactory * requestTexture( const QString & id, QSize * size, const QSize & requestedSize )
+virtual QQuickTextureFactory * requestTexture(const QString & id, QSize * size, const QSize & requestedSize)
 */
-HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
+HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 {
   auto obj = static_cast<QQuickImageProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 

@@ -51,7 +51,7 @@ RETURN
 /*
 QSGOpacityNode()
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
+HB_FUNC_STATIC(QSGOPACITYNODE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
+HB_FUNC_STATIC(QSGOPACITYNODE_DELETE)
 {
   auto obj = static_cast<QSGOpacityNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
+HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
 {
   auto obj = static_cast<QSGOpacityNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -105,9 +105,9 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
 }
 
 /*
-void setOpacity( qreal opacity )
+void setOpacity(qreal opacity)
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
+HB_FUNC_STATIC(QSGOPACITYNODE_SETOPACITY)
 {
   auto obj = static_cast<QSGOpacityNode*>(Qt5xHb::itemGetPtrStackSelfItem());
 
