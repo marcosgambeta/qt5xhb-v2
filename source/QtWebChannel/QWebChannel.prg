@@ -61,14 +61,14 @@ RETURN
 #endif
 
 /*
-QWebChannel( QObject * parent = nullptr )
+QWebChannel(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_NEW )
+HB_FUNC_STATIC(QWEBCHANNEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWebChannel( OPQOBJECT( 1, nullptr));
+    auto obj = new QWebChannel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
+HB_FUNC_STATIC(QWEBCHANNEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
 }
 
 /*
-Q_INVOKABLE void registerObject( const QString & id, QObject * object )
+Q_INVOKABLE void registerObject(const QString & id, QObject * object)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
+HB_FUNC_STATIC(QWEBCHANNEL_REGISTEROBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 }
 
 /*
-Q_INVOKABLE void deregisterObject( QObject * object )
+Q_INVOKABLE void deregisterObject(QObject * object)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
+HB_FUNC_STATIC(QWEBCHANNEL_DEREGISTEROBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 /*
 bool blockUpdates() const
 */
-HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
+HB_FUNC_STATIC(QWEBCHANNEL_BLOCKUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -181,9 +181,9 @@ HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 }
 
 /*
-void setBlockUpdates( bool block )
+void setBlockUpdates(bool block)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
+HB_FUNC_STATIC(QWEBCHANNEL_SETBLOCKUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -209,9 +209,9 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 }
 
 /*
-void connectTo( QWebChannelAbstractTransport * transport )
+void connectTo(QWebChannelAbstractTransport * transport)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
+HB_FUNC_STATIC(QWEBCHANNEL_CONNECTTO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -237,9 +237,9 @@ HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 }
 
 /*
-void disconnectFrom( QWebChannelAbstractTransport * transport )
+void disconnectFrom(QWebChannelAbstractTransport * transport)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
+HB_FUNC_STATIC(QWEBCHANNEL_DISCONNECTFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -265,9 +265,9 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 }
 
 /*
-void blockUpdatesChanged( bool block )
+void blockUpdatesChanged(bool block)
 */
-HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
+HB_FUNC_STATIC(QWEBCHANNEL_ONBLOCKUPDATESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());

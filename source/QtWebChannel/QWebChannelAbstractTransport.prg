@@ -56,7 +56,7 @@ RETURN
 
 #include <QtCore/QJsonObject>
 
-HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
+HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannelAbstractTransport*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -77,9 +77,9 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 }
 
 /*
-virtual void sendMessage( const QJsonObject & message ) = 0
+virtual void sendMessage(const QJsonObject & message) = 0
 */
-HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
+HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebChannelAbstractTransport*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +105,9 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 }
 
 /*
-void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
+void messageReceived(const QJsonObject & message, QWebChannelAbstractTransport * transport)
 */
-HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
+HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebChannelAbstractTransport*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBCHANNELABSTRACTTRANSPORT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QJSONOBJECT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QJSONOBJECT");
             auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QWEBCHANNELABSTRACTTRANSPORT");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);

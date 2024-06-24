@@ -55,14 +55,14 @@ RETURN
 #endif
 
 /*
-QQmlWebChannel( QObject * parent = nullptr )
+QQmlWebChannel(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
+HB_FUNC_STATIC(QQMLWEBCHANNEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QQmlWebChannel( OPQOBJECT( 1, nullptr));
+    auto obj = new QQmlWebChannel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QQMLWEBCHANNEL_DELETE )
+HB_FUNC_STATIC(QQMLWEBCHANNEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QQmlWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -93,9 +93,9 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_DELETE )
 }
 
 /*
-Q_INVOKABLE void connectTo( QObject * transport )
+Q_INVOKABLE void connectTo(QObject * transport)
 */
-HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
+HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QQmlWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +121,9 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
 }
 
 /*
-Q_INVOKABLE void disconnectFrom( QObject * transport )
+Q_INVOKABLE void disconnectFrom(QObject * transport)
 */
-HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
+HB_FUNC_STATIC(QQMLWEBCHANNEL_DISCONNECTFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QQmlWebChannel*>(Qt5xHb::getQObjectPointerFromSelfItem());
