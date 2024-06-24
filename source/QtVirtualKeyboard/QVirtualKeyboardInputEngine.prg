@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInputMode( static_cast<QVirtualKeyboardInputEngine::InputMode>( hb_parni(1)));
+      obj->setInputMode(static_cast<QVirtualKeyboardInputEngine::InputMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYPRESS )
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISLOG(4))
     {
 #endif
-      RBOOL(obj->virtualKeyPress( static_cast<Qt::Key>( hb_parni(1)), PQSTRING(2), static_cast<Qt::KeyboardModifiers>( hb_parni(3)), PBOOL(4)));
+      RBOOL(obj->virtualKeyPress(static_cast<Qt::Key>(hb_parni(1)), PQSTRING(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)), PBOOL(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYRELEASE )
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      RBOOL(obj->virtualKeyRelease( static_cast<Qt::Key>( hb_parni(1)), PQSTRING(2), static_cast<Qt::KeyboardModifiers>( hb_parni(3))));
+      RBOOL(obj->virtualKeyRelease(static_cast<Qt::Key>(hb_parni(1)), PQSTRING(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCLICK )
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      RBOOL(obj->virtualKeyClick( static_cast<Qt::Key>( hb_parni(1)), PQSTRING(2), static_cast<Qt::KeyboardModifiers>( hb_parni(3))));
+      RBOOL(obj->virtualKeyClick(static_cast<Qt::Key>(hb_parni(1)), PQSTRING(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

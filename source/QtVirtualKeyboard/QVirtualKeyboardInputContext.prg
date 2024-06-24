@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT )
     if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
     {
 #endif
-      obj->setSelectionOnFocusObject( *PQPOINTF(1), *PQPOINTF(2));
+      obj->setSelectionOnFocusObject(*PQPOINTF(1), *PQPOINTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
