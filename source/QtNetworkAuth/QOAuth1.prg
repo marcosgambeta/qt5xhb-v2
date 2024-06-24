@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setTemporaryCredentialsUrl( *PQURL(1));
+      obj->setTemporaryCredentialsUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setTokenCredentialsUrl( *PQURL(1));
+      obj->setTokenCredentialsUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSignatureMethod( static_cast<QOAuth1::SignatureMethod>( hb_parni(1)));
+      obj->setSignatureMethod(static_cast<QOAuth1::SignatureMethod>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

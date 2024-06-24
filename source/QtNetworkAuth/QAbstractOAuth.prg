@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setAuthorizationUrl( *PQURL(1));
+      obj->setAuthorizationUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContentType( static_cast<QAbstractOAuth::ContentType>( hb_parni(1)));
+      obj->setContentType(static_cast<QAbstractOAuth::ContentType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

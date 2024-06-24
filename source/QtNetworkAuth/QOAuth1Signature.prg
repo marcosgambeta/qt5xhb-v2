@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
     QOAuth1Signature( const QOAuth1Signature & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QOAuth1Signature( *PQOAUTH1SIGNATURE(1));
+    auto obj = new QOAuth1Signature(*PQOAUTH1SIGNATURE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHttpRequestMethod( static_cast<QOAuth1Signature::HttpRequestMethod>( hb_parni(1)));
+      obj->setHttpRequestMethod(static_cast<QOAuth1Signature::HttpRequestMethod>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETURL )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1));
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_ADDREQUESTBODY )
     if (ISNUMPAR(1) && ISQURLQUERY(1))
     {
 #endif
-      obj->addRequestBody( *PQURLQUERY(1));
+      obj->addRequestBody(*PQURLQUERY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
 #endif
       auto list = obj->keys();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutC(nullptr, static_cast<const char*>(item.toLatin1().data()));
         hb_arrayAddForward(pArray, pItem);
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SWAP )
     if (ISNUMPAR(1) && ISQOAUTH1SIGNATURE(1))
     {
 #endif
-      obj->swap( *PQOAUTH1SIGNATURE(1));
+      obj->swap(*PQOAUTH1SIGNATURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
