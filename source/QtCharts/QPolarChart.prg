@@ -57,14 +57,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-QPolarChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
+QPolarChart(QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
 */
-HB_FUNC_STATIC( QPOLARCHART_NEW )
+HB_FUNC_STATIC(QPOLARCHART_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QPolarChart( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( Qt::WindowFlags() ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QPolarChart(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(Qt::WindowFlags()) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QPOLARCHART_NEW )
 /*
 ~QPolarChart()
 */
-HB_FUNC_STATIC( QPOLARCHART_DELETE )
+HB_FUNC_STATIC(QPOLARCHART_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QPolarChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QPOLARCHART_DELETE )
 }
 
 /*
-void addAxis( QAbstractAxis * axis, QPolarChart::PolarOrientation polarOrientation)
+void addAxis(QAbstractAxis * axis, QPolarChart::PolarOrientation polarOrientation)
 */
-HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
+HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QPolarChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -129,16 +129,16 @@ HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 QList<QAbstractAxis*> axes(PolarOrientations polarOrientation = PolarOrientations(PolarOrientationRadial | PolarOrientationAngular), QAbstractSeries *series = nullptr) const
 */
 /*
-static QPolarChart::PolarOrientation axisPolarOrientation( QAbstractAxis * axis )
+static QPolarChart::PolarOrientation axisPolarOrientation(QAbstractAxis * axis)
 */
-HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
+HB_FUNC_STATIC(QPOLARCHART_AXISPOLARORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQABSTRACTAXIS(1))
   {
 #endif
-    RENUM( QPolarChart::axisPolarOrientation(PQABSTRACTAXIS(1)));
+    RENUM(QPolarChart::axisPolarOrientation(PQABSTRACTAXIS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

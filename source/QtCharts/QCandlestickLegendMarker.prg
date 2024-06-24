@@ -60,14 +60,14 @@ using namespace QtCharts;
 #endif
 
 /*
-QCandlestickLegendMarker( QCandlestickSeries * series, QLegend * legend, QObject * parent = nullptr )
+QCandlestickLegendMarker(QCandlestickSeries * series, QLegend * legend, QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
+HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if (ISBETWEEN(2, 3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QCandlestickLegendMarker(PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QCandlestickLegendMarker(PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
 /*
 virtual ~QCandlestickLegendMarker()
 */
-HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
+HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
 /*
 virtual QLegendMarker::LegendMarkerType type()
 */
-HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
+HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
 /*
 virtual QCandlestickSeries * series()
 */
-HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
+HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());

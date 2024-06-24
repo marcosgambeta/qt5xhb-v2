@@ -60,14 +60,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-QBarLegendMarker( QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr )
+QBarLegendMarker(QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
+HB_FUNC_STATIC(QBARLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(3, 4) && ISQABSTRACTBARSERIES(1) && ISQBARSET(2) && ISQLEGEND(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
-    auto obj = new QBarLegendMarker(PQABSTRACTBARSERIES(1), PQBARSET(2), PQLEGEND(3), OPQOBJECT( 4, nullptr));
+    auto obj = new QBarLegendMarker(PQABSTRACTBARSERIES(1), PQBARSET(2), PQLEGEND(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
 /*
 virtual ~QBarLegendMarker()
 */
-HB_FUNC_STATIC( QBARLEGENDMARKER_DELETE )
+HB_FUNC_STATIC(QBARLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_DELETE )
 /*
 virtual QLegendMarker::LegendMarkerType type()
 */
-HB_FUNC_STATIC( QBARLEGENDMARKER_TYPE )
+HB_FUNC_STATIC(QBARLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_TYPE )
 /*
 virtual QAbstractBarSeries * series()
 */
-HB_FUNC_STATIC( QBARLEGENDMARKER_SERIES )
+HB_FUNC_STATIC(QBARLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_SERIES )
 /*
 QBarSet * barset()
 */
-HB_FUNC_STATIC( QBARLEGENDMARKER_BARSET )
+HB_FUNC_STATIC(QBARLEGENDMARKER_BARSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());

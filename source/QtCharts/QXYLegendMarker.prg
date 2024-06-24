@@ -58,14 +58,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-QXYLegendMarker( QXYSeries * series, QLegend * legend, QObject * parent = nullptr )
+QXYLegendMarker(QXYSeries * series, QLegend * legend, QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
+HB_FUNC_STATIC(QXYLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(2, 3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QXYLegendMarker(PQXYSERIES(1), PQLEGEND(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QXYLegendMarker(PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 /*
 virtual ~QXYLegendMarker()
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
+HB_FUNC_STATIC(QXYLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QXYLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
 /*
 virtual QLegendMarker::LegendMarkerType type()
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
+HB_FUNC_STATIC(QXYLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QXYLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
 /*
 virtual QXYSeries * series()
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
+HB_FUNC_STATIC(QXYLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QXYLegendMarker*>(Qt5xHb::getQObjectPointerFromSelfItem());

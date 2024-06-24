@@ -78,14 +78,14 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-QHPieModelMapper( QObject * parent = nullptr )
+QHPieModelMapper(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_NEW )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QHPieModelMapper( OPQOBJECT( 1, nullptr));
+    auto obj = new QHPieModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_NEW )
 /*
 QPieSeries * series() const
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SERIES )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries( QPieSeries * series )
+void setSeries(QPieSeries * series)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SETSERIES )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETSERIES )
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_MODEL )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_MODEL )
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel(QAbstractItemModel * model)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SETMODEL )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETMODEL )
 /*
 int valuesRow() const
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_VALUESROW )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_VALUESROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +232,9 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_VALUESROW )
 }
 
 /*
-void setValuesRow( int valuesRow )
+void setValuesRow(int valuesRow)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SETVALUESROW )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SETVALUESROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETVALUESROW )
 /*
 int labelsRow() const
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_LABELSROW )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_LABELSROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -286,9 +286,9 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_LABELSROW )
 }
 
 /*
-void setLabelsRow( int labelsRow )
+void setLabelsRow(int labelsRow)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SETLABELSROW )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SETLABELSROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETLABELSROW )
 /*
 int firstColumn() const
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_FIRSTCOLUMN )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_FIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -340,9 +340,9 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_FIRSTCOLUMN )
 }
 
 /*
-void setFirstColumn( int firstColumn )
+void setFirstColumn(int firstColumn)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SETFIRSTCOLUMN )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SETFIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETFIRSTCOLUMN )
 /*
 int columnCount() const
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_COLUMNCOUNT )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +394,9 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount( int columnCount )
+void setColumnCount(int columnCount)
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_SETCOLUMNCOUNT )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_SETCOLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETCOLUMNCOUNT )
 /*
 void columnCountChanged()
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 /*
 void firstColumnChanged()
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 /*
 void labelsRowChanged()
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_ONLABELSROWCHANGED )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_ONLABELSROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONLABELSROWCHANGED )
 /*
 void modelReplaced()
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_ONMODELREPLACED )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONMODELREPLACED )
 /*
 void seriesReplaced()
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_ONSERIESREPLACED )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONSERIESREPLACED )
 /*
 void valuesRowChanged()
 */
-HB_FUNC_STATIC( QHPIEMODELMAPPER_ONVALUESROWCHANGED )
+HB_FUNC_STATIC(QHPIEMODELMAPPER_ONVALUESROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHPieModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());

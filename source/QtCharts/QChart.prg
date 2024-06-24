@@ -130,14 +130,14 @@ using namespace QtCharts;
 #include <QtCore/QLocale>
 
 /*
-QChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
+QChart(QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
 */
-HB_FUNC_STATIC( QCHART_NEW )
+HB_FUNC_STATIC(QCHART_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QChart( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( Qt::WindowFlags() ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QChart(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(Qt::WindowFlags()) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCHART_NEW )
 /*
 ~QChart()
 */
-HB_FUNC_STATIC( QCHART_DELETE )
+HB_FUNC_STATIC(QCHART_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCHART_DELETE )
 /*
 QChart::ChartTheme theme() const
 */
-HB_FUNC_STATIC( QCHART_THEME )
+HB_FUNC_STATIC(QCHART_THEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -197,9 +197,9 @@ HB_FUNC_STATIC( QCHART_THEME )
 }
 
 /*
-void setTheme( QChart::ChartTheme theme )
+void setTheme(QChart::ChartTheme theme)
 */
-HB_FUNC_STATIC( QCHART_SETTHEME )
+HB_FUNC_STATIC(QCHART_SETTHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCHART_SETTHEME )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QCHART_TITLE )
+HB_FUNC_STATIC(QCHART_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QCHART_TITLE )
 /*
 bool isBackgroundVisible() const
 */
-HB_FUNC_STATIC( QCHART_ISBACKGROUNDVISIBLE )
+HB_FUNC_STATIC(QCHART_ISBACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -277,9 +277,9 @@ HB_FUNC_STATIC( QCHART_ISBACKGROUNDVISIBLE )
 }
 
 /*
-void setBackgroundVisible( bool visible = true )
+void setBackgroundVisible(bool visible = true)
 */
-HB_FUNC_STATIC( QCHART_SETBACKGROUNDVISIBLE )
+HB_FUNC_STATIC(QCHART_SETBACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDVISIBLE )
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setBackgroundVisible( OPBOOL( 1, true));
+      obj->setBackgroundVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDVISIBLE )
 /*
 bool isDropShadowEnabled() const
 */
-HB_FUNC_STATIC( QCHART_ISDROPSHADOWENABLED )
+HB_FUNC_STATIC(QCHART_ISDROPSHADOWENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -331,9 +331,9 @@ HB_FUNC_STATIC( QCHART_ISDROPSHADOWENABLED )
 }
 
 /*
-void setDropShadowEnabled( bool enabled = true )
+void setDropShadowEnabled(bool enabled = true)
 */
-HB_FUNC_STATIC( QCHART_SETDROPSHADOWENABLED )
+HB_FUNC_STATIC(QCHART_SETDROPSHADOWENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QCHART_SETDROPSHADOWENABLED )
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setDropShadowEnabled( OPBOOL( 1, true));
+      obj->setDropShadowEnabled(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QCHART_SETDROPSHADOWENABLED )
 /*
 qreal backgroundRoundness() const
 */
-HB_FUNC_STATIC( QCHART_BACKGROUNDROUNDNESS )
+HB_FUNC_STATIC(QCHART_BACKGROUNDROUNDNESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -385,9 +385,9 @@ HB_FUNC_STATIC( QCHART_BACKGROUNDROUNDNESS )
 }
 
 /*
-void setBackgroundRoundness( qreal diameter )
+void setBackgroundRoundness(qreal diameter)
 */
-HB_FUNC_STATIC( QCHART_SETBACKGROUNDROUNDNESS )
+HB_FUNC_STATIC(QCHART_SETBACKGROUNDROUNDNESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDROUNDNESS )
 /*
 QChart::AnimationOptions animationOptions() const
 */
-HB_FUNC_STATIC( QCHART_ANIMATIONOPTIONS )
+HB_FUNC_STATIC(QCHART_ANIMATIONOPTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -439,9 +439,9 @@ HB_FUNC_STATIC( QCHART_ANIMATIONOPTIONS )
 }
 
 /*
-void setAnimationOptions( QChart::AnimationOptions options )
+void setAnimationOptions(QChart::AnimationOptions options)
 */
-HB_FUNC_STATIC( QCHART_SETANIMATIONOPTIONS )
+HB_FUNC_STATIC(QCHART_SETANIMATIONOPTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QCHART_SETANIMATIONOPTIONS )
 /*
 int animationDuration() const
 */
-HB_FUNC_STATIC( QCHART_ANIMATIONDURATION )
+HB_FUNC_STATIC(QCHART_ANIMATIONDURATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -493,9 +493,9 @@ HB_FUNC_STATIC( QCHART_ANIMATIONDURATION )
 }
 
 /*
-void setAnimationDuration( int msecs )
+void setAnimationDuration(int msecs)
 */
-HB_FUNC_STATIC( QCHART_SETANIMATIONDURATION )
+HB_FUNC_STATIC(QCHART_SETANIMATIONDURATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QCHART_SETANIMATIONDURATION )
 /*
 QEasingCurve animationEasingCurve() const
 */
-HB_FUNC_STATIC( QCHART_ANIMATIONEASINGCURVE )
+HB_FUNC_STATIC(QCHART_ANIMATIONEASINGCURVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -548,9 +548,9 @@ HB_FUNC_STATIC( QCHART_ANIMATIONEASINGCURVE )
 }
 
 /*
-void setAnimationEasingCurve( const QEasingCurve & curve )
+void setAnimationEasingCurve(const QEasingCurve & curve)
 */
-HB_FUNC_STATIC( QCHART_SETANIMATIONEASINGCURVE )
+HB_FUNC_STATIC(QCHART_SETANIMATIONEASINGCURVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QCHART_SETANIMATIONEASINGCURVE )
 /*
 QMargins margins() const
 */
-HB_FUNC_STATIC( QCHART_MARGINS )
+HB_FUNC_STATIC(QCHART_MARGINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -603,9 +603,9 @@ HB_FUNC_STATIC( QCHART_MARGINS )
 }
 
 /*
-void setMargins( const QMargins & margins )
+void setMargins(const QMargins & margins)
 */
-HB_FUNC_STATIC( QCHART_SETMARGINS )
+HB_FUNC_STATIC(QCHART_SETMARGINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QCHART_SETMARGINS )
 /*
 QRectF plotArea() const
 */
-HB_FUNC_STATIC( QCHART_PLOTAREA )
+HB_FUNC_STATIC(QCHART_PLOTAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QCHART_PLOTAREA )
 /*
 bool isPlotAreaBackgroundVisible() const
 */
-HB_FUNC_STATIC( QCHART_ISPLOTAREABACKGROUNDVISIBLE )
+HB_FUNC_STATIC(QCHART_ISPLOTAREABACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -684,9 +684,9 @@ HB_FUNC_STATIC( QCHART_ISPLOTAREABACKGROUNDVISIBLE )
 }
 
 /*
-void setPlotAreaBackgroundVisible( bool visible = true )
+void setPlotAreaBackgroundVisible(bool visible = true)
 */
-HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDVISIBLE )
+HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDVISIBLE )
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setPlotAreaBackgroundVisible( OPBOOL( 1, true));
+      obj->setPlotAreaBackgroundVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDVISIBLE )
 /*
 bool localizeNumbers() const
 */
-HB_FUNC_STATIC( QCHART_LOCALIZENUMBERS )
+HB_FUNC_STATIC(QCHART_LOCALIZENUMBERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -738,9 +738,9 @@ HB_FUNC_STATIC( QCHART_LOCALIZENUMBERS )
 }
 
 /*
-void setLocalizeNumbers( bool localize )
+void setLocalizeNumbers(bool localize)
 */
-HB_FUNC_STATIC( QCHART_SETLOCALIZENUMBERS )
+HB_FUNC_STATIC(QCHART_SETLOCALIZENUMBERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QCHART_SETLOCALIZENUMBERS )
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QCHART_LOCALE )
+HB_FUNC_STATIC(QCHART_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -793,9 +793,9 @@ HB_FUNC_STATIC( QCHART_LOCALE )
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale(const QLocale & locale)
 */
-HB_FUNC_STATIC( QCHART_SETLOCALE )
+HB_FUNC_STATIC(QCHART_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QCHART_SETLOCALE )
 /*
 QChart::ChartType chartType() const
 */
-HB_FUNC_STATIC( QCHART_CHARTTYPE )
+HB_FUNC_STATIC(QCHART_CHARTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -847,9 +847,9 @@ HB_FUNC_STATIC( QCHART_CHARTTYPE )
 }
 
 /*
-void addSeries( QAbstractSeries * series )
+void addSeries(QAbstractSeries * series)
 */
-HB_FUNC_STATIC( QCHART_ADDSERIES )
+HB_FUNC_STATIC(QCHART_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -875,9 +875,9 @@ HB_FUNC_STATIC( QCHART_ADDSERIES )
 }
 
 /*
-void removeSeries( QAbstractSeries * series )
+void removeSeries(QAbstractSeries * series)
 */
-HB_FUNC_STATIC( QCHART_REMOVESERIES )
+HB_FUNC_STATIC(QCHART_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QCHART_REMOVESERIES )
 /*
 void removeAllSeries()
 */
-HB_FUNC_STATIC( QCHART_REMOVEALLSERIES )
+HB_FUNC_STATIC(QCHART_REMOVEALLSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -931,9 +931,9 @@ HB_FUNC_STATIC( QCHART_REMOVEALLSERIES )
 }
 
 /*
-QList<QAbstractSeries *> series() const
+QList<QAbstractSeries*> series() const
 */
-HB_FUNC_STATIC( QCHART_SERIES )
+HB_FUNC_STATIC(QCHART_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -980,9 +980,9 @@ HB_FUNC_STATIC( QCHART_SERIES )
 }
 
 /*
-void setAxisX( QAbstractAxis * axis, QAbstractSeries * series = nullptr )
+void setAxisX(QAbstractAxis * axis, QAbstractSeries * series = nullptr)
 */
-HB_FUNC_STATIC( QCHART_SETAXISX )
+HB_FUNC_STATIC(QCHART_SETAXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QCHART_SETAXISX )
     if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setAxisX(PQABSTRACTAXIS(1), OPQABSTRACTSERIES( 2, nullptr));
+      obj->setAxisX(PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1008,9 +1008,9 @@ HB_FUNC_STATIC( QCHART_SETAXISX )
 }
 
 /*
-void setAxisY( QAbstractAxis * axis, QAbstractSeries * series = nullptr )
+void setAxisY(QAbstractAxis * axis, QAbstractSeries * series = nullptr)
 */
-HB_FUNC_STATIC( QCHART_SETAXISY )
+HB_FUNC_STATIC(QCHART_SETAXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QCHART_SETAXISY )
     if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setAxisY(PQABSTRACTAXIS(1), OPQABSTRACTSERIES( 2, nullptr));
+      obj->setAxisY(PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1036,9 +1036,9 @@ HB_FUNC_STATIC( QCHART_SETAXISY )
 }
 
 /*
-QAbstractAxis * axisX( QAbstractSeries * series = nullptr ) const
+QAbstractAxis * axisX(QAbstractSeries * series = nullptr) const
 */
-HB_FUNC_STATIC( QCHART_AXISX )
+HB_FUNC_STATIC(QCHART_AXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QCHART_AXISX )
     if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->axisX( OPQABSTRACTSERIES( 1, nullptr));
+      auto ptr = obj->axisX(OPQABSTRACTSERIES(1, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1063,9 +1063,9 @@ HB_FUNC_STATIC( QCHART_AXISX )
 }
 
 /*
-QAbstractAxis * axisY( QAbstractSeries * series = nullptr ) const
+QAbstractAxis * axisY(QAbstractSeries * series = nullptr) const
 */
-HB_FUNC_STATIC( QCHART_AXISY )
+HB_FUNC_STATIC(QCHART_AXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QCHART_AXISY )
     if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->axisY( OPQABSTRACTSERIES( 1, nullptr));
+      auto ptr = obj->axisY(OPQABSTRACTSERIES(1, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1090,9 +1090,9 @@ HB_FUNC_STATIC( QCHART_AXISY )
 }
 
 /*
-void addAxis( QAbstractAxis * axis, Qt::Alignment alignment )
+void addAxis(QAbstractAxis * axis, Qt::Alignment alignment)
 */
-HB_FUNC_STATIC( QCHART_ADDAXIS )
+HB_FUNC_STATIC(QCHART_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1118,9 +1118,9 @@ HB_FUNC_STATIC( QCHART_ADDAXIS )
 }
 
 /*
-void removeAxis( QAbstractAxis * axis )
+void removeAxis(QAbstractAxis * axis)
 */
-HB_FUNC_STATIC( QCHART_REMOVEAXIS )
+HB_FUNC_STATIC(QCHART_REMOVEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1146,9 +1146,9 @@ HB_FUNC_STATIC( QCHART_REMOVEAXIS )
 }
 
 /*
-QList<QAbstractAxis *> axes( Qt::Orientations orientation = Qt::Horizontal | Qt::Vertical, QAbstractSeries * series = nullptr ) const
+QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal | Qt::Vertical, QAbstractSeries * series = nullptr) const
 */
-HB_FUNC_STATIC( QCHART_AXES )
+HB_FUNC_STATIC(QCHART_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QCHART_AXES )
     if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
     {
 #endif
-      auto list = obj->axes( HB_ISNIL(1) ? static_cast<Qt::Orientations >( Qt::Horizontal | Qt::Vertical ) : static_cast<Qt::Orientations >(hb_parni(1)), OPQABSTRACTSERIES( 2, nullptr));
+      auto list = obj->axes(HB_ISNIL(1) ? static_cast<Qt::Orientations >(Qt::Horizontal | Qt::Vertical) : static_cast<Qt::Orientations >(hb_parni(1)), OPQABSTRACTSERIES(2, nullptr));
       auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QCHART_AXES )
 /*
 void createDefaultAxes()
 */
-HB_FUNC_STATIC( QCHART_CREATEDEFAULTAXES )
+HB_FUNC_STATIC(QCHART_CREATEDEFAULTAXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1223,9 +1223,9 @@ HB_FUNC_STATIC( QCHART_CREATEDEFAULTAXES )
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle(const QString & title)
 */
-HB_FUNC_STATIC( QCHART_SETTITLE )
+HB_FUNC_STATIC(QCHART_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1251,9 +1251,9 @@ HB_FUNC_STATIC( QCHART_SETTITLE )
 }
 
 /*
-void setTitleFont( const QFont & font )
+void setTitleFont(const QFont & font)
 */
-HB_FUNC_STATIC( QCHART_SETTITLEFONT )
+HB_FUNC_STATIC(QCHART_SETTITLEFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QCHART_SETTITLEFONT )
 /*
 QFont titleFont() const
 */
-HB_FUNC_STATIC( QCHART_TITLEFONT )
+HB_FUNC_STATIC(QCHART_TITLEFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1306,9 +1306,9 @@ HB_FUNC_STATIC( QCHART_TITLEFONT )
 }
 
 /*
-void setTitleBrush( const QBrush & brush )
+void setTitleBrush(const QBrush & brush)
 */
-HB_FUNC_STATIC( QCHART_SETTITLEBRUSH )
+HB_FUNC_STATIC(QCHART_SETTITLEBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC( QCHART_SETTITLEBRUSH )
 /*
 QBrush titleBrush() const
 */
-HB_FUNC_STATIC( QCHART_TITLEBRUSH )
+HB_FUNC_STATIC(QCHART_TITLEBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1361,9 +1361,9 @@ HB_FUNC_STATIC( QCHART_TITLEBRUSH )
 }
 
 /*
-void setBackgroundBrush( const QBrush & brush )
+void setBackgroundBrush(const QBrush & brush)
 */
-HB_FUNC_STATIC( QCHART_SETBACKGROUNDBRUSH )
+HB_FUNC_STATIC(QCHART_SETBACKGROUNDBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDBRUSH )
 /*
 QBrush backgroundBrush() const
 */
-HB_FUNC_STATIC( QCHART_BACKGROUNDBRUSH )
+HB_FUNC_STATIC(QCHART_BACKGROUNDBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1416,9 +1416,9 @@ HB_FUNC_STATIC( QCHART_BACKGROUNDBRUSH )
 }
 
 /*
-void setBackgroundPen( const QPen & pen )
+void setBackgroundPen(const QPen & pen)
 */
-HB_FUNC_STATIC( QCHART_SETBACKGROUNDPEN )
+HB_FUNC_STATIC(QCHART_SETBACKGROUNDPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDPEN )
 /*
 QPen backgroundPen() const
 */
-HB_FUNC_STATIC( QCHART_BACKGROUNDPEN )
+HB_FUNC_STATIC(QCHART_BACKGROUNDPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC( QCHART_BACKGROUNDPEN )
 #endif
 }
 
-HB_FUNC_STATIC( QCHART_ZOOMIN )
+HB_FUNC_STATIC(QCHART_ZOOMIN)
 {
   if (ISNUMPAR(0))
   {
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QCHART_ZOOMIN )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void zoomIn( const QRectF & rect )
+    void zoomIn(const QRectF & rect)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1515,7 +1515,7 @@ HB_FUNC_STATIC( QCHART_ZOOMIN )
 /*
 void zoomOut()
 */
-HB_FUNC_STATIC( QCHART_ZOOMOUT )
+HB_FUNC_STATIC(QCHART_ZOOMOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1541,9 +1541,9 @@ HB_FUNC_STATIC( QCHART_ZOOMOUT )
 }
 
 /*
-void zoom( qreal factor )
+void zoom(qreal factor)
 */
-HB_FUNC_STATIC( QCHART_ZOOM )
+HB_FUNC_STATIC(QCHART_ZOOM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC( QCHART_ZOOM )
 /*
 void zoomReset()
 */
-HB_FUNC_STATIC( QCHART_ZOOMRESET )
+HB_FUNC_STATIC(QCHART_ZOOMRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1599,7 +1599,7 @@ HB_FUNC_STATIC( QCHART_ZOOMRESET )
 /*
 bool isZoomed()
 */
-HB_FUNC_STATIC( QCHART_ISZOOMED )
+HB_FUNC_STATIC(QCHART_ISZOOMED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1623,9 +1623,9 @@ HB_FUNC_STATIC( QCHART_ISZOOMED )
 }
 
 /*
-void scroll( qreal dx, qreal dy )
+void scroll(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QCHART_SCROLL )
+HB_FUNC_STATIC(QCHART_SCROLL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1653,7 +1653,7 @@ HB_FUNC_STATIC( QCHART_SCROLL )
 /*
 QLegend * legend() const
 */
-HB_FUNC_STATIC( QCHART_LEGEND )
+HB_FUNC_STATIC(QCHART_LEGEND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1678,9 +1678,9 @@ HB_FUNC_STATIC( QCHART_LEGEND )
 }
 
 /*
-void setPlotAreaBackgroundBrush( const QBrush & brush )
+void setPlotAreaBackgroundBrush(const QBrush & brush)
 */
-HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDBRUSH )
+HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1708,7 +1708,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDBRUSH )
 /*
 QBrush plotAreaBackgroundBrush() const
 */
-HB_FUNC_STATIC( QCHART_PLOTAREABACKGROUNDBRUSH )
+HB_FUNC_STATIC(QCHART_PLOTAREABACKGROUNDBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1733,9 +1733,9 @@ HB_FUNC_STATIC( QCHART_PLOTAREABACKGROUNDBRUSH )
 }
 
 /*
-void setPlotAreaBackgroundPen( const QPen & pen )
+void setPlotAreaBackgroundPen(const QPen & pen)
 */
-HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDPEN )
+HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDPEN )
 /*
 QPen plotAreaBackgroundPen() const
 */
-HB_FUNC_STATIC( QCHART_PLOTAREABACKGROUNDPEN )
+HB_FUNC_STATIC(QCHART_PLOTAREABACKGROUNDPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1788,9 +1788,9 @@ HB_FUNC_STATIC( QCHART_PLOTAREABACKGROUNDPEN )
 }
 
 /*
-QPointF mapToValue( const QPointF & position, QAbstractSeries * series = nullptr )
+QPointF mapToValue(const QPointF & position, QAbstractSeries * series = nullptr)
 */
-HB_FUNC_STATIC( QCHART_MAPTOVALUE )
+HB_FUNC_STATIC(QCHART_MAPTOVALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1801,7 +1801,7 @@ HB_FUNC_STATIC( QCHART_MAPTOVALUE )
     if (ISBETWEEN(1, 2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QPointF(obj->mapToValue(*PQPOINTF(1), OPQABSTRACTSERIES( 2, nullptr )));
+      auto ptr = new QPointF(obj->mapToValue(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1815,9 +1815,9 @@ HB_FUNC_STATIC( QCHART_MAPTOVALUE )
 }
 
 /*
-QPointF mapToPosition( const QPointF & value, QAbstractSeries * series = nullptr )
+QPointF mapToPosition(const QPointF & value, QAbstractSeries * series = nullptr)
 */
-HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
+HB_FUNC_STATIC(QCHART_MAPTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1828,7 +1828,7 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
     if (ISBETWEEN(1, 2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QPointF(obj->mapToPosition(*PQPOINTF(1), OPQABSTRACTSERIES( 2, nullptr )));
+      auto ptr = new QPointF(obj->mapToPosition(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1842,9 +1842,9 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
 }
 
 /*
-void plotAreaChanged( const QRectF & plotArea )
+void plotAreaChanged(const QRectF & plotArea)
 */
-HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
+HB_FUNC_STATIC(QCHART_ONPLOTAREACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QChart*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1869,7 +1869,7 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCHART");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QRECTF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

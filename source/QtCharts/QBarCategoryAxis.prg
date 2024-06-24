@@ -76,14 +76,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-QBarCategoryAxis( QObject * parent = nullptr )
+QBarCategoryAxis(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QBarCategoryAxis( OPQOBJECT( 1, nullptr));
+    auto obj = new QBarCategoryAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 /*
 ~QBarCategoryAxis()
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_DELETE )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_DELETE )
 /*
 QStringList categories()
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_CATEGORIES )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_CATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +143,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_CATEGORIES )
 }
 
 /*
-void setCategories( const QStringList & categories )
+void setCategories(const QStringList & categories)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_SETCATEGORIES )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_SETCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETCATEGORIES )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_COUNT )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_COUNT )
 /*
 QString min() const
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_MIN )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +223,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_MIN )
 }
 
 /*
-void setMin( const QString & minCategory )
+void setMin(const QString & minCategory)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMIN )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMIN )
 /*
 QString max() const
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_MAX )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -277,9 +277,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_MAX )
 }
 
 /*
-void setMax( const QString & maxCategory )
+void setMax(const QString & maxCategory)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMAX )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMAX )
 /*
 QAbstractAxis::AxisType type() const
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -330,12 +330,12 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
 #endif
 }
 
-HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void append( const QStringList & categories )
+    void append(const QStringList & categories)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void append( const QString & category )
+    void append(const QString & category)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 }
 
 /*
-void remove( const QString & category )
+void remove(const QString & category)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_REMOVE )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -401,9 +401,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REMOVE )
 }
 
 /*
-void insert( int index, const QString & category )
+void insert(int index, const QString & category)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_INSERT )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -429,9 +429,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_INSERT )
 }
 
 /*
-void replace( const QString & oldCategory, const QString & newCategory )
+void replace(const QString & oldCategory, const QString & newCategory)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_REPLACE )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_REPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REPLACE )
 /*
 Q_INVOKABLE void clear()
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_CLEAR )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -485,9 +485,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_CLEAR )
 }
 
 /*
-QString at( int index ) const
+QString at(int index) const
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_AT )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_AT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -511,9 +511,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_AT )
 }
 
 /*
-void setRange( const QString & minCategory, const QString & maxCategory )
+void setRange(const QString & minCategory, const QString & maxCategory)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
 /*
 void categoriesChanged()
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
 /*
 void countChanged()
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -643,9 +643,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
 }
 
 /*
-void maxChanged( const QString & max )
+void maxChanged(const QString & max)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMAXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -697,9 +697,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
 }
 
 /*
-void minChanged( const QString & min )
+void minChanged(const QString & min)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -751,9 +751,9 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
 }
 
 /*
-void rangeChanged( const QString & min, const QString & max )
+void rangeChanged(const QString & min, const QString & max)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
+HB_FUNC_STATIC(QBARCATEGORYAXIS_ONRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBarCategoryAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());

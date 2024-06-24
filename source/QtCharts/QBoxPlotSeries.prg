@@ -87,14 +87,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-QBoxPlotSeries( QObject * parent = nullptr )
+QBoxPlotSeries(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
+HB_FUNC_STATIC(QBOXPLOTSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QBoxPlotSeries( OPQOBJECT( 1, nullptr));
+    auto obj = new QBoxPlotSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 /*
 ~QBoxPlotSeries()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
+HB_FUNC_STATIC(QBOXPLOTSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
+HB_FUNC_STATIC(QBOXPLOTSERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
 /*
 bool boxOutlineVisible()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
+HB_FUNC_STATIC(QBOXPLOTSERIES_BOXOUTLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -180,9 +180,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
 }
 
 /*
-void setBoxOutlineVisible( bool visible )
+void setBoxOutlineVisible(bool visible)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
+HB_FUNC_STATIC(QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
 /*
 qreal boxWidth()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
+HB_FUNC_STATIC(QBOXPLOTSERIES_BOXWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -234,9 +234,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
 }
 
 /*
-void setBoxWidth( qreal width )
+void setBoxWidth(qreal width)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
+HB_FUNC_STATIC(QBOXPLOTSERIES_SETBOXWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
+HB_FUNC_STATIC(QBOXPLOTSERIES_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -289,9 +289,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush(const QBrush & brush)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
+HB_FUNC_STATIC(QBOXPLOTSERIES_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
 /*
 QPen pen() const
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
+HB_FUNC_STATIC(QBOXPLOTSERIES_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -344,9 +344,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen(const QPen & pen)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
+HB_FUNC_STATIC(QBOXPLOTSERIES_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -371,12 +371,12 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 #endif
 }
 
-HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
+HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
 {
   if (ISNUMPAR(1) && ISQBOXSET(1))
   {
     /*
-    bool append( QBoxSet * box )
+    bool append(QBoxSet * box)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -391,14 +391,14 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    bool append( QList<QBoxSet *> boxes )
+    bool append(QList<QBoxSet*> boxes)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      QList<QBoxSet *> par1;
+      QList<QBoxSet*> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       for (auto i1 = 0; i1 < nLen1; i1++)
@@ -417,9 +417,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 }
 
 /*
-bool remove( QBoxSet * box )
+bool remove(QBoxSet * box)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
+HB_FUNC_STATIC(QBOXPLOTSERIES_REMOVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -443,9 +443,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 }
 
 /*
-bool take( QBoxSet * box )
+bool take(QBoxSet * box)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
+HB_FUNC_STATIC(QBOXPLOTSERIES_TAKE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -469,9 +469,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 }
 
 /*
-bool insert( int index, QBoxSet * box )
+bool insert(int index, QBoxSet * box)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
+HB_FUNC_STATIC(QBOXPLOTSERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -495,9 +495,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 }
 
 /*
-QList<QBoxSet *> boxSets() const
+QList<QBoxSet*> boxSets() const
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
+HB_FUNC_STATIC(QBOXPLOTSERIES_BOXSETS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
+HB_FUNC_STATIC(QBOXPLOTSERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
 /*
 QAbstractSeries::SeriesType type() const
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
+HB_FUNC_STATIC(QBOXPLOTSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 /*
 void boxOutlineVisibilityChanged()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -650,9 +650,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 }
 
 /*
-void boxsetsAdded( QList<QBoxSet*> sets )
+void boxsetsAdded(QList<QBoxSet*> sets)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -725,9 +725,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 }
 
 /*
-void boxsetsRemoved( QList<QBoxSet*> sets )
+void boxsetsRemoved(QList<QBoxSet*> sets)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 /*
 void boxWidthChanged()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXWIDTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 /*
 void brushChanged()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONBRUSHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -904,9 +904,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 }
 
 /*
-void clicked( QBoxSet * boxset )
+void clicked(QBoxSet * boxset)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 /*
 void countChanged()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1010,9 +1010,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 }
 
 /*
-void doubleClicked( QBoxSet * boxset )
+void doubleClicked(QBoxSet * boxset)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1064,9 +1064,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 }
 
 /*
-void hovered( bool status, QBoxSet * boxset )
+void hovered(bool status, QBoxSet * boxset)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 /*
 void penChanged()
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1172,9 +1172,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
 }
 
 /*
-void pressed( QBoxSet * boxset )
+void pressed(QBoxSet * boxset)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1226,9 +1226,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 }
 
 /*
-void released( QBoxSet * boxset )
+void released(QBoxSet * boxset)
 */
-HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
+HB_FUNC_STATIC(QBOXPLOTSERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QBoxPlotSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());

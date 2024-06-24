@@ -78,14 +78,14 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-QVXYModelMapper( QObject * parent = nullptr )
+QVXYModelMapper(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_NEW )
+HB_FUNC_STATIC(QVXYMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QVXYModelMapper( OPQOBJECT( 1, nullptr));
+    auto obj = new QVXYModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_NEW )
 /*
 QXYSeries * series() const
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries( QXYSeries * series )
+void setSeries(QXYSeries * series)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SETSERIES )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETSERIES )
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
+HB_FUNC_STATIC(QVXYMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel(QAbstractItemModel * model)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SETMODEL )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETMODEL )
 /*
 int xColumn() const
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_XCOLUMN )
+HB_FUNC_STATIC(QVXYMODELMAPPER_XCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +232,9 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_XCOLUMN )
 }
 
 /*
-void setXColumn( int xColumn )
+void setXColumn(int xColumn)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SETXCOLUMN )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SETXCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETXCOLUMN )
 /*
 int yColumn() const
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_YCOLUMN )
+HB_FUNC_STATIC(QVXYMODELMAPPER_YCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -286,9 +286,9 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_YCOLUMN )
 }
 
 /*
-void setYColumn( int yColumn )
+void setYColumn(int yColumn)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SETYCOLUMN )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SETYCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETYCOLUMN )
 /*
 int firstRow() const
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_FIRSTROW )
+HB_FUNC_STATIC(QVXYMODELMAPPER_FIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -340,9 +340,9 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_FIRSTROW )
 }
 
 /*
-void setFirstRow( int firstRow )
+void setFirstRow(int firstRow)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SETFIRSTROW )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SETFIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETFIRSTROW )
 /*
 int rowCount() const
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ROWCOUNT )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +394,9 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ROWCOUNT )
 }
 
 /*
-void setRowCount( int rowCount )
+void setRowCount(int rowCount)
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
+HB_FUNC_STATIC(QVXYMODELMAPPER_SETROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
 /*
 void firstRowChanged()
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ONFIRSTROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 /*
 void modelReplaced()
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
 /*
 void rowCountChanged()
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
 /*
 void seriesReplaced()
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
 /*
 void xColumnChanged()
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ONXCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
 /*
 void yColumnChanged()
 */
-HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
+HB_FUNC_STATIC(QVXYMODELMAPPER_ONYCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QVXYModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -76,7 +76,7 @@ QCandlestickModelMapper(QObject *parent = nullptr) [ABSTRACT]
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel(QAbstractItemModel * model)
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 /*
 QCandlestickSeries * series() const
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +156,9 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries( QCandlestickSeries * series )
+void setSeries(QCandlestickSeries * series)
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
 /*
 virtual Qt::Orientation orientation() const = 0
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
 /*
 void modelReplaced()
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
 /*
 void seriesReplaced()
 */
-HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONSERIESREPLACED )
+HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QCandlestickModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());

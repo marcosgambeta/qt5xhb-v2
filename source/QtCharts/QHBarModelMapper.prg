@@ -78,14 +78,14 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-QHBarModelMapper( QObject * parent = nullptr )
+QHBarModelMapper(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_NEW )
+HB_FUNC_STATIC(QHBARMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QHBarModelMapper( OPQOBJECT( 1, nullptr));
+    auto obj = new QHBarModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_NEW )
 /*
 QAbstractBarSeries * series() const
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SERIES )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries( QAbstractBarSeries * series )
+void setSeries(QAbstractBarSeries * series)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SETSERIES )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETSERIES )
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_MODEL )
+HB_FUNC_STATIC(QHBARMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_MODEL )
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel(QAbstractItemModel * model)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SETMODEL )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETMODEL )
 /*
 int firstBarSetRow() const
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTBARSETROW )
+HB_FUNC_STATIC(QHBARMODELMAPPER_FIRSTBARSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +232,9 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTBARSETROW )
 }
 
 /*
-void setFirstBarSetRow( int firstBarSetRow )
+void setFirstBarSetRow(int firstBarSetRow)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTBARSETROW )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SETFIRSTBARSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTBARSETROW )
 /*
 int lastBarSetRow() const
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_LASTBARSETROW )
+HB_FUNC_STATIC(QHBARMODELMAPPER_LASTBARSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -286,9 +286,9 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_LASTBARSETROW )
 }
 
 /*
-void setLastBarSetRow( int lastBarSetRow )
+void setLastBarSetRow(int lastBarSetRow)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SETLASTBARSETROW )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SETLASTBARSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETLASTBARSETROW )
 /*
 int firstColumn() const
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTCOLUMN )
+HB_FUNC_STATIC(QHBARMODELMAPPER_FIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -340,9 +340,9 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTCOLUMN )
 }
 
 /*
-void setFirstColumn( int firstColumn )
+void setFirstColumn(int firstColumn)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTCOLUMN )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SETFIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTCOLUMN )
 /*
 int columnCount() const
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_COLUMNCOUNT )
+HB_FUNC_STATIC(QHBARMODELMAPPER_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +394,9 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount( int columnCount )
+void setColumnCount(int columnCount)
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_SETCOLUMNCOUNT )
+HB_FUNC_STATIC(QHBARMODELMAPPER_SETCOLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETCOLUMNCOUNT )
 /*
 void columnCountChanged()
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
+HB_FUNC_STATIC(QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 /*
 void firstBarSetRowChanged()
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
+HB_FUNC_STATIC(QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
 /*
 void firstColumnChanged()
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
+HB_FUNC_STATIC(QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 /*
 void lastBarSetRowChanged()
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
+HB_FUNC_STATIC(QHBARMODELMAPPER_ONLASTBARSETROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
 /*
 void modelReplaced()
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
+HB_FUNC_STATIC(QHBARMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
 /*
 void seriesReplaced()
 */
-HB_FUNC_STATIC( QHBARMODELMAPPER_ONSERIESREPLACED )
+HB_FUNC_STATIC(QHBARMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QHBarModelMapper*>(Qt5xHb::getQObjectPointerFromSelfItem());

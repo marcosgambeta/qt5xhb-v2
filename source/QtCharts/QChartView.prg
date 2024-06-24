@@ -58,15 +58,15 @@ RETURN
 
 using namespace QtCharts;
 
-HB_FUNC_STATIC( QCHARTVIEW_NEW )
+HB_FUNC_STATIC(QCHARTVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QChartView( QWidget * parent = nullptr )
+    QChartView(QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QChartView( OPQWIDGET( 1, nullptr));
+    auto obj = new QChartView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QCHARTVIEW_NEW )
   else if (ISBETWEEN(1, 2) && ISQCHART(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QChartView( QChart * chart, QWidget * parent = nullptr )
+    QChartView(QChart * chart, QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QChartView(PQCHART(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QChartView(PQCHART(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCHARTVIEW_NEW )
 /*
 ~QChartView()
 */
-HB_FUNC_STATIC( QCHARTVIEW_DELETE )
+HB_FUNC_STATIC(QCHARTVIEW_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChartView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -117,7 +117,7 @@ void setRubberBand(const RubberBands &rubberBands)
 /*
 QChartView::RubberBands rubberBand() const
 */
-HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
+HB_FUNC_STATIC(QCHARTVIEW_RUBBERBAND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChartView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 /*
 QChart * chart() const
 */
-HB_FUNC_STATIC( QCHARTVIEW_CHART )
+HB_FUNC_STATIC(QCHARTVIEW_CHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChartView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
 }
 
 /*
-void setChart( QChart * chart )
+void setChart(QChart * chart)
 */
-HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
+HB_FUNC_STATIC(QCHARTVIEW_SETCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QChartView*>(Qt5xHb::getQObjectPointerFromSelfItem());

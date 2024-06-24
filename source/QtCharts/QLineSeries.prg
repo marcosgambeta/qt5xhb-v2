@@ -56,14 +56,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-QLineSeries( QObject * parent = nullptr )
+QLineSeries(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QLINESERIES_NEW )
+HB_FUNC_STATIC(QLINESERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QLineSeries( OPQOBJECT( 1, nullptr));
+    auto obj = new QLineSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QLINESERIES_NEW )
 /*
 ~QLineSeries()
 */
-HB_FUNC_STATIC( QLINESERIES_DELETE )
+HB_FUNC_STATIC(QLINESERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QLineSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QLINESERIES_DELETE )
 /*
 QAbstractSeries::SeriesType type() const
 */
-HB_FUNC_STATIC( QLINESERIES_TYPE )
+HB_FUNC_STATIC(QLINESERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QLineSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());

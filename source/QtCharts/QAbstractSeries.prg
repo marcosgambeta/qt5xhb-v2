@@ -80,7 +80,7 @@ using namespace QtCharts;
 /*
 ~QAbstractSeries()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
+HB_FUNC_STATIC(QABSTRACTSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
 /*
 virtual QAbstractSeries::SeriesType type() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
+HB_FUNC_STATIC(QABSTRACTSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
+HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +153,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
+HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
+HB_FUNC_STATIC(QABSTRACTSERIES_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
 }
 
 /*
-void setVisible( bool visible = true )
+void setVisible(bool visible = true)
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
+HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setVisible( OPBOOL( 1, true));
+      obj->setVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
+HB_FUNC_STATIC(QABSTRACTSERIES_OPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -261,9 +261,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
 }
 
 /*
-void setOpacity( qreal opacity )
+void setOpacity(qreal opacity)
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
+HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
 /*
 bool useOpenGL() const
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
+HB_FUNC_STATIC(QABSTRACTSERIES_USEOPENGL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -315,9 +315,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
 }
 
 /*
-void setUseOpenGL( bool enable = true )
+void setUseOpenGL(bool enable = true)
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
+HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setUseOpenGL( OPBOOL( 1, true));
+      obj->setUseOpenGL(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
 /*
 QChart * chart() const
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
+HB_FUNC_STATIC(QABSTRACTSERIES_CHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -370,9 +370,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
 }
 
 /*
-bool attachAxis( QAbstractAxis * axis )
+bool attachAxis(QAbstractAxis * axis)
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
+HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -396,9 +396,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
 }
 
 /*
-bool detachAxis( QAbstractAxis * axis )
+bool detachAxis(QAbstractAxis * axis)
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
+HB_FUNC_STATIC(QABSTRACTSERIES_DETACHAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -422,9 +422,9 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 }
 
 /*
-QList<QAbstractAxis *> attachedAxes()
+QList<QAbstractAxis*> attachedAxes()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
+HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
 /*
 void show()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_SHOW )
+HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SHOW )
 /*
 void hide()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
+HB_FUNC_STATIC(QABSTRACTSERIES_HIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 /*
 void nameChanged()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
+HB_FUNC_STATIC(QABSTRACTSERIES_ONNAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
 /*
 void opacityChanged()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
+HB_FUNC_STATIC(QABSTRACTSERIES_ONOPACITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
 /*
 void useOpenGLChanged()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
+HB_FUNC_STATIC(QABSTRACTSERIES_ONUSEOPENGLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 /*
 void visibleChanged()
 */
-HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
+HB_FUNC_STATIC(QABSTRACTSERIES_ONVISIBLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstractSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
