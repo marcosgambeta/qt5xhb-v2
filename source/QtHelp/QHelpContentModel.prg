@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = obj->contentItemAt( *PQMODELINDEX(1));
+      auto ptr = obj->contentItemAt(*PQMODELINDEX(1));
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QVariant(obj->data( *PQMODELINDEX(1), PINT(2)));
+      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->parent( *PQMODELINDEX(1)));
+      auto ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

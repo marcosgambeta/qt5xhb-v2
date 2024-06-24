@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -317,13 +317,13 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
     {
 #endif
       QList<QHelpSearchQuery> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QHelpSearchQuery*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QHelpSearchQuery*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->search( par1);
+      obj->search(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

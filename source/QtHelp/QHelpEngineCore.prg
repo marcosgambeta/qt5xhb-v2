@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->fileData( *PQURL(1)));
+      auto ptr = new QByteArray(obj->fileData(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      auto ptr = new QUrl(obj->findFile( *PQURL(1)));
+      auto ptr = new QUrl(obj->findFile(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

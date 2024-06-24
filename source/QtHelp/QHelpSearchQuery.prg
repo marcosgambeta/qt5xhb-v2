@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
     /*
     QHelpSearchQuery( QHelpSearchQuery::FieldName field, const QStringList & wordList )
     */
-    auto obj = new QHelpSearchQuery( static_cast<QHelpSearchQuery::FieldName>( hb_parni(1)), PQSTRINGLIST(2));
+    auto obj = new QHelpSearchQuery(static_cast<QHelpSearchQuery::FieldName>(hb_parni(1)), PQSTRINGLIST(2));
     Qt5xHb::returnNewObject(obj, true);
 
   }

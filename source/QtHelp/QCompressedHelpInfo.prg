@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEW )
     QCompressedHelpInfo( const QCompressedHelpInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-    auto obj = new QCompressedHelpInfo( *PQCOMPRESSEDHELPINFO(1));
+    auto obj = new QCompressedHelpInfo(*PQCOMPRESSEDHELPINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_SWAP )
     if (ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1))
     {
 #endif
-      obj->swap( *PQCOMPRESSEDHELPINFO(1));
+      obj->swap(*PQCOMPRESSEDHELPINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
