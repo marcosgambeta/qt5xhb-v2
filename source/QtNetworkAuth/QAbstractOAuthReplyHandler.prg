@@ -59,7 +59,7 @@ RETURN
 /*
 virtual ~QAbstractOAuthReplyHandler()
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
 /*
 virtual QString callback() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -106,9 +106,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 }
 
 /*
-virtual void networkReplyFinished( QNetworkReply * reply ) = 0
+virtual void networkReplyFinished(QNetworkReply * reply) = 0
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +134,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 }
 
 /*
-void callbackDataReceived( const QByteArray & data )
+void callbackDataReceived(const QByteArray & data)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTOAUTHREPLYHANDLER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QBYTEARRAY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 }
 
 /*
-void replyDataReceived( const QByteArray & data )
+void replyDataReceived(const QByteArray & data)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuthReplyHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTOAUTHREPLYHANDLER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QBYTEARRAY");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QBYTEARRAY");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

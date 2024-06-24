@@ -75,7 +75,7 @@ RETURN
 /*
 ~QAbstractOAuth2()
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
 /*
 QString scope() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_SCOPE )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_SCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SCOPE )
 }
 
 /*
-void setScope( const QString & scope )
+void setScope(const QString & scope)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSCOPE )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSCOPE )
 /*
 QString userAgent() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_USERAGENT )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_USERAGENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_USERAGENT )
 }
 
 /*
-void setUserAgent( const QString & userAgent )
+void setUserAgent(const QString & userAgent)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_SETUSERAGENT )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_SETUSERAGENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETUSERAGENT )
 /*
 QString clientIdentifierSharedKey() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -230,9 +230,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY )
 }
 
 /*
-void setClientIdentifierSharedKey( const QString & clientIdentifierSharedKey )
+void setClientIdentifierSharedKey(const QString & clientIdentifierSharedKey)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY )
 /*
 QString state() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_STATE )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -284,9 +284,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_STATE )
 }
 
 /*
-void setState( const QString & state )
+void setState(const QString & state)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSTATE )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSTATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSTATE )
 /*
 QDateTime expirationAt() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_EXPIRATIONAT )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_EXPIRATIONAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_EXPIRATIONAT )
 /*
 QString responseType() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_RESPONSETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
 /*
 QString refreshToken() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_REFRESHTOKEN )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_REFRESHTOKEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -391,9 +391,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_REFRESHTOKEN )
 }
 
 /*
-void setRefreshToken( const QString & refreshToken )
+void setRefreshToken(const QString & refreshToken)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_SETREFRESHTOKEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -419,9 +419,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
 }
 
 /*
-void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
+void clientIdentifierSharedKeyChanged(const QString & clientIdentifierSharedKey)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -473,9 +473,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 }
 
 /*
-void error( const QString & error, const QString & errorDescription, const QUrl & uri )
+void error(const QString & error, const QString & errorDescription, const QUrl & uri)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTOAUTH2");
             auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
             auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
-            auto pArg3 = Qt5xHb::Signals_return_object( (void *) &arg3, "QURL");
+            auto pArg3 = Qt5xHb::Signals_return_object((void *) &arg3, "QURL");
             hb_vmEvalBlockV(cb, 4, pSender, pArg1, pArg2, pArg3);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -531,9 +531,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 }
 
 /*
-void expirationAtChanged( const QDateTime & expiration )
+void expirationAtChanged(const QDateTime & expiration)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTOAUTH2");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDATETIME");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QDATETIME");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -585,9 +585,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 }
 
 /*
-void responseTypeChanged( const QString & responseType )
+void responseTypeChanged(const QString & responseType)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONRESPONSETYPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -639,9 +639,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 }
 
 /*
-void scopeChanged( const QString & scope )
+void scopeChanged(const QString & scope)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSCOPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -693,9 +693,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 }
 
 /*
-void stateChanged( const QString & state )
+void stateChanged(const QString & state)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -747,9 +747,9 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 }
 
 /*
-void userAgentChanged( const QString & userAgent )
+void userAgentChanged(const QString & userAgent)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
+HB_FUNC_STATIC(QABSTRACTOAUTH2_ONUSERAGENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QAbstractOAuth2*>(Qt5xHb::getQObjectPointerFromSelfItem());

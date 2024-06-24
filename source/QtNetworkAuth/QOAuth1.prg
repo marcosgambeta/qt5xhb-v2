@@ -72,15 +72,15 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QOAUTH1_NEW )
+HB_FUNC_STATIC(QOAUTH1_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QOAuth1( QObject * parent = nullptr )
+    QOAuth1(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QOAuth1( OPQOBJECT( 1, nullptr));
+    auto obj = new QOAuth1(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -88,10 +88,10 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
   else if (ISBETWEEN(1, 2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QOAuth1( QNetworkAccessManager * manager, QObject * parent = nullptr )
+    QOAuth1(QNetworkAccessManager * manager, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QOAuth1(PQNETWORKACCESSMANAGER(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QOAuth1(PQNETWORKACCESSMANAGER(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
   else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QOAuth1( const QString & clientIdentifier, const QString & clientSharedSecret, QNetworkAccessManager * manager, QObject * parent = nullptr )
+    QOAuth1(const QString & clientIdentifier, const QString & clientSharedSecret, QNetworkAccessManager * manager, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QOAuth1(PQSTRING(1), PQSTRING(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT( 4, nullptr));
+    auto obj = new QOAuth1(PQSTRING(1), PQSTRING(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
   }
 }
 
-HB_FUNC_STATIC( QOAUTH1_DELETE )
+HB_FUNC_STATIC(QOAUTH1_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QOAUTH1_DELETE )
 /*
 QString clientSharedSecret() const
 */
-HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
+HB_FUNC_STATIC(QOAUTH1_CLIENTSHAREDSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
 }
 
 /*
-void setClientSharedSecret( const QString & clientSharedSecret )
+void setClientSharedSecret(const QString & clientSharedSecret)
 */
-HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
+HB_FUNC_STATIC(QOAUTH1_SETCLIENTSHAREDSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 }
 
 /*
-void setClientCredentials( const QString & clientIdentifier, const QString & clientSharedSecret )
+void setClientCredentials(const QString & clientIdentifier, const QString & clientSharedSecret)
 */
-HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
+HB_FUNC_STATIC(QOAUTH1_SETCLIENTCREDENTIALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 /*
 QString tokenSecret() const
 */
-HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
+HB_FUNC_STATIC(QOAUTH1_TOKENSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -242,9 +242,9 @@ HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
 }
 
 /*
-void setTokenSecret( const QString & tokenSecret )
+void setTokenSecret(const QString & tokenSecret)
 */
-HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
+HB_FUNC_STATIC(QOAUTH1_SETTOKENSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -270,9 +270,9 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 }
 
 /*
-void setTokenCredentials( const QString & token, const QString & tokenSecret )
+void setTokenCredentials(const QString & token, const QString & tokenSecret)
 */
-HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
+HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
 /*
 QUrl temporaryCredentialsUrl() const
 */
-HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
+HB_FUNC_STATIC(QOAUTH1_TEMPORARYCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -325,9 +325,9 @@ HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
 }
 
 /*
-void setTemporaryCredentialsUrl( const QUrl & url )
+void setTemporaryCredentialsUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
+HB_FUNC_STATIC(QOAUTH1_SETTEMPORARYCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
 /*
 QUrl tokenCredentialsUrl() const
 */
-HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
+HB_FUNC_STATIC(QOAUTH1_TOKENCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -380,9 +380,9 @@ HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
 }
 
 /*
-void setTokenCredentialsUrl( const QUrl & url )
+void setTokenCredentialsUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
+HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -408,9 +408,9 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 }
 
 /*
-void setSignatureMethod( QOAuth1::SignatureMethod value )
+void setSignatureMethod(QOAuth1::SignatureMethod value)
 */
-HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
+HB_FUNC_STATIC(QOAUTH1_SETSIGNATUREMETHOD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 /*
 void grant() override
 */
-HB_FUNC_STATIC( QOAUTH1_GRANT )
+HB_FUNC_STATIC(QOAUTH1_GRANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -464,9 +464,9 @@ HB_FUNC_STATIC( QOAUTH1_GRANT )
 }
 
 /*
-void continueGrantWithVerifier( const QString & verifier )
+void continueGrantWithVerifier(const QString & verifier)
 */
-HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
+HB_FUNC_STATIC(QOAUTH1_CONTINUEGRANTWITHVERIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -492,9 +492,9 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 }
 
 /*
-void clientSharedSecretChanged( const QString & credential )
+void clientSharedSecretChanged(const QString & credential)
 */
-HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
+HB_FUNC_STATIC(QOAUTH1_ONCLIENTSHAREDSECRETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -546,9 +546,9 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 }
 
 /*
-void signatureMethodChanged( QOAuth1::SignatureMethod method )
+void signatureMethodChanged(QOAuth1::SignatureMethod method)
 */
-HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
+HB_FUNC_STATIC(QOAUTH1_ONSIGNATUREMETHODCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -600,9 +600,9 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 }
 
 /*
-void temporaryCredentialsUrlChanged( const QUrl & url )
+void temporaryCredentialsUrlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
+HB_FUNC_STATIC(QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOAUTH1");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -654,9 +654,9 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 }
 
 /*
-void tokenCredentialsUrlChanged( const QUrl & url )
+void tokenCredentialsUrlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
+HB_FUNC_STATIC(QOAUTH1_ONTOKENCREDENTIALSURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOAUTH1");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -708,9 +708,9 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 }
 
 /*
-void tokenSecretChanged( const QString & token )
+void tokenSecretChanged(const QString & token)
 */
-HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
+HB_FUNC_STATIC(QOAUTH1_ONTOKENSECRETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QOAuth1*>(Qt5xHb::getQObjectPointerFromSelfItem());
