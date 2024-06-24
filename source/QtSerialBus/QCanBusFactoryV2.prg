@@ -53,9 +53,9 @@ RETURN
 #endif
 
 /*
-virtual QCanBusDevice * createDevice( const QString & interfaceName, QString * errorMessage ) const = 0
+virtual QCanBusDevice * createDevice(const QString & interfaceName, QString * errorMessage) const = 0
 */
-HB_FUNC_STATIC( QCANBUSFACTORYV2_CREATEDEVICE )
+HB_FUNC_STATIC(QCANBUSFACTORYV2_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = static_cast<QCanBusFactoryV2*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -80,9 +80,9 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_CREATEDEVICE )
 }
 
 /*
-virtual QList<QCanBusDeviceInfo> availableDevices( QString * errorMessage ) const = 0
+virtual QList<QCanBusDeviceInfo> availableDevices(QString * errorMessage) const = 0
 */
-HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
+HB_FUNC_STATIC(QCANBUSFACTORYV2_AVAILABLEDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = static_cast<QCanBusFactoryV2*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCANBUSFACTORYV2_AVAILABLEDEVICES )
     if (ISNUMPAR(1))
     {
 #endif
-      auto list = obj->availableDevices( nullptr);
+      auto list = obj->availableDevices(nullptr);
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)

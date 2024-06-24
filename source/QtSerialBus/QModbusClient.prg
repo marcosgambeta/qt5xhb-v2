@@ -58,7 +58,7 @@ RETURN
 /*
 ~QModbusClient()
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_DELETE )
+HB_FUNC_STATIC(QMODBUSCLIENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusClient*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_DELETE )
 /*
 int timeout() const
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_TIMEOUT )
+HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusClient*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,7 +123,7 @@ QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
 /*
 int numberOfRetries() const
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_NUMBEROFRETRIES )
+HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusClient*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +151,9 @@ void setNumberOfRetries(int number)
 */
 
 /*
-void timeoutChanged( int newTimeout )
+void timeoutChanged(int newTimeout)
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
+HB_FUNC_STATIC(QMODBUSCLIENT_ONTIMEOUTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusClient*>(Qt5xHb::getQObjectPointerFromSelfItem());

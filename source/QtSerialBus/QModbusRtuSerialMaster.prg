@@ -54,14 +54,14 @@ RETURN
 #endif
 
 /*
-QModbusRtuSerialMaster( QObject * parent = nullptr )
+QModbusRtuSerialMaster(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QModbusRtuSerialMaster( OPQOBJECT( 1, nullptr));
+    auto obj = new QModbusRtuSerialMaster(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
 /*
 ~QModbusRtuSerialMaster()
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusRtuSerialMaster*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
 /*
 int interFrameDelay() const
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY )
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusRtuSerialMaster*>(Qt5xHb::getQObjectPointerFromSelfItem());

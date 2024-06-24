@@ -64,14 +64,14 @@ RETURN
 #endif
 
 /*
-QModbusReply( QModbusReply::ReplyType type, int serverAddress, QObject * parent = nullptr )
+QModbusReply(QModbusReply::ReplyType type, int serverAddress, QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QMODBUSREPLY_NEW )
+HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    auto obj = new QModbusReply(static_cast<QModbusReply::ReplyType>(hb_parni(1)), PINT(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QModbusReply(static_cast<QModbusReply::ReplyType>(hb_parni(1)), PINT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_NEW )
 /*
 QModbusReply::ReplyType type() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_TYPE )
+HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_TYPE )
 /*
 int serverAddress() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_SERVERADDRESS )
+HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_SERVERADDRESS )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ISFINISHED )
+HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ISFINISHED )
 /*
 QModbusDataUnit result() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_RESULT )
+HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_RESULT )
 /*
 QModbusResponse rawResult() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_RAWRESULT )
+HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_RAWRESULT )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ERRORSTRING )
+HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ERRORSTRING )
 /*
 QModbusDevice::Error error() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ERROR )
+HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -281,7 +281,7 @@ void setError(QModbusDevice::Error error, const QString &errorText)
 /*
 void finished()
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
+HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -331,9 +331,9 @@ HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
 }
 
 /*
-void errorOccurred( QModbusDevice::Error error )
+void errorOccurred(QModbusDevice::Error error)
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
+HB_FUNC_STATIC(QMODBUSREPLY_ONERROROCCURRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusReply*>(Qt5xHb::getQObjectPointerFromSelfItem());

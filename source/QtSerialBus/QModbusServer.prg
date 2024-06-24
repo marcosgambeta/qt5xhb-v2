@@ -58,7 +58,7 @@ RETURN
 /*
 ~QModbusServer()
 */
-HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
+HB_FUNC_STATIC(QMODBUSSERVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
 /*
 int serverAddress() const
 */
-HB_FUNC_STATIC( QMODBUSSERVER_SERVERADDRESS )
+HB_FUNC_STATIC(QMODBUSSERVER_SERVERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,7 +113,7 @@ virtual bool setMap(const QModbusDataUnitMap &map)
 /*
 virtual bool processesBroadcast() const
 */
-HB_FUNC_STATIC( QMODBUSSERVER_PROCESSESBROADCAST )
+HB_FUNC_STATIC(QMODBUSSERVER_PROCESSESBROADCAST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +156,9 @@ bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) c
 */
 
 /*
-void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
+void dataWritten(QModbusDataUnit::RegisterType table, int address, int size)
 */
-HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
+HB_FUNC_STATIC(QMODBUSSERVER_ONDATAWRITTEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());

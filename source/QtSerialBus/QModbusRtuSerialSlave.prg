@@ -54,14 +54,14 @@ RETURN
 #endif
 
 /*
-QModbusRtuSerialSlave( QObject * parent = nullptr )
+QModbusRtuSerialSlave(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
+HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QModbusRtuSerialSlave( OPQOBJECT( 1, nullptr));
+    auto obj = new QModbusRtuSerialSlave(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
 /*
 ~QModbusRtuSerialSlave()
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
+HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusRtuSerialSlave*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
 /*
 bool processesBroadcast() const override
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST )
+HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusRtuSerialSlave*>(Qt5xHb::getQObjectPointerFromSelfItem());

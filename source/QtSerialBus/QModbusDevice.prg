@@ -62,7 +62,7 @@ RETURN
 /*
 ~QModbusDevice()
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_DELETE )
+HB_FUNC_STATIC(QMODBUSDEVICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -91,7 +91,7 @@ void setConnectionParameter(int parameter, const QVariant &value)
 /*
 bool connectDevice()
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_CONNECTDEVICE )
+HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_CONNECTDEVICE )
 /*
 void disconnectDevice()
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_DISCONNECTDEVICE )
+HB_FUNC_STATIC(QMODBUSDEVICE_DISCONNECTDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_DISCONNECTDEVICE )
 /*
 QModbusDevice::State state() const
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_STATE )
+HB_FUNC_STATIC(QMODBUSDEVICE_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_STATE )
 /*
 QModbusDevice::Error error() const
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_ERROR )
+HB_FUNC_STATIC(QMODBUSDEVICE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_ERRORSTRING )
+HB_FUNC_STATIC(QMODBUSDEVICE_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -221,9 +221,9 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ERRORSTRING )
 }
 
 /*
-void errorOccurred( QModbusDevice::Error error )
+void errorOccurred(QModbusDevice::Error error)
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
+HB_FUNC_STATIC(QMODBUSDEVICE_ONERROROCCURRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -275,9 +275,9 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 }
 
 /*
-void stateChanged( QModbusDevice::State state )
+void stateChanged(QModbusDevice::State state)
 */
-HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
+HB_FUNC_STATIC(QMODBUSDEVICE_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto sender = qobject_cast<QModbusDevice*>(Qt5xHb::getQObjectPointerFromSelfItem());
